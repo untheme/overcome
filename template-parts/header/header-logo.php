@@ -10,8 +10,8 @@ $logo_size        = overcome_get_opts( 'logo_size', array( 'width' => overcome_c
 $logo_size_w      = overcome_extract_numbers($logo_size['width']) ? overcome_extract_numbers($logo_size['width']) : overcome_configs('logo_width') ;
 $logo_size_h      = overcome_extract_numbers($logo_size['height']) ? overcome_extract_numbers($logo_size['height']): overcome_configs('logo_height');
 $logo_size_retina = ($logo_size_w*2).'x'.($logo_size_h*2);
-$logo_url         = get_template_directory_uri() . '/assets/images/logo.png';
-$logo_url_retina  = get_template_directory_uri() . '/assets/images/logo-retina.png';
+$logo_url         = get_template_directory_uri() . '/assets/images/logo/logo.png';
+$logo_url_retina  = get_template_directory_uri() . '/assets/images/logo/logo-retina.png';
 if ( !empty($logo['id']) ) {
     $logo_mime_type  = get_post_mime_type($logo['id']);
     if($logo_mime_type !== 'image/svg+xml'){
@@ -35,8 +35,8 @@ $ontop_logo_size        = overcome_get_opts( 'ontop_logo_maxh', array( 'width' =
 $ontop_logo_size_w      = overcome_extract_numbers($ontop_logo_size['width']) ?  overcome_extract_numbers($ontop_logo_size['width']) : overcome_configs('logo_width');
 $ontop_logo_size_h      = overcome_extract_numbers($ontop_logo_size['height']) ? overcome_extract_numbers($ontop_logo_size['height']) : overcome_configs('logo_height');
 $ontop_logo_size_retina = ($ontop_logo_size_w*2).'x'.($ontop_logo_size_h*2);
-$ontop_logo_url         = get_template_directory_uri() . '/assets/images/logo-ontop.png';
-$ontop_logo_url_retina  = get_template_directory_uri() . '/assets/images/logo-ontop-retina.png';
+$ontop_logo_url         = get_template_directory_uri() . '/assets/images/logo/logo-ontop.png';
+$ontop_logo_url_retina  = get_template_directory_uri() . '/assets/images/logo/logo-ontop-retina.png';
 if ( !empty($ontop_logo['id']) ) {
     $logo_mime_type  = get_post_mime_type($ontop_logo['id']);
     if($logo_mime_type !== 'image/svg+xml'){
@@ -63,8 +63,8 @@ $sticky_logo_size_w      = overcome_extract_numbers($sticky_logo_size['width']) 
 $sticky_logo_size_h      = overcome_extract_numbers($sticky_logo_size['height']) ? overcome_extract_numbers($sticky_logo_size['height']) : overcome_configs('logo_height');
 $sticky_logo_size_retina = ($sticky_logo_size_w*2).'x'.($sticky_logo_size_h*2);
 
-$sticky_logo_url         = get_template_directory_uri() . '/assets/images/logo-ontop.png';
-$sticky_logo_url_retina  = get_template_directory_uri() . '/assets/images/logo-ontop-retina.png';
+$sticky_logo_url         = get_template_directory_uri() . '/assets/images/logo/logo-ontop.png';
+$sticky_logo_url_retina  = get_template_directory_uri() . '/assets/images/logo/logo-ontop-retina.png';
 
 if(empty($sticky_logo['id'])) {
     $sticky_logo['id'] = $logo['id'];
