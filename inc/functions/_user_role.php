@@ -2,12 +2,12 @@
 /**
  * Add new user role
 */
-if(!function_exists('unbreak_add_new_user_role')){
-	add_action('after_setup_theme','unbreak_add_new_user_role');
-	function unbreak_add_new_user_role(){
+if(!function_exists('overcome_add_new_user_role')){
+	add_action('after_setup_theme','overcome_add_new_user_role');
+	function overcome_add_new_user_role(){
 		add_role(
-		    'unbreak_support_manager',
-		    esc_html__( 'UnBreak Support Manager','unbreak'),
+		    'overcome_support_manager',
+		    esc_html__( 'OverCome Support Manager','overcome'),
 		    array(
 		        'read'         => true,  // true allows this capability
 		        'edit_posts'   => false,
@@ -20,7 +20,7 @@ if(!function_exists('unbreak_add_new_user_role')){
  * Get list of user by user role
  * @param $user_role
 */
-function unbreak_list_user_by_role($args = []){
+function overcome_list_user_by_role($args = []){
 	$args = wp_parse_args($args, [
 	    'role'    => 'subcrible',
 	    'orderby' => 'user_nicename',

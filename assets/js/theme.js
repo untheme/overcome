@@ -3,37 +3,37 @@
 	var resizeTimer;
     // Fire on document ready.
     $( document ).ready( function() {
-        unbreak_StickyHeader();
-        unbreak_toggle_menu();
-        unbreak_touched_side();
-        unbreak_open_mobile_menu();
-        unbreak_popup();
-        unbreak_toggle();
-        unbreak_side_nav();
-        unbreak_video_size();
-        unbreak_vcRow();
-        unbreak_inlineCss();
-        unbreak_ajax_pagination();
-        unbreak_woo_filters();
-        unbreak_wc_single_product_gallery();
-        unbreak_wooscp_change_text();
+        overcome_StickyHeader();
+        overcome_toggle_menu();
+        overcome_touched_side();
+        overcome_open_mobile_menu();
+        overcome_popup();
+        overcome_toggle();
+        overcome_side_nav();
+        overcome_video_size();
+        overcome_vcRow();
+        overcome_inlineCss();
+        overcome_ajax_pagination();
+        overcome_woo_filters();
+        overcome_wc_single_product_gallery();
+        overcome_wooscp_change_text();
         // WooCommerce
-        unbreak_quantity_plus_minus();
-        unbreak_quantity_plus_minus_action();
-        unbreak_remove_cart_actions();
+        overcome_quantity_plus_minus();
+        overcome_quantity_plus_minus_action();
+        overcome_remove_cart_actions();
 
-        unbreak_svg_color();
-        unbreak_smooth_scroll();
+        overcome_svg_color();
+        overcome_smooth_scroll();
     });
 	// On Load 
 	$(window).load(function() {
         "use strict";
-		unbreak_page_loading();
-        unbreak_vcRow();
-        unbreak_woo_price_filter_add_data_title();
-        unbreak_wooscp_change_text();
-        unbreak_masonry_filter();
-        unbreak_vc_animation_callback();
+		overcome_page_loading();
+        overcome_vcRow();
+        overcome_woo_price_filter_add_data_title();
+        overcome_wooscp_change_text();
+        overcome_masonry_filter();
+        overcome_vc_animation_callback();
 	});
 	// On scroll
 	$( window ).scroll( function() {
@@ -43,8 +43,8 @@
 	$( window ).resize( function() {
         "use strict";
 		clearTimeout( resizeTimer );
-		unbreak_touched_side();
-        unbreak_vcRow();
+		overcome_touched_side();
+        overcome_vcRow();
 	});
 
     // Ajax Complete
@@ -54,28 +54,28 @@
         $( '.woocommerce-ordering' ).on( 'change', 'select.orderby', function() {
             $( this ).closest( 'form' ).submit();
         });
-        unbreak_video_size();
-        unbreak_popup();
-        unbreak_init_price_filter();
-        unbreak_masonry_filter();
-        unbreak_vc_animation_callback();
-        unbreak_remove_cart_actions();
+        overcome_video_size();
+        overcome_popup();
+        overcome_init_price_filter();
+        overcome_masonry_filter();
+        overcome_vc_animation_callback();
+        overcome_remove_cart_actions();
     });
     jQuery( document ).on( 'updated_wc_div', function() {
-        unbreak_remove_cart_actions();
+        overcome_remove_cart_actions();
     } );
 
 	/**
 	 * Add page loading
 	*/
-	function unbreak_page_loading(){
+	function overcome_page_loading(){
 		'use strict';
 		$("#ef5-loading").fadeOut("slow");
 	}
     /**
      * Sticky Header 
     */
-    function unbreak_StickyHeader(){
+    function overcome_StickyHeader(){
         'use strict';
         var c, currentScrollTop = 0,
            navbar = $('.sticky-on'),
@@ -121,7 +121,7 @@
 	/**
 	 * Toggle Menu 
 	*/
-	function unbreak_toggle_menu(){ 
+	function overcome_toggle_menu(){ 
 		'use strict';
 		$('.ef5-toggle').on('click', function(e){
             e.preventDefault();
@@ -135,7 +135,7 @@
 	 * Menu Back
 	 * Sub menu touched on side left/right
 	*/
-	function unbreak_touched_side(){
+	function overcome_touched_side(){
         'use strict';
         var $menu = $('.ef5-header-menu');
         if($(window).width() > 1200 ){
@@ -158,7 +158,7 @@
     /**
 	 * Open Mobile Menu 
     */
-    function unbreak_open_mobile_menu(){
+    function overcome_open_mobile_menu(){
     	'use strict';
         $("#ef5-main-menu-mobile").on('click',function(){
             $(this).toggleClass('opened').find('.btn-nav-mobile').toggleClass('opened');
@@ -168,7 +168,7 @@
     /**
 	 * Popup
     */
-    function unbreak_popup(){
+    function overcome_popup(){
         'use strict';
     	if(typeof $.magnificPopup != 'undefined'){
             /* ===================
@@ -254,7 +254,7 @@
      * Smooth Scroll
      * https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section2
     */
-    function unbreak_smooth_scroll(){
+    function overcome_smooth_scroll(){
         'use strict';
         $('body').on('click', '.ef5-scroll, .is-one-page', function () {
             var target = $(this.hash),
@@ -269,7 +269,7 @@
     /**
 	 * Toggle
     */
-    function unbreak_toggle(){
+    function overcome_toggle(){
         'use strict';
     	/* ===================
          Search Toggle
@@ -298,7 +298,7 @@
     /**
 	 * Side Nav
     */
-    function unbreak_side_nav(){
+    function overcome_side_nav(){
         "use strict";
     	/* Widget Nav */
         $("#ef5-main-sidenav .open-menu").on('click',function(){
@@ -318,7 +318,7 @@
      * Youtube, Vimeo, Iframe, Video, Audio.
      * @author Chinh Duong Manh
      */
-    function unbreak_video_size() {
+    function overcome_video_size() {
         'use strict';
         setTimeout(function(){
 	        $('.ef5-featured iframe , .ef5-featured  video, .ef5-featured .wp-video-shortcode').each(function(){
@@ -330,7 +330,7 @@
 	    }, 100);
     }
     // VC Row 
-    function unbreak_vcRow() {
+    function overcome_vcRow() {
         'use strict';
         if($(window).width() < 1200 ) return;
         var $site_boxed      = $('.site-boxed [data-vc-full-width="true"]'),
@@ -418,7 +418,7 @@
         }, 0 );
     }
     // Inline CSS to head
-    function unbreak_inlineCss(){
+    function overcome_inlineCss(){
         'use strict';
         var _inline_css = '<style class="ef5-inline-css">';
         $(document).find('div.ef5-inline-css').each(function () {
@@ -430,7 +430,7 @@
         $('head').append(_inline_css);
     }
     // Unbreak Ajax Pagination
-    function unbreak_ajax_pagination(){
+    function overcome_ajax_pagination(){
         'use strict';
         $('.ef5-posts').each(function(){
             "use strict";
@@ -453,7 +453,7 @@
         });
     }
     // WooCommerce Filters 
-    function unbreak_woo_filters(){
+    function overcome_woo_filters(){
         "use strict";
         $('.ef5-main').each(function(){
             var $this = $(this),
@@ -478,7 +478,7 @@
     };
     
     // Re-Run filer by Price
-    function unbreak_init_price_filter() {
+    function overcome_init_price_filter() {
         "use strict";
         $( 'input#min_price, input#max_price' ).hide();
         $( '.price_slider, .price_label' ).show();
@@ -519,7 +519,7 @@
      * Woocomere filter modify
      * Add data title
     */
-    function unbreak_woo_price_filter_add_data_title(){
+    function overcome_woo_price_filter_add_data_title(){
         "use strict";
         $('.price_slider_wrapper ').each(function () {
             var _this = $(this);
@@ -559,18 +559,18 @@
      * Single Product
     */
     //quantity number field custom
-    function unbreak_quantity_plus_minus(){
+    function overcome_quantity_plus_minus(){
         "use strict";
         $( ".quantity input" ).wrap( "<div class='ef5-quantity'></div>" );
         $('<span class="quantity-button quantity-down"></span>').insertBefore('.quantity input');
         $('<span class="quantity-button quantity-up"></span>').insertAfter('.quantity input');
     }
-    function unbreak_ajax_quantity_plus_minus(){
+    function overcome_ajax_quantity_plus_minus(){
         "use strict";
         $('<span class="quantity-button quantity-down"></span>').insertBefore('.quantity input');
         $('<span class="quantity-button quantity-up"></span>').insertAfter('.quantity input');
     }
-    function unbreak_quantity_plus_minus_action(){
+    function overcome_quantity_plus_minus_action(){
         "use strict";
         $(document).on('click','.quantity .quantity-button',function () {
             var $this = $(this),
@@ -602,7 +602,7 @@
         });
     }
     // WooCommerce Single Product Gallery 
-    function unbreak_wc_single_product_gallery(){
+    function overcome_wc_single_product_gallery(){
         'use strict';
         if(typeof $.flexslider != 'undefined'){
 
@@ -663,7 +663,7 @@
     /**
      * Cart Page
     */
-    function unbreak_table_move_column(table, selected ,from, to, remove, colspan, colspan_value) {
+    function overcome_table_move_column(table, selected ,from, to, remove, colspan, colspan_value) {
         "use strict";
         var rows = jQuery(selected, table);
         var cols;
@@ -680,7 +680,7 @@
             jQuery(this).attr('colspan',colspan_value);
         });
     }
-    function unbreak_remove_cart_actions(){
+    function overcome_remove_cart_actions(){
         "use strict";
         /** 
          * jQuery('.actions > .coupon').remove();
@@ -689,7 +689,7 @@
     }
 
     // Woo Smart Compare 
-    function unbreak_wooscp_change_text(){
+    function overcome_wooscp_change_text(){
         'use strict';
         $('.wooscp-btn , .woosw-btn').each(function(){
             "use strict";
@@ -716,7 +716,7 @@
         } );
     }
     /* Masonry */
-    function unbreak_masonry_filter(){
+    function overcome_masonry_filter(){
         "use strict";
         if(typeof $.fn.masonry != 'undefined'){
             if (jQuery(".ef5-posts-masonry").length) {
@@ -750,7 +750,7 @@
         }
     }
     /* VC Animation */
-    function unbreak_vc_animation_callback(){
+    function overcome_vc_animation_callback(){
         "use strict";
         if(typeof $.fn.waypoint != 'undefined'){
             jQuery(".wpb_animate_when_almost_visible:not(.wpb_start_animation)").waypoint(function() {
@@ -760,7 +760,7 @@
             })
         }
     }
-    function unbreak_svg_color(){
+    function overcome_svg_color(){
         "use strict";
         jQuery('img.ef5-svg').each(function(){
             var $img = jQuery(this);
@@ -836,10 +836,10 @@
 
 jQuery(document).ready(function() {
     "use strict";
-    unbreak_btt_start();
+    overcome_btt_start();
     jQuery(window).scroll(function(e) {
         "use strict";
-        unbreak_btt_start();
+        overcome_btt_start();
     });
     jQuery('#ef5-btt-circle').on('click', function() {
         "use strict";
@@ -849,7 +849,7 @@ jQuery(document).ready(function() {
     });
 });
 
-function unbreak_btt_start() {
+function overcome_btt_start() {
     "use strict";
     var scrollTop = jQuery(window).scrollTop();
     var docHeight = jQuery(document).height();
@@ -864,15 +864,15 @@ function unbreak_btt_start() {
     } else {
         jQuery('#ef5-btt-btn').removeClass('show');
     }
-    unbreak_btt_btn(scrollPercentRounded);
+    overcome_btt_btn(scrollPercentRounded);
 };
 
-function unbreak_btt_btn(i) {
+function overcome_btt_btn(i) {
     "use strict";
     var prec = i * 3.6;
     jQuery('#ef5-btt-prec').html(i + '%');
-    var borderColor = unbreak_ajax_opts.primary_color,
-        borderActiveColor = unbreak_ajax_opts.accent_color;
+    var borderColor = overcome_ajax_opts.primary_color,
+        borderActiveColor = overcome_ajax_opts.accent_color;
     if (prec <= 180) {
         jQuery('#ef5-btt-border').css('background-image', 'linear-gradient(' + (prec + 90) + 'deg, transparent 50%, ' + borderColor + ' 50%),linear-gradient(90deg, ' + borderColor + ' 50%, transparent 50%)');
     } else {

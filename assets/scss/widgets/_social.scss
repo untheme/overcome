@@ -6,7 +6,7 @@
 		color: #5d5d5d;
 		font-size: 15px;
 		&:hover{
-			@include unbreak_social_color('color');
+			@include overcome_social_color('color');
 		}
 	}
 }

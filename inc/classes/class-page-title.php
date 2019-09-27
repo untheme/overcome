@@ -2,8 +2,8 @@
 /**
  * Page title class for the theme.
  * 
- * @package UnBreak
- * @subpackage UnBreak
+ * @package EF5 Theme
+ * @subpackage OverCome
  * @since 1.0.0
  * @author EF5 Team
  */
@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) )
  *
  * @return array Contains 'title' and 'desc'
  */
-function unbreak_get_page_titles()
+function overcome_get_page_titles()
 {
     $title = $desc = '';
     // Default titles
@@ -46,12 +46,12 @@ function unbreak_get_page_titles()
         } 
         // 404
         elseif (is_404()) {
-            $title = unbreak_get_opts('ptitle_404_title', esc_html__('Error 404', 'unbreak'));
+            $title = overcome_get_opts('ptitle_404_title', esc_html__('Error 404', 'overcome'));
         } 
         // Search result
         elseif (is_search()) {
-            $title = esc_html__('Search results', 'unbreak');
-            $desc = esc_html__('You searched for:','unbreak').' "'. get_search_query(). '" ';
+            $title = esc_html__('Search results', 'overcome');
+            $desc = esc_html__('You searched for:','overcome').' "'. get_search_query(). '" ';
         } 
         // Anything else
         else {

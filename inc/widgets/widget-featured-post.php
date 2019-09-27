@@ -3,24 +3,24 @@ defined( 'ABSPATH' ) or exit( -1 );
 /**
  * Recent Posts widgets
  *
- * @package UnBreak
+ * @package EF5 Theme
  * @version 1.0
  */
 
-add_action('widgets_init', 'UnBreak_Featured_Posts_Widget');
-function UnBreak_Featured_Posts_Widget() {
-    register_ef5_widget('UnBreak_Featured_Posts_Widget');
+add_action('widgets_init', 'OverCome_Featured_Posts_Widget');
+function OverCome_Featured_Posts_Widget() {
+    register_ef5_widget('OverCome_Featured_Posts_Widget');
 }
 
-class UnBreak_Featured_Posts_Widget extends WP_Widget
+class OverCome_Featured_Posts_Widget extends WP_Widget
 {
     function __construct()
     {
         parent::__construct(
-            'unbreak_featured_posts',
-            esc_html__( '[UnBreak] Featured Posts', 'unbreak' ),
+            'overcome_featured_posts',
+            esc_html__( '[OverCome] Featured Posts', 'overcome' ),
             array(
-                'description' => __( 'Shows your most Featured posts.', 'unbreak' ),
+                'description' => __( 'Shows your most Featured posts.', 'overcome' ),
                 'customize_selective_refresh' => true,
             )
         );
@@ -36,12 +36,12 @@ class UnBreak_Featured_Posts_Widget extends WP_Widget
     function widget( $args, $instance )
     {
         $instance = wp_parse_args( (array) $instance, array(
-            'title'         => esc_html__( 'Featured Posts', 'unbreak' ),
+            'title'         => esc_html__( 'Featured Posts', 'overcome' ),
             'post_type'     => 'post',
             'number'        => 6,
         ) );
 
-        $title = empty( $instance['title'] ) ? esc_html__( 'Featured Posts', 'unbreak' ) : $instance['title'];
+        $title = empty( $instance['title'] ) ? esc_html__( 'Featured Posts', 'overcome' ) : $instance['title'];
         $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 
         $post_type = empty( $instance['post_type'] ) ? 'post' : $instance['post_type'];
@@ -78,9 +78,9 @@ class UnBreak_Featured_Posts_Widget extends WP_Widget
                     ( has_post_thumbnail() ? 'has-post-thumbnail' : '' )
                 );
                 if(has_post_thumbnail())
-                	$thumbnail_url = unbreak_get_image_url_by_size( null, implode('x', $thumbnail_size), true );
+                	$thumbnail_url = overcome_get_image_url_by_size( null, implode('x', $thumbnail_size), true );
                 else 
-                	$thumbnail_url = unbreak_default_image_thumbnail_url(['size'=>implode('x', $thumbnail_size)]);
+                	$thumbnail_url = overcome_default_image_thumbnail_url(['size'=>implode('x', $thumbnail_size)]);
                 printf(
                     '<a href="%1$s" class="ef5-thumbnail hint--top" data-hint="%2$s">' .
                         '<img src="%3$s" alt="%2$s" />' .
@@ -126,26 +126,26 @@ class UnBreak_Featured_Posts_Widget extends WP_Widget
     function form( $instance )
     {
         $instance = wp_parse_args( (array) $instance, array(
-            'title'         => esc_html__( 'Featured Posts', 'unbreak' ),
+            'title'         => esc_html__( 'Featured Posts', 'overcome' ),
             'post_type'     => 'post',
             'number'        => 6,
         ) );
 
-        $title         = $instance['title'] ? esc_attr( $instance['title'] ) : esc_html__( 'Featured Posts', 'unbreak' );
+        $title         = $instance['title'] ? esc_attr( $instance['title'] ) : esc_html__( 'Featured Posts', 'overcome' );
         $post_type         = $instance['post_type'] ? esc_attr( $instance['post_type'] ) : 'post';
         $number        = absint( $instance['number'] );
 
         ?>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'unbreak' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'overcome' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'post_type' ) ); ?>"><?php esc_html_e( 'Emter custom post type slug. Default \'post\'', 'unbreak' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'post_type' ) ); ?>"><?php esc_html_e( 'Emter custom post type slug. Default \'post\'', 'overcome' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'post_type' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'post_type' ) ); ?>" type="post_type" value="<?php echo esc_attr( $post_type ); ?>" />
         </p>
         <p>
-            <label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php esc_html_e( 'Number of posts to show:', 'unbreak' ); ?></label>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php esc_html_e( 'Number of posts to show:', 'overcome' ); ?></label>
             <input class="tiny-text" id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>" type="number" step="1" min="1" value="<?php echo esc_attr( $number ); ?>" size="3" />
         </p>
         <?php

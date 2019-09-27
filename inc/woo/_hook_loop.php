@@ -22,27 +22,27 @@ add_filter('woocommerce_show_page_title', function(){ return false;});
 */
 remove_action('woocommerce_before_shop_loop','woocommerce_result_count',20);
 remove_action('woocommerce_before_shop_loop','woocommerce_catalog_ordering',30);
-add_action('woocommerce_before_shop_loop','unbreak_woocommerce_count_ordering', 11);
-add_action('unbreak_woocommerce_count_ordering','woocommerce_result_count',20);
-add_action('unbreak_woocommerce_count_ordering','woocommerce_catalog_ordering',30);
-function unbreak_woocommerce_count_ordering(){
+add_action('woocommerce_before_shop_loop','overcome_woocommerce_count_ordering', 11);
+add_action('overcome_woocommerce_count_ordering','woocommerce_result_count',20);
+add_action('overcome_woocommerce_count_ordering','woocommerce_catalog_ordering',30);
+function overcome_woocommerce_count_ordering(){
 ?>
 	<div class="ef5-woo-count-order d-flex justify-content-between align-items-center">
-		<?php do_action('unbreak_woocommerce_count_ordering'); ?>
+		<?php do_action('overcome_woocommerce_count_ordering'); ?>
 	</div>
 <?php
 }
 
 
 /**
- * Add an action to call all UnBreak function
+ * Add an action to call all OverCome function
  * before shop loop
  *
 */
-if(!function_exists('unbreak_woocommerce_before_shop_loop')){
-	add_action('woocommerce_before_shop_loop', 'unbreak_woocommerce_before_shop_loop', 12);
-	function unbreak_woocommerce_before_shop_loop(){
-		do_action('unbreak_woocommerce_before_shop_loop');
+if(!function_exists('overcome_woocommerce_before_shop_loop')){
+	add_action('woocommerce_before_shop_loop', 'overcome_woocommerce_before_shop_loop', 12);
+	function overcome_woocommerce_before_shop_loop(){
+		do_action('overcome_woocommerce_before_shop_loop');
 	}
 }
 
@@ -51,10 +51,10 @@ if(!function_exists('unbreak_woocommerce_before_shop_loop')){
  * Change number of column that are displayed per page (shop page)
  * Return column number
 */
-add_filter( 'loop_shop_columns', 'unbreak_loop_shop_columns', 20 );
-function unbreak_loop_shop_columns() {
-  $columns = unbreak_get_opts('products_columns', 4);
-  $sidebar_position   = unbreak_sidebar_position();
+add_filter( 'loop_shop_columns', 'overcome_loop_shop_columns', 20 );
+function overcome_loop_shop_columns() {
+  $columns = overcome_get_opts('products_columns', 4);
+  $sidebar_position   = overcome_sidebar_position();
   if(is_active_sidebar('sidebar-shop') && $sidebar_position !== 'bottom') {
   	if(class_exists('WPcleverWoosq') && class_exists('WPcleverWoosw') && class_exists('WPcleverWooscp'))
   		$columns = $columns - 1;
@@ -72,21 +72,21 @@ function unbreak_loop_shop_columns() {
  * Return the number of products you wanna show per page.
  * 
  */
-add_filter( 'loop_shop_per_page', 'unbreak_loop_shop_per_page', 20 );
-function unbreak_loop_shop_per_page( $limit ) {
-  $limit = unbreak_get_opts('products_per_page', 12);
+add_filter( 'loop_shop_per_page', 'overcome_loop_shop_per_page', 20 );
+function overcome_loop_shop_per_page( $limit ) {
+  $limit = overcome_get_opts('products_per_page', 12);
   return $limit;
 }
 
 /**
  * Paginate
 */
-add_filter('woocommerce_pagination_args','unbreak_woocommerce_pagination_args');
-function unbreak_woocommerce_pagination_args($args){
+add_filter('woocommerce_pagination_args','overcome_woocommerce_pagination_args');
+function overcome_woocommerce_pagination_args($args){
 	$custom = [
 		'type'      => 'plain',
-        'prev_text' => '<span class="prev hint--top" data-hint="'.apply_filters('unbreak_loop_pagination_prev_text', esc_html__('Previous', 'unbreak')).'"><span></span></span>',
-        'next_text' => '<span class="next hint--top" data-hint="'.apply_filters('unbreak_loop_pagination_next_text', esc_html__('Next', 'unbreak')).'"><span></span></span>'
+        'prev_text' => '<span class="prev hint--top" data-hint="'.apply_filters('overcome_loop_pagination_prev_text', esc_html__('Previous', 'overcome')).'"><span></span></span>',
+        'next_text' => '<span class="next hint--top" data-hint="'.apply_filters('overcome_loop_pagination_next_text', esc_html__('Next', 'overcome')).'"><span></span></span>'
     ];
 	$args = array_merge($args, $custom);
 	return $args;

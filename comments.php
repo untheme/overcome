@@ -7,8 +7,8 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package UnBreak
- * @subpackage UnBreak
+ * @package EF5 Theme
+ * @subpackage OverCome
  * @since 1.0.0
  * @author EF5 Team
  *
@@ -35,22 +35,22 @@ if ( post_password_required() ) {
 						'%1$s %3$s',
 						$comments_number,
 						'comments title',
-						'unbreak'
+						'overcome'
 					),
 					number_format_i18n( $comments_number ),
-					esc_html__('Comment','unbreak'),
-					esc_html__('Comments','unbreak')
+					esc_html__('Comment','overcome'),
+					esc_html__('Comments','overcome')
 				);
 			?></div>
 			<ol class="commentlist">
 				<?php
 					wp_list_comments(
-						unbreak_wp_list_comments_args()
+						overcome_wp_list_comments_args()
 					);
 				?>
 			</ol>
 			<?php
-				unbreak_comment_pagination_loadmore();
+				overcome_comment_pagination_loadmore();
 			?>
 		</div>
 	<?php
@@ -59,7 +59,7 @@ if ( post_password_required() ) {
 	if ( comments_open() ) :
 		?>
 		<div class="ef5-comment-form-flex">
-			<?php unbreak_comment_form('asc'); ?>
+			<?php overcome_comment_form('asc'); ?>
 		</div>
 		<?php
 	endif;	
@@ -67,7 +67,7 @@ if ( post_password_required() ) {
 	if ( ! comments_open() ) :
 		?>
 		<div class="ef5-no-comments required">
-			<?php esc_html_e( 'Comments are closed.', 'unbreak' ); ?>
+			<?php esc_html_e( 'Comments are closed.', 'overcome' ); ?>
 		</div>
 		<?php
 	endif; 

@@ -1,9 +1,9 @@
 <?php 
-if(!function_exists('unbreak_wp_list_comments_args')){
-	function unbreak_wp_list_comments_args($args=[]){
+if(!function_exists('overcome_wp_list_comments_args')){
+	function overcome_wp_list_comments_args($args=[]){
 		$args = wp_parse_args($args, array(
-			'walker'      => new UnBreak_Walker_Comment(),
-			'avatar_size' => unbreak_get_avatar_size(),
+			'walker'      => new OverCome_Walker_Comment(),
+			'avatar_size' => overcome_get_avatar_size(),
 			'short_ping'  => true,
 			'style'       => 'ol'
 		));
@@ -12,9 +12,9 @@ if(!function_exists('unbreak_wp_list_comments_args')){
 }
 
 
-if(!function_exists('unbreak_comment')){
-	function unbreak_comment(){
-		$show_cmt = unbreak_get_opts('show_comment_form', '1');
+if(!function_exists('overcome_comment')){
+	function overcome_comment(){
+		$show_cmt = overcome_get_opts('show_comment_form', '1');
 		if ( '1' === $show_cmt && (comments_open() || get_comments_number()) )
         {
             comments_template();
@@ -27,7 +27,7 @@ if(!function_exists('unbreak_comment')){
  *
  * @see get_comment_class()
  */
-function unbreak_is_comment_by_post_author( $comment = null ) {
+function overcome_is_comment_by_post_author( $comment = null ) {
 	if ( is_object( $comment ) && $comment->user_id > 0 ) {
 		$user = get_userdata( $comment->user_id );
 		$post = get_post( $comment->comment_post_ID );
@@ -41,7 +41,7 @@ function unbreak_is_comment_by_post_author( $comment = null ) {
 /**
  * Returns information about the current post's discussion, with cache support.
  */
-function unbreak_get_discussion_data() {
+function overcome_get_discussion_data() {
 	static $discussion, $post_id;
 
 	$current_post_id = get_the_ID();
@@ -75,11 +75,11 @@ function unbreak_get_discussion_data() {
 	return $discussion;
 }
 
-if ( ! function_exists( 'unbreak_discussion_avatars_list' ) ) :
+if ( ! function_exists( 'overcome_discussion_avatars_list' ) ) :
 	/**
 	 * Displays a list of avatars involved in a discussion for a given post.
 	 */
-	function unbreak_discussion_avatars_list( $comment_authors ) {
+	function overcome_discussion_avatars_list( $comment_authors ) {
 		if ( empty( $comment_authors ) ) {
 			return;
 		}
@@ -87,30 +87,30 @@ if ( ! function_exists( 'unbreak_discussion_avatars_list' ) ) :
 		foreach ( $comment_authors as $id_or_email ) {
 			printf(
 				"<div>%s</div>",
-				unbreak_get_user_avatar_markup( $id_or_email )
+				overcome_get_user_avatar_markup( $id_or_email )
 			);
 		}
 		echo '</div>';
 	}
 endif;
 
-if ( ! function_exists( 'unbreak_get_user_avatar_markup' ) ) :
+if ( ! function_exists( 'overcome_get_user_avatar_markup' ) ) :
 	/**
 	 * Returns the HTML markup to generate a user avatar.
 	 */
-	function unbreak_get_user_avatar_markup( $id_or_email = null ) {
+	function overcome_get_user_avatar_markup( $id_or_email = null ) {
 
 		if ( ! isset( $id_or_email ) ) {
 			$id_or_email = get_current_user_id();
 		}
 
-		return sprintf( '<div class="comment-user-avatar comment-author">%s</div>', get_avatar( $id_or_email, unbreak_get_avatar_size() ) );
+		return sprintf( '<div class="comment-user-avatar comment-author">%s</div>', get_avatar( $id_or_email, overcome_get_avatar_size() ) );
 	}
 endif;
 
 // Comment Reply link
-//add_filter('comment_reply_link','unbreak_comment_reply_link', 10, 4);
-function unbreak_comment_reply_link($link, $args, $comment, $post){
+//add_filter('comment_reply_link','overcome_comment_reply_link', 10, 4);
+function overcome_comment_reply_link($link, $args, $comment, $post){
 	if ( get_option( 'comment_registration' ) && ! is_user_logged_in() ) {
 		$link = sprintf( '<a rel="nofollow" class="comment-reply-login" href="%s"><span class="fa fa-reply"></span>&nbsp;&nbsp;%s</a>',
 			esc_url( wp_login_url( get_permalink() ) ),
@@ -136,9 +136,9 @@ function unbreak_comment_reply_link($link, $args, $comment, $post){
 /**
  * Move comment field to above comment text
 */
-if(!function_exists('unbreak_comment_form_fields')){
-	add_filter( 'comment_form_fields', 'unbreak_comment_form_fields');
-    function unbreak_comment_form_fields( $fields ) {
+if(!function_exists('overcome_comment_form_fields')){
+	add_filter( 'comment_form_fields', 'overcome_comment_form_fields');
+    function overcome_comment_form_fields( $fields ) {
         //author, email, url 
         $fields_first = ['rating','open','author','email','url','close'];
         $fields_resort = [];
@@ -155,11 +155,11 @@ if(!function_exists('unbreak_comment_form_fields')){
     }
 }
 
-if(!function_exists('unbreak_comment_field_to_bottom')){
+if(!function_exists('overcome_comment_field_to_bottom')){
 	/**
-	 * add_filter( 'comment_form_fields', 'unbreak_comment_field_to_bottom' ); 
+	 * add_filter( 'comment_form_fields', 'overcome_comment_field_to_bottom' ); 
 	*/
-	function unbreak_comment_field_to_bottom( $fields ) {
+	function overcome_comment_field_to_bottom( $fields ) {
 	    $comment_field = $fields['comment'];
 	    unset( $fields['comment'] );
 	    $fields['comment'] = $comment_field;
@@ -171,16 +171,16 @@ if(!function_exists('unbreak_comment_field_to_bottom')){
  * Comment Form Output
  * 
 */
-if ( ! function_exists( 'unbreak_comment_form' ) ) :
+if ( ! function_exists( 'overcome_comment_form' ) ) :
 	/**
 	 * Documentation for function.
 	 */
-	function unbreak_comment_form( $order ) {
+	function overcome_comment_form( $order ) {
 		if ( true === $order || strtolower( $order ) === strtolower( get_option( 'comment_order', 'asc' ) ) ) {
 			comment_form(
 				array(
-					'title_reply'	=> esc_html__('Write a Comment', 'unbreak'),
-					'label_submit'  => esc_html__( 'Post Your Comment','unbreak' ),
+					'title_reply'	=> esc_html__('Write a Comment', 'overcome'),
+					'label_submit'  => esc_html__( 'Post Your Comment','overcome' ),
 					'class_submit'  => 'btn btn-pri',
 					'submit_button' => '<button name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s"><span>%4$s</span></button>',
 					'submit_field'  => '<div class="form-submit">%1$s %2$s</div>'
@@ -199,17 +199,17 @@ endif;
 		'<input id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" placeholder="'.esc_attr($url_pladeholder).'" />'.
  	'</div>',
 */
-if(!function_exists('unbreak_comment_form_default_fields')){
-	add_filter('comment_form_default_fields', 'unbreak_comment_form_default_fields', 10, 2);
-	function unbreak_comment_form_default_fields($fields){
+if(!function_exists('overcome_comment_form_default_fields')){
+	add_filter('comment_form_default_fields', 'overcome_comment_form_default_fields', 10, 2);
+	function overcome_comment_form_default_fields($fields){
 		$commenter       = wp_get_current_commenter();
 		$req             = get_option( 'require_name_email' );
 		$html_req        = ( $req ? " required='required'" : '' );
 		$html_req_markup = ( $req ? '*' : '' );
 		$html5           = true;
-		$name_pladeholder  = esc_html__('Name *','unbreak');
-		$email_pladeholder = esc_html__('Email *','unbreak');
-		$url_pladeholder   = esc_html__('Website','unbreak');
+		$name_pladeholder  = esc_html__('Name *','overcome');
+		$email_pladeholder = esc_html__('Email *','overcome');
+		$url_pladeholder   = esc_html__('Website','overcome');
 		
 		$fields    = [
 			'open'	  		=> 	'<div class="row ef5-form-fields">',
@@ -231,10 +231,10 @@ if(!function_exists('unbreak_comment_form_default_fields')){
  * Comment text
  *
 */
-if(!function_exists('unbreak_comment_form_defaults')){
-	add_filter('comment_form_defaults', 'unbreak_comment_form_defaults');
-	function unbreak_comment_form_defaults($fields){
-		$msg_placeholder   = esc_html__( 'Your Comment *', 'unbreak' );
+if(!function_exists('overcome_comment_form_defaults')){
+	add_filter('comment_form_defaults', 'overcome_comment_form_defaults');
+	function overcome_comment_form_defaults($fields){
+		$msg_placeholder   = esc_html__( 'Your Comment *', 'overcome' );
 		$fields['comment_field'] = '<div class="comment-form-comment">'.
 									'<textarea id="comment" name="comment" placeholder="'.esc_attr($msg_placeholder).'" required="required"></textarea>'.
 								'</div>';
@@ -250,20 +250,20 @@ if(!function_exists('unbreak_comment_form_defaults')){
  * 
 */
 
-if(!function_exists('unbreak_woocommerce_product_review_list_args')){
-	add_filter('woocommerce_product_review_list_args','unbreak_woocommerce_product_review_list_args');
-	add_filter('woocommerce_review_gravatar_size', 'unbreak_get_avatar_size');
+if(!function_exists('overcome_woocommerce_product_review_list_args')){
+	add_filter('woocommerce_product_review_list_args','overcome_woocommerce_product_review_list_args');
+	add_filter('woocommerce_review_gravatar_size', 'overcome_get_avatar_size');
 	remove_action('woocommerce_review_meta', 'woocommerce_review_display_meta');
 	remove_action('woocommerce_review_before_comment_meta','woocommerce_review_display_rating');
-	function unbreak_woocommerce_product_review_list_args($args){
+	function overcome_woocommerce_product_review_list_args($args){
 		$args = array_merge($args, [
-			'avatar_size'   => unbreak_get_avatar_size(),
-			'callback' 		=> 'unbreak_woocommerce_comments'
+			'avatar_size'   => overcome_get_avatar_size(),
+			'callback' 		=> 'overcome_woocommerce_comments'
 		]);
 
 		return $args;
 	}
-	function unbreak_woocommerce_comments($comment, $args, $depth){
+	function overcome_woocommerce_comments($comment, $args, $depth){
 		$verified = wc_review_is_from_verified_owner( $comment->comment_ID );
 	?>
 		<li id="comment-<?php comment_ID() ?>" <?php comment_class('comment'); ?>>
@@ -328,7 +328,7 @@ if(!function_exists('unbreak_woocommerce_product_review_list_args')){
 					<div class="comment-metadata">
 						<?php
 						if ( 'yes' === get_option( 'woocommerce_review_rating_verification_label' ) && $verified ) {
-							echo '<em class="woocommerce-review__verified verified">(' . esc_attr__( 'verified owner', 'unbreak' ) . ')</em> ';
+							echo '<em class="woocommerce-review__verified verified">(' . esc_attr__( 'verified owner', 'overcome' ) . ')</em> ';
 						}
 						?>
 						<span class="comment-time meta-color" datetime="<?php echo esc_attr( get_comment_date( 'c' ) ); ?>"><?php echo esc_html( get_comment_date( wc_date_format() ) ); ?></span>
@@ -347,24 +347,24 @@ if(!function_exists('unbreak_woocommerce_product_review_list_args')){
 		'<input id="url" name="url" ' . ( $html5 ? 'type="url"' : 'type="text"' ) . ' value="' . esc_attr( $commenter['comment_author_url'] ) . '" placeholder="'.esc_attr($url_pladeholder).'" />'.
  	'</div>',
 */
-if(!function_exists('unbreak_woocommerce_product_review_comment_form_args')){
-	add_filter('woocommerce_product_review_comment_form_args', 'unbreak_woocommerce_product_review_comment_form_args');
-	function unbreak_woocommerce_product_review_comment_form_args($args){
+if(!function_exists('overcome_woocommerce_product_review_comment_form_args')){
+	add_filter('woocommerce_product_review_comment_form_args', 'overcome_woocommerce_product_review_comment_form_args');
+	function overcome_woocommerce_product_review_comment_form_args($args){
 		$commenter       = wp_get_current_commenter();
 		$req             = get_option( 'require_name_email' );
 		$html_req        = ( $req ? " required='required'" : '' );
 		$html_req_markup = ( $req ? '*' : '' );
 		$html5           = true;
-		$name_pladeholder  = esc_html__('Name *','unbreak');
-		$email_pladeholder = esc_html__('Email *','unbreak');
-		$url_pladeholder   = esc_html__('Website','unbreak');
-		$msg_placeholder   = esc_html__( 'Your Review *', 'unbreak' );
+		$name_pladeholder  = esc_html__('Name *','overcome');
+		$email_pladeholder = esc_html__('Email *','overcome');
+		$url_pladeholder   = esc_html__('Website','overcome');
+		$msg_placeholder   = esc_html__( 'Your Review *', 'overcome' );
 
 		$args = array_merge($args,[
 			'title_reply_before' => '<div class="ef5-heading h3">',
 			'title_reply_after'  => '</div>',
-			'title_reply'   => have_comments() ? esc_html__( 'Write a Review', 'unbreak' ) : esc_html__( 'Be the first to Review', 'unbreak' ),
-			'label_submit'  => esc_html__( 'Post Your Review', 'unbreak' ),
+			'title_reply'   => have_comments() ? esc_html__( 'Write a Review', 'overcome' ) : esc_html__( 'Be the first to Review', 'overcome' ),
+			'label_submit'  => esc_html__( 'Post Your Review', 'overcome' ),
 			'submit_button' => '<button name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" />%4$s</button>',
 			'comment_field' => '<div class="comment-form-comment">'.
 									'<textarea id="comment" name="comment" placeholder="'.esc_attr($msg_placeholder).'" required="required"></textarea>'.
@@ -383,13 +383,13 @@ if(!function_exists('unbreak_woocommerce_product_review_comment_form_args')){
 			'close'	  		=>  '</div>',
 		];
 		if ( get_option( 'woocommerce_enable_review_rating' ) === 'yes' ) {
-			$args['fields']['rating'] = '<div class="comment-form-rating"><div class="ef5-heading">' . esc_html__( 'Your rating', 'unbreak' ) . '</div><select name="rating" id="rating" required>
-				<option value="">' . esc_html__( 'Rate&hellip;', 'unbreak' ) . '</option>
-				<option value="5">' . esc_html__( 'Perfect', 'unbreak' ) . '</option>
-				<option value="4">' . esc_html__( 'Good', 'unbreak' ) . '</option>
-				<option value="3">' . esc_html__( 'Average', 'unbreak' ) . '</option>
-				<option value="2">' . esc_html__( 'Not that bad', 'unbreak' ) . '</option>
-				<option value="1">' . esc_html__( 'Very poor', 'unbreak' ) . '</option>
+			$args['fields']['rating'] = '<div class="comment-form-rating"><div class="ef5-heading">' . esc_html__( 'Your rating', 'overcome' ) . '</div><select name="rating" id="rating" required>
+				<option value="">' . esc_html__( 'Rate&hellip;', 'overcome' ) . '</option>
+				<option value="5">' . esc_html__( 'Perfect', 'overcome' ) . '</option>
+				<option value="4">' . esc_html__( 'Good', 'overcome' ) . '</option>
+				<option value="3">' . esc_html__( 'Average', 'overcome' ) . '</option>
+				<option value="2">' . esc_html__( 'Not that bad', 'overcome' ) . '</option>
+				<option value="1">' . esc_html__( 'Very poor', 'overcome' ) . '</option>
 			</select></div>';
 		}
 
@@ -403,17 +403,17 @@ if(!function_exists('unbreak_woocommerce_product_review_comment_form_args')){
  *
 */
 if(function_exists('gglcptch_commentform_display')){
-	add_action ('init', 'unbreak_remove_default_gglcptch_commentform_display');
-	function unbreak_remove_default_gglcptch_commentform_display(){
+	add_action ('init', 'overcome_remove_default_gglcptch_commentform_display');
+	function overcome_remove_default_gglcptch_commentform_display(){
 		remove_action( 'comment_form_after_fields', 'gglcptch_commentform_display');
 		remove_action( 'comment_form_logged_in_after', 'gglcptch_commentform_display');
 	}
 
-	function unbreak_gglcptch_commentform_display($submit_button, $args){
+	function overcome_gglcptch_commentform_display($submit_button, $args){
 		$submit_before =  '<span class="gglcptch-none d-none">'.gglcptch_commentform_display().'</span>';
 		return $submit_before . $submit_button;
 	}
-	add_filter('comment_form_submit_button', 'unbreak_gglcptch_commentform_display', 10, 2);
+	add_filter('comment_form_submit_button', 'overcome_gglcptch_commentform_display', 10, 2);
 }
 
 /**
@@ -423,19 +423,19 @@ if(function_exists('gglcptch_commentform_display')){
  *
 */
 /* Comment Pagination */
-if(!function_exists('unbreak_comment_pagination')){
-	function unbreak_comment_pagination(){
+if(!function_exists('overcome_comment_pagination')){
+	function overcome_comment_pagination(){
 		paginate_comments_links(['echo' => false]);
 	}
 }
 
 /* Comment loadmore button */
-if(!function_exists('unbreak_comment_pagination_loadmore')){
-	function unbreak_comment_pagination_loadmore(){
+if(!function_exists('overcome_comment_pagination_loadmore')){
+	function overcome_comment_pagination_loadmore(){
 		$cpage = get_query_var('cpage') ? get_query_var('cpage') : 1;
 		if( $cpage > 1 ) {
 			wp_enqueue_script('ef5-comment-loadmore');
-			echo '<div class="ef5-comment-loadmore transition ef5-btn fill accent ef5-btn-xlg" data-text="'.esc_attr__('Load More Comments','unbreak').'" data-text-loading="'.esc_attr__('Loading...','unbreak').'" data-text-complete="'.esc_html__('No More Comments','unbreak').'">'.esc_html__('Load More Comments','unbreak').'</div>
+			echo '<div class="ef5-comment-loadmore transition ef5-btn fill accent ef5-btn-xlg" data-text="'.esc_attr__('Load More Comments','overcome').'" data-text-loading="'.esc_attr__('Loading...','overcome').'" data-text-complete="'.esc_html__('No More Comments','overcome').'">'.esc_html__('Load More Comments','overcome').'</div>
 			<'.'script>
 			var ajaxurl = \'' . site_url('wp-admin/admin-ajax.php') . '\',
 			    parent_post_id = ' . get_the_ID() . ',
@@ -445,16 +445,16 @@ if(!function_exists('unbreak_comment_pagination_loadmore')){
 	} 
 }
 /* Comment Loadmore button */
-if(!function_exists('unbreak_comments_loadmore_handler')){
-	add_action('wp_ajax_cloadmore', 'unbreak_comments_loadmore_handler'); // wp_ajax_{action}
-	add_action('wp_ajax_nopriv_cloadmore', 'unbreak_comments_loadmore_handler'); // wp_ajax_nopriv_{action}
-	function unbreak_comments_loadmore_handler(){
+if(!function_exists('overcome_comments_loadmore_handler')){
+	add_action('wp_ajax_cloadmore', 'overcome_comments_loadmore_handler'); // wp_ajax_{action}
+	add_action('wp_ajax_nopriv_cloadmore', 'overcome_comments_loadmore_handler'); // wp_ajax_nopriv_{action}
+	function overcome_comments_loadmore_handler(){
 		// maybe it isn't the best way to declare global $post variable, but it is simple and works perfectly!
 		global $post;
 		$post = get_post( $_POST['post_id'] );
 		setup_postdata( $post );
 
-		$args = unbreak_wp_list_comments_args();
+		$args = overcome_wp_list_comments_args();
 		$args['page']    = $_POST['cpage']; // current comment page
 		$args['per_page'] = get_option('comments_per_page');
 		// actually we must copy the params from wp_list_comments() used in our theme

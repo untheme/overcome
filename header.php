@@ -3,8 +3,8 @@
  * The header for our theme.
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
- * @package UnBreak
- * @subpackage UnBreak
+ * @package EF5 Theme
+ * @subpackage OverCome
  * @since 1.0.0
  * @author EF5 Team
  *
@@ -18,11 +18,11 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>> 
-    <?php unbreak_page_loading(); ?>
-    <div id="ef5-page" class="<?php unbreak_page_css_class();?>">
+    <?php overcome_page_loading(); ?>
+    <div id="ef5-page" class="<?php overcome_page_css_class();?>">
     <?php 
-        unbreak_header_top();
-        unbreak_header_main(); 
-        unbreak_page_title();
+        overcome_header_top();
+        overcome_header_main(); 
+        overcome_page_title();
     ?>
     <main id="ef5-main" class="ef5-main">

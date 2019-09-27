@@ -7,18 +7,18 @@
  * @source https://docs.woocommerce.com/document/image-sizes-theme-developers/
 */
 
-function unbreak_wc_thumbnail_value($value){
-    $image_size_single_width  = unbreak_configs('unbreak_product_single_image_w');
-    $image_size_single_height = unbreak_configs('unbreak_product_single_image_h');
+function overcome_wc_thumbnail_value($value){
+    $image_size_single_width  = overcome_configs('overcome_product_single_image_w');
+    $image_size_single_height = overcome_configs('overcome_product_single_image_h');
 
-    $thumbnail_image_width  = unbreak_configs('unbreak_product_loop_image_w');
-    $thumbnail_image_height = unbreak_configs('unbreak_product_loop_image_h');;
+    $thumbnail_image_width  = overcome_configs('overcome_product_loop_image_w');
+    $thumbnail_image_height = overcome_configs('overcome_product_loop_image_h');;
 
     $custom_width  = $thumbnail_image_width;
     $custom_height = $thumbnail_image_height;
 
-    $wc_gallery_thumbnail_w = unbreak_configs('unbreak_product_gallery_thumbnail_w');
-    $wc_gallery_thumbnail_h = unbreak_configs('unbreak_product_gallery_thumbnail_h');
+    $wc_gallery_thumbnail_w = overcome_configs('overcome_product_gallery_thumbnail_w');
+    $wc_gallery_thumbnail_h = overcome_configs('overcome_product_gallery_thumbnail_h');
 
 
     $wc_gallery_thumbnail  = array(
@@ -77,22 +77,22 @@ function unbreak_wc_thumbnail_value($value){
 
 /* Loop Thumbnail Size */
 add_filter( 'woocommerce_get_image_size_thumbnail', function( $size ) {
-    return unbreak_wc_thumbnail_value('image_size_thumbnail');
+    return overcome_wc_thumbnail_value('image_size_thumbnail');
 } ); 
 
 /* Single Thumbnail Size */
 add_filter( 'woocommerce_get_image_size_single', function( $size ) {
-    return unbreak_wc_thumbnail_value('image_size_single');
+    return overcome_wc_thumbnail_value('image_size_single');
 } );
 /* Gallery Thumbnail Size */
 add_filter( 'woocommerce_get_image_size_gallery_thumbnail', function( $size ) {
-    return unbreak_wc_thumbnail_value('wc_gallery_thumbnail');
+    return overcome_wc_thumbnail_value('wc_gallery_thumbnail');
 } );
 
 /**
  * Unset image width theme support.
  */
-function unbreak_modify_wc_theme_support() {
+function overcome_modify_wc_theme_support() {
     global $image_size_single_width, $thumbnail_image_width, $custom_width, $custom_height;
     $theme_support = get_theme_support( 'woocommerce' );
     $theme_support = is_array( $theme_support ) ? $theme_support[0] : array();
@@ -103,11 +103,11 @@ function unbreak_modify_wc_theme_support() {
 
     add_theme_support( 'woocommerce', $theme_support );
 
-    update_option( 'woocommerce_single_image_width', unbreak_wc_thumbnail_value('image_size_single_width') );
-    update_option( 'woocommerce_thumbnail_image_width', unbreak_wc_thumbnail_value('thumbnail_image_width') );
+    update_option( 'woocommerce_single_image_width', overcome_wc_thumbnail_value('image_size_single_width') );
+    update_option( 'woocommerce_thumbnail_image_width', overcome_wc_thumbnail_value('thumbnail_image_width') );
 
     update_option( 'woocommerce_thumbnail_cropping', 'custom' );
-    update_option( 'woocommerce_thumbnail_cropping_custom_width', unbreak_wc_thumbnail_value('custom_width') );
-    update_option( 'woocommerce_thumbnail_cropping_custom_height', unbreak_wc_thumbnail_value('custom_height') );
+    update_option( 'woocommerce_thumbnail_cropping_custom_width', overcome_wc_thumbnail_value('custom_width') );
+    update_option( 'woocommerce_thumbnail_cropping_custom_height', overcome_wc_thumbnail_value('custom_height') );
 }
-add_action( 'after_setup_theme', 'unbreak_modify_wc_theme_support', 10 );
+add_action( 'after_setup_theme', 'overcome_modify_wc_theme_support', 10 );

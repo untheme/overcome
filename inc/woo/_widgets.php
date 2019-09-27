@@ -3,9 +3,9 @@
  * Widget Layered Nav
  * Change count output
 */
-if(!function_exists('unbreak_wc_attr_count_span')){
-	add_filter('woocommerce_layered_nav_term_html', 'unbreak_woocommerce_layered_nav_term_html');
-    function unbreak_woocommerce_layered_nav_term_html($term_html) {
+if(!function_exists('overcome_wc_attr_count_span')){
+	add_filter('woocommerce_layered_nav_term_html', 'overcome_woocommerce_layered_nav_term_html');
+    function overcome_woocommerce_layered_nav_term_html($term_html) {
         //$term_html = str_replace('"> <span class="count">(', ' <span class="count">', $term_html);
         $term_html = str_replace('</a> <span class="count">(', ' <span class="count">', $term_html);
         $term_html = str_replace(')</span>', '</span></a>', $term_html);
@@ -19,15 +19,15 @@ if(!function_exists('unbreak_wc_attr_count_span')){
 */
 if(class_exists('WC_Widget_Product_Categories')){
 	include_once WC()->plugin_path() . '/includes/walkers/class-wc-product-cat-list-walker.php';
-	if(!function_exists('unbreak_woocommerce_product_categories_widget_args')){
-		add_filter('woocommerce_product_categories_widget_args', 'unbreak_woocommerce_product_categories_widget_args', 10, 1);
-		function unbreak_woocommerce_product_categories_widget_args($list_args){
-			$list_args['walker'] = new UnBreak_WC_Product_Cat_List_Walker();
+	if(!function_exists('overcome_woocommerce_product_categories_widget_args')){
+		add_filter('woocommerce_product_categories_widget_args', 'overcome_woocommerce_product_categories_widget_args', 10, 1);
+		function overcome_woocommerce_product_categories_widget_args($list_args){
+			$list_args['walker'] = new OverCome_WC_Product_Cat_List_Walker();
 			return $list_args;
 		}
 	}
 
-	class UnBreak_WC_Product_Cat_List_Walker extends WC_Product_Cat_List_Walker{
+	class OverCome_WC_Product_Cat_List_Walker extends WC_Product_Cat_List_Walker{
 		public function start_el( &$output, $cat, $depth = 0, $args = array(), $current_object_id = 0 ) {
 			$cat_id = intval( $cat->term_id );
 
@@ -52,7 +52,7 @@ if(class_exists('WC_Widget_Product_Categories')){
 			}
 
 			if ( $args['has_children'] && $args['hierarchical'] && ( empty( $args['max_depth'] ) || $args['max_depth'] > $depth + 1 ) ) {
-				$output .= unbreak_widget_expander();
+				$output .= overcome_widget_expander();
 			}
 
 			$output .= '</a>';

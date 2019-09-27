@@ -2,8 +2,8 @@
 /**
  * The main template file
  *
- * @package UnBreak
- * @subpackage UnBreak
+ * @package EF5 Theme
+ * @subpackage OverCome
  * @since 1.0.0
  * @author EF5 Team
  *
@@ -12,7 +12,7 @@ get_header();
 ?>
     <div class="container">
         <div class="row gutter-lg-60">
-            <div id="ef5-content-area" class="<?php unbreak_content_css_class();?>">
+            <div id="ef5-content-area" class="<?php overcome_content_css_class();?>">
                 <div id="ef5-posts" class="ef5-posts ef5-blogs">
                     <?php
                     if ( have_posts() )
@@ -22,7 +22,7 @@ get_header();
                             the_post();
                             get_template_part( 'template-parts/loop/content', get_post_format() );
                         }
-                        unbreak_loop_pagination();
+                        overcome_loop_pagination();
                     }
                     else
                     {
@@ -31,7 +31,7 @@ get_header();
                     ?>
                 </div>
             </div>
-            <?php unbreak_sidebar(); ?>
+            <?php overcome_sidebar(); ?>
         </div>
     </div>
 <?php

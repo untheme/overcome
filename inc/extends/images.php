@@ -6,7 +6,7 @@
  * @uses   get_intermediate_image_sizes()
  * @return array $sizes Data for all currently-registered image sizes.
  */
-function unbreak_get_image_sizes() {
+function overcome_get_image_sizes() {
     global $_wp_additional_image_sizes;
     $sizes = array();
     foreach ( get_intermediate_image_sizes() as $_size ) {
@@ -28,12 +28,12 @@ function unbreak_get_image_sizes() {
 /**
  * Get size information for a specific image size.
  *
- * @uses   unbreak_get_image_sizes()
+ * @uses   overcome_get_image_sizes()
  * @param  string $size The image size for which to retrieve data.
  * @return bool|array $size Size data about an image size or false if the size doesn't exist.
  */
-function unbreak_get_image_size( $size ) {
-    $sizes = unbreak_get_image_sizes();
+function overcome_get_image_size( $size ) {
+    $sizes = overcome_get_image_sizes();
 
     if ( isset( $sizes[ $size ] ) ) {
         return $sizes[ $size ];
@@ -44,12 +44,12 @@ function unbreak_get_image_size( $size ) {
 /**
  * Get the width of a specific image size.
  *
- * @uses   unbreak_get_image_size()
+ * @uses   overcome_get_image_size()
  * @param  string $size The image size for which to retrieve data.
  * @return bool|string $size Width of an image size or false if the size doesn't exist.
  */
-function unbreak_get_image_width( $size ) {
-    if ( ! $size = unbreak_get_image_size( $size ) ) {
+function overcome_get_image_width( $size ) {
+    if ( ! $size = overcome_get_image_size( $size ) ) {
         return false;
     }
     if ( isset( $size['width'] ) ) {
@@ -61,12 +61,12 @@ function unbreak_get_image_width( $size ) {
 /**
  * Get the height of a specific image size.
  *
- * @uses   unbreak_get_image_size()
+ * @uses   overcome_get_image_size()
  * @param  string $size The image size for which to retrieve data.
  * @return bool|string $size Height of an image size or false if the size doesn't exist.
  */
-function unbreak_get_image_height( $size ) {
-    if ( ! $size = unbreak_get_image_size( $size ) ) {
+function overcome_get_image_height( $size ) {
+    if ( ! $size = overcome_get_image_size( $size ) ) {
         return false;
     }
     if ( isset( $size['height'] ) ) {
@@ -78,8 +78,8 @@ function unbreak_get_image_height( $size ) {
 /**
  * Default thumbnail url
 */
-if (!function_exists('unbreak_default_image_thumbnail_url')) {
-    function unbreak_default_image_thumbnail_url($args = array())
+if (!function_exists('overcome_default_image_thumbnail_url')) {
+    function overcome_default_image_thumbnail_url($args = array())
     {
         $args = wp_parse_args($args, array(
             'size'        => 'large',
@@ -87,9 +87,9 @@ if (!function_exists('unbreak_default_image_thumbnail_url')) {
             'class'       => ''
         ));
         extract($args);
-        /* use unbreak_resize_thumbnail( $attach_id = null, $img_url = null, $width, $height, $crop = false ) */
+        /* use overcome_resize_thumbnail( $attach_id = null, $img_url = null, $width, $height, $crop = false ) */
         global $_wp_additional_image_sizes;
-        $image_sizes = unbreak_get_image_sizes();
+        $image_sizes = overcome_get_image_sizes();
         $size = explode('x', $size);
         $size_use = $size[0];
         if (!is_numeric($size_use)) {
@@ -106,7 +106,7 @@ if (!function_exists('unbreak_default_image_thumbnail_url')) {
             $height = isset($size[1]) ? $size[1] : $size[0];
         }
 
-        $default_img = unbreak_resize_thumbnail('', $default_img, $width, $height, true);
+        $default_img = overcome_resize_thumbnail('', $default_img, $width, $height, true);
 
         return site_url() . $default_img['url'];
     }
@@ -114,8 +114,8 @@ if (!function_exists('unbreak_default_image_thumbnail_url')) {
 /**
  * Default Image thumbnail 
 */
-if (!function_exists('unbreak_default_image_thumbnail')) {
-    function unbreak_default_image_thumbnail($args = array())
+if (!function_exists('overcome_default_image_thumbnail')) {
+    function overcome_default_image_thumbnail($args = array())
     {
         $args = wp_parse_args($args, array(
             'size'        => 'large',
@@ -124,9 +124,9 @@ if (!function_exists('unbreak_default_image_thumbnail')) {
             'echo'        => false  
         ));
         extract($args);
-        /* use unbreak_resize_thumbnail( $attach_id = null, $img_url = null, $width, $height, $crop = false ) */
+        /* use overcome_resize_thumbnail( $attach_id = null, $img_url = null, $width, $height, $crop = false ) */
         global $_wp_additional_image_sizes;
-        $image_sizes = unbreak_get_image_sizes();
+        $image_sizes = overcome_get_image_sizes();
         $size = explode('x', $size);
         $size_use = $size[0];
         if (!is_numeric($size_use)) {
@@ -143,10 +143,10 @@ if (!function_exists('unbreak_default_image_thumbnail')) {
             $height = isset($size[1]) ? $size[1] : $size[0];
         }
 
-        $default_img = unbreak_resize_thumbnail('', $default_img, $width, $height, true);
+        $default_img = overcome_resize_thumbnail('', $default_img, $width, $height, true);
         $thumbnail = '<img class="' . trim(implode(' ', array('default-thumb', $class))) . '" src="' . site_url() . $default_img['url'] . '" width="' . $default_img['width'] . '" height="' . $default_img['height'] . '" alt="' . esc_attr(get_option('blogname')) . '" />';
         if($echo)
-            echo unbreak_html($thumbnail);
+            echo overcome_html($thumbnail);
         else 
             return $thumbnail;
     }
@@ -158,7 +158,7 @@ if (!function_exists('unbreak_default_image_thumbnail')) {
 * php 5.2+
 * 
 */
-if ( ! function_exists( 'unbreak_resize_thumbnail' ) ) {
+if ( ! function_exists( 'overcome_resize_thumbnail' ) ) {
     /**
      * @param int $attach_id
      * @param string $img_url
@@ -169,7 +169,7 @@ if ( ! function_exists( 'unbreak_resize_thumbnail' ) ) {
      * @since 1.0
      * @return array
      */
-    function unbreak_resize_thumbnail( $attach_id = null, $img_url = null, $width, $height, $crop = false ) {
+    function overcome_resize_thumbnail( $attach_id = null, $img_url = null, $width, $height, $crop = false ) {
         // this is an attachment, so we have the ID
         if($attach_id === null) $attach_id = get_post_thumbnail_id(get_the_ID());
         $image_src = array();
@@ -303,8 +303,8 @@ if ( ! function_exists( 'unbreak_resize_thumbnail' ) ) {
     }
 }
 
-if(!function_exists('unbreak_image_by_size')){
-    function unbreak_image_by_size( $args = []) {
+if(!function_exists('overcome_image_by_size')){
+    function overcome_image_by_size( $args = []) {
         $default = [
             'id'      => null , 
             'size'    => 'medium', 
@@ -325,7 +325,7 @@ if(!function_exists('unbreak_image_by_size')){
         if($mime_type === 'image/svg+xml') $class .= ' svg';
 
         if(empty($id) ){
-            $unbreak_image_by_size = unbreak_default_image_thumbnail(['size' => $size, 'class' => $class]);
+            $overcome_image_by_size = overcome_default_image_thumbnail(['size' => $size, 'class' => $class]);
         } elseif ( is_string( $size ) && ( ( ! empty( $_wp_additional_image_sizes[ $size ] ) && is_array( $_wp_additional_image_sizes[ $size ] ) ) || in_array( $size, array(
                     'thumbnail',
                     'thumb',
@@ -337,7 +337,7 @@ if(!function_exists('unbreak_image_by_size')){
                     'full',
                 ) ) )
         ) {
-            $unbreak_image_by_size =  wp_get_attachment_image( $id, $size, '', array('class' => $class) );
+            $overcome_image_by_size =  wp_get_attachment_image( $id, $size, '', array('class' => $class) );
         } else {
             if ( is_string( $size ) ) {
                 preg_match_all( '/\d+/', $size, $thumb_matches );
@@ -357,7 +357,7 @@ if(!function_exists('unbreak_image_by_size')){
             }
             if ( is_array( $size ) ) {
                 // Resize image to custom size
-                $p_img = unbreak_resize_thumbnail( $id, null, $size[0], $size[1], true );
+                $p_img = overcome_resize_thumbnail( $id, null, $size[0], $size[1], true );
                 $alt = trim( strip_tags( get_post_meta( $id, '_wp_attachment_image_alt', true ) ) );
                 $attachment = get_post( $id );
                 if ( ! empty( $attachment ) ) {
@@ -382,20 +382,20 @@ if(!function_exists('unbreak_image_by_size')){
                 ];
                 if(isset($p_img['srcset']) && !empty($p_img['srcset'])) $img_atts['srcset'] = $p_img['srcset'];
                 if(isset($p_img['sizes']) && !empty($p_img['sizes'])) $img_atts['sizes'] = $p_img['sizes'];
-                $attributes = unbreak_stringify_attributes( $img_atts );
-                $unbreak_image_by_size = '<img ' . $attributes . ' />';
+                $attributes = overcome_stringify_attributes( $img_atts );
+                $overcome_image_by_size = '<img ' . $attributes . ' />';
             }
         }
 
         if($echo)
-            echo unbreak_html($args['before'].$unbreak_image_by_size.$args['after']);
+            echo overcome_html($args['before'].$overcome_image_by_size.$args['after']);
         else 
-            return $args['before'].$unbreak_image_by_size.$args['after'];
+            return $args['before'].$overcome_image_by_size.$args['after'];
     }
 }
 
-if(!function_exists('unbreak_get_image_url_by_size')){
-    function unbreak_get_image_url_by_size($args = []) {
+if(!function_exists('overcome_get_image_url_by_size')){
+    function overcome_get_image_url_by_size($args = []) {
         $args = wp_parse_args($args,[
             'id'            => null, 
             'size'          => 'thumbnail', 
@@ -406,7 +406,7 @@ if(!function_exists('unbreak_get_image_url_by_size')){
         global $_wp_additional_image_sizes;
         if($id === null) $id = get_post_thumbnail_id();
         if(empty($id) && $default_thumb){
-            $img_url = unbreak_default_image_thumbnail_url(['size' => $size, 'class' => $args['class']]);
+            $img_url = overcome_default_image_thumbnail_url(['size' => $size, 'class' => $args['class']]);
         } elseif ( is_string( $size ) && ( ( ! empty( $_wp_additional_image_sizes[ $size ] ) && is_array( $_wp_additional_image_sizes[ $size ] ) ) || in_array( $size, array(
                     'thumbnail',
                     'thumb',
@@ -439,7 +439,7 @@ if(!function_exists('unbreak_get_image_url_by_size')){
             }
             if ( is_array( $size ) ) {
                 // Resize image to custom size
-                $p_img = unbreak_resize_thumbnail( $id, null, $size[0], $size[1], true );
+                $p_img = overcome_resize_thumbnail( $id, null, $size[0], $size[1], true );
 
                 $img_url = $p_img['url'];
             }
@@ -458,7 +458,7 @@ if(!function_exists('unbreak_get_image_url_by_size')){
  *
  * @return string
  */
-function unbreak_stringify_attributes( $attributes ) {
+function overcome_stringify_attributes( $attributes ) {
     $atts = array();
     foreach ( $attributes as $name => $value ) {
         $atts[] = $name . '="' . esc_attr( $value ) . '"';
@@ -472,8 +472,8 @@ function unbreak_stringify_attributes( $attributes ) {
  * return image dimensions width or height
  *
 */
-if(!function_exists('unbreak_image_dimensions')){
-    function unbreak_image_dimensions( $id = null , $size = 'medium', $dimensions = 'height', $echo = false ) {
+if(!function_exists('overcome_image_dimensions')){
+    function overcome_image_dimensions( $id = null , $size = 'medium', $dimensions = 'height', $echo = false ) {
         global $_wp_additional_image_sizes;
         if(empty($dimensions)) $dimensions = 'height';
         $unit = 'px';

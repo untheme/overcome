@@ -4,33 +4,33 @@
  * Custom html output layout 
  * Display as list
  */
-if ( ! function_exists( 'unbreak_woocommerce_catalog_ordering_list' ) ) {
+if ( ! function_exists( 'overcome_woocommerce_catalog_ordering_list' ) ) {
     /**
      * Products Filter
      * Filter By Order
-     * add_action('unbreak_woocommerce_filter_orderby', 'unbreak_woocommerce_catalog_ordering_list', 2);
+     * add_action('overcome_woocommerce_filter_orderby', 'overcome_woocommerce_catalog_ordering_list', 2);
     */
     
-    function unbreak_woocommerce_catalog_ordering_list() {
+    function overcome_woocommerce_catalog_ordering_list() {
         if(is_active_sidebar('shop-filter')) return; 
         if ( ! wc_get_loop_prop( 'is_paginated' ) || ! woocommerce_products_will_display() ) {
             return;
         }
         $show_default_orderby    = 'menu_order' === apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
         $catalog_orderby_options = apply_filters( 'woocommerce_catalog_orderby', array(
-            'menu_order' => esc_html__( 'Default sorting', 'unbreak' ),
-            'popularity' => esc_html__( 'Sort by popularity', 'unbreak' ),
-            'rating'     => esc_html__( 'Sort by average rating', 'unbreak' ),
-            'date'       => esc_html__( 'Sort by newness', 'unbreak' ),
-            'price'      => esc_html__( 'Sort by price: low to high', 'unbreak' ),
-            'price-desc' => esc_html__( 'Sort by price: high to low', 'unbreak' ),
+            'menu_order' => esc_html__( 'Default sorting', 'overcome' ),
+            'popularity' => esc_html__( 'Sort by popularity', 'overcome' ),
+            'rating'     => esc_html__( 'Sort by average rating', 'overcome' ),
+            'date'       => esc_html__( 'Sort by newness', 'overcome' ),
+            'price'      => esc_html__( 'Sort by price: low to high', 'overcome' ),
+            'price-desc' => esc_html__( 'Sort by price: high to low', 'overcome' ),
         ) );
 
         $default_orderby = wc_get_loop_prop( 'is_search' ) ? 'relevance' : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby', '' ) );
         $orderby         = isset( $_GET['orderby'] ) ? wc_clean( wp_unslash( $_GET['orderby'] ) ) : $default_orderby; // WPCS: sanitization ok, input var ok, CSRF ok.
 
         if ( wc_get_loop_prop( 'is_search' ) ) {
-            $catalog_orderby_options = array_merge( array( 'relevance' => esc_html__( 'Relevance', 'unbreak' ) ), $catalog_orderby_options );
+            $catalog_orderby_options = array_merge( array( 'relevance' => esc_html__( 'Relevance', 'overcome' ) ), $catalog_orderby_options );
 
             unset( $catalog_orderby_options['menu_order'] );
         }
@@ -48,11 +48,11 @@ if ( ! function_exists( 'unbreak_woocommerce_catalog_ordering_list' ) ) {
         }
         ?>
         <div class="widget orderby col">
-            <h3 class="ef5-heading widgettitle"><?php esc_html_e('Sort By','unbreak');?></h3>
+            <h3 class="ef5-heading widgettitle"><?php esc_html_e('Sort By','overcome');?></h3>
             
             <ul class="orderby">
                 <?php foreach ( $catalog_orderby_options as $id => $name ) :
-                    $link = unbreak_get_current_page_url();        
+                    $link = overcome_get_current_page_url();        
                     $link = add_query_arg( 'orderby', $id, $link );
                 ?>
                     <li>
@@ -70,9 +70,9 @@ if ( ! function_exists( 'unbreak_woocommerce_catalog_ordering_list' ) ) {
 
     }
 }
-if(!function_exists('unbreak_woocommerce_get_catalog_ordering_args')){
-    add_filter( 'woocommerce_get_catalog_ordering_args', 'unbreak_woocommerce_get_catalog_ordering_args' );
-    function unbreak_woocommerce_get_catalog_ordering_args( $args ) {
+if(!function_exists('overcome_woocommerce_get_catalog_ordering_args')){
+    add_filter( 'woocommerce_get_catalog_ordering_args', 'overcome_woocommerce_get_catalog_ordering_args' );
+    function overcome_woocommerce_get_catalog_ordering_args( $args ) {
       
       $orderby_value = isset( $_GET['orderby'] ) ? wc_clean( $_GET['orderby'] ) : apply_filters( 'woocommerce_default_catalog_orderby', get_option( 'woocommerce_default_catalog_orderby' ) );
         if ( 'on_sale' == $orderby_value ) {
@@ -89,12 +89,12 @@ if(!function_exists('unbreak_woocommerce_get_catalog_ordering_args')){
         return $args;
     }
 }
-if(!function_exists('unbreak_woocommerce_default_catalog_orderby_options')){
-    add_filter( 'woocommerce_default_catalog_orderby_options', 'unbreak_woocommerce_default_catalog_orderby_options' );
-    add_filter( 'woocommerce_catalog_orderby', 'unbreak_woocommerce_default_catalog_orderby_options' );
-    function unbreak_woocommerce_default_catalog_orderby_options( $sortby ) {
-        $sortby['on_sale']     = esc_html__('Sort by On Sale','unbreak');
-        $sortby['bestselling'] = esc_html__('Sort by Best Selling','unbreak');
+if(!function_exists('overcome_woocommerce_default_catalog_orderby_options')){
+    add_filter( 'woocommerce_default_catalog_orderby_options', 'overcome_woocommerce_default_catalog_orderby_options' );
+    add_filter( 'woocommerce_catalog_orderby', 'overcome_woocommerce_default_catalog_orderby_options' );
+    function overcome_woocommerce_default_catalog_orderby_options( $sortby ) {
+        $sortby['on_sale']     = esc_html__('Sort by On Sale','overcome');
+        $sortby['bestselling'] = esc_html__('Sort by Best Selling','overcome');
         return $sortby;
     }
 }

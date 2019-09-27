@@ -1,5 +1,5 @@
 @media (min-width: $screen-xl-min){
-    @include unbreak_toggle_plus(
+    @include overcome_toggle_plus(
         '.ef5-side-menu .menu-item-has-children',
         '.ef5-menu-toggle',
         '.ef5-menu-toggle-inner', 

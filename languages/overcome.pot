@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: UnBreak\n"
+"Project-Id-Version: OverCome\n"
 "POT-Creation-Date: 2019-08-28 11:12+0700\n"
 "PO-Revision-Date: 2019-08-28 11:12+0700\n"
 "Last-Translator: \n"
@@ -556,27 +556,27 @@ msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
 #: inc/custom-post/core.php:16
-msgid "UnBreak Header Top"
+msgid "OverCome Header Top"
 msgstr ""
 
 #: inc/custom-post/core.php:17
-msgid "UnBreak Headers Top"
+msgid "OverCome Headers Top"
 msgstr ""
 
 #: inc/custom-post/core.php:57
-msgid "UnBreak Footer"
+msgid "OverCome Footer"
 msgstr ""
 
 #: inc/custom-post/core.php:58
-msgid "UnBreak Footers"
+msgid "OverCome Footers"
 msgstr ""
 
 #: inc/custom-post/portfolio.php:16
-msgid "UnBreak Projects"
+msgid "OverCome Projects"
 msgstr ""
 
 #: inc/custom-post/portfolio.php:17
-msgid "UnBreak Project"
+msgid "OverCome Project"
 msgstr ""
 
 #: inc/custom-post/portfolio.php:35
@@ -596,11 +596,11 @@ msgid "Project Tags"
 msgstr ""
 
 #: inc/custom-post/service.php:13
-msgid "UnBreak Services"
+msgid "OverCome Services"
 msgstr ""
 
 #: inc/custom-post/service.php:14
-msgid "UnBreak Service"
+msgid "OverCome Service"
 msgstr ""
 
 #: inc/custom-post/service.php:32
@@ -906,11 +906,11 @@ msgid "EF5 Systems"
 msgstr ""
 
 #: inc/functions/_user_role.php:10
-msgid "UnBreak Support Manager"
+msgid "OverCome Support Manager"
 msgstr ""
 
 #: inc/functions/avatar.php:15
-msgid "UnBreak Avatar"
+msgid "OverCome Avatar"
 msgstr ""
 
 #: inc/functions/comments.php:182
@@ -2910,7 +2910,7 @@ msgid "Hide widget title"
 msgstr ""
 
 #: inc/widgets/widget-featured-post.php:21
-msgid "[UnBreak] Featured Posts"
+msgid "[OverCome] Featured Posts"
 msgstr ""
 
 #: inc/widgets/widget-featured-post.php:23
@@ -2952,7 +2952,7 @@ msgid "Layout 3"
 msgstr ""
 
 #: inc/widgets/widget-recent-post.php:21
-msgid "[UnBreak] Recent Posts"
+msgid "[OverCome] Recent Posts"
 msgstr ""
 
 #: inc/widgets/widget-recent-post.php:23
@@ -3280,7 +3280,7 @@ msgstr ""
 #: vc_elements/ef5_team.php:6 vc_elements/ef5_testimonial.php:6
 #: vc_elements/ef5_translate_top.php:6 vc_elements/ef5_video.php:6
 #: vc_elements/ef5_wp_login.php:5 vc_elements/ef5_wp_menu.php:16
-msgid "UnBreak"
+msgid "OverCome"
 msgstr ""
 
 #: vc_elements/ef5_awards_certificate.php:7
@@ -3432,7 +3432,7 @@ msgid "Layout Settings"
 msgstr ""
 
 #: vc_elements/ef5_buttons.php:6
-msgid "UnBreak button style"
+msgid "OverCome button style"
 msgstr ""
 
 #: vc_elements/ef5_buttons.php:13 vc_elements/ef5_newsletter.php:83
@@ -3672,7 +3672,7 @@ msgid "Choose time format you want!"
 msgstr ""
 
 #: vc_elements/ef5_counter.php:4
-msgid "UnBreak Counter"
+msgid "OverCome Counter"
 msgstr ""
 
 #: vc_elements/ef5_counter.php:8
@@ -7040,11 +7040,11 @@ msgid "No video found!"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://dev.joomexp.com/wordpress72/unbreak"
+msgid "https://dev.joomexp.com/wordpress72/overcome"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "UnBreak WordPress Theme"
+msgid "OverCome WordPress Theme"
 msgstr ""
 
 #. Author of the plugin/theme

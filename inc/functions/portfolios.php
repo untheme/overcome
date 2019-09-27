@@ -2,22 +2,22 @@
 /**
  * All Function for Portfolio 
 */
-if(!function_exists('unbreak_portfolio_info')){
-	function unbreak_portfolio_info($args = []){
+if(!function_exists('overcome_portfolio_info')){
+	function overcome_portfolio_info($args = []){
 		if(!is_singular('ef5_portfolio')) return;
 		$args = wp_parse_args($args, [
-			'title' => esc_html__('Project Description','unbreak')
+			'title' => esc_html__('Project Description','overcome')
 		]);
 		// Client name
-		$client = unbreak_get_post_format_value('portfolio_client_name','Magdalen School');
+		$client = overcome_get_post_format_value('portfolio_client_name','Magdalen School');
 		// Location
-		$location = unbreak_get_post_format_value('portfolio_location','Oslay, Canada');
+		$location = overcome_get_post_format_value('portfolio_location','Oslay, Canada');
 		// Surface Area
-		$surface_area = unbreak_get_post_format_value('portfolio_surface_area','3,000,000 m2');
+		$surface_area = overcome_get_post_format_value('portfolio_surface_area','3,000,000 m2');
 		// Budget
-		$budgets = unbreak_get_post_format_value('portfolio_budgets','$5,000,000.00');
+		$budgets = overcome_get_post_format_value('portfolio_budgets','$5,000,000.00');
 		// Date
-		$date = unbreak_get_post_format_value('portfolio_complete','');
+		$date = overcome_get_post_format_value('portfolio_complete','');
 		$date = strtotime($date);
 		$date_sever = date_i18n('Y-m-d G:i:s');   
 		$gmt_offset = get_option( 'gmt_offset' );
@@ -25,31 +25,31 @@ if(!function_exists('unbreak_portfolio_info')){
 		$date = date(get_option('date_format'), $date);
 	?>
 		<div class="pf-sidebar-box detail-box">
-			<div class="ef5-heading h3"><?php echo unbreak_html($args['title']); ?></div>
+			<div class="ef5-heading h3"><?php echo overcome_html($args['title']); ?></div>
 			<div class="inner detail-inner ef5-box-shadow ef5-bg-white transition">
 				<ul class="pf-details-list ef5-unstyled">
 					<li>
-						<strong class="ef5-heading"><?php esc_html_e('Client','unbreak'); ?>:</strong>
+						<strong class="ef5-heading"><?php esc_html_e('Client','overcome'); ?>:</strong>
 						<?php echo esc_html($client); ?>
 					</li>
 					<li>
-						<strong class="ef5-heading"><?php esc_html_e('Location','unbreak'); ?>:</strong>
+						<strong class="ef5-heading"><?php esc_html_e('Location','overcome'); ?>:</strong>
 						<?php echo esc_html($location); ?>
 					</li>
 					<li>
-						<strong class="ef5-heading"><?php esc_html_e('Surface Area','unbreak'); ?>:</strong>
+						<strong class="ef5-heading"><?php esc_html_e('Surface Area','overcome'); ?>:</strong>
 						<?php echo esc_html($surface_area); ?>
 					</li>
 					<li>
-						<strong class="ef5-heading"><?php esc_html_e('Budgets','unbreak'); ?>:</strong>
+						<strong class="ef5-heading"><?php esc_html_e('Budgets','overcome'); ?>:</strong>
 						<?php echo esc_html($budgets); ?>
 					</li>
 					<li>
-						<strong class="ef5-heading"><?php esc_html_e('Complete','unbreak'); ?>:</strong>
+						<strong class="ef5-heading"><?php esc_html_e('Complete','overcome'); ?>:</strong>
 						<?php echo esc_html($date); ?>
 					</li>
 					<li>
-						<strong class="ef5-heading"><?php esc_html_e('Categories','unbreak'); ?>:</strong>
+						<strong class="ef5-heading"><?php esc_html_e('Categories','overcome'); ?>:</strong>
 						<?php echo get_the_term_list( get_the_ID(), 'portfolio_cat', '', ', ', '' );; ?>
 					</li>
 				</ul>
@@ -63,10 +63,10 @@ if(!function_exists('unbreak_portfolio_info')){
  * Get Featured Portfolio
  * @param: $posts_per_page  // Number of post to show
 */
-if(!function_exists('unbreak_portfolio_featured')){
-	function unbreak_portfolio_featured($args = []){
+if(!function_exists('overcome_portfolio_featured')){
+	function overcome_portfolio_featured($args = []){
 		$args = wp_parse_args($args, [
-			'title'          => esc_html__('Featured Projects','unbreak'),
+			'title'          => esc_html__('Featured Projects','overcome'),
 			'posts_per_page' => '3'
 		]);
 		if($args['posts_per_page'] === '0' || $args['posts_per_page'] === '') return;
@@ -82,11 +82,11 @@ if(!function_exists('unbreak_portfolio_featured')){
         if ( $r->have_posts() ) {
         ?>
             <div class="pf-sidebar-box pf-featured-box">
-            	<div class="ef5-heading h3"><?php echo unbreak_html($args['title']); ?></div>
+            	<div class="ef5-heading h3"><?php echo overcome_html($args['title']); ?></div>
 	        	<div class="inner feature-post-inner ef5-box-shadow ef5-bg-white transition">
 		            <?php while ( $r->have_posts() ) {
 		                $r->the_post();
-		                $thumbnail_url = unbreak_get_image_url_by_size( ['size' => implode('x', $thumbnail_size), 'default_thumb' => true,'class'=>'d-block'] );
+		                $thumbnail_url = overcome_get_image_url_by_size( ['size' => implode('x', $thumbnail_size), 'default_thumb' => true,'class'=>'d-block'] );
 		                echo '<div class="pf-feature-item ef5-box-shadow-hover-17 transition"><div class="row gutters-20 ">';
 			                printf(
 			                    '<div class="ef5-featured col-auto">' .
@@ -107,7 +107,7 @@ if(!function_exists('unbreak_portfolio_featured')){
 				                );
 				                printf(
 				                	'<div class="ef5-meta">%s</div>',
-				                	get_the_term_list( get_the_ID(), unbreak_get_post_taxonomies(), '', ', ', '' )
+				                	get_the_term_list( get_the_ID(), overcome_get_post_taxonomies(), '', ', ', '' )
 				                );
 			                echo '</div>';
 		                echo '</div></div>';
@@ -123,14 +123,14 @@ if(!function_exists('unbreak_portfolio_featured')){
  * Get Project Supporter
  * @param $user_ID
 */
-if(!function_exists('unbreak_portfolio_supporter')){
-	function unbreak_portfolio_supporter($args = []){
+if(!function_exists('overcome_portfolio_supporter')){
+	function overcome_portfolio_supporter($args = []){
 		$args = wp_parse_args($args, [
-			'email' => unbreak_get_post_format_value('post-support',''),
-			'title' => esc_html__('Support','unbreak')
+			'email' => overcome_get_post_format_value('post-support',''),
+			'title' => esc_html__('Support','overcome')
 		]);
 		if(empty($args['email']) || $args['email'] = null) return;
-	        $user = get_user_by( 'email', unbreak_get_post_format_value('post-support','') );
+	        $user = get_user_by( 'email', overcome_get_post_format_value('post-support','') );
 	        if($user !== false){ 
 	            global $wp_roles; 
 	            $user_info = get_userdata($user->ID);
@@ -143,7 +143,7 @@ if(!function_exists('unbreak_portfolio_supporter')){
 	            }
 	    ?>
 	        <div class="pf-sidebar-box pf-supported-box">
-	        	<div class="ef5-heading h3"><?php echo unbreak_html($args['title']); ?></div>
+	        	<div class="ef5-heading h3"><?php echo overcome_html($args['title']); ?></div>
 	        	<div class="inner supported-inner text-center ef5-box-shadow ef5-bg-white transition">
 		            <?php
 		            	echo '<div class="sp-avatar">'.get_avatar($user->ID, 90, '', $user_info->display_name, ['class' => 'circle']).'</div>';
@@ -162,16 +162,16 @@ if(!function_exists('unbreak_portfolio_supporter')){
  * Get Project Attachment
  * @param $user_ID
 */
-if(!function_exists('unbreak_portfolio_attachment')){
-	function unbreak_portfolio_attachment($args = []){
+if(!function_exists('overcome_portfolio_attachment')){
+	function overcome_portfolio_attachment($args = []){
 		$args = wp_parse_args($args, [
-			'title' => esc_html__('Download','unbreak'),
+			'title' => esc_html__('Download','overcome'),
 			'class' => ''
 		]);
-		$number_of_att = apply_filters('unbreak_number_of_portfolio_attachment', 5);
+		$number_of_att = apply_filters('overcome_number_of_portfolio_attachment', 5);
 		$files = [];
 		for ($i=0; $i <= $number_of_att ; $i++) { 
-			$att = unbreak_get_post_format_value('post-attachment-'.$i,'');
+			$att = overcome_get_post_format_value('post-attachment-'.$i,'');
 			if(!empty($att)){
 				$files[] = $att;
 			}
@@ -179,7 +179,7 @@ if(!function_exists('unbreak_portfolio_attachment')){
 		if(empty($files)) return;
 		?>
 		<div class="pf-sidebar-box pf-attachment-box">
-	        <div class="ef5-heading h3"><?php echo unbreak_html($args['title']); ?></div>
+	        <div class="ef5-heading h3"><?php echo overcome_html($args['title']); ?></div>
 	        <div class="inner attachment-inner">
 	        	<?php foreach ($files as $file) {
 	        		$_file = get_post($file);

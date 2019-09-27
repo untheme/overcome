@@ -6,8 +6,8 @@
  * https://kb.wpbakery.com/docs/filters/
  *
 */
-add_filter('vc_shortcode_output', 'unbreak_vc_shortcode_output', 10, 3);
-function unbreak_vc_shortcode_output($html = '', $sc_obj = '', $atts = [])
+add_filter('vc_shortcode_output', 'overcome_vc_shortcode_output', 10, 3);
+function overcome_vc_shortcode_output($html = '', $sc_obj = '', $atts = [])
 {
     extract($atts);
     //modify shortcode use div as container
@@ -53,7 +53,7 @@ function unbreak_vc_shortcode_output($html = '', $sc_obj = '', $atts = [])
                     !empty($vc_row_background_text_style) ? 'font-style-'.$vc_row_background_text_style : '', 
                     !empty($vc_row_background_text_transform) ? 'text-'.$vc_row_background_text_transform : '',
                 ];
-                $vc_row_background_text_attrs[] = 'class="'.unbreak_optimize_css_class(implode(' ', $vc_row_background_text_css_class)).'"';
+                $vc_row_background_text_attrs[] = 'class="'.overcome_optimize_css_class(implode(' ', $vc_row_background_text_css_class)).'"';
                 if(!empty($vc_row_background_text_size)) $vc_row_background_text_css[]           = 'font-size:'.(int)$vc_row_background_text_size.'px'; 
                 if(!empty($vc_row_background_text_color)) $vc_row_background_text_css[]          = 'color:'.$vc_row_background_text_color;
                 if(!empty($vc_row_background_text_letter_spacing)) $vc_row_background_text_css[] = 'letter-spacing:'.(int)$vc_row_background_text_letter_spacing.'px';
@@ -74,7 +74,7 @@ function unbreak_vc_shortcode_output($html = '', $sc_obj = '', $atts = [])
                     }
                 }
                 
-                $modify['first-child'] .= '<'.$vc_row_background_text_tag.' '.implode(' ', $vc_row_background_text_attrs).'>'.unbreak_html($vc_row_background_text).'</'.$vc_row_background_text_tag.'>';
+                $modify['first-child'] .= '<'.$vc_row_background_text_tag.' '.implode(' ', $vc_row_background_text_attrs).'>'.overcome_html($vc_row_background_text).'</'.$vc_row_background_text_tag.'>';
             }
             /* parallax overlay color */
             if(isset($parallax_overlay) && !empty($parallax_overlay)){
@@ -217,8 +217,8 @@ function unbreak_vc_shortcode_output($html = '', $sc_obj = '', $atts = [])
  * Filter to replace default css class names for vc_row shortcode and vc_column
  * https://kb.wpbakery.com/docs/filters/vc_shortcodes_css_class/
 */
-add_filter( 'vc_shortcodes_css_class', 'unbreak_css_classes_for_vc_row_and_vc_column', 10, 2 );
-function unbreak_css_classes_for_vc_row_and_vc_column( $class_string, $tag ) {
+add_filter( 'vc_shortcodes_css_class', 'overcome_css_classes_for_vc_row_and_vc_column', 10, 2 );
+function overcome_css_classes_for_vc_row_and_vc_column( $class_string, $tag ) {
     if ( $tag == 'vc_row' || $tag == 'vc_row_inner' ) {
         $class_string = str_replace( 'vc_row ', 'vc_row row ', $class_string );
         $class_string = str_replace( 'vc_row-has-fill', 'has-fill', $class_string );
@@ -243,8 +243,8 @@ function unbreak_css_classes_for_vc_row_and_vc_column( $class_string, $tag ) {
  * https://kb.wpbakery.com/docs/filters/vc_shortcodes_css_class/
  *
  */
-add_filter('vc_shortcodes_css_class', 'unbreak_vc_shortcodes_css_class', 10, 3);
-function unbreak_vc_shortcodes_css_class($class_string, $tag, $atts = '')
+add_filter('vc_shortcodes_css_class', 'overcome_vc_shortcodes_css_class', 10, 3);
+function overcome_vc_shortcodes_css_class($class_string, $tag, $atts = '')
 {
     $custom_class = array();
     extract($atts);

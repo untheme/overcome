@@ -2,14 +2,14 @@
 /**
  * Post Thumbnail
 */
-if(!function_exists('unbreak_post_thumbnail')){
-    function unbreak_post_thumbnail($args=[]){
+if(!function_exists('overcome_post_thumbnail')){
+    function overcome_post_thumbnail($args=[]){
         $args = wp_parse_args($args,[
             'id'              => null,
             'thumbnail_size'  => is_single() ? 'large' : 'medium',
             'echo'            => true,
-            'default_thumb'   => unbreak_configs('unbreak_default_post_thumbnail'),
-            'thumbnail_is_bg' => unbreak_configs('unbreak_thumbnail_is_bg'),
+            'default_thumb'   => overcome_configs('overcome_default_post_thumbnail'),
+            'thumbnail_is_bg' => overcome_configs('overcome_thumbnail_is_bg'),
         ]);
         extract($args);
         if(!has_post_thumbnail() && !$default_thumb) return;
@@ -21,16 +21,16 @@ if(!function_exists('unbreak_post_thumbnail')){
         $thumbnail_atts[] = 'class="'.implode(' ', $thumbnail_atts_class).'"';
         // style
         $thumbnail_atts_style = [];
-        if($thumbnail_is_bg) $thumbnail_atts_style[] = 'background-image: url('.unbreak_get_image_url_by_size(['id'=>$id,'size'=> 'full', 'default_thumb' => $default_thumb]).')';
+        if($thumbnail_is_bg) $thumbnail_atts_style[] = 'background-image: url('.overcome_get_image_url_by_size(['id'=>$id,'size'=> 'full', 'default_thumb' => $default_thumb]).')';
         if(!empty($thumbnail_atts_style)) $thumbnail_atts[] = 'style="'.implode(';',$thumbnail_atts_style).'"';
         if($echo) {
         ?>
             <div <?php echo implode(' ', $thumbnail_atts);?>>
-                <?php unbreak_image_by_size(['id' => $id,'size' => $thumbnail_size]);?>
+                <?php overcome_image_by_size(['id' => $id,'size' => $thumbnail_size]);?>
             </div>
-            <?php do_action('unbreak_post_thumbnail_content');
+            <?php do_action('overcome_post_thumbnail_content');
         } else {
-            return '<div '.implode(' ', $thumbnail_atts).'><img src="'.unbreak_get_image_url_by_size($id,$thumbnail_size).'" alt="'.get_the_title().'" /></div>'.do_action('unbreak_post_thumbnail_content');
+            return '<div '.implode(' ', $thumbnail_atts).'><img src="'.overcome_get_image_url_by_size($id,$thumbnail_size).'" alt="'.get_the_title().'" /></div>'.do_action('overcome_post_thumbnail_content');
         }
     }
 }
@@ -38,25 +38,25 @@ if(!function_exists('unbreak_post_thumbnail')){
 /**
  * Post Gallery 
 */
-if(!function_exists('unbreak_post_gallery')){
-    function unbreak_post_gallery($args=[]){
+if(!function_exists('overcome_post_gallery')){
+    function overcome_post_gallery($args=[]){
         $args = wp_parse_args($args, array(
             'id'             => null,
             'show_media'     => '1',
             'thumbnail_size' => 'large',
-            'show_author'    => is_singular() ? unbreak_get_opts('archive_author_on','1') : unbreak_get_opts('post_author_on','1'),
+            'show_author'    => is_singular() ? overcome_get_opts('archive_author_on','1') : overcome_get_opts('post_author_on','1'),
             'echo'           => true,
-            'default_thumb'  => apply_filters('unbreak_default_post_thumbnail', false)
+            'default_thumb'  => apply_filters('overcome_default_post_thumbnail', false)
         ));
         if('0' === $args['show_media']) return;
         // Get gallery from option
-        $gallery_list = explode(',', unbreak_get_post_format_value('post-gallery-images', ''));
+        $gallery_list = explode(',', overcome_get_post_format_value('post-gallery-images', ''));
         // Get first gallery in content 
         $gallery_in_content = get_post_gallery( get_the_ID(), false );
         if($gallery_in_content && empty($gallery_list[0]) && !is_singular()){
             $gallery_list = isset($gallery_in_content['ids']) ? explode(',', $gallery_in_content['ids']) : [];
         }
-        $light_box = unbreak_get_post_format_value('post-gallery-lightbox', '1');
+        $light_box = overcome_get_post_format_value('post-gallery-lightbox', '1');
         global $post;
         if('1' === $light_box ) 
             $gallery_classes = ['ef5-gallery-lightbox'];
@@ -65,7 +65,7 @@ if(!function_exists('unbreak_post_gallery')){
         if( !empty($gallery_list[0]) || has_post_thumbnail() ){
             if(!empty($gallery_list[0])){
                 if($light_box === '0'){
-                    //global $unbreak_owl;
+                    //global $overcome_owl;
                     $gallery_classes[] = 'ef5-owl owl-carousel owl-theme ef5-nav-vertical';
                     wp_enqueue_script('owl-carousel');
                     wp_enqueue_script('ef5-owl-carousel');
@@ -74,9 +74,9 @@ if(!function_exists('unbreak_post_gallery')){
                     $rtl = is_rtl() ? true : false;
                     $icon_prev = is_rtl() ? 'right' : 'left';
                     $icon_next = is_rtl() ? 'left' : 'right';
-                    $nav_icon = ['<span class="ef5-owl-nav-icon prev" data-title="'.esc_attr__('Previous','unbreak').'"></span>', '<span class="ef5-owl-nav-icon next" data-title="'.esc_attr__('Next','unbreak').'"></span>'];
+                    $nav_icon = ['<span class="ef5-owl-nav-icon prev" data-title="'.esc_attr__('Previous','overcome').'"></span>', '<span class="ef5-owl-nav-icon next" data-title="'.esc_attr__('Next','overcome').'"></span>'];
 
-                    $unbreak_owl[$gal_id] = array(
+                    $overcome_owl[$gal_id] = array(
                         'items'              => 1,
                         'rtl'                => $rtl,
                         'margin'             => 0,
@@ -93,7 +93,7 @@ if(!function_exists('unbreak_post_gallery')){
                         'slideBy'            => 'page',
                         
                     );
-                    wp_localize_script('owl-carousel', 'unbreak_owl', $unbreak_owl);
+                    wp_localize_script('owl-carousel', 'overcome_owl', $overcome_owl);
                 }
             ?>
                 <div id="gal-<?php echo get_the_ID();?>" class="<?php echo trim(implode(' ', $gallery_classes));?>">
@@ -108,7 +108,7 @@ if(!function_exists('unbreak_post_gallery')){
                             href="<?php echo esc_url(wp_get_attachment_image_url($img_id, 'full'));?>" 
                             title="<?php echo esc_attr(get_post_meta( $img_id, '_wp_attachment_image_alt', true )) ?>" 
                             data-effect="ef5-zoomIn"><?php if($light_box === '1' && $d === 1) { ?><img 
-                                src="<?php echo esc_url(unbreak_get_image_url_by_size([
+                                src="<?php echo esc_url(overcome_get_image_url_by_size([
                                     'id'            => $img_id, 
                                     'size'          => $args['thumbnail_size'],
                                     'default_thumb' => true
@@ -119,7 +119,7 @@ if(!function_exists('unbreak_post_gallery')){
                     } else {
                         foreach ($gallery_list as $img_id): 
                     ?>
-                        <img src="<?php echo esc_url(unbreak_get_image_url_by_size([
+                        <img src="<?php echo esc_url(overcome_get_image_url_by_size([
                             'id'            => $img_id, 
                             'size'          => $args['thumbnail_size'], 
                             'default_thumb' => true
@@ -131,12 +131,12 @@ if(!function_exists('unbreak_post_gallery')){
                 </div>
             <?php 
                 if($light_box === '0') {
-                    unbreak_loading_animation();
+                    overcome_loading_animation();
                     echo '<div class="ef5-owl-nav vertical inside"></div>
                     <div class="ef5-owl-dots"></div>';
                 }
             } elseif(has_post_thumbnail()) {
-                unbreak_post_thumbnail($args);
+                overcome_post_thumbnail($args);
             }
         }
     }
@@ -144,19 +144,19 @@ if(!function_exists('unbreak_post_gallery')){
 /**
  * Post Video
 */
-if(!function_exists('unbreak_post_video')){
-    function unbreak_post_video($args=[]){
+if(!function_exists('overcome_post_video')){
+    function overcome_post_video($args=[]){
         global $wp_embed;
         $args = wp_parse_args($args, [
             'id'             => null,
             'thumbnail_size' => is_single() ? 'large' : 'medium',
             'echo'           => true,
-            'default_thumb'  => apply_filters('unbreak_default_post_thumbnail', false)
+            'default_thumb'  => apply_filters('overcome_default_post_thumbnail', false)
         ]);
-        $video_url = unbreak_get_post_format_value('post-video-url', '');
-        $video_file = unbreak_get_post_format_value('post-video-file', []);
+        $video_url = overcome_get_post_format_value('post-video-url', '');
+        $video_file = overcome_get_post_format_value('post-video-file', []);
             $video_file_id  = isset($video_file['id']) ? $video_file['id'] : '';
-        $video_html = unbreak_get_post_format_value('post-video-html', '');
+        $video_html = overcome_get_post_format_value('post-video-html', '');
 
         // Only get video from the content if a playlist isn't present.
         $_video_in_content = apply_filters( 'the_content', get_the_content() );
@@ -203,12 +203,12 @@ if(!function_exists('unbreak_post_video')){
                 $video .= $video_in_content_html;
             }
         } else {
-        	$video = unbreak_post_thumbnail($args);
+        	$video = overcome_post_thumbnail($args);
         }
         $video .= ob_get_clean();
         // Show video 
         if($args['echo'])
-            echo apply_filters('unbreak_post_video', $video);
+            echo apply_filters('overcome_post_video', $video);
         else 
             return $video;
     }
@@ -217,17 +217,17 @@ if(!function_exists('unbreak_post_video')){
 /**
  * Post Audio
 */
-if(!function_exists('unbreak_post_audio')){
-    function unbreak_post_audio($args = []){
+if(!function_exists('overcome_post_audio')){
+    function overcome_post_audio($args = []){
         $args = wp_parse_args($args, [
             'id'             => null,
             'thumbnail_size' => is_single() ? 'large' : 'medium',
             'echo'           => true,
-            'default_thumb'  => apply_filters('unbreak_default_post_thumbnail', false)
+            'default_thumb'  => apply_filters('overcome_default_post_thumbnail', false)
         ]);
         global $wp_embed;
-        $audio_url = unbreak_get_post_format_value('post-audio-url', '');
-        $audio_file = unbreak_get_post_format_value('post-audio-file', ['id'=>'']);
+        $audio_url = overcome_get_post_format_value('post-audio-url', '');
+        $audio_file = overcome_get_post_format_value('post-audio-file', ['id'=>'']);
         if(!empty($audio_file['id'])){
             /* Get default video poster */
             $poster = (is_array($audio_file) && !empty(get_the_post_thumbnail_url($audio_file['id']))) ? get_the_post_thumbnail_url($audio_file['id'],'full') : get_the_post_thumbnail_url(get_the_ID(),'full');
@@ -275,12 +275,12 @@ if(!function_exists('unbreak_post_audio')){
                 $audio .= $audio_in_content_html;
             }
         } elseif ( has_post_thumbnail() ){
-            $audio = unbreak_post_thumbnail($args);
+            $audio = overcome_post_thumbnail($args);
         }
         $audio .= ob_get_clean();
         // Show video 
         if($args['echo'])
-            echo apply_filters('unbreak_post_audio', $audio);
+            echo apply_filters('overcome_post_audio', $audio);
         else 
             return $audio;
     }
@@ -288,22 +288,22 @@ if(!function_exists('unbreak_post_audio')){
 /**
  * Post Quote
 */
-if(!function_exists('unbreak_post_quote')){
-    function unbreak_post_quote($args = []){
+if(!function_exists('overcome_post_quote')){
+    function overcome_post_quote($args = []){
         $args = wp_parse_args($args, [
             'id'             => null,
             'thumbnail_size' => is_single() ? 'large' : 'medium',
             'echo'           => true,
-            'default_thumb'  => apply_filters('unbreak_default_post_thumbnail', false)
+            'default_thumb'  => apply_filters('overcome_default_post_thumbnail', false)
         ]);
-        $text = unbreak_get_post_format_value('post-quote-text', '');
-        $cite = unbreak_get_post_format_value('post-quote-cite', '');
+        $text = overcome_get_post_format_value('post-quote-text', '');
+        $cite = overcome_get_post_format_value('post-quote-cite', '');
         $quote = '';
         $quote_attrs = $quote_style = [];
         $quote_css_class = ['quote-wrap'];
         
         // Inline Style
-        $bg_img = unbreak_get_image_url_by_size([
+        $bg_img = overcome_get_image_url_by_size([
             'id'   => $args['id'],
             'size' => 'post-thumbnail'
         ]);
@@ -317,11 +317,11 @@ if(!function_exists('unbreak_post_quote')){
         if(!empty($text) || !empty($cite)){
             $quote = '<div '.trim(implode(' ', $quote_attrs)).'><blockquote><div class="quote-text">'.$text.'</div><cite>'.$cite.'</cite></blockquote></div>';
         } else {
-            $quote = unbreak_post_thumbnail($args);
+            $quote = overcome_post_thumbnail($args);
         }
 
         if($args['echo'])
-            echo apply_filters('unbreak_post_quote', $quote);
+            echo apply_filters('overcome_post_quote', $quote);
         else 
             return $quote;
     }
@@ -329,27 +329,27 @@ if(!function_exists('unbreak_post_quote')){
 /**
  * Post Link
 */
-if(!function_exists('unbreak_post_link')){
-    function unbreak_post_link($args = []){
+if(!function_exists('overcome_post_link')){
+    function overcome_post_link($args = []){
         $args = wp_parse_args($args, [
             'id'             => null,
             'thumbnail_size' => is_single() ? 'large' : 'medium',
             'echo'           => true,
-            'default_thumb'  => apply_filters('unbreak_default_post_thumbnail', false)
+            'default_thumb'  => apply_filters('overcome_default_post_thumbnail', false)
         ]);
 
-        $title = unbreak_get_post_format_value('post-link-title', esc_html__('View Our Portfolio','unbreak'));
+        $title = overcome_get_post_format_value('post-link-title', esc_html__('View Our Portfolio','overcome'));
         //https://themeforest.net/user/zookastudio/portfolio
-        $link = unbreak_get_post_format_value('post-link-url', '');
+        $link = overcome_get_post_format_value('post-link-url', '');
         if(empty($link)) return;
         // Get first link in content 
-        $link_in_content =  unbreak_get_content_link(['echo' => false]);
+        $link_in_content =  overcome_get_content_link(['echo' => false]);
         // Link attribute
         $link_attrs = $link_style = [];
         $link_css_class = ['link-wrap'];
         
         // Inline Style
-        $bg_img = unbreak_get_image_url_by_size([
+        $bg_img = overcome_get_image_url_by_size([
             'id'            => $args['id'],
             'size'          => 'post-thumbnail', 
             'default_thumb' => true
@@ -366,13 +366,13 @@ if(!function_exists('unbreak_post_link')){
             $link = '<div '.trim(implode(' ', $link_attrs)).'><a href="'.esc_url($link).'" class="ef5-btn ef5-btn-df fill accent" target="_blank"><span>'.esc_html($title).'</span></a></div>';
         } elseif($link_in_content){
             // link 
-            $link = '<div '.trim(implode(' ', $link_attrs)).'>' . unbreak_get_content_link(['echo' => false]) . '</div>';
+            $link = '<div '.trim(implode(' ', $link_attrs)).'>' . overcome_get_content_link(['echo' => false]) . '</div>';
         } else {
-            $link = unbreak_post_thumbnail($args);
+            $link = overcome_post_thumbnail($args);
         }
 
         if($args['echo'])
-            echo apply_filters('unbreak_post_link', $link);
+            echo apply_filters('overcome_post_link', $link);
         else 
             return $link;
     }
@@ -382,26 +382,26 @@ if(!function_exists('unbreak_post_link')){
  * Post Image
  * @since 1.0.1
 */
-if(!function_exists('unbreak_post_image')){
-    function unbreak_post_image($args = []){
+if(!function_exists('overcome_post_image')){
+    function overcome_post_image($args = []){
         $args = wp_parse_args($args, [
             'id'             => null,
             'thumbnail_size' => is_single() ? 'large' : 'medium',
             'echo'           => true,
-            'default_thumb'  => apply_filters('unbreak_default_post_thumbnail', false)
+            'default_thumb'  => apply_filters('overcome_default_post_thumbnail', false)
         ]);
         $image = $image_in_content = '';
         // Get first link in content 
-        $image_in_content =  unbreak_get_content_image(['echo' => false]);
+        $image_in_content =  overcome_get_content_image(['echo' => false]);
         
         if(has_post_thumbnail()){
-           $image =  unbreak_post_thumbnail($args);
+           $image =  overcome_post_thumbnail($args);
         } elseif(!empty($image_in_content) && !is_single()){
             // images
-            $image =  unbreak_get_content_image(['echo' => false]);
+            $image =  overcome_get_content_image(['echo' => false]);
         }
         if($args['echo'])
-            echo apply_filters('unbreak_post_image', $image);
+            echo apply_filters('overcome_post_image', $image);
         else 
             return $image;
     }
@@ -410,60 +410,60 @@ if(!function_exists('unbreak_post_image')){
  * Post Media
  * @since 1.0.1
 */
-if(!function_exists('unbreak_post_media')){
-    function unbreak_post_media($args = []){
+if(!function_exists('overcome_post_media')){
+    function overcome_post_media($args = []){
         $args = wp_parse_args($args, [
             'id'             => null,
             'thumbnail_size' => is_single() ? 'large' : 'medium',
             'echo'           => true,
-            'default_thumb'  => apply_filters('unbreak_default_post_thumbnail', false),
+            'default_thumb'  => apply_filters('overcome_default_post_thumbnail', false),
             'class'          => '',
             'before'         => '',
             'after'          => ''
         ]);
-        do_action('unbreak_before_post_media');
+        do_action('overcome_before_post_media');
         $post_format = !empty(get_post_format()) ? get_post_format() : 'standard';
 
         $classes = [
             'ef5-featured',
             'ef5-'.$post_format,
         ];
-        $classes[] = unbreak_is_loop() ? 'loop' : 'single';
+        $classes[] = overcome_is_loop() ? 'loop' : 'single';
         if(!empty($args['class'])) $classes[] = $args['class'];
     ?>
     <div class="<?php echo trim(implode(' ', $classes));?>"><?php
         printf('%s', $args['before']);
         switch (get_post_format()) {
             case 'gallery':
-                unbreak_post_gallery($args);
+                overcome_post_gallery($args);
                 break;
             case 'video':
-                unbreak_post_video($args);
+                overcome_post_video($args);
                 break;
             case 'audio':
-                unbreak_post_audio($args);
+                overcome_post_audio($args);
                 break;
             case 'quote':
-                unbreak_post_quote($args);
+                overcome_post_quote($args);
                 break;
             case 'link':
-                unbreak_post_link($args);
+                overcome_post_link($args);
                 break;
              case 'image':
-                unbreak_post_image($args);
+                overcome_post_image($args);
                 break;
             default:
-                unbreak_post_thumbnail($args);
+                overcome_post_thumbnail($args);
                 break;
         }
         printf('%s', $args['after']);
-        do_action('unbreak_post_media_content');
+        do_action('overcome_post_media_content');
     ?></div><?php
-    do_action('unbreak_after_post_media');
+    do_action('overcome_after_post_media');
     }
 }
-if(!function_exists('unbreak_loop_media')){
-    function unbreak_loop_media($args = []){
+if(!function_exists('overcome_loop_media')){
+    function overcome_loop_media($args = []){
         $args = wp_parse_args($args, [
             'show_media'     => '1',
             'thumbnail_size' => 'large',
@@ -472,20 +472,20 @@ if(!function_exists('unbreak_loop_media')){
         extract($args);
         if('1' !== $show_media) return;
         
-        unbreak_post_media($args); 
+        overcome_post_media($args); 
     }
 }
 
 /**
  * Post Author's on Media 
- * action hook : unbreak_post_thumbnail_content
+ * action hook : overcome_post_thumbnail_content
  * @since 1.0.0
 */
-if(!function_exists('unbreak_post_author_on_media')){
-    function unbreak_post_author_on_media($args = []){
+if(!function_exists('overcome_post_author_on_media')){
+    function overcome_post_author_on_media($args = []){
         $args = wp_parse_args($args, [
 			'echo'        => true,
-			'show_author' => is_singular() ? unbreak_get_opts('post_author_on','1') : unbreak_get_opts('archive_author_on','1')
+			'show_author' => is_singular() ? overcome_get_opts('post_author_on','1') : overcome_get_opts('archive_author_on','1')
         ]);
         extract($args);
 
@@ -494,7 +494,7 @@ if(!function_exists('unbreak_post_author_on_media')){
         ob_start();
             echo '<div class="post-author">'
             .get_avatar(get_the_author_meta('ID'), 30,  '' , get_the_author(), array('class' => 'circle')).'&nbsp;&nbsp;'
-            .esc_html__('By','unbreak').':&nbsp;'
+            .esc_html__('By','overcome').':&nbsp;'
             .get_the_author_posts_link()
             .'</div>';
         if($args['echo'])
@@ -506,15 +506,15 @@ if(!function_exists('unbreak_post_author_on_media')){
 
 /**
  * Post Category on Media
- * action hook: unbreak_post_thumbnail_content
+ * action hook: overcome_post_thumbnail_content
  * @since 1.0.0
- * add_action('unbreak_post_thumbnail_content', 'unbreak_post_category_on_media', 10);
+ * add_action('overcome_post_thumbnail_content', 'overcome_post_category_on_media', 10);
 */
-if(!function_exists('unbreak_post_category_on_media')){
-    function unbreak_post_category_on_media($args =[]){
+if(!function_exists('overcome_post_category_on_media')){
+    function overcome_post_category_on_media($args =[]){
         $args = wp_parse_args($args, [
             'echo'     => true,
-            'show_cat' => is_singular() ? unbreak_get_opts('post_categories_on','1') : unbreak_get_opts('archive_categories_on','1'),
+            'show_cat' => is_singular() ? overcome_get_opts('post_categories_on','1') : overcome_get_opts('archive_categories_on','1'),
             'taxonomy' => 'category',
             'before'   => '<span class="icon-pencil icon"></span>',
             'sep'      => ' / ',
@@ -538,8 +538,8 @@ if(!function_exists('unbreak_post_category_on_media')){
  * Read more on media 
  *
 */
-if(!function_exists('unbreak_post_readmore_on_media')){
-    function unbreak_post_readmore_on_media($args=[]){
+if(!function_exists('overcome_post_readmore_on_media')){
+    function overcome_post_readmore_on_media($args=[]){
         $args = wp_parse_args($args, [
             'icon' => 'fa fa-plus',
 

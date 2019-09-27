@@ -6,8 +6,8 @@
 /**
  * Page title Layout
 */
-function unbreak_page_title(){
-    $ptitle_layout = unbreak_get_opts('ptitle_layout', '2');
+function overcome_page_title(){
+    $ptitle_layout = overcome_get_opts('ptitle_layout', '2');
     if($ptitle_layout === 'none' || is_404() ) return;
     get_template_part('template-parts/page-title/layout', $ptitle_layout);
 }
@@ -15,9 +15,9 @@ function unbreak_page_title(){
 /**
  * Page title inner class
 */
-function unbreak_ptitle_inner_class($class=''){
+function overcome_ptitle_inner_class($class=''){
 	$classes = ['ef5-pagetitle-inner'];
-	$full = unbreak_get_opts('ptitle_full_width', '0');
+	$full = overcome_get_opts('ptitle_full_width', '0');
 	if($full === '1')
 		$classes[] = 'container-fluid';
 	else 
@@ -30,9 +30,9 @@ function unbreak_ptitle_inner_class($class=''){
 /**
  * Prints HTML for breadcrumbs.
  */
-function unbreak_breadcrumb($args = [])
+function overcome_breadcrumb($args = [])
 {
-    if ( ! class_exists( 'UnBreak_Breadcrumb' ) )
+    if ( ! class_exists( 'OverCome_Breadcrumb' ) )
     {
         return;
     }
@@ -40,14 +40,14 @@ function unbreak_breadcrumb($args = [])
         'class'     => '',
         'separator' => ''
     ]);
-    $breadcrumb = new UnBreak_Breadcrumb();
+    $breadcrumb = new OverCome_Breadcrumb();
     $entries = $breadcrumb->get_entries();
 
     if ( empty( $entries ) )
     {
         return;
     }
-    $separator = apply_filters('unbreak_breadcrumb_separator', $args['separator']);
+    $separator = apply_filters('overcome_breadcrumb_separator', $args['separator']);
     ob_start();
     $count = count($entries);
     $d = 0;
@@ -91,9 +91,9 @@ function unbreak_breadcrumb($args = [])
  * Parallax Image
  * // default background: get_template_directory_uri().'/assets/images/page-title/bg-pagetitle.jpg'
 */
-function unbreak_ptitle_parallax_image(){
-    $parallax_url = unbreak_get_opts('ptitle_parallax',['url'=> '']);
+function overcome_ptitle_parallax_image(){
+    $parallax_url = overcome_get_opts('ptitle_parallax',['url'=> '']);
      if(empty($parallax_url['url'])) return;
-    $titles = unbreak_get_page_titles();
+    $titles = overcome_get_page_titles();
     echo '<div class="parallax"><img src="'.esc_url($parallax_url['url']).'" alt="'.esc_attr($titles['title']).'" /></div>';
 }

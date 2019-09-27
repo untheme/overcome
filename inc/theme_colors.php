@@ -3,14 +3,14 @@
  * Add theme colors list
  * structure: name => array (Title, Color Value)
 */
-function unbreak_colors(){
+function overcome_colors(){
 	return [
 		''				=> ['Default'],
-		'primary'		=> ['Primary', unbreak_configs('primary_color'), 'var(--primary-color)'],
-		'accent'		=> ['Accent', unbreak_configs('accent_color'), 'var(--accent-color)'],
+		'primary'		=> ['Primary', overcome_configs('primary_color'), 'var(--primary-color)'],
+		'accent'		=> ['Accent', overcome_configs('accent_color'), 'var(--accent-color)'],
 		'accent2'		=> ['Accent2', '#FF9827'],
-		'secondary'	 	=> ['Secondary', unbreak_configs('secondary_color'), 'var(--secondary-color)'],
-		'darken-accent' => ['Darken Accent', unbreak_configs('secondary_color'), 'var(--secondary-color)'],
+		'secondary'	 	=> ['Secondary', overcome_configs('secondary_color'), 'var(--secondary-color)'],
+		'darken-accent' => ['Darken Accent', overcome_configs('secondary_color'), 'var(--secondary-color)'],
 		'dark' 		    => ['Dark', '#000000'],
 		'medium-dark'   => ['Medium Dark', '#161616'],
 		'dark-blue'     => ['Dark Blue', '#182333'],
@@ -39,8 +39,8 @@ function unbreak_colors(){
 	];
 }
 
-function unbreak_colors_option_for_vc($extra = []){
-	$colors = unbreak_colors();
+function overcome_colors_option_for_vc($extra = []){
+	$colors = overcome_colors();
 	$options = [];
 	foreach ($colors as $key => $color) {
 		$sub_title = isset($color[1]) ? ' ('.$color[1].')' : '';
@@ -50,8 +50,8 @@ function unbreak_colors_option_for_vc($extra = []){
 }
 
 
-function unbreak_colors_option_for_scss($extra = []){
-	$colors = unbreak_colors();
+function overcome_colors_option_for_scss($extra = []){
+	$colors = overcome_colors();
 	$options = [];
 	foreach ($colors as $key => $color) {
 		$color[1] = isset($color[1]) ? $color[1] : '\'\'';

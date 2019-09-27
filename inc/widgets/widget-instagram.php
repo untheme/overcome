@@ -1,35 +1,35 @@
 <?php
 // Enable Instagram Widget
 if(!function_exists('enable_instagram_widget')){
-    add_filter('enable_instagram_widget', 'unbreak_instagram');
-    function unbreak_instagram(){
+    add_filter('enable_instagram_widget', 'overcome_instagram');
+    function overcome_instagram(){
         return true;
     }
 }
 // Update Instagrame username from theme options to widget
-if(!function_exists('unbreak_instagram_api_username')){
-    add_filter('ef5_instagram_api_username', 'unbreak_instagram_api_username');
-    function unbreak_instagram_api_username(){
-        return unbreak_get_opts('instagram_api_username','zooka.studio');
+if(!function_exists('overcome_instagram_api_username')){
+    add_filter('ef5_instagram_api_username', 'overcome_instagram_api_username');
+    function overcome_instagram_api_username(){
+        return overcome_get_opts('instagram_api_username','zooka.studio');
     }
 }
 /**
  * Custom layout 
- * add_filter('ef5systems_instagram_custom_layout','unbreak_instagram_custom_layout');
+ * add_filter('ef5systems_instagram_custom_layout','overcome_instagram_custom_layout');
  */
-if(!function_exists('unbreak_instagram_custom_layout')){
-    function unbreak_instagram_custom_layout(){
+if(!function_exists('overcome_instagram_custom_layout')){
+    function overcome_instagram_custom_layout(){
         return [
-            '1' => esc_html__('Layout 1','unbreak'),
-            '2' => esc_html__('Layout 2','unbreak'),
-            '3' => esc_html__('Layout 3','unbreak'),
+            '1' => esc_html__('Layout 1','overcome'),
+            '2' => esc_html__('Layout 2','overcome'),
+            '3' => esc_html__('Layout 3','overcome'),
         ];
     }
 }
 // Output HTML 
-if(!function_exists('unbreak_instagram_html_output')){
-    add_filter('ef5systems_instagram_output_html','unbreak_instagram_html_output', 10, 11);
-    function unbreak_instagram_html_output($layout_mode, $span, $columns_space, $media_array, $size, $target, $show_like, $show_cmt, $show_author, $author_text, $username){
+if(!function_exists('overcome_instagram_html_output')){
+    add_filter('ef5systems_instagram_output_html','overcome_instagram_html_output', 10, 11);
+    function overcome_instagram_html_output($layout_mode, $span, $columns_space, $media_array, $size, $target, $show_like, $show_cmt, $show_author, $author_text, $username){
         switch ($layout_mode) {
             default:
                 echo '<div class="ef5-instagram layout'.$layout_mode.'">'; 

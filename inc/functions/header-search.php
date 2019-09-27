@@ -3,15 +3,15 @@
  * Header Search Icon
  * @since 1.0.0 
 */
-if(!function_exists('unbreak_header_search')){
-	function unbreak_header_search($args = []){
+if(!function_exists('overcome_header_search')){
+	function overcome_header_search($args = []){
 		$args = wp_parse_args($args, [
 			'before' => '',
 			'after'  => '',
 			'icon'	 => 'flaticon-magnifying-glass-1',
 			'type'	 => ''
 		]);
-		$show_search = unbreak_get_opts('header_search', '0');
+		$show_search = overcome_get_opts('header_search', '0');
 		if('0' === $show_search) return;
 
 		$link_classes = ['header-icon'];
@@ -30,9 +30,9 @@ if(!function_exists('unbreak_header_search')){
 	}
 }
 
-if(!function_exists('unbreak_header_search_popup_html')){
-	function unbreak_header_search_popup_html($args = []){
-		$show_search = unbreak_get_opts('header_search', '0');
+if(!function_exists('overcome_header_search_popup_html')){
+	function overcome_header_search_popup_html($args = []){
+		$show_search = overcome_get_opts('header_search', '0');
 		if('0' === $show_search) return;
 		$form_classes = ['ef5-searchform'];
 		$args = wp_parse_args($args, [
@@ -54,4 +54,4 @@ if(!function_exists('unbreak_header_search_popup_html')){
 	<?php
 	}
 }
-add_action('wp_footer','unbreak_header_search_popup_html');
+add_action('wp_footer','overcome_header_search_popup_html');

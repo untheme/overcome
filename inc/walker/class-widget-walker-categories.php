@@ -1,9 +1,9 @@
 <?php
 /**
- * UnBreak_Categories_Walker
+ * OverCome_Categories_Walker
  *
  * @version 1.0
- * @package UnBreak
+ * @package EF5 Theme
  * @since   1.0.2
  *
  */
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) )
 {
     die();
 }
-class UnBreak_Categories_Walker extends Walker_Category {
+class OverCome_Categories_Walker extends Walker_Category {
     /**
      * Starts the element output.
      *
@@ -60,7 +60,7 @@ class UnBreak_Categories_Walker extends Walker_Category {
                     $link .= ' <span class="count">' . number_format_i18n( $category->count ) . '</span>';
                 }
             $link .= '</span>';
-            $link .= unbreak_widget_expander();
+            $link .= overcome_widget_expander();
         } else {
             $link .= '<span class="title">'.$cat_name.'</span>';
             if ( ! empty( $args['show_count'] ) ) {
@@ -80,7 +80,7 @@ class UnBreak_Categories_Walker extends Walker_Category {
             $link .= '<a href="' . esc_url( get_term_feed_link( $category->term_id, $category->taxonomy, $args['feed_type'] ) ) . '"';
  
             if ( empty( $args['feed'] ) ) {
-                $alt = ' alt="' . sprintf(__( 'Feed for all posts filed under %s','unbreak' ), $cat_name ) . '"';
+                $alt = ' alt="' . sprintf(__( 'Feed for all posts filed under %s','overcome' ), $cat_name ) . '"';
             } else {
                 $alt = ' alt="' . $args['feed'] . '"';
                 $name = $args['feed'];

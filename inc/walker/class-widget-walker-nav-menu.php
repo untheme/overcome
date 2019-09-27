@@ -1,9 +1,9 @@
 <?php
 /**
- * UnBreak_Menu_Walker
+ * OverCome_Menu_Walker
  *
  * @version 1.0
- * @package UnBreak
+ * @package EF5 Theme
  * @since   1.0
  *
  */
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) )
     die();
 }
 
-class UnBreak_Menu_Walker extends Walker_Nav_Menu {
+class OverCome_Menu_Walker extends Walker_Nav_Menu {
 	/**
 	 * Starts the element output.
 	 *
@@ -171,14 +171,14 @@ class UnBreak_Menu_Walker extends Walker_Nav_Menu {
 		 * @param int      $depth Depth of menu item. Used for padding.
 		 */
 		$title = apply_filters( 'nav_menu_item_title', $title, $item, $args, $depth );
-		if(empty($title)) $title = sprintf( esc_html__( '#%d (no title)', 'unbreak' ), $item->ID );
+		if(empty($title)) $title = sprintf( esc_html__( '#%d (no title)', 'overcome' ), $item->ID );
 		$title = '<span class="title">'.$title.'</span>';
 		/* add expander */
 		$item_expander = $item_no_link_expander = '';
-		if($item->url === '#') $item_no_link_expander = unbreak_widget_expander(['class'=>'ef5-toggle-overlay']);
+		if($item->url === '#') $item_no_link_expander = overcome_widget_expander(['class'=>'ef5-toggle-overlay']);
 		$is_parent = in_array('menu-item-has-children', $classes);
 		if($is_parent === true) {
-			$item_expander = unbreak_widget_expander();
+			$item_expander = overcome_widget_expander();
 		}
 
 		$item_output = $args->before;

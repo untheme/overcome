@@ -7,8 +7,8 @@
  * and that other 'pages' on your WordPress site may use a
  * different template.
  *
- * @package UnBreak
- * @subpackage UnBreak
+ * @package EF5 Theme
+ * @subpackage OverCome
  * @since 1.0.0
  * @author EF5 Team
  *
@@ -17,7 +17,7 @@ get_header();
 ?>
     <div class="container">
         <div class="row gutter-lg-60">
-            <div id="ef5-content-area" class="<?php unbreak_content_css_class();?>">
+            <div id="ef5-content-area" class="<?php overcome_content_css_class();?>">
                 <div class="ef5-blogs">
                 <?php
                     /* Start the Loop */
@@ -25,18 +25,18 @@ get_header();
                         the_post();
                         get_template_part( 'template-parts/single/content', get_post_format() );
                         // Post Navigation
-                        unbreak_post_navigation();
+                        overcome_post_navigation();
                         // About Author
-                        unbreak_post_author();
+                        overcome_post_author();
                         // Related
-                        unbreak_post_related();
+                        overcome_post_related();
                         // Comment
-                        unbreak_comment();
+                        overcome_comment();
                     endwhile; // End of the loop.
                 ?>
                 </div>
             </div>
-            <?php unbreak_sidebar(); ?>
+            <?php overcome_sidebar(); ?>
         </div>
     </div>
 <?php

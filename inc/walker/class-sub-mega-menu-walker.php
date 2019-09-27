@@ -1,9 +1,9 @@
 <?php
 /**
- * UnBreak_SubMenu_MegaMenu_Walker
+ * OverCome_SubMenu_MegaMenu_Walker
  *
  * @version 1.0
- * @package UnBreak
+ * @package EF5 Theme
  * @since   1.0.0
  *
  */
@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) )
     die();
 }
 
-class UnBreak_SubMenu_MegaMenu_Walker extends Walker_Nav_Menu {
+class OverCome_SubMenu_MegaMenu_Walker extends Walker_Nav_Menu {
 	public function start_lvl( &$output, $depth = 0, $args = array() ) {
 		if ( isset( $args->item_spacing ) && 'discard' === $args->item_spacing ) {
 			$t = '';
@@ -66,11 +66,11 @@ class UnBreak_SubMenu_MegaMenu_Walker extends Walker_Nav_Menu {
 		}
 
 		$title = $item->title;
-		if(empty($title)) $title = sprintf( __( '#%d (no title)', 'unbreak' ), $item->ID );
+		if(empty($title)) $title = sprintf( __( '#%d (no title)', 'overcome' ), $item->ID );
 		/* add expander */
 		$item_expander = '';
 		$is_parent = in_array('menu-item-has-children', $classes);
-		if($is_parent === true) $item_expander = unbreak_widget_expander();
+		if($is_parent === true) $item_expander = overcome_widget_expander();
 
 		$item_output = $args->before;
 		$item_output .= '<a'. $attributes .'>';

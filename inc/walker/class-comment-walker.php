@@ -2,8 +2,8 @@
 /**
  * Custom comment walker for this theme
  *
- * @package UnBreak
- * @subpackage UnBreak
+ * @package EF5 Theme
+ * @subpackage OverCome
  * @since 1.0.0
  * @author EF5 Team
  *
@@ -14,7 +14,7 @@
  *
  * @since 1.0.0
  */
-class UnBreak_Walker_Comment extends Walker_Comment {
+class OverCome_Walker_Comment extends Walker_Comment {
 
 	/**
 	 * Outputs a comment in the HTML5 format.
@@ -47,14 +47,14 @@ class UnBreak_Walker_Comment extends Walker_Comment {
 								} 
 							?>
 						</div>
-						<?php $this->unbreak_comment_author_info(['class' => 'col'], $comment , $comment_author ); ?>
+						<?php $this->overcome_comment_author_info(['class' => 'col'], $comment , $comment_author ); ?>
 					</div>
 				</div>
 				<?php } ?>
 				<div class="comment-info col">
-					<?php $this->unbreak_comment_author_info([], $comment , $comment_author ); ?>
+					<?php $this->overcome_comment_author_info([], $comment , $comment_author ); ?>
 					<?php if ( '0' == $comment->comment_approved ) : ?>
-						<div class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'unbreak' ); ?></div>
+						<div class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'overcome' ); ?></div>
 					<?php endif; ?>
 					<div class="comment-content">
 						<?php comment_text(); ?>
@@ -62,8 +62,8 @@ class UnBreak_Walker_Comment extends Walker_Comment {
 					<div class="comment-metadata">
 						<span class="comment-time meta-color"><?php
 								/* translators: 1: comment date, 2: comment time */
-								$comment_timestamp = sprintf( __( '%1$s at %2$s', 'unbreak' ), get_comment_date( '', $comment ), get_comment_time() );
-							echo unbreak_html($comment_timestamp); 
+								$comment_timestamp = sprintf( __( '%1$s at %2$s', 'overcome' ), get_comment_date( '', $comment ), get_comment_time() );
+							echo overcome_html($comment_timestamp); 
 						?></span>
 						<?php
 							comment_reply_link(
@@ -78,7 +78,7 @@ class UnBreak_Walker_Comment extends Walker_Comment {
 									)
 								)
 							);
-							edit_comment_link(esc_html__('Edit','unbreak'));
+							edit_comment_link(esc_html__('Edit','overcome'));
 						?>
 					</div>
 				</div>
@@ -90,18 +90,18 @@ class UnBreak_Walker_Comment extends Walker_Comment {
 	?>
 		<<?php echo esc_html($tag); ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( '', $comment ); ?>>
 			<div class="comment-body">
-				<?php _e( 'Pingback:', 'unbreak' ); ?> 
+				<?php _e( 'Pingback:', 'overcome' ); ?> 
 				<div class="h5"><?php comment_author_link( $comment ); ?></div>
 				<?php if(current_user_can( 'edit_comment', $comment->comment_ID )){ ?>
 				<div class="comment-links"><?php 
-					echo '<span class="edit-edit"><a href="'.esc_url(get_edit_comment_link()).'" class="edit-link"><span class="edit-icon fa fa-edit"></span>&nbsp;&nbsp;'.esc_html__('Edit','unbreak').'</a></span>'; 
+					echo '<span class="edit-edit"><a href="'.esc_url(get_edit_comment_link()).'" class="edit-link"><span class="edit-icon fa fa-edit"></span>&nbsp;&nbsp;'.esc_html__('Edit','overcome').'</a></span>'; 
 				?></div>
 				<?php } ?>
 			</div>
 	<?php
 		}
 
-	public function unbreak_comment_author_info($args = '', $comment , $comment_author ){
+	public function overcome_comment_author_info($args = '', $comment , $comment_author ){
 		$args = wp_parse_args($args, [
 			'class' => ''
 		]);
@@ -114,14 +114,14 @@ class UnBreak_Walker_Comment extends Walker_Comment {
 				 * fill color to the inner check shape when in circle form.
 				*/
 				$author_badge = '';
-				if ( unbreak_is_comment_by_post_author( $comment ) ) {
+				if ( overcome_is_comment_by_post_author( $comment ) ) {
 					/* translators: %s: SVG Icon */
 					$author_badge = sprintf( '<span class="post-author-badge">%s</span>', '<span class="far fa-user"></span>' );
 				}
 
 				printf(
 					/* translators: %s: comment author link */
-					esc_html__( '%s', 'unbreak' ),
+					esc_html__( '%s', 'overcome' ),
 					sprintf( '<div class="author-name h5">%1$s %2$s</div>',$author_badge, $comment_author )
 				);
 			?>

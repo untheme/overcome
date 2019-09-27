@@ -1,9 +1,9 @@
 <?php
 /**
- * UnBreak_Page_Walker
+ * OverCome_Page_Walker
  *
  * @version 1.0
- * @package UnBreak
+ * @package EF5 Theme
  * @since   1.0.2
  *
  */
@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) )
 {
     die();
 }
-class UnBreak_Page_Walker extends Walker_Page {
+class OverCome_Page_Walker extends Walker_Page {
 	/**
      * Outputs the beginning of the current element in the tree.
      *
@@ -77,7 +77,7 @@ class UnBreak_Page_Walker extends Walker_Page {
  
         if ( '' === $page->post_title ) {
             /* translators: %d: ID of a post */
-            $page->post_title = sprintf( __( '#%d (no title)', 'unbreak' ), $page->ID );
+            $page->post_title = sprintf( __( '#%d (no title)', 'overcome' ), $page->ID );
         }
  
         $args['link_before'] = empty( $args['link_before'] ) ? '' : $args['link_before'];
@@ -132,7 +132,7 @@ class UnBreak_Page_Walker extends Walker_Page {
         }
 
         if ( isset( $args['pages_with_children'][ $page->ID ] ) ) {
-            $output .= unbreak_widget_expander();
+            $output .= overcome_widget_expander();
         }
 
         $output .= '</a>'.$args['link_after'];

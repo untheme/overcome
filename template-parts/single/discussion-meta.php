@@ -4,14 +4,14 @@
  */
 
 /* Get data from current discussion on post. */
-$discussion    = unbreak_get_discussion_data();
+$discussion    = overcome_get_discussion_data();
 $has_responses = $discussion->responses > 0;
 
 if ( $has_responses ) {
 	/* translators: %1(X comments)$s */
-	$meta_label = sprintf( _n( '%d Comment', '%d Comments', $discussion->responses, 'unbreak' ), $discussion->responses );
+	$meta_label = sprintf( _n( '%d Comment', '%d Comments', $discussion->responses, 'overcome' ), $discussion->responses );
 } else {
-	$meta_label = __( 'No comments', 'unbreak' );
+	$meta_label = __( 'No comments', 'overcome' );
 }
 
 ?>

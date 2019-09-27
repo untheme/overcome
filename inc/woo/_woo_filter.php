@@ -2,8 +2,8 @@
 /**
  * add filter bar
 */
-//add_action('unbreak_woocommerce_before_shop_loop','unbreak_woocommerce_filter_bar');
-function unbreak_woocommerce_filter_bar(){
+//add_action('overcome_woocommerce_before_shop_loop','overcome_woocommerce_filter_bar');
+function overcome_woocommerce_filter_bar(){
     $attribute_array = [];
     $attribute_taxonomies = wc_get_attribute_taxonomies();
     if (!empty($attribute_taxonomies)) {
@@ -17,12 +17,12 @@ function unbreak_woocommerce_filter_bar(){
 	<div class="ef5-woo-filters row">
 		<?php 
 			$filtered_args = [
-                'title' => '<h3 class="ef5-heading widgettitle">'.esc_html__('Active Filters','unbreak').'</h3>',
+                'title' => '<h3 class="ef5-heading widgettitle">'.esc_html__('Active Filters','overcome').'</h3>',
                 'class' => 'widget widget_layered_nav_filters col-12',
             ];
-            unbreak_woo_filtered_list($filtered_args);
+            overcome_woo_filtered_list($filtered_args);
 
-		    do_action('unbreak_woocommerce_filter_orderby');
+		    do_action('overcome_woocommerce_filter_orderby');
             
             // Filter by Attribute
             foreach ($attribute_array as $key => $value) {
@@ -45,7 +45,7 @@ function unbreak_woocommerce_filter_bar(){
             }
             // Rating Filter
             $filter_rating_args = [
-                'title'           => esc_html__('Average Rating','unbreak'),
+                'title'           => esc_html__('Average Rating','overcome'),
             ];
             the_widget(
                 'WC_Widget_Rating_Filter',
@@ -58,7 +58,7 @@ function unbreak_woocommerce_filter_bar(){
                 ) 
             );
             $filter_by_price_args = [
-                'title'           => esc_html__('Filter by Price','unbreak'),
+                'title'           => esc_html__('Filter by Price','overcome'),
             ];
             the_widget(
                 'WC_Widget_Price_Filter',

@@ -3,8 +3,8 @@
  * Get Page List 
  * @return array
 */
-if(!function_exists('unbreak_list_page')){
-    function unbreak_list_page($default = []){
+if(!function_exists('overcome_list_page')){
+    function overcome_list_page($default = []){
         $page_list = array();
         if(!empty($default))
             $page_list[$default['value']] = $default['label'];
@@ -20,12 +20,12 @@ if(!function_exists('unbreak_list_page')){
  * Get Post List
  * @return array
 */
-if(!function_exists('unbreak_list_post')){
-    function unbreak_list_post($post_type = 'post', $default = false){
+if(!function_exists('overcome_list_post')){
+    function overcome_list_post($post_type = 'post', $default = false){
         $post_list = array();
         if($default){
-            $post_list['none'] = esc_html__('None','unbreak');
-            $post_list['-1']   = esc_html__('Default','unbreak');
+            $post_list['none'] = esc_html__('None','overcome');
+            $post_list['-1']   = esc_html__('Default','overcome');
         }
         $posts = get_posts(array('post_type' => $post_type,'posts_per_page' => '-1'));
         foreach($posts as $post){
@@ -40,7 +40,7 @@ if(!function_exists('unbreak_list_post')){
  * @return array
  *
 */
-function unbreak_list_post_thumbnail($post_type = 'post', $default = false){
+function overcome_list_post_thumbnail($post_type = 'post', $default = false){
     $layouts = [];
     if($default){
         $layouts['-1'] = get_template_directory_uri() . '/assets/images/default.png';
@@ -60,18 +60,18 @@ function unbreak_list_post_thumbnail($post_type = 'post', $default = false){
  * get list menu.
  * @return array
  */
-if(!function_exists('unbreak_get_nav_menu')){
-    function unbreak_get_nav_menu($args = []){
+if(!function_exists('overcome_get_nav_menu')){
+    function overcome_get_nav_menu($args = []){
         $args = wp_parse_args($args, [
             'default' => false, 
             'none'    => false
         ]);
         $menus = array(
-            '0' => esc_html__('Primary Menu','unbreak')
+            '0' => esc_html__('Primary Menu','overcome')
         );
         $obj_menus = wp_get_nav_menus();
-        if($args['default']) $menus['-1'] = esc_html__('Default','unbreak');
-        if($args['none']) $menus['none'] = esc_html__('None','unbreak');
+        if($args['default']) $menus['-1'] = esc_html__('Default','overcome');
+        if($args['none']) $menus['none'] = esc_html__('None','overcome');
 
         foreach ($obj_menus as $obj_menu){
             $menus[$obj_menu->slug] = $obj_menu->name;
@@ -84,7 +84,7 @@ if(!function_exists('unbreak_get_nav_menu')){
  * 
  * @param $user_role
 */
-function unbreak_list_user_by_role_for_opts($args = []){
+function overcome_list_user_by_role_for_opts($args = []){
     $args = wp_parse_args($args, [
         'role'    => 'subcrible',
         'orderby' => 'user_nicename',
@@ -101,8 +101,8 @@ function unbreak_list_user_by_role_for_opts($args = []){
  * Get RevSlider List 
  * @return array
 */
-if(!function_exists('unbreak_get_list_rev_slider')){
-    function unbreak_get_list_rev_slider() {
+if(!function_exists('overcome_get_list_rev_slider')){
+    function overcome_get_list_rev_slider() {
         if (class_exists('RevSlider')) {
             $slider = new RevSlider();
             $arrSliders = $slider->getArrSliders();
@@ -122,13 +122,13 @@ if(!function_exists('unbreak_get_list_rev_slider')){
  * Get Contact Form 7 List
  * @return array
 */
-if(!function_exists('unbreak_get_list_cf7')){
-    function unbreak_get_list_cf7($defaule = false) {
+if(!function_exists('overcome_get_list_cf7')){
+    function overcome_get_list_cf7($defaule = false) {
         if(!class_exists('WPCF7')) return;
         $cf7 = get_posts( 'post_type="wpcf7_contact_form"&numberposts=-1' );
         $contact_forms = array();
         if($defaule){
-            $contact_forms['-1'] = esc_html__('Default From Theme Option','unbreak');
+            $contact_forms['-1'] = esc_html__('Default From Theme Option','overcome');
         }
 
         foreach ( $cf7 as $cform ) {

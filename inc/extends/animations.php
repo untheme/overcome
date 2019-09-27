@@ -1,5 +1,5 @@
 <?php
-function unbreak_html_animation($args = []){
+function overcome_html_animation($args = []){
 	$args = wp_parse_args($args, [
 		'anim'     => 'wave1',
 		'echo'     => false,
@@ -49,7 +49,7 @@ function unbreak_html_animation($args = []){
 			break;
 	}
 	if($args['echo'])
-		echo unbreak_html($html);
+		echo overcome_html($html);
 	else 
 		return $html;
 }
