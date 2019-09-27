@@ -1,0 +1,49 @@
+.vc_progress_bar{
+	&.layout-1,
+	&.layout-2{
+		.vc_single_bar{
+			padding-bottom: 7px;
+			margin-bottom: 27px;
+			position: relative;
+			background: none;
+			@include box-shadow(none);
+			@include border-radius(0);
+			.vc_label{
+				font-size: 18px;
+				font-family: $HeadingFont;
+				font-weight: 700;
+				@include d-flex();
+				justify-content: space-between;
+				padding: 0 0 6px 0;
+			}
+			.vc_bar,
+			&:after{
+				height: 7px;
+				top: auto;
+				bottom: 0;
+				position: absolute;
+				@include border-radius(0);
+			}
+			.vc_bar {
+				z-index: 1;
+				background-color: $accent_color;
+			}
+			&:after{
+				content: '';
+				display: block;
+				width: 100%;
+				background: $white;
+			}
+		}
+	}
+	&.layout-1{
+		.vc_label{
+			color: $HeadingColor;
+		}
+	}
+	&.layout-2{
+		.vc_label{
+			color: $white;
+		}
+	}
+}

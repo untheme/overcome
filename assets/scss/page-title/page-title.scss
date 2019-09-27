@@ -1,0 +1,28 @@
+@import 'parallax';
+@import 'layout1';
+@import 'layout2';
+@import 'layout3';
+@import 'layout4';
+@import 'layout5';
+@import 'title';
+@import 'breadcrumb';
+.ef5-pagetitle{
+	position: relative;
+	overflow: hidden;
+	background-color: $PageTitleBG;
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+	padding: 104px 0;
+	color: $white;
+	a{
+		color: inherit;
+		&:hover{
+			color: $primary_color;
+		}
+	}
+}
+.ef5-pagetitle-inner{
+	position: relative;
+	z-index: 1;
+}

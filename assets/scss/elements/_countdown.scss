@@ -1,0 +1,68 @@
+$countdown_size:(
+	'large' : 30px 40px,
+	'medium' : 25px 30px,
+	'small' : 10px 20px,
+	'tiny' : 5px 10px
+);
+$countdown_title_size:(
+	'large' : 80px,
+	'medium' : 60px,
+	'small' : 40px,
+	'tiny' : 30px
+);
+.ef5-countdown{
+	.ef5-countdown-time{
+		@include d-flex();
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		margin: -20px;
+	}
+	.item{
+	    flex: 0 0 25%;
+	    width: auto;
+	    max-width: 25%;
+        padding: 20px;
+        position: relative;
+        @media (max-width: $screen-md-max){
+        	flex: 0 0 50%;
+        	max-width: 50%;
+        }
+        @media (max-width: $screen-sm-max){
+        	flex: 0 0 100%;
+        	max-width: 100%;
+        }
+	}
+	.amount,
+	.title{
+		display: block;
+		text-transform: uppercase;
+		line-height: 1;
+		white-space: nowrap;
+		
+	}
+	.amount{
+		font-size: 60px;
+		font-weight: 900;
+		color: $HeadingColor;
+	}
+	.title{
+		font-size: 15px;
+		font-weight: 700;
+		padding-top: 18px;
+	}
+	&.white{
+		.amount,
+		.title{
+			color: $white;
+		}
+	}
+	&.accent{
+		.amount{
+			color: $accent_color;
+		}
+		.title{
+			color: $HeadingColor;
+		}
+	}
+}

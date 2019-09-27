@@ -1,0 +1,10 @@
+$FF_placeholder_color: $BodyColor;
+$FF_Background: $white;
+$FF_BorderW: 1px;
+$FF_BorderStyle: solid;
+$FF_BorderColor: $MainBorderColor;
+$FF_BorderColorHover: $accent_color;
+$FF_Border: $FF_BorderW $FF_BorderStyle $FF_BorderColor;
+$FF_BorderRadius : 0;
+$FF_Spacing: 15px #{.66 * $grid-gutter-width};
+$FF_Select_BG: url('../images/ff-select-arrow.png');

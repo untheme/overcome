@@ -1,0 +1,18 @@
+@import 'variations';
+@import 'size';
+@import 'hover';
+@import 'default';
+@import 'primary';
+@import 'accent';
+@import 'secondary';
+@import 'white';
+@import 'alt';
+@import 'icon';
+@import 'rounded';
+@import '3d';
+@import 'colors';
+@import 'links';
+
+.btn > span{
+	display: inline-block;
+}

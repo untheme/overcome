@@ -1,0 +1,62 @@
+.header-layout-1{
+	.header-inner.no-container{
+		@media (min-width: 1366px){
+			padding-left: 110px;
+			padding-right: 110px;
+		}
+	}
+	#ef5-navigation{
+		@media (min-width: $screen-xl-min){
+			padding-right: 60px;
+			[dir="rtl"] &{
+				padding-right: 15px;
+				padding-left: 60px;
+			}
+		}
+	}
+	@media (min-width: $screen-xl-min){
+		.ef5-menu {
+			margin-left: -22.5px;
+			margin-right: -22.5px;
+			> li {
+				padding-left: 22.5px;
+				padding-right: 22.5px;
+				> a{
+					.menu-title:after{
+						display: none;
+					}
+					&:after{
+						content: '';
+						display: none;
+						height: 3px;
+						width: 0;
+						margin-top: 6px;
+						background: $accent_color;
+						position: absolute;
+						left: 50%;
+						bottom: 0;
+						@include transform(translateX(-50%));
+						@include transition();
+					}
+				}
+				&.current-menu-item > a,
+				&.current-menu-ancestor > a,
+				&:hover > a{
+					&:after{
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+	.nav-extra .ef5-qc{
+		@media (min-width: $screen-xl-min){
+			padding-right: 75px;
+			padding-left: 120px;
+			[dir="rtl"] &{
+				padding-right: 120px;
+				padding-left: 75px;
+			}
+		}
+	}
+}

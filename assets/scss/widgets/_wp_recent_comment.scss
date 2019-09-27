@@ -1,0 +1,26 @@
+/* Recent Comments */
+.widget_recent_comments{
+	li{
+		display: block;
+		padding: 17.5px 0;
+		&:before{
+			color: $accent_color;
+			content: $wg-list-icon;
+			display: inline-block;
+			font-size: 11px;
+			font-family: $FontAwesome;
+
+			[dir="rtl"] &{
+				content: $wg-list-icon-rtl;
+			}
+		}
+		&:after{
+			display: none;
+		}
+	}
+	.recentcomments a{
+		display: inline-block;
+		padding: 0;
+		width: auto;
+	}
+}

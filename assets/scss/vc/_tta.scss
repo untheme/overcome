@@ -1,0 +1,13 @@
+.vc_tta-panel-body{
+	.ef5-grid {
+		margin: -15px;
+		> .ef5-grid-item{
+			padding: 0;
+			> .post-grid-item{
+				margin: 15px;
+				position: relative;
+				height: auto;
+			}
+		}
+	}
+}

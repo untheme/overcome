@@ -1,0 +1,26 @@
+$separator_ltr: '\f105';
+$separator_rtl: '\f104';
+.breadcrumb{
+	font-weight: 500;
+	color: inherit;
+	.separator{
+		padding: 0 10px;
+		&:empty{
+			font-family: $FontAwesome5;
+			font-size: 80%;
+			@include transform(translateY(4px));
+			&:before{
+				content: $separator_ltr;
+				[dir='rtl'] &{
+					content: $separator_rtl;
+				}
+			}
+		}
+	}
+}
+
+.ef5-breadcrumb{
+	@media (max-width: $screen-md-max){
+		padding-top: 20px;
+	}
+}

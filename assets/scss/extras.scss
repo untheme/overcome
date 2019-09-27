@@ -1,0 +1,10 @@
+@include ef5-mousewheel();
+
+@media (max-width: 782px){
+	html[lang] {
+	    margin-top: 0px!important;
+	}
+	body.logged-in{
+		padding-top: 46px;
+	}
+}

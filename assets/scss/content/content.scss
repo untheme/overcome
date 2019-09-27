@@ -1,0 +1,21 @@
+@import 'default';
+@import 'avatar';
+@import 'blog';
+@import 'loop';
+@import 'featured';
+@import 'post_format';
+@import 'galleries';
+@import 'meta';
+@import 'single';
+@import 'author_bio';
+@import 'related';
+@import '404';
+@import 'single_portfolio';
+@import 'single_service';
+@import 'tags';
+
+.st-logo{
+	display: none;
+	visibility: hidden;
+	opacity: 0;
+}

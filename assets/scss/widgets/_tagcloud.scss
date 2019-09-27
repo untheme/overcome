@@ -1,0 +1,22 @@
+/* tags cloud */
+.tagcloud {
+	margin:-5px;
+	display: flex;
+	flex-wrap: wrap;
+	> a{
+		background-color: $white;
+	    border: 1px solid transparent;
+	    color: $BodyColor;
+	    font-size: $BodyFontSizeXXS;
+	    margin: 5px;
+	    padding: 5px 10px;
+	    flex: 0 0 auto;
+	    width: auto;
+	    max-width: 100%;
+	    @include box-shadow($BoxShadow);
+		&:hover{
+			background-color: $accent_color;
+			color: $link_color;
+		}
+	}
+}

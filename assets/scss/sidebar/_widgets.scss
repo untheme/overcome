@@ -1,0 +1,73 @@
+.ef5-sidebar-area {
+	.widget{
+		margin-bottom: 75px;
+		.ef5-menu-item,
+		.wc-layered-nav-term,
+		.chosen{
+			a{
+				padding: 17.5px 30px;
+				color: $BodyColor;
+				font-size: $BodyFontSizeM;
+				font-weight: 500;
+				&:hover{
+					background: $accent_color;
+					color: $primary_color;
+				}
+				.ef5-toggle-inner{
+					background: $primary_color;
+					color: $white;
+				}
+			}
+			&:hover,
+			&.clicked,
+			&.current-menu-item{
+				> a{
+					background: $accent_color;
+					color: $primary_color;
+				}
+			}
+		}
+		.widgettitle{
+			margin-bottom: 33px;
+		}
+		> ul,
+		.menu,
+		.woocommerce-mini-cart{
+			background: $white;
+		}
+
+		.woocommerce-mini-cart__total{
+			margin-top: 30px;
+		}
+		.product_list_widget{
+			> li{
+				padding-left: 120px;
+				padding-right: 20px;
+				img,
+				.remove{
+					left: 20px;
+				}
+				[dir="rtl"] &{
+					padding-left: 20px;
+					padding-right: 120px;
+					img,
+					.remove{
+						left: auto;
+						right: 20px;
+					}
+				}
+			}
+		}
+	}
+	.widget_recent_entries,
+	.widget_recent_comments,
+	.widget_meta{
+		> ul > li{
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+	.menu{
+		@include box-shadow(0 0 15px rgba(0, 0, 0, 0.1));
+	}
+}

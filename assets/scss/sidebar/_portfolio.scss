@@ -1,0 +1,105 @@
+.pf-sidebar-box{
+	margin-bottom: 80px;
+	&:last-child{
+		margin-bottom: 0;
+	}
+	> .ef5-heading{
+		margin-bottom: 33px;
+	}
+}
+
+// Project Details
+.pf-details-list{
+	li{
+		border-bottom: 1px solid #ddd;
+		padding: 17px 30px;
+		&:last-child{
+			border-bottom:0;
+		}
+		.ef5-heading{
+			min-width: 100px;
+			display: inline-block;
+		}
+	}
+}
+// Featured 
+.pf-feature-item{
+	padding: 15px;
+	border-bottom: 1px solid #ddd;
+	position: relative;
+	&:last-child{
+		border-bottom:0;
+	}
+	&:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 4px;
+		height: 0;
+		background: $accent_color;
+		@include transition();
+		[dir="rtl"] &{
+			left: 0;
+			right: auto;
+		}
+	}
+	&:hover:after{
+		height: 100%;
+	}
+	.ef5-meta > *{
+		display: inline-block;
+	}
+}
+
+// Supporter
+.pf-supported-box{
+	.supported-inner{
+		padding: 35px 35px 30px;
+	}
+	.sp-avatar{
+		margin-bottom: 20px;
+	}
+	.sp-name{
+		padding-bottom: 5px;
+	}
+	.sp-role{
+		padding-bottom: 22px;
+	    border-bottom: 1px solid #ddd;
+	    margin-bottom: 25px;
+	}
+	.sp-bio{
+		padding: 0 30px 18px;
+	}
+}
+// Attachment
+.pf-attachment-box{
+	.pf-attachment-item{
+		padding: 10px;
+		margin-bottom: 20px;
+		@media (min-width: $screen-xl-min){
+			padding: 19px 30px;
+		}
+		.att-icon{
+			font-size: 22px;
+			&.icon-img{
+				width: 16px;
+				height: 22px;
+				display: inline-block;
+				margin-right: 8px;
+				&.pdf{
+					background: url(../images/icons/pdf.png) left center no-repeat;
+					[dir="rtl"] &{
+						background-position: right center;
+					}
+				}
+			}
+		}		
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	a{
+		line-height: 1.2;
+	}
+}

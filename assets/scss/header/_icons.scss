@@ -1,0 +1,186 @@
+.header-icon{
+    position: relative;
+    .header-count{
+        position: absolute;
+        top: -12px;
+        right: 0;
+        min-width: 15px;
+        height: 15px;
+        line-height: 15px;
+        font-size: 10px;
+        font-weight: 500;
+        padding: 0;
+        color: $primary_color;
+        background: $accent_color;
+        @include border-radius(50%);
+        [dir="rtl"] &{
+            right: auto;
+            left: 0;
+        }
+    }
+    &.ef5-header-cart-icon.style-2{
+        width: auto;
+        .header-count{
+            position: relative;
+            top: auto;
+            right: auto;
+            left: auto;
+            background: transparent;
+            color: inherit;
+            font-size: 14px;
+            padding: 0 0 0 3px;
+            [dir="rtl"] &{
+                padding: 0 3px 0 0;
+            }
+        }
+    }
+    // Woo Smart Compare Count
+    .wooscp-menu-item &{
+        .wooscp-menu-item-inner{
+            position: absolute;
+            &:after{
+                background-color: transparent;
+                color: inherit;
+                font-size: inherit;
+                font-weight: inherit;
+                width: inherit;
+                height: inherit;
+                line-height: inherit;
+                text-align: inherit;
+                border-radius: inherit;
+                position: static;
+                top: auto;
+                right: auto;
+            }
+        }
+    }
+}
+.ef5-cart-toggle{
+    .ef5-cartform{
+        background: #fff;
+        width: 260px;
+        display: none;
+        position: absolute;
+        z-index: 999;
+        right: 0;
+        top: 50px;
+        [dir="rtl"] &{
+        	right: auto;
+        	left: 0;
+        }
+    }
+    .widget_shopping_cart{
+        margin: 0;
+        padding: 15px;
+        p{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.nav-extra{
+    margin: 0 -10px;
+    display: flex;
+    flex-wrap: wrap;
+	.header-icon{
+	    padding: 5px 10px;
+        text-align: center;
+        font-size: 20px;
+        line-height: 1;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+        position: relative;
+        @media (max-width: $screen-sm-max){
+            padding: 0 8px;
+        }
+        .icon{
+            //display: block;
+            //position: relative;
+            @include center-align(relative);
+        }
+		&:hover{
+			color: $accent_color;
+		}
+        &.has-badge{
+            .icon{
+                padding-right: 15px;
+                [dir="rtl"] &{
+                    padding-right: 0;
+                    padding-left: 15px;
+                }
+            }
+        }
+	}
+    &.circle {
+        .header-icon{
+            @include border-radius(50%);
+            font-size: 13px;
+            line-height: 26px;
+            .icon{
+                font-weight: 500;
+                padding: 0;
+                @include center-align();
+            }
+            .header-count{
+                top: -15px;
+                right: -15px;
+                [dir='rtl'] &{
+                    right: auto;
+                    left: -15px;
+                }
+            }
+        }
+        &.accent {
+            .header-icon{
+                color: $white;
+                background: $accent_color;
+            }
+        }
+        &.primary {
+            .header-icon{
+                color: $white;
+                background: $primary_color;
+            }
+        }
+        &.grey {
+            .header-icon{
+                color: #182333;
+                background: #F1F1F1;
+            }
+        }
+        &.grey2{
+            .header-icon{
+                color: #fff;
+                background: #3F3F3F;
+                &:hover{
+                    background: $accent_color;
+                    color: $white;
+                    span{
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    &.size-36{
+        margin-left: -6px;
+        margin-right: -6px;
+        .header-icon{
+            margin-left: 6px;
+            margin-right: 6px;
+            padding: 0;
+            font-size: 14px;
+            font-weight: 500;
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+        }
+    }
+}
+.header-extra-icon{
+    margin: $grid-gutter-width / 6;
+    flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
+}

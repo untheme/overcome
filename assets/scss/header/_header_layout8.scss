@@ -1,0 +1,48 @@
+.header-layout-8{
+	background: #182333;
+	.header-section1{
+		background: $white;
+	}
+	@media (min-width: $screen-xl-min){
+		.ef5-logo{
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+		.ef5-header-menu {
+			margin-left: 0;
+			margin-right: 0;
+			> li {
+				border-left: 1px solid #585858;
+				&:last-child{
+					border-right: 1px solid #585858;
+				}
+				> a{
+					height: 67px;
+				}
+			}
+		}
+		&.header-sticky .ef5-logo{
+			display: none;
+		}
+	}
+	@media (max-width: $screen-lg-max){
+		.main-header{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+		.header-section1{
+		    flex: 0 0 auto;
+		    width: auto;
+		    max-width: 40%;
+		    .ef5-logo{
+		    	max-width: 100%;
+		    }
+		}
+		.header-section2{
+			flex-basis: 0;
+		    flex-grow: 1;
+		    max-width: 100%;
+		}
+	}
+}

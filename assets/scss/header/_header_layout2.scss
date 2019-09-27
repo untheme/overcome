@@ -1,0 +1,24 @@
+.header-layout-2{
+	@media (min-width: $screen-xl-min){
+		.ef5-logo{
+			position: relative;
+			padding-top: 41px;
+			padding-bottom: 41px;
+			&:after{
+				content: '';
+				display: block;
+				height: 1px;
+				background: #E8E8E8;
+				width: 10000px;
+				position: absolute;
+				bottom: 0;
+				left: -50%;
+			}
+		}
+	}
+	&.header-sticky .ef5-logo{
+		@media (min-width: $screen-xl-min){
+			display: none;
+		}
+	}
+}

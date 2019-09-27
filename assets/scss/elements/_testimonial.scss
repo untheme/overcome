@@ -1,0 +1,134 @@
+.ttmn-rate{
+	position: relative;
+    display: block;
+    width: 77px;
+    color: $star_color;
+    clear: both;
+    white-space: nowrap;
+    font-size: 13px;
+    margin-top: 10px;
+    line-height: 1;
+	&:before{
+		content: "\f005\f005\f005\f005\f005";
+		display: block;
+		font-family: $FontAwesome;
+		font-weight: 400;
+		letter-spacing: 1px;
+	}
+}
+.ttmn-rated{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	overflow: hidden;
+	&:before{
+		content: "\f005\f005\f005\f005\f005";
+		display: block;
+		font-family: $FontAwesome;
+		font-weight: 900;
+		letter-spacing: 1px;
+	}
+}
+.ttmn-text{
+	margin-top: 25px;
+}
+// Layout 
+.ef5-testimonial-layout-1{
+	.ttmn-inner{
+		padding: 35px 30px;
+		background: $white;
+	}
+	.ttmn-header{
+		padding-top: 7px;
+	}
+	.ttmn-icon{
+		display: block;
+		margin-bottom: 40px;
+		color: $accent_color;
+    	font-size: 30px;
+	}
+	.ttmn-rate{
+		margin-bottom: 20px;
+		@media (max-width: 767px){
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	.avatar{
+		margin-bottom: 10px;
+	}
+	.ttmn-text{
+		margin-top: 30px;
+	}
+}
+.ef5-testimonial-layout-2{
+	.ttmn-info{
+		position: relative;
+		padding-left: 70px;
+		&:before{
+			@include quote-icon(35px);
+			position: absolute;
+	        left: 0;
+	        top: -5px;
+		}
+		[dir="rtl"] &{
+			padding-left: 0;
+			padding-right: 70px;
+			&:before{
+				left: auto;
+				right: 0;
+				@include transform(rotateY(180deg));
+			}
+		}
+	}
+	.ttmn-position{
+		padding-top: 7px;
+	}
+	.ttmn-text{
+		padding-bottom: 10px;
+	}
+}
+.ef5-testimonial-layout-3,
+.ef5-testimonial-layout-3-1{
+	.ttmn-info{
+		border-left: 4px solid $accent_color;
+		padding-left: 25px;
+		[dir='rtl'] &{
+			border-left: 0;
+			border-right: 4px solid  $accent_color;
+			padding-left: 0;
+			padding-right: 25px;
+		}
+	}
+}
+.ef5-testimonial-layout-3-1{
+	.ttmn-info{
+		margin-top: 30px;
+		padding-bottom: 9px;
+	}
+	.ttmn-name{
+		color: $white;
+		padding-bottom: 5px;
+	}
+	.ttmn-text{
+		margin-top: 0;
+	}
+}
+.ef5-testimonial-layout-4{
+	.ef5-grid-item{
+		padding-top: 50px;
+		padding-bottom: 50px;
+		border-bottom: $MainBorder;
+		&:last-child{
+			padding-bottom: 0;
+			border-bottom: 0;
+		}
+	}
+	.ttmn-text{
+		margin-top: 22px;
+	}
+	.ttmn-rate{
+		margin-top: 13px;
+	}
+}

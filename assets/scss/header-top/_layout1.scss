@@ -1,0 +1,19 @@
+.header-top-01-with-quick-contact,
+.header-top-home-renovation-02{
+	.ef5-popup-form-wrap{
+		@media (max-width: 350px){
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+	}
+}
+
+.header-top-home-renovation-01{
+	font-size: 14px;
+	line-height: 16px;
+	@media(max-width: 991px){
+		.container{
+			max-width: inherit;
+		}
+	}
+}

@@ -1,0 +1,40 @@
+/**
+ * Text Size
+ * 1-Font Size 2-Line Height
+*/
+$text-sizes: (
+	14,
+	15,
+	20,
+	30 1.2,
+	34,
+	40 1.175,
+);
+// Text sizes
+@each $breakpoint in map-keys($grid-breakpoints) {
+	$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+		@each $size in $text-sizes{
+			.text#{$infix}-#{nth($size, 1)}{
+				font-size: #{nth($size, 1)}px!important;
+				@if(nth($size, 2) != ''){
+					line-height: nth($size, 2);
+				}
+			}
+		}
+	}
+}
+// Line Height
+$line-heights: (
+	'1-175': '1.175',
+	'1-35' : '1.35',
+	'1-6': '1.6',
+	'1\/6': '1.6',
+	'1-667': '1.16666667',
+	'1-17647059,': '1.17647059'
+);
+@each $line-height, $line-height-value in $line-heights{
+	.lh-#{$line-height}{
+		line-height: #{$line-height-value}!important;
+	}
+}
