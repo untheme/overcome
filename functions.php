@@ -175,6 +175,10 @@ if (!function_exists('overcome_setup')) {
          * Add style for editor
         */
         overcome_require_folder( '/inc/editor',get_template_directory());
+        /**
+         * Load custom font icon
+        */
+         overcome_require_folder( '/assets/fonts/font-name',get_template_directory());
     }
     add_action('after_setup_theme', 'overcome_setup');
 }
