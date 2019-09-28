@@ -21,13 +21,13 @@ function overcome_extras_icons(){
 		'fontname' => [
 			'title'   => 'Font Name ',
 			'icon'    => overcome_iconpicker_fontname_icons(), // icons list
-			'css'     => get_template_directory_uri() . '/assets/fonts/fontname/fontname.css',
+			'css'     => get_template_directory_uri() . '/assets/icon_fonts/fontname/fontname.css',
 			'version' => '1.0'
 		],
 		'overcome' => [
 			'title'   => 'Over Come',
 			'icon'    => overcome_iconpicker_overcome_icons(), // icons list
-			'css'     => get_template_directory_uri() . '/assets/fonts/overcome/overcome.css',
+			'css'     => get_template_directory_uri() . '/assets/icon_fonts/overcome/overcome.css',
 			'version' => '1.0'
 		]
 	];
