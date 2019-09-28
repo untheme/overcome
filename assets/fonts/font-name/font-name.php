@@ -13,8 +13,8 @@ function overcome_vc_iconpicker_type_simple_line_icons( $icons ) {
 
 /**
  * Add filter to support your icon font in Mega Menu and VC 
- * user filter: ef5systems_default_extra_icons
- * @structure add_filter('ef5systems_default_extra_icons','overcome_default_extra_icons');
+ * user filter: ef5systems_extra_icons
+ * @structure add_filter('ef5systems_extra_icons','overcome_default_extra_icons');
  * function overcome_default_extra_icons(){
 	return [
 		'font-name' => [
@@ -27,7 +27,7 @@ function overcome_vc_iconpicker_type_simple_line_icons( $icons ) {
  }
  * NOTE: replace 'font-name', 'font_name' with your font name
 */
-add_filter('ef5systems_default_extra_icons','overcome_default_extra_icons');
+add_filter('ef5systems_extra_icons','overcome_default_extra_icons');
 function overcome_default_extra_icons(){
 	return [
 		'font-name' => [
