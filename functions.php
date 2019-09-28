@@ -178,7 +178,7 @@ if (!function_exists('overcome_setup')) {
         /**
          * Load custom font icon
         */
-        overcome_require_folder( '/assets/fonts',get_template_directory());
+        overcome_require_folder( '/assets/icon_fonts',get_template_directory());
     }
     add_action('after_setup_theme', 'overcome_setup');
 }
