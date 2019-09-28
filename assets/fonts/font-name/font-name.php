@@ -3,7 +3,9 @@ function overcome_iconpicker_font_name_icons(){
 	// add your icon here
 	// struct ['icon-class-name' => 'icon name']
 	// icon name need in array
-	$default_icons = [];
+	$default_icons = [
+		['xxx' => 'xxx']
+	];
 	return array_merge($default_icons, apply_filters('overcome_iconpicker_font_name_icons', []));
 }
 add_filter( 'vc_iconpicker-type-font-name', 'overcome_vc_iconpicker_type_font_name_icons' );
