@@ -1,7 +1,8 @@
 <?php
 function overcome_iconpicker_font_name_icons(){
 	// add your icon here
-	// struct 'icon-class-name' => 'icon name'
+	// struct ['icon-class-name' => 'icon name']
+	// icon name need in array
 	$default_icons = [];
 	return array_merge($default_icons, apply_filters('overcome_iconpicker_font_name_icons', []));
 }
