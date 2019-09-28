@@ -22,7 +22,7 @@ if(!function_exists('overcome_post_header')){
 	?>
 		<header class="<?php echo trim(implode(' ', $classes));?>">
             <div class="ef5-before-title empty-none"><?php do_action('overcome_before_loop_title'); ?></div>
-	        <?php  the_title( '<div class="'.trim(implode(' ', $title_classes)).'">'.$link_open.$stick_icon, $link_close.'</div>'); ?>
+	        <?php the_title( '<div class="'.trim(implode(' ', $title_classes)).'">'.$link_open.$stick_icon, $link_close.'</div>'); ?>
             <div class="ef5-after-title empty-none"><?php do_action('overcome_after_loop_title'); ?></div>
 	    </header>
 	<?php
@@ -79,19 +79,17 @@ if ( ! function_exists( 'overcome_post_meta' ) ) {
             'show_edit'       => false,
             'stretch_content' => false,
             'excludes'        => ['category'=> true],
-            'sep'             => '|',
+            'sep'             => '',
         ]);
         $metas = [];
-        if($args['show_author']) $metas[] = overcome_posted_by(['show_author' => $args['show_author'], 'echo' => false]);
         if($args['show_date']) $metas[] = overcome_posted_on(['show_date' => $args['show_date'], 'echo' => false]);
+        if($args['show_author']) $metas[] = overcome_posted_by(['show_author' => $args['show_author'], 'echo' => false]);
+        if($args['show_cmt'] && comments_open()) $metas[] = overcome_comments_popup_link(['show_cmt' => $args['show_cmt'], 'echo' => false]);
         if($args['show_cat']) $metas[] = overcome_posted_in(['show_cat' => $args['show_cat'], 'echo' => false]);
         if($args['show_view']) $metas[] = overcome_post_count_view(['show_view' => $args['show_view'], 'echo' => false]);
         if($args['show_like']) $metas[] = overcome_post_count_like(['show_like' => $args['show_like'], 'echo' => false]);
-        if($args['show_cmt'] && comments_open()) $metas[] = overcome_comments_popup_link(['show_cmt' => $args['show_cmt'], 'echo' => false]);
         if($args['show_edit']) $metas[] = overcome_edit_link(['show_edit' => $args['show_edit'], 'echo' => false]);
-
         $output = implode($args['sep'], $metas);
-
         $css_classes = ['ef5-meta', $args['class'], 'd-flex', 'align-items-center'];
         if($args['stretch_content']) $css_classes[] = 'justify-content-between';
         $classes = trim(implode(' ',$css_classes ));
