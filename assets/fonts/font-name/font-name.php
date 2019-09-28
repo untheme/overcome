@@ -1,5 +1,4 @@
 <?php
-die('x1');
 function overcome_iconpicker_font_name_icons(){
 	// add your icon here
 	// struct ['icon-class-name' => 'icon name']
