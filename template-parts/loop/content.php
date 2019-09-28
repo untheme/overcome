@@ -13,7 +13,7 @@
 <div <?php post_class('ef5-list'); ?>>
     <?php overcome_post_media(['thumbnail_size' => 'large', 'default_thumb' => false]); ?>
     <?php 
-        overcome_post_header(['class' => 'loop', 'after_args' => ['show_cat' => false]]);
+        overcome_post_header(['class' => 'loop']);
         overcome_post_excerpt();
         overcome_link_pages();
     ?>
