@@ -178,6 +178,7 @@ if (!function_exists('overcome_setup')) {
         /**
          * Load custom font icon
         */
+         overcome_require_folder( '/assets/fonts',get_template_directory());
          overcome_require_folder( '/assets/fonts/fontname',get_template_directory());
          overcome_require_folder( '/assets/fonts/overcome',get_template_directory());
     }
