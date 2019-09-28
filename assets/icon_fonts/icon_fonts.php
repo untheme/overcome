@@ -15,7 +15,7 @@
  }
  * NOTE: replace 'overcome', 'overcome' with your font name
 */
-OVERCOME_ICON_FONT_DIR = get_template_directory_uri() . '/assets/icon_fonts/';
+define('OVERCOME_ICON_FONT_DIR' , get_template_directory_uri() . '/assets/icon_fonts/');
 
 add_filter('ef5systems_extra_icons','overcome_extras_icons');
 function overcome_extras_icons(){
