@@ -15,19 +15,21 @@
  }
  * NOTE: replace 'overcome', 'overcome' with your font name
 */
+OVERCOME_ICON_FONT_DIR = get_template_directory_uri() . '/assets/icon_fonts/';
+
 add_filter('ef5systems_extra_icons','overcome_extras_icons');
 function overcome_extras_icons(){
 	return [
 		'fontname' => [
 			'title'   => 'Font Name ',
 			'icon'    => overcome_iconpicker_fontname_icons(), // icons list
-			'css'     => get_template_directory_uri() . '/assets/icon_fonts/fontname/fontname.css',
+			'css'     => OVERCOME_ICON_FONT_DIR.'fontname/fontname.css',
 			'version' => '1.0'
 		],
 		'overcome' => [
 			'title'   => 'Over Come',
 			'icon'    => overcome_iconpicker_overcome_icons(), // icons list
-			'css'     => get_template_directory_uri() . '/assets/icon_fonts/overcome/overcome.css',
+			'css'     => OVERCOME_ICON_FONT_DIR.'overcome/overcome.css',
 			'version' => '1.0'
 		]
 	];
