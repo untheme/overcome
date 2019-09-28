@@ -14,8 +14,8 @@ function overcome_vc_iconpicker_type_overcome_icons( $icons ) {
 /**
  * Add filter to support your icon font in Mega Menu and VC 
  * user filter: ef5systems_extra_icons
- * @structure add_filter('ef5systems_extra_icons','overcome_default_extra_icons');
- * function overcome_default_extra_icons(){
+ * @structure add_filter('ef5systems_extra_icons','overcome_overcome_icons');
+ * function overcome_overcome_icons(){
 	return [
 		'overcome' => [
 			'title'   => 'Font Title ',
@@ -27,8 +27,8 @@ function overcome_vc_iconpicker_type_overcome_icons( $icons ) {
  }
  * NOTE: replace 'overcome', 'overcome' with your font name
 */
-add_filter('ef5systems_extra_icons','overcome_default_extra_icons');
-function overcome_default_extra_icons(){
+add_filter('ef5systems_extra_icons','overcome_overcome_icons');
+function overcome_overcome_icons(){
 	return [
 		'overcome' => [
 			'title'   => 'Over Come',

@@ -14,8 +14,8 @@ function overcome_vc_iconpicker_type_font_name_icons( $icons ) {
 /**
  * Add filter to support your icon font in Mega Menu and VC 
  * user filter: ef5systems_extra_icons
- * @structure add_filter('ef5systems_extra_icons','overcome_default_extra_icons');
- * function overcome_default_extra_icons(){
+ * @structure add_filter('ef5systems_extra_icons','overcome_font_name_icons');
+ * function overcome_font_name_icons(){
 	return [
 		'font-name' => [
 			'title'   => 'Font Title ',
@@ -27,8 +27,8 @@ function overcome_vc_iconpicker_type_font_name_icons( $icons ) {
  }
  * NOTE: replace 'font-name', 'font_name' with your font name
 */
-add_filter('ef5systems_extra_icons','overcome_default_extra_icons');
-function overcome_default_extra_icons(){
+add_filter('ef5systems_extra_icons','overcome_font_name_icons');
+function overcome_font_name_icons(){
 	return [
 		'font-name' => [
 			'title'   => 'Font Title ',
