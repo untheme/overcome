@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+.fimanager:before {
+    display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.flaticon-001-axe:before { content: "\f100"; }
+.flaticon-002-bat:before { content: "\f101"; }
+.flaticon-003-moon:before { content: "\f102"; }
+.flaticon-004-crossbones:before { content: "\f103"; }
+.flaticon-005-broom:before { content: "\f104"; }
+.flaticon-006-candle:before { content: "\f105"; }
+.flaticon-007-candy:before { content: "\f106"; }
+.flaticon-008-candies:before { content: "\f107"; }
+.flaticon-009-candy:before { content: "\f108"; }
+.flaticon-010-cauldron:before { content: "\f109"; }
+.flaticon-011-cobweb:before { content: "\f10a"; }
+.flaticon-012-coffin:before { content: "\f10b"; }
+.flaticon-013-dracula:before { content: "\f10c"; }
+.flaticon-014-eyeball:before { content: "\f10d"; }
+.flaticon-015-ghost:before { content: "\f10e"; }
+.flaticon-016-cat:before { content: "\f10f"; }
+.flaticon-017-ghost:before { content: "\f110"; }
+.flaticon-018-ghost:before { content: "\f111"; }
+.flaticon-019-gravestone:before { content: "\f112"; }
+.flaticon-020-zombie:before { content: "\f113"; }
+.flaticon-021-zombie:before { content: "\f114"; }
+.flaticon-022-knife:before { content: "\f115"; }
+.flaticon-023-lantern:before { content: "\f116"; }
+.flaticon-024-monster:before { content: "\f117"; }
+.flaticon-025-mummy:before { content: "\f118"; }
+.flaticon-026-owl:before { content: "\f119"; }
+.flaticon-027-poison:before { content: "\f11a"; }
+.flaticon-028-pumpkin:before { content: "\f11b"; }
+.flaticon-029-scripture:before { content: "\f11c"; }
+.flaticon-030-scythe:before { content: "\f11d"; }
+.flaticon-031-skull:before { content: "\f11e"; }
+.flaticon-032-skull:before { content: "\f11f"; }
+.flaticon-033-tree:before { content: "\f120"; }
+.flaticon-034-trident:before { content: "\f121"; }
+.flaticon-035-voodoo-doll:before { content: "\f122"; }
+.flaticon-036-wand:before { content: "\f123"; }
+
+$font-Flaticon-001-axe: "\f100";
+$font-Flaticon-002-bat: "\f101";
+$font-Flaticon-003-moon: "\f102";
+$font-Flaticon-004-crossbones: "\f103";
+$font-Flaticon-005-broom: "\f104";
+$font-Flaticon-006-candle: "\f105";
+$font-Flaticon-007-candy: "\f106";
+$font-Flaticon-008-candies: "\f107";
+$font-Flaticon-009-candy: "\f108";
+$font-Flaticon-010-cauldron: "\f109";
+$font-Flaticon-011-cobweb: "\f10a";
+$font-Flaticon-012-coffin: "\f10b";
+$font-Flaticon-013-dracula: "\f10c";
+$font-Flaticon-014-eyeball: "\f10d";
+$font-Flaticon-015-ghost: "\f10e";
+$font-Flaticon-016-cat: "\f10f";
+$font-Flaticon-017-ghost: "\f110";
+$font-Flaticon-018-ghost: "\f111";
+$font-Flaticon-019-gravestone: "\f112";
+$font-Flaticon-020-zombie: "\f113";
+$font-Flaticon-021-zombie: "\f114";
+$font-Flaticon-022-knife: "\f115";
+$font-Flaticon-023-lantern: "\f116";
+$font-Flaticon-024-monster: "\f117";
+$font-Flaticon-025-mummy: "\f118";
+$font-Flaticon-026-owl: "\f119";
+$font-Flaticon-027-poison: "\f11a";
+$font-Flaticon-028-pumpkin: "\f11b";
+$font-Flaticon-029-scripture: "\f11c";
+$font-Flaticon-030-scythe: "\f11d";
+$font-Flaticon-031-skull: "\f11e";
+$font-Flaticon-032-skull: "\f11f";
+$font-Flaticon-033-tree: "\f120";
+$font-Flaticon-034-trident: "\f121";
+$font-Flaticon-035-voodoo-doll: "\f122";
+$font-Flaticon-036-wand: "\f123";
