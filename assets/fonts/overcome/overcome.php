@@ -5,10 +5,10 @@ function overcome_iconpicker_overcome_icons(){
 	$default_icons = [];
 	return array_merge($default_icons, apply_filters('overcome_iconpicker_overcome_icons', []));
 }
-add_filter( 'vc_iconpicker-type-overcome', 'overcome_vc_iconpicker_type_simple_line_icons' );
-function overcome_vc_iconpicker_type_simple_line_icons( $icons ) {
-	$simple_line_icons = overcome_iconpicker_overcome_icons();
-	return array_merge( $icons, $simple_line_icons );
+add_filter( 'vc_iconpicker-type-overcome', 'overcome_vc_iconpicker_type_overcome_icons' );
+function overcome_vc_iconpicker_type_overcome_icons( $icons ) {
+	$overcome_icons = overcome_iconpicker_overcome_icons();
+	return array_merge( $icons, $overcome_icons );
 }
 
 /**
