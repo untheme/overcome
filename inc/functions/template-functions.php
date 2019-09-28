@@ -11,8 +11,6 @@ if(!function_exists('overcome_post_header')){
 		$args = wp_parse_args($args, [
             'heading_tag' => 'h2',
             'class'       => '',
-            'before_args' => [],
-            'after_args'  => []
 		]);
         $classes = ['ef5-post-header',$args['class']];
         $title_classes = ['ef5-heading',$args['heading_tag']];
@@ -23,9 +21,9 @@ if(!function_exists('overcome_post_header')){
 
 	?>
 		<header class="<?php echo trim(implode(' ', $classes));?>">
-            <div class="ef5-before-title empty-none"><?php do_action('overcome_before_loop_title', $args['before_args']); ?></div>
+            <div class="ef5-before-title empty-none"><?php do_action('overcome_before_loop_title'); ?></div>
 	        <?php  the_title( '<div class="'.trim(implode(' ', $title_classes)).'">'.$link_open.$stick_icon, $link_close.'</div>' ); ?>
-            <div class="ef5-after-title empty-none"><?php do_action('overcome_after_loop_title', $args['after_args']); ?></div>
+            <div class="ef5-after-title empty-none"><?php do_action('overcome_after_loop_title'); ?></div>
 	    </header>
 	<?php
 	}

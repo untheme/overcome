@@ -2,7 +2,7 @@
 define('OVERCOME_ICON_FONT_DIR' , get_template_directory_uri() . '/assets/icon_fonts/');
 /**
  * EF5 Systems supported some icon font
- * like: elegant, ET Line, Flaticon, Linear, Pe7 Stroke, Simple Line
+ * like: Elegant, ET Line, Flaticon, Linear, Pe7 Stroke, Simple Line
  * use filter: ef5systems_default_extra_icons
  * example: 
  	add_filter('ef5systems_default_extra_icons','custom_ef5systems_default_extra_icons');
