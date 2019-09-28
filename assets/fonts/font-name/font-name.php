@@ -1,4 +1,5 @@
 <?php
+die('x1');
 function overcome_iconpicker_font_name_icons(){
 	// add your icon here
 	// struct ['icon-class-name' => 'icon name']
@@ -21,7 +22,7 @@ function overcome_vc_iconpicker_type_font_name_icons( $icons ) {
  * function overcome_font_name_icons(){
 	return [
 		'font-name' => [
-			'title'   => 'Font Title ',
+			'title'   => 'Font Name ',
 			'icon'    => overcome_iconpicker_font_name_icons(), // icons list
 			'css'     => get_template_directory_uri() . '/assets/fonts/font-name/font-name.css',
 			'version' => '1.0'
@@ -34,7 +35,7 @@ add_filter('ef5systems_extra_icons','overcome_font_name_icons');
 function overcome_font_name_icons(){
 	return [
 		'font-name' => [
-			'title'   => 'Font Title ',
+			'title'   => 'Font Name ',
 			'icon'    => overcome_iconpicker_font_name_icons(), // icons list
 			'css'     => get_template_directory_uri() . '/assets/fonts/font-name/font-name.css',
 			'version' => '1.0'
