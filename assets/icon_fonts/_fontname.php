@@ -4,7 +4,7 @@ function overcome_iconpicker_fontname_icons(){
 	// struct ['icon-class-name' => 'icon name']
 	// icon name need in array
 	$default_icons = [
-		['xxx' => 'xxx']
+		['default' => 'default']
 	];
 	return array_merge($default_icons, apply_filters('overcome_iconpicker_fontname_icons', []));
 }
