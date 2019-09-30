@@ -419,7 +419,7 @@ if(!function_exists('overcome_post_share')){
         $args = wp_parse_args($args, $defaults);
         extract($args);
         if($show_share !== '1') return;
-        $social_classes = trim(implode(' ', ['ef5-social', $social_args['class'], 'size-'.$social_args['size']] ));
+        $social_classes = trim(implode(' ', ['ef5-social', isset($social_args['class']) ? $social_args['class'] : '', isset($social_args['size']) ? 'size-'.$social_args['size']] : '' ));
         $classes   = array('ef5-shares');
         $classes[] = $class;
         $classes[] = overcome_is_loop() ? 'loop': 'single';        
