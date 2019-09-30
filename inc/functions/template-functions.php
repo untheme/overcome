@@ -19,11 +19,11 @@ if(!function_exists('overcome_post_header')){
         $link_close = is_singular() ? '' : '</a>';
 
 	?>
-		<header class="<?php echo trim(implode(' ', $classes));?>">
+		<div class="<?php echo trim(implode(' ', $classes));?>">
             <div class="ef5-before-title empty-none"><?php do_action('overcome_before_loop_title'); ?></div>
 	        <?php the_title( '<div class="'.trim(implode(' ', $title_classes)).'">'.$link_open.$stick_icon, $link_close.'</div>'); ?>
             <div class="ef5-after-title empty-none"><?php do_action('overcome_after_loop_title'); ?></div>
-	    </header>
+	    </div>
 	<?php
 	}
 }
