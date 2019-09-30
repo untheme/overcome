@@ -9,7 +9,7 @@
  *
  */
 $classes = ['ef5-list'];
-if(is_archive()) $classes[] = 'ef5-archive';
+if(is_archive() || is_home() || is_front_page() || is_search()) $classes[] = 'ef5-archive';
 ?>
 
 <div <?php post_class(trim(implode(' ', $classes))); ?>>
