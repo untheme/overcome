@@ -1,23 +1,11 @@
 .ef5-footer-default{
 	background: $primary_color;
 	padding: 50px 0;
+	color: $white;
 	a{
-		color: $BodyColor;
+		color: $accent_color;
 		&:hover{
 			color: $white;
-		}
-	}
-}
-.ef5-footer-area{
-	a{
-		color: $BodyColor;
-		&:hover{
-			color: $white;
-		}
-	}
-	&.a-hover-accent a{
-		&:hover{
-			color: $accent_color;
 		}
 	}
 }
