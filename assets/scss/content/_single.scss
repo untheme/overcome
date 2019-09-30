@@ -1,4 +1,5 @@
-.ef5-single{
+.ef5-single-content{
+	margin-bottom: $grid-gutter-width;
 }
 .ef5-single-content{
 	margin-bottom: $grid-gutter-width;
@@ -7,7 +8,6 @@
 		margin-bottom: 50px;
 	}
 }
-
 .ef5-pwbox-inner{
 	position: relative;
 	input[type="submit"]{
