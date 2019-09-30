@@ -49,7 +49,7 @@ if(!function_exists('overcome_post_title')){
 */
 if ( ! function_exists( 'overcome_post_meta' ) ) {
     add_action('overcome_after_loop_title','overcome_post_meta');
-    function overcome_post_meta($args=['show_cat' => false])
+    function overcome_post_meta($args = [])
     {
         if ( is_singular() ) {
             $author_on   = !empty($args['show_author']) ? $args['show_author'] : overcome_get_theme_opt( 'post_author_on', '1' );
@@ -71,13 +71,12 @@ if ( ! function_exists( 'overcome_post_meta' ) ) {
             'class'           => '',
             'show_author'     => $author_on,
             'show_date'       => $date_on,
-            'show_cat'        => '0',
+            'show_cat'        => $cats_on,
             'show_cmt'        => $comments_on,
-            'show_view'        => $show_view,
-            'show_like'        => $show_like,
+            'show_view'       => $show_view,
+            'show_like'       => $show_like,
             'show_edit'       => false,
             'stretch_content' => false,
-            'excludes'        => ['category'=> true],
             'sep'             => '',
         ]);
         $metas = [];
@@ -87,7 +86,7 @@ if ( ! function_exists( 'overcome_post_meta' ) ) {
             $metas[] = overcome_posted_by(['show_author' => $args['show_author'], 'echo' => false, 'author_avatar' => false]);
         if($args['show_cmt'] && comments_open()) 
             $metas[] = overcome_comments_popup_link(['show_cmt' => $args['show_cmt'], 'echo' => false]);
-        //if($args['show_cat']) 
+        if($args['show_cat']) 
             $metas[] = overcome_posted_in(['show_cat' => $args['show_cat'], 'echo' => false]);
         if($args['show_view']) 
             $metas[] = overcome_post_count_view(['show_view' => $args['show_view'], 'echo' => false]);
