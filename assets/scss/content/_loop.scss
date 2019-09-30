@@ -15,3 +15,9 @@
 	padding: 5px 10px;
 	font-size: 50%;
 }
+
+// Archive list
+.ef5-archive{
+	background-color: #f9f9f9;
+	@include border-radius(8px);
+}
