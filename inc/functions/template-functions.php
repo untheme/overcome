@@ -14,7 +14,7 @@ if(!function_exists('overcome_post_header')){
 		]);
         $classes = ['ef5-post-header',$args['class']];
         $title_classes = ['ef5-heading',$args['heading_tag']];
-        $stick_icon = ( is_sticky() && is_home() && ! is_paged()) ? '<span class="sticky-post">Featured</span>' : '';
+        $stick_icon = ( is_sticky() && is_home() && ! is_paged()) ? '<span class="sticky-post"><span class="sticky-post-inner">Featured</span></span>' : '';
         $link_open = is_singular() ? '' : '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
         $link_close = is_singular() ? '' : '</a>';
 

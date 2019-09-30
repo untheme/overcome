@@ -56,7 +56,6 @@
 		font-size: $BodyFontSizeXS;
 	}
 }
-
 .ef5-gallery, 
 .ef5-video,
 .ef5-audio,
@@ -70,4 +69,13 @@
 		z-index: 2;
 		@include transform(translate(-10px, -10px));
 	}
+}
+.sticky-post{
+	display: block;
+	margin-bottom: 10px;
+}
+.sticky-post-inner{
+	background: $accent_color;
+	color: $white;
+	padding: 5px 10px;
 }
