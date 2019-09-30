@@ -408,6 +408,7 @@ if(!function_exists('overcome_post_share')){
         wp_enqueue_script('sharethis');
         wp_enqueue_script('owl-carousel');
         wp_enqueue_style('font-awesome');
+        wp_enqueue_style('font-awesome-shim');
         global $post;
         $defaults = array(
             'show_share'  => is_single() ? overcome_get_theme_opt( 'post_share_on', '0' ) : overcome_get_theme_opt( 'archive_share_on', '0' ),
