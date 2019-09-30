@@ -14,17 +14,16 @@ if(is_archive() || is_home() || is_front_page() || is_search()) $classes[] = 'ef
 
 <div <?php post_class(trim(implode(' ', $classes))); ?>>
     <?php overcome_post_media(['thumbnail_size' => 'large']); ?>
-    <div class="ef5-loop-info">
-        <?php
+    <div class="ef5-loop-info"><?php
             overcome_post_header(['class' => 'loop ef5-loop-header']);
             overcome_post_excerpt();
             overcome_link_pages();
         ?>
-        <div class="ef5-loop-footer row justify-content-between align-items-center empty-none">
-            <?php do_action('overcome_loop_footer'); ?>
-            <?php overcome_tagged_in(['before' => '<div class="col-auto">','after'=>'</div>']);?>
-            <?php overcome_post_share(['before' => '<div class="col-auto">','after'=>'</div>']); ?>
-        </div>
+        <div class="ef5-loop-footer row justify-content-between align-items-center empty-none"><?php 
+            do_action('overcome_loop_footer'); 
+            overcome_tagged_in(['before' => '<div class="col-auto">','after'=>'</div>']);
+            overcome_post_share(['before' => '<div class="col-auto">','after'=>'</div>']); 
+        ?></div>
         <div class="ef5-loop-readmore"><?php overcome_post_read_more(); ?></div>
     </div>
 </div>
