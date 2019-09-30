@@ -118,7 +118,7 @@
 	}
 }
 .link-wrap:not(.has-bg){
-	background-color: $PageTitleBG;
+	background-color: $accent_color;
 	padding: 60px;
 	@media (max-width: $screen-md-max){
 		padding: 60px 15px;
