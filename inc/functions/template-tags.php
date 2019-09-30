@@ -390,10 +390,14 @@ function overcome_edit_link($args = [])
     }
 }
 
-function overcome_link_pages()
+function overcome_link_pages($args = [])
 {
+    $args = wp_parse_args($args, [
+        'class' => ''
+    ]);
+    $classes = trim(implode(' ', [$args['class'],'page-links','clearfix']));
     wp_link_pages( array(
-        'before'      => sprintf( '<div class="page-links clearfix"><span class="ef5-heading">%s</span>', esc_html__( 'Pages:', 'overcome' ) ),
+        'before'      => sprintf( '<div class="'.$classes.'"><span class="ef5-heading">%s</span>', esc_html__( 'Pages:', 'overcome' ) ),
         'after'       => '</div>',
         'link_before' => '<span class="page-link-number">', 
         'link_after'  => '</span>'
