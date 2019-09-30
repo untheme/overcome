@@ -438,7 +438,7 @@ if(class_exists('WooCommerce')){
 overcome_require_folder('inc/extensions', get_template_directory());
 
 $x = 'font-awesome';
-if(wp_script_is($x)) 
+if(wp_script_is('overcome')) 
     die('font-awesome');
 else
     die('shit');
