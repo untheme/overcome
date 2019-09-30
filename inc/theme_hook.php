@@ -72,6 +72,7 @@
  * @default false
  * @example add_filter('overcome_default_post_thumbnail', function(){ return false;});
 */
+add_filter('overcome_default_post_thumbnail', function(){ return overcome_configs('overcome_default_post_thumbnail');});
 
 /**
  * Default sidebar position 
