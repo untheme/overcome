@@ -189,7 +189,7 @@ if ( ! function_exists( 'overcome_tagged_in' ) ) :
         $args = wp_parse_args($args, [
             'class'      => '',
             'hint'       => esc_html__( 'Tagged in', 'overcome' ),
-            'icon'       => 'fa fa-tag accent-color icon-rotateY-180',
+            'icon'       => '',
             'before'     => '',
             'after'      => '',
             'before_tag' => '<span class="ef5-heading text-uppercase font-style-500">'.esc_html__('Tags:','overcome').'</span>',
