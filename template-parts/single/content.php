@@ -19,7 +19,7 @@
     ?>
     <div class="ef5-post-footer row justify-content-between align-items-center empty-none"><?php 
         do_action('overcome_single_post_footer');
-        overcome_tagged_in();
-        overcome_post_share(); 
+        overcome_tagged_in(['class' => 'col-auto']);
+        overcome_post_share(['class' => 'col-auto']); 
     ?></div>
 </div>
