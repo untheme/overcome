@@ -407,6 +407,7 @@ if(!function_exists('overcome_post_share')){
     function overcome_post_share($args = array()){
         wp_enqueue_script('sharethis');
         wp_enqueue_script('owl-carousel');
+        wp_enqueue_style('owl-carousel');
         wp_enqueue_style('font-awesome');
         wp_enqueue_style('font-awesome-shim');
         global $post;
