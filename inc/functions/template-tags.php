@@ -97,7 +97,7 @@ if ( ! function_exists( 'overcome_posted_on' ) ) :
                 </div>',
                 trim(implode(' ', $classes)),
                 esc_html($args['hint']),
-                !empty($args['icon']) ? '<span class="'.$args['icon'].'">&nbsp;&nbsp;</span>' : '',
+                !empty($args['icon']) ? '<span class="meta-icon '.$args['icon'].'">&nbsp;&nbsp;</span>' : '',
                 $args['before_date'],
                 !is_single() ? esc_url( get_permalink()) : '',
                 $posted_time,
