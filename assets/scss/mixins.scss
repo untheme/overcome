@@ -327,6 +327,40 @@
 /* Social Color
  * establish social media colors
 */
+$facebook_color:     #3b5ea1;
+$google_color:       #e24d43;
+$twitter_color:      #2bb3fa;
+$youtube_color:      #df2926;
+$rss_color:          #ffa500;
+$skype_color:        #0ebaee;
+$yahoo_color:        #690a7b;
+$dribbble_color:     #ff70b7;
+$flickr_color:       #ff0084;
+$linkedin_color:     #087ec0;
+$vimeo_color:        #27bcf1;
+$pinterest_color:    #ee2c34;
+$github_color:       #3f91cb;
+$instagram_color:    #db944c;
+$tumblr_color:       #426d9b;
+$behance_color:      #1879fd;
+$stumbleupon_color:  #eb4924;
+$dropbox_color:      #17a3eb;
+$soundcloud_color:   #ff7e30;
+$lastfm_color:       #d6063e;
+$deviantart_color:   #6a8a7b;
+$digg_color:         #75788d;
+$xing_color:         #1a8e8c;
+$share_color:        #25a774;
+$wordpress_color:    #2187b5;
+$delicious_color:    #ff9233;
+$reddit_color:       #377bda;
+$apple_color:        #3dd0f5;
+$vk_color:           #4778ac;
+$android_color:      #a3c537;
+$amazon_color:       #fc9a06;
+$edge_color:         #327ec9;
+$vine_color:         #16cc91;
+
 $social-colors: (
     'facebook'   : $facebook_color,
     'google'     : $google_color,
@@ -408,7 +442,6 @@ $social-colors: (
     }
 }
 @include ef5-mousewheel();
-
 /**
  * Display 
 */
