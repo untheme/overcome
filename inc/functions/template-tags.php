@@ -16,9 +16,9 @@ if ( ! function_exists( 'overcome_posted_by' ) ) :
         $args = wp_parse_args($args, [
             'class'              => '',
             'hint'               => esc_html__( 'Posted by', 'overcome' ),
-            'icon'               => '',
+            'icon'               => 'fa fa-user',
             'author_avatar'      => true,
-            'before_author_name' => esc_html__( 'By', 'overcome' ).'&nbsp;&nbsp;',
+            'before_author_name' => '',
             'after_author_name'  => '',
             'show_author'        => '1',
             'echo'               => true   
@@ -73,7 +73,7 @@ if ( ! function_exists( 'overcome_posted_on' ) ) :
             'class'       => '',
             'hint'        => esc_html__( 'Published on', 'overcome' ),
             'hint_update' => esc_html__( 'Updated on', 'overcome' ),
-            'icon'        => '',
+            'icon'        => 'fa fa-calendar',
             'icon_update' => '',
             'before_date' => '',
             'after_date'  => '',
