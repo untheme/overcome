@@ -410,10 +410,7 @@ function overcome_link_pages($args = [])
 if(!function_exists('overcome_post_share')){
     function overcome_post_share($args = array()){
         wp_enqueue_script('sharethis');
-        wp_enqueue_script('owl-carousel');
-        wp_enqueue_style('owl-carousel');
-        wp_enqueue_style('font-awesome');
-        wp_enqueue_style('font-awesome-shim');
+        wp_enqueue_style('font-awesome5');
         wp_enqueue_style('hint');
         global $post;
         $defaults = array(
