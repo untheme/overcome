@@ -12,6 +12,7 @@ if(!function_exists('overcome_post_thumbnail')){
             'thumbnail_is_bg' => overcome_configs('overcome_thumbnail_is_bg'),
         ]);
         extract($args);
+        var_dump($default_thumb); die('xxxx');
         if(!has_post_thumbnail() && !$default_thumb) return;
 
         $thumbnail_atts = [];
@@ -30,7 +31,7 @@ if(!function_exists('overcome_post_thumbnail')){
             </div>
             <?php do_action('overcome_post_thumbnail_content');
         } else {
-            return '<div '.implode(' ', $thumbnail_atts).'><img src="'.overcome_get_image_url_by_size($id,$thumbnail_size).'" alt="'.get_the_title().'" /></div>'.do_action('overcome_post_thumbnail_content');
+            return '<div '.implode(' ', $thumbnail_atts).'><img src="'.overcome_get_image_url_by_size(['id'=>$id,'size'=> 'full', 'default_thumb' => $default_thumb]).'" alt="'.get_the_title().'" /></div>'.do_action('overcome_post_thumbnail_content');
         }
     }
 }
@@ -421,7 +422,6 @@ if(!function_exists('overcome_post_media')){
             'before'         => '',
             'after'          => ''
         ]);
-        var_dump($args['default_thumb']); die('default_thumb');
         do_action('overcome_before_post_media');
         $post_format = !empty(get_post_format()) ? get_post_format() : 'standard';
 
