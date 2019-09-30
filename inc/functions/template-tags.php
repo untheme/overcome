@@ -406,7 +406,7 @@ function overcome_link_pages()
 if(!function_exists('overcome_post_share')){
     function overcome_post_share($args = array()){
         wp_enqueue_script('sharethis');
-        wp_enqueue_style('awesome5');
+        wp_enqueue_style('font-awesome');
         global $post;
         $defaults = array(
             'show_share'  => is_single() ? overcome_get_theme_opt( 'post_share_on', '0' ) : overcome_get_theme_opt( 'archive_share_on', '0' ),
