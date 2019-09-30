@@ -216,7 +216,7 @@ if(!function_exists('overcome_post_author')){
         $args = wp_parse_args($args, array('layout' => '1'));
         extract( $args );
         $show_author = overcome_get_opts('post_author_info', '0');
-        var_dump($show_author);
+        var_dump($show_author); die();
         if('0' === $show_author || empty(get_the_author_meta('description'))) return;
         $user_info = get_userdata(get_the_author_meta('ID'));
     ?>
