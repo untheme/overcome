@@ -12,7 +12,6 @@ if(!function_exists('overcome_post_thumbnail')){
             'thumbnail_is_bg' => overcome_configs('overcome_thumbnail_is_bg'),
         ]);
         extract($args);
-        var_dump($default_thumb); die('xxxx');
         if(!has_post_thumbnail() && !$default_thumb) return;
 
         $thumbnail_atts = [];
