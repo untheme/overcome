@@ -22,8 +22,8 @@ if(is_archive() || is_home() || is_front_page() || is_search()) $classes[] = 'ef
         ?>
         <div class="ef5-loop-footer row justify-content-between align-items-center empty-none">
             <?php do_action('overcome_loop_footer'); ?>
-            <div class="col-auto empty-none"><?php overcome_tagged_in();?></div>
-            <div class="col-auto empty-none"><?php overcome_post_share(); ?></div>
+            <?php overcome_tagged_in(['before' => '<div class="col-auto">','after'=>'</div>']);?>
+            <?php overcome_post_share(['before' => '<div class="col-auto">','after'=>'</div>']); ?>
         </div>
         <div class="ef5-loop-readmore"><?php overcome_post_read_more(); ?></div>
     </div>
