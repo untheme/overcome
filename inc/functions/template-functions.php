@@ -220,7 +220,7 @@ if(!function_exists('overcome_post_author')){
         if('0' === $show_author || empty(get_the_author_meta('description'))) return;
         $user_info = get_userdata(get_the_author_meta('ID'));
     ?>
-    <div class="author-box ef5-box text-center text-md-<?php echo overcome_align();?>">
+    <div class="author-box text-center text-md-<?php echo overcome_align();?>">
         <div class="row">
             <div class="author-avatar col-12 col-md-2 col-lg-auto"><?php 
                     echo get_avatar(get_the_author_meta('ID'));
