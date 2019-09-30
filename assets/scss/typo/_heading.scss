@@ -6,6 +6,7 @@ h1, h2, h3, h4, h5, h6,
 	color: $HeadingColor;
 	a{
 		color: inherit;
+		line-height: unset;
 		&:hover{
 			color: $link_color_hover;
 		}
