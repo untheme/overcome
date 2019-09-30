@@ -33,7 +33,7 @@ if(!function_exists('overcome_configs')){
             'content_width'         => 1170,
             'h1_size'               => '36px',
             'h2_size'               => '30px',
-            'h3_size'               => '24px',
+            'h3_size'               => '22px',
             'h4_size'               => '18px',
             'h5_size'               => '16px',
             'h6_size'               => '14px',
