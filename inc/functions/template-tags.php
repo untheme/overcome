@@ -49,7 +49,7 @@ if ( ! function_exists( 'overcome_posted_by' ) ) :
                 trim(implode(' ', $classes)),
                 esc_html($args['hint']),
                 $author_avatar,
-                !empty($args['icon']) ? '<span class="'.$args['icon'].'">&nbsp;&nbsp;</span>' : '',
+                !empty($args['icon']) ? '<span class="meta-icon '.$args['icon'].'">&nbsp;&nbsp;</span>' : '',
                 $args['before_author_name'],
                 esc_url( $author_url ),
                 esc_html( $author_name ),
@@ -116,7 +116,7 @@ if ( ! function_exists( 'overcome_posted_on' ) ) :
                     </div>',
                     trim(implode(' ', $classes)),
                     esc_html($args['hint_update']),
-                    !empty($args['icon_update']) ? '<span class="'.$args['icon_update'].'">&nbsp;&nbsp;</span>' : '',
+                    !empty($args['icon_update']) ? '<span class="meta-icon '.$args['icon_update'].'">&nbsp;&nbsp;</span>' : '',
                     $args['before_date'],
                     !is_single() ? esc_url( get_permalink()) : '',
                     $updated_time,
@@ -165,7 +165,7 @@ if ( ! function_exists( 'overcome_posted_in' ) ) :
                     $args['before'],
                     trim(implode(' ', $classes)),
                     esc_html($args['hint']),
-                    !empty($args['icon']) ? '<span class="'.esc_attr($args['icon']).'">&nbsp;&nbsp;</span>' : '',
+                    !empty($args['icon']) ? '<span class="meta-icon '.esc_attr($args['icon']).'">&nbsp;&nbsp;</span>' : '',
                     $args['before_category'],
                     $terms,
                     $args['after_category'],
@@ -211,7 +211,7 @@ if ( ! function_exists( 'overcome_tagged_in' ) ) :
                     $args['before'],
                     trim(implode(' ', $classes)),
                     esc_html($args['hint']),
-                    !empty($args['icon']) ? '<span class="'.$args['icon'].'">&nbsp;&nbsp;</span>' : '',
+                    !empty($args['icon']) ? '<span class="meta-icon '.$args['icon'].'">&nbsp;&nbsp;</span>' : '',
                     $args['before_tag'],
                     $tags_list,
                     $args['after_tag'],
@@ -244,7 +244,7 @@ if ( ! function_exists( 'overcome_comments_popup_link' ) ) {
         if($args['show_cmt'] !== '1') return;
 
         $classes = trim(implode(' ', ['ef5-comments-link', $args['class']] ));
-        $args['icon'] = !empty($args['icon']) ? '<span class="'.$args['icon'].'">&nbsp;&nbsp;</span>' : '';
+        $args['icon'] = !empty($args['icon']) ? '<span class="meta-icon '.$args['icon'].'">&nbsp;&nbsp;</span>' : '';
         ob_start();
         $number    = (int) get_comments_number( get_the_ID() );
         if ( ! post_password_required() && ( comments_open() || get_comments_number() ) )
@@ -291,7 +291,7 @@ function overcome_post_count_view($args=[]){
     if($args['show_view'] !== '1') return;
 
     $classes = trim(implode(' ', ['ef5-view', $args['class']] ));
-    $args['icon'] = !empty($args['icon']) ? '<span class="'.$args['icon'].'">&nbsp;&nbsp;</span>' : '';
+    $args['icon'] = !empty($args['icon']) ? '<span class="meta-icon '.$args['icon'].'">&nbsp;&nbsp;</span>' : '';
     ob_start();
         $view_number    = 100;
         echo '<div class="'.esc_attr($classes).'">';
@@ -334,7 +334,7 @@ function overcome_post_count_like($args=[]){
     if($args['show_like'] !== '1') return;
 
     $classes = trim(implode(' ', ['ef5-like', $args['class']] ));
-    $args['icon'] = !empty($args['icon']) ? '<span class="'.$args['icon'].'">&nbsp;&nbsp;</span>' : '';
+    $args['icon'] = !empty($args['icon']) ? '<span class="meta-icon '.$args['icon'].'">&nbsp;&nbsp;</span>' : '';
     ob_start();
         $like_number    = 100;
         echo '<div class="'.esc_attr($classes).'">';

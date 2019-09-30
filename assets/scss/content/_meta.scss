@@ -16,34 +16,7 @@
 			margin-left: 10px;
 		}
 	}
-}
-.ef5-box-meta {
-	margin: -5px;
-	a{
-		font-size: $BodyFontSizeXXS;
-		line-height: 14px;
-		font-weight: 500;
-		border: $MainBorder;
-		margin: 5px;
-		padding: 4px 10px;
-		display: inline-block;
-		&:hover{
-			background: $accent_color;
-			border-color: $accent_color;
-			color: $link_color;
-		}
-	}
-}
-.ef5-box-meta2{
-	margin: -2.5px;
-	a{
-		background: $accent_color;
-		color: $white;
-		border-color: $accent_color;
-		margin: 2.5px;
-		&:hover{
-			background: $white;
-			color: $primary_color;
-		}
+	.meta-icon{
+		color: $MetaColor;
 	}
 }
