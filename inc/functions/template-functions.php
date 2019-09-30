@@ -9,7 +9,7 @@
 if(!function_exists('overcome_post_header')){
 	function overcome_post_header($args=[]){
 		$args = wp_parse_args($args, [
-            'heading_tag' => 'h2',
+            'heading_tag' => 'h3',
             'class'       => '',
 		]);
         $classes = ['ef5-post-header',$args['class']];
