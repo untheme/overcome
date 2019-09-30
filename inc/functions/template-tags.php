@@ -236,7 +236,7 @@ if ( ! function_exists( 'overcome_comments_popup_link' ) ) {
             'class'     => '',
             'before'    => '',
             'after'     => '',
-            'icon'      => 'fa fa-comments',
+            'icon'      => 'fa fa-comment-alt',
             'echo'      => true,
             'show_text' => true,
             'show_cmt'  => '1'
