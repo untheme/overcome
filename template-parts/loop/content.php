@@ -16,7 +16,7 @@ if(is_archive() || is_home() || is_front_page() || is_search()) $classes[] = 'ef
     <?php overcome_post_media(['thumbnail_size' => 'large']); ?>
     <div class="ef5-loop-info">
         <?php
-            overcome_post_header(['class' => 'loop']);
+            overcome_post_header(['class' => 'loop ef5-loop-header']);
             overcome_post_excerpt();
             overcome_link_pages();
         ?>
