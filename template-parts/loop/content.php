@@ -8,9 +8,11 @@
  * @author EF5 Team
  *
  */
+$classes = ['ef5-list'];
+if(is_archive()) $classes[] = 'ef5-archive';
 ?>
 
-<div <?php post_class('ef5-list'); ?>>
+<div <?php post_class(trim(implode(' ', $classes))); ?>>
     <?php 
         overcome_post_media(['thumbnail_size' => 'large']);  
         overcome_post_header(['class' => 'loop']);
