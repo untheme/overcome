@@ -48,7 +48,7 @@ if(!function_exists('overcome_post_title')){
  * Prints HTML with meta information for the current post.
 */
 if ( ! function_exists( 'overcome_post_meta' ) ) {
-    add_action('overcome_after_loop_title','overcome_post_meta');
+    add_action('overcome_before_loop_title','overcome_post_meta');
     function overcome_post_meta($args = [])
     {
         if ( is_singular() ) {
