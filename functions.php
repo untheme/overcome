@@ -436,3 +436,5 @@ if(class_exists('WooCommerce')){
  *
 */
 overcome_require_folder('inc/extensions', get_template_directory());
+
+if(wp_script_is('font-awesome')) die('xxx');
