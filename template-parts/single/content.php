@@ -17,15 +17,9 @@
         overcome_post_content();
         overcome_link_pages();
     ?>
-    <footer class="ef5-post-footer row justify-content-between align-items-center empty-none"><?php 
+    <div class="ef5-post-footer row justify-content-between align-items-center empty-none"><?php 
         do_action('overcome_single_post_footer');
         overcome_tagged_in();
-        overcome_post_share([
-            'show_title'  => false,
-            'social_args' => [
-                'class' => 'shape-circle outline colored-hover',
-                'size'  => '38'
-            ]
-        ]); 
-    ?></footer>
+        overcome_post_share(); 
+    ?></div>
 </div>
