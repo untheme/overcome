@@ -421,6 +421,7 @@ if(!function_exists('overcome_post_media')){
             'before'         => '',
             'after'          => ''
         ]);
+        var_dump($args['default_thumb']); die('default_thumb');
         do_action('overcome_before_post_media');
         $post_format = !empty(get_post_format()) ? get_post_format() : 'standard';
 
@@ -459,7 +460,7 @@ if(!function_exists('overcome_post_media')){
         printf('%s', $args['after']);
         do_action('overcome_post_media_content');
     ?></div><?php
-    do_action('overcome_after_post_media');
+        do_action('overcome_after_post_media');
     }
 }
 if(!function_exists('overcome_loop_media')){
