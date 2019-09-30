@@ -83,7 +83,7 @@ if (!function_exists('overcome_default_image_thumbnail_url')) {
     {
         $args = wp_parse_args($args, array(
             'size'        => 'large',
-            'default_img' => '/wp-content/themes/' . get_template() . '/assets/images/no-image.jpg',
+            'default_img' => '/wp-content/themes/' . get_template() . '/assets/images/placeholder/no-image.jpg',
             'class'       => ''
         ));
         extract($args);
@@ -119,7 +119,7 @@ if (!function_exists('overcome_default_image_thumbnail')) {
     {
         $args = wp_parse_args($args, array(
             'size'        => 'large',
-            'default_img' => '/wp-content/themes/' . get_template() . '/assets/images/no-image.jpg',
+            'default_img' => '/wp-content/themes/' . get_template() . '/assets/images/placeholder/no-image.jpg',
             'class'       => '',
             'echo'        => false  
         ));
