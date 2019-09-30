@@ -20,7 +20,7 @@
     <div class="ef5-loop-footer row justify-content-between align-items-center empty-none">
         <?php do_action('overcome_loop_footer'); ?>
         <div class="col-auto empty-none"><?php overcome_tagged_in();?></div>
-        <div class="col-auto empty-none"><?php overcome_post_share(['class' => 'col-auto','show_title' => false, 'social_args' => ['class' => 'shape-circle colored-hover outline']]); ?></div>
+        <div class="col-auto empty-none"><?php overcome_post_share(); ?></div>
     </div>
     <div class="ef5-loop-readmore"><?php overcome_post_read_more(); ?></div>
 </div>
