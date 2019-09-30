@@ -140,7 +140,7 @@ if ( ! function_exists( 'overcome_posted_in' ) ) :
         $args = wp_parse_args($args, [
             'class'           => '',
             'hint'            => esc_html__( 'Posted in', 'overcome' ),
-            'icon'            => '',
+            'icon'            => 'fa fa-folder',
             'before'          => '',
             'after'           => '',
             'before_category' => '',
@@ -236,7 +236,7 @@ if ( ! function_exists( 'overcome_comments_popup_link' ) ) {
             'class'     => '',
             'before'    => '',
             'after'     => '',
-            'icon'      => '',
+            'icon'      => 'fa fa-comments',
             'echo'      => true,
             'show_text' => true,
             'show_cmt'  => '1'
