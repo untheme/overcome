@@ -59,7 +59,7 @@ if(!function_exists('overcome_configs')){
             'post_thumbnail_size_w'          => 1170,
             'post_thumbnail_size_h'          => 500,
             'overcome_default_post_thumbnail' => true,
-            'overcome_thumbnail_is_bg'        => false,
+            'overcome_thumbnail_is_bg'        => true,
             // Header 
             'logo_width'       => '192',
             'logo_height'      => '38',
