@@ -1,5 +1,4 @@
 .ef5-list,
-.ef5-featured,
 .ef5-post-header,
 .ef5-excerpt,
 .ef5-loop-footer{
@@ -21,4 +20,10 @@
 	background-color: #f9f9f9;
 	overflow: hidden;
 	@include border-radius(8px);
+}
+.ef5-loop-info{
+	padding: 24px 30px 30px;
+}
+.ef5-before-title{
+	margin-bottom: 16px;
 }
