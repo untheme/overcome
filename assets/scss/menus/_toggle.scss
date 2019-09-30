@@ -144,7 +144,6 @@ $direction: (
 		@include border-radius(50%);
 		&:before{
 			content: '\f130';
-			font-family: $FontFlaticon;
 			display: block;
 		}
 		&.active:before{
