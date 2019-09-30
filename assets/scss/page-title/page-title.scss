@@ -1,15 +1,12 @@
 @import 'parallax';
-@import 'layout1';
-@import 'layout2';
-@import 'layout3';
-@import 'layout4';
-@import 'layout5';
 @import 'title';
 @import 'breadcrumb';
+@import 'layout1';
+@import 'layout2';
 .ef5-pagetitle{
 	position: relative;
 	overflow: hidden;
-	background-color: $PageTitleBG;
+	background-color: $accent_color;
 	background-position: center center;
 	background-size: cover;
 	background-attachment: fixed;
