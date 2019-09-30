@@ -18,42 +18,6 @@
             left: 0;
         }
     }
-    &.ef5-header-cart-icon.style-2{
-        width: auto;
-        .header-count{
-            position: relative;
-            top: auto;
-            right: auto;
-            left: auto;
-            background: transparent;
-            color: inherit;
-            font-size: 14px;
-            padding: 0 0 0 3px;
-            [dir="rtl"] &{
-                padding: 0 3px 0 0;
-            }
-        }
-    }
-    // Woo Smart Compare Count
-    .wooscp-menu-item &{
-        .wooscp-menu-item-inner{
-            position: absolute;
-            &:after{
-                background-color: transparent;
-                color: inherit;
-                font-size: inherit;
-                font-weight: inherit;
-                width: inherit;
-                height: inherit;
-                line-height: inherit;
-                text-align: inherit;
-                border-radius: inherit;
-                position: static;
-                top: auto;
-                right: auto;
-            }
-        }
-    }
 }
 .ef5-cart-toggle{
     .ef5-cartform{
@@ -95,8 +59,6 @@
             padding: 0 8px;
         }
         .icon{
-            //display: block;
-            //position: relative;
             @include center-align(relative);
         }
 		&:hover{
@@ -112,71 +74,6 @@
             }
         }
 	}
-    &.circle {
-        .header-icon{
-            @include border-radius(50%);
-            font-size: 13px;
-            line-height: 26px;
-            .icon{
-                font-weight: 500;
-                padding: 0;
-                @include center-align();
-            }
-            .header-count{
-                top: -15px;
-                right: -15px;
-                [dir='rtl'] &{
-                    right: auto;
-                    left: -15px;
-                }
-            }
-        }
-        &.accent {
-            .header-icon{
-                color: $white;
-                background: $accent_color;
-            }
-        }
-        &.primary {
-            .header-icon{
-                color: $white;
-                background: $primary_color;
-            }
-        }
-        &.grey {
-            .header-icon{
-                color: #182333;
-                background: #F1F1F1;
-            }
-        }
-        &.grey2{
-            .header-icon{
-                color: #fff;
-                background: #3F3F3F;
-                &:hover{
-                    background: $accent_color;
-                    color: $white;
-                    span{
-                        color: $white;
-                    }
-                }
-            }
-        }
-    }
-    &.size-36{
-        margin-left: -6px;
-        margin-right: -6px;
-        .header-icon{
-            margin-left: 6px;
-            margin-right: 6px;
-            padding: 0;
-            font-size: 14px;
-            font-weight: 500;
-            width: 36px;
-            height: 36px;
-            line-height: 36px;
-        }
-    }
 }
 .header-extra-icon{
     margin: $grid-gutter-width / 6;

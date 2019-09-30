@@ -72,139 +72,14 @@ $rotate: (
 		@include transform(rotateY(#{$deg}deg));
 	}
 }
-
-// Grid wrap
-.ef5-grid-wrap{
-	overflow: hidden;
-}
 // Box Style 
 .ef5-box{
-	background: $white;
 	padding: 20px;
-}
-// Box Shadow
-.ef5-box-shadow{
-	@include box-shadow($BoxShadow);
-}
-.ef5-box-shadow,
-.ef5-box-shadow-2,
-.ef5-shadow-hover{
-	&:hover{
-		@include box-shadow($BoxShadowHover);
-	}
-}
-
-@each $name, $shadow in $ef5-boxshadow {
-	.ef5-box-shadow-#{$name}{
-		@include box-shadow($shadow);
-	}
-	.ef5-box-shadow-hover-#{$name}:hover{
-		@include box-shadow($shadow);
-	}
-}
-
-.ef5-box-shadow,
-.ef5-box-shadow-2{
-	&:hover{
-		@include transform(translateY(-10px));
-	}
-}
-
-.shadow-hover:hover .ef5-shadow-hover{
-	@include box-shadow($BoxShadowHover);
-}
-.shadow-hover:hover .ef5-shadow-hover-14{
-	@include box-shadow($BoxShadow14);
-}
-// Line Corner 
-.ef5-line-corner{
-	position: absolute;
-	width: 32.4325%;
-	height: 32.4325%;
-	max-width: 120px;
-	max-height: 120px;
-	border-style: solid;
-	border-color: $accent_color;
-	&.tl{
-		top: 0;
-		left: 0;
-		border-width: 10px 0 0 10px;
-	}
-	&.tr{
-		top: 0;
-		right: 0;
-		border-width: 10px 10px 0 0;
-	}
-	&.br{
-		right: 0;
-		bottom: 0;
-		border-width: 0 10px 10px 0;
-	}
-	&.bl{
-		left: 0;
-		bottom: 0;
-		border-width: 0 0 10px 10px;
-	}
-}
-
-@media (min-width: $screen-lg-min ){
-	.ef5-line-corner-wrap{
-		.ef5-line-corner{
-			width: 0;
-			height: 0;
-			border-color: transparent;
-		}
-		&:hover .ef5-line-corner{
-			width: 32.4325%;
-			height: 32.4325%;
-			border-color: $accent_color;
-		}
-	}
 }
 // Positioned
 .center-align{
 	@include center-align();
 }
-
-// Margin
-$ef5-margin:(
-	'0' : 0,
-	'1' : 10px,
-	'2' : 20px,
-	'3' : 30px,
-	'4' : 40px,
-	'5' : 50px,
-	'6' : 60px,
-	'7' : 70px,
-	'8' : 80px,
-	'9' : 90px,
-	'10' : 100px,
-);
-@each $name, $margin in $ef5-margin{
-	.margin-#{$name}{
-		margin: $margin !important;
-	}
-}
-// Padding
-$ef5-padding:(
-	'0' : 0,
-	'1' : 10px,
-	'2' : 20px,
-	'3' : 30px,
-	'4' : 40px,
-	'5' : 50px,
-	'6' : 60px,
-	'7' : 70px,
-	'8' : 80px,
-	'9' : 90px,
-	'10' : 100px,
-);
-@each $name, $padding in $ef5-padding{
-	.padding-#{$name}{
-		padding: $padding !important;
-	}
-}
-
 // Animation 
 $ef5-anims: (
 	'swing' : 'swing',
@@ -221,21 +96,6 @@ $ef5-anims: (
 	}
 }
 
-// Underline text 
-$ef5-underline-colors: (
-	'default' : #DBDBDB,
-	'DBDBDB' : #DBDBDB,
-	'primary' : $primary_color,
-	'accent' : $accent_color,
-	'secondary' : $secondary_color,
-	'606060'	: #606060
-);
-@each $name, $color in $ef5-underline-colors{
-	.underline-#{$name}{
-		border-bottom: 1px solid $color;
-		padding-bottom: 5px;
-	}
-}
 // Background size
 .bg-cover{
 	background-size: cover;

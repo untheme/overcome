@@ -1,8 +1,3 @@
-@import 'layout1';
-@import 'menu';
-@import 'social';
-@import 'buttons';
-
 #ef5-header-top {
 	> p.attachment{
 		display: none !important;
@@ -12,11 +7,5 @@
 		height: 0;
 		visibility: hidden;
 		@include opacity(0);
-	}
-	a:not(.btn):not(.ef5-btn){
-		color: inherit;
-		&:hover{
-			color: $link_color_hover;
-		}
 	}
 }

@@ -49,14 +49,4 @@
 			}
 		}
 	}
-	.nav-extra .ef5-qc{
-		@media (min-width: $screen-xl-min){
-			padding-right: 75px;
-			padding-left: 120px;
-			[dir="rtl"] &{
-				padding-right: 120px;
-				padding-left: 75px;
-			}
-		}
-	}
 }
