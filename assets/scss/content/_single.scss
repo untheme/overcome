@@ -1,26 +1,10 @@
 .ef5-single{
-	> .ef5-post-header{
-		.ef5-heading{
-			font-size: 0;
-			padding-bottom: 0;
-		}
-	}
 }
 .ef5-single-content{
-	p + {
-		h1, h2, h3, h4, h5, h6{
-			padding-top: 30px;
-		}
-	}
+	margin-bottom: $grid-gutter-width;
 	blockquote{
 		margin-top: 50px;
 		margin-bottom: 50px;
-	}
-
-	ul, ol {
-		+ p{
-			margin-top: 30px;
-		}
 	}
 }
 

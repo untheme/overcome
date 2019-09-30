@@ -12,9 +12,9 @@
 
 <div <?php post_class('ef5-single clearfix'); ?>>
     <?php 
-        overcome_post_header();
+        overcome_post_header(['class' => 'ef5-single-header']);
         overcome_post_media(); 
-        overcome_post_content();
+        overcome_post_content(['class' => 'ef5-single-content']);
         overcome_link_pages();
     ?>
     <div class="ef5-single-footer row justify-content-between align-items-center empty-none"><?php 
