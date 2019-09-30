@@ -13,7 +13,6 @@
 	    flex: 0 0 auto;
 	    width: auto;
 	    max-width: 100%;
-	    @include box-shadow($BoxShadow);
 		&:hover{
 			background-color: $accent_color;
 			color: $link_color;
