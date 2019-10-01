@@ -20,11 +20,8 @@
 		&:hover{
 			background: $page-link-bg-hover;
 			color: $page-link-color-hover;
-		}
-		&.next,
-		&.prev{
-			//padding-left: 0;
-			//padding-right: 0;
+			font-weight: 500;
+			text-decoration: underline;
 		}
 	}
 	> .current{
