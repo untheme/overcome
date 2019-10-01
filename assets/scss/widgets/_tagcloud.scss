@@ -1,21 +1,22 @@
 /* tags cloud */
 .tagcloud {
-	margin:-5px;
+	margin:-2.5px;
 	display: flex;
 	flex-wrap: wrap;
 	> a{
-		background-color: $white;
-	    border: 1px solid transparent;
-	    color: $BodyColor;
-	    font-size: $BodyFontSizeXXS;
-	    margin: 5px;
-	    padding: 5px 10px;
+		background-color: transparent;
+	    border: $MainBorder;
+	    color: #787878;
+	    font-size: 13px;
+	    margin: 2.5px;
+	    padding: 5px 12px;
 	    flex: 0 0 auto;
 	    width: auto;
 	    max-width: 100%;
+	    @include border-radius(5px);
 		&:hover{
-			background-color: $accent_color;
-			color: $link_color;
+			border-color: $accent_color;
+			color: $accent_color;
 		}
 	}
 }
