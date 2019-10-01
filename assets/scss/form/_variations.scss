@@ -6,5 +6,5 @@ $FF_BorderColor: $MainBorderColor;
 $FF_BorderColorHover: $accent_color;
 $FF_Border: $FF_BorderW $FF_BorderStyle $FF_BorderColor;
 $FF_BorderRadius : 0;
-$FF_Spacing: 15px #{.66 * $grid-gutter-width};
+$FF_Spacing: 10px 20px;
 $FF_Select_BG: url('../images/ff-select-arrow.png');
