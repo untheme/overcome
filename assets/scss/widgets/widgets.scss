@@ -12,7 +12,7 @@
 }
 
 @mixin wg-list-arrow(){
-	font-family: $FontAwesome;
+	font-family: $FontOverCome;
 	color: $accent_color;
 	content: $wg-list-icon;
 	[dir="rtl"] &{
@@ -48,7 +48,7 @@
 			flex-grow: 1;
 			width: 100%;
 			max-width: 100%;
-			padding:10.5px 0;
+			padding: $wg-list-padding
 			justify-content: space-between;
 			color: #787878;
 			&:hover{
