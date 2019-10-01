@@ -75,20 +75,6 @@
 		flex-grow: 1;
 		max-width: 100%;
 	}
-	.count{
-		/* flex: 0 0 22px;
-		min-width: 22px;
-		height: 22px;
-		line-height: 22px;
-		background: $primary_color;
-		color: $white;
-		font-size: $BodyFontSizeXXS;
-		text-align: center;
-		@include border-radius(50%);
-		[dir="rtl"] &{
-			float: left;
-		} */
-	}
 }
 
 @import "calendar";
