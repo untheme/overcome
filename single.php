@@ -16,7 +16,7 @@
 get_header();
 ?>
     <div class="container">
-        <div class="row gutter-lg-60">
+        <div class="row">
             <div id="ef5-content-area" class="<?php overcome_content_css_class();?>">
                 <div class="ef5-blogs">
                 <?php
