@@ -137,6 +137,8 @@ $direction: (
 	height: 22px;
 	line-height: 22px;
 	text-align: center;
+	font-family: $FontAwesome5;
+	font-weight: 900;
 	.ef5-toggle-inner{
 		display: block;
 		&:before{
