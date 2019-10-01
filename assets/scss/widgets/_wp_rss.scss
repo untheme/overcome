@@ -1,17 +1,8 @@
 /* RSS */
 .widget_rss{
 	li{
-		margin-bottom: 15px;
-		//padding-bottom: 15px;
-		padding: 15px;
+		padding: 15px 0;
 		border-bottom: $MainBorder;
-		&:last-child{
-			margin-bottom: 0;
-			border-bottom: 0;
-		}
-		&:after{
-			display: none;
-		}
 		> a{
 			font-size: 130%;
 			padding: 0;
