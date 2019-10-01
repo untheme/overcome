@@ -22,13 +22,23 @@
 			background: $page-link-bg-hover;
 			color: $page-link-color-hover;
 			font-weight: 600;
+			position: relative;
 			//text-decoration: underline;
 			&:after{
 				content: '';
 				display: block;
-				width: 100%;
 				height: 1px;
 				background: $page-link-color-hover;
+				position: absolute;
+				left: 8px;
+				right: 8px;
+				@include transform(translate(0, -5px));
+			}
+		}
+		&.next,
+		&.prev{
+			&:after{
+				display: none;
 			}
 		}
 	}
