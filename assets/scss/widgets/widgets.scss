@@ -6,9 +6,6 @@
 	flex-wrap: wrap;
 	align-items: center;
     justify-content: space-between;
-	&:last-child{
-		border-bottom: none;
-	}
 }
 
 @mixin wg-list-arrow(){
