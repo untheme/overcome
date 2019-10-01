@@ -5,8 +5,9 @@
 		border-bottom: $MainBorder;
 		> a{
 			font-size: 130%;
+			line-height: 1;
 			padding: 0;
-			color: $accent_color;
+			color: $primary_color;
 		}
 	}
 	.rsswidget{
