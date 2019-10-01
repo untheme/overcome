@@ -7,7 +7,7 @@
 	position: relative;
 	input[name="s"],
 	[type="submit"]{
-		@include border-radius(50%);
+		@include border-radius(23px);
 	}
 	input[name="s"]{
 		border-color: transparent;
