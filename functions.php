@@ -42,7 +42,7 @@ if(!function_exists('overcome_configs')){
             'heading_color_hover'   => 'var(--accent-color)',
             'heading_font_weight'   => 700,
             'meta_font'             => '\'Poppins\', sans-serif',    
-            'meta_color'            => '#888',    
+            'meta_color'            => '#777777',    
             'meta_color_hover'      => 'var(--accent-color)',
             'text-grey'            => '#b0b0b0',
             // Boder
