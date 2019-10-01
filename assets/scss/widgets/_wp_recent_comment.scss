@@ -5,11 +5,11 @@
 		padding: 17.5px 0;
 		&:before{
 			color: $accent_color;
-			content: $wg-list-icon;
+			content: "\f27a";
 			display: inline-block;
 			font-size: 11px;
 			font-family: $FontAwesome;
-
+			font-weight: 900;
 			[dir="rtl"] &{
 				content: $wg-list-icon-rtl;
 			}
