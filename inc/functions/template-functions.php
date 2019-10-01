@@ -114,7 +114,7 @@ if(!function_exists('overcome_post_excerpt')){
 		$args = wp_parse_args($args,[
             'show_excerpt' => '1',
             'class'        => '',
-            'length'       => apply_filters('overcome_excerpt_length', 55),
+            'length'       => apply_filters('overcome_excerpt_length', 37),
             'more'         => '&hellip;'
 		]);
         if($args['show_excerpt'] !== '1') return;
