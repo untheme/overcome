@@ -40,7 +40,7 @@ if(!function_exists('overcome_configs')){
             'heading_font'          => '\'Poppins\', sans-serif',
             'heading_color'         => 'var(--primary-color)',
             'heading_color_hover'   => 'var(--accent-color)',
-            'heading_font_weight'   => 700,
+            'heading_font_weight'   => 600,
             'meta_font'             => '\'Poppins\', sans-serif',    
             'meta_color'            => '#777777',    
             'meta_color_hover'      => 'var(--accent-color)',
