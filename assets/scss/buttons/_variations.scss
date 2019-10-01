@@ -1,12 +1,12 @@
 // Default 
-$btn-inner-space   : 16px 30px;
-$btn-font-size     : 13px;
+$btn-inner-space   : 10px 30px;
+$btn-font-size     : 14px;
 $btn-line-height   : 15px;
 $btn-font-style    : inherit;
-$btn-font-weight   : 700;
+$btn-font-weight   : 500;
 $btn-text-style    : uppercase;
-$btn-letter-spacing: 0.5px;
-$btn-color         : $accent_color;
+$btn-letter-spacing: unset;
+$btn-color         : $white;
 $btn-color-hover   : $primary_color;
 $btn-bg-color      : $primary_color;
 $btn-bg-color-hover: $accent_color;
@@ -26,6 +26,7 @@ $btn-rounded: (
 	'8': 8px,
 	'9': 9px,
 	'10': 10px,
+	'18\/5': 18.5px,
 	'20': 20px,
 	'30': 30px,
 	'40': 40px,

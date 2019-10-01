@@ -502,7 +502,7 @@ if ( ! function_exists( 'overcome_post_read_more' ) ) {
             'icon_left'      => '',
             'icon_right'     => '',
             'title'          => esc_html__('Read More','overcome'),
-            'readmore_class' => 'ef5-btn accent fill transition ef5-scroll',
+            'readmore_class' => 'ef5-btn accent fill transition ef5-scroll rounded-18/5',
             'show_readmore'  => overcome_get_theme_opt( 'archive_readmore', '1' ),
             'before'         => '',
             'after'          => '',
