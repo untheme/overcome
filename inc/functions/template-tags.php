@@ -500,8 +500,9 @@ if ( ! function_exists( 'overcome_post_read_more' ) ) {
         $args = wp_parse_args($args,[
             'class'          => '',
             'icon_left'      => '',
+            'icon_right'     => '',
             'title'          => esc_html__('Read More','overcome'),
-            'readmore_class' => 'ef5-btn accent fill ef5-btn-xlg ef5-btn-slide icon-right transition ef5-scroll',
+            'readmore_class' => 'ef5-btn accent fill transition ef5-scroll',
             'show_readmore'  => overcome_get_theme_opt( 'archive_readmore', '1' ),
             'before'         => '',
             'after'          => '',
