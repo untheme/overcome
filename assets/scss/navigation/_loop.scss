@@ -22,7 +22,14 @@
 			background: $page-link-bg-hover;
 			color: $page-link-color-hover;
 			font-weight: 600;
-			text-decoration: underline;
+			//text-decoration: underline;
+			&:after{
+				content: '';
+				display: block;
+				width: 100%;
+				height: 1px;
+				background: $page-link-color-hover;
+			}
 		}
 	}
 	> .current{
