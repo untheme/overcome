@@ -5,13 +5,13 @@
 		padding: 17.5px 0;
 		&:before{
 			color: $accent_color;
-			content: "\f27a";
+			content: "\f27a\00a0\00a0";
 			display: inline-block;
 			font-size: 11px;
 			font-family: $FontAwesome;
 			font-weight: 900;
 			[dir="rtl"] &{
-				content: $wg-list-icon-rtl;
+				content: "\00a0\00a0\f27a";
 			}
 		}
 		&:after{
