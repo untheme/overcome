@@ -39,9 +39,6 @@
 	}
 	li{
 		@include wg-list-style();
-		&:after{
-			@include wg-list-arrow();
-		}
 		> a{
 			display: flex;
 			flex-wrap: wrap;
@@ -53,6 +50,9 @@
 			color: #787878;
 			&:hover{
 				color: $accent_color;
+			}
+			&:before{
+				@include wg-list-arrow();
 			}
 		}
 		ul{
