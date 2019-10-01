@@ -22,7 +22,7 @@ get_header();
                             the_post();
                             get_template_part( 'template-parts/loop/content', get_post_format() );
                         }
-                        overcome_loop_pagination();
+                        overcome_loop_pagination(['class' => 'justify-content-center']);
                     }
                     else
                     {

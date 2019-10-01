@@ -159,12 +159,14 @@ if(!function_exists('overcome_loop_pagination')){
     function overcome_loop_pagination($args=[]){
         $args = wp_parse_args($args, [
             'show_pagination' => '1',
-            'style'           => overcome_get_theme_opt('archive_nav_type', apply_filters('overcome_loop_pagination', '3'))
+            'style'           => overcome_get_theme_opt('archive_nav_type', apply_filters('overcome_loop_pagination', '3')),
+            'class'           => ''
         ]);
         if($args['show_pagination'] !== '1'){
             wp_reset_query();
             return;
         }
+        $nav_links_cls = ['nav-links','layout-'.$args['style'],$args['class']];
         printf('%s','<div class="ef5-loop-pagination layout-type-'.esc_attr($args['style']).'">');
         switch ($args['style']) {
             case '5':
@@ -183,7 +185,7 @@ if(!function_exists('overcome_loop_pagination')){
                 );
                 break;
             case '3':
-                echo '<div class="nav-links layout-3">';
+                echo '<div class="'.trim(implode(' ', $nav_links_cls)).'">';
                     echo paginate_links([
                         'prev_text' => '<span class="prev hint--top" data-hint="'.apply_filters('overcome_loop_pagination_prev_text', esc_html__('Previous', 'overcome')).'"><span class="flaticon-arrow-pointing-to-left"></span></span>',
                         'next_text' => '<span class="next hint--top" data-hint="'.apply_filters('overcome_loop_pagination_next_text', esc_html__('Next', 'overcome')).'"><span class="flaticon-arrow-pointing-to-right"></span></span>'

@@ -33,32 +33,6 @@
 		color: $page-link-color-hover;
 		border-color:$page-link-border-color-hover;
 	}
-	span{
-		&.next,
-		&.prev{
-			width: 100%;
-			span{
-				&:before,
-				&:after{
-					display: inline-block;
-					font-family: $page-link-font-family;
-					font-size: $page-link-font-size;
-				}
-			}
-		}
-		&.prev span:before{
-			content: $page-link-prev-icon;
-			[dir="rtl"] &{
-				content: $page-link-next-icon;
-			}
-		}
-		&.next span:after{
-			content: $page-link-next-icon;
-			[dir="rtl"] &{
-				content: $page-link-prev-icon;
-			}
-		}
-	}
 }
 .ef5-loop-pagination{
 	margin-top: 75px;
