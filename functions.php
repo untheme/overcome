@@ -341,6 +341,10 @@ function overcome_styles()
     // add CSS Variations
     $overcome_inline_styles = overcome_inline_styles();
     wp_add_inline_style( 'overcome', $overcome_inline_styles );
+    // Call libs css
+    wp_enqueue_style('font-awesome5');
+    wp_enqueue_style('font-awesome5-shim');
+    wp_enqueue_style('hint');
 }
 add_action('wp_enqueue_scripts', 'overcome_styles', 0);
 
