@@ -159,7 +159,7 @@ if(!function_exists('overcome_loop_pagination')){
     function overcome_loop_pagination($args=[]){
         $args = wp_parse_args($args, [
             'show_pagination' => '1',
-            'style'           => overcome_get_theme_opt('archive_nav_type', apply_filters('overcome_loop_pagination', '2'))
+            'style'           => overcome_get_theme_opt('archive_nav_type', apply_filters('overcome_loop_pagination', '3'))
         ]);
         if($args['show_pagination'] !== '1'){
             wp_reset_query();
