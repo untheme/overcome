@@ -185,8 +185,8 @@ if(!function_exists('overcome_loop_pagination')){
             case '3':
                 echo '<div class="nav-links layout-3">';
                     echo paginate_links([
-                        'prev_text' => '<span class="prev" data-hint="'.apply_filters('overcome_loop_pagination_prev_text', esc_html__('Previous', 'overcome')).'"><span>'.apply_filters('overcome_loop_pagination_prev_text', esc_html__('Previous', 'overcome')).'</span></span>',
-                        'next_text' => '<span class="next" data-hint="'.apply_filters('overcome_loop_pagination_next_text', esc_html__('Next', 'overcome')).'"><span>'.apply_filters('overcome_loop_pagination_next_text', esc_html__('Next', 'overcome')).'</span></span>'
+                        'prev_text' => '<span class="prev hint--top" data-hint="'.apply_filters('overcome_loop_pagination_prev_text', esc_html__('Previous', 'overcome')).'"><span class="flaticon-arrow-pointing-to-left"></span></span>',
+                        'next_text' => '<span class="next hint--top" data-hint="'.apply_filters('overcome_loop_pagination_next_text', esc_html__('Next', 'overcome')).'"><span class="flaticon-arrow-pointing-to-right"></span></span>'
                     ]); 
                 echo '</div>';
                 break;
