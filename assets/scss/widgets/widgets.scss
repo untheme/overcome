@@ -16,6 +16,7 @@
 	color: $accent_color;
 	content: $wg-list-icon;
 	padding-right: 15px;
+	font-size: 13px;
 	[dir="rtl"] &{
 		content: $wg-list-icon-rtl;
 		padding-right: 0;
