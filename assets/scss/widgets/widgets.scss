@@ -70,12 +70,9 @@
 		flex-basis: 0;
 		flex-grow: 1;
 		max-width: 100%;
-		.count{
-			display: none;
-		}
 	}
 	.count{
-		flex: 0 0 22px;
+		/* flex: 0 0 22px;
 		min-width: 22px;
 		height: 22px;
 		line-height: 22px;
@@ -86,7 +83,7 @@
 		@include border-radius(50%);
 		[dir="rtl"] &{
 			float: left;
-		}
+		} */
 	}
 }
 
