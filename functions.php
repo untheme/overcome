@@ -19,7 +19,7 @@ if(!function_exists('overcome_configs')){
             'color_green'     => 'green',
             'white'           => 'white',
             // Typo
-            'google_fonts'          => 'Poppins:400,500,700',
+            'google_fonts'          => 'Poppins:400,500,600,700',
             'body_bg'               => '#fff',
             'body_font'             => '\'Poppins\', sans-serif',
             'body_font_size'        => '15px',
