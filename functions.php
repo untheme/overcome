@@ -347,10 +347,13 @@ add_action('wp_enqueue_scripts', 'overcome_styles', 0);
 
 add_action('wp_footer', 'overcome_ef5systems_styles');
 function overcome_ef5systems_styles(){
-    // Call libs css
-    wp_enqueue_style('font-awesome5');
-    wp_enqueue_style('font-awesome5-shim');
-    wp_enqueue_style('hint');
+    if(wp_script_is('font-awesome5')){
+        // Call libs css
+        wp_enqueue_style('font-awesome5');
+        wp_enqueue_style('hint');
+    } else {
+        wp_enqueue_style('font-awesome5', get_template_directory_uri() . '/assets/icon_fonts/awesome5/css/all.css', array(), wp_get_theme()->get( 'Version' ));
+    }
 }
 
 function overcome_inline_styles() {
