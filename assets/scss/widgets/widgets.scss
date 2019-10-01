@@ -58,6 +58,10 @@
 			flex: 0 0 100%;
 			max-width: 100%;
 			display: none;
+			li{
+				border-bottom: 0;
+				border-top: $wg-list-border;
+			}
 		}
 	}
 	&.widget_categories,
