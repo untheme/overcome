@@ -17,10 +17,11 @@
 		@include page-link-border();
 		background: $page-link-bg;
 		@include transition();
-		&:hover{
+		&:hover,
+		&.current{
 			background: $page-link-bg-hover;
 			color: $page-link-color-hover;
-			font-weight: 500;
+			font-weight: 600;
 			text-decoration: underline;
 		}
 	}
