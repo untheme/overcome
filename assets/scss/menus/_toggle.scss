@@ -136,18 +136,15 @@ $direction: (
 	width: 22px;
 	height: 22px;
 	line-height: 22px;
-	font-size: 10px;
-	font-weight: 700;
 	text-align: center;
 	.ef5-toggle-inner{
 		display: block;
-		@include border-radius(50%);
 		&:before{
-			content: '\f130';
+			content: "\f0fe";
 			display: block;
 		}
 		&.active:before{
-			content: "\f119";
+			content: "\f146";
 		}
 	}
 	&.ef5-toggle-overlay{
