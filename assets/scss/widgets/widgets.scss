@@ -50,6 +50,10 @@
 			max-width: 100%;
 			padding:10.5px 0;
 			justify-content: space-between;
+			color: #787878;
+			&:hover{
+				color: $accent_color;
+			}
 		}
 		ul{
 			flex: 0 0 100%;
