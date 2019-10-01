@@ -40,7 +40,7 @@ if(!function_exists('overcome_get_archives_link_text')){
 }
 
 if(!function_exists('overcome_archive_count_span')){
-    add_filter('get_archives_link', 'overcome_archive_count_span');
+    //add_filter('get_archives_link', 'overcome_archive_count_span');
     function overcome_archive_count_span($links) {
         $links = str_replace('<li>', '<li class="ef5-menu-item">', $links);
         $links = str_replace('</a>&nbsp;(', ' <span class="count">', $links);
