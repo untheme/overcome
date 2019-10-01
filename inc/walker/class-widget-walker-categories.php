@@ -64,7 +64,7 @@ class OverCome_Categories_Walker extends Walker_Category {
         } else {
             $link .= '<span class="title">'.$cat_name.'</span>';
             if ( ! empty( $args['show_count'] ) ) {
-                $link .= ' <span class="count">' . number_format_i18n( $category->count ) . '</span>';
+                $link .= ' <span class="count">(' . number_format_i18n( $category->count ) . ')</span>';
             }
         }
 
