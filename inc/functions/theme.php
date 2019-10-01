@@ -125,6 +125,7 @@ function overcome_sidebar_position(){
     if((is_archive() || is_post_type_archive('post') || is_home() || is_search()) && !is_post_type_archive('product')){
         $sidebar_position = overcome_get_opts('archive_sidebar_pos', overcome_archive_sidebar_position());
         var_dump($sidebar_position); //die('xxxx');
+        var_dump(overcome_get_theme_opt('archive_sidebar_pos'));
     } elseif(is_post_type_archive('portfolio')){
         $sidebar_position = overcome_get_opts('portfolio_archive_sidebar_pos', overcome_archive_sidebar_position());
     } elseif(is_page()){
