@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Add your theme spacing
 */
@@ -8,5 +7,16 @@ function overcome_spacings(){
 	return [
 		'1' => ['OverCome Space 01', '100px 0'],
 		'2' => ['OverCome Space 02', '200px 0']
+	];
+}
+
+/**
+ * Add your theme Color
+*/
+add_filter('ef5systems_colors','overcome_colors');
+function overcome_colors(){
+	return [
+		'1' => ['OverCome Color 01', '#222'],
+		'2' => ['OverCome Color 02', '#0f0']
 	];
 }
