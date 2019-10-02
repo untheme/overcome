@@ -114,3 +114,7 @@ $ef5-opacity : (
 		@include opacity(#{$opacity});
 	}
 }
+// Overlay 
+.parallax-overlay{
+	@include overlay-pos();
+}
