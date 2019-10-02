@@ -227,7 +227,9 @@ class OverCome_CSS_Generator
         printf('$white:%s;',overcome_configs('white'));
         
         // Theme Color 
-        printf('$ef5-colors:(%s);',overcome_colors_option_for_scss());
+        printf('$ef5-colors:(%s);',ef5systems_colors_option_for_scss());
+        // Theme Spacings
+        printf('$ef5-spacings:(%s);',ef5systems_spacing_option_for_scss());
 
         // Typography 
         printf( '$BodyBG: %s;', overcome_configs('body_bg'));
