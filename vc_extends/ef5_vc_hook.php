@@ -16,7 +16,7 @@ function overcome_spacings(){
 add_filter('ef5systems_colors','overcome_colors');
 function overcome_colors(){
 	return [
-		'1' => ['OverCome Color 01', '#222'],
+		'1' => ['OverCome Color 01', '#ababab'],
 		'2' => ['OverCome Color 02', '#0f0']
 	];
 }
