@@ -293,7 +293,7 @@
 
 /* Overlay Position */
 @mixin overlay-pos($position: absolute, $space: 0){
-    position: #{$position};
+    position: #{$position}!important;
     top: #{$space};
     right: #{$space};
     bottom: #{$space};
