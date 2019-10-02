@@ -1,5 +1,5 @@
 .vc_row{
-	&.[class*="justify-content-"]{
+	&[class*="justify-content-"]{
 		&:before,
 		&:after{
 			display: none;
