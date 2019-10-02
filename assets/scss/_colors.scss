@@ -1,33 +1,33 @@
 // Text Color
 @each $name, $color in $ef5-colors{
 	@if $color != null and $color != '' {
-		.text-#{$name},
-		.#{$name}-color{
+		.ef5-text-#{$name},
+		.ef5-#{$name}-color{
 			color: $color;
 		}
-		.text-hover-#{$name}:hover{
+		.ef5-text-hover-#{$name}:hover{
 			color: $color;
 		}
-		.link-#{$name} a,
-		.link-#{$name}-color a{
+		.ef5-link-#{$name} a,
+		.ef5-link-#{$name}-color a{
 			color: $color;
 			&:hover{
 				color: $accent-color;
 			}
 		}
-		.link-hover-#{$name} a:hover{
+		.ef5-link-hover-#{$name} a:hover{
 			color: $color;
 		}
-		.bg-#{$name}{
+		.ef5-bg-#{$name}{
 			background: $color;
 		}
-		.bg-hover-#{$name}:hover{
+		.ef5-bg-hover-#{$name}:hover{
 			background: $color;
 		}
-		.border-#{$name}{
+		.ef5-border-#{$name}{
 			border-color: $color;
 		}
-		.border-hover-#{$name}:hover{
+		.ef5-border-hover-#{$name}:hover{
 			border-color: $color;
 		}
 	}
