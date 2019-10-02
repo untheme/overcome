@@ -1,4 +1,3 @@
-body{display: none;}
 @each $name, $spacing in $ef5-spacings{
 	.ef5-padding-#{$name}{
 		padding: $spacing;
