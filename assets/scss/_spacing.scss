@@ -1,5 +1,5 @@
 @each $name, $spacing in $ef5-spacings{
-	@if $spacing != null or $spacing != ''{
+	@if $spacing != null or $spacing != '' {
 		.ef5-padding-#{$name}{
 			padding: $spacing;
 		}
