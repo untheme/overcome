@@ -1,8 +1,7 @@
 // Text Color
 @each $name, $color in $ef5-colors{
 	@if $color != null and $color != '' {
-		.ef5-text-#{$name},
-		.ef5-#{$name}-color{
+		.ef5-text-#{$name}{
 			color: $color;
 		}
 		.ef5-text-hover-#{$name}:hover{
