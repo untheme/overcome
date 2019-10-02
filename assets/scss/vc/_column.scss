@@ -4,9 +4,11 @@
 }
 .ef5-element-horizontal > .vc_column-inner > .wpb_wrapper{
 	@include d-flex();
-	margin: 0 $grid-gutter-width / -2;
+	margin-left: $grid-gutter-width / -2;
+	margin-right: $grid-gutter-width / -2;
 	> *{
 		flex: 0 0 auto;
-		padding: 0 $grid-gutter-width / 2;
+		padding-left: $grid-gutter-width / 2;
+		padding-right: $grid-gutter-width / 2;
 	}
 }
