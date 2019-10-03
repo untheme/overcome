@@ -100,22 +100,10 @@ vc_map(array(
                 'param_name' => 'values',
                 'value' => urlencode( json_encode( array(
                     array(
-                        'i_type'             => 'fontawesome',
-                        'i_icon_fontawesome' => 'fa fa-phone',
-                        'qc_heading'         => '(+88)222.888.66',
-                        'qc_text'            => 'Free call',
-                    ),
-                    array(
-                        'i_type'             => 'fontawesome',
-                        'i_icon_fontawesome' => 'fa fa-clock-o',
-                        'qc_heading'         => '8:00 AM - 6:00 PM',
-                        'qc_text'            => 'Monday - Friday',
-                    ),
-                    array(
-                        'i_type'             => 'fontawesome',
-                        'i_icon_fontawesome' => 'fa fa-map-marker',
-                        'qc_heading'         => '99 Kellen Motorway',
-                        'qc_text'            => 'Wallis and Futuna',
+                        'i_type'             => 'overcome',
+                        'i_icon_fontawesome' => 'flaticon-phone',
+                        'qc_heading'         => '(+123) 888 666',
+                        'qc_text'            => '',
                     )
                 ) ) ),
                 'params'     => array_merge(
