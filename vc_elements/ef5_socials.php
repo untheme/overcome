@@ -35,8 +35,8 @@ vc_map(array(
             'description' => esc_html__( 'Enter element title', 'overcome' ),
             'admin_label' => true,
         ),
-        ef5systems_icon_libs(),
-        ef5systems_icon_libs_icon(),
+        //ef5systems_icon_libs(),
+        //ef5systems_icon_libs_icon(),
         array(
             'type'       => 'dropdown',
             'param_name' => 'el_icon_hint_pos',
