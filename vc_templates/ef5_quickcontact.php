@@ -25,7 +25,7 @@ $item_inner_class = ['row'];
 switch ($layout_template) {
     case '1':
         $item_inner_class[] = 'gutter-10';
-        break;
+    break;
 }
 $qc_infos = vc_map_get_attributes( $this->getShortcode(), $atts );
 $values = (array) vc_param_group_parse_atts( $qc_infos['values'] );
