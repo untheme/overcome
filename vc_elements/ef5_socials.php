@@ -40,11 +40,13 @@ vc_map(array(
         ),
         ef5systems_icon_libs([
             'group' => '',
-            'field_prefix' => 'title_icon_'
+            'field_prefix' => 'title_icon_',
+            'heading' => 'fuckfuck'
         ]),
         ef5systems_icon_libs_icon([
             'group' => '',
-            'field_prefix' => 'title_icon_'
+            'field_prefix' => 'title_icon_',
+            'heading' => 'fuckfuckssss'
         ]),
         array(
             array(
