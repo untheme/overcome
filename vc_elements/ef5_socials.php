@@ -56,22 +56,22 @@ vc_map(array(
             'value' => urlencode( json_encode( array(
                 array(
                     'i_type'             => 'fontawesome',
-                    'i_icon_fontawesome' => 'fab fa-facebook',
+                    'i_icon_fontawesome' => 'fa fa-facebook',
                     'icon_link'          => 'title:Facebook||url:facebook.com'
                 ),
                 array(
                     'i_type'             => 'fontawesome',
-                    'i_icon_fontawesome' => 'fab fa-twitter',
+                    'i_icon_fontawesome' => 'fa fa-twitter',
                     'icon_link'          => 'title:Twitter||url:twitter.com'
                 ),
                 array(
                     'i_type'             => 'fontawesome',
-                    'i_icon_fontawesome' => 'fab fa-pinterest',
+                    'i_icon_fontawesome' => 'fa fa-pinterest',
                     'icon_link'          => 'title:Pinterest||url:pinterest.com'
                 ),
                 array(
                     'i_type'             => 'fontawesome',
-                    'i_icon_fontawesome' => 'fab fa-linkedin',
+                    'i_icon_fontawesome' => 'fa fa-linkedin',
                     'icon_link'          => 'title:LinkedIn||url:linkedin.com'
                 ),
             ) ) ),
