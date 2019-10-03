@@ -26,6 +26,7 @@ switch ($layout_template) {
     case '1':
         $item_inner_class[] = 'gutter-10 align-items-center';
         $wrap_css_class[] = 'text-12 font-style-500';
+        $item_class[] = 'col-12';
     break;
 }
 $qc_infos = vc_map_get_attributes( $this->getShortcode(), $atts );
