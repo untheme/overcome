@@ -25,7 +25,7 @@ $item_inner_class = ['row'];
 $qc_infos = vc_map_get_attributes( $this->getShortcode(), $atts );
 $values = (array) vc_param_group_parse_atts( $qc_infos['values'] );
 if(empty($values[0])) {
-    echo '<p class="require required">'.esc_html__('Please add your contact info','unbreak').'</p>';
+    echo '<p class="require required">'.esc_html__('Please add your contact info','overcome').'</p>';
     return;
 }
 $qc_icon = $qc_text = '';
@@ -56,7 +56,7 @@ if(!empty($atts['get_direction'])){
     if ( strlen( $button_link['url'] ) > 0 ) {
         $use_link = true; 
         $a_href = $button_link['url'];
-        $a_title = strlen($button_link['title']) > 0 ? $button_link['title'] : esc_html__('Read More','unbreak') ;
+        $a_title = strlen($button_link['title']) > 0 ? $button_link['title'] : esc_html__('Read More','overcome') ;
         $a_target = strlen( $button_link['target'] ) > 0 ? $button_link['target'] : '_self';
         // Button for layout 4
         $get_direction = '<div class="qc-direction ef5-btn-wrap col-12"><a class="ef5-btn-link text-accent simple ef5-btn-df icon-right underline-primary transition ef5-scroll" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'"><span class="btn-title">'.esc_html($a_title).'&nbsp;&nbsp;</span> <span class="btn-icon flaticon-right-arrow"></span></a></div>';
