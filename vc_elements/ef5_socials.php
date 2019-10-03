@@ -28,7 +28,7 @@ vc_map(array(
             'admin_label' => true,
         ),
         array(
-            'type'       => 'text',
+            'type'       => 'textfield',
             'param_name' => 'el_title',
             'heading'    => esc_html__( 'Element Title', 'overcome' ),
             'value'      => '',
