@@ -37,8 +37,14 @@ vc_map(array(
                 'admin_label' => true,
             )
         ),
-        ef5systems_icon_libs(),
-        ef5systems_icon_libs_icon(),
+        ef5systems_icon_libs([
+            'group' => '',
+            'field_prefix' => 'title_icon_'
+        ]),
+        ef5systems_icon_libs_icon([
+            'group' => '',
+            'field_prefix' => 'title_icon_'
+        ]),
         array(
             array(
                 'type'       => 'dropdown',
