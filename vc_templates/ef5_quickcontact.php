@@ -22,6 +22,11 @@ $wrap_css_class = [
 $wrap_inner_css_class = ['row'];
 $item_class = ['qc-item'];
 $item_inner_class = ['row'];
+switch ($layout_template) {
+    case '1':
+        $item_inner_class[] = 'gutter-10';
+        break;
+}
 $qc_infos = vc_map_get_attributes( $this->getShortcode(), $atts );
 $values = (array) vc_param_group_parse_atts( $qc_infos['values'] );
 if(empty($values[0])) {
@@ -71,7 +76,7 @@ if(!empty($atts['get_direction'])){
                         echo '<div class="'.trim(implode(' ', $item_class)).'">';
                             echo '<div class="'.trim(implode(' ', $item_inner_class)).'">';
                                 if(!empty($iconClass)) echo '<div class="col-auto">'.overcome_html($qc_icon).'</div>';
-                                echo '<div class="col"><div class="row">';
+                                echo '<div class="col"><div class="row gutter-20">';
                                     echo '<div class="qc-item-heading col-auto">'.overcome_html($qc_heading).'</div>';
                                     if(!empty($qc_text)) echo '<div class="qc-text col">'.overcome_html($qc_text).'</div>';
                                 echo '</div></div>';
