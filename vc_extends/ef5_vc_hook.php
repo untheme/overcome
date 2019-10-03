@@ -5,7 +5,7 @@
 add_filter('ef5systems_spacings','overcome_spacings');
 function overcome_spacings(){
 	return [
-		'1' => ['OverCome Space 01', '8px null 8px null'],
+		' pt-8 pb-8' => ['OverCome Space 01', '', 'Top 8px - Bottom 8px'],
 	];
 }
 
