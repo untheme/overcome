@@ -1,5 +1,6 @@
 <?php
-var_dump(ef5systems_icon_libs()); die('xxxx1');
+$x = ef5systems_icon_libs();
+var_dump($x[0]['heading']); die('xxxx2');
 vc_map(array(
     'name'        => 'OverCome Socials',
     'base'        => 'ef5_socials',
