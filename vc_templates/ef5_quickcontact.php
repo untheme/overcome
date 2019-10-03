@@ -31,22 +31,6 @@ if(empty($values[0])) {
 $qc_icon = $qc_text = '';
 $icon_color = !empty($icon_color) ? $icon_color : 'accent-color';
 $icon_classes = ['qc-icon', $icon_color];
-switch ($layout_template) {
-    case '4':
-        $wrap_inner_css_class[] = 'gutters-60';
-        $item_class[] = 'col-auto';
-        $item_inner_class[] = 'gutters-10';
-        break;
-    case '2':
-        $item_class[] = 'col-12';
-        $item_inner_class[] = 'gutters-20';
-        break;
-    default:
-        $wrap_inner_css_class[] = 'gutters-80';
-        $item_class[] = 'col-auto';
-        $item_inner_class[] = 'gutters-20 align-items-center';
-        break;
-}
 // Get Direction
 $use_link = false;
 $get_direction = '';
@@ -75,7 +59,7 @@ if(!empty($atts['get_direction'])){
                 'before' =>'<div class="qc-image col-12">',
                 'after'  => '</div>'
             ]);
-        	if(!empty($el_title)) echo '<div class="ef5-heading qc-heading col-12 text-20">'.esc_html($el_title).'</div>';
+        	if(!empty($el_title)) echo '<div class="ef5-heading qc-heading col-12">'.esc_html($el_title).'</div>';
             foreach($values as $value){
                 vc_icon_element_fonts_enqueue( $value['i_type'] );
                 $iconClass  = isset($value['i_icon_'. $value['i_type']]) ? $value['i_icon_'. $value['i_type']] : '';
@@ -87,10 +71,10 @@ if(!empty($atts['get_direction'])){
                         echo '<div class="'.trim(implode(' ', $item_class)).'">';
                             echo '<div class="'.trim(implode(' ', $item_inner_class)).'">';
                                 if(!empty($iconClass)) echo '<div class="col-auto">'.overcome_html($qc_icon).'</div>';
-                                echo '<div class="col">';
-                                    echo '<div class="ef5-heading qc-item-heading font-style-600">'.overcome_html($qc_heading).'</div>';
-                                    if(!empty($qc_text)) echo '<div class="qc-text">'.overcome_html($qc_text).'</div>';
-                                echo '</div>';
+                                echo '<div class="col"><div class="row">';
+                                    echo '<div class="qc-item-heading col-auto">'.overcome_html($qc_heading).'</div>';
+                                    if(!empty($qc_text)) echo '<div class="qc-text col">'.overcome_html($qc_text).'</div>';
+                                echo '</div></div>';
                             echo '</div>';
                         echo '</div>';
                     break;
