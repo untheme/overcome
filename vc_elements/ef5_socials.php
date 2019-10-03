@@ -28,6 +28,16 @@ vc_map(array(
             'admin_label' => true,
         ),
         array(
+            'type'       => 'text',
+            'param_name' => 'el_title',
+            'heading'    => esc_html__( 'Element Title', 'overcome' ),
+            'value'      => '',
+            'description' => esc_html__( 'Enter element title', 'overcome' ),
+            'admin_label' => true,
+        ),
+        ef5systems_icon_libs(),
+        ef5systems_icon_libs_icon(),
+        array(
             'type'       => 'dropdown',
             'param_name' => 'el_icon_hint_pos',
             'heading'    => esc_html__( 'Hint Label Position', 'overcome' ),
@@ -42,7 +52,7 @@ vc_map(array(
             'param_name' => 'el_content_align',
             'heading'    => esc_html__( 'Content Align', 'overcome' ),
             'value'      => ef5systems_alignment_option_for_vc(),
-            'std' => '',
+            'std'        => '',
         ),
         array(
             'type'       => 'param_group',
