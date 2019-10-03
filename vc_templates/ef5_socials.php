@@ -20,6 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         'ef5-social-'.$layout_template,
         'text-'.$el_content_align
     );
+    if($ef5_padding !== 'default') $wrap_css_classes[] = 'ef5-padding-'.$ef5_padding;
+    if($ef5_margin !== 'default') $wrap_css_classes[]  = 'ef5-padding-'.$ef5_margin;
     $hint_pos = isset($el_icon_hint_pos) ? $el_icon_hint_pos : 'top';
     switch ($layout_template) {
         case '1':

@@ -108,6 +108,29 @@ vc_map(array(
                     )
                 ),
             )
+        ),
+        // Design options
+        array(
+            array(
+                'type'         => 'dropdown',
+                'heading'      => esc_html__( 'Inner Space (Padding)', 'overcome' ),
+                'param_name'   => 'ef5_padding',
+                'value'        => ef5systems_spacing_option_for_vc(),
+                'std'          => 'default',
+                'description'  => esc_html__( 'Choose inner space', 'overcome' ),
+                'group'        => esc_html__('Design Options','overcome'),
+                'edit_field_class' => 'vc_col-sm-6'
+            ),
+            array(
+                'type'         => 'dropdown',
+                'heading'      => esc_html__( 'Outer Space (Margin)', 'overcome' ),
+                'param_name'   => 'ef5_margin',
+                'value'        => ef5systems_spacing_option_for_vc(),
+                'std'          => 'default',
+                'description'  => esc_html__( 'Choose outer space', 'overcome' ),
+                'group'        => esc_html__('Design Options','overcome'),
+                'edit_field_class' => 'vc_col-sm-6'
+            ),
         )
     )
 ));
