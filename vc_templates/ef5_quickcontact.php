@@ -68,7 +68,7 @@ if(!empty($atts['get_direction'])){
         <?php
             ob_start();
 
-            if(!empty($img_id)) unbreak_image_by_size([
+            if(!empty($img_id)) overcome_image_by_size([
                 'id'     => $img_id, 
                 'size'   => '270x184',
                 'class'  => 'image-fit',
@@ -86,17 +86,17 @@ if(!empty($atts['get_direction'])){
                     default:
                         echo '<div class="'.trim(implode(' ', $item_class)).'">';
                             echo '<div class="'.trim(implode(' ', $item_inner_class)).'">';
-                                if(!empty($iconClass)) echo '<div class="col-auto">'.unbreak_html($qc_icon).'</div>';
+                                if(!empty($iconClass)) echo '<div class="col-auto">'.overcome_html($qc_icon).'</div>';
                                 echo '<div class="col">';
-                                    echo '<div class="ef5-heading qc-item-heading font-style-600">'.unbreak_html($qc_heading).'</div>';
-                                    if(!empty($qc_text)) echo '<div class="qc-text">'.unbreak_html($qc_text).'</div>';
+                                    echo '<div class="ef5-heading qc-item-heading font-style-600">'.overcome_html($qc_heading).'</div>';
+                                    if(!empty($qc_text)) echo '<div class="qc-text">'.overcome_html($qc_text).'</div>';
                                 echo '</div>';
                             echo '</div>';
                         echo '</div>';
                     break;
                 }
             }
-            if($layout_template === '2') echo unbreak_html($get_direction);
+            if($layout_template === '2') echo overcome_html($get_direction);
             echo ob_get_clean();
         ?>
     </div>
