@@ -343,7 +343,7 @@ function overcome_styles()
     wp_add_inline_style( 'overcome', $overcome_inline_styles );
     
 }
-add_action('wp_enqueue_scripts', 'overcome_styles', 0);
+add_action('wp_footer', 'overcome_styles', 0);
 
 add_action('wp_footer', 'overcome_ef5systems_styles');
 function overcome_ef5systems_styles(){
