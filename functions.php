@@ -308,6 +308,7 @@ if(!function_exists('overcome_script_debug')){
 /**
  * Enqueue scripts and styles.
  */
+add_action('wp_footer', 'overcome_scripts', 0);
 function overcome_scripts()
 {
     $min = overcome_script_debug();
@@ -330,8 +331,8 @@ function overcome_scripts()
     wp_enqueue_script('overcome', get_template_directory_uri() . '/assets/js/theme'.$min.'.js', array('jquery'), '', true);
     wp_localize_script( 'overcome', 'overcome_ajax_opts', $overcome_ajax_opts);
 }
-add_action('wp_footer', 'overcome_scripts', 0);
 
+add_action('wp_footer', 'overcome_styles', 0);
 function overcome_styles()
 {
     $min = overcome_script_debug();
@@ -343,7 +344,6 @@ function overcome_styles()
     wp_add_inline_style( 'overcome', $overcome_inline_styles );
     
 }
-add_action('wp_footer', 'overcome_styles', 0);
 
 add_action('wp_footer', 'overcome_ef5systems_styles');
 function overcome_ef5systems_styles(){
