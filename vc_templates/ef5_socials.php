@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     if(!empty($el_title)){
         vc_icon_element_fonts_enqueue($title_icon_type);
         $title_iconClass = ${'title_icon_icon_'.$title_icon_type};
-        $el_title_icon = !empty($title_iconClass) ? '<span class="'.$title_iconClass.'"></span> ' : '';
+        $el_title_icon = !empty($title_iconClass) ? '<span class="title-icon '.$title_iconClass.'"></span>' : '';
         $title = '<span class="ef5-el-title">'.$el_title_icon.$el_title.'</span>';
     }
 ?>
