@@ -25,6 +25,7 @@ $item_inner_class = ['row'];
 switch ($layout_template) {
     case '1':
         $item_inner_class[] = 'gutter-10';
+        $wrap_css_class[] = 'text-12 font-style-500';
     break;
 }
 $qc_infos = vc_map_get_attributes( $this->getShortcode(), $atts );
