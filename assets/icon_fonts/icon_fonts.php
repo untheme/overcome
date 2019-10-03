@@ -10,7 +10,10 @@ define('OVERCOME_ICON_FONT_DIR' , get_template_directory_uri() . '/assets/icon_f
 		return ['flaticon','linear'];
 	}
 */
-
+add_filter('ef5systems_default_extra_icons','custom_ef5systems_default_extra_icons');
+	function custom_ef5systems_default_extra_icons(){
+		return ['flaticon','linear'];
+	}
 /**
  * Add filter to support your icon font in Mega Menu and VC 
  * user filter: ef5systems_extra_icons
