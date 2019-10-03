@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     $wrap_css_classes = array(
         'ef5-social',
         'ef5-social-'.$layout_template,
-        $el_content_align
+        'text-'.$el_content_align
     );
     $hint_pos = isset($el_icon_hint_pos) ? $el_icon_hint_pos : 'top';
 ?>
