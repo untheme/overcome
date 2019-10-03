@@ -38,14 +38,13 @@ vc_map(array(
             )
         ),
         ef5systems_icon_libs([
-            'group' => '',
+            'group'        => '',
             'field_prefix' => 'title_icon_',
-            'heading' => 'Title Icon'
+            'heading'      => esc_html__('Title Icon','overcome')
         ]),
         ef5systems_icon_libs_icon([
-            'group' => '',
+            'group'        => '',
             'field_prefix' => 'title_icon_',
-            'heading' => 'fuckfuckssss'
         ]),
         array(
             array(
