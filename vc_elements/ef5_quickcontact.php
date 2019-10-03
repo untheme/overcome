@@ -101,7 +101,7 @@ vc_map(array(
                 'value' => urlencode( json_encode( array(
                     array(
                         'i_type'             => 'overcome',
-                        'i_icon_fontawesome' => 'flaticon-phone',
+                        'i_icon_fontawesome' => 'flaticon-call-answer',
                         'qc_heading'         => 'Call Us:',
                         'qc_text'            => '(+123) 888 666',
                     )
