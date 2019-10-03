@@ -102,8 +102,8 @@ vc_map(array(
                     array(
                         'i_type'             => 'overcome',
                         'i_icon_fontawesome' => 'flaticon-phone',
-                        'qc_heading'         => '(+123) 888 666',
-                        'qc_text'            => '',
+                        'qc_heading'         => 'Call Us:',
+                        'qc_text'            => '(+123) 888 666',
                     )
                 ) ) ),
                 'params'     => array_merge(
