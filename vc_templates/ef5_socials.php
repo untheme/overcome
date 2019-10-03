@@ -21,6 +21,11 @@ if ( ! defined( 'ABSPATH' ) ) {
         'text-'.$el_content_align
     );
     $hint_pos = isset($el_icon_hint_pos) ? $el_icon_hint_pos : 'top';
+    switch ($layout_template) {
+        case '1':
+            $wrap_css_classes[] = 'text-12';
+            break;
+    }
 ?>
 <div class="ef5-social-wraps">
     <div class="<?php echo trim(implode(' ', $wrap_css_classes)); ?>">
