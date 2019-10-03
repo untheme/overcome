@@ -24,7 +24,7 @@ $item_class = ['qc-item'];
 $item_inner_class = ['row'];
 switch ($layout_template) {
     case '1':
-        $item_inner_class[] = 'gutter-10';
+        $item_inner_class[] = 'gutter-10 align-items-center';
         $wrap_css_class[] = 'text-12 font-style-500';
     break;
 }
@@ -35,7 +35,7 @@ if(empty($values[0])) {
     return;
 }
 $qc_icon = $qc_text = '';
-$icon_color = !empty($icon_color) ? $icon_color : 'accent-color';
+$icon_color = !empty($icon_color) ? $icon_color : '';
 $icon_classes = ['qc-icon', $icon_color];
 // Get Direction
 $use_link = false;
@@ -69,7 +69,7 @@ if(!empty($atts['get_direction'])){
             foreach($values as $value){
                 vc_icon_element_fonts_enqueue( $value['i_type'] );
                 $iconClass  = isset($value['i_icon_'. $value['i_type']]) ? $value['i_icon_'. $value['i_type']] : '';
-                $qc_icon    = !empty($iconClass) ? '<span class="'.implode(' ', $icon_classes).' '.$iconClass.'"></span>' : '';
+                $qc_icon    = !empty($iconClass) ? '<span class="'.trim(implode(' ', $icon_classes)).' '.$iconClass.'"></span>' : '';
                 $qc_heading = isset($value['qc_heading']) && !empty($value['qc_heading']) ? $value['qc_heading'] : '';
                 $qc_text    = isset($value['qc_text']) ? $value['qc_text'] : '';
                 switch ($layout_template) {
