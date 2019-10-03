@@ -330,7 +330,7 @@ function overcome_scripts()
     wp_enqueue_script('overcome', get_template_directory_uri() . '/assets/js/theme'.$min.'.js', array('jquery'), '', true);
     wp_localize_script( 'overcome', 'overcome_ajax_opts', $overcome_ajax_opts);
 }
-add_action('wp_enqueue_scripts', 'overcome_scripts', 0);
+add_action('wp_footer', 'overcome_scripts', 0);
 
 function overcome_styles()
 {
