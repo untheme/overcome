@@ -354,6 +354,7 @@ function overcome_ef5systems_styles(){
         wp_enqueue_style('hint');
     } else {
         wp_enqueue_style('font-awesome5', get_template_directory_uri() . '/assets/icon_fonts/awesome5/css/all.css', array(), wp_get_theme()->get( 'Version' ));
+        wp_enqueue_style('font-awesome5-shim', get_template_directory_uri() . '/assets/icon_fonts/awesome5/css/v4-shims.min.css', array('font-awesome5'), wp_get_theme()->get( 'Version' ));
         wp_enqueue_style('font-overcome', get_template_directory_uri() . '/assets/icon_fonts/overcome/overcome.css', array(), wp_get_theme()->get( 'Version' ));
     }
 }
