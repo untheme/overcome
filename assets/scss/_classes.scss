@@ -123,11 +123,12 @@ $ef5-opacity : (
 	.ef5-el-title{
 		&:after{
 			font-family: $FontAwesome;
+			font-size: 14px;
 			content: "\f107";
-			padding-left: 15px;
+			padding-left: 10px;
 			[dir="rtl"] &{
 				padding-left: 0;
-				padding-right: 15px;
+				padding-right: 10px;
 			}
 		}
 	}
