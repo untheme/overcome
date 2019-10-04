@@ -155,7 +155,9 @@ $ef5-opacity : (
 		li{
 			@include wg-list-style();
 			a{	
-				@include wg-list-arrow();
+				&:before{
+					@include wg-list-arrow();
+				}
 			}
 		}
 	}
