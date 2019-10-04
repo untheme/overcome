@@ -1,13 +1,10 @@
-$separator_ltr: '\f105';
-$separator_rtl: '\f104';
+$separator_ltr: '/';
+$separator_rtl: '\\';
 .breadcrumb{
 	color: inherit;
 	.separator{
 		padding: 0 10px;
 		&:empty{
-			font-family: $FontAwesome5;
-			font-size: 80%;
-			@include transform(translateY(4px));
 			&:before{
 				content: $separator_ltr;
 				[dir='rtl'] &{
