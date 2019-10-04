@@ -118,3 +118,10 @@ $ef5-opacity : (
 .parallax-overlay{
 	@include overlay-pos();
 }
+// Toggle Block 
+.ef5-toggle-block{
+
+}
+.ef5-toggle-block-content{
+	display: none;
+}
