@@ -46,7 +46,11 @@ if(!empty($el_title)){
 <div class="<?php echo trim(implode(' ', $wrap_css_class));?>">
 	<?php switch ($layout_type) {
 			case 'toggle':
-				echo overcome_html($title);
+			?>
+				<div class="ef5-toggle">
+					<?php echo overcome_html($title); ?>
+				</div>
+			<?php
 				break;
 			default:
 			?>
