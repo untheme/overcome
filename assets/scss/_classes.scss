@@ -152,5 +152,11 @@ $ef5-opacity : (
 	padding: 15px;
 	ul{
 		list-style: none;
+		li{
+			@include wg-list-style();
+			a{	
+				@include wg-list-arrow();
+			}
+		}
 	}
 }
