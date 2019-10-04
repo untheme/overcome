@@ -16,11 +16,17 @@ $wrap_css_class = ['ef5-wp-menu'];
 if( $layout_type !== 'default') $wrap_css_class[] = $layout_type;
 
 $menu_title = get_term_by('slug',$nav_menu,'nav_menu');
+$menu_class = ['menu', $layout_mode]
+if($add_divider === '1'){
+	$menu_class[] = 'add-divider';
+	$menu_class[] = 'divider-'.$divider_style;
+}
+$menu_class[] = $el_class;
 
 $nav_menu_args = array(
 	'fallback_cb'     => '',
 	'menu'            => $nav_menu,
-	'menu_class'      => trim(implode(' ', ['menu', $layout_mode, $add_divider, 'divider-'.$divider_style, $el_class])),
+	'menu_class'      => trim(implode(' ', $menu_class)),
 	'walker'          => new OverCome_Menu_Walker()
 );
 // Title

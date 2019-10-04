@@ -88,9 +88,9 @@ vc_map(array(
                 'type'       => 'checkbox',
                 'param_name' => 'add_divider',
                 'value'      => array(
-                    esc_html__('Add Divider','overcome') => 'add-divider'
+                    esc_html__('Add Divider','overcome') => '1'
                 ),
-                'std'        => '',
+                'std'        => '0',
                 'dependency'    => array(
                     'element' => 'layout_mode',
                     'value'   => array('horizontal', 'horizontal justify-content-center')
@@ -103,13 +103,13 @@ vc_map(array(
                 'param_name' => 'divider_style',
                 'value'      =>  array(
                     esc_html__('Horizontal','overcome') => 'horizontal',
-                    esc_html__('Vertical','overcome')             => 'vertical',
+                    esc_html__('Vertical','overcome')   => 'vertical',
                     esc_html__('Circle','overcome')     => 'circle',
                 ),
                 'std'        => 'horizontal',
                 'dependency'    => array(
                     'element' => 'add_divider',
-                    'value'   => 'add-divider'
+                    'value'   => '1'
                 ),
                 'group' => esc_html__('Layout','overcome')
             ),
