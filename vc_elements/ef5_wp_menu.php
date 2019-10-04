@@ -49,7 +49,6 @@ vc_map(array(
         ef5systems_icon_libs([
             'group'        => '',
             'field_prefix' => 'title_icon_',
-            'heading'      => esc_html__('Title Icon','overcome'),
             'dependency'   => 'add_title_icon',
             'dependency_value'  => '1' 
         ]),
