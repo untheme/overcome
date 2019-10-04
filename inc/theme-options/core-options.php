@@ -1076,7 +1076,7 @@ if(!function_exists('overcome_page_title_opts')){
             'default' => false
         ]);
         $force_output = $args['default'] ? true : false;
-        $default_value = '2';
+        $default_value = '1';
 
         $custom_title = $custom_desc = '';
 
