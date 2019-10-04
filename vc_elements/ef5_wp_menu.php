@@ -32,7 +32,6 @@ vc_map(array(
                 'description'   => esc_html__('What text use as a title. Leave blank to use menu title created in Menu Manager','overcome'),
                 'param_name'    => 'title',
                 'value'         => '',
-                'std'           => '',
             ),
             array(
                 'type'          => 'checkbox',
