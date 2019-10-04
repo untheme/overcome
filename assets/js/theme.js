@@ -137,6 +137,9 @@
             e.stopPropagation();
             $(this).parent().find('.ef5-toggle-block-content').slideToggle();
         });
+        $('body').on('click', function(e){
+            $(this).find('.ef5-toggle-block-content').slideUp();
+        });
 	}
 	/**
 	 * Menu Back
