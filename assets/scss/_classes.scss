@@ -118,6 +118,10 @@ $ef5-opacity : (
 .parallax-overlay{
 	@include overlay-pos();
 }
+// Overflow
+.ef5-no-overflow-hidden{
+	overflow: unset!important;
+}
 // Toggle Block 
 .ef5-toggle-block-wrap{
 	position: relative;
