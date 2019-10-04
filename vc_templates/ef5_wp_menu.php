@@ -16,6 +16,10 @@ $wrap_css_class = ['ef5-wp-menu'];
 if( $layout_type !== 'default') $wrap_css_class[] = $layout_type;
 
 $menu_title = get_term_by('slug',$nav_menu,'nav_menu');
+
+$menu_container_class = ['ef5-menu-container'];
+if($layout_type === 'toggle') $menu_container_class[] = 'ef5-wrap-menu-toggle';
+
 $menu_class = ['menu', $layout_mode];
 if($add_divider === '1'){
 	$menu_class[] = 'add-divider';
@@ -25,7 +29,7 @@ $menu_class[] = $el_class;
 
 $nav_menu_args = array(
 	'fallback_cb'     => '',
-	'container_class' => 'xxx',
+	'container_class' => trim(implode(' ', $menu_container_class)),
 	'menu'            => $nav_menu,
 	'menu_class'      => trim(implode(' ', $menu_class)),
 	'walker'          => new OverCome_Menu_Walker()
