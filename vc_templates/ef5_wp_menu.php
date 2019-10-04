@@ -29,7 +29,7 @@ if(!empty($el_title)){
 }
 ?>
 <div class="ef5-wp-menu">
-	<?php if(!empty($el_title)) { ?><h2 class="widgettitle"><?php echo esc_html($el_title); ?></h2><?php } ?>
+	<?php if(!empty($el_title)) { ?><h2 class="widgettitle"><?php echo overcome_html($el_title); ?></h2><?php } ?>
 	<?php 
 		wp_nav_menu($nav_menu_args);
 	?>
