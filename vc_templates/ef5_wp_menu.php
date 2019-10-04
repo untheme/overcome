@@ -13,7 +13,10 @@ extract( $atts );
 if(empty($nav_menu)) return;
 
 $wrap_css_class = ['ef5-wp-menu'];
-if( $layout_type !== 'default') $wrap_css_class[] = $layout_type;
+if( $layout_type !== 'default') {
+	$wrap_css_class[] = $layout_type;
+	$wrap_css_class[] = 'ef5-toggle-block-wrap';
+}
 $wrap_css_class[] = $el_class;
 
 $menu_title = get_term_by('slug',$nav_menu,'nav_menu');

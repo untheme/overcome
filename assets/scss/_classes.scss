@@ -119,7 +119,11 @@ $ef5-opacity : (
 	@include overlay-pos();
 }
 // Toggle Block 
+.ef5-toggle-block-wrap{
+	position: relative;
+}
 .ef5-toggle-block{
+	cursor: pointer;
 	.ef5-el-title{
 		&:after{
 			font-family: $FontAwesome;
@@ -135,4 +139,10 @@ $ef5-opacity : (
 }
 .ef5-toggle-block-content{
 	display: none;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	left: 0;
+	min-width: 320px;
+	background: $white;
 }
