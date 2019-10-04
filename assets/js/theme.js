@@ -134,6 +134,7 @@
             e.preventDefault();
             $(this).toggleClass('active');
             $(this).parents('.ef5-page').find('.ef5-toggle-block-content').slideUp();
+            e.stopPropagation();
             $(this).parent().find('.ef5-toggle-block-content').slideToggle();
         });
 	}
