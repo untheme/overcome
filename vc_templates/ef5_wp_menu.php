@@ -39,7 +39,7 @@ if(!empty($el_title)){
 				break;
 			default:
 			?>
-				<h2 class="widgettitle"><?php echo overcome_html($title); ?></h2>
+				<div class="widgettitle"><?php echo overcome_html($title); ?></div>
 			<?php
 			break;
 		}
