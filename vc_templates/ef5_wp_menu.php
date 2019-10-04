@@ -18,7 +18,7 @@ if( $layout_type !== 'default') $wrap_css_class[] = $layout_type;
 $menu_title = get_term_by('slug',$nav_menu,'nav_menu');
 
 $menu_container_class = ['ef5-menu-container'];
-if($layout_type === 'toggle') $menu_container_class[] = 'ef5-wrap-menu-toggle';
+if($layout_type === 'toggle') $menu_container_class[] = 'ef5-wrap-menu-toggle ef5-toggle-block-content';
 
 $menu_class = ['menu', $layout_mode];
 if($add_divider === '1'){
@@ -47,7 +47,7 @@ if(!empty($el_title)){
 	<?php switch ($layout_type) {
 			case 'toggle':
 			?>
-				<div class="ef5-toggle">
+				<div class="ef5-toggle-block">
 					<?php echo overcome_html($title); ?>
 				</div>
 			<?php

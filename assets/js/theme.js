@@ -130,6 +130,11 @@
 			$(this).parent().parent().toggleClass('clicked');
             $(this).parent().next().slideToggle();
 		});
+        $('.ef5-toggle-block').on('click', function(e){
+            e.preventDefault();
+            $(this).toggleClass('active');
+            $(this).parent().find('.ef5-toggle-block-content').slideToggle();
+        });
 	}
 	/**
 	 * Menu Back
