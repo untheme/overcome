@@ -1,11 +1,12 @@
 @import 'quick_contact';
 @import 'social';
+
 .ef5-el-title{
 	.title-icon{
-		padding-right: 15px;
+		padding-right: 10px;
 		[dir="rtl"] &{
 			padding-right: 0;
-			padding-left: 15px;
+			padding-left: 10px;
 		}
 	}
 }
