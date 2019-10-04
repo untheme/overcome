@@ -30,7 +30,7 @@ vc_map(array(
                 'type'          => 'textfield',
                 'heading'       => esc_html__('Title','overcome'),
                 'description'   => esc_html__('What text use as a title. Leave blank to use menu title created in Menu Manager','overcome'),
-                'param_name'    => 'title',
+                'param_name'    => 'el_title',
                 'value'         => '',
             ),
             array(
@@ -41,7 +41,7 @@ vc_map(array(
                 ),
                 'std'           => '0',
                 'dependency'    => array(
-                    'element'   => 'title',
+                    'element'   => 'el_title',
                     'not_empty' => true
                 ),
             ),

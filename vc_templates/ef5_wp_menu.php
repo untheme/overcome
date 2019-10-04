@@ -18,11 +18,18 @@ $nav_menu_args = array(
 	'fallback_cb'     => '',
 	'menu'            => $nav_menu,
 	'menu_class'      => trim(implode(' ', ['menu', $layout_mode, $add_divider, 'divider-'.$divider_style, $el_class])),
-	'walker'          => new UnBreak_Menu_Walker()
+	'walker'          => new OverCome_Menu_Walker()
 );
+// Title
+if(!empty($el_title)){
+    vc_icon_element_fonts_enqueue($title_icon_type);
+    $title_iconClass = ${'title_icon_icon_'.$title_icon_type};
+    $el_title_icon = !empty($title_iconClass) ? '<span class="title-icon '.$title_iconClass.'"></span>' : '';
+    $el_title = '<span class="ef5-el-title">'.$el_title_icon.$el_title.'</span>';
+}
 ?>
 <div class="ef5-wp-menu">
-	<?php if(!empty($title)) { ?><h2 class="widgettitle"><?php echo esc_html($title); ?><span class="ef5-open-submenu"></span></h2><?php } ?>
+	<?php if(!empty($el_title)) { ?><h2 class="widgettitle"><?php echo esc_html($el_title); ?></h2><?php } ?>
 	<?php 
 		wp_nav_menu($nav_menu_args);
 	?>
