@@ -41,6 +41,10 @@ vc_map(array(
                     esc_html__('Add title icon?','overcome') => '1'
                 ),
                 'std'           => '1',
+                'dependency'    => array(
+                    'element'   => 'title',
+                    'not_empty' => true
+                ),
             ),
         ),
         ef5systems_icon_libs([
