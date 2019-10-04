@@ -149,4 +149,8 @@ $ef5-opacity : (
 	left: 0;
 	min-width: 320px;
 	background: $white;
+	padding: 15px;
+	ul{
+		list-style: none;
+	}
 }
