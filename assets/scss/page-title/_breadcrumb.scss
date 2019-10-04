@@ -2,6 +2,7 @@ $separator_ltr: '/';
 $separator_rtl: '\\';
 .breadcrumb{
 	color: inherit;
+	text-transform: lowercase;
 	.separator{
 		padding: 0 10px;
 		&:empty{
