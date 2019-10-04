@@ -39,7 +39,7 @@ vc_map(array(
                 'value'         => array(
                     esc_html__('Add title icon?','overcome') => '1'
                 ),
-                'std'           => '1',
+                'std'           => '0',
                 'dependency'    => array(
                     'element'   => 'title',
                     'not_empty' => true
