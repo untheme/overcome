@@ -12,6 +12,9 @@ $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
 if(empty($nav_menu)) return;
 
+$wrap_css_class = ['ef5-wp-menu'];
+if( $layout_type !== 'default') $wrap_css_class[] = $layout_type;
+
 $menu_title = get_term_by('slug',$nav_menu,'nav_menu');
 
 $nav_menu_args = array(
@@ -21,16 +24,25 @@ $nav_menu_args = array(
 	'walker'          => new OverCome_Menu_Walker()
 );
 // Title
+$title = '';
 if(!empty($el_title)){
     vc_icon_element_fonts_enqueue($title_icon_type);
     $title_iconClass = ${'title_icon_icon_'.$title_icon_type};
     $el_title_icon = !empty($title_iconClass) && $add_title_icon ? '<span class="title-icon '.$title_iconClass.'"></span>' : '';
-    $el_title = '<span class="ef5-el-title">'.$el_title_icon.$el_title.'</span>';
+    $title = '<span class="ef5-el-title">'.$el_title_icon.$el_title.'</span>';
 }
 ?>
-<div class="ef5-wp-menu">
-	<?php if(!empty($el_title)) { ?><h2 class="widgettitle"><?php echo overcome_html($el_title); ?></h2><?php } ?>
-	<?php 
+<div class="<?php echo trim(implode(' ', $wrap_css_class));?>">
+	<?php switch ($layout_type) {
+			case 'toggle':
+				echo overcome_html($title);
+				break;
+			default:
+			?>
+				<h2 class="widgettitle"><?php echo overcome_html($title); ?></h2>
+			<?php
+			break;
+		}
 		wp_nav_menu($nav_menu_args);
 	?>
 </div>
