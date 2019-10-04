@@ -33,12 +33,22 @@ vc_map(array(
                 'param_name'    => 'title',
                 'value'         => '',
                 'std'           => '',
-            )
+            ),
+            array(
+                'type'          => 'checkbox',
+                'param_name'    => 'add_title_icon',
+                'value'         => array(
+                    esc_html__('Add title icon?','overcome') => '1'
+                ),
+                'std'           => '1',
+            ),
         ),
         ef5systems_icon_libs([
             'group'        => '',
             'field_prefix' => 'title_icon_',
-            'heading'      => esc_html__('Title Icon','overcome')
+            'heading'      => esc_html__('Title Icon','overcome'),
+            'dependency'   => 'add_title_icon',
+            'dependency_value'  => '1' 
         ]),
         ef5systems_icon_libs_icon([
             'group'        => '',
