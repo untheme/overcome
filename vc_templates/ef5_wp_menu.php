@@ -25,6 +25,7 @@ $menu_class[] = $el_class;
 
 $nav_menu_args = array(
 	'fallback_cb'     => '',
+	'container_class' => 'xxx',
 	'menu'            => $nav_menu,
 	'menu_class'      => trim(implode(' ', $menu_class)),
 	'walker'          => new OverCome_Menu_Walker()
