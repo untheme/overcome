@@ -22,10 +22,6 @@ $title_css_class = ['col-12'];
 if(!$show_breadcrumb) {
     $pt_cls[] = 'no-breadcrumb';
 } 
-if($show_breadcrumb && (!is_home() || !is_front_page())) {
-    $title_css_class[] = 'col-lg-6 order-lg-2 text-lg-end';
-}
-
 ob_start();
     if ( $titles['title'] )
     {
@@ -52,9 +48,9 @@ if ( ! $titles_html )
                 <div class="<?php echo trim(implode(' ', $title_css_class));?>">
                     <?php printf( '%s', $titles_html); ?>
                 </div>
-                <?php if($show_breadcrumb && (!is_home() || !is_front_page())) { ?>
-                <div class="ef5-breadcrumb col-lg-6">
-                    <?php overcome_breadcrumb(['class'=>'h5']); ?>
+                <?php if($show_breadcrumb) { ?>
+                <div class="ef5-breadcrumb col-12">
+                    <?php overcome_breadcrumb(); ?>
                 </div>
                 <?php } ?>
             </div>
