@@ -28,3 +28,9 @@
 .ef5-breadcrumb{
 	padding-top: 10px;
 }
+
+.header-ontop{
+	+ .ef5-pagetitle-wrap .ef5-pagetitle{
+		padding: 267px 0 115px;
+	}
+}
