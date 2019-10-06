@@ -12,6 +12,9 @@
 @import 'logo';
 @import 'sidenav';
 
+#ef5-header-wrap{
+	position: relative;
+}
 .ef5-header{
 	@include transition(all 0.5s);
 }

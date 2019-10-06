@@ -20,9 +20,11 @@
 <body <?php body_class(); ?>> 
     <?php overcome_page_loading(); ?>
     <div id="ef5-page" class="<?php overcome_page_css_class();?>">
-    <?php 
-        overcome_header_top();
-        overcome_header_main(); 
-        overcome_page_title();
-    ?>
+    <?php overcome_header_top(); ?>
+    <div id="ef5-header-wrap">
+        <?php
+            overcome_header_main(); 
+            overcome_page_title();
+        ?>
+    </div>
     <main id="ef5-main" class="ef5-main">
