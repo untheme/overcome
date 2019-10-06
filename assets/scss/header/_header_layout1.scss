@@ -1,6 +1,13 @@
 .header-layout-1{
-	.header-inner.no-container{
-		@media (min-width: 1366px){
+	@media (min-width: 1366px){
+		&.header-ontop{
+			left: 50%;
+			right: auto;
+			@include transform(translateX(-50%));
+			min-width: 1300px;
+			max-width: 1300px;
+		}
+		.header-inner.no-container{
 			padding-left: 110px;
 			padding-right: 110px;
 		}
