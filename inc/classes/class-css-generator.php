@@ -270,19 +270,19 @@ class OverCome_CSS_Generator
         printf('$header_sidewidth: %s;', esc_attr($header_sidewidth['width']));
 
         /* Default Header Color */
-        $header_link_color = overcome_get_theme_opt('header_link_colors',apply_filters('overcome_header_link_color', ['regular' => $primary_color, 'hover' => $accent_color, 'active' => $accent_color]) );
+        $header_link_color = overcome_get_theme_opt('header_link_colors',apply_filters('overcome_header_link_color', ['regular' => overcome_configs('menu_link_color_regular'), 'hover' => overcome_configs('menu_link_color_hover'), 'active' => overcome_configs('menu_link_color_active')]) );
         printf( '$header_regular: %s;', esc_attr( $header_link_color['regular'] ) );
         printf( '$header_hover: %s;', esc_attr( $header_link_color['hover'] ) );
         printf( '$header_active: %s;', esc_attr( $header_link_color['active'] ) );
 
         /* Ontop Header Color */
-        $ontop_link_color = overcome_get_theme_opt('ontop_link_colors', apply_filters('overcome_ontop_link_color', ['regular' => '#FFFFFF', 'hover' => $accent_color, 'active' => $accent_color]) );
+        $ontop_link_color = overcome_get_theme_opt('ontop_link_colors', apply_filters('overcome_ontop_link_color', ['regular' => overcome_configs('ontop_link_color_regular'), 'hover' => overcome_configs('ontop_link_color_hover'), 'active' => overcome_configs('ontop_link_color_active')]) );
         printf( '$ontop_regular: %s;', esc_attr( $ontop_link_color['regular'] ) );
         printf( '$ontop_hover: %s;', esc_attr( $ontop_link_color['hover'] ) );
         printf( '$ontop_active: %s;', esc_attr( $ontop_link_color['active'] ) );
 
         /* Sticky Header Color */
-        $sticky_link_color = overcome_get_theme_opt('sticky_link_colors',apply_filters('overcome_sticky_link_color',['regular' => '#FFFFFF', 'hover' => $accent_color, 'active' => $accent_color]));
+        $sticky_link_color = overcome_get_theme_opt('sticky_link_colors',apply_filters('overcome_sticky_link_color',['regular' => overcome_configs('sticky_link_color_regular'), 'hover' => overcome_configs('sticky_link_color_hover'), 'active' => overcome_configs('sticky_link_color_active')]));
         printf( '$sticky_regular: %s;', esc_attr( $sticky_link_color['regular'] ) );
         printf( '$sticky_hover: %s;', esc_attr( $sticky_link_color['hover'] ) );
         printf( '$sticky_active: %s;', esc_attr( $sticky_link_color['active'] ) );

@@ -66,6 +66,19 @@ if(!function_exists('overcome_configs')){
             'logo_units'       => 'px',
             'main_menu_height' => '100px',
             'header_sidewidth' => '320px',
+            // Menu Color
+            'menu_link_color_regular' => 'var(--primary-color)',
+            'menu_link_color_hover' => 'var(--accent-color)',
+            'menu_link_color_active' => 'var(--accent-color)',
+            // Menu Ontop Color
+            'ontop_link_color_regular' => 'var(--primary-color)',
+            'ontop_link_color_hover' => 'var(--accent-color)',
+            'ontop_link_color_active' => 'var(--accent-color)',
+            // Menu Sticky Color
+            'sticky_link_color_regular' => 'var(--primary-color)',
+            'sticky_link_color_hover' => 'var(--accent-color)',
+            'sticky_link_color_active' => 'var(--accent-color)',
+            // Dropdown
             'dropdown_bg'      => 'rgba(#000000, 1)',
             'dropdown_regular' => '#c0c0c0',
             'dropdown_hover'   => 'var(--accent-color)',
