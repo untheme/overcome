@@ -6,6 +6,7 @@
 			@include transform(translateX(-50%));
 			min-width: 1300px;
 			max-width: 1300px;
+			@include border-radius(10px);
 		}
 		.header-inner.no-container{
 			padding-left: 110px;
