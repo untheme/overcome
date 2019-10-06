@@ -13,6 +13,15 @@
 			padding-right: 110px;
 		}
 	}
+	@media (min-width: $screen-lg-min) and (max-width: $screen-lg-max){
+		&.header-ontop{
+			min-width: calc(100% - 30px);
+			max-width: calc(100% - 30px);
+			left: 15px;
+			right: 15px;
+			@include border-radius(10px);
+		}
+	}
 	#ef5-navigation{
 		@media (min-width: $screen-xl-min){
 			padding-right: 60px;
