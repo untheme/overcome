@@ -199,8 +199,8 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
             'class' => ''
         ]);
         extract( $atts );
-        $heading2_text = '<span class="part2">'.$heading2_text.'</span>';
-        $heading3_text = '<span class="part3">'.$heading3_text.'</span>';
+        if(!empty($heading2_text)) $heading2_text = '<span class="part2">'.$heading2_text.'</span>';
+        if(!empty($heading3_text)) $heading3_text = '<span class="part3">'.$heading3_text.'</span>';
 
         $heading_string = trim(implode(' ',[$heading_text, $heading2_text, $heading3_text]));
         // Heading 
