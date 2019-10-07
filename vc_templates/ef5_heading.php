@@ -17,7 +17,6 @@ extract( $atts );
 			default:
 				$this->ef5_heading_small_heading($atts);
 				$this->ef5_heading_main_heading($atts);
-				$this->ef5_heading_divider($atts);
 				$this->ef5_heading_sub_heading($atts);
 				$this->ef5_heading_desccription($atts);
 				$this->ef5_heading_button($atts);
