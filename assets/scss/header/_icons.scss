@@ -2,20 +2,20 @@
     position: relative;
     .header-count{
         position: absolute;
-        top: -12px;
-        right: 0;
+        top: -8px;
+        right: 5px;
         min-width: 15px;
         height: 15px;
         line-height: 15px;
         font-size: 10px;
         font-weight: 500;
         padding: 0;
-        color: $primary_color;
+        color: $white;
         background: $accent_color;
         @include border-radius(50%);
         [dir="rtl"] &{
             right: auto;
-            left: 0;
+            left: 5px;
         }
     }
 }
