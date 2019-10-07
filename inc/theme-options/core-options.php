@@ -787,7 +787,7 @@ if(!function_exists('overcome_header_donate')){
             ),
             array(
                 'title'    => esc_html__('Donate for?', 'overcome'),
-                'description' => esc_html__('Choose default item for donate, if not, the first item will choose','overcome'),
+                'subtitle' => esc_html__('Choose default item for donate, if not, the first item will choose','overcome'),
                 'id'       => 'header_donate_item',
                 'type'     => 'dropdown',
                 'options'  => overcome_list_post('ef5_donation'),
