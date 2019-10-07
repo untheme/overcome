@@ -789,7 +789,7 @@ if(!function_exists('overcome_header_donate')){
                 'title'    => esc_html__('Donate for?', 'overcome'),
                 'subtitle' => esc_html__('Choose default item for donate, if not, the first item will choose','overcome'),
                 'id'       => 'header_donate_item',
-                'type'     => 'dropdown',
+                'type'     => 'select',
                 'options'  => overcome_list_post('ef5_donation'),
                 'default'  => '',
                 'required' => array('header_donate', '!=', '0')
