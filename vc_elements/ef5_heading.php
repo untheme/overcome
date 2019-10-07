@@ -222,7 +222,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         // SubHeading
         $subheading_attrs = [];
         $subheading_css_class = [
-            'subheading'
+            'subheading',
             $args['class']
         ];
         $subheading_attrs[] = 'class="'.trim(implode(' ', $subheading_css_class)).'"';
