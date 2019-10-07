@@ -207,7 +207,6 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $heading_attrs = $heading_css = [];
 
         $heading_css_class = [
-            'ef5-heading',
             'main-heading',
             $args['class']
         ];
