@@ -177,7 +177,9 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
     }
     protected function ef5_heading_small_heading($atts,$args = []){
         if(empty($atts['small_heading_text'])) return;
-        $args = wp_parse_args($args, []);
+        $args = wp_parse_args($args, [
+            'class' => ''
+        ]);
         extract( $atts );
         $small_heading_attrs = $small_heading_css = [];
         $small_heading_css_class = [
@@ -193,7 +195,9 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
     }
     protected function ef5_heading_main_heading($atts,$args = []){
         if(empty($atts['heading_text'])) return;
-        $args = wp_parse_args($args, []);
+        $args = wp_parse_args($args, [
+            'class' => ''
+        ]);
         extract( $atts );
         $heading2_text = '<span class="part2">'.$heading2_text.'</span>';
         $heading3_text = '<span class="part3">'.$heading3_text.'</span>';
@@ -217,7 +221,9 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
     }
     protected function ef5_heading_sub_heading($atts,$args = []){
         if(empty($atts['subheading_text'])) return;
-        $args = wp_parse_args($args, []);
+        $args = wp_parse_args($args, [
+            'class' => ''
+        ]);
         extract( $atts );
         // SubHeading
         $subheading_attrs = [];
@@ -234,7 +240,9 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
     }
     protected function ef5_heading_desccription($atts,$args = []){
         if(empty($atts['desc_text'])) return;
-        $args = wp_parse_args($args, []);
+        $args = wp_parse_args($args, [
+            'class' => ''
+        ]);
         extract( $atts );
         // Description 
         $desc_attrs = [];
