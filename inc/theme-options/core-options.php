@@ -324,13 +324,7 @@ if(!function_exists('overcome_header_atts')){
             'text' => esc_html__('Text','overcome'),
         );
         $header_atts_icon_style = array(
-            'icon'                => esc_html__('Icon','overcome'),
-            'circle accent'       => esc_html__('Circle Icon - Accent Color','overcome'),
-            'circle primary'      => esc_html__('Circle Icon - Primary Color','overcome'),
-            'circle grey'         => esc_html__('Circle Icon - Grey Color - Size 30','overcome'),
-            'circle grey size-36' => esc_html__('Circle Icon - Grey Color - Size 36','overcome'),
-            'circle grey2'        => esc_html__('Circle Icon - (#3F3F3F)','overcome'),
-            
+            'icon' => esc_html__('Icon','overcome')
         );
         if($default){
             $options = array(
@@ -414,6 +408,7 @@ if(!function_exists('overcome_header_atts')){
                 )
             ),
             overcome_header_wc_attrs($options, $default_value),
+            overcome_header_donate(),
             overcome_header_contact_attrs($options, $default, $default_value),
             overcome_header_contact_plain_text_attrs($options, $default_value),
             array(
@@ -467,7 +462,7 @@ if(!function_exists('overcome_header_atts')){
                 array(
                     'id'       => 'header_side_copyright',
                     'type'     => 'textarea',
-                    'default'  => sprintf('&copy; Biger. by <a href="%s">CMSSuperheroes</a>', esc_url('http://www.cmssuperheroes.com/')),
+                    'default'  => sprintf('&copy; OverCome. by <a href="%s">SpyroPress</a>', esc_url('spyropress.com')),
                     'required' => array('header_layout', '=', '3'),
                     'title'    => esc_html__('Copyright Text', 'overcome'),
                     'subtitle' => esc_html__('Enter your copyright text', 'overcome'),
@@ -743,6 +738,61 @@ if(!function_exists('overcome_header_signin_signup_opts')){
                 'type'     => 'text',
                 'default'  => esc_html__('Sign Up','overcome'),
                 'required' => array('header_signup', '!=', '0')
+            )
+        );
+    }
+}
+
+/**
+ * Theme Options 
+ * Show SingIn / SingUp button
+ * Require CSH Login Plugin
+ *
+*/
+if(!function_exists('overcome_header_donate')){
+    function overcome_header_donate($args = []){
+        if(!class_exists('EF5Payments')) return array();
+        $args = wp_parse_args($args,[
+            'default' => false
+        ]);
+        if($args['default']){
+            $options = array(
+                '-1' => esc_html__('Default','overcome'),
+                '1'  => esc_html__('Yes','overcome'),
+                '0'  => esc_html__('No','overcome'),
+            );
+            $default_value = '-1';
+        } else {
+            $options = array(
+                '1'  => esc_html__('Yes','overcome'),
+                '0'  => esc_html__('No','overcome'),
+            );
+            $default_value = '0';
+        }
+        return array (
+            array(
+                'title'    => esc_html__('Show Donate', 'overcome'),
+                'subtitle' => esc_html__('Show/Hide Donate Button', 'overcome'),
+                'id'       => 'header_donate',
+                'type'     => 'button_set',
+                'options'  => $options,
+                'default'  => $default_value,
+            ),
+            array(
+                'title'    => esc_html__('Button Label', 'overcome'),
+                'id'       => 'header_donate_label',
+                'type'     => 'text',
+                'default'  => esc_html__('Donate Now','overcome'),
+                'required' => array('header_donate', '!=', '0')
+            ),
+            array(
+                'title'    => esc_html__('Donate for?', 'overcome'),
+                'description' => esc_html__('Choose default item for donate, if not, the first item will choose','overcome'),
+                'id'       => 'header_donate_item',
+                'type'     => 'dropdown',
+                'options'  => overcome_list_post('ef5_donation'),
+                'default'  => '',
+                'required' => array('header_donate', '!=', '0')
             )
         );
     }
