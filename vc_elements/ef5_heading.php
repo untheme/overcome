@@ -40,7 +40,7 @@ vc_map(array(
                 'dependency' => array(
                     'element'   => 'small_heading_text',
                     'not_empty' => true
-                )
+                ),
             ]),
             // Heading 
             array(
@@ -111,7 +111,7 @@ vc_map(array(
                 'dependency' => array(
                     'element'   => 'heading_text',
                     'not_empty' => true
-                )
+                ),
             ]),
             // Sub Heading 
             array(

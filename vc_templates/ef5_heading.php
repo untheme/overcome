@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
 ?>
-<div class="<?php $this->unbreak_heading_wrap_css_class($atts); ?>">
+<div class="<?php $this->overcome_heading_wrap_css_class($atts); ?>">
 	<?php 
 		switch ($layout_template) {
 			default:
