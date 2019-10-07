@@ -9,7 +9,7 @@ if(!function_exists('overcome_header_cart')){
 		$args = wp_parse_args($args, [
 			'before' => '',
 			'after'  => '', 
-			'icon'	 => 'flaticon-shopping-bag',
+			'icon'	 => 'flaticon-shopping-cart',
 			'style'	 => '1'
 		]);
 		$show_cart = overcome_get_opts('header_cart', '0');

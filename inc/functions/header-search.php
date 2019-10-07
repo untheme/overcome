@@ -8,7 +8,7 @@ if(!function_exists('overcome_header_search')){
 		$args = wp_parse_args($args, [
 			'before' => '',
 			'after'  => '',
-			'icon'	 => 'flaticon-magnifying-glass-1',
+			'icon'	 => 'flaticon-magnifying-glass',
 			'type'	 => ''
 		]);
 		$show_search = overcome_get_opts('header_search', '0');
