@@ -19,7 +19,7 @@ $text-sizes: (
 	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
 		@each $size in $text-sizes{
 			.text#{$infix}-#{nth($size, 1)}{
-				font-size: #{nth($size, 1)}px!important;
+				font-size: #{nth($size, 1)}px;
 				@if(nth($size, 2) != ''){
 					line-height: nth($size, 2);
 				}
@@ -38,6 +38,6 @@ $line-heights: (
 );
 @each $line-height, $line-height-value in $line-heights{
 	.lh-#{$line-height}{
-		line-height: #{$line-height-value}!important;
+		line-height: #{$line-height-value};
 	}
 }
