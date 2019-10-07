@@ -30,7 +30,8 @@ vc_map(array(
                 'type'       => 'textarea',
                 'heading'    => esc_html__('Text','overcome'),
                 'param_name' => 'small_heading_text',
-                'value'      => '',
+                'value'      => 'Small Heading',
+                'std'      => 'Small Heading',
                 'holder'     => 'div',
                 'group'      => esc_html__('Small Heading','overcome'),
             ),
@@ -48,6 +49,7 @@ vc_map(array(
                 'heading'    => esc_html__('Text','overcome'),
                 'param_name' => 'heading_text',
                 'value'      => 'This is OverCome custom heading element',
+                'std'        => 'This is OverCome custom heading element',
                 'holder'     => 'h4',
                 'group'      => esc_html__('Heading','overcome')   
             ),
@@ -69,8 +71,8 @@ vc_map(array(
                 'type'       => 'textarea',
                 'heading'    => esc_html__('Text','overcome'),
                 'param_name' => 'heading2_text',
-                'value'      => '',
-                'std'        => '',
+                'value'      => 'Part 2',
+                'std'        => 'Part 2',
                 'dependency' => array(
                     'element' => 'show_heading2',
                     'value'   => array('1')
@@ -96,8 +98,8 @@ vc_map(array(
                 'type'       => 'textarea',
                 'heading'    => esc_html__('Text','overcome'),
                 'param_name' => 'heading3_text',
-                'value'      => '',
-                'std'        => '',
+                'value'      => 'Part 3',
+                'std'        => 'Part 3',
                 'dependency' => array(
                     'element' => 'show_heading3',
                     'value'   => array('1')
@@ -118,8 +120,8 @@ vc_map(array(
                 'type'       => 'textfield',
                 'heading'    => esc_html__('Text','overcome'),
                 'param_name' => 'subheading_text',
-                'value'      => '',
-                'std'        => '',
+                'value'      => 'Sub Heading',
+                'std'        => 'Sub Heading',
                 'holder'     => 'h3',
                 'group'      => esc_html__('Sub Heading','overcome')
             ),
