@@ -52,7 +52,7 @@
 	}
 }
 /* Search Form In Popup */
-.mfp-content{
+.mfp-contentx{
 	.search-form,
 	.woocommerce-product-search{
 		color: $white;
@@ -60,8 +60,6 @@
 		input{
 			background: transparent;
 			border-color: $white;
-			border-width: 0 0 2px 0;
-			padding: 10px 60px 10px 0;
 			height: auto;
 			box-shadow: none;
 			[dir="rtl"] &{
