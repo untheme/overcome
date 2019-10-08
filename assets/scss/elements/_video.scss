@@ -8,11 +8,12 @@
 	.ef5-video{
 		@include border-radius(10px);
 		overflow: hidden;
-		position: relative;;
+		position: relative;
+		text-align: center;
 		&:before{
 			content: '';
 			display: block;
-			background: rgba(54,54,54,0,4);
+			background: rgba(54,54,54,0.4);
 			@include overlay-pos();
 			z-index: 1;
 		}
