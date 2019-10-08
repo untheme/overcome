@@ -8,8 +8,8 @@
         default:
     ?>
         <div class="ef5-video-info empty-none"><?php
-            $this->overcome_ef5_video_small_heading($atts);
-            $this->overcome_ef5_video_heading($atts);
+            $this->overcome_ef5_video_small_heading($atts,['class' => 'text-22 ef5-text-accent']);
+            $this->overcome_ef5_video_heading($atts, ['class' => 'text-36 ef5-text-primary']);
             $this->overcome_ef5_video_desc($atts);
             $this->overcome_ef5_video_link($atts);
         ?></div>

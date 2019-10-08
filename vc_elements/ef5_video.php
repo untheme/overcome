@@ -682,13 +682,18 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
     protected function overcome_ef5_video_heading($atts, $args = []){
         extract($atts);
         if(empty($title)) return;
-        $args = wp_parse_args($args,[]);
+        $args = wp_parse_args($args,[
+            'class' => ''
+        ]);
         $title_attrs = [];
         $title_border_style = [];
 
         // Heading
-        $title_css_classes = ['large-heading'];
-        $title_css_classes[] = $this->getCSSAnimation('fadeIn');
+        $title_css_classes = [
+            'large-heading',
+            $args['class'],
+            $this->getCSSAnimation('fadeIn')
+        ];
         $title_attrs[] = 'class="'.trim(implode(' ', $title_css_classes)).'"';
         // Heading Part
         $title_part_css_classes = ['title-part'];
