@@ -666,9 +666,16 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
     protected function overcome_ef5_video_small_heading($atts, $args = []){
         extract($atts);
         if(empty($small_heading)) return;
-        $args = wp_parse_args($args,[]);
+        $args = wp_parse_args($args,[
+            'class' => ''
+        ]);
+        $classes = [
+            'small-heading',
+            $args['class'],
+            $this->getCSSAnimation('fadeIn')
+        ];
     ?>
-        <div class="small-heading <?php echo esc_attr($this->getCSSAnimation('fadeIn'));?>"><?php echo esc_html($small_heading);?></div>
+        <div class="<?php echo trim(implode(' ', $classes));?>"><?php echo esc_html($small_heading);?></div>
     <?php 
     }
 
