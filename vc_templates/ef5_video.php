@@ -1,6 +1,7 @@
 <?php
     $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
     extract( $atts );
+    add_action('wp_footer',array($this->overcome_ef5_video_popup($atts)));
 ?>
 <div class="ef5-video-wrapper ef5-video-<?php echo esc_attr($layout_template);?>">
 <div id="ef5-video-<?php echo esc_attr($el_id);?>">
@@ -16,7 +17,6 @@
         <div class="ef5-video <?php echo esc_attr($video_class);?>"><?php 
             $this->overcome_ef5_video_poster($atts);
             $this->overcome_ef5_video_play_button($atts);
-            $this->overcome_ef5_video_popup($atts);
             $this->overcome_ef5_video_plain($atts);
         ?></div>
     <?php
