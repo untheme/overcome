@@ -30,11 +30,12 @@ vc_map(array(
         ef5systems_icon_libs([
             'group'        => '',
             'field_prefix' => 'title_icon_',
-            'heading'      => esc_html__('Title Icon','overcome')
+            'heading'      => esc_html__('Title Icon','overcome'),
         ]),
         ef5systems_icon_libs_icon([
             'group'        => '',
             'field_prefix' => 'title_icon_',
+            'empty_icon'   => true
         ]),
         array(
             array(
@@ -61,7 +62,7 @@ vc_map(array(
                 ) ) ),
                 'params' => array_merge(
                     ef5systems_icon_libs(),
-                    ef5systems_icon_libs_icon(),
+                    ef5systems_icon_libs_icon(['empty_icon'=>true]),
                     array(
                         array(
                             'type'       => 'textfield',
