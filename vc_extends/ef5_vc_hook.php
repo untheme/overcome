@@ -17,6 +17,7 @@ add_filter('ef5systems_gutters','overcome_gutters');
 function overcome_gutters(){
 	return [
 		'20' => ['OverCome Gutter 20'],
+		'25' => ['OverCome Gutter 25'],
 	];
 }
 
