@@ -363,7 +363,7 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
                 $size = '540x640';
                 break;
             default:
-                $size = '570x412';
+                $size = '570x270';
                 break;
         }
         overcome_image_by_size([
