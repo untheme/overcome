@@ -11,6 +11,16 @@ function overcome_spacings(){
 }
 
 /**
+ * Add your theme Gutter
+*/
+add_filter('ef5systems_gutters','overcome_gutters');
+function overcome_gutters(){
+	return [
+		'20' => ['OverCome Gutter 20'],
+	];
+}
+
+/**
  * Add your theme Color
 */
 add_filter('ef5systems_colors','overcome_colors');
