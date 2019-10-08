@@ -20,35 +20,12 @@ vc_map(
 		        ),
 		        array(
 					'type'       => 'dropdown',
-					'heading'    => esc_html__('Color Mode','overcome'),
-					'param_name' => 'color_mode',
-					'value'      => array(					
-						esc_html__('Default','overcome')  => '',
-						esc_html__('Gradient','overcome') => 'gradient',
-					),
-		            'std'		 => '',
-		            'admin_label' => true,
-		        ),
-		        overcome_vc_content_align_opts(),
-		        array(
-					'type'       => 'dropdown',
 					'heading'    => esc_html__('Counter Type','overcome'),
 					'param_name' => 'counter_type',
 					'value'      => array(
 						esc_html__('Count Up','overcome')   => 'countup',
 		            ),
 		            'std'		 => 'countup',
-		            
-		        ),
-		        array(
-					'type'       => 'dropdown',
-					'heading'    => esc_html__('Counter Size','overcome'),
-					'param_name' => 'counter_size',
-					'value'      => array(
-						esc_html__('Default','overcome')     => 'default',
-					),
-		            'std'		 => 'default',
-		            'admin_label' => true,
 		            
 		        ),
 		        array(
@@ -170,8 +147,8 @@ vc_map(
 					'group'      => esc_html__('Counter 1', 'overcome')
 		        ), 
 		    ),
-		    overcome_icon_libs(array('group'=>esc_html__('Counter 1','overcome'),'field_prefix'=>'i1_', 'dependency'=>'add_icon1')),
-			overcome_icon_libs_icon(array('group'=>esc_html__('Counter 1','overcome'),'field_prefix'=>'i1_')),
+		    ef5systems_icon_libs(array('group'=>esc_html__('Counter 1','overcome'),'field_prefix'=>'i1_', 'dependency'=>'add_icon1')),
+			ef5systems_icon_libs_icon(array('group'=>esc_html__('Counter 1','overcome'),'field_prefix'=>'i1_')),
 			/* Counter 2 */
 		    array(
 		        array(
@@ -268,8 +245,8 @@ vc_map(
 					'group'      => esc_html__('Counter 2', 'overcome')
 		        ), 
 		    ),
-		    overcome_icon_libs(array('group'=>esc_html__('Counter 2','overcome'),'field_prefix'=>'i2_', 'dependency'=>'add_icon2')),
-			overcome_icon_libs_icon(array('group'=>esc_html__('Counter 2','overcome'),'field_prefix'=>'i2_')),
+		    ef5systems_icon_libs(array('group'=>esc_html__('Counter 2','overcome'),'field_prefix'=>'i2_', 'dependency'=>'add_icon2')),
+			ef5systems_icon_libs_icon(array('group'=>esc_html__('Counter 2','overcome'),'field_prefix'=>'i2_')),
 			/* Counter 3 */
 		    array(
 		        array(
@@ -366,8 +343,8 @@ vc_map(
 					'group'      => esc_html__('Counter 3', 'overcome')
 		        ), 
 		    ),
-		    overcome_icon_libs(array('group'=>esc_html__('Counter 3','overcome'),'field_prefix'=>'i3_', 'dependency'=>'add_icon3')),
-			overcome_icon_libs_icon(array('group'=>esc_html__('Counter 3','overcome'),'field_prefix'=>'i3_')),
+		    ef5systems_icon_libs(array('group'=>esc_html__('Counter 3','overcome'),'field_prefix'=>'i3_', 'dependency'=>'add_icon3')),
+			ef5systems_icon_libs_icon(array('group'=>esc_html__('Counter 3','overcome'),'field_prefix'=>'i3_')),
 			/* Counter 4 */
 		    array(
 		        array(
@@ -464,8 +441,8 @@ vc_map(
 					'group'      => esc_html__('Counter 4', 'overcome')
 		        ), 
 		    ),
-		    overcome_icon_libs(array('group'=>esc_html__('Counter 4','overcome'),'field_prefix'=>'i4_', 'dependency'=>'add_icon4')),
-			overcome_icon_libs_icon(array('group'=>esc_html__('Counter 4','overcome'),'field_prefix'=>'i4_')),
+		    ef5systems_icon_libs(array('group'=>esc_html__('Counter 4','overcome'),'field_prefix'=>'i4_', 'dependency'=>'add_icon4')),
+			ef5systems_icon_libs_icon(array('group'=>esc_html__('Counter 4','overcome'),'field_prefix'=>'i4_')),
 			/* Counter 5 */
 		    array(
 		        array(
@@ -562,8 +539,8 @@ vc_map(
 					'group'      => esc_html__('Counter 5', 'overcome')
 		        ), 
 		    ),
-		    overcome_icon_libs(array('group'=>esc_html__('Counter 5','overcome'),'field_prefix'=>'i5_', 'dependency'=>'add_icon5')),
-			overcome_icon_libs_icon(array('group'=>esc_html__('Counter 5','overcome'),'field_prefix'=>'i5_')),
+		    ef5systems_icon_libs(array('group'=>esc_html__('Counter 5','overcome'),'field_prefix'=>'i5_', 'dependency'=>'add_icon5')),
+			ef5systems_icon_libs_icon(array('group'=>esc_html__('Counter 5','overcome'),'field_prefix'=>'i5_')),
 			/* Counter 6 */
 		    array(
 		        array(
@@ -660,8 +637,8 @@ vc_map(
 					'group'      => esc_html__('Counter 6', 'overcome')
 		        ), 
 		    ),
-		    overcome_icon_libs(array('group'=>esc_html__('Counter 6','overcome'),'field_prefix'=>'i6_', 'dependency'=>'add_icon6')),
-			overcome_icon_libs_icon(array('group'=>esc_html__('Counter 6','overcome'),'field_prefix'=>'i6_'))
+		    ef5systems_icon_libs(array('group'=>esc_html__('Counter 6','overcome'),'field_prefix'=>'i6_', 'dependency'=>'add_icon6')),
+			ef5systems_icon_libs_icon(array('group'=>esc_html__('Counter 6','overcome'),'field_prefix'=>'i6_'))
 	    )
 	)
 );

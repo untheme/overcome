@@ -4,18 +4,11 @@
     $css_classes = array(
         'ef5-counter-wraper',
         'ef5-counter-'.$layout_template,
-        $content_align,
-        $color_mode,
         $el_class
     );
     if($counter_column > 1) $css_classes[] = 'multiple';
-    switch ($layout_template) {
-        case '2':
-            $css_classes[] = 'text-grey';
-            break;
-    }
 ?>
-<div id="<?php echo esc_attr('ef5-counter-'.$el_id);?>" class="<?php echo unbreak_optimize_css_class(implode(' ',$css_classes)); ?>">
+<div id="<?php echo esc_attr('ef5-counter-'.$el_id);?>" class="<?php echo trim(implode(' ',$css_classes)); ?>">
     <div class="row justify-content-center">
         <?php
             $columns = (int)$counter_column;
@@ -70,7 +63,7 @@
                                 <div class="ef5-heading counter-title"><?php echo esc_html($title);?></div>
                             <?php endif;?>
                             <?php if($desc):?>
-                                <div class="counter-desc"><?php echo unbreak_html($desc);?></div>
+                                <div class="counter-desc"><?php echo overcome_html($desc);?></div>
                             <?php endif;?>
                         </div>
         			</div>
