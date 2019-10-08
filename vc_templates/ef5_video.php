@@ -3,7 +3,7 @@
     $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
     extract( $atts );
 
-$wrap_css_class = array('ef5-video-'.$layout_template, 'video-source-'.$video_source, $content_align, $el_class,'row','align-items-center');
+$wrap_css_class = array('ef5-video-'.$layout_template, 'video-source-'.$video_source, $el_class,'row','align-items-center');
 
 $bg_video_args = array();
 if ($bg_video_src_mp4)  $bg_video_args['mp4'] = $bg_video_src_mp4;
