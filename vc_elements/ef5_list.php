@@ -45,17 +45,17 @@ vc_map(array(
                 'value' => urlencode( json_encode( array(
                     array(
                         'i_type'             => 'overcome',
-                        'i_icon_fontawesome' => 'flaticon-right-arrow-forward',
+                        'i_icon_overcome' => 'flaticon-right-arrow-forward',
                         'text'               => 'Protecting charities from abuse or mismanagement'
                     ),
                     array(
                         'i_type'             => 'overcome',
-                        'i_icon_fontawesome' => 'flaticon-right-arrow-forward',
+                        'i_icon_overcome' => 'flaticon-right-arrow-forward',
                         'text'               => 'Enabling trustees to run their charities effectively'
                     ),
                     array(
                         'i_type'             => 'overcome',
-                        'i_icon_fontawesome' => 'flaticon-right-arrow-forward',
+                        'i_icon_overcome' => 'flaticon-right-arrow-forward',
                         'text'               => 'Encouraging greater transparency and accountability'
                     )
                 ) ) ),
