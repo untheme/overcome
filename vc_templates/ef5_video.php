@@ -11,7 +11,7 @@ if ($bg_video_src_ogg)  $bg_video_args['ogg'] = $bg_video_src_ogg;
 if ($bg_video_src_ogv)  $bg_video_args['ogv'] = $bg_video_src_ogv;
 if ($bg_video_src_webm) $bg_video_args['webm'] = $bg_video_src_webm;
 if($video_source == '3' && empty($bg_video_args)){
-    esc_html_e('No video found!','unbreak');
+    esc_html_e('No video found!','overcome');
     return;
 }
 global $wp_embed;
@@ -45,7 +45,7 @@ if(!empty($content_color)) {
 }
 
 $play_btn_url = get_template_directory_uri().'/assets/images/play-btn-'.$play_btn.'.png';
-if($play_btn === 'custom') $play_btn_url = unbreak_get_image_url_by_size([
+if($play_btn === 'custom') $play_btn_url = overcome_get_image_url_by_size([
     'id'            => $play_btn_custom,
     'size'          => '80',
     'default_thumb' => true,
@@ -61,8 +61,8 @@ switch ($layout_template) {
         break;
     case '2':
         $wrap_css_class[] = 'gutters-100';
-        $video_info_class = 'col-lg-6 col-xl-47/0198675 order-2';
-        $video_class = 'col-lg-6 col-xl-52/9801325';
+        $video_info_class = 'col-lg-6 order-2';
+        $video_class = 'col-lg-6';
         break;
     
     default:
@@ -72,7 +72,7 @@ switch ($layout_template) {
 }
 ?>
 <div class="ef5-video-wrapper ef5-video-<?php echo esc_attr($layout_template);?>">
-<div id="ef5-video-<?php echo esc_attr($el_id);?>" class="<?php echo unbreak_optimize_css_class(implode(' ', $wrap_css_class));?>">
+<div id="ef5-video-<?php echo esc_attr($el_id);?>" class="<?php echo overcome_optimize_css_class(implode(' ', $wrap_css_class));?>">
     <?php switch ($layout_template) {
         case '5':
     ?>
@@ -81,20 +81,20 @@ switch ($layout_template) {
             case '2':  /* popup video */
                 if(!empty($poster)){
                     echo '<div class="ef5-video-popup-wrap overlay-wrap d-flex justify-content-center justify-content-lg-end"><div class="ef5-video-popup-inner relative">';
-                    echo unbreak_html($this->unbreak_ef5_video_poster($atts));
+                    echo overcome_html($this->overcome_ef5_video_poster($atts));
                 }
-                    echo unbreak_html($this->unbreak_ef5_video_popup($atts,['anim' => $play_btn_effect]));
+                    echo overcome_html($this->overcome_ef5_video_popup($atts,['anim' => $play_btn_effect]));
                 if(!empty($poster)) echo '</div></div>';
                 break;
             default:
-                echo unbreak_html($this->unbreak_ef5_video_plain($atts));
+                echo overcome_html($this->overcome_ef5_video_plain($atts));
                 break;
         } ?>
         </div>
         <div class="ef5-video-info <?php echo esc_attr($video_info_class);?>"><?php 
-            echo unbreak_html($this->unbreak_ef5_video_small_heading($atts)); 
-            echo unbreak_html($this->unbreak_ef5_video_heading($atts)); 
-            echo unbreak_html($this->unbreak_ef5_video_desc($atts)); 
+            echo overcome_html($this->overcome_ef5_video_small_heading($atts)); 
+            echo overcome_html($this->overcome_ef5_video_heading($atts)); 
+            echo overcome_html($this->overcome_ef5_video_desc($atts)); 
         ?></div>
     <?php
             break;
@@ -106,7 +106,7 @@ switch ($layout_template) {
                 <div class="ef5-heading small-heading text-14 <?php echo esc_attr($this->getCSSAnimation('fadeIn'));?>"><?php echo esc_html($small_heading);?></div>
             <?php }
             if($title){ ?>
-                <div <?php echo unbreak_optimize_css_class(implode(' ', $title_attrs));?>><?php echo implode(' ', [$title, $title_part]);?></div>
+                <div <?php echo overcome_optimize_css_class(implode(' ', $title_attrs));?>><?php echo implode(' ', [$title, $title_part]);?></div>
             <?php }
             if($content){ ?>
                 <div <?php echo trim(implode(' ', $desc_attrs));?>>
@@ -114,8 +114,8 @@ switch ($layout_template) {
                 </div>
             <?php } ?>
             <div class="ef5-button-wrapper d-flex align-items-center">
-                <?php if($layout_template === '2') echo unbreak_html($this->unbreak_ef5_video_play_button($atts,['anim' => $play_btn_effect])); ?>
-                <?php unbreak_html($this->unbreak_ef5_video_link($atts)); ?>
+                <?php if($layout_template === '2') echo overcome_html($this->overcome_ef5_video_play_button($atts,['anim' => $play_btn_effect])); ?>
+                <?php overcome_html($this->overcome_ef5_video_link($atts)); ?>
             </div>
         </div>
         <?php endif; ?>
@@ -124,13 +124,13 @@ switch ($layout_template) {
             case '2':  /* popup video */
                 if(!empty($poster)){
                     echo '<div class="ef5-video-popup-wrap overlay-wrap d-flex justify-content-center justify-content-lg-end"><div class="ef5-video-popup-inner relative">';
-                    echo unbreak_html($this->unbreak_ef5_video_poster($atts));
+                    echo overcome_html($this->overcome_ef5_video_poster($atts));
                 }
-                    echo unbreak_html($this->unbreak_ef5_video_popup($atts,['anim' => $play_btn_effect]));
+                    echo overcome_html($this->overcome_ef5_video_popup($atts,['anim' => $play_btn_effect]));
                 if(!empty($poster)) echo '</div></div>';
                 break;
             default:
-                echo unbreak_html($this->unbreak_ef5_video_plain($atts));
+                echo overcome_html($this->overcome_ef5_video_plain($atts));
                 break;
         } ?>
         </div>
