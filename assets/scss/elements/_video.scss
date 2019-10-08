@@ -12,9 +12,11 @@
 			display: block;
 			background: rgba(54,54,54,0,4);
 			@include overlay-pos();
+			z-index: 1;
 		}
 	}
 	.ef5-popupvideo{
 		@include center-align();
+		z-index: 2;
 	}
 }
