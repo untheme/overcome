@@ -62,7 +62,7 @@ vc_map(array(
                     )
                 ) ) ),
                 'params' => array_merge(
-                    ef5systems_icon_libs(),
+                    ef5systems_icon_libs(['default_icon' => 'overcome']),
                     ef5systems_icon_libs_icon(['empty_icon'=>true]),
                     array(
                         array(
