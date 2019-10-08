@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             if(!empty($value['text'])){
                 $output = '<div class="ef5-list-item">';
                 if($iconClass) {
-                    $output .= '<span class="'.esc_attr($iconClass).' ef5-text-accent"></span>';
+                    $output .= '<span class="'.esc_attr($iconClass).' ef5-list-item-icon ef5-text-accent"></span>';
                 }
                 $output .= $value['text'];
                 $output .= '</div>';

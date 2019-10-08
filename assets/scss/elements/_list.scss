@@ -1,0 +1,10 @@
+.ef5-list-1{
+	.ef5-list-item-icon{
+		display: block;
+		padding-right: 15px;
+		[dir="rtl"] &{
+			padding-right: 0;
+			padding-left: 15px;
+		}
+	}
+}
