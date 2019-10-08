@@ -56,11 +56,11 @@
             				<?php endif; ?>
             				<div class="ef5-counter-wrap" data-prefix="<?php echo esc_attr($prefix);?>" data-suffix="<?php echo esc_attr($suffix);?>" data-type="<?php echo esc_attr($counter_type);?>" data-digit="<?php echo esc_attr($digit);?>">
                                 <?php if(!empty($prefix)) echo '<span class="prefix">'.esc_html($prefix).'</span>'; ?>
-                                <span class="ef5-counter ef5-heading accent-color" <?php if(!empty($digit_color)): ?> style="color:<?php echo esc_attr($digit_color);?>;"<?php endif;?>><?php echo esc_attr($digit); ?></span>
+                                <span class="ef5-counter" <?php if(!empty($digit_color)): ?> style="color:<?php echo esc_attr($digit_color);?>;"<?php endif;?>><?php echo esc_attr($digit); ?></span>
                                 <?php if(!empty($suffix)) echo '<span class="suffix">'.esc_html($suffix).'</span>'; ?>
             				</div>
                             <?php if($title):?>
-                                <div class="ef5-heading counter-title"><?php echo esc_html($title);?></div>
+                                <div class="counter-title"><?php echo esc_html($title);?></div>
                             <?php endif;?>
                             <?php if($desc):?>
                                 <div class="counter-desc"><?php echo overcome_html($desc);?></div>
