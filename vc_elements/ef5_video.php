@@ -86,9 +86,10 @@ vc_map(array(
                 '4'      => get_template_directory_uri().'/assets/images/icons/play-btn-4.png',
                 '5'      => get_template_directory_uri().'/assets/images/icons/play-btn-5.png',
                 '6'      => get_template_directory_uri().'/assets/images/icons/play-btn-6.png',
+                '6'      => get_template_directory_uri().'/assets/images/icons/play-btn-7.png',
                 'custom' => get_template_directory_uri().'/vc_elements/layouts/play-btn-custom.png',
             ),
-            'std'              => '1',
+            'std'              => '7',
             'group'            => esc_html__( 'Video','overcome'),
             'edit_field_class' => 'ef5-vc-list-icon'
         ),
