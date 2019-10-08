@@ -2,8 +2,10 @@
 	position: relative;
 }
 .ef5-video-1{
+	.ef5-video-info{
+		margin-bottom: 30px;
+	}
 	.ef5-video{
-		margin-top: 30px;
 		@include border-radius(10px);
 		overflow: hidden;
 		position: relative;;
