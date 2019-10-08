@@ -3,7 +3,7 @@
     extract( $atts );
 ?>
 <div class="ef5-video-wrapper ef5-video-<?php echo esc_attr($layout_template);?>">
-<div id="ef5-video-<?php echo esc_attr($el_id);?>" class="<?php echo trim(implode(' ', $wrap_css_class));?>">
+<div id="ef5-video-<?php echo esc_attr($el_id);?>">
     <?php switch ($layout_template) {
         default:
     ?>
