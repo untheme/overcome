@@ -28,6 +28,7 @@ vc_map(array(
             )
         ),
         ef5systems_icon_libs([
+            'default_icon' => 'overcome',
             'group'        => '',
             'field_prefix' => 'title_icon_',
             'heading'      => esc_html__('Title Icon','overcome'),
