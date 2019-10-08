@@ -16,7 +16,7 @@ function overcome_spacings(){
 add_filter('ef5systems_gutters','overcome_gutters');
 function overcome_gutters(){
 	return [
-		'20' => ['OverCome Gutter 20', '20px','20px'],
+		
 		'25' => ['OverCome Gutter 25', '25px','25px'],
 	];
 }
