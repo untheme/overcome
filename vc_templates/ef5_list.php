@@ -42,8 +42,10 @@ if ( ! defined( 'ABSPATH' ) ) {
                 if($iconClass) {
                     $output .= '<span class="'.esc_attr($iconClass).'"></span>';
                 }
-                $output .= overcome_html($text);
+                $output .= $text;
                 $output .= '</div>';
+
+                echo overcome_html($output);
             }
         }
     ?>
