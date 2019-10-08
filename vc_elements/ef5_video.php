@@ -378,7 +378,7 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
         extract($atts);
         if($video_type !== '2') return;
         $args = wp_parse_args($args,[
-            'anim'  => 'wave1',
+            'anim'  => $play_btn_effect,
             'class' => '',
             'size'  => ''
         ]);
@@ -421,7 +421,7 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
         extract($atts);
         if($video_type !== '2') return;
         $args = wp_parse_args($args,[
-            'anim'  => 'wave1',
+            'anim'  => $play_btn_effect,
             'class' => ''
         ]);
         $preload  = '';
