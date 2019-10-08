@@ -25,12 +25,21 @@ vc_map(array(
                 'std'         => 'Our strategic priorities up to 2019 are:',
                 'description' => esc_html__( 'Enter element title', 'overcome' ),
                 'admin_label' => true,
+            ),
+            array(
+                'type'        => 'checkbox',
+                'param_name'  => 'add_title_icon',
+                'value'       => array(
+                    esc_html__('Add Title Icon') => '1'
+                ),
+                'std'         => '0',
             )
         ),
         ef5systems_icon_libs([
             'group'        => '',
             'field_prefix' => 'title_icon_',
             'heading'      => esc_html__('Title Icon','overcome'),
+            'dependency'   => 'add_title_icon' 
         ]),
         ef5systems_icon_libs_icon([
             'group'        => '',
