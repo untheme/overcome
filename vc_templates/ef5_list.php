@@ -37,10 +37,13 @@ if ( ! defined( 'ABSPATH' ) ) {
         foreach($values as $value){
             vc_icon_element_fonts_enqueue( $value['i_type'] );  /* Call icon font libs */
             $iconClass = isset($value['i_icon_'. $value['i_type']]) ? $value['i_icon_'. $value['i_type']] : ''; /* get icon class */
+
+            if(is_rtl()) $iconClass = str_replace('right','left',$iconClass);
+
             if(!empty($value['text'])){
                 $output = '<div class="ef5-list-item">';
                 if($iconClass) {
-                    $output .= '<span class="'.esc_attr($iconClass).' text-accent">&nbsp;&nbsp;</span>';
+                    $output .= '<span class="'.esc_attr($iconClass).' ef5-text-accent">&nbsp;&nbsp;&nbsp;</span>';
                 }
                 $output .= $value['text'];
                 $output .= '</div>';
