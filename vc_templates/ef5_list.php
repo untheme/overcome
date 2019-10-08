@@ -24,9 +24,12 @@ if ( ! defined( 'ABSPATH' ) ) {
     $hint_pos = isset($el_icon_hint_pos) ? $el_icon_hint_pos : 'top';
     // Title
     if(!empty($el_title)){
-        vc_icon_element_fonts_enqueue($title_icon_type);
-        $title_iconClass = ${'title_icon_icon_'.$title_icon_type};
-        $el_title_icon = !empty($title_iconClass) ? '<span class="title-icon '.$title_iconClass.'"></span>' : '';
+        $el_title_icon = '';
+        if($add_title_icon){
+            vc_icon_element_fonts_enqueue($title_icon_type);
+            $title_iconClass = ${'title_icon_icon_'.$title_icon_type};
+            $el_title_icon = !empty($title_iconClass) ? '<span class="title-icon '.$title_iconClass.'"></span>' : '';
+        }
         $title = '<div class="ef5-el-title">'.$el_title_icon.$el_title.'</div>';
     }
 ?>
