@@ -426,7 +426,7 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
             'class' => ''
         ]);
         $preload  = '';
-        $play_btn_url = get_template_directory_uri().'/assets/images/play-btn-'.$play_btn.'.png';
+        $play_btn_url = get_template_directory_uri().'/assets/images/icons/play-btn-'.$play_btn.'.png';
 
 
         if($play_btn === 'custom') $play_btn_url = overcome_get_image_url_by_size([
