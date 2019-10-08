@@ -333,6 +333,14 @@ vc_map(array(
             'group'      =>esc_html__( 'Poster','overcome'),
         ),
         array(
+            'type'       => 'textfield',
+            'param_name' => 'poster_size',
+            'value'      => '570x270',
+            'std'        => '570x270',
+            'description'=> esc_html__('Enter our defined size: "thumbnail", "medium", "large", "post-thumbnail", "full". Or alternatively enter size in pixels (Example: 200x100 (Width x Height)).','overcome'),
+            'group'      => esc_html__( 'Poster','overcome'),
+        ),
+        array(
             'type'       => 'dropdown',
             'heading'    => esc_html__('Poster Style','overcome'),
             'param_name' => 'poster_style',
@@ -358,17 +366,9 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
     protected function overcome_ef5_video_poster($atts, $args = []){
         $args = wp_parse_args($args,[]);
         extract($atts);
-        switch ($layout_template) {
-            case '2':
-                $size = '540x640';
-                break;
-            default:
-                $size = '570x270';
-                break;
-        }
         overcome_image_by_size([
             'id'    => $poster,
-            'size'  => $size,
+            'size'  => $poster_size,
             'class' => 'video-poster '.$poster_style
         ]);
     }
