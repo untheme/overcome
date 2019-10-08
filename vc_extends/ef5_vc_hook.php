@@ -19,7 +19,7 @@ function overcome_gutters(){
 		'20' => [
 			'title' => 'OverCome Gutter 20', 
 			'desc'  => '',
-			'key'   => '20'
+			'key'   => '20',
 			'value' => '20px'
 		]
 	];
