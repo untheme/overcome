@@ -230,7 +230,8 @@ class OverCome_CSS_Generator
         printf('$ef5-colors:(%s);',ef5systems_colors_option_for_scss());
         // Theme Spacings
         printf('$ef5-spacings:(%s);',ef5systems_spacing_option_for_scss());
-
+        // Theme Gutters
+        printf('$ef5-gutters:(%s);',ef5systems_gutter_option_for_scss());
         // Typography 
         printf( '$BodyBG: %s;', overcome_configs('body_bg'));
         printf( '$BodyFont: %s;', overcome_configs('body_font'));
