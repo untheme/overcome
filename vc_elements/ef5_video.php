@@ -668,7 +668,7 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
         if(empty($small_heading)) return;
         $args = wp_parse_args($args,[]);
     ?>
-        <div class="ef5-heading small-heading <?php echo esc_attr($this->getCSSAnimation('fadeIn'));?>"><?php echo esc_html($small_heading);?></div>
+        <div class="small-heading <?php echo esc_attr($this->getCSSAnimation('fadeIn'));?>"><?php echo esc_html($small_heading);?></div>
     <?php 
     }
 
@@ -680,7 +680,7 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
         $title_border_style = [];
 
         // Heading
-        $title_css_classes = ['ef5-heading', 'large-heading'];
+        $title_css_classes = ['large-heading'];
         $title_css_classes[] = $this->getCSSAnimation('fadeIn');
         $title_attrs[] = 'class="'.trim(implode(' ', $title_css_classes)).'"';
         // Heading Part
