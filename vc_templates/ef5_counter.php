@@ -12,7 +12,7 @@
     <div class="row justify-content-center">
         <?php
             $columns = (int)$counter_column;
-            $item_class = ['counter-item', 'counter-size-'.$counter_size];
+            $item_class = ['counter-item'];
             switch($columns){
                 case '2':
                     $item_class[] = 'col-md-6';
