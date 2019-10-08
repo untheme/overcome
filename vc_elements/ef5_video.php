@@ -86,7 +86,7 @@ vc_map(array(
                 '4'      => get_template_directory_uri().'/assets/images/icons/play-btn-4.png',
                 '5'      => get_template_directory_uri().'/assets/images/icons/play-btn-5.png',
                 '6'      => get_template_directory_uri().'/assets/images/icons/play-btn-6.png',
-                '6'      => get_template_directory_uri().'/assets/images/icons/play-btn-7.png',
+                '7'      => get_template_directory_uri().'/assets/images/icons/play-btn-7.png',
                 'custom' => get_template_directory_uri().'/vc_elements/layouts/play-btn-custom.png',
             ),
             'std'              => '7',
@@ -384,7 +384,7 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
             'size'  => ''
         ]);
         
-        $play_btn_url = get_template_directory_uri().'/assets/images/play-btn-'.$play_btn.'.png';
+        $play_btn_url = get_template_directory_uri().'/assets/images/icons/play-btn-'.$play_btn.'.png';
         if($play_btn === 'custom') $play_btn_url = overcome_get_image_url_by_size([
             'id'            => $play_btn_custom,
             'size'          => '80',
