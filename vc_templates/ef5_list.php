@@ -39,10 +39,13 @@ if ( ! defined( 'ABSPATH' ) ) {
             $iconClass = isset($value['i_icon_'. $value['i_type']]) ? $value['i_icon_'. $value['i_type']] : ''; /* get icon class */
             if(!empty($value['text'])){
                 $output = '<div class="ef5-list-item">';
-                if($iconClass) {
+                if($iconClass && !is_rtl()) {
                     $output .= '<span class="'.esc_attr($iconClass).' ef5-text-accent">&nbsp;&nbsp;&nbsp;</span>';
                 }
                 $output .= $value['text'];
+                if($iconClass && is_rtl()) {
+                    $output .= '<span class="'.esc_attr($iconClass).' ef5-text-accent">&nbsp;&nbsp;&nbsp;</span>';
+                }
                 $output .= '</div>';
 
                 echo overcome_html($output);
