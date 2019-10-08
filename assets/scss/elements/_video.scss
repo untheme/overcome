@@ -1,5 +1,11 @@
+.ef5-video{
+	position: relative;
+}
 .ef5-video-1{
 	.ef5-video{
 		margin-top: 30px;
+	}
+	.ef5-popupvideo{
+		@include center-align();
 	}
 }
