@@ -30,7 +30,7 @@ vc_map(array(
                 'type'        => 'checkbox',
                 'param_name'  => 'add_title_icon',
                 'value'       => array(
-                    esc_html__('Add Title Icon') => '1'
+                    esc_html__('Add Title Icon') => 'true'
                 ),
                 'std'         => '0',
             )
