@@ -707,11 +707,19 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
     protected function overcome_ef5_video_desc($atts, $args = []){
         extract($atts);
         if(empty($content)) return;
-        $args = wp_parse_args($args,[]);
-        $desc_attrs = ['class="ef5-video-desc clearfix '.$this->getCSSAnimation('fadeIn').'"'];
+        $args = wp_parse_args($args,[
+            'class' => ''
+        ]);
+        $classes = [
+            'ef5-video-desc',
+            $args['class'],
+            $this->getCSSAnimation('fadeIn'),
+            'clearfix'
+        ];
+        $desc_attrs = ['class="'.trim(implode(' ', $classes)).'"'];
     ?>
         <div <?php echo trim(implode(' ', $desc_attrs));?>>
-            <?php echo esc_attr($content);?>
+            <?php echo overcome_html($content);?>
         </div>
     <?php 
     }
