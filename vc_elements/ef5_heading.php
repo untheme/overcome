@@ -71,8 +71,6 @@ vc_map(array(
                 'type'       => 'textarea',
                 'heading'    => esc_html__('Text','overcome'),
                 'param_name' => 'heading2_text',
-                'value'      => 'Part 2',
-                'std'        => 'Part 2',
                 'dependency' => array(
                     'element' => 'show_heading2',
                     'value'   => array('1')
@@ -98,8 +96,6 @@ vc_map(array(
                 'type'       => 'textarea',
                 'heading'    => esc_html__('Text','overcome'),
                 'param_name' => 'heading3_text',
-                'value'      => 'Part 3',
-                'std'        => 'Part 3',
                 'dependency' => array(
                     'element' => 'show_heading3',
                     'value'   => array('1')
