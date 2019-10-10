@@ -6,7 +6,7 @@
  *
  */
 
-add_filter('ef5_extra_post_types', 'overcome_cpts_service', 10 , 1);
+//add_filter('ef5_extra_post_types', 'overcome_cpts_service', 10 , 1);
 function overcome_cpts_service($post_types) {
     $post_types['service'] = array( 
     	'status'        => true,
@@ -24,7 +24,7 @@ function overcome_cpts_service($post_types) {
     return $post_types;
 }
 
-add_filter('ef5_extra_taxonomies', 'overcome_cpts_service_tax', 10 , 1);
+//add_filter('ef5_extra_taxonomies', 'overcome_cpts_service_tax', 10 , 1);
 function overcome_cpts_service_tax($taxo) {
     $taxo['service_cat'] = array(
     	'status'     => true,
