@@ -32,12 +32,12 @@ function overcome_cpts_portfolio_tax($taxo) {
 	$supported_portfolio = apply_filters('ef5_extra_post_type_portfolio', false);
     if($supported_portfolio) {
 	    $taxo['portfolio_cat'] = array(
-	        'taxonomy'   => esc_html__('Project Category', 'overcome'),
-	        'taxonomies' => esc_html__('Project Categories', 'overcome'),
+	        'taxonomy'   => esc_html__('Category', 'overcome'),
+	        'taxonomies' => esc_html__('Categories', 'overcome'),
 	    );
 	    $taxo['portfolio_tag'] = array(
-	        'taxonomy'   => esc_html__('Project Tag', 'overcome'),
-	        'taxonomies' => esc_html__('Project Tags', 'overcome'),
+	        'taxonomy'   => esc_html__('Tag', 'overcome'),
+	        'taxonomies' => esc_html__('Tags', 'overcome'),
 	    );
 	}
     return $taxo;

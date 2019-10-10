@@ -29,16 +29,16 @@ function overcome_cpts_service_tax($taxo) {
     $taxo['service_cat'] = array(
     	'status'     => true,
     	'post_type'  => array('service'), 
-        'taxonomy'   => esc_html__('Service Category', 'overcome'),
-        'taxonomies' => esc_html__('Service Categories', 'overcome'),
+        'taxonomy'   => esc_html__('Category', 'overcome'),
+        'taxonomies' => esc_html__('Categories', 'overcome'),
         'args'       => array(),
         'labels'     => array()
     );
     $taxo['service_tag'] = array(
     	'status'     => true,
     	'post_type'  => array('service'), 
-        'taxonomy'   => esc_html__('Service Tag', 'overcome'),
-        'taxonomies' => esc_html__('Service Tags', 'overcome'),
+        'taxonomy'   => esc_html__('Tag', 'overcome'),
+        'taxonomies' => esc_html__('Tags', 'overcome'),
         'args'       => array(),
         'labels'     => array()
     );
