@@ -71,7 +71,7 @@
                     overcome_post_header();
                     overcome_post_excerpt([
                         'show_excerpt' => '1', 
-                        'length'       => '15', 
+                        'length'       => '16', 
                         'more'         => ''
                     ]);
                     overcome_post_read_more(['show_readmore' => '1']); 
