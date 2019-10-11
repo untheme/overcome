@@ -181,4 +181,13 @@ class WPBakeryShortCode_ef5_posts_carousel extends WPBakeryShortCode
         ef5systems_owl_call_settings($atts);
         return parent::content($atts, $content);
     }
+    protected function view_all($atts = ''){
+        extract($atts);
+        if($show_view_all === 'none') return;
+        ?>
+            <div class="view-all-wrap text-center">
+                <a href="<?php echo get_permalink($show_view_all_page);?>" class="ef5-btn fill accent style-<?php echo esc_attr($view_all_style);?>"><?php echo esc_html($show_view_all_text);?></a>
+            </div>
+        <?php
+    }
 }

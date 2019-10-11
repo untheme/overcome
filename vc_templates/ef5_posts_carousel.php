@@ -114,5 +114,7 @@
         ef5systems_owl_dots_container($atts);
         ef5systems_owl_nav_container($atts);
         ef5systems_owl_dots_in_nav_container($atts);
+
+        echo $this->view_all($atts);
     ?>
 </div>
