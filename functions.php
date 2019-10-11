@@ -337,6 +337,8 @@ function overcome_scripts()
         'ajaxurl'             => admin_url( 'admin-ajax.php' ),
         'primary_color'       => overcome_configs('primary_color'),
         'accent_color'        => overcome_configs('accent_color'),
+        'darkent_accent_color'        => overcome_configs('darkent_accent_color'),
+        'lightent_accent_color'        => overcome_configs('lightent_accent_color'),
         'shop_url'            => function_exists('wc_get_page_id') ? get_permalink( wc_get_page_id( 'shop' )) : '',
         'filter_reset'        => ( strpos($filter_reset,'filter_') !== false || strpos($filter_reset,'min_price') !== false || strpos($filter_reset,'max_price') || strpos($filter_reset, 'rating_filter')) ? 'true' : 'false',
         'filter_clear_text'   => esc_html__('Clear All', 'overcome'),
@@ -378,11 +380,15 @@ function overcome_inline_styles() {
     ob_start();
     $preset_primary_color = overcome_get_opts( 'primary_color', apply_filters('overcome_primary_color', overcome_configs('primary_color')) );
     $preset_accent_color  = overcome_get_opts( 'accent_color', apply_filters('overcome_accent_color', overcome_configs('accent_color')) );
+    $darkent_accent_color  = overcome_get_opts( 'darkent_accent_color', apply_filters('overcome_darkent_accent_color', overcome_configs('darkent_accent_color')) );
+    $lightent_accent_color  = overcome_get_opts( 'lightent_accent_color', apply_filters('overcome_lightent_accent_color', overcome_configs('lightent_accent_color')) );
     $preset_secondary_color = overcome_get_opts( 'secondary_color', apply_filters('overcome_secondary_color',overcome_configs('secondary_color') ));
     $main_menu_height = overcome_get_opts( 'main_menu_height', ['height' => overcome_configs('main_menu_height')]);
     // CSS Variable
     printf(':root{--primary-color:%s;}', $preset_primary_color);
     printf(':root{--accent-color:%s;}', $preset_accent_color);
+    printf(':root{--darkent_accent-color:%s;}', $darkent_accent_color);
+    printf(':root{--lightent_accent-color:%s;}', $lightent_accent_color);
     printf(':root{--secondary-color:%s;}', $preset_secondary_color);
     printf(':root{--main-menu-height:%s;}', $main_menu_height['height']);
     return ob_get_clean();
