@@ -69,7 +69,7 @@
                     overcome_post_media([
                         'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
                         'default_thumb'  => true,
-                        'after'          => overcome_post_read_more(['show_readmore' => '1']); 
+                        'after'          => overcome_post_read_more(['show_readmore' => '1'])
                     ]);
                 ?>
                 <div class="ef5-post-info">
