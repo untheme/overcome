@@ -840,7 +840,7 @@
             })
         })
     }
-    $('.hoverdir-wrap').find('.hover-content').wrap( "<div class='hover-dir'></div>");
+    $('.hoverdir-wrap > *').wrap( "<div class='hover-dir'></div>");
     $('.hover-dir').EF5HoverDir();
  })(jQuery);
 
