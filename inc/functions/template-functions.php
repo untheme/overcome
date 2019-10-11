@@ -31,7 +31,7 @@ if(!function_exists('overcome_post_header')){
 if(!function_exists('overcome_post_title')){
     function overcome_post_title($args=[]){
         $args = wp_parse_args($args, [
-            'heading_tag' => 'h2',
+            'heading_tag' => 'h4',
             'class'       => ''
         ]);
         $title_classes = ['ef5-heading',$args['heading_tag'], $args['class']];
