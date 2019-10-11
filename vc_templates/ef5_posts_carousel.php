@@ -76,6 +76,7 @@
                     ]);
                     if(class_exists('EF5Payments')) {
                         ef5payments_donation_time_progress();
+                        ef5payments_donation_donate_progress();
                         ef5payments_donation_raised(['label' => esc_html__('Raised:','overcome')]);
                         ef5payments_donation_goal(['label' => esc_html__('Goal:','overcome')]); 
                     }
