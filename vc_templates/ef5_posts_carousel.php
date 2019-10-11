@@ -75,8 +75,8 @@
                         'more'         => ''
                     ]);
                     if(function_exists('ef5payments_donation_goal')) {
-                        ef5payments_donation_raised(['title' => esc_html__('Raised:','overcome')]);
-                        ef5payments_donation_goal(['title' => esc_html__('Goal:','overcome')]); 
+                        ef5payments_donation_raised(['label' => esc_html__('Raised:','overcome')]);
+                        ef5payments_donation_goal(['label' => esc_html__('Goal:','overcome')]); 
                     }
                     overcome_post_read_more(['show_readmore' => '1']); 
                 ?>
