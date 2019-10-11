@@ -76,6 +76,7 @@ $rotate: (
 .ef5-box{
 	padding: 20px;
 }
+// Shadow style
 @each $name, $shadow in $ef5-boxshadow{
 	.ef5-shadow-#{$name}{
 		@include box-shadow($shadow);
