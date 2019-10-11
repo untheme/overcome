@@ -22,9 +22,10 @@
 			color: #2f2f2f;
 		}
 		.ef5-donate-progress-bar{
-			@include border-radius(4px);
+			@include border-radius(5px);
 			.ef5-donate-progress-bar-value{
-				@include background-gradient();
+				@include border-radius(5px);
+				@include background-horizontal();
 			}
 		}
 	}
