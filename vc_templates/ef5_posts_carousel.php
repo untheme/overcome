@@ -74,7 +74,7 @@
                     overcome_post_media([
                         'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
                         'default_thumb'  => true,
-                        'after'          => '<div class="overlay"><div class="overlay-inner">'.$overlay.'</div></div>'
+                        'after'          => '<div class="hover-content"><div class="overlay-inner">'.$overlay.'</div></div>'
                     ]);
                 ?>
                 <div class="ef5-post-info">
