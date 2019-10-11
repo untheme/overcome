@@ -63,7 +63,10 @@
         <?php
             switch ($layout_template) {
                 default:
-                var_dump($posts->post_type());
+                if(get_post_type() === 'ef_donation')
+                    $overlay = class_exists('EF5Payments') ? ef5payments_donation_donate_button() : overcome_post_read_more(['show_readmore' => '1','echo' => false]);
+                else 
+                    $overlay = overcome_post_read_more(['show_readmore' => '1','echo' => false]);
 
         ?>	
         	<div class="<?php echo trim(implode(' ', $item_css_class)); ?> ef5-hover-shadow-1">
@@ -71,7 +74,7 @@
                     overcome_post_media([
                         'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
                         'default_thumb'  => true,
-                        'after'          => overcome_post_read_more(['show_readmore' => '1','echo' => false])
+                        'after'          => $overlay
                     ]);
                 ?>
                 <div class="ef5-post-info">
