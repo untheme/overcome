@@ -107,10 +107,10 @@
         ef5systems_owl_dots_bottom_inside($atts);
     ?>
     </div>
-    <?php overcome_loading_animation(); ?>
-    <div class="ef5-posts-footer <?php echo 'nav-style-'.esc_attr($nav_style);?>"><?php 
+    <?php 
+        overcome_loading_animation(); 
         ef5systems_owl_dots_container($atts);
         ef5systems_owl_nav_container($atts);
         ef5systems_owl_dots_in_nav_container($atts);
-    ?></div>
+    ?>
 </div>
