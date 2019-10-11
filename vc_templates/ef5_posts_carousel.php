@@ -74,8 +74,10 @@
                         'length'       => '16', 
                         'more'         => ''
                     ]);
-                    ef5payments_donation_goal(); 
-                    ef5payments_donation_raised();
+                    if(function_exists('ef5payments_donation_goal')) {
+                        ef5payments_donation_goal(); 
+                        ef5payments_donation_raised();
+                    }
                     overcome_post_read_more(['show_readmore' => '1']); 
                 ?>
             </div>
