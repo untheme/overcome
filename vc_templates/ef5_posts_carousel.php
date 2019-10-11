@@ -40,6 +40,7 @@
     $thumbnail_size = explode(',', $thumbnail_size);
 ?>
 <div id="<?php echo esc_attr('ef5-posts-'.$el_id);?>" class="ef5-posts <?php echo ef5systems_owl_css_class($atts);?>">
+    <?php ef5systems_owl_dots_top($atts); ?>
     <div id="<?php echo esc_attr($el_id);?>" class="<?php echo esc_attr(trim($css_class));?>">
     <?php 
         $d = 0;
@@ -103,6 +104,7 @@
         <?php
         } // end while
         wp_reset_query();
+        ef5systems_owl_dots_bottom_inside($atts);
     ?>
     </div>
     <?php overcome_loading_animation(); ?>
