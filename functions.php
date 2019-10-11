@@ -11,15 +11,15 @@
 if(!function_exists('overcome_configs')){
     function overcome_configs($value){
         $configs = [
-            'primary_color'   => '#303030',
-            'accent_color'    => '#f5b91b',
-            'secondary_color' => '#e6a423',
-            'darken_accent'   => '#e6a423',
-            'lighten_accent'  => '#ffdd65',
-            'invalid_color'   => 'red',
-            'color_red'       => 'red',
-            'color_green'     => 'green',
-            'white'           => 'white',
+            'primary_color'         => '#303030',
+            'accent_color'          => '#f5b91b',
+            'secondary_color'       => '#e6a423',
+            'darkent_accent_color'  => '#e6a423',
+            'lightent_accent_color' => '#ffdd65',
+            'invalid_color'         => 'red',
+            'color_red'             => 'red',
+            'color_green'           => 'green',
+            'white'                 => 'white',
             // Typo
             'google_fonts'          => 'Poppins:300,400,500,600,700',
             'body_bg'               => '#fff',
