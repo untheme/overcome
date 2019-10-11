@@ -60,7 +60,7 @@
             switch ($layout_template) {
                 default:
         ?>	
-        	<div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+        	<div class="<?php echo trim(implode(' ', $item_css_class)); ?> ef5-hover-shadow-1">
                 <?php 
                     overcome_post_media([
                         'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
