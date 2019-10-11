@@ -68,7 +68,9 @@
                     ]);
                 ?>
                 <?php 
-                    overcome_post_title();
+                    overcome_post_title([
+                        'heading_tag' => 'text-20'
+                    ]);
                     overcome_post_excerpt([
                         'show_excerpt' => '1', 
                         'length'       => '16', 
