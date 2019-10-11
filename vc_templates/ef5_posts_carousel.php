@@ -75,11 +75,13 @@
                         'more'         => ''
                     ]);
                     if(class_exists('EF5Payments')) {
-                        ef5payments_donation_time_progress();
-                        ef5payments_donation_donate_progress();
-                        ef5payments_donation_donors_count();
-                        ef5payments_donation_raised(['label' => esc_html__('Raised:','overcome')]);
-                        ef5payments_donation_goal(['label' => esc_html__('Goal:','overcome')]); 
+                        //ef5payments_donation_time_progress();
+                        //ef5payments_donation_donate_progress();
+                        //ef5payments_donation_donors_count();
+                        ef5systems_donation_progress_donors();
+                        //ef5payments_donation_raised(['label' => esc_html__('Raised:','overcome')]);
+                        //ef5payments_donation_goal(['label' => esc_html__('Goal:','overcome')]); 
+                        ef5payments_donation_donate_amount();
                     }
                     overcome_post_read_more(['show_readmore' => '1']); 
                 ?>
