@@ -63,13 +63,15 @@
         <?php
             switch ($layout_template) {
                 default:
+                var_dump($posts->post_type);
+
         ?>	
         	<div class="<?php echo trim(implode(' ', $item_css_class)); ?> ef5-hover-shadow-1">
                 <?php 
                     overcome_post_media([
                         'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
                         'default_thumb'  => true,
-                        'after'          => overcome_post_read_more(['show_readmore' => '1','echo'=>false])
+                        'after'          => overcome_post_read_more(['show_readmore' => '1','echo' => false])
                     ]);
                 ?>
                 <div class="ef5-post-info">
