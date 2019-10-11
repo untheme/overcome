@@ -14,9 +14,21 @@
 	}
 	.ef5-donate-progress-donor{
 		padding-top: 20px;
+		.ef5-donation-donor{
+			color: $accent_color;
+			font-weight: 500;
+		}
 	}
 	.ef5-donation-amount{
 		padding-top: 5px;
+		.ef5-donation-raised .ef5-value{
+			font-weight: 700;
+			color: #777;
+		}
+		.ef5-donation-goal .ef5-value{
+			font-weight: 700;
+			color: $accent_color;
+		}
 	}
 	.ef5-readmore{
 		margin-top: 25px;
