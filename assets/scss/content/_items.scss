@@ -25,7 +25,7 @@
 			@include border-radius(5px);
 			.ef5-donate-progress-bar-value{
 				@include border-radius(5px);
-				@include background-horizontal($accent_color, #ffdd65);
+				@include background-horizontal(#e6a423, #ffdd65);
 			}
 		}
 	}
