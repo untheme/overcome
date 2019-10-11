@@ -148,9 +148,9 @@ vc_map(array(
                 'type'       => 'dropdown',
                 'param_name' => 'view_all_style',
                 'value'      => array(
-                    esc_html__('Default','unbreak') => 'rounded-18/5',
+                    esc_html__('Default','unbreak') => '',
                 ),
-                'std'        => 'rounded-18/5',
+                'std'        => '',
                 'dependency' => array(
                     'element'            => 'show_view_all',
                     'value_not_equal_to' => 'none',
