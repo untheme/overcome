@@ -68,7 +68,8 @@
                 <?php 
                     overcome_post_media([
                         'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
-                        'default_thumb'  => true
+                        'default_thumb'  => true,
+                        'after'          => overcome_post_read_more(['show_readmore' => '1']); 
                     ]);
                 ?>
                 <div class="ef5-post-info">
@@ -82,20 +83,14 @@
                             'more'         => ''
                         ]);
                         if(class_exists('EF5Payments')) {
-                            //ef5payments_donation_time_progress();
-                            //ef5payments_donation_donate_progress();
-                            //ef5payments_donation_donors_count();
                             ef5systems_donation_progress_donors([
                                 'donor_icon' => '<span class="flaticon-like"></span>'
                             ]);
-                            //ef5payments_donation_raised(['label' => esc_html__('Raised:','overcome')]);
-                            //ef5payments_donation_goal(['label' => esc_html__('Goal:','overcome')]); 
                             ef5payments_donation_donate_amount([
                                 'goal_label' => esc_html__('Goal:','overcome'),
                                 'raised_label' => esc_html__('Raised:','overcome')
                             ]);
                         }
-                        overcome_post_read_more(['show_readmore' => '1']); 
                     ?>
                 </div>
             </div>
