@@ -387,8 +387,8 @@ function overcome_inline_styles() {
     // CSS Variable
     printf(':root{--primary-color:%s;}', $preset_primary_color);
     printf(':root{--accent-color:%s;}', $preset_accent_color);
-    printf(':root{--darkent_accent-color:%s;}', $darkent_accent_color);
-    printf(':root{--lightent_accent-color:%s;}', $lightent_accent_color);
+    printf(':root{--darkent-accent-color:%s;}', $darkent_accent_color);
+    printf(':root{--lightent-accent-color:%s;}', $lightent_accent_color);
     printf(':root{--secondary-color:%s;}', $preset_secondary_color);
     printf(':root{--main-menu-height:%s;}', $main_menu_height['height']);
     return ob_get_clean();
