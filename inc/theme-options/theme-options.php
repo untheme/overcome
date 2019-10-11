@@ -412,6 +412,18 @@ Redux::setSection($opt_name, array(
             'transparent' => false,
         ),
         array(
+            'id'          => 'darkent_accent_color',
+            'type'        => 'color',
+            'title'       => esc_html__('Darkent Accent Color', 'overcome'),
+            'transparent' => false,
+        ),
+        array(
+            'id'          => 'lightent_accent_color',
+            'type'        => 'color',
+            'title'       => esc_html__('Lightent Accent Color', 'overcome'),
+            'transparent' => false,
+        ),
+        array(
             'id'          => 'secondary_color',
             'type'        => 'color',
             'title'       => esc_html__('Secondary Color', 'overcome'),

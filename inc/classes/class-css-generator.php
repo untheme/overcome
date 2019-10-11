@@ -217,9 +217,13 @@ class OverCome_CSS_Generator
         //Colors
         $primary_color  = 'var(--primary-color)';
         $accent_color  = 'var(--accent-color)';
+        $darkent_accent_accent  = 'var(--darkent-accent-color)';
+        $lightent_accent_accent  = 'var(--lightent-accent-color)';
         $secondary_color  = 'var(--secondary-color)';
         printf('$primary_color:%s;',$primary_color);
         printf('$accent_color:%s;',$accent_color);
+        printf('$darkent_accent_accent:%s;',$darkent_accent_accent);
+        printf('$lightent_accent_accent:%s;',$lightent_accent_accent);
         printf('$secondary_color:%s;',$secondary_color);
         printf('$invalid_color:%s;',overcome_configs('invalid_color'));
         printf('$color_red:%s;',overcome_configs('color_red'));
@@ -342,6 +346,8 @@ class OverCome_CSS_Generator
         ob_start();
         $primary_color = overcome_get_theme_opt( 'primary_color', apply_filters('overcome_primary_color', overcome_configs('primary_color')) );
         $accent_color  = overcome_get_theme_opt( 'accent_color', apply_filters('overcome_accent_color', overcome_configs('accent_color')) );
+        $darken_color  = overcome_get_theme_opt( 'darkent_accent_color', apply_filters('overcome_darkent_accent_color', overcome_configs('darkent_accent_color')) );
+        $lighten_color  = overcome_get_theme_opt( 'lightent_accent_color', apply_filters('overcome_lightent_accent_color', overcome_configs('lightent_accent_color')) );
         $secondary_color  = overcome_get_theme_opt( 'secondary_color', apply_filters('overcome_secondary_color', overcome_configs('secondary_color')) );
 
         $preset_primary_color = overcome_get_opts( 'primary_color', apply_filters('overcome_primary_color', overcome_configs('primary_color')) );

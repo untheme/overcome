@@ -14,6 +14,8 @@ if(!function_exists('overcome_configs')){
             'primary_color'   => '#303030',
             'accent_color'    => '#f5b91b',
             'secondary_color' => '#e6a423',
+            'darken_accent'   => '#e6a423',
+            'lighten_accent'  => '#ffdd65',
             'invalid_color'   => 'red',
             'color_red'       => 'red',
             'color_green'     => 'green',
