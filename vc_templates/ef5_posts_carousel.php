@@ -31,9 +31,9 @@
     global $wp_query;
     $posts = $wp_query = new WP_Query($posts_args);
     // Grid columns css class
-    $grid_item_css_class = ['ef5-post-item ef5-carousel-item', $this->getCSSAnimation( $css_animation )];
+    $grid_item_css_class = ['ef5-post-item', 'ef5-post-item-layout-'.$layout_template, 'ef5-carousel-item', $this->getCSSAnimation( $css_animation )];
     // Items CSS Classes
-    $item_css_class = ['post-item','transition', 'ef5-hover-wrap'];
+    $item_css_class = ['ef5-post-item-inner','transition'];
 
     // Thumbnail Size
     $thumbnail_size_index = -1;
