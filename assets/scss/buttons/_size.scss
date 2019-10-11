@@ -26,12 +26,11 @@ $btn-sizes: (
 		@if (nth($size, 7) != ''){
 			letter-spacing: nth($size, 7);
 		}
+		@if (nth($size, 8) != ''){
+			border-radius: nth($size, 8);
+		}
 		@if (nth($size, 9) != ''){
 			min-width: nth($size, 9);
-		}
-		
-		&.rounded{
-			border-radius: nth($size, 8);
 		}
     }
 }
