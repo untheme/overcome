@@ -67,29 +67,31 @@
                         'default_thumb'  => true
                     ]);
                 ?>
-                <?php 
-                    overcome_post_title([
-                        'heading_tag' => 'text-20'
-                    ]);
-                    overcome_post_excerpt([
-                        'show_excerpt' => '1', 
-                        'length'       => '16', 
-                        'more'         => ''
-                    ]);
-                    if(class_exists('EF5Payments')) {
-                        //ef5payments_donation_time_progress();
-                        //ef5payments_donation_donate_progress();
-                        //ef5payments_donation_donors_count();
-                        ef5systems_donation_progress_donors();
-                        //ef5payments_donation_raised(['label' => esc_html__('Raised:','overcome')]);
-                        //ef5payments_donation_goal(['label' => esc_html__('Goal:','overcome')]); 
-                        ef5payments_donation_donate_amount([
-                            'goal_label' => esc_html__('Goal:','overcome'),
-                            'raised_label' => esc_html__('Raised:','overcome')
+                <div class="ef5-post-info">
+                    <?php 
+                        overcome_post_title([
+                            'heading_tag' => 'text-20'
                         ]);
-                    }
-                    overcome_post_read_more(['show_readmore' => '1']); 
-                ?>
+                        overcome_post_excerpt([
+                            'show_excerpt' => '1', 
+                            'length'       => '16', 
+                            'more'         => ''
+                        ]);
+                        if(class_exists('EF5Payments')) {
+                            //ef5payments_donation_time_progress();
+                            //ef5payments_donation_donate_progress();
+                            //ef5payments_donation_donors_count();
+                            ef5systems_donation_progress_donors();
+                            //ef5payments_donation_raised(['label' => esc_html__('Raised:','overcome')]);
+                            //ef5payments_donation_goal(['label' => esc_html__('Goal:','overcome')]); 
+                            ef5payments_donation_donate_amount([
+                                'goal_label' => esc_html__('Goal:','overcome'),
+                                'raised_label' => esc_html__('Raised:','overcome')
+                            ]);
+                        }
+                        overcome_post_read_more(['show_readmore' => '1']); 
+                    ?>
+                </div>
             </div>
         <?php
                 break;
