@@ -81,7 +81,9 @@
                             //ef5payments_donation_time_progress();
                             //ef5payments_donation_donate_progress();
                             //ef5payments_donation_donors_count();
-                            ef5systems_donation_progress_donors();
+                            ef5systems_donation_progress_donors([
+                                'icon' => '<span class="flaticon-like"></span>'
+                            ]);
                             //ef5payments_donation_raised(['label' => esc_html__('Raised:','overcome')]);
                             //ef5payments_donation_goal(['label' => esc_html__('Goal:','overcome')]); 
                             ef5payments_donation_donate_amount([
