@@ -104,7 +104,6 @@
         <?php
         } // end while
         wp_reset_query();
-        ef5systems_owl_dots_bottom_inside($atts);
     ?>
     </div>
     <?php 
