@@ -69,7 +69,7 @@
                     $overlay = overcome_post_read_more(['show_readmore' => '1','echo' => false]);
 
         ?>	
-        	<div class="<?php echo trim(implode(' ', $item_css_class)); ?> ef5-hover-shadow-1">
+        	<div class="<?php echo trim(implode(' ', $item_css_class)); ?> ef5-hover-shadow-1 hoverdir-wrap fade-in">
                 <?php 
                     overcome_post_media([
                         'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
