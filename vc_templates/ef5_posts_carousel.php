@@ -63,7 +63,7 @@
         <?php
             switch ($layout_template) {
                 default:
-                var_dump($posts);
+                var_dump($posts->post_type());
 
         ?>	
         	<div class="<?php echo trim(implode(' ', $item_css_class)); ?> ef5-hover-shadow-1">
