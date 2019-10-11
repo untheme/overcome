@@ -64,7 +64,7 @@
             switch ($layout_template) {
                 default:
                 if(get_post_type() === 'ef5_donation')
-                    $overlay = class_exists('EF5Payments') ? ef5payments_donation_donate_button(['echo' => false]) : overcome_post_read_more(['show_readmore' => '1','echo' => false]);
+                    $overlay = class_exists('EF5Payments') ? ef5payments_donation_donate_button(['echo' => false,'class'=>'accent outline']) : overcome_post_read_more(['show_readmore' => '1','echo' => false]);
                 else 
                     $overlay = overcome_post_read_more(['show_readmore' => '1','echo' => false]);
 
