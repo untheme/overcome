@@ -68,7 +68,7 @@
                     ]);
                 ?>
                 <?php 
-                    overcome_post_header();
+                    overcome_post_title();
                     overcome_post_excerpt([
                         'show_excerpt' => '1', 
                         'length'       => '16', 
