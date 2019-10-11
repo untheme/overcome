@@ -148,10 +148,9 @@ vc_map(array(
                 'type'       => 'dropdown',
                 'param_name' => 'view_all_style',
                 'value'      => array(
-                    esc_html__('Style 1','unbreak') => '1',
-                    esc_html__('Style 2','unbreak') => '2',
+                    esc_html__('Default','unbreak') => 'rounded-18/5',
                 ),
-                'std'        => '1',
+                'std'        => 'rounded-18/5',
                 'dependency' => array(
                     'element'            => 'show_view_all',
                     'value_not_equal_to' => 'none',
@@ -186,7 +185,7 @@ class WPBakeryShortCode_ef5_posts_carousel extends WPBakeryShortCode
         if($show_view_all === 'none') return;
         ?>
             <div class="view-all-wrap text-center">
-                <a href="<?php echo get_permalink($show_view_all_page);?>" class="ef5-btn fill accent style-<?php echo esc_attr($view_all_style);?>"><?php echo esc_html($show_view_all_text);?></a>
+                <a href="<?php echo get_permalink($show_view_all_page);?>" class="ef5-btn fill accent <?php echo esc_attr($view_all_style);?>"><?php echo esc_html($show_view_all_text);?></a>
             </div>
         <?php
     }
