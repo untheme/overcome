@@ -142,7 +142,7 @@ class WPBakeryShortCode_ef5_fancy_box extends WPBakeryShortCode
         $iconClass = isset($atts[$icon_name]) ? $atts[$icon_name]: '';
         if(empty($iconClass)) return;
         ?>
-            <div class="<?php echo trim(implode(' ', $css_classes));?>" <?php echo overcome_html($iconStyle);?>>
+            <div class="<?php echo trim(implode(' ', $css_classes));?>">
                 <?php switch ($add_icon) {
                     case 'upload':
                         overcome_image_by_size([
