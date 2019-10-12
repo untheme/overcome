@@ -168,7 +168,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
             <div class="<?php echo trim(implode(' ', $css_class));?>">
                 <?php 
                     overcome_post_media([
-                        'thumbnail_size' => '', 
+                        'thumbnail_size' => overcome_default_value($thumbnail_size, '570x570'), 
                         'default_thumb'  => true,
                         'after' => $overlay_content
                     ]);   

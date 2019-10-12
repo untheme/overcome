@@ -436,6 +436,10 @@ function overcome_font_scripts() {
     wp_enqueue_style( 'ef5-fonts', overcome_fonts_url() );
 }
 add_action( 'wp_enqueue_scripts', 'overcome_font_scripts' );
+
+function overcome_default_value($param, $default){
+    return !empty($param) ? $param : $default;
+}
 /**
  * All Theme Function
 */
