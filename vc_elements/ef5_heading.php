@@ -60,7 +60,7 @@ vc_map(array(
         ef5systems_icon_libs([
             'dependency'        => 'heading_text',
             'dependency_option' => 'not_empty',
-            'dependency_value'  => 'true'
+            'dependency_value'  => true
         ]),
         ef5systems_icon_libs_icon(),
         array(
