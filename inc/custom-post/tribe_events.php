@@ -13,26 +13,37 @@ function overcome_tribe_events_info($args=[]){
 	$css_classes = ['ef5-tribe-events-info','empty-none', $args['class']];
 	$venue_details = tribe_get_venue_details();
 	$address_delimiter = empty( $venue_address ) ? ' ' : ', ';
-	global $post;
-	$event = get_post( $post );
-	$event_date_format = tribe_get_date_format( true );
+	
 	if($args['echo']){
-		echo tribe_get_start_date($event);
-		echo tribe_get_end_date($event);
 	?>
 		<div class="<?php echo trim(implode(' ', $css_classes));?>">
 			<div class="venue empty-none"><span class="flaticon-coin-1 ef5-text-accent"></span>&nbsp;&nbsp;<?php echo implode( $address_delimiter, $venue_details ); ?></div>
-			<div class="date empty-none"><span class="flaticon-calendar ef5-text-accent"></span>&nbsp;&nbsp;<?php echo tribe_events_event_schedule_details() ?></div>
+			<div class="date empty-none"><span class="flaticon-calendar ef5-text-accent"></span>&nbsp;&nbsp;<?php overcome_tribe_events_time(['echo' => $args['echo'] ]) ?></div>
 			<div class="cost empty-none"><span class="flaticon-coin-1 ef5-text-accent"></span>&nbsp;&nbsp;<?php echo tribe_get_cost( null, true ); ?></div>
 		</div>
 	<?php
 	} else {
-		return tribe_get_start_date($event, true,$event_date_format).tribe_get_end_date($event, true,$event_date_format).
+		return 
 		'<div class="'.trim(implode(' ', $css_classes)).'">
 			<div class="venue empty-none"><span class="flaticon-maps-and-flags ef5-text-accent"></span>&nbsp;&nbsp;'.implode( $address_delimiter, $venue_details ).'</div>
-			<div class="date empty-none"><span class="flaticon-calendar ef5-text-accent"></span>&nbsp;&nbsp;'.tribe_events_event_schedule_details().'</div>
+			<div class="date empty-none"><span class="flaticon-calendar ef5-text-accent"></span>&nbsp;&nbsp;'.overcome_tribe_events_time(['echo' => $args['echo'] ]).'</div>
 			<div class="cost empty-none"><span class="flaticon-coin-1 ef5-text-accent"></span>&nbsp;&nbsp;'.tribe_get_cost( null, true ).'</div>
 		</div>';
+	}
+}
+function overcome_tribe_events_time($args=[]){
+	if(!class_exists('Tribe__Events__Main')) return;
+	$args = wp_parse_args($args,[
+		'class' => '',
+		'echo' => true
+	]);
+	global $post;
+	$event = get_post( $post );
+	$event_date_format = tribe_get_date_format( true );
+	if($args['echo']){
+		echo tribe_get_start_date($event, true, $event_date_format).'&nbsp;-&nbsp;'.tribe_get_end_date($event, true, $event_date_format);
+	} else {
+		return tribe_get_start_date($event, true, $event_date_format).'&nbsp;-&nbsp;'.tribe_get_end_date($event, true, $event_date_format);
 	}
 }
 /**
