@@ -16,17 +16,9 @@ function overcome_tribe_events_info($args=[]){
 	if($args['echo']){
 	?>
 		<div class="<?php echo trim(implode(' ', $css_classes));?>">
-			<div class="Venue">
-				<?php 
-					echo implode( $address_delimiter, $venue_details );
-				?>
-			</div>
-			<div class="date"><?php echo tribe_events_event_schedule_details() ?></div>
-			<div class="cost">
-				<?php if ( tribe_get_cost() ) :
-					echo tribe_get_cost( null, true );
-				endif; ?>
-			</div>
+			<div class="venue empty-none"><?php echo implode( $address_delimiter, $venue_details ); ?></div>
+			<div class="date empty-none"><?php echo tribe_events_event_schedule_details() ?></div>
+			<div class="cost empty-none"><?php echo tribe_get_cost( null, true ); ?></div>
 		</div>
 	<?php
 	} else {
