@@ -196,7 +196,7 @@ $ef5-rounded: (
 	'70': 70px
 );
 @each $name, $rounded in $ef5-rounded{
-	.rounded-#{$name}{
+	.ef5-rounded-#{$name}{
 		@include border-radius($rounded);
 	}
 }
