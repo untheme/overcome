@@ -49,7 +49,7 @@
                         $post_count2++;
                         $posts->the_post();
                         if($post_count2 != 1){
-                            $this->overcome_posts_item($atts);
+                            $this->overcome_posts_item($atts,['class'=>'text-13']);
                         }
                     }
                     wp_reset_postdata();
