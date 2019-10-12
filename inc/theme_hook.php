@@ -193,8 +193,9 @@ add_filter('ef5systems_spacings','overcome_spacings');
 function overcome_spacings(){
 	return [
 		'custom1 pt-8 pb-8' => ['OverCome Space 01', 'Top 8px - Bottom 8px'],
-		'93-0-100'          => ['OverCome Space 02', 'Top 93px - Bottom 100px', '93px 0 100px 0'],
-		'100-0'             => ['OverCome Space 03', 'Top 100px - Bottom 100px', '100px 0'],
+		'87-0-100'          => ['OverCome Space 02', 'Top 87px - Bottom 100px', '87px 0 100px 0'],
+		'93-0-100'          => ['OverCome Space 03', 'Top 93px - Bottom 100px', '93px 0 100px 0'],
+		'100-0'             => ['OverCome Space 04', 'Top 100px - Bottom 100px', '100px 0'],
 	];
 }
 
@@ -221,5 +222,15 @@ function overcome_colors(){
 	return [
 		'ababab' => ['OverCome Color 01', '#ababab'],
 		'f5f5f5' => ['OverCome Color 02', '#f5f5f5'],
+	];
+}
+
+/**
+ * Custom OWL Nav Style
+*/
+add_filter('ef5systems_carousel_custom_nav_style', 'overcome_owl_custom_nav_style');
+function overcome_owl_custom_nav_style(){
+	return [
+		esc_html__('Overcome Style 01','overcome') => 'overcome-1'
 	];
 }
