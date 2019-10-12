@@ -171,7 +171,8 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                     overcome_post_media([
                         'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '570x570'), 
                         'default_thumb'  => true,
-                        'after' => $overlay_content
+                        'after' => $overlay_content,
+                        'class' => 'ef5-rounded-10'
                     ]);   
                 ?>
             </div>
