@@ -32,14 +32,18 @@ if(!function_exists('overcome_post_title')){
     function overcome_post_title($args=[]){
         $args = wp_parse_args($args, [
             'heading_tag' => 'h4',
-            'class'       => ''
+            'class'       => '',
+            'echo'        => true  
         ]);
         $title_classes = ['ef5-heading',$args['heading_tag'], $args['class']];
         $stick_icon = ( is_sticky() && is_home() && ! is_paged()) ? '<span class="fa fa-thumb-tack"></span>&nbsp;&nbsp;' : '';
         $link_open = is_singular() ? '' : '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
         $link_close = is_singular() ? '' : '</a>';
-
-        the_title( '<div class="'.trim(implode(' ', $title_classes)).'">'.$link_open.$stick_icon, $link_close.'</div>' ); 
+        if($args['echo']){
+            the_title( '<div class="'.trim(implode(' ', $title_classes)).'">'.$link_open.$stick_icon, $link_close.'</div>' ); 
+        } else {
+            return '<div class="'.trim(implode(' ', $title_classes)).'">'.$link_open.$stick_icon .get_the_title().$link_close.'</div>'; 
+        }
     }
 }
 
