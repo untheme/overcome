@@ -14,8 +14,10 @@ function overcome_tribe_events_info($args=[]){
 	$venue_details = tribe_get_venue_details();
 	$address_delimiter = empty( $venue_address ) ? ' ' : ', ';
 	if($args['echo']){
-		echo tribe_get_start_date();
-		echo tribe_get_end_date();
+		global $post;
+		$event = get_post( $post );
+		echo tribe_get_start_date($event);
+		echo tribe_get_end_date($event);
 	?>
 		<div class="<?php echo trim(implode(' ', $css_classes));?>">
 			<div class="venue empty-none"><span class="flaticon-coin-1 ef5-text-accent"></span>&nbsp;&nbsp;<?php echo implode( $address_delimiter, $venue_details ); ?></div>
