@@ -232,8 +232,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
     }
     protected function ef5_heading_main_heading_icon($atts, $args=[]){
         extract($atts);
-        var_dump($atts['layout_template']);
-        if(empty($atts['heading_text']) || $atts['layout_template'] === '3') return;
+        if(empty($atts['heading_text']) || $atts['layout_template'] !== '3') return;
         $args = wp_parse_args($args,[
             'class' => ''
         ]);
