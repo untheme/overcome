@@ -35,6 +35,7 @@
             case '1':
             $post_count = $post_count2 = 0;
             //var_dump($posts); die('$posts');
+            var_dump($posts->have_posts());
             while($posts->have_posts()){
                 $post_count++;
                 $posts->the_post();
