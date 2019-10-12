@@ -34,7 +34,7 @@
             case '1':
             $post_count1 = $post_count2 = 0;
             while($posts->have_posts()){
-                $post_count++;
+                $post_count1++;
                 $posts->the_post();
                 if($post_count1 === 1){
                 ?>
@@ -66,7 +66,7 @@
                     while($posts->have_posts()){
                         $post_count2++;
                         $posts->the_post();
-                        var_dump($post_count2);
+                        //var_dump($post_count2);
                         if($post_count2 != 1){
                             
                             overcome_post_header([
@@ -74,8 +74,6 @@
                                 'after_args'  => ['show_cat' => false,'show_author' => '1', 'show_date'=> '1', 'show_cmt' => '1', 'show_view' => '0', 'show_like' => '0', 'sep' => '|' ]]);
 
                             
-                        } else {
-                            die('1111');
                         }
                     }// end while
                     wp_reset_postdata();
