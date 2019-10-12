@@ -20,7 +20,13 @@
 		font-family: $FontOverCome;
 	}
 	&.ef5-owl-nav-pos-vertical.outside{
-		left: -103px;
-		right: -103px;
+		@media (min-width: 1366px){
+			left: -103px;
+			right: -103px;
+		}
+		@media (min-width: 1200px) and (max-width: 1280px){
+			//left: -103px;
+			//right: -103px;
+		}
 	}
 }
