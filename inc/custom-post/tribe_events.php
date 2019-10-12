@@ -38,7 +38,7 @@ function overcome_tribe_events_info_hori($args=[]){
 		'class' => '',
 		'echo'	=> true
 	]);
-	$css_classes = ['ef5-tribe-events-info','empty-none', 'row' $args['class']];
+	$css_classes = ['ef5-tribe-events-info','empty-none', 'row', $args['class']];
 	$venue_details = tribe_get_venue_details();
 	$address_delimiter = empty( $venue_address ) ? ' ' : ', ';
 	
