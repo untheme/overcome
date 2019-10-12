@@ -152,7 +152,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
         ]);
 
         $overlay_content = '<div class="overlay ef5-bg-overlay d-block opacity-1"><div class="overlay-inner center-align w-100 p-30 pl-lg-75 pr-lg-75">';
-        $overlay_content .= overcome_post_title(['echo' => false, 'class'=>'text-36 lh-46 ef5-text-white']);
+        $overlay_content .= overcome_post_title(['echo' => false, 'class'=>'text-36 lh-46 text-white pb-30 pb-lg-58']);
         $overlay_content .= overcome_post_excerpt([
             'show_excerpt' => '1', 
             'length'       => '15', 
@@ -160,7 +160,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
             'class'        => 'ef5-text-white',
             'echo'         => false 
         ]);
-        $overlay_content .= overcome_tribe_events_info(['echo' => false, 'class'=>'ef5-text-white']);
+        $overlay_content .= overcome_tribe_events_info(['echo' => false, 'class'=>'text-white mb-13']);
         $overlay_content .= get_post_type() === 'tribe_events'?  overcome_post_read_more(['show_readmore' => '1', 'echo' => false, 'title' => esc_html__('View Event','overcome'),'class'=>'ef5-btn ef5-btn-md accent outline']) :  overcome_post_read_more(['show_readmore' => '1', 'echo' => false,'class'=>'ef5-btn ef5-btn-md accent outline']);
         $overlay_content .= '</div></div>';
 
