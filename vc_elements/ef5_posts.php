@@ -193,12 +193,12 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                 ?>
                 <div class="col">
                     <?php 
-                        overcome_post_title(['class'=>'text-22 pb-15']);
+                        overcome_post_title(['class'=>'text-22 pb-5']);
                         overcome_post_excerpt([
                             'show_excerpt' => '1', 
                             'length'       => '15', 
                             'more'         => '',
-                            'class'        => 'text-13' 
+                            'class'        => 'text-13 mb-17' 
                         ]);
                         overcome_tribe_events_info_hori(['class' => 'text-13']);
                     ?>
