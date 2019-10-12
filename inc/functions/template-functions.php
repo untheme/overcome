@@ -119,18 +119,23 @@ if(!function_exists('overcome_post_excerpt')){
             'show_excerpt' => '1',
             'class'        => '',
             'length'       => apply_filters('overcome_excerpt_length', 37),
-            'more'         => '&hellip;'
+            'more'         => '&hellip;',
+            'echo'         => true 
 		]);
         if($args['show_excerpt'] !== '1') return;
         $classes   = ['ef5-excerpt', $args['class']];
         $content      = get_the_excerpt();
         $excerpt_more = apply_filters('overcome_excerpt_more', $args['more']);
         $excerpt      = wp_trim_words($content, $args['length'], $excerpt_more);
+        if($args['echo']){
 	?>
 	<div class="<?php echo trim(implode(' ', $classes));?>">
 		<?php printf('%s', $excerpt); ?>
 	</div>
 	<?php
+        } else {
+            return '<div class="'.trim(implode(' ', $classes)).'">'.printf('%s', $excerpt).'</div>';
+        }
 	}
 }
 
