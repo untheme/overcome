@@ -49,12 +49,7 @@
                         $post_count2++;
                         $posts->the_post();
                         if($post_count2 != 1){
-                            
-                            overcome_post_header([
-                                'before_args' => ['show_cat'=> '1'], 
-                                'after_args'  => ['show_cat' => false,'show_author' => '1', 'show_date'=> '1', 'show_cmt' => '1', 'show_view' => '0', 'show_like' => '0', 'sep' => '|' ]]);
-
-                            
+                            $this->overcome_posts_item($atts);
                         }
                     }
                     wp_reset_postdata();

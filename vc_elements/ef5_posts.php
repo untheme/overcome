@@ -177,4 +177,32 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
             </div>
         <?php
     }
+    protected function overcome_posts_item($atts, $args = []){
+        $args = wp_parse_args($args, [
+            'class' => ''
+        ]);
+        $css_class = ['ef5-post-item','row', $args['class']];
+        ?>
+            <div class="<?php echo trim(implode(' ', $css_class));?>">
+                <?php 
+                    overcome_post_media([
+                        'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '170x170'), 
+                        'default_thumb'  => true,
+                        'class' => 'col-auto'
+                    ]);   
+                ?>
+                <div class="col">
+                    <?php 
+                        overcome_post_title(['class'=>'text-22 pb-15']);
+                        overcome_post_excerpt([
+                            'show_excerpt' => '1', 
+                            'length'       => '15', 
+                            'more'         => ''
+                        ]);
+                        overcome_tribe_events_info_hori();
+                    ?>
+                </div>
+            </div>
+        <?php
+    }
 }
