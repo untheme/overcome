@@ -93,6 +93,10 @@ vc_map(array(
                 'value'       => '<strong>'.esc_html__('Grid Settings','unbreak').'</strong>',
                 'std'         => '<strong>'.esc_html__('Grid Settings','unbreak').'</strong>',
                 'group'       => esc_html__('Layouts','unbreak'),
+                'dependency'  => array(
+                    'element'            => 'layout_template',
+                    'value_not_equal_to' => ['1']
+                )  
             )
         ),
         /* Grid settings */
