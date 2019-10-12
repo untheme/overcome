@@ -38,6 +38,7 @@ function overcome_cpts_event_tax($taxo) {
 	        'taxonomies' => esc_html__('Categories', 'overcome'),
 	    );
 	    $taxo['event_tag'] = array(
+	    	'status'     => true,
 	    	'post_type'  => array('ef5_event'),
 	        'taxonomy'   => esc_html__('Tag', 'overcome'),
 	        'taxonomies' => esc_html__('Tags', 'overcome'),
