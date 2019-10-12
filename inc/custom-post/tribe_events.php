@@ -27,7 +27,7 @@ function overcome_tribe_events_info($args=[]){
 		</div>
 	<?php
 	} else {
-		return tribe_get_start_date($event, true,).tribe_get_end_date($event, true,).
+		return tribe_get_start_date($event, true,$event_date_format).tribe_get_end_date($event, true,$event_date_format).
 		'<div class="'.trim(implode(' ', $css_classes)).'">
 			<div class="venue empty-none"><span class="flaticon-maps-and-flags ef5-text-accent"></span>&nbsp;&nbsp;'.implode( $address_delimiter, $venue_details ).'</div>
 			<div class="date empty-none"><span class="flaticon-calendar ef5-text-accent"></span>&nbsp;&nbsp;'.tribe_events_event_schedule_details().'</div>
