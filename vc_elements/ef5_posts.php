@@ -199,7 +199,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                             'length'       => '15', 
                             'more'         => ''
                         ]);
-                        overcome_tribe_events_info_hori();
+                        overcome_tribe_events_info_hori(['class' => 'text-13']);
                     ?>
                 </div>
             </div>
