@@ -64,9 +64,9 @@
             switch ($layout_template) {
                 default:
                 if(get_post_type() === 'ef5_donation')
-                    $overlay = ef5payments_donation_donate_button(['echo' => false,'class'=>'ef5-btn accent outline']);
+                    $overlay = ef5payments_donation_donate_button(['echo' => false,'class'=>'ef5-btn ef5-btn-md accent outline']);
                 else 
-                    $overlay = overcome_post_read_more(['echo' => false, 'class'=>'ef5-btn accent outline']);
+                    $overlay = overcome_post_read_more(['echo' => false, 'class'=>'ef5-btn ef5-btn-md accent outline']);
 
         ?>	
         	<div class="<?php echo trim(implode(' ', $item_css_class)); ?> ef5-hover-shadow-1">
