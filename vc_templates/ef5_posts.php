@@ -65,18 +65,16 @@
             <div class="col-lg-6">
                 <?php
                     while($posts->have_posts()){
-                        $post_count++;
+                        $post_count2++;
                         $posts->the_post();
-                        var_dump($post_count);
-                        if($post_count != 1){
+                        var_dump($post_count2);
+                        if($post_count2 != 1){
                             
                             overcome_post_header([
                                 'before_args' => ['show_cat'=> '1'], 
                                 'after_args'  => ['show_cat' => false,'show_author' => '1', 'show_date'=> '1', 'show_cmt' => '1', 'show_view' => '0', 'show_like' => '0', 'sep' => '|' ]]);
 
                             
-                        } else {
-                            die('1111');
                         }
                     }
                     wp_reset_postdata();
