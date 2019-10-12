@@ -146,4 +146,32 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
 
         echo trim($css_class);
     }
+    protected function overcome_posts_featured_item($atts, $args = []){
+        $args = wp_parse_args($args, [
+            'class' =>
+        ]);
+
+        $overlay_content = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">';
+        $overlay_content .= overcome_post_title(['echo'] => false);
+        $overlay_content .= overcome_post_excerpt([
+            'show_excerpt' => '1', 
+            'length'       => '15', 
+            'more'         => '',
+            'echo'         => false 
+        ]);
+        $overlay_content .= overcome_post_read_more(['show_readmore' => '1', 'echo' => false]);
+        $overlay_content .= '</div></div>';
+
+        ?>
+            <div class="ef5-post-item-featured col-lg-6">
+                <?php 
+                    overcome_post_media([
+                        'thumbnail_size' => '', 
+                        'default_thumb'  => true,
+                        'after' => $overlay_content
+                    ]);   
+                ?>
+            </div>
+        <?php
+    }
 }

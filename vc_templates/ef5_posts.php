@@ -38,26 +38,7 @@
                 $post_count++;
                 $posts->the_post();
                 if($post_count === 1){
-                ?>
-                    <div class="col-lg-6">
-                        <?php 
-                            overcome_post_media([
-                                'thumbnail_size' => '', 
-                                'default_thumb'  => true
-                            ]);
-                            overcome_post_header([
-                                'before_args' => ['show_cat'=> '1'], 
-                                'after_args'  => ['show_cat' => false,'show_author' => '1', 'show_date'=> '1', 'show_cmt' => '1', 'show_view' => '0', 'show_like' => '0', 'sep' => '|' ]]);
-
-                            overcome_post_excerpt([
-                                'show_excerpt' => '1', 
-                                'length'       => '15', 
-                                'more'         => ''
-                            ]);
-                            overcome_post_read_more(['show_readmore' => '1']); 
-                        ?>
-                    </div>
-                <?php
+                    $this->overcome_posts_featured_item($atts);
                 }
             }
             wp_reset_postdata();
