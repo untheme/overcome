@@ -162,8 +162,9 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
         $overlay_content .= overcome_post_read_more(['show_readmore' => '1', 'echo' => false]);
         $overlay_content .= '</div></div>';
 
+        $css_class = ['ef5-post-item-featured','col-lg-6', $args['class']];
         ?>
-            <div class="ef5-post-item-featured col-lg-6">
+            <div class="<?php echo trim(implode(' ', $css_class));?>">
                 <?php 
                     overcome_post_media([
                         'thumbnail_size' => '', 
