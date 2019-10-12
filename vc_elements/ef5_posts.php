@@ -160,7 +160,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
             'echo'         => false 
         ]);
         $overlay_content .= overcome_tribe_events_info(['echo' => false]);
-        $overlay_content .= get_post_type() === 'tribe_events'?  overcome_post_read_more(['show_readmore' => '1', 'echo' => false, 'title' => esc_html__('View Event','overcome')]) :  overcome_post_read_more(['show_readmore' => '1', 'echo' => false]);
+        $overlay_content .= get_post_type() === 'tribe_events'?  overcome_post_read_more(['show_readmore' => '1', 'echo' => false, 'title' => esc_html__('View Event','overcome'),'class'=>'ef5-btn ef5-btn-md accent outline']) :  overcome_post_read_more(['show_readmore' => '1', 'echo' => false,'class'=>'ef5-btn ef5-btn-md accent outline']);
         $overlay_content .= '</div></div>';
 
         $css_class = ['ef5-post-item-featured','col-lg-6', $args['class']];
