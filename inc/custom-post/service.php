@@ -5,7 +5,7 @@
  * This custom make some custom to Service
  *
  */
-add_filter('ef5_extra_post_type_service', '__return_true');
+add_filter('ef5_extra_post_type_service', '__return_false');
 
 add_filter('ef5_extra_post_types', 'overcome_cpts_service', 10 , 1);
 function overcome_cpts_service($post_types) {
