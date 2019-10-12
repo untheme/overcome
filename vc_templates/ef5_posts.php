@@ -36,7 +36,7 @@
             while($posts->have_posts()){
                 $post_count++;
                 $posts->the_post();
-                if($post_count === 1){
+                if($post_count1 === 1){
                 ?>
                     <div class="col-lg-6">
                         <?php 
