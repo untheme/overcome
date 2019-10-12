@@ -29,7 +29,7 @@
 			font-size: 34px;
 			display: inline-block;
 			@include border-radius(50%);
-			box-shadow: 0 0 0 8.5px rgba($accent_color, 0.5), 0 0 0 13.5px rgba($accent_color, 0.3);
+			box-shadow: 0 0 0 8.5px var(--accent-color-05), 0 0 0 13.5px var(--accent-color-03);
 		}
 	}
 }
