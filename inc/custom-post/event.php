@@ -13,8 +13,8 @@ function overcome_cpts_event($post_types) {
     if($supported_event) {
 	    $post_types['ef5_event'] = array( 
 	    	'status'        => true,
-			'name'          => esc_html__('OverCome Projects', 'overcome'),
-			'singular_name' => esc_html__('OverCome Project', 'overcome'),
+			'name'          => esc_html__('OverCome Events', 'overcome'),
+			'singular_name' => esc_html__('OverCome Event', 'overcome'),
 			'args'          => array(
 				'menu_position' => 15,
 				'menu_icon'     => 'dashicons-event',
