@@ -44,6 +44,7 @@
         ef5systems_owl_nav_top($atts);
         ef5systems_owl_dots_top($atts); 
     ?>
+    <div class="ef5-owl-wrap-inner relative">
     <div id="<?php echo esc_attr($el_id);?>" class="<?php echo esc_attr(trim($css_class));?>">
     <?php 
         $d = 0;
@@ -109,6 +110,7 @@
         wp_reset_query();
     ?>
     </div>
+    </div>  
     <?php 
         overcome_loading_animation(); 
         ef5systems_owl_dots_container($atts);
