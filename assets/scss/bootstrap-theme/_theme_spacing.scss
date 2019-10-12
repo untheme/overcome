@@ -5,9 +5,11 @@ $spacers: (
   -10 : -10px,
   8 : 8px,
   10 : 10px,
+  30 : 30px,
   -15 : -15px,
   15 : 15px,
   50 : 50px,
+  75 : 75px,
 );
 
 @each $breakpoint in map-keys($grid-breakpoints) {
