@@ -45,78 +45,77 @@
         ef5systems_owl_dots_top($atts); 
     ?>
     <div class="ef5-owl-wrap-inner relative">
-    <div id="<?php echo esc_attr($el_id);?>" class="<?php echo esc_attr(trim($css_class));?>">
-    <?php 
-        $d = 0;
-        while($posts->have_posts()){
-            $d++;
-            // Thumbnail Size
-            $thumbnail_size_index++;
-            if($thumbnail_size_index >= count($thumbnail_size))
-                $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
-            $posts->the_post();
-            // Post Metas
-            $post_metas   = [];
-            $post_metas[] = overcome_posted_on(['show_date'=>'1','echo' => false]);
-            $post_metas[] = overcome_posted_by(['show_author'=>'1','author_avatar' => false, 'echo' => false]);
-        ?>
-        <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?> hoverdir-wrap fade-in" style="animation-delay: <?php echo esc_html($d*100);?>ms">
-        <?php
-            switch ($layout_template) {
-                default:
-                if(get_post_type() === 'ef5_donation')
-                    $overlay = ef5payments_donation_donate_button(['echo' => false,'class'=>'ef5-btn ef5-btn-md accent outline']);
-                else 
-                    $overlay = overcome_post_read_more(['echo' => false, 'class'=>'ef5-btn ef5-btn-md accent outline']);
+        <div id="<?php echo esc_attr($el_id);?>" class="<?php echo esc_attr(trim($css_class));?>">
+        <?php 
+            $d = 0;
+            while($posts->have_posts()){
+                $d++;
+                // Thumbnail Size
+                $thumbnail_size_index++;
+                if($thumbnail_size_index >= count($thumbnail_size))
+                    $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
+                $posts->the_post();
+                // Post Metas
+                $post_metas   = [];
+                $post_metas[] = overcome_posted_on(['show_date'=>'1','echo' => false]);
+                $post_metas[] = overcome_posted_by(['show_author'=>'1','author_avatar' => false, 'echo' => false]);
+            ?>
+            <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?> hoverdir-wrap fade-in" style="animation-delay: <?php echo esc_html($d*100);?>ms">
+            <?php
+                switch ($layout_template) {
+                    default:
+                    if(get_post_type() === 'ef5_donation')
+                        $overlay = ef5payments_donation_donate_button(['echo' => false,'class'=>'ef5-btn ef5-btn-md accent outline']);
+                    else 
+                        $overlay = overcome_post_read_more(['echo' => false, 'class'=>'ef5-btn ef5-btn-md accent outline']);
 
-        ?>	
-        	<div class="<?php echo trim(implode(' ', $item_css_class)); ?> ef5-hover-shadow-1">
-                <?php 
-                    overcome_post_media([
-                        'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
-                        'default_thumb'  => true,
-                        'after'          => '<div class="hover-content d-flex align-items-center justify-content-center">'.$overlay.'</div>'
-                    ]);
-                ?>
-                <div class="ef5-post-info">
+            ?>	
+            	<div class="<?php echo trim(implode(' ', $item_css_class)); ?> ef5-hover-shadow-1">
                     <?php 
-                        overcome_post_title([
-                            'heading_tag' => 'text-20'
+                        overcome_post_media([
+                            'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
+                            'default_thumb'  => true,
+                            'after'          => '<div class="hover-content d-flex align-items-center justify-content-center">'.$overlay.'</div>'
                         ]);
-                        overcome_post_excerpt([
-                            'show_excerpt' => '1', 
-                            'length'       => '16', 
-                            'more'         => ''
-                        ]);
-                        if(class_exists('EF5Payments')) {
-                            ef5systems_donation_progress_donors([
-                                'donor_icon' => '<span class="flaticon-like"></span>'
-                            ]);
-                            ef5payments_donation_donate_amount([
-                                'goal_label' => esc_html__('Goal:','overcome'),
-                                'raised_label' => esc_html__('Raised:','overcome')
-                            ]);
-                        }
                     ?>
+                    <div class="ef5-post-info">
+                        <?php 
+                            overcome_post_title([
+                                'heading_tag' => 'text-20'
+                            ]);
+                            overcome_post_excerpt([
+                                'show_excerpt' => '1', 
+                                'length'       => '16', 
+                                'more'         => ''
+                            ]);
+                            if(class_exists('EF5Payments')) {
+                                ef5systems_donation_progress_donors([
+                                    'donor_icon' => '<span class="flaticon-like"></span>'
+                                ]);
+                                ef5payments_donation_donate_amount([
+                                    'goal_label' => esc_html__('Goal:','overcome'),
+                                    'raised_label' => esc_html__('Raised:','overcome')
+                                ]);
+                            }
+                        ?>
+                    </div>
                 </div>
+            <?php
+                    break;
+                }
+            ?>
             </div>
-        <?php
-                break;
-            }
+            <?php
+            } // end while
+            wp_reset_query();
         ?>
         </div>
-        <?php
-        } // end while
-        wp_reset_query();
-    ?>
-    </div>
+        <?php 
+            overcome_loading_animation(); 
+            ef5systems_owl_dots_container($atts);
+            ef5systems_owl_nav_container($atts);
+            ef5systems_owl_dots_in_nav_container($atts);
+        ?>
     </div>  
-    <?php 
-        overcome_loading_animation(); 
-        ef5systems_owl_dots_container($atts);
-        ef5systems_owl_nav_container($atts);
-        ef5systems_owl_dots_in_nav_container($atts);
-
-        echo overcome_html($this->view_all($atts));
-    ?>
+    <?php echo overcome_html($this->view_all($atts)); ?>
 </div>
