@@ -148,7 +148,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
     }
     protected function overcome_posts_featured_item($atts, $args = []){
         $args = wp_parse_args($args, [
-            'class' =>
+            'class' => ''
         ]);
 
         $overlay_content = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">';
