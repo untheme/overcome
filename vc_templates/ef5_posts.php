@@ -21,7 +21,8 @@
         'tax_query'      => $tax_query,
         'paged'          => $paged,
     );
-    $posts = new WP_Query($posts_args);
+    global $wp_query;
+    $posts = $wp_query = new WP_Query($posts_args);
     // Grid columns css class
     $grid_item_css_class = ['ef5-grid-item', $this->getCSSAnimation( $css_animation ), 'col-'.$col_sm, 'col-md-'.$col_md, 'col-lg-'.$col_lg, 'col-xl-'.$col_xl];
     // Items CSS Classes
@@ -32,11 +33,11 @@
     <?php 
         switch ($layout_template) {
             case '1':
-            $post_count1 = $post_count2 = 0;
+            $post_count = $post_count2 = 0;
             while($posts->have_posts()){
-                $post_count1++;
+                $post_count++;
                 $posts->the_post();
-                if($post_count1 === 1){
+                if($post_count === 1){
                 ?>
                     <div class="col-lg-6">
                         <?php 
@@ -58,28 +59,29 @@
                     </div>
                 <?php
                 }
-            }// end while
+            }
             wp_reset_postdata();
         ?>
             <div class="col-lg-6">
                 <?php
                     while($posts->have_posts()){
-                        $post_count2++;
+                        $post_count++;
                         $posts->the_post();
-                        //var_dump($post_count2);
-                        if($post_count2 != 1){
+                        var_dump($post_count);
+                        if($post_count != 1){
                             
                             overcome_post_header([
                                 'before_args' => ['show_cat'=> '1'], 
                                 'after_args'  => ['show_cat' => false,'show_author' => '1', 'show_date'=> '1', 'show_cmt' => '1', 'show_view' => '0', 'show_like' => '0', 'sep' => '|' ]]);
 
                             
+                        } else {
+                            die('1111');
                         }
-                    }// end while
+                    }
                     wp_reset_postdata();
                 ?>
             </div>
-            <?php overcome_loop_pagination(['show_pagination' => $show_pagination, 'style' => '2']); ?>
         <?php
                 break;
             default:
@@ -111,14 +113,13 @@
                         ?>
                     </div>
                 <?php
-                    } // end while
-                    wp_reset_postdata();
+                    }// end while
                 ?>
-                </div>
+            </div>
         <?php
             break;
         } 
     ?>
     </div>
-    <?php overcome_loop_pagination(['show_pagination' => $show_pagination, 'style' => '2']); ?>
+<?php overcome_loop_pagination(['show_pagination' => $show_pagination, 'style' => '2']); ?>
 </div>
