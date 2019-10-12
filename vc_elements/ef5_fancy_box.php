@@ -153,7 +153,7 @@ class WPBakeryShortCode_ef5_fancy_box extends WPBakeryShortCode
                         break;
                     case 'image':
                 ?>
-                    <img src="<?php echo esc_url(get_template_directory_uri().'/vc_extends/icons/png/'.$icon_existing.'.png');?>" alt="<?php echo esc_attr($heading);?>">
+                    <img src="<?php echo esc_url(get_template_directory_uri().'/vc_elements/icons/png/'.$icon_existing.'.png');?>" alt="<?php echo esc_attr($heading);?>">
                 <?php
                         break;
                     default:
