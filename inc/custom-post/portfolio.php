@@ -13,8 +13,8 @@ function overcome_cpts_portfolio($post_types) {
     if($supported_portfolio) {
 	    $post_types['ef5_portfolio'] = array( 
 	    	'status'        => true,
-			'name'          => esc_html__('OverCome Projects', 'overcome'),
-			'singular_name' => esc_html__('OverCome Project', 'overcome'),
+			'name'          => esc_html__('OverCome Portfolios', 'overcome'),
+			'singular_name' => esc_html__('OverCome Portfolio', 'overcome'),
 			'args'          => array(
 				'menu_position' => 15,
 				'menu_icon'     => 'dashicons-portfolio',
