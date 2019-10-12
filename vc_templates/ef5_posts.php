@@ -81,6 +81,8 @@
                                 'more'         => ''
                             ]);
                             overcome_post_read_more(['show_readmore' => '1']); 
+                        } else {
+                            die('1111');
                         }
                     }
                 ?>
