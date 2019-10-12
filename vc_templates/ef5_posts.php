@@ -18,7 +18,7 @@
         'post_type'      => $post_type,
         'posts_per_page' => $posts_per_page,
         'post_status'    => 'publish',
-        //'tax_query'      => $tax_query,
+        'tax_query'      => $tax_query,
         'paged'          => $paged,
     );
     global $wp_query;
@@ -34,8 +34,6 @@
         switch ($layout_template) {
             case '1':
             $post_count = $post_count2 = 0;
-            //var_dump($posts); die('$posts');
-            var_dump($posts->have_posts());
             while($posts->have_posts()){
                 $post_count++;
                 $posts->the_post();
