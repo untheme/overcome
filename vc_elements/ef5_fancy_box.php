@@ -148,7 +148,7 @@ class WPBakeryShortCode_ef5_fancy_box extends WPBakeryShortCode
                         overcome_image_by_size([
                             'id'    => $icon_upload,
                             'size'  => $icon_size,
-                            'class' => 'ef5-pricing-img'
+                            'class' => 'ef5-fancybox-img'
                         ]);
                         break;
                     case 'image':
