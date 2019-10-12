@@ -21,8 +21,7 @@
         'tax_query'      => $tax_query,
         'paged'          => $paged,
     );
-    global $wp_query;
-    $posts = $wp_query = new WP_Query($posts_args);
+    $posts = new WP_Query($posts_args);
     // Grid columns css class
     $grid_item_css_class = ['ef5-grid-item', $this->getCSSAnimation( $css_animation ), 'col-'.$col_sm, 'col-md-'.$col_md, 'col-lg-'.$col_lg, 'col-xl-'.$col_xl];
     // Items CSS Classes
@@ -59,7 +58,8 @@
                     </div>
                 <?php
                 }
-            }
+            }// end while
+            wp_reset_postdata();
         ?>
             <div class="col-lg-6">
                 <?php
@@ -77,46 +77,48 @@
                         } else {
                             die('1111');
                         }
-                    }
+                    }// end while
+                    wp_reset_postdata();
                 ?>
             </div>
         <?php
                 break;
             default:
-            $d = 0;
-            while($posts->have_posts()){
-                $d++;
-                $posts->the_post();
-            ?>
-            <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
-            	
-            	<div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
-                    <?php 
-                        overcome_post_media([
-                            'thumbnail_size' => '', 
-                            'default_thumb'  => true
-                        ]);
-                    ?>
-                    <?php 
-                        overcome_post_header([
-                            'before_args' => ['show_cat'=> '1'], 
-                            'after_args'  => ['show_cat' => false,'show_author' => '1', 'show_date'=> '1', 'show_cmt' => '1', 'show_view' => '0', 'show_like' => '0', 'sep' => '|' ]]);
+                $d = 0;
+                while($posts->have_posts()){
+                    $d++;
+                    $posts->the_post();
+                ?>
+                <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
+                	
+                	<div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                        <?php 
+                            overcome_post_media([
+                                'thumbnail_size' => '', 
+                                'default_thumb'  => true
+                            ]);
+                        ?>
+                        <?php 
+                            overcome_post_header([
+                                'before_args' => ['show_cat'=> '1'], 
+                                'after_args'  => ['show_cat' => false,'show_author' => '1', 'show_date'=> '1', 'show_cmt' => '1', 'show_view' => '0', 'show_like' => '0', 'sep' => '|' ]]);
 
-                        overcome_post_excerpt([
-                            'show_excerpt' => '1', 
-                            'length'       => '15', 
-                            'more'         => ''
-                        ]);
-                        overcome_post_read_more(['show_readmore' => '1']); 
-                    ?>
+                            overcome_post_excerpt([
+                                'show_excerpt' => '1', 
+                                'length'       => '15', 
+                                'more'         => ''
+                            ]);
+                            overcome_post_read_more(['show_readmore' => '1']); 
+                        ?>
+                    </div>
+                <?php
+                    } // end while
+                    wp_reset_postdata();
+                ?>
                 </div>
-            <?php
-                    break;
-                }
-            ?>
-            </div>
         <?php
-        } // end while
+            break;
+        } 
     ?>
     </div>
 <?php overcome_loop_pagination(['show_pagination' => $show_pagination, 'style' => '2']); ?>
