@@ -387,8 +387,8 @@ function overcome_inline_styles() {
     // CSS Variable
     printf(':root{--primary-color:%s;}', $preset_primary_color);
     printf(':root{--accent-color:%s;}', $preset_accent_color);
-    printf(':root{--accent-color-05:%s;}', rgba($preset_accent_color, 0.5));
-    printf(':root{--accent-color-03:%s;}', rgba($preset_accent_color, 0.3));
+    printf(':root{--accent-color-05:%s;}', 'rgba($preset_accent_color, 0.5))';
+    printf(':root{--accent-color-03:%s;}', 'rgba($preset_accent_color, 0.3))';
     printf(':root{--darkent-accent-color:%s;}', $darkent_accent_color);
     printf(':root{--lightent-accent-color:%s;}', $lightent_accent_color);
     printf(':root{--secondary-color:%s;}', $preset_secondary_color);
