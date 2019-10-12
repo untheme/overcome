@@ -42,3 +42,10 @@ function overcome_cpts_event_tax($taxo) {
 	}
     return $taxo;
 }
+
+// Support Payment 
+add_filter ('ef5payments_post_type_support','ef5payments_post_type_event');
+function ef5payments_post_type_event($post_type){
+	$post_type[] = 'ef5_event';
+	return $post_type;
+}
