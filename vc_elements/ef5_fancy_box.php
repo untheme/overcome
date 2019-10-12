@@ -142,10 +142,10 @@ class WPBakeryShortCode_ef5_fancy_box extends WPBakeryShortCode
         $iconClass = isset($atts[$icon_name]) ? $atts[$icon_name]: '';
         if(empty($iconClass)) return;
         ?>
-            <div class="<?php echo trim(implode(' ', $icon_css_class));?>" <?php echo unbreak_html($iconStyle);?>>
+            <div class="<?php echo trim(implode(' ', $icon_css_class));?>" <?php echo overcome_html($iconStyle);?>>
                 <?php switch ($add_icon) {
                     case 'upload':
-                        unbreak_image_by_size([
+                        overcome_image_by_size([
                             'id'    => $icon_upload,
                             'size'  => $icon_size,
                             'class' => 'ef5-pricing-img'
