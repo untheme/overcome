@@ -1,4 +1,8 @@
 <?php
+/**
+ * This required plugin The Events Calendar to work
+ * https://wordpress.org/plugins/the-events-calendar/
+*/
 if(!class_exists('Tribe__Events__Main')) return;
 
 /**
