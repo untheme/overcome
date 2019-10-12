@@ -134,7 +134,7 @@ if(!function_exists('overcome_post_excerpt')){
 	</div>
 	<?php
         } else {
-            return '<div class="'.trim(implode(' ', $classes)).'">'.printf('%s', $excerpt).'</div>';
+            return '<div class="'.trim(implode(' ', $classes)).'">'. $excerpt .'</div>';
         }
 	}
 }
