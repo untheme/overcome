@@ -13,6 +13,7 @@ vc_map(array(
                 'param_name' => 'layout_template',
                 'value'      =>  array(
                     '1'  => get_template_directory_uri().'/vc_elements/layouts/heading-1.png',
+                    '2'  => get_template_directory_uri().'/vc_elements/layouts/heading-2.png',
                 ),
                 'std'              => '1',
                 'admin_label'      => true,
@@ -32,7 +33,7 @@ vc_map(array(
                 'heading'    => esc_html__('Text','overcome'),
                 'param_name' => 'small_heading_text',
                 'value'      => 'Small Heading',
-                'std'      => 'Small Heading',
+                'std'        => 'Small Heading',
                 'holder'     => 'div',
                 'group'      => esc_html__('Small Heading','overcome'),
             ),
