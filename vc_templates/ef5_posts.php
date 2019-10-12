@@ -14,11 +14,6 @@
     } else {
         $paged = 1;
     }
-    switch ($layout_template) {
-        case '1':
-            $posts_per_page = $posts_per_page - 1;
-            break;
-    }
     $posts_args = array(
         'post_type'      => $post_type,
         'posts_per_page' => $posts_per_page,
@@ -71,6 +66,7 @@
                     while($posts->have_posts()){
                         $post_count++;
                         $posts->the_post();
+                        var_dump($post_count);
                         if($post_count != 1){
                             
                             overcome_post_header([
