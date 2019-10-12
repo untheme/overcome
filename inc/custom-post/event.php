@@ -32,7 +32,7 @@ function overcome_cpts_event_tax($taxo) {
 	$supported_event = apply_filters('ef5_extra_post_type_event', false);
     if($supported_event) {
 	    $taxo['event_cat'] = array(
-	    	//'status'     => true,
+	    	'status'     => true,
     		'post_type'  => array('ef5_event'),
 	        'taxonomy'   => esc_html__('Category', 'overcome'),
 	        'taxonomies' => esc_html__('Categories', 'overcome'),
