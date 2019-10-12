@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @var $this WPBakeryShortCode_ef5_fancy_icon
  */
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
-
+extract($atts);
 // Wrap css class
 $wrap_css_class = ['ef5-fancybox','ef5-fancybox-'.$layout_template, 'transition', 'ef5-line-corner-wrap' , $el_class];
 
