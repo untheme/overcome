@@ -193,7 +193,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                         'default_thumb'  => true,
                         'class'          => 'col-auto',
                         'before'         => '<div class="relative">',
-                        'after'          => '</div>'.$after
+                        'after'          => $after.'</div>'
                     ]);   
                 ?>
                 <div class="col">
