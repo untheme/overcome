@@ -55,7 +55,7 @@ vc_map(array(
                 'param_name'    => 'posts_per_page',
                 'heading'       => esc_html__( 'Number of posts', 'unbreak' ),
                 'description'   => esc_html__( 'number of post to show per page', 'unbreak' ),
-                'std'           => '8',
+                'std'           => '4',
             ),
             vc_map_add_css_animation(),
             array(
@@ -80,6 +80,7 @@ vc_map(array(
                 'param_name' => 'layout_template',
                 'value' =>  array(
                     '1'  => get_template_directory_uri().'/vc_elements/layouts/posts-grid-1.png'
+                    '2'  => get_template_directory_uri().'/vc_elements/layouts/posts-grid-1.png'
                 ),
                 'std'   => '1',
                 'group' => esc_html__('Layouts','unbreak'),
@@ -97,9 +98,10 @@ vc_map(array(
         /* Grid settings */
         ef5systems_grid_settings(
             [
-                'group'      => esc_html__('Layouts','unbreak'), 
-                'param_name' => 'layout_type', 
-                'value'      => 'grid'
+                'group'                  => esc_html__('Layouts','unbreak'), 
+                'dependency_element'     => 'layout_template', 
+                'dependency_value'       => 'not_equal_to'
+                'dependency_value_value' => ['1']
             ]
         ),
         array(
