@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract($atts);
 // Wrap css class
-$wrap_css_class = ['ef5-fancybox','ef5-fancybox-'.$layout_template, 'transition', 'ef5-bg-'.$bg_color , $el_class];
+$wrap_css_class = ['ef5-fancybox','ef5-fancybox-'.$layout_template, 'transition', $el_class];
 
 ?>
 <div class="<?php echo trim(implode(' ', $wrap_css_class));?>">
