@@ -17,3 +17,17 @@
 		}
 	}
 }
+
+.ef5-heading-3{
+	.ef5-heading-icon{
+		span{
+			width: 63px;
+			height: 63px;
+			line-height: 64px;
+			background: $accent_color;
+			color: $white;
+			font-size: 34px;
+			@include box-shadow(0 8.5px 0 $accent_color, 0 13.5px 0 rgba($accent_color, 0.5));
+		}
+	}
+}
