@@ -17,7 +17,7 @@ $wrap_css_class = ['ef5-fancybox','ef5-fancybox-'.$layout_template, 'transition'
 <div class="<?php echo trim(implode(' ', $wrap_css_class));?>">
 	<?php switch ($layout_template) {
 		default:
-        	echo overcome_html($this->ef5_fancy_box_icon($atts));
+        	echo overcome_html($this->ef5_fancy_box_icon($atts,['class' => 'text-56']));
         	echo overcome_html($this->ef5_fancy_box_heading($atts,['class'=> 'text-18 lh-1/33333333']));
         	echo overcome_html($this->ef5_fancy_box_desc($atts));
         	echo overcome_html($this->ef5_fancy_box_link($atts));

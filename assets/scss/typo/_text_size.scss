@@ -12,6 +12,7 @@ $text-sizes: (
 	34,
 	36 1.47222222,
 	40 1.175,
+	56
 );
 // Text sizes
 @each $breakpoint in map-keys($grid-breakpoints) {
