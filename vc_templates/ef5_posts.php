@@ -34,6 +34,7 @@
         switch ($layout_template) {
             case '1':
             $post_count = $post_count2 = 0;
+            var_dump($posts); die('$posts');
             while($posts->have_posts()){
                 $post_count++;
                 $posts->the_post();
