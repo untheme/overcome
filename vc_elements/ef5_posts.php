@@ -132,4 +132,19 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
         $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
         return parent::content($atts, $content);
     }
+    protected function ef5_posts_wrap_css_class($atts){
+        extract($atts);
+        /* get value for Design Tab */
+        $css_classes = array(
+            'ef5-posts-grid',
+            'ef5-grid',
+            'ef5-posts-grid-'.$layout_template,
+            'row',
+            'justify-content-center',
+            vc_shortcode_custom_css_class( $css ),
+        );
+        $css_class = preg_replace( '/\s+/', ' ', apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, implode( ' ', array_filter( $css_classes ) ), $this->settings['base'], $atts ) );
+
+        echo trim($css_class);
+    }
 }

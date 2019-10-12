@@ -3,17 +3,7 @@
     extract( $atts );
 
     $el_id = !empty($el_id) ? 'ef5-posts-'.$el_id : uniqid('ef5-posts-');
-    /* get value for Design Tab */
-    $css_classes = array(
-        'ef5-posts-grid',
-        'ef5-grid',
-        'ef5-posts-grid-'.$layout_template,
-        'row',
-        'justify-content-center',
-        vc_shortcode_custom_css_class( $css ),
-    );
     
-    $css_class = preg_replace( '/\s+/', ' ', apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, implode( ' ', array_filter( $css_classes ) ), $this->settings['base'], $atts ) );
 
     /* Post query */
     $tax_query = overcome_tax_query($post_type, $taxonomies, $taxonomies_exclude);
@@ -39,7 +29,7 @@
     $item_css_class = ['post-grid-item','transition'];
 ?>
 <div class="ef5-posts" id="<?php echo esc_attr($el_id);?>">
-    <div class="<?php echo esc_attr(trim($css_class));?>">
+    <div class="<?php $this->overcome_posts_wrap_css_class($atts);?>">
     <?php 
         $d = 0;
         while($posts->have_posts()){
