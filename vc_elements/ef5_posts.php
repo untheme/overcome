@@ -157,7 +157,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
             'show_excerpt' => '1', 
             'length'       => '15', 
             'more'         => '',
-            'class'        => 'text-white',
+            'class'        => 'text-white d-none d-md-block',
             'echo'         => false 
         ]);
         $overlay_content .= overcome_tribe_events_info(['echo' => false, 'class'=>'text-white mb-13 pb-15 pb-lg-45']);
