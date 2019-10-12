@@ -197,7 +197,8 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                         overcome_post_excerpt([
                             'show_excerpt' => '1', 
                             'length'       => '15', 
-                            'more'         => ''
+                            'more'         => '',
+                            'class'        => 'text-13' 
                         ]);
                         overcome_tribe_events_info_hori(['class' => 'text-13']);
                     ?>
