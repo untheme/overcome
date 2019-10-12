@@ -60,9 +60,12 @@ vc_map(array(
         ef5systems_icon_libs([
             'dependency'        => 'heading_text',
             'dependency_option' => 'not_empty',
-            'dependency_value'  => true
+            'dependency_value'  => true,
+            'group'             => esc_html__('Heading','overcome') 
         ]),
-        ef5systems_icon_libs_icon(),
+        ef5systems_icon_libs_icon([
+            'group'             => esc_html__('Heading','overcome') 
+        ]),
         array(
             // Heading part 2 
             array(
