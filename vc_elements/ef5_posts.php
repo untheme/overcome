@@ -111,6 +111,55 @@ vc_map(array(
                 ),
                 'std'           => '1',
                 'group'         => esc_html__('Post Meta','unbreak')
+            ),
+            array(
+                'type'       => 'dropdown',
+                'param_name' => 'show_view_all',
+                'value'      => array(
+                    esc_html__('None','unbreak')          => 'none',
+                    esc_html__('Select a Page','unbreak') => 'page' 
+                ),
+                'std'        => 'none',
+                'heading'    => esc_html__('Show View All','unbreak'),
+                'group'      => esc_html__('Post Meta','unbreak'),
+            ),
+            array(
+                'type'       => 'dropdown',
+                'param_name' => 'show_view_all_page',
+                'value'      => ef5systems_vc_list_page(['default' => false]),
+                'std'        => '',
+                'dependency'    => array(
+                    'element'   => 'show_view_all',
+                    'value'     => 'page',
+                ),
+                'heading'    => esc_html__('Choose a Page for view all!','unbreak'),
+                'group'      => esc_html__('Post Meta','unbreak'),
+            ),
+            array(
+                'type'       => 'textfield',
+                'param_name' => 'show_view_all_text',
+                'value'      => 'View All',
+                'std'        => 'View All',
+                'dependency'    => array(
+                    'element'            => 'show_view_all',
+                    'value_not_equal_to' => 'none',
+                ),
+                'heading'    => esc_html__('View All Text','unbreak'),
+                'group'      => esc_html__('Post Meta','unbreak'),
+            ),
+            array(
+                'type'       => 'dropdown',
+                'param_name' => 'view_all_style',
+                'value'      => array(
+                    esc_html__('Default','unbreak') => '',
+                ),
+                'std'        => '',
+                'dependency' => array(
+                    'element'            => 'show_view_all',
+                    'value_not_equal_to' => 'none',
+                ),
+                'heading'    => esc_html__('View All Style','unbreak'),
+                'group'      => esc_html__('Post Meta','unbreak'),
             )
         ),
         array(
@@ -210,6 +259,15 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                 </div>
             </div>
         </div>
+        <?php
+    }
+    protected function view_all($atts = ''){
+        extract($atts);
+        if($show_view_all === 'none') return;
+        ?>
+            <div class="view-all-wrap text-center">
+                <a href="<?php echo get_permalink($show_view_all_page);?>" class="ef5-btn ef5-btn-md fill accent <?php echo esc_attr($view_all_style);?>"><?php echo esc_html($show_view_all_text);?></a>
+            </div>
         <?php
     }
 }

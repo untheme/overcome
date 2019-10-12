@@ -94,5 +94,8 @@
         } 
     ?>
     </div>
-<?php overcome_loop_pagination(['show_pagination' => $show_pagination, 'style' => '2']); ?>
+<?php 
+    overcome_loop_pagination(['show_pagination' => $show_pagination, 'style' => '2']); 
+    $this->view_all($atts);
+?>
 </div>
