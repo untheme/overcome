@@ -16,6 +16,7 @@ extract( $atts );
 		switch ($layout_template) {
 			default:
 				$this->ef5_heading_small_heading($atts, ['class' => 'text-22 text-uppercase ef5-text-accent']);
+				$this->ef5_heading_main_heading_icon($atts);
 				$this->ef5_heading_main_heading($atts,['class' => 'text-36 font-style-700 ef5-heading']);
 				$this->ef5_heading_sub_heading($atts, ['class' => 'text-22']);
 				$this->ef5_heading_desccription($atts);
