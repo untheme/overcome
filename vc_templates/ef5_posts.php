@@ -67,7 +67,6 @@
                     while($posts->have_posts()){
                         $post_count2++;
                         $posts->the_post();
-                        var_dump($post_count2);
                         if($post_count2 != 1){
                             
                             overcome_post_header([
