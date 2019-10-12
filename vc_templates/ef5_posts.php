@@ -66,7 +66,7 @@
                     while($posts->have_posts()){
                         $post_count++;
                         $posts->the_post();
-                        if($post_count > 1){
+                        if($post_count != 1){
                             overcome_post_media([
                                 'thumbnail_size' => '', 
                                 'default_thumb'  => true
