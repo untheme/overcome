@@ -17,7 +17,7 @@ function overcome_cpts_event($post_types) {
 			'singular_name' => esc_html__('OverCome Event', 'overcome'),
 			'args'          => array(
 				'menu_position' => 15,
-				'menu_icon'     => 'dashicons-event',
+				'menu_icon'     => 'dashicons-universal-access-alt',
 				'rewrite'       => array(
 					'slug'       => overcome_get_theme_opt('event_slug','ef5_event'), 
 					'with_front' => true
