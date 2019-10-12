@@ -29,6 +29,7 @@ function overcome_cpts_service($post_types) {
 
 add_filter('ef5_extra_taxonomies', 'overcome_cpts_service_tax', 10 , 1);
 function overcome_cpts_service_tax($taxo) {
+    $supported_service = apply_filters('ef5_extra_post_type_service', false);
     if(!$supported_service) return;
     $taxo['service_cat'] = array(
     	'status'     => true,
