@@ -35,6 +35,7 @@ $line-heights: (
 	'1\/175': '1.175',
 	'1\/6': '1.6',
 	'1\/33333333,': '1.33333333'
+	'46': '46px'
 );
 @each $line-height, $line-height-value in $line-heights{
 	.lh-#{$line-height}{
