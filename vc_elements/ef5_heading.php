@@ -14,6 +14,7 @@ vc_map(array(
                 'value'      =>  array(
                     '1'  => get_template_directory_uri().'/vc_elements/layouts/heading-1.png',
                     '2'  => get_template_directory_uri().'/vc_elements/layouts/heading-2.png',
+                    '3'  => get_template_directory_uri().'/vc_elements/layouts/heading-3.png',
                 ),
                 'std'              => '1',
                 'admin_label'      => true,
@@ -54,7 +55,15 @@ vc_map(array(
                 'std'        => 'This is OverCome custom heading element',
                 'holder'     => 'h4',
                 'group'      => esc_html__('Heading','overcome')   
-            ),
+            )
+        ),
+        ef5systems_icon_libs([
+            'dependency'        => 'heading_text',
+            'dependency_option' => 'not_empty',
+            'dependency_value'  => 'true'
+        ]),
+        ef5systems_icon_libs_icon(),
+        array(
             // Heading part 2 
             array(
                 'type'       => 'checkbox',
