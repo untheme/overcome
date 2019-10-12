@@ -152,7 +152,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
         ]);
 
         $overlay_content = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">';
-        $overlay_content .= overcome_post_title(['echo'] => false);
+        $overlay_content .= overcome_post_title(['echo' => false]);
         $overlay_content .= overcome_post_excerpt([
             'show_excerpt' => '1', 
             'length'       => '15', 
