@@ -32,7 +32,7 @@
     <?php 
         switch ($layout_template) {
             case '1':
-            $post_count = 0;
+            $post_count1 = $post_count2 = 0;
             while($posts->have_posts()){
                 $post_count++;
                 $posts->the_post();
@@ -64,10 +64,10 @@
             <div class="col-lg-6">
                 <?php
                     while($posts->have_posts()){
-                        $post_count++;
+                        $post_count2++;
                         $posts->the_post();
-                        var_dump($post_count);
-                        if($post_count != 1){
+                        var_dump($post_count2);
+                        if($post_count2 != 1){
                             
                             overcome_post_header([
                                 'before_args' => ['show_cat'=> '1'], 
