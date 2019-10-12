@@ -25,8 +25,8 @@ function overcome_tribe_events_info($args=[]){
 	} else {
 		return 
 		'<div class="'.trim(implode(' ', $css_classes)).'">
-			<div class="venue empty-none"><span class="flaticon-maps-and-flags ef5-text-accent"></span>&nbsp;&nbsp;'.implode( $address_delimiter, $venue_details ).'</div>
-			<div class="date empty-none"><span class="flaticon-calendar ef5-text-accent"></span>&nbsp;&nbsp;'.overcome_tribe_events_time(['echo' => $args['echo'] ]).'</div>
+			<div class="venue empty-none pb-5"><span class="flaticon-maps-and-flags ef5-text-accent"></span>&nbsp;&nbsp;'.implode( $address_delimiter, $venue_details ).'</div>
+			<div class="date empty-none pb-5"><span class="flaticon-calendar ef5-text-accent"></span>&nbsp;&nbsp;'.overcome_tribe_events_time(['echo' => $args['echo'] ]).'</div>
 			<div class="cost empty-none"><span class="flaticon-coin-1 ef5-text-accent"></span>&nbsp;&nbsp;'.tribe_get_cost( null, true ).'</div>
 		</div>';
 	}
