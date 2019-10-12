@@ -21,7 +21,7 @@ vc_map(array(
                 'type'        => 'dropdown',
                 'heading'     => esc_html__('Background Color','overcome'),
                 'param_name'  => 'bg_color',
-                'value'       => ef5systems_color(),
+                'value'       => ef5systems_colors_option_for_vc(),
                 'std'         => 'ef5-bg',
                 'description' => esc_html__('Choose your box background color','overcome'),
                 'dependency'  => array(
