@@ -38,7 +38,7 @@
                 $post_count++;
                 $posts->the_post();
                 if($post_count === 1){
-                    $this->overcome_posts_featured_item($atts);
+                    $this->overcome_posts_featured_item($atts,['class' => 'rounded-10']);
                 }
             }
             wp_reset_postdata();

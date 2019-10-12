@@ -1,5 +1,0 @@
-@each $rounded, $rounded-value in $btn-rounded{
-	.rounded-#{$rounded}{
-		@include border-radius($rounded-value);
-	}
-}
