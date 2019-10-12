@@ -159,7 +159,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
             'more'         => '',
             'echo'         => false 
         ]);
-        $overlay_content .= overcome_tribe_events_info();
+        $overlay_content .= overcome_tribe_events_info(['echo' => false]);
         $overlay_content .= get_post_type() === 'tribe_events'?  overcome_post_read_more(['show_readmore' => '1', 'echo' => false, 'title' => esc_html__('View Event','overcome')]) :  overcome_post_read_more(['show_readmore' => '1', 'echo' => false]);
         $overlay_content .= '</div></div>';
 

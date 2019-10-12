@@ -7,33 +7,40 @@
 function overcome_tribe_events_info($args=[]){
 	if(!class_exists('Tribe__Events__Main')) return;
 	$args = wp_parse_args($args,[
-		'class' => ''
+		'class' => '',
+		'echo'	=> true
 	]);
 	$css_classes = ['ef5-tribe-events-info', $args['class']];
+	$venue_details = tribe_get_venue_details();
+	$address_delimiter = empty( $venue_address ) ? ' ' : ', ';
+	if($args['echo']){
 	?>
 		<div class="<?php echo trim(implode(' ', $css_classes));?>">
 			<div class="Venue">
-				<?php $venue_details = tribe_get_venue_details();
-					if ( $venue_details ) {
-						$address_delimiter = empty( $venue_address ) ? ' ' : ', ';
-						echo implode( $address_delimiter, $venue_details );
-					}
+				<?php 
+					echo implode( $address_delimiter, $venue_details );
 				?>
 			</div>
 			<div class="date"><?php echo tribe_events_event_schedule_details() ?></div>
 			<div class="cost">
 				<?php if ( tribe_get_cost() ) :
 					echo tribe_get_cost( null, true );
-					/**
-					 * Runs after cost is displayed in list style views
-					 *
-					 * @since 4.5
-					 */
-					do_action( 'tribe_events_inside_cost' )
 				endif; ?>
 			</div>
 		</div>
 	<?php
+	} else {
+		return 
+		'<div class="'.trim(implode(' ', $css_classes)).'">
+			<div class="Venue">
+				'.implode( $address_delimiter, $venue_details ).'
+			</div>
+			<div class="date">'.tribe_events_event_schedule_details().'</div>
+			<div class="cost">
+				'.tribe_get_cost( null, true ).'
+			</div>
+		</div>';
+	}
 }
 /**
  * Register widget area.
