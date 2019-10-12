@@ -100,7 +100,7 @@ vc_map(array(
             [
                 'group'                  => esc_html__('Layouts','unbreak'), 
                 'dependency_element'     => 'layout_template', 
-                'dependency_value'       => 'not_equal_to',
+                'dependency_value'       => 'value_not_equal_to',
                 'dependency_value_value' => ['1']
             ]
         ),
