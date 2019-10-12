@@ -193,7 +193,7 @@ add_filter('ef5systems_spacings','overcome_spacings');
 function overcome_spacings(){
 	return [
 		'custom1 pt-8 pb-8' => ['OverCome Space 01', 'Top 8px - Bottom 8px'],
-		'87-0-100'          => ['OverCome Space 02', 'Top 87px - Bottom 100px', '87px 0 100px 0'],
+		'87-0-92'          	=> ['OverCome Space 02', 'Top 87px - Bottom 92px', '87px 0 92px 0'],
 		'93-0-100'          => ['OverCome Space 03', 'Top 93px - Bottom 100px', '93px 0 100px 0'],
 		'100-0'             => ['OverCome Space 04', 'Top 100px - Bottom 100px', '100px 0'],
 	];
