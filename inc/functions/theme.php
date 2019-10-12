@@ -113,6 +113,8 @@ function overcome_get_sidebar($check = true){
         }
     } elseif (class_exists('WooCommerce') && (is_woocommerce() || is_post_type_archive('product') || is_singular('product') ) ) {
         $sidebar = 'sidebar-shop';
+    } elseif(class_exists('Tribe__Events__Main')){
+        $sidebar = 'sidebar-tribe-event';
     } elseif (is_archive() || is_search()){
         $sidebar = 'sidebar-main';
     }
@@ -140,6 +142,8 @@ function overcome_sidebar_position(){
         $sidebar_position = overcome_get_opts('shop_sidebar_pos',overcome_shop_sidebar_position());
     } elseif (is_singular('product')) {
         $sidebar_position = overcome_get_opts('product_sidebar_pos',overcome_product_sidebar_position());
+    } elseif (class_exists('Tribe__Events__Main') && is_post_type_archive('tribe_events')) {
+        $sidebar_position = overcome_get_opts('trible_events_sidebar_pos','right');
     } else {
         $sidebar_position = 'none';
     }
