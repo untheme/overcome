@@ -79,6 +79,7 @@
                     wp_reset_postdata();
                 ?>
             </div>
+            <?php overcome_loop_pagination(['show_pagination' => $show_pagination, 'style' => '2']); ?>
         <?php
                 break;
             default:
@@ -119,5 +120,5 @@
         } 
     ?>
     </div>
-<?php overcome_loop_pagination(['show_pagination' => $show_pagination, 'style' => '2']); ?>
+    <?php overcome_loop_pagination(['show_pagination' => $show_pagination, 'style' => '2']); ?>
 </div>
