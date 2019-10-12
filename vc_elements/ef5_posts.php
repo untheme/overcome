@@ -181,8 +181,9 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
         $args = wp_parse_args($args, [
             'class' => ''
         ]);
-        $css_class = ['ef5-post-item','row', $args['class']];
+        $css_class = ['ef5-post-item-inner','row', $args['class']];
         ?>
+        <div class="ef5-post-item">
             <div class="<?php echo trim(implode(' ', $css_class));?>">
                 <?php 
                     overcome_post_media([
@@ -204,6 +205,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                     ?>
                 </div>
             </div>
+        </div>
         <?php
     }
 }
