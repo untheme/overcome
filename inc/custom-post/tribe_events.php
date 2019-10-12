@@ -10,7 +10,7 @@ function overcome_tribe_events_info($args=[]){
 		'class' => '',
 		'echo'	=> true
 	]);
-	$css_classes = ['ef5-tribe-events-info', $args['class']];
+	$css_classes = ['ef5-tribe-events-info','empty-none', $args['class']];
 	$venue_details = tribe_get_venue_details();
 	$address_delimiter = empty( $venue_address ) ? ' ' : ', ';
 	if($args['echo']){
@@ -24,13 +24,9 @@ function overcome_tribe_events_info($args=[]){
 	} else {
 		return 
 		'<div class="'.trim(implode(' ', $css_classes)).'">
-			<div class="Venue">
-				'.implode( $address_delimiter, $venue_details ).'
-			</div>
-			<div class="date">'.tribe_events_event_schedule_details().'</div>
-			<div class="cost">
-				'.tribe_get_cost( null, true ).'
-			</div>
+			<div class="venue  empty-none">'.implode( $address_delimiter, $venue_details ).'</div>
+			<div class="date  empty-none">'.tribe_events_event_schedule_details().'</div>
+			<div class="cost  empty-none">'.tribe_get_cost( null, true ).'</div>
 		</div>';
 	}
 }
