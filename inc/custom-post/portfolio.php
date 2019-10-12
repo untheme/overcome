@@ -5,7 +5,7 @@
  * This custom make some custom to Portfolio
  *
  */
-add_filter('ef5_extra_post_type_portfolio', '__return_false');
+add_filter('ef5_extra_post_type_portfolio', '__return_true');
 
 add_filter('ef5_extra_post_types', 'overcome_cpts_portfolio', 10 , 1);
 function overcome_cpts_portfolio($post_types) {
