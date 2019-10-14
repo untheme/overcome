@@ -13,6 +13,9 @@
 	}
 }
 .overlay-wrap{
+	.relative{
+		overflow: hidden;
+	}
 	&:hover{
 		.overlay{
 			visibility: visible;
