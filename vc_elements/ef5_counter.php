@@ -695,32 +695,31 @@ class WPBakeryShortCode_ef5_counter extends WPBakeryShortCode{
         $prefix     = isset($atts['prefix'.$i]) ? $atts['prefix'.$i] : '';
         $digit      = isset($atts['digit'.$i]) ? $atts['digit'.$i] : '';
         $digit_color      = isset($atts['digit'.$i.'_color']) ? $atts['digit'.$i.'_color'] : '';
-            if(!empty($suffix) || !empty($prefix) || !empty($digit)) {
-                /* call icon font css */
-                vc_icon_element_fonts_enqueue($i_type);
-            ?>
-	            <div class="<?php echo trim(implode(' ', $item_class));?>">
-	                <div class="ef5-counter-wrap-inner">
-	                    <?php if( $add_icon === 'true' && !empty($icon) ): ?>
-	    					<span class="counter-icon"><span class="<?php echo esc_attr($icon); ?>" <?php if(!empty($icon_color)) :?>style="color:<?php echo esc_attr($icon_color);?>" <?php endif; ?>></span></span>
-	    				<?php endif; ?>
-	    				<div class="ef5-counter-wrap" data-prefix="<?php echo esc_attr($prefix);?>" data-suffix="<?php echo esc_attr($suffix);?>" data-type="<?php echo esc_attr($counter_type);?>" data-digit="<?php echo esc_attr($digit);?>">
-	                        <?php if(!empty($prefix)) echo '<span class="prefix">'.esc_html($prefix).'</span>'; ?>
-	                        <span class="ef5-counter" <?php if(!empty($digit_color)): ?> style="color:<?php echo esc_attr($digit_color);?>;"<?php endif;?>><?php echo esc_attr($digit); ?></span>
-	                        <?php if(!empty($suffix)) echo '<span class="suffix">'.esc_html($suffix).'</span>'; ?>
-	    				</div>
-	                    <?php if($title):?>
-	                        <div class="counter-title"><?php echo esc_html($title);?></div>
-	                    <?php endif;?>
-	                    <?php if($desc):?>
-	                        <div class="counter-desc"><?php echo overcome_html($desc);?></div>
-	                    <?php endif;?>
-	                </div>
-				</div>
-	    	<?php 
-	    	}
+        if(!empty($suffix) || !empty($prefix) || !empty($digit)) {
+            /* call icon font css */
+            vc_icon_element_fonts_enqueue($i_type);
+        ?>
+            <div class="<?php echo trim(implode(' ', $item_class));?>">
+                <div class="ef5-counter-wrap-inner">
+                    <?php if( $add_icon === 'true' && !empty($icon) ): ?>
+    					<span class="counter-icon"><span class="<?php echo esc_attr($icon); ?>" <?php if(!empty($icon_color)) :?>style="color:<?php echo esc_attr($icon_color);?>" <?php endif; ?>></span></span>
+    				<?php endif; ?>
+    				<div class="ef5-counter-wrap" data-prefix="<?php echo esc_attr($prefix);?>" data-suffix="<?php echo esc_attr($suffix);?>" data-type="<?php echo esc_attr($counter_type);?>" data-digit="<?php echo esc_attr($digit);?>">
+                        <?php if(!empty($prefix)) echo '<span class="prefix">'.esc_html($prefix).'</span>'; ?>
+                        <span class="ef5-counter" <?php if(!empty($digit_color)): ?> style="color:<?php echo esc_attr($digit_color);?>;"<?php endif;?>><?php echo esc_attr($digit); ?></span>
+                        <?php if(!empty($suffix)) echo '<span class="suffix">'.esc_html($suffix).'</span>'; ?>
+    				</div>
+                    <?php if($title):?>
+                        <div class="counter-title"><?php echo esc_html($title);?></div>
+                    <?php endif;?>
+                    <?php if($desc):?>
+                        <div class="counter-desc"><?php echo overcome_html($desc);?></div>
+                    <?php endif;?>
+                </div>
+			</div>
+    	<?php 
     	}
-	}
+    }
 	protected function counter_title($atts, $args = []){
 		extract($atts);
 		$args = wp_parse_args($args, [
