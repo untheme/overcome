@@ -80,6 +80,7 @@ vc_map(array(
                 'param_name' => 'layout_template',
                 'value' =>  array(
                     '1'  => get_template_directory_uri().'/vc_elements/layouts/posts-1.png',
+                    '2'  => get_template_directory_uri().'/vc_elements/layouts/posts-2.png',
                 ),
                 'std'   => '1',
                 'group' => esc_html__('Layouts','unbreak'),
