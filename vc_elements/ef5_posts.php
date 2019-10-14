@@ -241,8 +241,9 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                         'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '170x170'), 
                         'default_thumb'  => true,
                         'class'          => 'col-auto',
-                        'before'         => '<div class="relative">',
-                        'after'          => $after.'</div>'
+                        'before'         => '<div class="relative h-100">',
+                        'after'          => $after.'</div>',
+                        'img_class'      => 'h-100'
                     ]);   
                 ?>
                 <div class="col">
