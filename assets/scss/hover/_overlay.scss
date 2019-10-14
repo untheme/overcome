@@ -6,8 +6,8 @@
 	left: 0;
 	z-index: 1;
 	@include transition();
-	@include transform(scale(1.2));
 	@media (min-width: $desktop-screen){
+		@include transform(scale(1.2));
 		opacity: 0;
 		visibility: hidden;
 	}
