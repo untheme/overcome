@@ -24,7 +24,7 @@
     global $wp_query;
     $posts = $wp_query = new WP_Query($posts_args);
     // Grid columns css class
-    $grid_item_css_class = ['ef5-grid-item', $this->getCSSAnimation( $css_animation ), 'col-'.$col_sm, 'col-md-'.$col_md, 'col-lg-'.$col_lg, 'col-xl-'.$col_xl];
+    $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation( $css_animation ), 'col-'.$col_sm, 'col-md-'.$col_md, 'col-lg-'.$col_lg, 'col-xl-'.$col_xl];
     // Items CSS Classes
     $item_css_class = ['post-grid-item','transition'];
 ?>
@@ -58,7 +58,7 @@
         <?php
                 break;
             case '2':
-                $item_css_class[] = 'ef5-hover-shadow-1';
+                $item_css_class[] = 'post-grid-item-inner ef5-rounded-10 overlay-wrap ef5-hover-shadow-1';
                 $d = 0;
                 while($posts->have_posts()){
                     $d++;
@@ -66,31 +66,29 @@
                     $after = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align"><a class="text-36 text-white" href="'.get_the_permalink().'"><span class="fa fa-link"></span></a></div></div>';
                 ?>
                 <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
-                	<div class="post-grid-item-inner ef5-rounded-10 overlay-wrap">
-                    	<div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
-                            <div class="relative">
-                                <?php 
-                                    overcome_post_media([
-                                        'thumbnail_size' => '', 
-                                        'default_thumb'  => true,
-                                        'after'          => $after
-                                    ]);
-                                ?>
-                            </div>
-                            <div class="pl-15 pr-15 pl-lg-35 pr-lg-35 pt-25 pb-25">
-                                <?php 
-                                    overcome_post_title([
-                                        'heading_tag' => 'text-22',
-                                        'class'       => 'pb-15'  
-                                    ]);
-                                    overcome_post_excerpt([
-                                        'show_excerpt' => '1', 
-                                        'length'       => '15', 
-                                        'more'         => ''
-                                    ]);
-                                    overcome_post_read_more(['show_readmore' => '1']); 
-                                ?>
-                            </div>
+                	<div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                        <div class="relative">
+                            <?php 
+                                overcome_post_media([
+                                    'thumbnail_size' => '', 
+                                    'default_thumb'  => true,
+                                    'after'          => $after
+                                ]);
+                            ?>
+                        </div>
+                        <div class="pl-15 pr-15 pl-lg-35 pr-lg-35 pt-25 pb-25">
+                            <?php 
+                                overcome_post_title([
+                                    'heading_tag' => 'text-22',
+                                    'class'       => 'pb-15'  
+                                ]);
+                                overcome_post_excerpt([
+                                    'show_excerpt' => '1', 
+                                    'length'       => '15', 
+                                    'more'         => ''
+                                ]);
+                                overcome_post_read_more(['show_readmore' => '1']); 
+                            ?>
                         </div>
                     </div>
                 </div>
