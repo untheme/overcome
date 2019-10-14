@@ -58,7 +58,7 @@
         <?php
                 break;
             case '2':
-                $item_css_class[] = 'post-grid-item-inner ef5-rounded-10 overlay-wrap ef5-hover-shadow-1';
+                $item_css_class[] = 'ef5-rounded-10 overlay-wrap ef5-hover-shadow-1';
                 $d = 0;
                 while($posts->have_posts()){
                     $d++;
