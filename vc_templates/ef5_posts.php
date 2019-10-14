@@ -77,8 +77,12 @@
                                     ]);
                                 ?>
                             </div>
+                            <div class="p">
                             <?php 
-                                overcome_post_title([]);
+                                overcome_post_title([
+                                    'heading_tag' => 'text-22',
+                                    'class'       => 'pb-15'  
+                                ]);
                                 overcome_post_excerpt([
                                     'show_excerpt' => '1', 
                                     'length'       => '15', 
