@@ -77,19 +77,20 @@
                                     ]);
                                 ?>
                             </div>
-                            <div class="p">
-                            <?php 
-                                overcome_post_title([
-                                    'heading_tag' => 'text-22',
-                                    'class'       => 'pb-15'  
-                                ]);
-                                overcome_post_excerpt([
-                                    'show_excerpt' => '1', 
-                                    'length'       => '15', 
-                                    'more'         => ''
-                                ]);
-                                overcome_post_read_more(['show_readmore' => '1']); 
-                            ?>
+                            <div class="pl-15 pr-15 pl-lg-35 pr-lg-35 pt-25 pb-25">
+                                <?php 
+                                    overcome_post_title([
+                                        'heading_tag' => 'text-22',
+                                        'class'       => 'pb-15'  
+                                    ]);
+                                    overcome_post_excerpt([
+                                        'show_excerpt' => '1', 
+                                        'length'       => '15', 
+                                        'more'         => ''
+                                    ]);
+                                    overcome_post_read_more(['show_readmore' => '1']); 
+                                ?>
+                            </div>
                         </div>
                     </div>
                 </div>
