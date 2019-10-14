@@ -87,6 +87,7 @@
                                     'length'       => '15', 
                                     'more'         => ''
                                 ]);
+                                overcome_loop_story_info();
                                 overcome_post_read_more(['show_readmore' => '1']); 
                             ?>
                         </div>
