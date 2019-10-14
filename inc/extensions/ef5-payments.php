@@ -9,10 +9,9 @@ function overcome_loop_donate_info($args = []){
     if(class_exists('EF5Payments') && in_array($post_type, apply_filters('ef5payments_payment_attach_post_types',['ef5_donation']))){
     	switch ($args['layout']) { 		
     		default:
-    		$css_class[] = 'row justify-content-between';
 	?>
 		<div class="<?php echo trim(implode(' ', $css_class));?>">
-			<div class="ef5-loop-donate-info-inner">
+			<div class="ef5-loop-donate-info-inner row justify-content-between">
 				<div class="col-auto">
 					<?php ef5payments_donation_raised([
 						'label' => esc_html__('Donate so far:','overcome'),
