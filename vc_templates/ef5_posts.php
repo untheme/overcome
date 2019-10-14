@@ -85,10 +85,10 @@
                             overcome_post_read_more(['show_readmore' => '1']); 
                         ?>
                     </div>
+                </div>
                 <?php
                     }// end while
                 ?>
-            </div>
         <?php
             break;
         } 
