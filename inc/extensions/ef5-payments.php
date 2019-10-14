@@ -1,10 +1,11 @@
 <?php
 function overcome_loop_donate_info($args = []){
 	$args = wp_parse_args($args,[
-		'layout' => '1'
+		'layout' => '1',
+		'class'  => '' 
 	]);
 	$post_type = get_post_type(get_the_ID());
-	$css_class = ['ef5-loop-donate-info', 'layout-'.$args['class']];
+	$css_class = ['ef5-loop-donate-info', 'layout-'.$args['layout'], $args['class']];
     if(class_exists('EF5Payments') && in_array($post_type, apply_filters('ef5payments_payment_attach_post_types',['ef5_donation']))){
     	switch ($args['layout']) { 		
     		default:
