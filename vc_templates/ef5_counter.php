@@ -14,8 +14,10 @@
             $columns = (int)$counter_column;
             
             for($i=1;$i<=$columns;$i++) { 
-                echo $this->counter_icon($atts,$i);
+                $this->counter_icon($atts,$i);
                 $this->counter_number($atts,$i);
+                $this->counter_title($atts,$i);
+                $this->counter_desc($atts,$i);
             }
         ?>
     </div>
