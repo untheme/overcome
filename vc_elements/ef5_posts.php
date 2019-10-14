@@ -240,7 +240,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                     overcome_post_media([
                         'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '170x170'), 
                         'default_thumb'  => true,
-                        'class'          => 'col-auto',
+                        'class'          => 'col-xs-auto',
                         'before'         => '<div class="relative h-100">',
                         'after'          => $after.'</div>',
                         'img_class'      => 'h-100'
