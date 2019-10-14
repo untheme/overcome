@@ -38,10 +38,14 @@
                 <div class="<?php echo trim(implode(' ', $item_class));?>">
                     <div class="ef5-counter-wrap-inner">
                         <?php 
-                            $this->counter_icon($atts,$i);
-                            $this->counter_number($atts,$i);
-                            $this->counter_title($atts,$i);
-                            $this->counter_desc($atts,$i);
+                            switch ($layout_template) {
+                                default:
+                                    $this->counter_icon($atts,$i);
+                                    $this->counter_number($atts,$i);
+                                    $this->counter_title($atts,$i);
+                                    $this->counter_desc($atts,$i);
+                                    break;
+                            }
                         ?>
                     </div>
     			</div>
