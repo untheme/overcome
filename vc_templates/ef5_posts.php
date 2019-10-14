@@ -57,21 +57,26 @@
             </div>
         <?php
                 break;
-            default:
+            case '2':
+                $item_css_class[] = 'ef5-rounded-10 ef5-shadow-hover-1 overlay-wrap';
                 $d = 0;
                 while($posts->have_posts()){
                     $d++;
                     $posts->the_post();
+                    $after = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align"><a class="text-36 text-white" href="'.get_the_permalink().'"><span class="fa fa-link"></span></a></div></div>';
                 ?>
                 <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
                 	
                 	<div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
-                        <?php 
-                            overcome_post_media([
-                                'thumbnail_size' => '', 
-                                'default_thumb'  => true
-                            ]);
-                        ?>
+                        <div class="relative">
+                            <?php 
+                                overcome_post_media([
+                                    'thumbnail_size' => '', 
+                                    'default_thumb'  => true,
+                                    'after'          => $after
+                                ]);
+                            ?>
+                        </div>
                         <?php 
                             overcome_post_header([
                                 'before_args' => ['show_cat'=> '1'], 
