@@ -9,13 +9,13 @@ function overcome_loop_donate_info($args = []){
     		default:
 	?>
 		<div class="ef5-loop-donate-info row justify-content-between">
-			<div class="col-md-6">
+			<div class="col-auto">
 				<?php ef5payments_donation_raised([
 					'label' => esc_html__('Donate so far:','overcome'),
 					'class'	=> 'ef5-donation-raised'
 				]); ?>
 			</div>
-			<div class="col-md-6">
+			<div class="col-auto">
 				<?php 
 					ef5payments_donation_donate_button([
 						'class' => 'ef5-btn ef5-btn-md accent outline2'
