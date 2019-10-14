@@ -78,10 +78,7 @@
                                 ?>
                             </div>
                             <?php 
-                                overcome_post_header([
-                                    'before_args' => ['show_cat'=> '1'], 
-                                    'after_args'  => ['show_cat' => false,'show_author' => '1', 'show_date'=> '1', 'show_cmt' => '1', 'show_view' => '0', 'show_like' => '0', 'sep' => '|' ]]);
-
+                                overcome_post_title([]);
                                 overcome_post_excerpt([
                                     'show_excerpt' => '1', 
                                     'length'       => '15', 
