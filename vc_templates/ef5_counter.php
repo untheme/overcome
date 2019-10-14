@@ -34,7 +34,7 @@
                     break;
             }
             for($i=1;$i<=$columns;$i++) { 
-                $this->counter_icon($atts,$i);
+                echo $this->counter_icon($atts,$i);
             }
         ?>
     </div>
