@@ -142,7 +142,7 @@ function overcome_story_raised_html($args, $raised){
 // Loop story info
 function overcome_loop_story_info(){
 	$post_type = get_post_type(get_the_ID());
-    if(in_array($post_type, apply_filters('ef5payments_payment_attach_post_types',['ef5_donation']))){
+    if(class_exists('EF5_Payments') && in_array($post_type, apply_filters('ef5payments_payment_attach_post_types',['ef5_donation']))){
 	?>
 		<div class="ef5-loop-story-info row justify-content-between">
 			<div class="col-md-6">
