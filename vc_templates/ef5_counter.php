@@ -41,7 +41,7 @@
                             switch ($layout_template) {
                                 case '2':
                                     $this->counter_icon($atts,$i,['class'=>'mb-25']);
-                                    $this->counter_title($atts,$i);
+                                    $this->counter_title($atts,$i,['class'=>'font-style-500']);
                                     $this->counter_desc($atts,$i);
                                     $this->counter_number($atts,$i,['class'=>'mt-13']);
                                     break;
