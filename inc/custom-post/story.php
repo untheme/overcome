@@ -54,7 +54,7 @@ function overcome_cpts_stories_tax($taxo) {
 }
 
 // Support Payment 
-add_filter('ef5payments_post_type_support','ef5payments_post_type_stories');
+//add_filter('ef5payments_post_type_support','ef5payments_post_type_stories');
 //add_filter('ef5payments_metabox_attach_post_types','ef5payments_post_type_stories');
 //add_filter('ef5payments_payment_attach_post_types','ef5payments_post_type_stories');
 
