@@ -66,14 +66,14 @@ function ef5payments_post_type_stories($post_type){
 // Elements function
 function overcome_story_goal($args = []){
     $post_type = get_post_type(get_the_ID());
-    if($post_type !== 'ef5_story') return;
+    if($post_type !== 'ef5_stories') return;
 
     $args = wp_parse_args($args,[
         'label' => esc_html__('Donation Goal:','overcome'),
         'class' => ''
     ]);
     $post_type = get_post_type(get_the_ID());
-    if($post_type !== 'ef5_story') return;
+    if($post_type !== 'ef5_stories') return;
 
     $meta = apply_filters('ef5payments_get_post_meta',[],get_the_ID(),false);
     $donation_goal = (int)$meta['donation_goal'];
@@ -105,7 +105,7 @@ function overcome_story_goal_html($args, $goal){
 
 function overcome_story_raised($args = []){
     $post_type = get_post_type(get_the_ID());
-    if($post_type !== 'ef5_story') return;
+    if($post_type !== 'ef5_stories') return;
 
     $args = wp_parse_args($args,[
         'label' => esc_html__('Donate so far:','overcome'),
@@ -143,7 +143,7 @@ function overcome_story_raised_html($args, $raised){
 function overcome_loop_story_info(){
 	$post_type = get_post_type(get_the_ID());
 	var_dump($post_type );
-    if($post_type !== 'ef5_story') return;
+    if($post_type !== 'ef5_stories') return;
 	?>
 	<div class="ef5-loop-story-info row justify-content-between">
 		<div class="col-md-6">
