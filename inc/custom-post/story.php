@@ -5,9 +5,9 @@
  * This custom make some custom to Story
  *
  */
-add_filter('ef5_extra_post_type_stories', '__return_false');
+add_filter('ef5_extra_post_type_stories', '__return_true');
 
-//add_filter('ef5_extra_post_types', 'overcome_cpts_stories', 10 , 1);
+add_filter('ef5_extra_post_types', 'overcome_cpts_stories', 10 , 1);
 function overcome_cpts_stories($post_types) {
 	$supported_stories = apply_filters('ef5_extra_post_type_stories', false);
     if($supported_stories) {
@@ -27,7 +27,7 @@ function overcome_cpts_stories($post_types) {
 	}
     return $post_types;
 }
-//add_filter('ef5_extra_taxonomies', 'overcome_cpts_stories_tax', 10 , 1);
+add_filter('ef5_extra_taxonomies', 'overcome_cpts_stories_tax', 10 , 1);
 function overcome_cpts_stories_tax($taxo) {
 	$supported_stories = apply_filters('ef5_extra_post_type_stories', false);
     if($supported_stories) {
