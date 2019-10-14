@@ -663,8 +663,7 @@ class WPBakeryShortCode_ef5_counter extends WPBakeryShortCode{
             if($add_icon === 'true' && !empty($icon) ): ?>
 				<span class="counter-icon"><span class="<?php echo esc_attr($icon); ?>" <?php if(!empty($icon_color)) :?>style="color:<?php echo esc_attr($icon_color);?>" <?php endif; ?>></span></span>
 			<?php endif;  
-    	}
-	}
+    }
 	protected function counter_number($atts, $args = []){
 		extract($atts);
 		$args = wp_parse_args($args, [
