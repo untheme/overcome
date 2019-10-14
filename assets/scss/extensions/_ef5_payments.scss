@@ -15,3 +15,18 @@
 		margin-top: 20px;
 	}
 }
+
+.ef5-loop-donate-info{
+	.ef5-share{
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: 500;
+		color: #777;
+		a{
+			color: #777;
+			&:hover{
+				color: $accent_color;
+			}
+		}
+	}
+}
