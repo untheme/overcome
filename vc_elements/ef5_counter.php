@@ -664,18 +664,38 @@ class WPBakeryShortCode_ef5_counter extends WPBakeryShortCode{
 				<span class="counter-icon"><span class="<?php echo esc_attr($icon); ?>" <?php if(!empty($icon_color)) :?>style="color:<?php echo esc_attr($icon_color);?>" <?php endif; ?>></span></span>
 			<?php endif;  
     }
-	protected function counter_number($atts, $args = []){
+	protected function counter_number($atts, $i, $args = []){
 		extract($atts);
 		$args = wp_parse_args($args, [
 			'class' => ''
 		]);
-		for($i=1;$i<=$columns;$i++) { ?>
-            <?php
-                $suffix     = isset($atts['suffix'.$i]) ? $atts['suffix'.$i] : '';
-                $prefix     = isset($atts['prefix'.$i]) ? $atts['prefix'.$i] : '';
-                $digit      = isset($atts['digit'.$i]) ? $atts['digit'.$i] : '';
-                $digit_color      = isset($atts['digit'.$i.'_color']) ? $atts['digit'.$i.'_color'] : '';
-            if(!empty($title) || !empty($desc) || !empty($add_icon) || !empty($suffix) || !empty($prefix) || !empty($digit)) {
+		$item_class = ['counter-item'];
+		$columns = (int)$counter_column;
+        switch($columns){
+            case '2':
+                $item_class[] = 'col-md-6';
+                break;
+            case '3':
+                $item_class[] = 'col-md-4';
+                break;
+            case '4':
+                $item_class[] = 'col-md-6 col-lg-3';
+                break;
+            case '5':
+                $item_class[] = 'col-md-6 col-lg-1/5';
+                break;
+            case '6':
+                $item_class[] = 'col-md-4 col-lg-2';
+                break;
+            default:
+                $item_class[] = 'col-12';
+                break;
+        }
+        $suffix     = isset($atts['suffix'.$i]) ? $atts['suffix'.$i] : '';
+        $prefix     = isset($atts['prefix'.$i]) ? $atts['prefix'.$i] : '';
+        $digit      = isset($atts['digit'.$i]) ? $atts['digit'.$i] : '';
+        $digit_color      = isset($atts['digit'.$i.'_color']) ? $atts['digit'.$i.'_color'] : '';
+            if(!empty($suffix) || !empty($prefix) || !empty($digit)) {
                 /* call icon font css */
                 vc_icon_element_fonts_enqueue($i_type);
             ?>
