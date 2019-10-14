@@ -653,6 +653,7 @@ class WPBakeryShortCode_ef5_counter extends WPBakeryShortCode{
         $i_type     = isset($atts['i'.$i.'_type']) ? $atts['i'.$i.'_type'] : '';
         $add_icon   = isset($atts['add_icon'.$i]) ? $atts['add_icon'.$i] : '';
         $icon       = isset($atts['i'.$i.'_icon_'.$i_type]) ? $atts['i'.$i.'_icon_'.$i_type] : '';
+        var_dump($add_icon);
         if($add_icon !== 'true' && empty($icon) ) return;
         $icon_color = isset($atts['icon'.$i.'_color']) ? $atts['icon'.$i.'_color'] : '';
         /* call icon font css */
