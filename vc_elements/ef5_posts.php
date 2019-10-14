@@ -200,7 +200,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
             'class' => ''
         ]);
 
-        $overlay_content = '<div class="overlay ef5-bg-overlay d-block opacity-1 ef5-rounded-10"><div class="overlay-inner center-align w-100 p-30 pl-lg-75 pr-lg-75">';
+        $overlay_content = '<div class="overlay ef5-bg-overlay ef5-rounded-10"><div class="overlay-inner center-align w-100 p-30 pl-lg-75 pr-lg-75">';
         $overlay_content .= overcome_post_title(['echo' => false, 'class'=>'text-lg-36 lh-lg-46 text-white pb-15 pb-lg-58']);
         $overlay_content .= overcome_post_excerpt([
             'show_excerpt' => '1', 
@@ -232,7 +232,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
             'class' => ''
         ]);
         $css_class = ['ef5-post-item-inner','row', $args['class']];
-        $after = '<div class="overlay ef5-bg-overlay d-block opacity-1"><div class="overlay-inner center-align"><a class="text-36 text-white" href="'.get_the_permalink().'"><span class="fa fa-link"></span></a></div></div>'
+        $after = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align"><a class="text-36 text-white" href="'.get_the_permalink().'"><span class="fa fa-link"></span></a></div></div>'
         ?>
         <div class="ef5-post-item ef5-rounded-10 ef5-hover-shadow-1 transition">
             <div class="<?php echo trim(implode(' ', $css_class));?>">
