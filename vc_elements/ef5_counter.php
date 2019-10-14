@@ -699,9 +699,6 @@ class WPBakeryShortCode_ef5_counter extends WPBakeryShortCode{
         ?>
             <div class="<?php echo trim(implode(' ', $item_class));?>">
                 <div class="ef5-counter-wrap-inner">
-                    <?php if( $add_icon === 'true' && !empty($icon) ): ?>
-    					<span class="counter-icon"><span class="<?php echo esc_attr($icon); ?>" <?php if(!empty($icon_color)) :?>style="color:<?php echo esc_attr($icon_color);?>" <?php endif; ?>></span></span>
-    				<?php endif; ?>
     				<div class="ef5-counter-wrap" data-prefix="<?php echo esc_attr($prefix);?>" data-suffix="<?php echo esc_attr($suffix);?>" data-type="<?php echo esc_attr($counter_type);?>" data-digit="<?php echo esc_attr($digit);?>">
                         <?php if(!empty($prefix)) echo '<span class="prefix">'.esc_html($prefix).'</span>'; ?>
                         <span class="ef5-counter" <?php if(!empty($digit_color)): ?> style="color:<?php echo esc_attr($digit_color);?>;"<?php endif;?>><?php echo esc_attr($digit); ?></span>
