@@ -10,7 +10,9 @@ function overcome_loop_donate_info($args = []){
 	?>
 		<div class="ef5-loop-donate-info row justify-content-between">
 			<div class="col-md-6">
-				<?php ef5payments_donation_raised(); ?>
+				<?php ef5payments_donation_raised([
+					'label' => esc_html__('Donate so far:','overcome')
+				]); ?>
 			</div>
 			<div class="col-md-6">
 				<?php 
