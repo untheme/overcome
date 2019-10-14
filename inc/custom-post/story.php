@@ -142,21 +142,23 @@ function overcome_story_raised_html($args, $raised){
 // Loop story info
 function overcome_loop_story_info(){
 	$post_type = get_post_type(get_the_ID());
-	var_dump($post_type );
-    if($post_type !== 'ef5_stories') return;
+    if($post_type === 'ef5_stories'){
 	?>
-	<div class="ef5-loop-story-info row justify-content-between">
-		<div class="col-md-6">
-			<?php overcome_story_raised(); ?>
+		<div class="ef5-loop-story-info row justify-content-between">
+			<div class="col-md-6">
+				<?php overcome_story_raised(); ?>
+			</div>
+			<div class="col-md-6">
+				<?php 
+					overcome_story_donate_button(); 
+					overcome_post_share(['show_share' => '1','title'=>esc_html__('Share:','overcome')]);
+				?>
+			</div>
 		</div>
-		<div class="col-md-6">
-			<?php 
-				overcome_story_donate_button(); 
-				overcome_post_share(['show_share' => '1','title'=>esc_html__('Share:','overcome')]);
-			?>
-		</div>
-	</div>
 	<?php
+	} else {
+		overcome_post_read_more(['show_readmore' => '1']); 
+	}
 }
 function overcome_story_donate_button($args = [])
 {   
