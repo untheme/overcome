@@ -7,7 +7,7 @@
  */
 add_filter('ef5_extra_post_type_event', '__return_false');
 
-add_filter('ef5_extra_post_types', 'overcome_cpts_event', 10 , 1);
+//add_filter('ef5_extra_post_types', 'overcome_cpts_event', 10 , 1);
 function overcome_cpts_event($post_types) {
 	$supported_event = apply_filters('ef5_extra_post_type_event', false);
     if($supported_event) {
@@ -27,7 +27,7 @@ function overcome_cpts_event($post_types) {
 	}
     return $post_types;
 }
-add_filter('ef5_extra_taxonomies', 'overcome_cpts_event_tax', 10 , 1);
+//add_filter('ef5_extra_taxonomies', 'overcome_cpts_event_tax', 10 , 1);
 function overcome_cpts_event_tax($taxo) {
 	$supported_event = apply_filters('ef5_extra_post_type_event', false);
     if($supported_event) {
