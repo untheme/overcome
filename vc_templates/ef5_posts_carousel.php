@@ -63,7 +63,7 @@
             <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?> hoverdir-wrap fade-in" style="animation-delay: <?php echo esc_html($d*100);?>ms">
             <?php
                 switch ($layout_template) {
-                    default:
+                    case '2':
                     if(get_post_type() === 'ef5_donation')
                         $overlay = ef5payments_donation_donate_button(['echo' => false,'class'=>'ef5-btn ef5-btn-md accent outline']);
                     else 

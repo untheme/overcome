@@ -67,29 +67,7 @@
                 ?>
                 <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
                 	<div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
-                        <div class="relative">
-                            <?php 
-                                overcome_post_media([
-                                    'thumbnail_size' => '', 
-                                    'default_thumb'  => true,
-                                    'after'          => $after
-                                ]);
-                            ?>
-                        </div>
-                        <div class="pl-15 pr-15 pl-lg-35 pr-lg-35 pt-25 pb-25">
-                            <?php 
-                                overcome_post_title([
-                                    'heading_tag' => 'text-22',
-                                    'class'       => 'pb-15'  
-                                ]);
-                                overcome_post_excerpt([
-                                    'show_excerpt' => '1', 
-                                    'length'       => '15', 
-                                    'more'         => ''
-                                ]);
-                                overcome_loop_donate_info();
-                            ?>
-                        </div>
+                        <?php overcome_vc_post_layout2($atts); ?>
                     </div>
                 </div>
                 <?php
