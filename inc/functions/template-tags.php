@@ -417,7 +417,8 @@ if(!function_exists('overcome_post_share')){
             'show_title'  => true,
             'title'       => esc_html__('Share this article','overcome'),
             'social_args' => [],
-            'echo'        => true
+            'echo'        => true,
+            'show_all'    => ''
         );
         $args = wp_parse_args($args, $defaults);
         extract($args);
@@ -442,7 +443,7 @@ if(!function_exists('overcome_post_share')){
             $show_tw    = overcome_get_theme_opt( 'archive_share_tw', '1' );
             $show_gplus = overcome_get_theme_opt( 'archive_share_gplus', '1' );
             $show_pin   = overcome_get_theme_opt( 'archive_share_pin', '1' );
-            $show_all   = overcome_get_theme_opt( 'archive_share_all', '1' );
+            $show_all   = !empty($args['show_all']) ? $args['show_all'] : overcome_get_theme_opt( 'archive_share_all', '1' );
         }
         ob_start();
         if($show_fb == '1' || $show_tw == '1' || $show_gplus == '1' || $show_pin == '1' || $show_all == '1') {
