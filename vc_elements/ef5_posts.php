@@ -247,9 +247,9 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                     ]);   
                 ?>
                 <div class="col">
-                    <div class="pl-15 pr-15 pl-xs-0 pr-xs-0">
+                    <div class="pt-17 p-15 pl-xs-0 pr-xs-0">
                         <?php 
-                            overcome_post_title(['class'=>'text-22 pb-5 pt-17']);
+                            overcome_post_title(['class'=>'text-22 pb-5']);
                             overcome_post_excerpt([
                                 'show_excerpt' => '1', 
                                 'length'       => '15', 
