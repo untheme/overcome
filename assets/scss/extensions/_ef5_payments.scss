@@ -17,6 +17,14 @@
 }
 
 .ef5-loop-donate-info{
+	.ef5-loop-donate-info-inner{
+		margin-top: -15px;
+		margin-bottom: -15px;
+		> div {
+			padding-top: 15px;
+			margin-bottom: 15px;
+		}
+	}
 	.ef5-shares{
 		font-size: 12px;
 		text-transform: uppercase;
