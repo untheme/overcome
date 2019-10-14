@@ -142,6 +142,7 @@ function overcome_story_raised_html($args, $raised){
 // Loop story info
 function overcome_loop_story_info(){
 	$post_type = get_post_type(get_the_ID());
+	var_dump($post_type );
     if($post_type !== 'ef5_story') return;
 	?>
 	<div class="ef5-loop-story-info row justify-content-between">
