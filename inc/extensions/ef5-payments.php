@@ -18,7 +18,7 @@ function overcome_loop_donate_info($args = []){
 			<div class="col-md-6">
 				<?php 
 					ef5payments_donation_donate_button([
-						'class' => 'ef5-btn ef5-btn-md accent2 outline2'
+						'class' => 'ef5-btn ef5-btn-md accent outline2'
 					]); 
 					overcome_post_share(['show_share' => '1','title' => esc_html__('Share:','overcome')]);
 				?>
