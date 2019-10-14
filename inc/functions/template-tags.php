@@ -450,7 +450,7 @@ if(!function_exists('overcome_post_share')){
         ?>
         <div class="<?php echo trim(implode(' ', $classes)); ?>">
             <?php if($show_title): ?>
-                <div class="row justify-content-between align-items-center">
+                <div class="row align-items-center">
                     <div class="col-auto share-title">
                         <?php echo esc_html($args['title']); ?>
                     </div>
