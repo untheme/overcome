@@ -38,7 +38,7 @@
                 $post_count++;
                 $posts->the_post();
                 if($post_count === 1){
-                    $this->overcome_posts_featured_item($atts,['class' => 'ef5-rounded-10']);
+                    $this->overcome_posts_featured_item($atts,['class' => 'ef5-rounded-10 overlay-wrap']);
                 }
             }
             wp_reset_postdata();
@@ -49,7 +49,7 @@
                         $post_count2++;
                         $posts->the_post();
                         if($post_count2 != 1){
-                            $this->overcome_posts_item($atts);
+                            $this->overcome_posts_item($atts,['class'=>'overlay-wrap']);
                         }
                     }
                     wp_reset_postdata();
