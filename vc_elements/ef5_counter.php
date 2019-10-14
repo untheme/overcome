@@ -710,13 +710,11 @@ class WPBakeryShortCode_ef5_counter extends WPBakeryShortCode{
 		$args = wp_parse_args($args, [
 			'class' => ''
 		]);
-		for($i=1;$i<=$columns;$i++) {
-            $title      = isset($atts['title'.$i]) ? $atts['title'.$i] : '';
-            if(!empty($title)) {
-            ?>
-	        <div class="counter-title"><?php echo esc_html($title);?></div>
-	    	<?php 
-	    	}
+        $title      = isset($atts['title'.$i]) ? $atts['title'.$i] : '';
+        if(!empty($title)) {
+        ?>
+        	<div class="counter-title"><?php echo esc_html($title);?></div>
+    	<?php 
     	}
 	}
 	protected function counter_desc($atts, $args = []){
@@ -724,13 +722,11 @@ class WPBakeryShortCode_ef5_counter extends WPBakeryShortCode{
 		$args = wp_parse_args($args, [
 			'class' => ''
 		]);
-		for($i=1;$i<=$columns;$i++) {
-            $desc = isset($atts['desc'.$i]) ? $atts['desc'.$i] : '';
-            if(!empty($desc)) {
-            ?>
-	        <div class="counter-desc"><?php echo overcome_html($desc);?></div>
-	    	<?php 
-	    	}
+        $desc = isset($atts['desc'.$i]) ? $atts['desc'.$i] : '';
+        if(!empty($desc)) {
+        ?>
+        	<div class="counter-desc"><?php echo overcome_html($desc);?></div>
+    	<?php 
     	}
 	}
 }
