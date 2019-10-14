@@ -12,7 +12,7 @@ function overcome_loop_donate_info($args = []){
 			<div class="col-md-6">
 				<?php ef5payments_donation_raised([
 					'label' => esc_html__('Donate so far:','overcome'),
-					'class'	=> 'ef5-layout-2'
+					'class'	=> 'ef5-donation-raised'
 				]); ?>
 			</div>
 			<div class="col-md-6">
