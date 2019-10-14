@@ -39,6 +39,13 @@
                     <div class="ef5-counter-wrap-inner">
                         <?php 
                             switch ($layout_template) {
+                                case '2':
+                                    $this->counter_icon($atts,$i);
+                                    $this->counter_title($atts,$i);
+                                    $this->counter_desc($atts,$i);
+                                    $this->counter_number($atts,$i);
+                                    break;
+                                
                                 default:
                                     $this->counter_icon($atts,$i);
                                     $this->counter_number($atts,$i);
