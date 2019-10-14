@@ -696,8 +696,6 @@ class WPBakeryShortCode_ef5_counter extends WPBakeryShortCode{
         $digit      = isset($atts['digit'.$i]) ? $atts['digit'.$i] : '';
         $digit_color      = isset($atts['digit'.$i.'_color']) ? $atts['digit'.$i.'_color'] : '';
         if(!empty($suffix) || !empty($prefix) || !empty($digit)) {
-            /* call icon font css */
-            vc_icon_element_fonts_enqueue($i_type);
         ?>
             <div class="<?php echo trim(implode(' ', $item_class));?>">
                 <div class="ef5-counter-wrap-inner">
