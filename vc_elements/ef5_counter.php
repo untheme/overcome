@@ -650,83 +650,59 @@ class WPBakeryShortCode_ef5_counter extends WPBakeryShortCode{
 		return parent::content($atts, $content);
 	}
 	protected function counter_icon($atts, $i, $args = []){
-		extract($atts);
-		$args = wp_parse_args($args, [
-			'class' => ''
-		]);
         $i_type     = isset($atts['i'.$i.'_type']) ? $atts['i'.$i.'_type'] : '';
         $add_icon   = isset($atts['add_icon'.$i]) ? $atts['add_icon'.$i] : '';
         $icon       = isset($atts['i'.$i.'_icon_'.$i_type]) ? $atts['i'.$i.'_icon_'.$i_type] : '';
+        if($add_icon !== 'true' && empty($icon) ) return;
         $icon_color = isset($atts['icon'.$i.'_color']) ? $atts['icon'.$i.'_color'] : '';
         /* call icon font css */
         vc_icon_element_fonts_enqueue($i_type);
-            if($add_icon === 'true' && !empty($icon) ): ?>
-				<span class="counter-icon"><span class="<?php echo esc_attr($icon); ?>" <?php if(!empty($icon_color)) :?>style="color:<?php echo esc_attr($icon_color);?>" <?php endif; ?>></span></span>
-			<?php endif;  
+        $args = wp_parse_args($args, [
+			'class' => ''
+		]);
+		$css_classes = ['counter-icon', $args['class']];
+		?>
+			<span class="<?php echo trim(implode(' ', $css_classes));?>"><span class="<?php echo esc_attr($icon); ?>" <?php if(!empty($icon_color)) :?>style="color:<?php echo esc_attr($icon_color);?>" <?php endif; ?>></span></span>
+		<?php 
     }
 	protected function counter_number($atts, $i, $args = []){
-		extract($atts);
+		$digit       = isset($atts['digit'.$i]) ? $atts['digit'.$i] : '';
+		if(empty($digit)) return;
 		$args = wp_parse_args($args, [
 			'class' => ''
 		]);
-		$item_class = ['counter-item'];
-		$columns = (int)$counter_column;
-        switch($columns){
-            case '2':
-                $item_class[] = 'col-md-6';
-                break;
-            case '3':
-                $item_class[] = 'col-md-4';
-                break;
-            case '4':
-                $item_class[] = 'col-md-6 col-lg-3';
-                break;
-            case '5':
-                $item_class[] = 'col-md-6 col-lg-1/5';
-                break;
-            case '6':
-                $item_class[] = 'col-md-4 col-lg-2';
-                break;
-            default:
-                $item_class[] = 'col-12';
-                break;
-        }
+		$css_classes = ['ef5-counter-wrap', $args['class']];
 		$suffix      = isset($atts['suffix'.$i]) ? $atts['suffix'.$i] : '';
 		$prefix      = isset($atts['prefix'.$i]) ? $atts['prefix'.$i] : '';
-		$digit       = isset($atts['digit'.$i]) ? $atts['digit'.$i] : '';
 		$digit_color = isset($atts['digit'.$i.'_color']) ? $atts['digit'.$i.'_color'] : '';
-        if(!empty($suffix) || !empty($prefix) || !empty($digit)) {
         ?>
-			<div class="ef5-counter-wrap" data-prefix="<?php echo esc_attr($prefix);?>" data-suffix="<?php echo esc_attr($suffix);?>" data-type="<?php echo esc_attr($counter_type);?>" data-digit="<?php echo esc_attr($digit);?>">
-                <?php if(!empty($prefix)) echo '<span class="prefix">'.esc_html($prefix).'</span>'; ?>
+			<div class="<?php echo trim(implode(' ', $css_classes));?>" data-prefix="<?php echo esc_attr($prefix);?>" data-suffix="<?php echo esc_attr($suffix);?>" data-type="<?php echo esc_attr($counter_type);?>" data-digit="<?php echo esc_attr($digit);?>">
+                <?php if(!empty($prefix)) echo '<span class="prefix">'.overcome_html($prefix).'</span>'; ?>
                 <span class="ef5-counter" <?php if(!empty($digit_color)): ?> style="color:<?php echo esc_attr($digit_color);?>;"<?php endif;?>><?php echo esc_attr($digit); ?></span>
-                <?php if(!empty($suffix)) echo '<span class="suffix">'.esc_html($suffix).'</span>'; ?>
+                <?php if(!empty($suffix)) echo '<span class="suffix">'.overcome_html($suffix).'</span>'; ?>
 			</div>
     	<?php 
-    	}
     }
-	protected function counter_title($atts, $i, $args = []){
-		extract($atts);
-		$args = wp_parse_args($args, [
+	protected function counter_title($atts, $i, $args = []){		
+        $title      = isset($atts['title'.$i]) ? $atts['title'.$i] : '';
+        if(empty($title)) return;
+        $args = wp_parse_args($args, [
 			'class' => ''
 		]);
-        $title      = isset($atts['title'.$i]) ? $atts['title'.$i] : '';
-        if(!empty($title)) {
+        $css_classes = ['counter-title', $args['class']];
         ?>
-        	<div class="counter-title"><?php echo esc_html($title);?></div>
+        	<div class="<?php echo trim(implode(' ', $css_classes));?>"><?php echo overcome_html($title);?></div>
     	<?php 
-    	}
 	}
 	protected function counter_desc($atts, $i, $args = []){
-		extract($atts);
-		$args = wp_parse_args($args, [
+        $desc = isset($atts['desc'.$i]) ? $atts['desc'.$i] : '';
+        if(empty($desc)) return;
+        $args = wp_parse_args($args, [
 			'class' => ''
 		]);
-        $desc = isset($atts['desc'.$i]) ? $atts['desc'.$i] : '';
-        if(!empty($desc)) {
+        $css_classes = ['counter-desc', $args['class']];
         ?>
-        	<div class="counter-desc"><?php echo overcome_html($desc);?></div>
+        	<div class="<?php echo trim(implode(' ', $css_classes));?>"><?php echo overcome_html($desc);?></div>
     	<?php 
-    	}
 	}
 }
