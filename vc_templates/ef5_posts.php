@@ -87,7 +87,7 @@
                                     'length'       => '15', 
                                     'more'         => ''
                                 ]);
-                                overcome_loop_story_info();
+                                overcome_loop_donate_info();
                             ?>
                         </div>
                     </div>
