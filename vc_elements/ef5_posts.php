@@ -201,7 +201,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
         ]);
 
         $overlay_content = '<div class="overlay ef5-bg-overlay ef5-rounded-10"><div class="overlay-inner center-align w-100 p-30 pl-lg-75 pr-lg-75">';
-        $overlay_content .= overcome_post_title(['echo' => false, 'class'=>'text-22 text-xl-36 lh-xl-46 text-white pb-15 pb-xl-58']);
+        $overlay_content .= overcome_post_title(['echo' => false, 'class'=>'text-22 text-md-36 text-lg-22 text-xl-36 lh-xl-46 text-white pb-15 pb-xl-58']);
         $overlay_content .= overcome_post_excerpt([
             'show_excerpt' => '1', 
             'length'       => '15', 
