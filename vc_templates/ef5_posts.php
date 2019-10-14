@@ -67,28 +67,29 @@
                 ?>
                 <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
                 	<div class="post-grid-item-inner ef5-rounded-10 overlay-wrap">
-                	<div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
-                        <div class="relative">
+                    	<div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                            <div class="relative">
+                                <?php 
+                                    overcome_post_media([
+                                        'thumbnail_size' => '', 
+                                        'default_thumb'  => true,
+                                        'after'          => $after
+                                    ]);
+                                ?>
+                            </div>
                             <?php 
-                                overcome_post_media([
-                                    'thumbnail_size' => '', 
-                                    'default_thumb'  => true,
-                                    'after'          => $after
+                                overcome_post_header([
+                                    'before_args' => ['show_cat'=> '1'], 
+                                    'after_args'  => ['show_cat' => false,'show_author' => '1', 'show_date'=> '1', 'show_cmt' => '1', 'show_view' => '0', 'show_like' => '0', 'sep' => '|' ]]);
+
+                                overcome_post_excerpt([
+                                    'show_excerpt' => '1', 
+                                    'length'       => '15', 
+                                    'more'         => ''
                                 ]);
+                                overcome_post_read_more(['show_readmore' => '1']); 
                             ?>
                         </div>
-                        <?php 
-                            overcome_post_header([
-                                'before_args' => ['show_cat'=> '1'], 
-                                'after_args'  => ['show_cat' => false,'show_author' => '1', 'show_date'=> '1', 'show_cmt' => '1', 'show_view' => '0', 'show_like' => '0', 'sep' => '|' ]]);
-
-                            overcome_post_excerpt([
-                                'show_excerpt' => '1', 
-                                'length'       => '15', 
-                                'more'         => ''
-                            ]);
-                            overcome_post_read_more(['show_readmore' => '1']); 
-                        ?>
                     </div>
                 </div>
                 <?php
