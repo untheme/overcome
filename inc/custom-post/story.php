@@ -152,7 +152,7 @@ function overcome_loop_story_info(){
 		<div class="col-md-6">
 			<?php 
 				overcome_story_donate_button(); 
-				overcome_post_share(['show_share' => '1']);
+				overcome_post_share(['show_share' => '1','title'=>esc_html__('Share:','overcome')]);
 			?>
 		</div>
 	</div>
