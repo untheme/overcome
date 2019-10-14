@@ -691,10 +691,10 @@ class WPBakeryShortCode_ef5_counter extends WPBakeryShortCode{
                 $item_class[] = 'col-12';
                 break;
         }
-        $suffix     = isset($atts['suffix'.$i]) ? $atts['suffix'.$i] : '';
-        $prefix     = isset($atts['prefix'.$i]) ? $atts['prefix'.$i] : '';
-        $digit      = isset($atts['digit'.$i]) ? $atts['digit'.$i] : '';
-        $digit_color      = isset($atts['digit'.$i.'_color']) ? $atts['digit'.$i.'_color'] : '';
+		$suffix      = isset($atts['suffix'.$i]) ? $atts['suffix'.$i] : '';
+		$prefix      = isset($atts['prefix'.$i]) ? $atts['prefix'.$i] : '';
+		$digit       = isset($atts['digit'.$i]) ? $atts['digit'.$i] : '';
+		$digit_color = isset($atts['digit'.$i.'_color']) ? $atts['digit'.$i.'_color'] : '';
         if(!empty($suffix) || !empty($prefix) || !empty($digit)) {
         ?>
 			<div class="ef5-counter-wrap" data-prefix="<?php echo esc_attr($prefix);?>" data-suffix="<?php echo esc_attr($suffix);?>" data-type="<?php echo esc_attr($counter_type);?>" data-digit="<?php echo esc_attr($digit);?>">
