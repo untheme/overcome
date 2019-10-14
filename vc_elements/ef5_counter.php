@@ -717,7 +717,7 @@ class WPBakeryShortCode_ef5_counter extends WPBakeryShortCode{
     	<?php 
     	}
 	}
-	protected function counter_desc($atts, $args = []){
+	protected function counter_desc($atts, $i, $args = []){
 		extract($atts);
 		$args = wp_parse_args($args, [
 			'class' => ''
