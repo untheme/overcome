@@ -15,6 +15,10 @@
 	}
 	.counter-icon{
 		font-size: 90px;
+		line-height: 1;
+		display: inline-block;
+	    overflow: hidden;
+	    vertical-align: top;
 		color: $accent_color;
 	}
 }
