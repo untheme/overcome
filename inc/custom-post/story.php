@@ -62,3 +62,132 @@ function ef5payments_post_type_stories($post_type){
 	$post_type[] = 'ef5_stories';
 	return $post_type;
 }
+
+// Elements function
+function overcome_story_goal($args = []){
+    $post_type = get_post_type(get_the_ID());
+    if($post_type !== 'ef5_story') return;
+
+    $args = wp_parse_args($args,[
+        'label' => esc_html__('Donation Goal:','overcome'),
+        'class' => ''
+    ]);
+    $post_type = get_post_type(get_the_ID());
+    if($post_type !== 'ef5_story') return;
+
+    $meta = apply_filters('ef5payments_get_post_meta',[],get_the_ID(),false);
+    $donation_goal = (int)$meta['donation_goal'];
+    $params = [
+        'currency'    => $meta['currency'],
+        'amount_mask' => $meta['amount_mask']
+    ];
+    $goal = apply_filters('ef5payments_payment_create_amount', '', $donation_goal, $params);
+    $goal = '<span class="ef5-value">'.$goal.'</span>';
+    $args['label'] = '<span class="ef5-label">'.$args['label'].'</span>';
+
+    $classes = ['ef5-donation-goal', $args['class']];
+    ?>
+        <span class="<?php echo trim(implode(' ', $classes)); ?>"><?php
+                echo apply_filters('overcome_story_goal_html', $args['label'].' '.$goal, $goal);
+            ?></span>
+    <?php
+}
+
+//add_filter('overcome_story_goal_html','overcome_story_goal_html', 10, 2);
+function overcome_story_goal_html($args, $goal){
+    $args = [
+        'label' => 'label',
+        'before' => 'before',
+        'after' => 'after'
+    ];
+    return $args['label']. $args['before'] . $goal . $args['after'];
+}
+
+function overcome_story_raised($args = []){
+    $post_type = get_post_type(get_the_ID());
+    if($post_type !== 'ef5_story') return;
+
+    $args = wp_parse_args($args,[
+        'label' => esc_html__('Donate so far:','overcome'),
+        'class' => ''
+    ]);
+    $meta = apply_filters('ef5payments_get_post_meta',[],get_the_ID(),false);
+    $donation_raised = (int)$meta['donation_raised'];
+    $params = [
+        'currency'    => $meta['currency'],
+        'amount_mask' => $meta['amount_mask']
+    ];
+    $raised = apply_filters('ef5payments_payment_create_amount', '', $donation_raised, $params);
+    $raised = '<span class="ef5-value">'.$raised.'</span>';
+    $args['label'] = '<span class="ef5-label">'.$args['label'].'</span>';
+    $classes = ['ef5-donation-raised', $args['class']];
+
+    ?>
+        <span class="<?php echo trim(implode(' ', $classes));?>"><?php
+                echo apply_filters('overcome_story_raised_html', $args['label'].' '.$raised, $raised);
+            ?></span>
+    <?php
+}
+
+//add_filter('overcome_story_raised_html','overcome_story_raised_html', 10, 2);
+function overcome_story_raised_html($args, $raised){
+    $args = [
+        'label' => 'label',
+        'before' => 'before',
+        'after' => 'after'
+    ];
+    return $args['label']. $args['before']. $raised . $args['after'];
+}
+
+// Loop story info
+function overcome_loop_story_info(){
+	$post_type = get_post_type(get_the_ID());
+    if($post_type !== 'ef5_story') return;
+	?>
+	<div class="ef5-loop-story-info row justify-content-between">
+		<div class="col-md-6">
+			<?php overcome_story_raised(); ?>
+		</div>
+		<div class="col-md-6">
+			<?php 
+				overcome_story_donate_button(); 
+				overcome_post_share(['show_share' => '1']);
+			?>
+		</div>
+	</div>
+	<?php
+}
+function overcome_story_donate_button($args = [])
+{   
+    wp_enqueue_script('bootstrap');
+    $params = wp_parse_args($args,[
+        'id'     => '',
+        'title'  => esc_html__('Donate Now','overcome'),
+        'class'  => 'ef5-btn',
+        'url'    => '#',
+        'target' => '_self',
+        'echo'   => true
+    ]);
+    $post_id = !empty($params['id']) ? $params['id'] : get_the_ID();
+    $data = apply_filters('ef5payments_get_payment_form_data',[
+        'class'        => '',
+        'data-options' => '',
+        'data-target'  => ''
+    ],$post_id);
+    $class = $params['class'].' '.$data['class'] ;
+    $url = !empty($params['url']) ? $params['url'] : '#';
+    $target = !empty($params['target']) ? $params['target'] : '_self';
+    if($params['echo']){
+    ?>
+    <a class="<?php echo esc_attr($class) ?>"
+       data-options="<?php echo esc_attr($data['data-options']) ?>"
+       data-target="<?php echo esc_attr($data['data-target']) ?>"
+       href="<?php echo esc_attr($url) ?>" target="<?php echo esc_attr($target) ?>" ><?php echo wp_kses_post($params['title']) ?></a>
+    <?php
+    } else {
+        return '<a class="'.esc_attr($class).'"
+       data-options="'.esc_attr($data['data-options']).'"
+       data-target="'.esc_attr($data['data-target']).'"
+       href="'.esc_attr($url).'" target="'.esc_attr($target).'" >'.esc_html($params['title']).'</a>';
+    } 
+}
