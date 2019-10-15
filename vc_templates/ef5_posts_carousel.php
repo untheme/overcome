@@ -86,7 +86,10 @@
                                 </div>
                                 <div class="col-12 align-self-end">
                                     <?php 
-                                        overcome_posted_on(['class'=>'text-white text-13 font-style-i']);
+                                        overcome_posted_on([
+                                            'class' => 'text-white text-13 font-style-i',
+                                            'icon'  => ''
+                                        ]);
 
                                         overcome_post_title([
                                             'heading_tag' => 'text-22 text-white font-style-500'
