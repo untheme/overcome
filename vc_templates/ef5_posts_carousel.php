@@ -60,7 +60,7 @@
                 $post_metas[] = overcome_posted_on(['show_date'=>'1','echo' => false]);
                 $post_metas[] = overcome_posted_by(['show_author'=>'1','author_avatar' => false, 'echo' => false]);
             ?>
-            <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?> hoverdir-wrap fade-in" style="animation-delay: <?php echo esc_html($d*100);?>ms">
+            <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?> overlay-wrap" style="animation-delay: <?php echo esc_html($d*100);?>ms">
             <?php
                 switch ($layout_template) {
                     case '2':
@@ -73,7 +73,7 @@
                         overcome_post_media([
                             'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
                             'default_thumb'  => true,
-                            'after'          => '<div class="hover-content d-flex align-items-center justify-content-center">'.$overlay.'</div>'
+                            'after'          => '<div class="overlay"><div class="overlay-inner center-align">'.$overlay.'</div></div>'
                         ]);
                     ?>
                     <div class="ef5-post-info">
