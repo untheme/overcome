@@ -60,8 +60,8 @@
                 $thumbnail_size_index++;
                 if($thumbnail_size_index >= count($thumbnail_size))
                     $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
+                if($thumbnail_size_index === 0) $large_item_class = 'ef5-large-item';
 
-                if($thumbnail_size_index == 0) $large_item_class = 'ef5-large-item'; 
                 $posts->the_post();
                 // Post Metas
                 $post_metas   = [];
