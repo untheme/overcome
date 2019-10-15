@@ -47,7 +47,7 @@ function overcome_post_donate_button($args = []){
     	$output = overcome_post_read_more($args);
     }
     if($args['echo']){
-    	echo $output;
+    	echo overcome_html($output);
     } else {
     	return $output;
     }

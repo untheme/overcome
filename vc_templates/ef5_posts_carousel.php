@@ -63,16 +63,17 @@
             <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?> overlay-wrap" style="animation-delay: <?php echo esc_html($d*100);?>ms">
             <?php
                 switch ($layout_template) {
+                    case '3':
+                        break;
                     case '2':
-                    //overcome_post_donate_button();
                     $overlay = overcome_post_donate_button(['echo' => false, 'class'=>'ef5-btn ef5-btn-md accent outline']);
-                    //var_dump($overlay);
             ?>	
             	<div class="<?php echo trim(implode(' ', $item_css_class)); ?> ef5-hover-shadow-1">
                     <?php 
                         overcome_post_media([
                             'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
                             'default_thumb'  => true,
+                            'img_class'      => $autowidth ? 'w-auto' : '',   
                             'after'          => '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">'.$overlay.'</div></div>'
                         ]);
                     ?>
