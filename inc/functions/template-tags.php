@@ -79,14 +79,15 @@ if ( ! function_exists( 'overcome_posted_on' ) ) :
             'after_date'  => '',
             'show_update' => false,
             'show_date'   => '1',
-            'echo'        => true  
+            'echo'        => true,
+            'date_format' => get_option('date_format')  
         ]);
         if($args['show_date'] !== '1') return;
 
         $time_string = '<span class="published" data-time="%1$s">%2$s</span>';
         $posted_time = sprintf( $time_string,
             esc_attr( get_the_date( 'c' ) ),
-            esc_html( get_the_date() )
+            date_i18n($args['date_format'], strtotime(get_the_date()))
         );
         $classes = ['ef5-date', 'ef5-posted-on', 'hint--top', $args['class']];
         if($args['show_update']) $classes[] = 'ef5-updated-on';

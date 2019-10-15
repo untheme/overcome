@@ -87,8 +87,9 @@
                                 <div class="col-12 align-self-end">
                                     <?php 
                                         overcome_posted_on([
-                                            'class' => 'text-white text-13 font-style-i',
-                                            'icon'  => ''
+                                            'class' => 'text-white text-13 font-style-400i',
+                                            'icon'  => '',
+                                            'date_format' => 'd M, Y'
                                         ]);
 
                                         overcome_post_title([
