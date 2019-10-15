@@ -72,9 +72,8 @@
             <?php
                 switch ($layout_template) {
                     case '4':
-                    $item_css_class = array_merge($item_css_class, [$large_item_class]);
                 ?>
-                    <div class="<?php echo trim(implode(' ', $item_css_class)); ?> ">
+                    <div class="<?php echo trim(implode(' ', $item_css_class)). ' '.$large_item_class; ?>">
                         <?php 
                             overcome_post_media([
                                 'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
