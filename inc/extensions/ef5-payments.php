@@ -38,6 +38,8 @@ function overcome_loop_donate_info($args = []){
 
 function overcome_post_donate_button($args = []){
 	$post_type = get_post_type();
+	var_dump($post_type);
+	var_dump(apply_filters('ef5payments_payment_attach_post_types',['ef5_donation']));
 	if(class_exists('EF5Payments') && in_array($post_type, apply_filters('ef5payments_payment_attach_post_types',['ef5_donation']))){
 		ef5payments_donation_donate_button($args);      
     } else {
