@@ -47,3 +47,12 @@
 		margin-top: 25px;
 	}
 }
+
+.ef5-post-item-layout-4{
+	.overlay{
+		padding: 30px;
+		@media (max-width: $screen-sm-max){
+			padding: 15px;
+		}
+	}
+}
