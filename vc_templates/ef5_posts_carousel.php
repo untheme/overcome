@@ -65,6 +65,7 @@
                 switch ($layout_template) {
                     case '2':
                     $overlay = overcome_post_donate_button(['echo' => false, 'class'=>'ef5-btn ef5-btn-md accent outline']);
+                    var_dump($overlay);
             ?>	
             	<div class="<?php echo trim(implode(' ', $item_css_class)); ?> ef5-hover-shadow-1">
                     <?php 
