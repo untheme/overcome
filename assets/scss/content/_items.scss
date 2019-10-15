@@ -55,4 +55,14 @@
 			padding: 15px;
 		}
 	}
+	.ef5-posted-in a{
+		font-size: 13px;
+		color: $white;
+		font-weight: 500;
+		background-color: $accent_color;
+		padding: 8px 15px;
+		&:hover{
+			background-color: $primary_color;
+		}
+	}
 }
