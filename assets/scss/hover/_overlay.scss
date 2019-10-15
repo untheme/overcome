@@ -6,15 +6,18 @@
 	left: 0;
 	z-index: 1;
 	@include transition();
-	@media (min-width: $desktop-screen){
-		@include transform(scale(1.2));
-		opacity: 0;
-		visibility: hidden;
-	}
+	
 }
 .overlay-wrap{
 	.relative{
 		overflow: hidden;
+	}
+	.overlay{
+		@media (min-width: $desktop-screen){
+			@include transform(scale(1.2));
+			opacity: 0;
+			visibility: hidden;
+		}
 	}
 	&:hover{
 		.overlay{
