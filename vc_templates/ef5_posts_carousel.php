@@ -92,7 +92,7 @@
                                             'heading_tag' => 'text-22 text-white font-style-500'
                                         ]);
 
-                                        overcome_post_readmore([
+                                        overcome_post_read_more([
                                             'class' => '',
                                             'icon'  => 'flaticon-like'
                                         ]);
