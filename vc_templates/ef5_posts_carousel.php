@@ -86,23 +86,16 @@
                                 </div>
                                 <div class="col-12 align-self-end">
                                     <?php 
+                                        overcome_posted_on(['class'=>'text-white text-13 font-style-i']);
+
                                         overcome_post_title([
-                                            'heading_tag' => 'text-20'
+                                            'heading_tag' => 'text-22 text-white font-style-500'
                                         ]);
-                                        overcome_post_excerpt([
-                                            'show_excerpt' => '1', 
-                                            'length'       => '16', 
-                                            'more'         => ''
+
+                                        overcome_post_readmore([
+                                            'class' => '',
+                                            'icon'  => 'flaticon-like'
                                         ]);
-                                        if(class_exists('EF5Payments')) {
-                                            ef5systems_donation_progress_donors([
-                                                'donor_icon' => '<span class="flaticon-like"></span>'
-                                            ]);
-                                            ef5payments_donation_donate_amount([
-                                                'goal_label' => esc_html__('Goal:','overcome'),
-                                                'raised_label' => esc_html__('Raised:','overcome')
-                                            ]);
-                                        }
                                     ?>
                                 </div>
                             </div>

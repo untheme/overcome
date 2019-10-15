@@ -61,6 +61,7 @@
 		font-weight: 500;
 		background-color: $accent_color;
 		padding: 8px 15px;
+		@include border-radius(5px);
 		&:hover{
 			background-color: $primary_color;
 		}
