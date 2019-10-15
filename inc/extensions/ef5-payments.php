@@ -38,9 +38,17 @@ function overcome_loop_donate_info($args = []){
 
 function overcome_post_donate_button($args = []){
 	$post_type = get_post_type();
+	$args = wp_parse_args($args,[
+		'echo' => true
+	]);
 	if(class_exists('EF5Payments') && in_array($post_type, apply_filters('ef5payments_payment_attach_post_types',['ef5_donation']))){
-		ef5payments_donation_donate_button($args);      
+		$output = ef5payments_donation_donate_button($args);      
     } else {
-    	overcome_post_read_more($args);
+    	$output = overcome_post_read_more($args);
+    }
+    if($args['echo']){
+    	echo $output;
+    } else {
+    	return $output;
     }
 }
