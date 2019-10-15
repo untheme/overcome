@@ -70,11 +70,10 @@
             ?>	
             	<div class="<?php echo trim(implode(' ', $item_css_class)); ?> ef5-hover-shadow-1">
                     <?php 
-                        var_dump($autowidth);
                         overcome_post_media([
                             'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
                             'default_thumb'  => true,
-                            'img_class'      => $autowidth ? 'w-auto' : '',   
+                            'img_class'      => $autowidth === 'true' ? 'w-auto' : '',   
                             'after'          => '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">'.$overlay.'</div></div>'
                         ]);
                     ?>
