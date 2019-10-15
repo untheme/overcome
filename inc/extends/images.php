@@ -320,7 +320,7 @@ if(!function_exists('overcome_image_by_size')){
         if(empty($size)) $size = 'medium';
         global $_wp_additional_image_sizes;
         if($id === null) $id = get_post_thumbnail_id();
-        $class = !empty($class) ? $class : 'ef5-img';
+        $class .= ' ef5-img';
         $mime_type  = get_post_mime_type($id);
         if($mime_type === 'image/svg+xml') $class .= ' svg';
 
