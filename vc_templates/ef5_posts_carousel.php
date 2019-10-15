@@ -98,7 +98,7 @@
 
                                         overcome_post_read_more([
                                             'readmore_class' => '',
-                                            'icon_right'     => 'flaticon-right-arrow-forward'
+                                            'icon_right'     => is_rtl() ? 'flaticon-go-back-left-arrow' : 'flaticon-right-arrow-forward'
                                         ]);
                                     ?>
                                 </div>
