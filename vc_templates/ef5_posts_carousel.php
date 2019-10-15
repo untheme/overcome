@@ -75,10 +75,10 @@
                             overcome_post_media([
                                 'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
                                 'default_thumb'  => true,
-                                'img_class'      => 'w-auto rounded-10',   
+                                'img_class'      => 'w-auto ef5-rounded-10',   
                             ]);
                         ?>
-                        <div class="overlay ef5-bg-gradient-1 ef5-post-info rounded-10">
+                        <div class="overlay ef5-bg-gradient-1 ef5-post-info ef5-rounded-10">
                             <div class="row h-100">
                                 <div class="col-12 align-self-start">
                                 <?php 
