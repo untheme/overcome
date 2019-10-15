@@ -98,7 +98,7 @@
 
                                         overcome_post_read_more([
                                             'readmore_class' => '',
-                                            'icon_right'     => 'flaticon-like'
+                                            'icon_right'     => 'flaticon-right-arrow-forward'
                                         ]);
                                     ?>
                                 </div>
