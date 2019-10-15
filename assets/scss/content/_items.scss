@@ -1,9 +1,12 @@
 .ef5-post-item-layout-2{
 	.ef5-post-item-inner{
 		@include border-radius(10px);
-		overflow: hidden;
 		border: $MainBorder;
 		background: $white;
+	}
+	.post-image,
+	.overlay{
+		@include border-radius(10px 10px 0 0);
 	}
 	.ef5-post-info{
 		padding: 25px 30px;
