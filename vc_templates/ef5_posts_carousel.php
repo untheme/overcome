@@ -74,12 +74,13 @@
                             ]);
                         ?>
                         <div class="overlay ef5-bg-gradient-1 ef5-post-info">
-                            <div class="row">
+                            <div class="row h-100">
                                 <div class="col-12 align-self-start">
                                 <?php 
                                     overcome_posted_in([
                                         'show_cat' => '1',
-                                        'class'    => '' 
+                                        'class'    => '',
+                                        'icon'     => '' 
                                     ]);
                                 ?>
                                 </div>
