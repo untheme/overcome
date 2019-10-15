@@ -37,6 +37,11 @@
 
     // Thumbnail Size
     $thumbnail_size_index = -1;
+    switch ($layout_template) {
+        case '4':
+            $thumbnail_size = overcome_default_value($thumbnail_size, '570x416,270x416,270x416');
+            break;
+    }
     $thumbnail_size = explode(',', $thumbnail_size);
 ?>
 <div id="<?php echo esc_attr('ef5-posts-'.$el_id);?>" class="ef5-posts <?php echo ef5systems_owl_css_class($atts);?>">
