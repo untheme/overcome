@@ -27,11 +27,11 @@ if(!function_exists('overcome_post_thumbnail')){
         if($echo) {
         ?>
             <div <?php echo implode(' ', $thumbnail_atts);?>>
-                <?php overcome_image_by_size(['id' => $id,'size' => $thumbnail_size]);?>
+                <?php overcome_image_by_size(['id' => $id,'size' => $thumbnail_size, 'class' => $args['img_class']]);?>
             </div>
             <?php do_action('overcome_post_thumbnail_content');
         } else {
-            return '<div '.implode(' ', $thumbnail_atts).'><img src="'.overcome_get_image_url_by_size(['id'=>$id,'size'=> 'full', 'default_thumb' => $default_thumb]).'" alt="'.get_the_title().'" /></div>'.do_action('overcome_post_thumbnail_content');
+            return '<div '.implode(' ', $thumbnail_atts).'><img src="'.overcome_get_image_url_by_size(['id'=>$id,'size'=> 'full', 'default_thumb' => $default_thumb]).'" alt="'.get_the_title().'" class="'.$args['img_class'].'" /></div>'.do_action('overcome_post_thumbnail_content');
         }
     }
 }
