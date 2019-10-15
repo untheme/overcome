@@ -92,13 +92,13 @@
                                 <div class="col-12 align-self-end">
                                     <?php 
                                         overcome_posted_on([
-                                            'class' => 'text-white text-13 font-style-400i',
+                                            'class' => 'text-white text-13 font-style-400i pb-10',
                                             'icon'  => '',
                                             'date_format' => 'd M, Y'
                                         ]);
 
                                         overcome_post_title([
-                                            'heading_tag' => 'text-22 text-white font-style-500'
+                                            'heading_tag' => 'text-22 text-white font-style-500 pb-8'
                                         ]);
 
                                         overcome_post_read_more([
