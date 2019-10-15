@@ -55,6 +55,7 @@
             $d = 0;
             while($posts->have_posts()){
                 $d++;
+                if($d === 1) $item_css_class[] = 'ef5-large-item'; 
                 // Thumbnail Size
                 $thumbnail_size_index++;
                 if($thumbnail_size_index >= count($thumbnail_size))
