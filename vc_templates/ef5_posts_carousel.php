@@ -59,6 +59,7 @@
                 $thumbnail_size_index++;
                 if($thumbnail_size_index >= count($thumbnail_size))
                     $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
+                var_dump($thumbnail_size_index);
                 if($thumbnail_size_index === 0) $item_css_class[] = 'ef5-large-item'; 
                 $posts->the_post();
                 // Post Metas
