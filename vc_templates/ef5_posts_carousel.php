@@ -53,6 +53,7 @@
         <div id="<?php echo esc_attr($el_id);?>" class="<?php echo esc_attr(trim($css_class));?>">
         <?php 
             $d = 0;
+            $large_item_class = '';
             while($posts->have_posts()){
                 $d++;
                 // Thumbnail Size
@@ -60,7 +61,7 @@
                 if($thumbnail_size_index >= count($thumbnail_size))
                     $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
 
-                if($thumbnail_size_index === 0) $item_css_class[] = 'ef5-large-item'; 
+                if($thumbnail_size_index === 0) $large_item_class = 'ef5-large-item'; 
                 $posts->the_post();
                 // Post Metas
                 $post_metas   = [];
@@ -69,9 +70,9 @@
             ?>
             <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
             <?php
-                var_dump($thumbnail_size_index);
                 switch ($layout_template) {
                     case '4':
+                    $item_css_class[] = $large_item_class;
                 ?>
                     <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
                         <?php 
