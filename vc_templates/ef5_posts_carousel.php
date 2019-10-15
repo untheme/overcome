@@ -58,9 +58,10 @@
                 $d++;
                 // Thumbnail Size
                 $thumbnail_size_index++;
-                if($thumbnail_size_index >= count($thumbnail_size))
+                if($thumbnail_size_index >= count($thumbnail_size)){
                     $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
-                if($thumbnail_size_index === 0) $large_item_class = 'ef5-large-item-'.$thumbnail_size_index;
+                    if($thumbnail_size_index === 0) $large_item_class = 'ef5-large-item-'.$thumbnail_size_index;
+                }
 
                 $posts->the_post();
                 // Post Metas
