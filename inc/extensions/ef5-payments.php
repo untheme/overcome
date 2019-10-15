@@ -4,7 +4,7 @@ function overcome_loop_donate_info($args = []){
 		'layout' => '1',
 		'class'  => '' 
 	]);
-	$post_type = get_post_type(get_the_ID());
+	$post_type = get_post_type();
 	$css_class = ['ef5-loop-donate-info', 'layout-'.$args['layout'], $args['class']];
     if(class_exists('EF5Payments') && in_array($post_type, apply_filters('ef5payments_payment_attach_post_types',['ef5_donation']))){
     	switch ($args['layout']) { 		
@@ -34,4 +34,23 @@ function overcome_loop_donate_info($args = []){
 	} else {
 		overcome_post_read_more(['show_readmore' => '1']); 
 	}
+}
+
+function overcome_post_donate_button($args = []){
+	$args = wp_parse_args($args, [
+		'class' => '',
+		'echo'  => true
+	]);
+	$post_type = get_post_type();
+	if(in_array($post_type, apply_filters('ef5payments_payment_attach_post_types',['ef5_donation']))){
+		ef5payments_donation_donate_button([
+			'echo' => $args['echo'],
+			'class'=> $args['class']
+		]);      
+    } else {
+    	overcome_post_read_more([
+    		'echo' => $args['echo'],
+			'class'=> $args['class']
+    	]);
+    }
 }
