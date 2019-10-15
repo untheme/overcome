@@ -36,7 +36,9 @@
     $item_css_class = ['ef5-post-item-inner','transition'];
 
     // Thumbnail Size
+    $d = 0;
     $thumbnail_size_index = -1;
+    $large_item_class = '';
     switch ($layout_template) {
         case '4':
             $thumbnail_size = overcome_default_value($thumbnail_size, '570x416,270x416,270x416');
@@ -52,15 +54,13 @@
     <div class="ef5-owl-wrap-inner relative">
         <div id="<?php echo esc_attr($el_id);?>" class="<?php echo esc_attr(trim($css_class));?>">
         <?php 
-            $d = 0;
-            $large_item_class = '';
             while($posts->have_posts()){
                 $d++;
                 // Thumbnail Size
                 $thumbnail_size_index++;
                 if($thumbnail_size_index >= count($thumbnail_size))
                     $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
-                if($thumbnail_size_index === 0) $large_item_class = 'ef5-large-item';
+                if($thumbnail_size_index === 0) $large_item_class = 'ef5-large-item-'.$thumbnail_size_index;
 
                 $posts->the_post();
                 // Post Metas
