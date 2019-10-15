@@ -71,7 +71,6 @@
                                 'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
                                 'default_thumb'  => true,
                                 'img_class'      => 'w-auto',   
-                                'after'          => '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">'.$overlay.'</div></div>'
                             ]);
                         ?>
                         <div class="overlay ef5-bg-gradient-1 ef5-post-info">
