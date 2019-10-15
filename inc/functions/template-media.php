@@ -421,7 +421,7 @@ if(!function_exists('overcome_post_media')){
             'class'          => '',
             'before'         => '',
             'after'          => '',
-            'img_class'
+            'img_class'      => ''   
         ]);
         do_action('overcome_before_post_media');
         $post_format = !empty(get_post_format()) ? get_post_format() : 'standard';
