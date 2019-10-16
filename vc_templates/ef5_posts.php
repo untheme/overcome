@@ -88,7 +88,7 @@
                                     'default_thumb'  => true
                                 ]); ?>
                             </div>
-                            <div class="col">
+                            <div class="col ef5-content-info">
                                 <?php 
                                     overcome_posted_on([
                                         'class' => 'text-13 ef5-text-accent',
