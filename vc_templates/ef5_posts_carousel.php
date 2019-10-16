@@ -102,7 +102,7 @@
                                         ]);
 
                                         overcome_post_title([
-                                            'heading_tag' => 'text-white font-style-500 pb-8'
+                                            'heading_tag' => $heading_class .' text-white font-style-500 pb-8'
                                         ]);
 
                                         overcome_post_read_more([
