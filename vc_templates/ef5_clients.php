@@ -83,7 +83,7 @@ if(!empty($atts['margin']) && $atts['number_row'] > 1 ) {
                     <div class="ef5-client-item-inner" <?php echo overcome_html($owl_item_space);?>> 
                         <?php $this->overcome_client_render($$value); ?>
                     </div>
-                <?php if($i == $number_row || $j==$count) {?> 
+                <?php if($i == $number_row || $j==$count) { ?> 
                     </div>
                 <?php }
                 $i ++;
