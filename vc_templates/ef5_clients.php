@@ -78,7 +78,7 @@ if(!empty($atts['margin']) && $atts['number_row'] > 1 ) {
                 }
 
                 if($i==1) : ?>
-                    <div class="<?php $this->overcome_clients_item_css_class($atts);?>">
+                    <div class="<?php $this->overcome_clients_item_css_class($atts);?>" <?php echo implode(' ', $item_attrs);?>>
                         <div class="ef5-client-item-inner" <?php echo overcome_html($owl_item_space);?>> 
                             <?php $this->overcome_client_render($$value); ?>
                         </div>
