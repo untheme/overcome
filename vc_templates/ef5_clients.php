@@ -77,13 +77,15 @@ if(!empty($atts['margin']) && $atts['number_row'] > 1 ) {
                     $item_attrs[] = 'data-dot=\''.$dot_img.'\'';
                 }
 
-                if($i==1) : ?>
+                if($i==1) { ?>
                     <div class="<?php $this->overcome_clients_item_css_class($atts);?>" <?php echo implode(' ', $item_attrs);?>>
-                        <div class="ef5-client-item-inner" <?php echo overcome_html($owl_item_space);?>> 
-                            <?php $this->overcome_client_render($$value); ?>
-                        </div>
-                <?php
-                if($i == $number_row || $j==$count) echo '</div>';
+                <?php } ?>
+                    <div class="ef5-client-item-inner" <?php echo overcome_html($owl_item_space);?>> 
+                        <?php $this->overcome_client_render($$value); ?>
+                    </div>
+                <?php if($i == $number_row || $j==$count) {?> 
+                    </div>
+                <?php }
                 $i ++;
             }
         ?>
