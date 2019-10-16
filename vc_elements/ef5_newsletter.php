@@ -103,7 +103,7 @@ class WPBakeryShortCode_ef5_newsletter extends WPBakeryShortCode
     	$args = wp_parse_args($args, [
     		'class' => ''
     	]);
-    	$classes = ['ef5-el-title', 'ef5-heading', $args['classes']];
+    	$classes = ['ef5-el-title', 'ef5-heading', $args['class']];
     	?>
     		<div class="<?php echo trim(implode(' ', $classes));?>">
     			<?php echo esc_html($atts['el_title']); ?>
