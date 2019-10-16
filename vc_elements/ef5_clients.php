@@ -194,7 +194,7 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
             return trim(implode(' ', $item_css_class));
         }
     }
-    protected function overcome_client_render($value, $args = []){
+    protected function overcome_client_render($atts, $value, $args = []){
         $args = wp_parse_args($args,[
             'class' => '',
             'thumbnail_class' => ''
