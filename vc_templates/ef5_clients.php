@@ -96,7 +96,7 @@ $item_attrs = '';
                     'echo'  => false
                 ]);
                 if($layout_style === 'carousel'){
-                    $item_attrs = 'data-dot="'.$dot_img.'"';
+                    $item_attrs = 'data-dot='.$dot_img;
                 }
                 if($i==1) : ?>
                     <div class="<?php echo implode(' ',$item_class);?>" <?php echo overcome_html($item_attrs);?>>
