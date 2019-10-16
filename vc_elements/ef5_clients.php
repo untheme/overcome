@@ -204,6 +204,7 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
             'class' => '',
             'dot_thumbnail_size' => '50'
         ]);
+        $item_attrs = [];
         foreach($values as $value){
             $j++;
             if($i > $atts['number_row']) $i=1;
@@ -231,9 +232,8 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
                 'class' => 'dot-thumb',
                 'echo'  => false
             ]);
-            if($layout_style === 'carousel'){
-                $item_attrs[] = 'data-dot=\''.$dot_img.'\'';
-            }
+            $item_attrs[] = 'data-dot=\''.$dot_img.'\'';
+            
             if($i==1) : ?>
                 <div class="<?php echo implode(' ',$item_class);?>" <?php echo implode(' ', $item_attrs);?>>
             <?php  
