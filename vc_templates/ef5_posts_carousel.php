@@ -72,7 +72,7 @@
                 switch ($layout_template) {
                     case '4':
                     $large_item_class = ($thumbnail_size_index === 0) ? 'ef5-large-item' : 'ef5-small-item';
-                    $heading_class = ($thumbnail_size_index === 0) ? 'text-22' : 'text-16';
+                    $heading_class = ($thumbnail_size_index === 0) ? 'text-22 pb-8' : 'text-16';
                 ?>
                     <div class="<?php echo trim(implode(' ', $item_css_class)). ' '.$large_item_class; ?>">
                         <?php 
@@ -102,7 +102,7 @@
                                         ]);
 
                                         overcome_post_title([
-                                            'heading_tag' => $heading_class .' text-white font-style-500 pb-8'
+                                            'heading_tag' => $heading_class .' text-white font-style-500'
                                         ]);
                                         if($thumbnail_size_index === 0){
                                             overcome_post_read_more([
