@@ -16,6 +16,7 @@ $values = $thumbnail_class = '';
 /* get Shortcode custom value */
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
+$el_id = !empty($el_id) ? $el_id : uniqid();
 $wrap_css_class = ['ef5-clients-wrap ef5-owl-wrap', 'ef5-'.$el_id];
 
 $css_class_attr = $item_class = array();
