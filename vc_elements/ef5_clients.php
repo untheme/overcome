@@ -158,7 +158,7 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
         $wrap_css_class = [];
         switch ($layout_style) {
             case 'carousel':
-                $wrap_css_class[] = 'ef5-owl';
+                $wrap_css_class[] = 'ef5-owl owl-carousel';
                 break;
             
             default:
