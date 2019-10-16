@@ -55,7 +55,7 @@ $i=1;
 $j=0;
 
 $dot_thumbnail_size = '50';
-$item_attrs = '';
+$item_attrs = [];
 
 ?>
 <div class="<?php echo trim(implode(' ', $wrap_css_class));?>">
@@ -96,10 +96,10 @@ $item_attrs = '';
                     'echo'  => false
                 ]);
                 if($layout_style === 'carousel'){
-                    $item_attrs = 'data-dot='.$dot_img;
+                    $item_attrs[] = 'data-dot='.$dot_img;
                 }
                 if($i==1) : ?>
-                    <div class="<?php echo implode(' ',$item_class);?>" <?php echo overcome_html($item_attrs);?>>
+                    <div class="<?php echo implode(' ',$item_class);?>" <?php echo implode(' ', $item_attrs);?>>
                 <?php  
                     endif;
                     echo '<div class="ef5-client-item-inner" '.$owl_item_space.'>';                
