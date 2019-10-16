@@ -61,7 +61,6 @@
                 if($thumbnail_size_index >= count($thumbnail_size)){
                     $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
                 }
-                $large_item_class = ($thumbnail_size_index === 0) ? 'ef5-large-item' : 'ef5-small-item';
                 $posts->the_post();
                 // Post Metas
                 $post_metas   = [];
@@ -72,6 +71,7 @@
             <?php
                 switch ($layout_template) {
                     case '4':
+                    $large_item_class = ($thumbnail_size_index === 0) ? 'ef5-large-item' : 'ef5-small-item';
                 ?>
                     <div class="<?php echo trim(implode(' ', $item_css_class)). ' '.$large_item_class; ?>">
                         <?php 
