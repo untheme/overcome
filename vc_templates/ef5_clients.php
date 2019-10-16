@@ -59,72 +59,30 @@ $owl_item_space = '';
 if(!empty($atts['margin']) && $atts['number_row'] > 1 ) {
     $owl_item_space = 'style="margin-bottom:'.$margin.'px"';
 }
-
-
 ?>
 <div class="<?php $this->overcome_clients_wrap_css_class($atts);?>">
     <div id="<?php echo esc_attr($el_id);?>" class="<?php $this->overcome_clients_css_class($atts);?>">
-        <?php $this->overcome_client_render($atts); ?>
-    </div>
-</div>
-<div class="<?php echo trim(implode(' ', $wrap_css_class));?>">
-    <?php 
-        ef5systems_owl_nav_top($atts);
-        ef5systems_owl_dots_top($atts); 
-    ?>
-    <div class="ef5-owl-wrap-inner relative">
-    <div id="<?php echo esc_attr($el_id);?>" class="<?php echo trim(implode(' ',$css_class_attr));?>"> 
-        <?php
-            ef5systems_owl_nav_top($atts);
-            ef5systems_owl_dots_top($atts); 
+        <?php 
             foreach($values as $value){
                 $j++;
                 if($i > $number_row) $i=1;
-                // image
-                $value['image'] = isset($value['image']) ? $value['image'] : '';
-                /* parse image_link */
-                $link = false;
-                $link_open = '<span class="client-logo image-hover" data--hint="No Title"><span>';
-                $link_close = '</span></span>';
-                if(isset($value['image_link'])){
-                    $image_link = vc_build_link( $value['image_link']);
-                    $image_link = ( $image_link == '||' ) ? '' : $image_link;
-                    if ( strlen( $image_link['url'] ) > 0 ) {
-                        $link = true;
-                        $a_href = $image_link['url'];
-                        $a_title = $image_link['title'] ? $image_link['title'] : '';
-                        $a_target = strlen( $image_link['target'] ) > 0 ? str_replace(' ','',$image_link['target']) : '_self';
-                        $link_open = '<a class="client-logo image-hover" href="'.esc_url($a_href).'" data-hint="'.esc_attr($a_title).'" target="'.esc_attr($a_target).'"><span>';
-                        $link_close = '</span></a>';
-                    }
-                }
+
                 $dot_img = overcome_image_by_size([
                     'id'    => isset($value['image']) ? $value['image'] : '',
-                    'size'  => $dot_thumbnail_size,
+                    'size'  => '50',
                     'class' => 'dot-thumb',
                     'echo'  => false
                 ]);
                 if($layout_style === 'carousel'){
                     $item_attrs[] = 'data-dot=\''.$dot_img.'\'';
                 }
+
                 if($i==1) : ?>
-                    <div class="<?php echo implode(' ',$item_class);?>" <?php echo implode(' ', $item_attrs);?>>
-                <?php  
-                    endif;
-                    echo '<div class="ef5-client-item-inner" '.$owl_item_space.'>';                
-                    echo overcome_html($link_open);
-                        overcome_image_by_size([
-                            'id'    => $value['image'],
-                            'size'  => $thumbnail_size,
-                            'class' => $thumbnail_class.' img-static'
-                        ]);
-                        overcome_image_by_size([
-                            'id'    => isset($value['image_hover']) ? $value['image_hover'] : $value['image'],
-                            'size'  => $thumbnail_size,
-                            'class' => $thumbnail_class.' img-hover'
-                        ]);
-                    echo overcome_html($link_close);
-                    echo '</div>';
+                    <div class="<?php $this->overcome_clients_item_css_class($atts);?>">
+                        <div class="ef5-client-item-inner" <?php echo overcome_html($owl_item_space);?>> 
+                            <?php $this->overcome_client_render($$value); ?>
+                        </div>
+                <?php
                 if($i == $number_row || $j==$count) echo '</div>';
                 $i ++;
             }

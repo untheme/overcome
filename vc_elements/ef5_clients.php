@@ -194,71 +194,41 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
             return trim(implode(' ', $item_css_class));
         }
     }
-    protected function overcome_client_render($atts, $args = []){
-        $clients = vc_map_get_attributes( $this->getShortcode(), $atts );
-        $values = (array) vc_param_group_parse_atts( $clients['values'] );
-        $count = count($values);
-        $i=1;
-        $j=0;
+    protected function overcome_client_render($value, $args = []){
         $args = wp_parse_args($args,[
             'class' => '',
-            'dot_thumbnail_size' => '50'
+            'thumbnail_class' => ''
         ]);
-        $item_attrs = [];
-        $owl_item_space = '';
-        if(!empty($atts['margin']) && $atts['number_row'] > 1 ){
-            $owl_item_space = 'style="margin-bottom:'.$margin.'px"';
-        }
-        $thumbnail_class = '';
-        foreach($values as $value){
-            $j++;
-            if($i > $atts['number_row']) $i=1;
-            // image
-            $value['image'] = isset($value['image']) ? $value['image'] : '';
-            /* parse image_link */
-            $link = false;
-            $link_open = '<span class="client-logo image-hover" data--hint="No Title"><span>';
-            $link_close = '</span></span>';
-            if(isset($value['image_link'])){
-                $image_link = vc_build_link( $value['image_link']);
-                $image_link = ( $image_link == '||' ) ? '' : $image_link;
-                if ( strlen( $image_link['url'] ) > 0 ) {
-                    $link = true;
-                    $a_href = $image_link['url'];
-                    $a_title = $image_link['title'] ? $image_link['title'] : '';
-                    $a_target = strlen( $image_link['target'] ) > 0 ? str_replace(' ','',$image_link['target']) : '_self';
-                    $link_open = '<a class="client-logo image-hover" href="'.esc_url($a_href).'" data-hint="'.esc_attr($a_title).'" target="'.esc_attr($a_target).'"><span>';
-                    $link_close = '</span></a>';
-                }
+        $classes = ['client-logo image-hover', $args['class']];
+        // image
+        $value['image'] = isset($value['image']) ? $value['image'] : '';
+        /* parse image_link */
+        $link = false;
+        $link_open = '<span class="'.trim(implode(' ', $classes)).'" data--hint="No Title"><span>';
+        $link_close = '</span></span>';
+        if(isset($value['image_link'])){
+            $image_link = vc_build_link( $value['image_link']);
+            $image_link = ( $image_link == '||' ) ? '' : $image_link;
+            if ( strlen( $image_link['url'] ) > 0 ) {
+                $link = true;
+                $a_href = $image_link['url'];
+                $a_title = $image_link['title'] ? $image_link['title'] : '';
+                $a_target = strlen( $image_link['target'] ) > 0 ? str_replace(' ','',$image_link['target']) : '_self';
+                $link_open = '<a class="'.trim(implode(' ', $classes)).'" href="'.esc_url($a_href).'" data-hint="'.esc_attr($a_title).'" target="'.esc_attr($a_target).'"><span>';
+                $link_close = '</span></a>';
             }
-            $dot_img = overcome_image_by_size([
-                'id'    => isset($value['image']) ? $value['image'] : '',
-                'size'  => $args['dot_thumbnail_size'],
-                'class' => 'dot-thumb',
-                'echo'  => false
-            ]);
-            $item_attrs[] = 'data-dot=\''.$dot_img.'\'';
-
-            if($i==1) : ?>
-                <div class="<?php $this->overcome_clients_item_css_class($atts);?>" <?php echo implode(' ', $item_attrs);?>>
-            <?php  
-                endif;
-                echo '<div class="ef5-client-item-inner" '.$owl_item_space.'>';                
-                echo overcome_html($link_open);
-                    overcome_image_by_size([
-                        'id'    => $value['image'],
-                        'size'  => $atts['thumbnail_size'],
-                        'class' => $thumbnail_class.' img-static'
-                    ]);
-                    overcome_image_by_size([
-                        'id'    => isset($value['image_hover']) ? $value['image_hover'] : $value['image'],
-                        'size'  => $atts['thumbnail_size'],
-                        'class' => $thumbnail_class.' img-hover'
-                    ]);
-                echo overcome_html($link_close);
-                echo '</div>';
-            if($i == $atts['number_row'] || $j==$count) echo '</div>';
-            $i ++;
         }
+        echo overcome_html($link_open);
+            overcome_image_by_size([
+                'id'    => $value['image'],
+                'size'  => $atts['thumbnail_size'],
+                'class' => trim($args['thumbnail_class'].' img-static')
+            ]);
+            overcome_image_by_size([
+                'id'    => isset($value['image_hover']) ? $value['image_hover'] : $value['image'],
+                'size'  => $atts['thumbnail_size'],
+                'class' => trim($args['thumbnail_class'].' img-hover')
+            ]);
+        echo overcome_html($link_close);
     }
 }
