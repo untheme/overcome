@@ -177,7 +177,7 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
             'class' => '',
             'echo'  => true
         ]);
-        $item_css_class = ['ef5-item ef5-client', $args['class']];
+        $item_css_class = ['ef5-item ef5-client', 'img-hover-'.$atts['hover_style'], $args['class']];
         switch ($layout_template) {
             case 'carousel':
                 $item_css_class[] = 'ef5-carousel-item';
