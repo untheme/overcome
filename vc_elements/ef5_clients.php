@@ -209,6 +209,7 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
         if(isset($atts['margin']) && (isset($atts['number_row']) && $atts['number_row'] > 1 )){
             $owl_item_space = 'style="margin-bottom:'.$margin.'px"';
         }
+        $thumbnail_class = '';
         foreach($values as $value){
             $j++;
             if($i > $atts['number_row']) $i=1;
@@ -246,12 +247,12 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
                 echo overcome_html($link_open);
                     overcome_image_by_size([
                         'id'    => $value['image'],
-                        'size'  => $thumbnail_size,
+                        'size'  => $atts['thumbnail_size'],
                         'class' => $thumbnail_class.' img-static'
                     ]);
                     overcome_image_by_size([
                         'id'    => isset($value['image_hover']) ? $value['image_hover'] : $value['image'],
-                        'size'  => $thumbnail_size,
+                        'size'  => $atts['thumbnail_size'],
                         'class' => $thumbnail_class.' img-hover'
                     ]);
                 echo overcome_html($link_close);
