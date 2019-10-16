@@ -11,8 +11,6 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Shortcode class
  * @var $this WPBakeryShortCode_ef5_clients
  */
-
-$values = $thumbnail_class = '';
 /* get Shortcode custom value */
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
