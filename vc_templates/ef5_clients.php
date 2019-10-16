@@ -96,10 +96,10 @@ $item_attrs = [];
                     'echo'  => false
                 ]);
                 if($layout_style === 'carousel'){
-                    $_item_attrs = 'data-dot=\''.$dot_img.'\'';
+                    $item_attrs[] = 'data-dot=\''.$dot_img.'\'';
                 }
                 if($i==1) : ?>
-                    <div class="<?php echo implode(' ',$item_class);?>" <?php echo $_item_attrs;?>>
+                    <div class="<?php echo implode(' ',$item_class);?>" <?php echo implode(' ', $item_attrs);?>>
                 <?php  
                     endif;
                     echo '<div class="ef5-client-item-inner" '.$owl_item_space.'>';                
