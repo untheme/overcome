@@ -24,7 +24,7 @@ vc_map(array(
             'heading'    => esc_html__('Layout Template','overcome'),
             'param_name' => 'layout_template',
             'value'      =>  array(
-                '1' => get_template_directory_uri().'/vc_elements/layouts/newsletter1.png',
+                '1' => get_template_directory_uri().'/vc_elements/layouts/newsletter-1.png',
             ),
             'std'        => '1',
             'admin_label'=> true
