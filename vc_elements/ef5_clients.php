@@ -155,7 +155,7 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
             'echo'  => true
         ]);
         $el_id = !empty($el_id) ? $el_id : uniqid();
-        $wrap_css_class = [];
+        $wrap_css_class = [$atts['el_class']];
         switch ($layout_style) {
             case 'carousel':
                 $wrap_css_class[] = 'ef5-owl owl-carousel';
