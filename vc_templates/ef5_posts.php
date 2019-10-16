@@ -95,7 +95,7 @@
                                         'icon'  => ''
                                     ]);
                                     overcome_post_title([
-                                        'heading_tag' => 'text-13 text-white'
+                                        'heading_tag' => 'text-13 text-white font-style-400'
                                     ]);
                                 ?>
                             </div>
