@@ -26,7 +26,7 @@
     // Grid columns css class
     $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation( $css_animation ), 'col-'.$col_sm, 'col-md-'.$col_md, 'col-lg-'.$col_lg, 'col-xl-'.$col_xl];
     // Items CSS Classes
-    $item_css_class = ['post-grid-item','post-grid-item-'.$layout_template,'transition'];
+    $item_css_class = ['post-grid-item','ef5-post-item-layout-'.$layout_template,'transition'];
 ?>
 <div class="ef5-posts" id="<?php echo esc_attr($el_id);?>">
     <div class="<?php $this->overcome_posts_wrap_css_class($atts);?>">
