@@ -60,12 +60,9 @@
                 $thumbnail_size_index++;
                 if($thumbnail_size_index >= count($thumbnail_size)){
                     $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
-                    if($thumbnail_size_index === 0) $large_item_class = 'ef5-large-item-'.$thumbnail_size_index;
-                    //var_dump($thumbnail_size_index);
-                    
                 }
-                
-
+                $large_item_class = ($thumbnail_size_index === 0) ? 'ef5-large-item' : 'ef5-small-item';
+                var_dump($large_item_class );
                 $posts->the_post();
                 // Post Metas
                 $post_metas   = [];
@@ -74,9 +71,6 @@
             ?>
             <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
             <?php
-                var_dump($thumbnail_size_index); //var_dump($large_item_class);
-            $large_item_class = ($thumbnail_size_index === 0) ? 'ef5-large-item' : '';
-            var_dump($large_item_class);
                 switch ($layout_template) {
                     case '4':
                 ?>
