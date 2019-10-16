@@ -86,7 +86,8 @@
                             <div class="col-auto">
                                 <?php overcome_post_media([
                                     'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '48'), 
-                                    'default_thumb'  => true
+                                    'default_thumb'  => true,
+                                    'img_class'      => 'ef5-rounded-5'   
                                 ]); ?>
                             </div>
                             <div class="col ef5-content-info">
