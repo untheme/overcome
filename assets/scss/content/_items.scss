@@ -70,3 +70,10 @@
 		color: $white;
 	}
 }
+
+// Layout 5
+.ef5-post-item-layout-5{
+	.ef5-content-info{
+		@include transform(translate(-18px,-9px));
+	}
+}
