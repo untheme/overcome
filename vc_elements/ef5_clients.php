@@ -223,12 +223,12 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
             overcome_image_by_size([
                 'id'    => $value['image'],
                 'size'  => $atts['thumbnail_size'],
-                'class' => trim($args['thumbnail_class'].' img-static')
+                'class' => trim($args['thumbnail_class'].' img-static w-auto')
             ]);
             overcome_image_by_size([
                 'id'    => isset($value['image_hover']) ? $value['image_hover'] : $value['image'],
                 'size'  => $atts['thumbnail_size'],
-                'class' => trim($args['thumbnail_class'].' img-hover')
+                'class' => trim($args['thumbnail_class'].' img-hover w-auto')
             ]);
         echo overcome_html($link_close);
     }
