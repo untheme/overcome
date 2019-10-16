@@ -156,7 +156,7 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
         ]);
         $el_id = !empty($el_id) ? $el_id : uniqid();
         $wrap_css_class = [];
-        switch ($layout_template) {
+        switch ($layout_style) {
             case 'carousel':
                 $wrap_css_class[] = 'ef5-owl';
                 break;
@@ -165,7 +165,6 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
                 $wrap_css_class[] = 'ef5-grid row justify-content-center align-items-center';
                 break;
         }
-        var_dump($layout_template);
         $wrap_css_class[] = 'img-hover-'.$atts['hover_style'];
         if($args['echo']){
             echo trim(implode(' ', $wrap_css_class));
@@ -180,7 +179,7 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
             'echo'  => true
         ]);
         $item_css_class = ['ef5-item ef5-client', $args['class']];
-        switch ($layout_template) {
+        switch ($layout_style) {
             case 'carousel':
                 $item_css_class[] = 'ef5-carousel-item';
                 break;
