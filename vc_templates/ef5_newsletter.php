@@ -10,6 +10,7 @@ if(!class_exists('NewsletterWidgetMinimal') && !class_exists('NewsletterWidget')
     $default_form .= '[/newsletter_form]';
 ?>
 <div class="<?php echo trim(implode(' ',$wrapper_class)); ?>">
+    <?php $this->title($atts); ?>
     <?php switch ($layout_mode) {
         case 'minimal':
             echo do_shortcode('[newsletter_form type="minimal" button="'.esc_attr($btn_text).'" placeholder="'.esc_attr($email_text).'"  class="'.esc_attr($el_class).'"][/newsletter_form]');
