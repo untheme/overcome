@@ -110,9 +110,9 @@ vc_map(array(
         ),
         /* Grid settings */
         ef5systems_grid_settings(array(
-            'group'              => esc_html__('Layout Settings','overcome'), 
-            'dependency_element' => 'layout_style', 
-            'dependency_value'   => 'grid'
+            'group'                  => esc_html__('Layout Settings','overcome'), 
+            'dependency_element'     => 'layout_style', 
+            'dependency_value_value' => 'grid'
             )
         ),
         /* Carousel Settings */
