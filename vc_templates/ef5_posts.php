@@ -91,7 +91,8 @@
                             <div class="col">
                                 <?php 
                                     overcome_posted_on([
-                                        'class' => 'text-13 ef5-text-accent'
+                                        'class' => 'text-13 ef5-text-accent',
+                                        'icon'  => ''
                                     ]);
                                     overcome_post_title([
                                         'heading_tag' => 'text-13 text-white'
