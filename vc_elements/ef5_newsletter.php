@@ -20,41 +20,6 @@ vc_map(array(
 			'admin_label' => true,
     	),
     	array(
-			'type'        => 'dropdown',
-			'heading'     => esc_html__( 'Show lists as', 'overcome' ),
-			'param_name'  => 'lists_layout',
-			'value'       => array(
-				esc_html__('Checkbox','overcome') => '',
-				esc_html__('Dropdown','overcome') => 'dropdown'
-			),
-			'std'		  	=> '',
-			'dependency'    => array(
-				'element'   => 'layout_mode',
-				'value'     => 'default',
-			),
-    	),
-    	array(
-			'type'        => 'textfield',
-			'heading'     => esc_html__( 'First dropdown entry label', 'overcome' ),
-			'param_name'  => 'lists_empty_label',
-			'value'		  => '',
-			'dependency'    => array(
-				'element'   => 'lists_layout',
-				'value'     => 'dropdown',
-			),
-    	),
-    	array(
-			'type'        => 'textfield',
-			'heading'     => esc_html__( 'Lists field label', 'overcome' ),
-			'description' => esc_html__( 'Seperate by comma (,)', 'overcome' ),
-			'value'		  => '',		
-			'param_name'  => 'lists_field_label',
-			'dependency'    => array(
-				'element'   => 'layout_mode',
-				'value'     => 'default',
-			),
-    	),
-    	array(
             'type'       => 'img',
             'heading'    => esc_html__('Layout Template','overcome'),
             'param_name' => 'layout_template',
