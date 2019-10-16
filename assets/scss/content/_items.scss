@@ -73,7 +73,11 @@
 
 // Layout 5
 .ef5-post-item-layout-5{
+	margin-bottom: 18px;
 	.ef5-content-info{
 		@include transform(translate(-18px,-9px));
+	}
+	.ef5-grid-item-wrap:last-child &{
+		margin-bottom: 0;
 	}
 }
