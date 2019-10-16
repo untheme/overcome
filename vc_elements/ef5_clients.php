@@ -165,6 +165,7 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
                 $wrap_css_class[] = 'ef5-grid row justify-content-center align-items-center';
                 break;
         }
+        var_dump($layout_template);
         $wrap_css_class[] = 'img-hover-'.$atts['hover_style'];
         if($args['echo']){
             echo trim(implode(' ', $wrap_css_class));
