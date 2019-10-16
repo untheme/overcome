@@ -31,6 +31,7 @@ select {
 	-webkit-appearance: none;
 	outline-offset: 0;
 	border-radius: $FF_BorderRadius;
+	font-size: $FF_FontSize;
 	&:hover,
 	&:active,
 	&:focus {
