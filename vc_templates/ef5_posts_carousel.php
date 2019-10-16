@@ -2,6 +2,7 @@
     $lists = $icon = '';
     $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
     extract( $atts );
+    $el_id = !empty($el_id) ? 'ef5-'.$el_id : uniqid('ef5-');
     /* get value for Design Tab */
     $css_classes = array(
         'ef5-posts-carousel',
@@ -46,7 +47,7 @@
     }
     $thumbnail_size = explode(',', $thumbnail_size);
 ?>
-<div id="<?php echo esc_attr('ef5-posts-'.$el_id);?>" class="ef5-posts <?php echo ef5systems_owl_css_class($atts);?>">
+<div class="ef5-posts <?php echo ef5systems_owl_css_class($atts);?>">
     <?php 
         ef5systems_owl_nav_top($atts);
         ef5systems_owl_dots_top($atts); 
