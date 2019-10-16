@@ -194,15 +194,19 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
             return trim(implode(' ', $item_css_class));
         }
     }
-    protected function overcome_client_render($atts){
+    protected function overcome_client_render($atts, $args = []){
         $clients = vc_map_get_attributes( $this->getShortcode(), $atts );
         $values = (array) vc_param_group_parse_atts( $clients['values'] );
         $count = count($values);
         $i=1;
         $j=0;
+        $args = wp_parse_args($args,[
+            'class' => '',
+            'dot_thumbnail_size' => '50'
+        ]);
         foreach($values as $value){
             $j++;
-            if($i > $number_row) $i=1;
+            if($i > $atts['number_row']) $i=1;
             // image
             $value['image'] = isset($value['image']) ? $value['image'] : '';
             /* parse image_link */
@@ -223,7 +227,7 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
             }
             $dot_img = overcome_image_by_size([
                 'id'    => isset($value['image']) ? $value['image'] : '',
-                'size'  => $dot_thumbnail_size,
+                'size'  => $args['dot_thumbnail_size'],
                 'class' => 'dot-thumb',
                 'echo'  => false
             ]);
@@ -248,7 +252,7 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
                     ]);
                 echo overcome_html($link_close);
                 echo '</div>';
-            if($i == $number_row || $j==$count) echo '</div>';
+            if($i == $atts['number_row'] || $j==$count) echo '</div>';
             $i ++;
         }
     }
