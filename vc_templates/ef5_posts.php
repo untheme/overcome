@@ -29,6 +29,7 @@
     $item_css_class = ['post-grid-item','ef5-post-item-layout-'.$layout_template,'transition'];
 ?>
 <div class="ef5-posts" id="<?php echo esc_attr($el_id);?>">
+    <?php $this->title($atts); ?>
     <div class="<?php $this->overcome_posts_wrap_css_class($atts);?>">
     <?php 
         switch ($layout_template) {
