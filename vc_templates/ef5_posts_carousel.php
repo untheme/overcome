@@ -62,7 +62,6 @@
                     $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
                 }
                 $large_item_class = ($thumbnail_size_index === 0) ? 'ef5-large-item' : 'ef5-small-item';
-                var_dump($large_item_class );
                 $posts->the_post();
                 // Post Metas
                 $post_metas   = [];
