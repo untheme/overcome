@@ -240,7 +240,7 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
             $item_attrs[] = 'data-dot=\''.$dot_img.'\'';
 
             if($i==1) : ?>
-                <div class="<?php overcome_clients_item_css_class($atts);?>" <?php echo implode(' ', $item_attrs);?>>
+                <div class="<?php $this->overcome_clients_item_css_class($atts);?>" <?php echo implode(' ', $item_attrs);?>>
             <?php  
                 endif;
                 echo '<div class="ef5-client-item-inner" '.$owl_item_space.'>';                
