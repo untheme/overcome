@@ -107,7 +107,7 @@
 
                                         overcome_post_read_more([
                                             'readmore_class' => 'text-14 ef5-text-accent font-style-500',
-                                            'icon_right'     => is_rtl() ? 'flaticon-go-back-left-arrow' : 'flaticon-right-arrow-forward'
+                                            'icon_right'     => is_rtl() ? 'text-12 flaticon-go-back-left-arrow' : 'flaticon-right-arrow-forward text-12'
                                         ]);
                                     ?>
                                 </div>
