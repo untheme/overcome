@@ -10,7 +10,7 @@ if(!class_exists('NewsletterWidgetMinimal') && !class_exists('NewsletterWidget')
             echo do_shortcode('[newsletter_form type="minimal" button="'.esc_attr($btn_text).'" button_color="" placeholder="'.esc_attr($email_text).'"  class="'.esc_attr($el_class).'"][/newsletter_form]');
             break;
         default:
-            echo do_shortcode('[newsletter_form button_label="'.esc_attr($btn_text).'" class="'.esc_attr($el_class).'"][newsletter_field name="email" label="'.esc_attr($email_text).'"][/newsletter_form]');
+            echo do_shortcode('[newsletter_form button_label="'.esc_attr($btn_text).'" class="'.esc_attr($el_class).'"][/newsletter_form]');
             break;
     } ?>
 </div>
