@@ -59,8 +59,8 @@ vc_map(array(
 			'heading'     => esc_html__( 'Email Text', 'overcome' ),
 			'description' => esc_html__( 'Enter email text', 'overcome' ),
 			'param_name'  => 'email_text',
-			'value'       => 'Subscribe to newsletter',
-			'std'		  => 'Subscribe to newsletter',
+			'value'       => 'E-mail address',
+			'std'		  => 'E-mail address',
     	),
     	array(
 			'type'        => 'textfield',
