@@ -1,0 +1,10 @@
+.ef5-newsletter-1{
+	.tnp-submit{
+		background-color: $accent_color;
+	}
+	.tnp-submit{
+		padding-top: 11.5px;
+		padding-bottom: 11.5px;
+		@include border-radius(20px);
+	}
+}
