@@ -71,6 +71,8 @@ $item_attrs = '';
             foreach($values as $value){
                 $j++;
                 if($i > $number_row) $i=1;
+                // image
+                $value['image'] = isset($value['image']) ? $value['image'] : '';
                 /* parse image_link */
                 $link = false;
                 $link_open = '<span class="client-logo image-hover" data--hint="No Title"><span>';
@@ -103,7 +105,7 @@ $item_attrs = '';
                     echo '<div class="ef5-client-item-inner" '.$owl_item_space.'>';                
                     echo overcome_html($link_open);
                         overcome_image_by_size([
-                            'id'    => isset($value['image']) ? $value['image'] : '',
+                            'id'    => $value['image'],
                             'size'  => $thumbnail_size,
                             'class' => $thumbnail_class.' img-static'
                         ]);
