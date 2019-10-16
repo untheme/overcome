@@ -56,14 +56,13 @@
                 ?>
             </div>
         <?php
-                break;
+            break;
             case '2':
                 $item_css_class[] = 'ef5-rounded-10 overlay-wrap ef5-hover-shadow-1';
                 $d = 0;
                 while($posts->have_posts()){
                     $d++;
                     $posts->the_post();
-                    $after = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align"><a class="text-36 text-white" href="'.get_the_permalink().'"><span class="fa fa-link"></span></a></div></div>';
                 ?>
                 <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
                 	<div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
@@ -72,8 +71,40 @@
                 </div>
                 <?php
                     }// end while
+                    wp_reset_postdata();
+            break;
+            case '5':
+                $d = 0;
+                while($posts->have_posts()){
+                    $d++;
+                    $posts->the_post();
                 ?>
-        <?php
+                <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
+                    <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                        <div class="row gutter-12">
+                            <?php overcome_post_media([
+                                'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '48'), 
+                                'default_thumb'  => true,
+                                'before' => '<div class="col-auto">',
+                                'after'  => '</div>'
+                            ]); ?>
+                            <div class="col">
+                                <?php 
+                                    overcome_posted_on([
+                                        'class' => 'text-13 ef5-text-accent'
+                                    ]);
+                                    overcome_post_title([
+                                        'heading_tag' => 'text-13 text-white'
+                                    ]);
+                                ?>
+                            </div>
+                        </div>
+                        <?php ?>
+                    </div>
+                </div>
+                <?php
+                    }// end while
+                    wp_reset_postdata();
             break;
         } 
     ?>
