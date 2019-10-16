@@ -205,6 +205,10 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
             'dot_thumbnail_size' => '50'
         ]);
         $item_attrs = [];
+        $owl_item_space = '';
+        if(isset($atts['margin']) && (isset($atts['number_row']) && $atts['number_row'] > 1 )){
+            $owl_item_space = 'style="margin-bottom:'.$margin.'px"';
+        }
         foreach($values as $value){
             $j++;
             if($i > $atts['number_row']) $i=1;
@@ -233,7 +237,7 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
                 'echo'  => false
             ]);
             $item_attrs[] = 'data-dot=\''.$dot_img.'\'';
-            
+
             if($i==1) : ?>
                 <div class="<?php echo implode(' ',$item_class);?>" <?php echo implode(' ', $item_attrs);?>>
             <?php  

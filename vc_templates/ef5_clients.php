@@ -39,10 +39,7 @@ if($layout_style === 'carousel'){
 $css_class_attr[] = $el_class;
 
 /* get space for owl item */
-$owl_item_space = '';
-if(isset($margin) && (isset($number_row) && $number_row > 1 )){
-    $owl_item_space = 'style="margin-bottom:'.$margin.'px"';
-}
+
 
 
 $clients = vc_map_get_attributes( $this->getShortcode(), $atts );
