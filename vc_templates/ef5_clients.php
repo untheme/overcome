@@ -17,6 +17,7 @@ $values = $thumbnail_class = '';
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
 $el_id = !empty($el_id) ? $el_id : uniqid();
+
 $wrap_css_class = ['ef5-clients-wrap ef5-owl-wrap', 'ef5-'.$el_id];
 
 $css_class_attr = $item_class = array();
@@ -59,6 +60,11 @@ $dot_thumbnail_size = '50';
 $item_attrs = [];
 
 ?>
+<div class="<?php $this->overcome_clients_wrap_css_class($atts);?>">
+    <div id="<?php echo esc_attr($el_id);?>" class="<?php $this->overcome_clients_css_class($atts);?>">
+        <?php $this->overcome_client_render($atts); ?>
+    </div>
+</div>
 <div class="<?php echo trim(implode(' ', $wrap_css_class));?>">
     <?php 
         ef5systems_owl_nav_top($atts);

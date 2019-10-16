@@ -133,4 +133,123 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
         ef5systems_owl_call_settings($atts);
         return parent::content($atts, $content);
     }
+    protected function overcome_clients_wrap_css_class($atts, $args = []){
+        extract($atts);
+        $args = wp_parse_args($args, [
+            'class' => '',
+            'echo'  => true
+        ]);
+        $el_id = !empty($el_id) ? $el_id : uniqid();
+        $wrap_css_class = ['ef5-clients', $args['class'], 'ef5-clients-'.$el_id];
+
+        if($args['echo']){
+            echo trim(implode(' ', $wrap_css_class));
+        } else {
+            return trim(implode(' ', $wrap_css_class));
+        }
+    }
+    protected function overcome_clients_css_class($atts, $args = []){
+        extract($atts);
+        $args = wp_parse_args($args, [
+            'class' => '',
+            'echo'  => true
+        ]);
+        $el_id = !empty($el_id) ? $el_id : uniqid();
+        $wrap_css_class = [];
+        switch ($layout_template) {
+            case 'carousel':
+                $wrap_css_class[] = 'ef5-owl';
+                break;
+            
+            default:
+                $wrap_css_class[] = 'ef5-grid row justify-content-center align-items-center';
+                break;
+        }
+        if($args['echo']){
+            echo trim(implode(' ', $wrap_css_class));
+        } else {
+            return trim(implode(' ', $wrap_css_class));
+        }
+    }
+    protected function overcome_clients_item_css_class($atts, $args = []){
+        extract($atts);
+        $args = wp_parse_args($args, [
+            'class' => '',
+            'echo'  => true
+        ]);
+        $item_css_class = ['ef5-item ef5-client', $args['class']];
+        switch ($layout_template) {
+            case 'carousel':
+                $item_css_class[] = 'ef5-carousel-item';
+                break;
+            
+            default:
+                $item_css_class[] = 'ef5-grid-item col-'.$col_sm.' col-md-'.$col_md.' col-lg-'.$col_lg.' col-xl-'.$col_xl;
+                break;
+        }
+        
+        if($args['echo']){
+            echo trim(implode(' ', $item_css_class));
+        } else {
+            return trim(implode(' ', $item_css_class));
+        }
+    }
+    protected function overcome_client_render($atts){
+        $clients = vc_map_get_attributes( $this->getShortcode(), $atts );
+        $values = (array) vc_param_group_parse_atts( $clients['values'] );
+        $count = count($values);
+        $i=1;
+        $j=0;
+        foreach($values as $value){
+            $j++;
+            if($i > $number_row) $i=1;
+            // image
+            $value['image'] = isset($value['image']) ? $value['image'] : '';
+            /* parse image_link */
+            $link = false;
+            $link_open = '<span class="client-logo image-hover" data--hint="No Title"><span>';
+            $link_close = '</span></span>';
+            if(isset($value['image_link'])){
+                $image_link = vc_build_link( $value['image_link']);
+                $image_link = ( $image_link == '||' ) ? '' : $image_link;
+                if ( strlen( $image_link['url'] ) > 0 ) {
+                    $link = true;
+                    $a_href = $image_link['url'];
+                    $a_title = $image_link['title'] ? $image_link['title'] : '';
+                    $a_target = strlen( $image_link['target'] ) > 0 ? str_replace(' ','',$image_link['target']) : '_self';
+                    $link_open = '<a class="client-logo image-hover" href="'.esc_url($a_href).'" data-hint="'.esc_attr($a_title).'" target="'.esc_attr($a_target).'"><span>';
+                    $link_close = '</span></a>';
+                }
+            }
+            $dot_img = overcome_image_by_size([
+                'id'    => isset($value['image']) ? $value['image'] : '',
+                'size'  => $dot_thumbnail_size,
+                'class' => 'dot-thumb',
+                'echo'  => false
+            ]);
+            if($layout_style === 'carousel'){
+                $item_attrs[] = 'data-dot=\''.$dot_img.'\'';
+            }
+            if($i==1) : ?>
+                <div class="<?php echo implode(' ',$item_class);?>" <?php echo implode(' ', $item_attrs);?>>
+            <?php  
+                endif;
+                echo '<div class="ef5-client-item-inner" '.$owl_item_space.'>';                
+                echo overcome_html($link_open);
+                    overcome_image_by_size([
+                        'id'    => $value['image'],
+                        'size'  => $thumbnail_size,
+                        'class' => $thumbnail_class.' img-static'
+                    ]);
+                    overcome_image_by_size([
+                        'id'    => isset($value['image_hover']) ? $value['image_hover'] : $value['image'],
+                        'size'  => $thumbnail_size,
+                        'class' => $thumbnail_class.' img-hover'
+                    ]);
+                echo overcome_html($link_close);
+                echo '</div>';
+            if($i == $number_row || $j==$count) echo '</div>';
+            $i ++;
+        }
+    }
 }
