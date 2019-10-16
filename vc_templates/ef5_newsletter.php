@@ -11,7 +11,7 @@ if(!class_exists('NewsletterWidgetMinimal') && !class_exists('NewsletterWidget')
             break;
         default:
             echo do_shortcode('[newsletter_form button_label="'.esc_attr($btn_text).'" class="'.esc_attr($el_class).'"]
-                    [newsletter_field name="name" label="Your Name123" placeholder="Your name456"]
+                    [newsletter_field name="name" label="'.esc_attr($name_text).'" placeholder="'.esc_attr($name_text).'"]
                     [newsletter_field name="email" label="'.esc_attr($email_text).'" placeholder="'.esc_attr($email_text).'"]
                 [/newsletter_form]');
             break;

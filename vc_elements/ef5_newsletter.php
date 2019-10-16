@@ -13,8 +13,8 @@ vc_map(array(
 			'description' => esc_html__( 'Choose Layout mode you want to show', 'overcome' ),
 			'param_name'  => 'layout_mode',
 			'value'       => array(
-				esc_html__('Newsletter','overcome')      	=> 'default',
-				esc_html__('Newsletter Minimal','overcome') 	=> 'minimal',
+				esc_html__('Newsletter','overcome')         => 'default',
+				esc_html__('Newsletter Minimal','overcome') => 'minimal',
 			),
 			'std'		  => 'minimal',
 			'admin_label' => true,
@@ -64,6 +64,31 @@ vc_map(array(
             'std'        => '1',
             'admin_label'=> true
         ),
+        array(
+			'type'        => 'checkbox',
+			'description' => esc_html__( 'Show field name', 'overcome' ),
+			'param_name'  => 'show_name',
+			'value'       => array(
+				esc_html__( 'Show Name', 'overcome' ) => '1'
+			),
+			'std'		  => '0',
+			'dependency'    => array(
+				'element'   => 'layout_mode',
+				'value'     => 'default',
+			),
+    	),
+    	array(
+			'type'        => 'textfield',
+			'heading'     => esc_html__( 'Name Text', 'overcome' ),
+			'description' => esc_html__( 'Enter name text', 'overcome' ),
+			'param_name'  => 'name_text',
+			'value'       => 'Your Name',
+			'std'		  => 'Your Name',
+			'dependency'    => array(
+				'element'   => 'show_name',
+				'value'     => '1',
+			),
+    	),
         array(
 			'type'        => 'textfield',
 			'heading'     => esc_html__( 'Email Text', 'overcome' ),
