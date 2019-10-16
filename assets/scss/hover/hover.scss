@@ -263,8 +263,10 @@ $fade-out: (
 	.image-hover{
 		position: relative;
 		display: inline-block;
+		vertical-align: top;
 		span{
 			display: inline-block;
+			vertical-align: top;
 		}
 		&:hover{
 			.img-static{
