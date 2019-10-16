@@ -55,6 +55,11 @@ $j=0;
 
 $dot_thumbnail_size = '50';
 $item_attrs = [];
+$owl_item_space = '';
+if(!empty($atts['margin']) && $atts['number_row'] > 1 ) {
+    $owl_item_space = 'style="margin-bottom:'.$margin.'px"';
+}
+
 
 ?>
 <div class="<?php $this->overcome_clients_wrap_css_class($atts);?>">

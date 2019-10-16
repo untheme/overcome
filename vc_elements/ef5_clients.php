@@ -206,7 +206,7 @@ class WPBakeryShortCode_ef5_clients extends WPBakeryShortCode
         ]);
         $item_attrs = [];
         $owl_item_space = '';
-        if(isset($atts['margin']) && (isset($atts['number_row']) && $atts['number_row'] > 1 )){
+        if(!empty($atts['margin']) && $atts['number_row'] > 1 ){
             $owl_item_space = 'style="margin-bottom:'.$margin.'px"';
         }
         $thumbnail_class = '';
