@@ -10,6 +10,10 @@
 		overflow: hidden;
 		position: relative;
 		text-align: center;
+		display: inline-block;
+	    vertical-align: top;
+	    left: 50%;
+	    @include transform(translate(-50%, 0));
 		&:before{
 			content: '';
 			display: block;
