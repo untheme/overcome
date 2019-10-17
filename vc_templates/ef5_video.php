@@ -18,7 +18,7 @@
             $this->overcome_ef5_video_poster($atts);
             //$this->overcome_ef5_video_play_button($atts);
             $this->overcome_ef5_video_plain($atts);
-            //$this->overcome_ef5_video_popup($atts);
+            $this->overcome_ef5_video_popup($atts);
         ?></div>
     <?php
             break;
