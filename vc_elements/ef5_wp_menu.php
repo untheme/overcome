@@ -7,15 +7,6 @@ vc_map(array(
     'icon'        => 'icon-wpb-wp',
     'params'      => array_merge(
     	array(
-            array(
-                'type'        => 'textfield',
-                'heading'     => esc_html__( 'Element Title', 'overcome' ),
-                'description' => esc_html__( 'Enter the text you want to show as title', 'overcome' ),
-                'param_name'  => 'el_title',
-                'value'       => '',
-                'std'         => '',
-                'admin_label' => true,
-            ),
 	        array(
 			    'type'        => 'dropdown',
 			    'heading'     => esc_html__( 'Menu', 'overcome' ),
