@@ -379,9 +379,10 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
         extract($atts);
         if($video_type !== '2') return;
         $args = wp_parse_args($args,[
-            'anim'  => $play_btn_effect,
-            'class' => '',
-            'size'  => ''
+            'anim'          => $play_btn_effect,
+            'class'         => '',
+            'size'          => '',
+            'hover_overlay' => true
         ]);
         
         $play_btn_url = get_template_directory_uri().'/assets/images/icons/play-btn-'.$play_btn.'.png';
@@ -398,6 +399,8 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
 
         $ef5_waves = overcome_html_animation(['anim' => $args['anim']]);
         $play_btn_text = '<span class="play-btn-text">'.$play_btn_text.'</span>';
+
+        if($args['hover_overlay']) echo '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">';
         switch ($video_source) {
             case '1':
                 if ( is_object( $wp_embed ) ) {
@@ -416,6 +419,7 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
                 echo '<a href="#'.esc_attr($el_id).'" class="ef5-popupvideo '.$play_css_class.'"><span class="ef5-anim-wave loop"><img src="'.esc_url($play_btn_url).'" alt="'.esc_attr($title).'" />'.$ef5_waves.'</span>'.$play_btn_text.'</a>';
                 break;  
         }
+        if($args['hover_overlay']) echo '</div></div>';
     }
     protected function overcome_ef5_video_popup($atts, $args=[]){
         global $wp_embed;
