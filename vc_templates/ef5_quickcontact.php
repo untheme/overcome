@@ -54,8 +54,7 @@ $icon_classes = ['qc-icon', $icon_color];
         <?php
             ob_start();
             if($layout_template === '2'){
-                echo overcome_html($map_address);
-                echo overcome_html($get_direction);
+                $this->overcome_qc_direction($atts);
             }
             foreach($values as $value){
                 $this->overcome_qc_item_render($atts, $value);

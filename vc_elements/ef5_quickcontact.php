@@ -220,6 +220,7 @@ class WPBakeryShortCode_ef5_quickcontact extends WPBakeryShortCode
         if(!$use_link) return;
         ?>
             <div class="<?php echo trim(implode(' ', $wrap_css_class)); ?>">
+                <div class="qc-address"><?php echo overcome_html($map_address); ?></div>
                 <a class="ef5-text-accent transition ef5-scroll" href="<?php echo esc_url($a_href);?>" target="<?php echo esc_attr($a_target);?>">
                     <span class="title"><?php echo esc_html($a_title);?></span>
                     <?php echo overcome_html($icon); ?>
