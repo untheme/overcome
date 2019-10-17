@@ -1,0 +1,13 @@
+.ef5-menu-container{
+	.menu{
+		&.vertical{
+
+		} 
+		&.two-col{
+			@include d-flex();
+			li{
+				flex: 0 0 50%;
+			}
+		}
+	}
+}
