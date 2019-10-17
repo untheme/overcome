@@ -38,6 +38,19 @@
 			justify-content: flex-end;
 		}
 	}
+	@media(min-width: $screen-lg-min){
+		&.justify-content-lg-start{
+			> .vc_column-inner > .wpb_wrapper{
+				justify-content: flex-start;
+			}
+		}
+		&.justify-content-lg-end{
+			> .vc_column-inner > .wpb_wrapper{
+				justify-content: flex-end;
+			}
+		}
+	}
+
 	&.align-items-start{
 		> .vc_column-inner > .wpb_wrapper{
 			align-items:flex-start;
