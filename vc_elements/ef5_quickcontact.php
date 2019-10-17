@@ -167,17 +167,23 @@ class WPBakeryShortCode_ef5_quickcontact extends WPBakeryShortCode
     }
     protected function overcome_qc_item_render($atts, $value){
         extract($atts);
+        $item_class = ['qc-item'];
+        $item_inner_class = ['row'];
+        switch ($layout_template) {
+            case '1':
+                $item_class[] = 'col-12';
+                $item_inner_class[] = 'gutter-10 align-items-center';
+            break;
+        }
         $icon_color = !empty($icon_color) ? $icon_color : '';
         $icon_classes = ['qc-icon', $icon_color];
-        
+
         vc_icon_element_fonts_enqueue( $value['i_type'] );
         $iconClass  = isset($value['i_icon_'. $value['i_type']]) ? $value['i_icon_'. $value['i_type']] : '';
         $qc_icon    = !empty($iconClass) ? '<span class="'.trim(implode(' ', $icon_classes)).' '.$iconClass.'"></span>' : '';
         $qc_heading = isset($value['qc_heading']) && !empty($value['qc_heading']) ? $value['qc_heading'] : '';
         $qc_text    = isset($value['qc_text']) ? $value['qc_text'] : '';
-        $item_class = ['qc-item'];
-        $item_inner_class = ['row'];
-        
+
         echo '<div class="'.trim(implode(' ', $item_class)).'">';
             echo '<div class="'.trim(implode(' ', $item_inner_class)).'">';
                 if(!empty($iconClass)) echo '<div class="col-auto">'.overcome_html($qc_icon).'</div>';
