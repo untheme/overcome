@@ -400,7 +400,7 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
         $ef5_waves = overcome_html_animation(['anim' => $args['anim']]);
         $play_btn_text = '<span class="play-btn-text">'.$play_btn_text.'</span>';
 
-        if($args['hover_overlay']) echo '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">';
+        if($args['hover_overlay']) echo '<div class="overlay"><div class="overlay-inner center-align">';
         switch ($video_source) {
             case '1':
                 if ( is_object( $wp_embed ) ) {
