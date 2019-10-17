@@ -382,7 +382,7 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
             'anim'          => $play_btn_effect,
             'class'         => '',
             'size'          => '',
-            'hover_overlay' => true
+            'hover_overlay' => false
         ]);
         
         $play_btn_url = get_template_directory_uri().'/assets/images/icons/play-btn-'.$play_btn.'.png';
