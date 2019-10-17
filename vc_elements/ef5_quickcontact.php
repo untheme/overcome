@@ -134,7 +134,7 @@ vc_map(array(
                 'heading'     => esc_html__('Address for map','unbreak'),
                 'description' => esc_html__('Add your address','unbreak'),
                 'value'       => '20, First Avenue, San Jose, USA',
-                'std'       => '20, First Avenue, San Jose, USA',
+                'std'        => '20, First Avenue, San Jose, USA',
                 'dependency' => array(
                     'element' => 'layout_template',
                     'value'   => array('2')
