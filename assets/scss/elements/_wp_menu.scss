@@ -1,8 +1,11 @@
 .ef5-menu-container{
 	.menu{
 		list-style: none;
+		a{
+			display: block;
+			padding: 5px 0;
+		}
 		&.vertical{
-
 		} 
 		&.two-col{
 			@include d-flex();
