@@ -16,3 +16,13 @@
 	margin-bottom: 40px;
 	font-weight: 500;
 }
+
+.footer-default{
+	color: #eee8d9;
+	a{
+		color: #eee8d9;
+		&:hover{
+			color: $accent_color;
+		}
+	}
+}
