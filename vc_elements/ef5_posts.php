@@ -212,7 +212,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
         $css_classes = array(
             'ef5-posts',
             'ef5-posts-'.$layout_template,
-            'row',
+            'ef5-grid-wrap',
             'justify-content-center',
             vc_shortcode_custom_css_class( $css ),
         );
