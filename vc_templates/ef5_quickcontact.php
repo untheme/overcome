@@ -73,7 +73,7 @@ if(!empty($atts['get_direction'])){
                 echo overcome_html($get_direction);
             }
             foreach($values as $value){
-                $this->overcome_qc_item_render($value);
+                $this->overcome_qc_item_render($atts, $value);
             }
             echo ob_get_clean();
         ?>
