@@ -349,7 +349,7 @@ function overcome_scripts()
     wp_localize_script( 'overcome', 'overcome_ajax_opts', $overcome_ajax_opts);
 }
 
-add_action('wp_enqueue_script', 'overcome_styles', 0);
+add_action('wp_enqueue_scripts', 'overcome_styles', 0);
 function overcome_styles()
 {
     $min = overcome_script_debug();
