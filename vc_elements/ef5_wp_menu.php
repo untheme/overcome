@@ -7,6 +7,15 @@ vc_map(array(
     'icon'        => 'icon-wpb-wp',
     'params'      => array_merge(
     	array(
+            array(
+                'type'        => 'textfield',
+                'heading'     => esc_html__( 'Element Title', 'overcome' ),
+                'description' => esc_html__( 'Enter the text you want to show as title', 'overcome' ),
+                'param_name'  => 'el_title',
+                'value'       => '',
+                'std'         => '',
+                'admin_label' => true,
+            ),
 	        array(
 			    'type'        => 'dropdown',
 			    'heading'     => esc_html__( 'Menu', 'overcome' ),
@@ -122,5 +131,17 @@ class WPBakeryShortCode_ef5_wp_menu extends WPBakeryShortCode
     {
         $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
         return parent::content($atts, $content);
+    }
+    protected function title($atts, $args=[]){
+        if(empty($atts['el_title'])) return;
+        $args = wp_parse_args($args, [
+            'class' => ''
+        ]);
+        $classes = ['ef5-el-title', 'ef5-heading', $args['class']];
+        ?>
+            <div class="<?php echo trim(implode(' ', $classes));?>">
+                <?php echo esc_html($atts['el_title']); ?>
+            </div>
+        <?php
     }
 }

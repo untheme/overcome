@@ -58,7 +58,7 @@ if(!empty($el_title)){
 				break;
 			default:
 			?>
-				<div class="ef5-heading"><?php echo overcome_html($title); ?></div>
+				<?php $this->title($atts);?>
 			<?php
 			break;
 		}
