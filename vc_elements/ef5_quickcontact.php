@@ -204,7 +204,7 @@ class WPBakeryShortCode_ef5_quickcontact extends WPBakeryShortCode
             'icon' => 'flaticon-right-arrow-forward'
         ]);
         $icon = !empty($args['icon']) ? '<span class="icon '.$args['icon'].'"></span>' : '';
-        $wrap_css_class = ['qc-direction', $args['class']];
+        $wrap_css_class = ['qc-direction', 'col-12', $args['class']];
         // Get Direction
         $use_link = false;
         $get_direction = '';
