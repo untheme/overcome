@@ -55,39 +55,26 @@ if(!empty($atts['get_direction'])){
 }
 ?>
 <div id="<?php echo esc_attr($el_id);?>" class="<?php echo trim(implode(' ', $wrap_css_class));?>">
+    <?php 
+        if(!empty($img_id)) overcome_image_by_size([
+            'id'     => $img_id, 
+            'size'   => '270x184',
+            'class'  => 'image-fit',
+            'before' =>'<div class="qc-image col-12">',
+            'after'  => '</div>'
+        ]);
+        if(!empty($el_title)) echo '<div class="ef5-el-title ef5-heading qc-heading col-12">'.esc_html($el_title).'</div>'; 
+    ?>
     <div class="<?php echo trim(implode(' ', $wrap_inner_css_class));?>">
         <?php
             ob_start();
-
-            if(!empty($img_id)) overcome_image_by_size([
-                'id'     => $img_id, 
-                'size'   => '270x184',
-                'class'  => 'image-fit',
-                'before' =>'<div class="qc-image col-12">',
-                'after'  => '</div>'
-            ]);
-        	if(!empty($el_title)) echo '<div class="ef5-heading qc-heading col-12">'.esc_html($el_title).'</div>';
-            foreach($values as $value){
-                vc_icon_element_fonts_enqueue( $value['i_type'] );
-                $iconClass  = isset($value['i_icon_'. $value['i_type']]) ? $value['i_icon_'. $value['i_type']] : '';
-                $qc_icon    = !empty($iconClass) ? '<span class="'.trim(implode(' ', $icon_classes)).' '.$iconClass.'"></span>' : '';
-                $qc_heading = isset($value['qc_heading']) && !empty($value['qc_heading']) ? $value['qc_heading'] : '';
-                $qc_text    = isset($value['qc_text']) ? $value['qc_text'] : '';
-                switch ($layout_template) {
-                    default:
-                        echo '<div class="'.trim(implode(' ', $item_class)).'">';
-                            echo '<div class="'.trim(implode(' ', $item_inner_class)).'">';
-                                if(!empty($iconClass)) echo '<div class="col-auto">'.overcome_html($qc_icon).'</div>';
-                                echo '<div class="col"><div class="row gutter-20">';
-                                    echo '<div class="qc-item-heading col-auto">'.overcome_html($qc_heading).'</div>';
-                                    if(!empty($qc_text)) echo '<div class="qc-text col">'.overcome_html($qc_text).'</div>';
-                                echo '</div></div>';
-                            echo '</div>';
-                        echo '</div>';
-                    break;
-                }
+            if($layout_template === '2'){
+                echo overcome_html($map_address);
+                echo overcome_html($get_direction);
             }
-            if($layout_template === '2') echo overcome_html($get_direction);
+            foreach($values as $value){
+                overcome_qc_item_render($value);
+            }
             echo ob_get_clean();
         ?>
     </div>
