@@ -194,4 +194,37 @@ class WPBakeryShortCode_ef5_quickcontact extends WPBakeryShortCode
             echo '</div>';
         echo '</div>';
     }
+    protected function overcome_qc_direction($atts, $args=[]){
+        extract($atts);
+        $args = wp_parse_args($args, [
+            'class' => '',
+            'icon' => 'flaticon-right-arrow-forward'
+        ]);
+        $icon = !empty($args['icon']) ? '<span class="icon '.$args['icon'].'"></span>' : '';\
+        $wrap_css_class = ['qc-direction', $args['class']];
+        // Get Direction
+        $use_link = false;
+        $get_direction = '';
+        if(!empty($atts['get_direction'])){
+            $button_link = vc_build_link( $atts['get_direction'] );
+            $button_link = ( $button_link == '||' ) ? '' : $button_link;
+            if ( strlen( $button_link['url'] ) > 0 ) {
+                $use_link = true; 
+                $a_href = $button_link['url'];
+                $a_title = strlen($button_link['title']) > 0 ? $button_link['title'] : esc_html__('Read More','overcome') ;
+                $a_target = strlen( $button_link['target'] ) > 0 ? $button_link['target'] : '_self';
+                // Button for layout 4
+                $get_direction = '<div class="qc-direction"><a class="ef5-text-accent transition ef5-scroll" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'"><span class="title">'.esc_html($a_title).'&nbsp;&nbsp;</span> <span class="flaticon-right-arrow"></span></a></div>';
+            }
+        }
+        if(!$use_link) return;
+        ?>
+            <div class="<?php echo trim(implode(' ', $wrap_css_class)); ?>">
+                <a class="ef5-text-accent transition ef5-scroll" href="<?php echo esc_url($a_href);?>" target="<?php echo esc_attr($a_target);?>">
+                    <span class="title"><?php echo esc_html($a_title);?></span>
+                    <?php echo overcome_html($icon); ?>
+                </a>
+            </div>
+        <?php
+    }
 }

@@ -38,21 +38,6 @@ if(empty($values[0])) {
 $qc_icon = $qc_text = '';
 $icon_color = !empty($icon_color) ? $icon_color : '';
 $icon_classes = ['qc-icon', $icon_color];
-// Get Direction
-$use_link = false;
-$get_direction = '';
-if(!empty($atts['get_direction'])){
-    $button_link = vc_build_link( $atts['get_direction'] );
-    $button_link = ( $button_link == '||' ) ? '' : $button_link;
-    if ( strlen( $button_link['url'] ) > 0 ) {
-        $use_link = true; 
-        $a_href = $button_link['url'];
-        $a_title = strlen($button_link['title']) > 0 ? $button_link['title'] : esc_html__('Read More','overcome') ;
-        $a_target = strlen( $button_link['target'] ) > 0 ? $button_link['target'] : '_self';
-        // Button for layout 4
-        $get_direction = '<div class="qc-direction ef5-btn-wrap col-12"><a class="ef5-btn-link text-accent simple ef5-btn-df icon-right underline-primary transition ef5-scroll" href="'.esc_url($a_href).'" target="'.esc_attr($a_target).'"><span class="btn-title">'.esc_html($a_title).'&nbsp;&nbsp;</span> <span class="btn-icon flaticon-right-arrow"></span></a></div>';
-    }
-}
 ?>
 <div id="<?php echo esc_attr($el_id);?>" class="<?php echo trim(implode(' ', $wrap_css_class));?>">
     <?php 
