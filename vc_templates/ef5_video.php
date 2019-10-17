@@ -1,7 +1,7 @@
 <?php
     $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
     extract( $atts );
-    $video_class = ['ef5-video','ef5-shadow-hover-2'];
+    $video_class = ['ef5-video','ef5-hover-shadow-2'];
 ?>
 <div class="ef5-video-wrapper ef5-video-<?php echo esc_attr($layout_template);?>">
 <div id="ef5-video-<?php echo esc_attr($el_id);?>">
