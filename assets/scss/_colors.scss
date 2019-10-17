@@ -2,7 +2,7 @@
 @each $name, $color in $ef5-colors{
 	@if $color != null and $color != '' {
 		.ef5-text-#{$name}{
-			color: $color;
+			color: $color!important;
 		}
 		.ef5-text-hover-#{$name}:hover{
 			color: $color;
