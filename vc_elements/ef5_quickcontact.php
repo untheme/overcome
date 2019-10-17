@@ -174,6 +174,9 @@ class WPBakeryShortCode_ef5_quickcontact extends WPBakeryShortCode
                 $item_class[] = 'col-12';
                 $item_inner_class[] = 'gutter-10 align-items-center';
             break;
+            case '2':
+                $item_class[] = 'col-12';
+            break;
         }
         $icon_color = !empty($icon_color) ? $icon_color : '';
         $icon_classes = ['qc-icon', $icon_color];

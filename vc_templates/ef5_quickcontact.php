@@ -48,7 +48,7 @@ $icon_classes = ['qc-icon', $icon_color];
             'before' =>'<div class="qc-image col-12">',
             'after'  => '</div>'
         ]);
-        if(!empty($el_title)) echo '<div class="ef5-el-title ef5-heading qc-heading col-12">'.esc_html($el_title).'</div>'; 
+        if(!empty($el_title)) echo '<div class="ef5-el-title ef5-heading qc-heading">'.esc_html($el_title).'</div>'; 
     ?>
     <div class="<?php echo trim(implode(' ', $wrap_inner_css_class));?>">
         <?php
