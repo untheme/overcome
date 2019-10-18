@@ -408,7 +408,7 @@ if(!function_exists('overcome_header_atts')){
                 )
             ),
             overcome_header_wc_attrs($options, $default_value),
-            overcome_header_donate(),
+            overcome_header_donate($default),
             overcome_header_contact_attrs($options, $default, $default_value),
             overcome_header_contact_plain_text_attrs($options, $default_value),
             array(
