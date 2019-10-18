@@ -428,7 +428,8 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
         $args = wp_parse_args($args,[
             'anim'  => $play_btn_effect,
             'class' => '',
-            'overlay' => false
+            'overlay' => false,
+            'overlay_class' => ''
         ]);
         $preload  = '';
         $play_btn_url = get_template_directory_uri().'/assets/images/icons/play-btn-'.$play_btn.'.png';
@@ -458,7 +459,7 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
                 break;
         }
         
-        if($args['overlay']) echo '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">';
+        if($args['overlay']) echo '<div class="overlay ef5-bg-overlay '.$args['overlay_class'].'"><div class="overlay-inner center-align">';
         switch ($video_source) {
             case '1':
                 $play_css_class[] = 'ef5-popupvideo-iframe';
