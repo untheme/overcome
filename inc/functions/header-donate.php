@@ -3,7 +3,7 @@ function overcome_header_donate_button(){
 	if(!class_exists('EF5Payments') || overcome_get_opts('header_donate', '0') === '0') return;
     wp_enqueue_script('bootstrap');
     //var_dump(overcome_get_opts('header_donate_item',''));
-    var_dump(overcome_get_id_by_slug(overcome_get_opts('header_donate_item',''),'ef5_donation'));
+    //var_dump(overcome_get_id_by_slug(overcome_get_opts('header_donate_item',''),'ef5_donation'));
     $post_id = ef5payments_default_donation(overcome_get_id_by_slug(overcome_get_opts('header_donate_item',''),'ef5_donation'));
     //var_dump($post_id);
     $data = apply_filters('ef5payments_get_payment_form_data',[
