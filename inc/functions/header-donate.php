@@ -11,7 +11,6 @@ function overcome_header_donate_button(){
         'url'		   => '#',
         'target'	   => '_self'	
     ],$post_id);
-    var_dump($data);
     ?>
     <a class="<?php echo esc_attr($class) ?>"
        data-options="<?php echo esc_attr($data['data-options']) ?>"
