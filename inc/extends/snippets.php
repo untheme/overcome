@@ -4,6 +4,7 @@
 */
 function overcome_get_id_by_slug($slug, $post_type){
     $content = get_page_by_path($slug, OBJECT, $post_type);
+    var_dump($content);
     if(is_object($content)) 
         return $content->ID;
     else
