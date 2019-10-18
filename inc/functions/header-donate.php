@@ -8,7 +8,7 @@ function overcome_header_donate_button(){
         'data-options' => '',
         'data-target'  => '',
         'title'	 	   => overcome_get_opts('header_donate_label', esc_html__('Donate Now','overcome')),	
-        'url'		   => '',
+        'url'		   => '#',
         'target'	   => '_self'	
     ],$post_id);
     var_dump($data);
