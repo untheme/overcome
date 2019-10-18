@@ -12,7 +12,7 @@ function overcome_header_donate_button(){
         'target'	   => '_self'	
     ],$post_id);
     ?>
-    <a class="<?php echo esc_attr($class) ?>"
+    <a class="<?php echo esc_attr($data['class']); ?>"
        data-options="<?php echo esc_attr($data['data-options']) ?>"
        data-target="<?php echo esc_attr($data['data-target']) ?>"
        href="<?php echo esc_attr($data['url']); ?>" target="<?php echo esc_attr($data['target']); ?>" ><?php echo wp_kses_post($data['title']) ?></a>
