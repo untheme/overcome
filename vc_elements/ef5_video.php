@@ -445,7 +445,7 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
         wp_enqueue_script( 'magnific-popup' );
         wp_enqueue_style( 'magnific-popup' );
         wp_enqueue_script( 'ef5-video' );
-        $play_css_class = ['ef5-playvideo', 'ef5-popupvideo', 'ef5-anim-wave', 'loop', $this->getCSSAnimation('fadeIn')];
+        $play_css_class = ['ef5-playvideo', 'ef5-popupvideo', 'ef5-anim-wave'];
 
         if(!empty($poster)) $play_css_class[] = 'has-poster';
 
