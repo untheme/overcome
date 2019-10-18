@@ -24,10 +24,10 @@
 	}
 	#ef5-navigation{
 		@media (min-width: $screen-xl-min){
-			padding-right: 60px;
+			padding-right: 35px;
 			[dir="rtl"] &{
 				padding-right: 15px;
-				padding-left: 60px;
+				padding-left: 35px;
 			}
 		}
 	}
