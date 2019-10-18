@@ -5,7 +5,7 @@
 	right: 0;
 	z-index: 2;
 	background-color: $white;
-	@media (max-width: $screen-sm-max){
+	@media (max-width: $screen-md-max){
 		top: 20px;
 	}
 }
