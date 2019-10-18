@@ -3,7 +3,7 @@
  * get page ID by Slug
 */
 function overcome_get_id_by_slug($slug, $post_type){
-    if(empty($slug)) return;
+    if(empty($slug)) return '';
     $content = get_page_by_path($slug, OBJECT, $post_type);
     if(is_object($content)) 
         return $content->ID;
