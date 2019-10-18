@@ -168,7 +168,7 @@
                     case '2':
                     $overlay = overcome_post_donate_button(['echo' => false, 'class'=>'ef5-btn ef5-btn-md accent outline']);
             ?>	
-            	<div class="<?php echo trim(implode(' ', $item_css_class)); ?> ef5-hover-shadow-1">
+            	<div class="<?php echo trim(implode(' ', $item_css_class)); ?> overlay-wrap ef5-hover-shadow-1">
                     <?php 
                         overcome_post_media([
                             'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
