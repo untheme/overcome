@@ -4,7 +4,7 @@ function overcome_header_donate_button(){
     wp_enqueue_script('bootstrap');
     $post_id = ef5payments_default_donation(overcome_get_id_by_slug(overcome_get_opts('header_donate_item',''),'ef5_donation'));
     $data = apply_filters('ef5payments_get_payment_form_data',[
-        'class'        => 'ef5-btn accent fill',
+        'class'        => '',
         'data-options' => '',
         'data-target'  => '',
         'title'	 	   => overcome_get_opts('header_donate_label', esc_html__('Donate Now','overcome')),	
