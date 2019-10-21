@@ -75,6 +75,7 @@ if ( ! function_exists( 'overcome_posted_on' ) ) :
             'hint'        => esc_html__( 'Published on', 'overcome' ),
             'hint_update' => esc_html__( 'Updated on', 'overcome' ),
             'icon'        => 'fa fa-calendar',
+            'icon_class'  => '',
             'icon_update' => '',
             'before_date' => '',
             'after_date'  => '',
@@ -99,7 +100,7 @@ if ( ! function_exists( 'overcome_posted_on' ) ) :
                 </div>',
                 trim(implode(' ', $classes)),
                 esc_html($args['hint']),
-                !empty($args['icon']) ? '<span class="meta-icon '.$args['icon'].'">&nbsp;&nbsp;</span>' : '',
+                !empty($args['icon']) ? '<span class="'.trim('meta-icon '.$args['icon_class'].' '.$args['icon']).'">&nbsp;&nbsp;</span>' : '',
                 $args['before_date'],
                 !is_single() ? esc_url( get_permalink()) : '',
                 $posted_time,
@@ -118,7 +119,7 @@ if ( ! function_exists( 'overcome_posted_on' ) ) :
                     </div>',
                     trim(implode(' ', $classes)),
                     esc_html($args['hint_update']),
-                    !empty($args['icon_update']) ? '<span class="meta-icon '.$args['icon_update'].'">&nbsp;&nbsp;</span>' : '',
+                    !empty($args['icon_update']) ? '<span class="'.trim('meta-icon '.$args['icon_class'].' '.$args['icon_update']).'">&nbsp;&nbsp;</span>' : '',
                     $args['before_date'],
                     !is_single() ? esc_url( get_permalink()) : '',
                     $updated_time,
@@ -143,6 +144,7 @@ if ( ! function_exists( 'overcome_posted_in' ) ) :
             'class'           => '',
             'hint'            => esc_html__( 'Posted in', 'overcome' ),
             'icon'            => 'fa fa-folder',
+            'icon_class'      => '',
             'before'          => '',
             'after'           => '',
             'before_category' => '',
@@ -167,7 +169,7 @@ if ( ! function_exists( 'overcome_posted_in' ) ) :
                     $args['before'],
                     trim(implode(' ', $classes)),
                     esc_html($args['hint']),
-                    !empty($args['icon']) ? '<span class="meta-icon '.esc_attr($args['icon']).'">&nbsp;&nbsp;</span>' : '',
+                    !empty($args['icon']) ? '<span class="'.trim('meta-icon '.$args['icon_class'].' '.$args['icon']).'">&nbsp;&nbsp;</span>' : '',
                     $args['before_category'],
                     $terms,
                     $args['after_category'],
@@ -192,6 +194,7 @@ if ( ! function_exists( 'overcome_tagged_in' ) ) :
             'class'      => '',
             'hint'       => esc_html__( 'Tagged in', 'overcome' ),
             'icon'       => '',
+            'icon_class' => '',
             'before'     => '',
             'after'      => '',
             'before_tag' => '<span class="ef5-heading text-uppercase font-style-500">'.esc_html__('Tags:','overcome').'</span>',
@@ -213,7 +216,7 @@ if ( ! function_exists( 'overcome_tagged_in' ) ) :
                     $args['before'],
                     trim(implode(' ', $classes)),
                     esc_html($args['hint']),
-                    !empty($args['icon']) ? '<span class="meta-icon '.$args['icon'].'">&nbsp;&nbsp;</span>' : '',
+                    !empty($args['icon']) ? '<span class="'.trim('meta-icon '.$args['icon_class'].' '.$args['icon']).'">&nbsp;&nbsp;</span>' : '',
                     $args['before_tag'],
                     $tags_list,
                     $args['after_tag'],
@@ -239,6 +242,7 @@ if ( ! function_exists( 'overcome_comments_popup_link' ) ) {
             'before'    => '',
             'after'     => '',
             'icon'      => 'fa fa-comment-alt',
+            'icon_class'=> '',
             'echo'      => true,
             'show_text' => true,
             'show_cmt'  => '1'
@@ -255,15 +259,15 @@ if ( ! function_exists( 'overcome_comments_popup_link' ) ) {
             printf ('%s' , $args['before']);
             if(!$args['show_text']){
                 comments_popup_link(
-                    sprintf('<span class="hint--top" data-hint="%s">%s %s</span>',esc_html__('Be the first to comment','overcome'), $args['icon'], $number),
-                    sprintf('<span class="hint--top" data-hint="%s">%s %s</span>',esc_html__('Post a comment','overcome'), $args['icon'], $number),
-                    sprintf('<span class="hint--top" data-hint="%s">%s %s</span>',esc_html__('Post a comment','overcome'), $args['icon'], $number)
+                    sprintf('<span class="hint--top" data-hint="%s">%s %s</span>',esc_html__('Be the first to comment','overcome'), trim($args['icon_class'].' '.$args['icon']), $number),
+                    sprintf('<span class="hint--top" data-hint="%s">%s %s</span>',esc_html__('Post a comment','overcome'), trim($args['icon_class'].' '.$args['icon']), $number),
+                    sprintf('<span class="hint--top" data-hint="%s">%s %s</span>',esc_html__('Post a comment','overcome'), trim($args['icon_class'].' '.$args['icon']), $number)
                 );
             } else {
                 comments_popup_link(
-                    sprintf('<span class="hint--top" data-hint="%s">%s %s %s</span>',esc_html__('Be the first to comment','overcome'), $args['icon'], $number, esc_html__('Comments','overcome')),
-                    sprintf('<span class="hint--top" data-hint="%s">%s %s %s</span>',esc_html__('Post a comment','overcome'), $args['icon'], $number, esc_html__('Comment','overcome')),
-                    sprintf('<span class="hint--top" data-hint="%s">%s %s %s</span>',esc_html__('Post a comment','overcome'), $args['icon'], $number, esc_html__('Comments','overcome'))
+                    sprintf('<span class="hint--top" data-hint="%s">%s %s %s</span>',esc_html__('Be the first to comment','overcome'), trim($args['icon_class'].' '.$args['icon']), $number, esc_html__('Comments','overcome')),
+                    sprintf('<span class="hint--top" data-hint="%s">%s %s %s</span>',esc_html__('Post a comment','overcome'), trim($args['icon_class'].' '.$args['icon']), $number, esc_html__('Comment','overcome')),
+                    sprintf('<span class="hint--top" data-hint="%s">%s %s %s</span>',esc_html__('Post a comment','overcome'), trim($args['icon_class'].' '.$args['icon']), $number, esc_html__('Comments','overcome'))
                 );
             }
             printf ('%s' , $args['after']);
