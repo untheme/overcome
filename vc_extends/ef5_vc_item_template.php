@@ -28,9 +28,9 @@ function overcome_vc_post_layout2($atts){
 	<?php
 }
 
-function overcome_vc_post_layout6($atts, $args[]){
+function overcome_vc_post_layout6($atts, $args = []){
     $args = wp_parse_args($args,[
-        'label' => 'Upcoming Event'
+        'label' => esc_html__('Upcoming Event','overcome');
     ]);
     ?>
     <div class="row gutter-lg-70">
