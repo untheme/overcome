@@ -11,7 +11,6 @@ function overcome_vc_item_meta1($args=[]){
 			<div class="date empty-none col-auto pb-5">'.overcome_posted_on(['echo' => false, 'icon_class' => 'ef5-text-accent']).'</div>
 			<div class="by empty-none col-auto pb-5">'.overcome_posted_by(['echo' => false, 'icon_class' => 'ef5-text-accent']).'</div>
 			<div class="in empty-none col-auto">'.overcome_posted_in(['echo' => false, 'icon_class' => 'ef5-text-accent']).'</div>
-			<div class="cmt empty-none col-auto">'.overcome_comments_popup_link(['echo' => false, 'icon_class' => 'ef5-text-accent']).'</div>
 		</div>';
 	if($args['echo']){
 		echo overcome_html($html_output);
