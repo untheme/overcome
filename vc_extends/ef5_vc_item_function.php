@@ -8,9 +8,9 @@ function overcome_vc_item_meta1($args=[]){
 	if(in_array(get_post_type(), $args['not_show_in'])) return;
 	$css_classes = ['ef5-vc-item-meta','empty-none', 'row', $args['class']];
 	$html_output = '<div class="'.trim(implode(' ', $css_classes)).'">
-			<div class="date empty-none col-auto pb-5">'.overcome_posted_on(['echo' => false]).'</div>
-			<div class="venue empty-none col-auto pb-5">'.overcome_posted_by(['echo' => false]).'</div>
-			<div class="cost empty-none col-auto">'.overcome_posted_in(['echo' => false]).'</div>
+			<div class="date empty-none col-auto pb-5">'.overcome_posted_on(['echo' => false, 'icon_class' => 'ef5-text-accent']).'</div>
+			<div class="venue empty-none col-auto pb-5">'.overcome_posted_by(['echo' => false, 'icon_class' => 'ef5-text-accent']).'</div>
+			<div class="cost empty-none col-auto">'.overcome_posted_in(['echo' => false, 'icon_class' => 'ef5-text-accent']).'</div>
 		</div>';
 	if($args['echo']){
 		echo overcome_html($html_output);
