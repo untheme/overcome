@@ -17,7 +17,7 @@ if ( ! function_exists( 'overcome_posted_by' ) ) :
             'class'              => '',
             'hint'               => esc_html__( 'Posted by', 'overcome' ),
             'icon'               => 'fa fa-user',
-            'author_avatar'      => true,
+            'author_avatar'      => false,
             'before_author_name' => '',
             'after_author_name'  => '',
             'show_author'        => '1',
