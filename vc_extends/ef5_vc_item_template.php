@@ -28,11 +28,14 @@ function overcome_vc_post_layout2($atts){
 	<?php
 }
 
-function overcome_vc_post_layout6($atts){
+function overcome_vc_post_layout6($atts, $args[]){
+    $args = wp_parse_args($args,[
+        'label' => esc_html__('Upcoming Event','overcome');
+    ]);
     ?>
     <div class="row gutter-lg-70">
         <div class="col-lg-7">
-            <?php esc_html_e('Upcoming Event','overcome'); ?>
+            <?php echo esc_html($args['label']); ?>
             <?php 
                 overcome_post_title([
                     'heading_tag' => 'text-22',
