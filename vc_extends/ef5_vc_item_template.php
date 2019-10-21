@@ -38,7 +38,7 @@ function overcome_vc_post_layout6($atts){
                     'heading_tag' => 'text-22',
                     'class'       => 'pb-15'  
                 ]);
-                overcome_tribe_events_info_hori(['class' => 'text-13']);
+                overcome_vc_item_meta1(['class' => 'text-13']);
             ?>
         </div>
         <div class="col-lg-5">
