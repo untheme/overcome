@@ -32,6 +32,30 @@ function overcome_vc_post_layout6($atts, $args = []){
     $args = wp_parse_args($args,[
         'label' => esc_html__('Upcoming Event','overcome')
     ]);
+    $time_start = '';
+    $time_end = '';
+    wp_enqueue_script('countdown');
+    wp_enqueue_script('ef5-countdown');
+    if(get_post_type() === 'trile_events') $time_end = '';
+    $time = strtotime($time_end);
+    $date_sever = date_i18n('Y-m-d G:i:s');   
+    $gmt_offset = get_option( 'gmt_offset' );
+    /* check if current time from config is empty or less than current time 
+     * && (strtotime($time) < strtotime('now'))
+     */
+    if(empty($time)) $time = strtotime("+22 days 18 hours 30 minutes 55 seconds");
+    $countdown_css_class = ['ef5-countdown'];
+    /*
+        * Time format
+        'Years, Month, Week, Days, Hours, Minute, Second' => '1',
+        'Month, Week, Days, Hours, Minute, Second'        => '2',
+        'Month, Days, Hours, Minute, Second'              => '3',
+        'Week, Days, Hours, Minute, Second'               => '4',
+        'Days, Hours, Minute, Second'                     => '5',
+        'Hours, Minute, Second'                           => '6',
+    */
+    $time_format = apply_filters('overcome_time_coundown_format','5');
+    $time_label = apply_filters('overcome_time_coundown_label', esc_html__('Years, Month, Week, Days, Hours, Mins, Secs','overcome'));
     ?>
     <div class="row gutter-lg-70">
         <div class="col-lg-7">
@@ -46,6 +70,9 @@ function overcome_vc_post_layout6($atts, $args = []){
             ?>
         </div>
         <div class="col-lg-5">
+            <div class="<?php echo trim(implode(' ', $countdown_css_class));?>">
+                <div class="ef5-countdown-bar ef5-countdown-time" data-count="<?php echo esc_attr(date('Y,m,d,H,i,s', $time)); ?>" data-format="<?php echo esc_attr($time_format);?>" data-label="<?php echo esc_attr($time_label);?>" data-timezone="<?php echo esc_attr($gmt_offset); ?>"></div> 
+            </div>
         </div>
     </div>
     <?php
