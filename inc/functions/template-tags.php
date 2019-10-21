@@ -250,7 +250,7 @@ if ( ! function_exists( 'overcome_comments_popup_link' ) ) {
         if($args['show_cmt'] !== '1') return;
 
         $classes = trim(implode(' ', ['ef5-comments-link', $args['class']] ));
-        $args['icon'] = !empty($args['icon']) ? '<span class="meta-icon '.$args['icon'].'">&nbsp;&nbsp;</span>' : '';
+        $args['icon'] = !empty($args['icon']) ? '<span class="'.trim('meta-icon '.$args['icon_class'].' '.$args['icon']).'">&nbsp;&nbsp;</span>' : '';
         ob_start();
         $number    = (int) get_comments_number( get_the_ID() );
         if ( ! post_password_required() && ( comments_open() || get_comments_number() ) )
@@ -259,15 +259,15 @@ if ( ! function_exists( 'overcome_comments_popup_link' ) ) {
             printf ('%s' , $args['before']);
             if(!$args['show_text']){
                 comments_popup_link(
-                    sprintf('<span class="hint--top" data-hint="%s">%s %s</span>',esc_html__('Be the first to comment','overcome'), trim($args['icon_class'].' '.$args['icon']), $number),
-                    sprintf('<span class="hint--top" data-hint="%s">%s %s</span>',esc_html__('Post a comment','overcome'), trim($args['icon_class'].' '.$args['icon']), $number),
-                    sprintf('<span class="hint--top" data-hint="%s">%s %s</span>',esc_html__('Post a comment','overcome'), trim($args['icon_class'].' '.$args['icon']), $number)
+                    sprintf('<span class="hint--top" data-hint="%s">%s %s</span>',esc_html__('Be the first to comment','overcome'), $args['icon'], $number),
+                    sprintf('<span class="hint--top" data-hint="%s">%s %s</span>',esc_html__('Post a comment','overcome'), $args['icon'], $number),
+                    sprintf('<span class="hint--top" data-hint="%s">%s %s</span>',esc_html__('Post a comment','overcome'), $args['icon'], $number)
                 );
             } else {
                 comments_popup_link(
-                    sprintf('<span class="hint--top" data-hint="%s">%s %s %s</span>',esc_html__('Be the first to comment','overcome'), trim($args['icon_class'].' '.$args['icon']), $number, esc_html__('Comments','overcome')),
-                    sprintf('<span class="hint--top" data-hint="%s">%s %s %s</span>',esc_html__('Post a comment','overcome'), trim($args['icon_class'].' '.$args['icon']), $number, esc_html__('Comment','overcome')),
-                    sprintf('<span class="hint--top" data-hint="%s">%s %s %s</span>',esc_html__('Post a comment','overcome'), trim($args['icon_class'].' '.$args['icon']), $number, esc_html__('Comments','overcome'))
+                    sprintf('<span class="hint--top" data-hint="%s">%s %s %s</span>',esc_html__('Be the first to comment','overcome'), $args['icon'], $number, esc_html__('Comments','overcome')),
+                    sprintf('<span class="hint--top" data-hint="%s">%s %s %s</span>',esc_html__('Post a comment','overcome'), $args['icon'], $number, esc_html__('Comment','overcome')),
+                    sprintf('<span class="hint--top" data-hint="%s">%s %s %s</span>',esc_html__('Post a comment','overcome'), $args['icon'], $number, esc_html__('Comments','overcome'))
                 );
             }
             printf ('%s' , $args['after']);
