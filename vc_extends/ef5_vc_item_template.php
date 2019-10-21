@@ -27,3 +27,22 @@ function overcome_vc_post_layout2($atts){
         </div>
 	<?php
 }
+
+function overcome_vc_post_layout6($atts){
+    ?>
+    <div class="row gutter-lg-70">
+        <div class="col-lg-7">
+            <?php esc_html_e('Upcoming Event','overcome'); ?>
+            <?php 
+                overcome_post_title([
+                    'heading_tag' => 'text-22',
+                    'class'       => 'pb-15'  
+                ]);
+                overcome_tribe_events_info_hori(['class' => 'text-13']);
+            ?>
+        </div>
+        <div class="col-lg-5">
+        </div>
+    </div>
+    <?php
+}

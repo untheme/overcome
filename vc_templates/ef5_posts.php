@@ -109,6 +109,22 @@
                     }// end while
                     wp_reset_postdata();
             break;
+            case '6':
+                $item_css_class[] = 'ef5-rounded-10 ef5-shadow-1';
+                $d = 0;
+                while($posts->have_posts()){
+                    $d++;
+                    $posts->the_post();
+                ?>
+                <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
+                    <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                        <?php overcome_vc_post_layout6($atts); ?>
+                    </div>
+                </div>
+                <?php
+                    }// end while
+                    wp_reset_postdata();
+            break;
         } 
     ?>
     </div>
