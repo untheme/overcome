@@ -11,3 +11,11 @@
 		}
 	}
 }
+.ef5-social-2 {
+	a{
+		color: $primary_color;
+		&:hover{
+			color: $white;
+		}
+	}
+}
