@@ -33,7 +33,8 @@ function overcome_tribe_events_info($args=[]){
 }
 
 function overcome_tribe_events_info_hori($args=[]){
-	if(!class_exists('Tribe__Events__Main')) return;
+	$post_type = get_post_type();
+	if(!class_exists('Tribe__Events__Main') || $post_type !== 'tribe_event') return;
 	$args = wp_parse_args($args,[
 		'class' => '',
 		'echo'	=> true
@@ -41,7 +42,6 @@ function overcome_tribe_events_info_hori($args=[]){
 	$css_classes = ['ef5-tribe-events-info','empty-none', 'row', $args['class']];
 	$venue_details = tribe_get_venue_details();
 	$address_delimiter = empty( $venue_address ) ? ' ' : ', ';
-	
 	if($args['echo']){
 	?>
 		<div class="<?php echo trim(implode(' ', $css_classes));?>">
