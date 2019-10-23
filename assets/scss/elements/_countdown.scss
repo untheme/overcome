@@ -13,6 +13,7 @@
 		width: 80px;
 		height: 80px;
 		border: 4px solid #ebebeb;
+		padding-top: 15px;
 		@include border-radius(50%);
 	}
 	.amount,
