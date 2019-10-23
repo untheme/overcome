@@ -60,11 +60,11 @@ function overcome_vc_post_layout6($atts, $args = []){
     <div class="p-15 pl-lg-35 pr-lg-35 pt-lg-27 pb-lg-20">
         <div class="row gutter-lg-70">
             <div class="col-lg-7">
-                <div class="ef5-text-accent font-style-500"><?php echo esc_html($args['label']); ?></div>
+                <div class="ef5-text-accent font-style-500 pb-4"><?php echo esc_html($args['label']); ?></div>
                 <?php 
                     overcome_post_title([
                         'heading_tag' => 'text-22',
-                        'class'       => 'pb-15'  
+                        'class'       => 'pb-12'  
                     ]);
                     overcome_tribe_events_info_hori(['class' => 'text-13']);
                     overcome_vc_item_meta1(['class' => 'text-13']);
