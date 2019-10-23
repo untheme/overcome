@@ -57,21 +57,23 @@ function overcome_vc_post_layout6($atts, $args = []){
     $time_format = apply_filters('overcome_time_coundown_format','5');
     $time_label = apply_filters('overcome_time_coundown_label', esc_html__('Years, Month, Week, Days, Hours, Mins, Secs','overcome'));
     ?>
-    <div class="row gutter-lg-70">
-        <div class="col-lg-7">
-            <?php echo esc_html($args['label']); ?>
-            <?php 
-                overcome_post_title([
-                    'heading_tag' => 'text-22',
-                    'class'       => 'pb-15'  
-                ]);
-                overcome_tribe_events_info_hori(['class' => 'text-13']);
-                overcome_vc_item_meta1(['class' => 'text-13']);
-            ?>
-        </div>
-        <div class="col-lg-5">
-            <div class="<?php echo trim(implode(' ', $countdown_css_class));?>">
-                <div class="ef5-countdown-bar ef5-countdown-time" data-count="<?php echo esc_attr(date('Y,m,d,H,i,s', $time)); ?>" data-format="<?php echo esc_attr($time_format);?>" data-label="<?php echo esc_attr($time_label);?>" data-timezone="<?php echo esc_attr($gmt_offset); ?>"></div> 
+    <div class="p-35">
+        <div class="row gutter-lg-70">
+            <div class="col-lg-7">
+                <div class="ef5-text-accent font-style-500"><?php echo esc_html($args['label']); ?></div>
+                <?php 
+                    overcome_post_title([
+                        'heading_tag' => 'text-22',
+                        'class'       => 'pb-15'  
+                    ]);
+                    overcome_tribe_events_info_hori(['class' => 'text-13']);
+                    overcome_vc_item_meta1(['class' => 'text-13']);
+                ?>
+            </div>
+            <div class="col-lg-5">
+                <div class="<?php echo trim(implode(' ', $countdown_css_class));?>">
+                    <div class="ef5-countdown-bar ef5-countdown-time" data-count="<?php echo esc_attr(date('Y,m,d,H,i,s', $time)); ?>" data-format="<?php echo esc_attr($time_format);?>" data-label="<?php echo esc_attr($time_label);?>" data-timezone="<?php echo esc_attr($gmt_offset); ?>"></div> 
+                </div>
             </div>
         </div>
     </div>
