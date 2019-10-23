@@ -8,10 +8,25 @@
 	}
 }
 .ef5-countdown-layout-1{
+	text-align: center;
 	.item{
 		width: 80px;
 		height: 80px;
 		border: 4px solid #ebebeb;
 		@include border-radius(50%);
+	}
+	.amount,
+	.title{
+		display: block;
+	}
+	.amount{
+		font-size: 26px;
+		font-weight: 500;
+		color: $primary_color;
+	}
+	.title{
+		font-size: 12px;
+		text-transform: uppercase;
+		color: $primary_color;
 	}
 }
