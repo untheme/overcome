@@ -57,6 +57,10 @@ function overcome_vc_post_layout6($atts, $args = []){
     $time_format = apply_filters('overcome_time_coundown_format','5');
     $time_label = apply_filters('overcome_time_coundown_label', esc_html__('Years, Month, Week, Days, Hours, Mins, Secs','overcome'));
     ?>
+    <!-- HTML Structure
+        <span class="">Time</span>
+        <span class="">label</span>
+    -->
     <div class="p-15 pl-lg-35 pr-lg-35 pt-lg-27 pb-lg-20">
         <div class="row gutter-lg-70">
             <div class="col-lg-7">
