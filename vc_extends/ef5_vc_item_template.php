@@ -73,7 +73,7 @@ function overcome_vc_post_layout6($atts, $args = []){
                     overcome_vc_item_meta1(['class' => 'text-13']);
                 ?>
             </div>
-            <div class="col-lg-5 pt-25 pt-lg-0">
+            <div class="col-auto col-lg-5 pt-25 pt-lg-0">
                 <div class="<?php echo trim(implode(' ', $countdown_css_class));?>">
                     <div class="ef5-countdown-bar ef5-countdown-time ef5-countdown-layout-1" data-count="<?php echo esc_attr(date('Y,m,d,H,i,s', $time)); ?>" data-format="<?php echo esc_attr($time_format);?>" data-label="<?php echo esc_attr($time_label);?>" data-timezone="<?php echo esc_attr($gmt_offset); ?>"></div> 
                 </div>
