@@ -46,6 +46,7 @@ function overcome_vc_post_layout6($atts, $args = []){
                 $event_date_format = tribe_get_date_format( true );
                 $time_start = '';
                 $time_end = tribe_get_end_date($event, true, $event_date_format);
+                var_dump('xx'.$time_end);
                 break;
             
             case 'ef5_donation':
@@ -53,6 +54,7 @@ function overcome_vc_post_layout6($atts, $args = []){
                 $time_end = '';
                 break;
         }
+        var_dump($time_end);
         $time = strtotime($time_end);
         $date_sever = date_i18n('Y-m-d G:i:s');   
         $gmt_offset = get_option( 'gmt_offset' );
