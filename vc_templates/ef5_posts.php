@@ -119,7 +119,7 @@
                 <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
                     <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
                         <?php 
-                        $time_end = get_post_meta( get_the_ID(), '_EventEndDate', true );
+                        $time_end = get_post_meta( get_the_ID(), '_EventEndDate' );
                         var_dump('$time_end'.$time_end);
                         overcome_vc_post_layout6($atts); ?>
                     </div>
