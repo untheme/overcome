@@ -45,12 +45,12 @@ function overcome_vc_post_layout6($atts, $args = []){
             
             case 'ef5_donation':
                 $meta = apply_filters('ef5payments_get_post_meta',[],get_the_ID(),false);
-                $time_end = isset($meta['end_date_time']) && !empty($meta['end_date_time']) ? strtotime($meta['end_date_time']) : strtotime("+22 days 18 hours {get_the_ID()} minutes 55 seconds");;
+                $time_end = isset($meta['end_date_time']) && !empty($meta['end_date_time']) ? strtotime($meta['end_date_time']) : strtotime('+22 days 18 hours '.get_the_ID().' minutes 55 seconds');;
                 break;
 
             case 'ef5_stories':
                 $meta = apply_filters('ef5payments_get_post_meta',[],get_the_ID(),false);
-                $time_end = isset($meta['end_date_time']) && !empty($meta['end_date_time']) ? strtotime($meta['end_date_time']) : strtotime("+22 days 18 hours {get_the_ID()} minutes 55 seconds");;
+                $time_end = isset($meta['end_date_time']) && !empty($meta['end_date_time']) ? strtotime($meta['end_date_time']) : strtotime('+22 days 18 hours '.get_the_ID().' minutes 55 seconds');;
                 break;
         }
         $time = is_numeric($time_end) ? $time_end : strtotime($time_end);
