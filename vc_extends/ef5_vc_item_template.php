@@ -34,7 +34,7 @@ function overcome_vc_post_layout6($atts, $args = []){
     ]);
 
     $support_coundown = apply_filters('overcome_support_coundown', ['tribe_events']);
-    if(in_array(get_post_type(), $support_coundown))
+    if(in_array(get_post_type(), $support_coundown)){
         wp_enqueue_script('countdown');
         wp_enqueue_script('ef5-countdown');
         $time_start = '';
@@ -71,8 +71,9 @@ function overcome_vc_post_layout6($atts, $args = []){
         $time_label = apply_filters('overcome_time_coundown_label', esc_html__('Years, Month, Week, Days, Hours, Mins, Secs','overcome'));
         // Css Class 
         $left_class = 'col-lg-7';
-    else 
+    } else {
         $left_class = 'col-12';
+    }
     ?>
     <!-- HTML CountDown Structure
         <div class="item-inner"><span class="amount">{ynn}</span><span class="title">' + data_label[0] + '</span></div>
