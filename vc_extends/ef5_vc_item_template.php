@@ -76,7 +76,7 @@ function overcome_vc_post_layout6($atts, $args = []){
     }
     ?>
     <div class="p-15 pl-lg-35 pr-lg-35 pt-lg-27 pb-lg-20">
-        <div class="row gutter-lg-70">
+        <div class="row">
             <div class="<?php echo esc_attr($left_class);?>">
                 <div class="ef5-text-accent font-style-500 pb-4"><?php echo esc_html($args['label']); ?></div>
                 <?php 
