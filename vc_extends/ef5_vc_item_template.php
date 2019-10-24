@@ -29,11 +29,9 @@ function overcome_vc_post_layout2($atts){
 }
 
 function overcome_vc_post_layout6($atts, $args = []){
-    global $post;
     $args = wp_parse_args($args,[
         'label' => esc_html__('Upcoming Event','overcome')
     ]);
-
     $support_coundown = apply_filters('overcome_support_coundown', ['tribe_events']);
     if(in_array(get_post_type(), $support_coundown)){
         wp_enqueue_script('countdown');
@@ -42,15 +40,11 @@ function overcome_vc_post_layout6($atts, $args = []){
         $time_end = '';
         switch (get_post_type()) {
             case 'tribe_events':
-                $event = get_post( $post );
-                $event_date_format = tribe_get_date_format( true );
-                $time_start = '';
                 $time_end = get_post_meta( get_the_ID(), '_EventEndDate', true );
                 break;
             
             case 'ef5_donation':
-                $time_start = '';
-                $time_end = '';
+                $time_end = get_post_meta( get_the_ID(), 'end_date_time', true );;
                 break;
         }
         var_dump($time_end);
