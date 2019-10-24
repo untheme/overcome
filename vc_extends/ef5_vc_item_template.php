@@ -45,7 +45,7 @@ function overcome_vc_post_layout6($atts, $args = []){
                 $event = get_post( $post );
                 $event_date_format = tribe_get_date_format( true );
                 $time_start = '';
-                $time_end = Tribe__Events__Timezones::event_end_timestamp( get_the_ID() );
+                $time_end = get_post_meta( get_the_ID(), '_EventAllDay', true ) //Tribe__Events__Timezones::event_end_timestamp( get_the_ID() );
                 var_dump('ID'.get_the_ID());
                 var_dump('xx'.$time_end);
                 break;
