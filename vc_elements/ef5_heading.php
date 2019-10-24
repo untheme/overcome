@@ -287,8 +287,8 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
     }
     protected function ef5_heading_button($atts,$args = []){
         $args = wp_parse_args($args, [
-            'before' => '',
-            'after'  => '',
+            'before' => '<div class="ef5-heading-btn">',
+            'after'  => '</div>',
             'class'  => ''
         ]);
         extract( $atts );
