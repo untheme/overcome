@@ -44,7 +44,7 @@ function overcome_vc_post_layout6($atts, $args = []){
                 break;
             
             case 'ef5_donation':
-                var_dump(get_post_meta( get_the_ID());
+                var_dump(get_post_meta( get_the_ID()));
                 $time_end = get_post_meta( get_the_ID(), 'end_date_time', true );;
                 break;
         }
