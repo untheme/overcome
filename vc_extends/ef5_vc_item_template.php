@@ -43,9 +43,9 @@ function overcome_vc_post_layout6($atts, $args = []){
         switch (get_post_type()) {
             case 'tribe_events':
                 //$event = get_post( $post );
-                //$event_date_format = tribe_get_date_format( true );
+                $event_date_format = tribe_get_date_format( true );
                 $time_start = '';
-                $time_end = tribe_get_end_date(get_the_ID(),true);
+                $time_end = tribe_get_end_date(get_the_ID(),true, $event_date_format);
                 var_dump('xx'.$time_end);
                 break;
             
