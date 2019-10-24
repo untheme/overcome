@@ -56,13 +56,19 @@ function overcome_vc_post_layout6($atts, $args = []){
     */
     $time_format = apply_filters('overcome_time_coundown_format','5');
     $time_label = apply_filters('overcome_time_coundown_label', esc_html__('Years, Month, Week, Days, Hours, Mins, Secs','overcome'));
+
+    $support_coundown = apply_filters('overcome_support_coundown', ['tribe_events']);
+    if(in_array(get_post_type(), $support_coundown))
+        $left_class = 'col-lg-7';
+    else 
+        $left_class = 'col-12';
     ?>
     <!-- HTML CountDown Structure
         <div class="item-inner"><span class="amount">{ynn}</span><span class="title">' + data_label[0] + '</span></div>
     -->
     <div class="p-15 pl-lg-35 pr-lg-35 pt-lg-27 pb-lg-20">
         <div class="row gutter-lg-70">
-            <div class="col-lg-7">
+            <div class="<?php echo esc_attr($left_class);?>">
                 <div class="ef5-text-accent font-style-500 pb-4"><?php echo esc_html($args['label']); ?></div>
                 <?php 
                     overcome_post_title([
@@ -73,11 +79,13 @@ function overcome_vc_post_layout6($atts, $args = []){
                     overcome_vc_item_meta1(['class' => 'text-13']);
                 ?>
             </div>
+            <?php if(in_array(get_post_type(), $support_coundown)) : ?>
             <div class="col-auto col-lg-5 pt-25 pt-lg-0">
                 <div class="<?php echo trim(implode(' ', $countdown_css_class));?>">
                     <div class="ef5-countdown-bar ef5-countdown-time ef5-countdown-layout-1" data-count="<?php echo esc_attr(date('Y,m,d,H,i,s', $time)); ?>" data-format="<?php echo esc_attr($time_format);?>" data-label="<?php echo esc_attr($time_label);?>" data-timezone="<?php echo esc_attr($gmt_offset); ?>"></div> 
                 </div>
             </div>
+        <?php endif; ?>
         </div>
     </div>
     <?php
