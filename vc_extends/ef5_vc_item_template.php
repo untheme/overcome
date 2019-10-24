@@ -40,7 +40,7 @@ function overcome_vc_post_layout6($atts, $args = []){
         wp_enqueue_script('ef5-countdown');
         $time_start = '';
         $time_end = '';
-        switch ($support_coundown) {
+        switch (get_post_type()) {
             case 'tribe_events':
                 $event = get_post( $post );
                 $event_date_format = tribe_get_date_format( true );
