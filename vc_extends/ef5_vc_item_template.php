@@ -32,7 +32,7 @@ function overcome_vc_post_layout6($atts, $args = []){
     $args = wp_parse_args($args,[
         'label' => esc_html__('Upcoming Event','overcome')
     ]);
-    $support_coundown = apply_filters('overcome_support_coundown', ['tribe_events']);
+    $support_coundown = apply_filters('overcome_support_coundown', ['tribe_events','ef5_donation','ef5_stories']);
     if(in_array(get_post_type(), $support_coundown)){
         wp_enqueue_script('countdown');
         wp_enqueue_script('ef5-countdown');
