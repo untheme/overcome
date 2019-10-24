@@ -75,9 +75,6 @@ function overcome_vc_post_layout6($atts, $args = []){
         $left_class = 'col-12';
     }
     ?>
-    <!-- HTML CountDown Structure
-        <div class="item-inner"><span class="amount">{ynn}</span><span class="title">' + data_label[0] + '</span></div>
-    -->
     <div class="p-15 pl-lg-35 pr-lg-35 pt-lg-27 pb-lg-20">
         <div class="row gutter-lg-70">
             <div class="<?php echo esc_attr($left_class);?>">
@@ -92,6 +89,9 @@ function overcome_vc_post_layout6($atts, $args = []){
                 ?>
             </div>
             <?php if(in_array(get_post_type(), $support_coundown)) : ?>
+            <!-- HTML CountDown Structure
+                <div class="item-inner"><span class="amount">{ynn}</span><span class="title">' + data_label[0] + '</span></div>
+            -->
             <div class="col-auto col-lg-5 pt-25 pt-lg-0">
                 <div class="<?php echo trim(implode(' ', $countdown_css_class));?>">
                     <div class="ef5-countdown-bar ef5-countdown-time ef5-countdown-layout-1" data-count="<?php echo esc_attr(date('Y,m,d,H,i,s', $time)); ?>" data-format="<?php echo esc_attr($time_format);?>" data-label="<?php echo esc_attr($time_label);?>" data-timezone="<?php echo esc_attr($gmt_offset); ?>"></div> 
