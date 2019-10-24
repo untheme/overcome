@@ -55,7 +55,8 @@ function overcome_vc_post_layout6($atts, $args = []){
                 break;
         }
         var_dump($time_end);
-        $time = strtotime($time_end);
+        $time = is_numeric($time_end) ? $time_end : strtotime($time_end);
+        
         $date_sever = date_i18n('Y-m-d G:i:s');   
         $gmt_offset = get_option( 'gmt_offset' );
         /* check if current time from config is empty or less than current time 
