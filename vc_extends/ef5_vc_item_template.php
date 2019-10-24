@@ -46,6 +46,7 @@ function overcome_vc_post_layout6($atts, $args = []){
                 $event_date_format = tribe_get_date_format( true );
                 $time_start = '';
                 $time_end = Tribe__Events__Timezones::event_end_timestamp( get_the_ID() );
+                var_dump('ID'.get_the_ID());
                 var_dump('xx'.$time_end);
                 break;
             
@@ -56,7 +57,7 @@ function overcome_vc_post_layout6($atts, $args = []){
         }
         var_dump($time_end);
         $time = is_numeric($time_end) ? $time_end : strtotime($time_end);
-        
+
         $date_sever = date_i18n('Y-m-d G:i:s');   
         $gmt_offset = get_option( 'gmt_offset' );
         /* check if current time from config is empty or less than current time 
