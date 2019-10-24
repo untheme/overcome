@@ -29,6 +29,7 @@ function overcome_vc_post_layout2($atts){
 }
 
 function overcome_vc_post_layout6($atts, $args = []){
+    global $post;
     $args = wp_parse_args($args,[
         'label' => esc_html__('Upcoming Event','overcome')
     ]);
@@ -41,8 +42,10 @@ function overcome_vc_post_layout6($atts, $args = []){
         $time_end = '';
         switch ($support_coundown) {
             case 'tribe_events':
+                $event = get_post( $post );
+                $event_date_format = tribe_get_date_format( true );
                 $time_start = '';
-                $time_end = '';
+                $time_end = tribe_get_end_date($event, true, $event_date_format);
                 break;
             
             case 'ef5_donation':
