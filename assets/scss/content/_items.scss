@@ -89,3 +89,12 @@
 		margin-bottom: 0;
 	}
 }
+
+// Layout 6
+.ef5-post-item-layout-6{
+	.ef5-countdown-bar{
+		@media (min-width: $screen-lg-min){
+			justify-content: flex-end;
+		}
+	}
+}
