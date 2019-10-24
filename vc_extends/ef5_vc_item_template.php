@@ -32,33 +32,44 @@ function overcome_vc_post_layout6($atts, $args = []){
     $args = wp_parse_args($args,[
         'label' => esc_html__('Upcoming Event','overcome')
     ]);
-    $time_start = '';
-    $time_end = '';
-    wp_enqueue_script('countdown');
-    wp_enqueue_script('ef5-countdown');
-    if(get_post_type() === 'trile_events') $time_end = '';
-    $time = strtotime($time_end);
-    $date_sever = date_i18n('Y-m-d G:i:s');   
-    $gmt_offset = get_option( 'gmt_offset' );
-    /* check if current time from config is empty or less than current time 
-     * && (strtotime($time) < strtotime('now'))
-     */
-    if(empty($time)) $time = strtotime("+22 days 18 hours 30 minutes 55 seconds");
-    $countdown_css_class = ['ef5-countdown'];
-    /*
-        * Time format
-        'Years, Month, Week, Days, Hours, Minute, Second' => '1',
-        'Month, Week, Days, Hours, Minute, Second'        => '2',
-        'Month, Days, Hours, Minute, Second'              => '3',
-        'Week, Days, Hours, Minute, Second'               => '4',
-        'Days, Hours, Minute, Second'                     => '5',
-        'Hours, Minute, Second'                           => '6',
-    */
-    $time_format = apply_filters('overcome_time_coundown_format','5');
-    $time_label = apply_filters('overcome_time_coundown_label', esc_html__('Years, Month, Week, Days, Hours, Mins, Secs','overcome'));
 
     $support_coundown = apply_filters('overcome_support_coundown', ['tribe_events']);
     if(in_array(get_post_type(), $support_coundown))
+        wp_enqueue_script('countdown');
+        wp_enqueue_script('ef5-countdown');
+        $time_start = '';
+        $time_end = '';
+        switch ($support_coundown) {
+            case 'tribe_events':
+                $time_start = '';
+                $time_end = '';
+                break;
+            
+            case 'ef5_donation':
+                $time_start = '';
+                $time_end = '';
+                break;
+        }
+        $time = strtotime($time_end);
+        $date_sever = date_i18n('Y-m-d G:i:s');   
+        $gmt_offset = get_option( 'gmt_offset' );
+        /* check if current time from config is empty or less than current time 
+         * && (strtotime($time) < strtotime('now'))
+         */
+        if(empty($time)) $time = strtotime("+22 days 18 hours 30 minutes 55 seconds");
+        $countdown_css_class = ['ef5-countdown'];
+        /*
+            * Time format
+            'Years, Month, Week, Days, Hours, Minute, Second' => '1',
+            'Month, Week, Days, Hours, Minute, Second'        => '2',
+            'Month, Days, Hours, Minute, Second'              => '3',
+            'Week, Days, Hours, Minute, Second'               => '4',
+            'Days, Hours, Minute, Second'                     => '5',
+            'Hours, Minute, Second'                           => '6',
+        */
+        $time_format = apply_filters('overcome_time_coundown_format','5');
+        $time_label = apply_filters('overcome_time_coundown_label', esc_html__('Years, Month, Week, Days, Hours, Mins, Secs','overcome'));
+        // Css Class 
         $left_class = 'col-lg-7';
     else 
         $left_class = 'col-12';
