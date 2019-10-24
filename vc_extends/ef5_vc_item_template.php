@@ -47,7 +47,6 @@ function overcome_vc_post_layout6($atts, $args = []){
                 $time_end = get_post_meta( get_the_ID(), 'end_date_time', true );;
                 break;
         }
-        var_dump($time_end);
         $time = is_numeric($time_end) ? $time_end : strtotime($time_end);
 
         $date_sever = date_i18n('Y-m-d G:i:s');   
