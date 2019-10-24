@@ -44,8 +44,8 @@ function overcome_vc_post_layout6($atts, $args = []){
                 break;
             
             case 'ef5_donation':
-                var_dump(get_post_meta( get_the_ID()));
-                $time_end = get_post_meta( get_the_ID(), 'end_date_time', true );;
+                $meta = apply_filters('ef5payments_get_post_meta',[],get_the_ID(),false);
+                $time_end = isset($meta['end_date_time']) && !empty($meta['end_date_time']) ? strtotime($meta['end_date_time']) : strtotime("+22 days 18 hours 30 minutes 55 seconds");;
                 break;
         }
         $time = is_numeric($time_end) ? $time_end : strtotime($time_end);
