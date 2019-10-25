@@ -15,11 +15,14 @@
             $this->overcome_ef5_video_link($atts);
         ?></div>
         <div class="<?php echo trim(implode(' ', $video_class));?>"><?php 
+            $this->overcome_ef5_video_poster2($atts);
+        ?><div class="relative"><?php
             $this->overcome_ef5_video_poster($atts);
             //$this->overcome_ef5_video_play_button($atts);
             $this->overcome_ef5_video_plain($atts);
             $this->overcome_ef5_video_popup($atts,['overlay' => true, 'overlay_class' => 'ef5-rounded-10']);
         ?></div>
+        </div>
     <?php
             break;
     } ?>

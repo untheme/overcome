@@ -391,6 +391,13 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
             'size'  => $poster_size,
             'class' => trim(implode(' ', $img_class))
         ]);
+    }
+    protected function overcome_ef5_video_poster2($atts, $args = []){
+        extract($atts);
+        $args = wp_parse_args($args,[
+            'class' => 'ef5-rounded-10'
+        ]);
+        $img_class = ['video-poster', 'video-poster2', $poster_style, $args['class']];
         overcome_image_by_size([
             'id'    => $poster2,
             'size'  => $poster_size,
