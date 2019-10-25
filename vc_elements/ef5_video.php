@@ -12,6 +12,7 @@ vc_map(array(
             'param_name' => 'layout_template',
             'value'      =>  array(
                 '1' => get_template_directory_uri().'/vc_elements/layouts/video-1.png',
+                '2' => get_template_directory_uri().'/vc_elements/layouts/video-2.jpg',
             ),
             'std'         => '1',
             'admin_label' => true,
@@ -56,7 +57,7 @@ vc_map(array(
             'holder'     => 'h3',
             'dependency' => array(
                 'element'   => 'layout_template',
-                'value'     => '2'
+                'value'     => ''
             ),
             'group'       => esc_html__('Content','overcome')
         ),
@@ -327,11 +328,24 @@ vc_map(array(
             'std'        => ''
         ),
         array(
+            'heading'    => esc_html__( 'Poster 1','overcome'),
             'type'       => 'attach_image',
             'class'      => '',
             'param_name' => 'poster',
             'value'      => '',
             'group'      =>esc_html__( 'Poster','overcome'),
+        ),
+        array(
+            'heading'    => esc_html__( 'Poster 2','overcome'),
+            'type'       => 'attach_image',
+            'class'      => '',
+            'param_name' => 'poster',
+            'value'      => '',
+            'group'      =>esc_html__( 'Poster','overcome'),
+            'dependency' => array(
+                'element' => 'layout_template',
+                'value'   => array('2'),
+            ),
         ),
         array(
             'type'       => 'textfield',
