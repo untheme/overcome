@@ -198,8 +198,8 @@ class WPBakeryShortCode_ef5_team extends WPBakeryShortCode
     }
     protected function overcome_team_image($atts, $team, $args = []){
         $args = wp_parse_args($args, [
-            'class' => '',
-            'size'  => '270x340',
+            'class'     => '',
+            'size'      => '270x340',
             'img_class' => 'ef5-rounded-10'  
         ]);
         $classes = ['team-image', $args['class']];
