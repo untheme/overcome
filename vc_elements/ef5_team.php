@@ -212,6 +212,13 @@ class WPBakeryShortCode_ef5_team extends WPBakeryShortCode
         }
         echo trim(implode(' ',[$css_class, $args['class']]));
     }
+    protected function overcome_team_item_inner_class($atts, $args =[]){
+        extract($atts);
+        $args = wp_parse_args($args,[
+            'class' => ''
+        ]);
+        echo trim(implode(' ',['team-item-inner', $args['class']]));
+    }
     protected function overcome_team_image($atts, $team, $args = []){
         $args = wp_parse_args($args, [
             'class'     => '',

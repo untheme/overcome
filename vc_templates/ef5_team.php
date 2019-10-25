@@ -49,7 +49,7 @@ $j=0;
                         <div class="<?php $this->overcome_team_item_class($atts);?>" data-dot='<?php $this->overcome_owl_dot_data($atts, $team); ?>'>
                     <?php endif; ?>
                         <div class="ef5-item-inner" <?php echo overcome_html($owl_item_space);?>>
-                            <div class="<?php echo trim(implode(' ', $item_inner_class));?>">
+                            <div class="<?php $this->overcome_team_item_inner_class($atts);?>">
                                 <?php switch ($layout_template) {
                                     default:
                                 ?>
