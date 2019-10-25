@@ -202,6 +202,7 @@ class WPBakeryShortCode_ef5_team extends WPBakeryShortCode
             'size'  => '270x340',
             'img_class' => 'ef5-rounded-10'  
         ]);
+        $classes = ['team-image', $args['class']];
     ?>
         <div class="<?php echo trim(implode(' ', $classes));?>"><?php 
             overcome_image_by_size([
