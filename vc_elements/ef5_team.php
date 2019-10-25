@@ -208,7 +208,7 @@ class WPBakeryShortCode_ef5_team extends WPBakeryShortCode
             overcome_image_by_size([
                 'id'      => $team['image'],
                 'size'    => overcome_default_value($atts['thumbnail_size'], $args['size']),
-                'class'   => 'team-img transition '.$args['img_class'],
+                'class'   => trim(implode(' ', ['team-img', 'transition', $args['img_class']])),
                 'default' => true
             ]);
         ?></div>
