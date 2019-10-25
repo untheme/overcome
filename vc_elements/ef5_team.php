@@ -196,7 +196,8 @@ class WPBakeryShortCode_ef5_team extends WPBakeryShortCode
         ef5systems_owl_call_settings($atts);
         return parent::content($atts, $content);
     }
-    protected function overcome_team_image($atts, $team, $args = []){
+    protected function overcome_team_image($team, $args = []){
+        $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
         $args = wp_parse_args($args, [
             'class' => '',
             'size'  => '270x340',
