@@ -150,14 +150,14 @@ vc_map(array(
             )
         ),
         /* Grid settings */
-        unbreak_grid_settings(array(
+        ef5systems_grid_settings(array(
             'group'      => esc_html__('Layout Settings','overcome'), 
             'param_name' => 'layout_style', 
             'value'      => 'grid'
             )
         ),
         /* Carousel Settings */
-        unbreak_owl_settings(array(
+        ef5systems_owl_settings(array(
             'group'      => esc_html__('Layout Settings','overcome'), 
             'param_name' => 'layout_style', 
             'value'      => 'carousel'
