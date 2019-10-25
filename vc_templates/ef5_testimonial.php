@@ -16,7 +16,7 @@ $css_class_attr[] = 'ef5-testimonial ef5-testimonial-layout-'.$layout_template;
 $item_class[] = 'testimonial-item';
 
 if($layout_style === 'carousel'){
-    $wrap_css_class[] = ef5_owl_css_class($atts);
+    $wrap_css_class[] = ef5systems_owl_css_class($atts);
     $css_class_attr[] = 'ef5-owl testimonial-carousel owl-carousel';
     $item_class[] = 'ef5-carousel-item';
 } else {
@@ -64,7 +64,7 @@ if($layout_template === '1') $inner_css_classes[] = 'ef5-box-shadow-12';
                 		$author_link_close = '</a>';
                 	}
                 	// dot image
-                	$dot_image = unbreak_image_by_size([
+                	$dot_image = overcome_image_by_size([
 						'id'    => $testimonial['author_avatar'],
 						'size'  => $dot_thumbnail_size, 
 						'class' => 'dot-thumb circle', 
@@ -73,137 +73,15 @@ if($layout_template === '1') $inner_css_classes[] = 'ef5-box-shadow-12';
                     // star rating
                     $testimonial['author_rate'] = isset($testimonial['author_rate']) ? $testimonial['author_rate'] : '';
                     if($i==1) : ?>
-                        <div class="<?php echo join(' ',$item_class);?>" data-dot='<?php echo unbreak_html($dot_image); ?>'>
+                        <div class="<?php echo join(' ',$item_class);?>" data-dot='<?php echo overcome_html($dot_image); ?>'>
                     <?php  
                         endif;
                         echo '<div class="'.trim(implode(' ', $inner_css_classes)).'" '.$owl_item_space.'>';
                         	switch ($layout_template) {
-                                case '4':
-                                    echo '<div class="row">';
-                                        //avatar
-                                        unbreak_image_by_size([
-                                            'id'      => $testimonial['author_avatar'],
-                                            'size'    => $avatar_size,
-                                            'class'   => 'avatar circle',
-                                            'default' => true,
-                                            'before'  => '<div class="col-auto">',
-                                            'after'   => '</div>'   
-                                        ]);
-                                        echo '<div class="col">';
-                                            echo '<div class="ttmn-header">';
-                                                // name
-                                                echo '<span class="ttmn-name h4">'.$author_link_open.$testimonial['author_name'].$author_link_close.'</span>';
-                                                // position
-                                                echo '<span class="ttmn-position font-style-400i"> - '.$testimonial['author_position'].'</span>';
-                                            echo '</div>';
-                                            // text 
-                                            echo '<div class="ttmn-text text-large">'.$testimonial['text'].'</div>';
-                                            // star rating
-                                            if(!empty($testimonial['author_rate'])) {
-                                                $author_rate = ($testimonial['author_rate']/5)*100;
-                                                $star_rating = '<div class="ttmn-rate"><span class="ttmn-rated" style="width:'.$author_rate.'%"></span></div>';
-                                                echo wp_kses_post($star_rating);
-                                            }
-                                        echo '</div>';
-                                    echo '</div>';
-                                break;
-                                case '3-1':
-                                    echo '<div class="row align-items-center">';
-                                        //avatar
-                                        unbreak_image_by_size([
-                                            'id'      => $testimonial['author_avatar'],
-                                            'size'    => $avatar_size,
-                                            'class'   => 'avatar circle',
-                                            'default' => true,
-                                            'before'  => '<div class="col-auto">',
-                                            'after'   => '</div>'   
-                                        ]);
-                                        echo '<div class="col">';
-                                            echo '<div class="ttmn-header">';
-                                                // name
-                                                echo '<div class="ttmn-name h3">'.$author_link_open.$testimonial['author_name'].$author_link_close.'</div>';
-                                                // position
-                                                echo '<div class="ttmn-position font-style-400i accent-color">'.$testimonial['author_position'].'</div>';
-                                            echo '</div>';
-                                        echo '</div>';
-                                    echo '</div>';
-                                    echo '<div class="ttmn-info">';
-                                    // text 
-                                    echo '<div class="ttmn-text text-20 font-style-500i">'.$testimonial['text'].'</div>';
-                                    // star rating
-                                    if(!empty($testimonial['author_rate'])) {
-                                        $author_rate = ($testimonial['author_rate']/5)*100;
-                                        $star_rating = '<div class="ttmn-rate"><span class="ttmn-rated" style="width:'.$author_rate.'%"></span></div>';
-                                        echo wp_kses_post($star_rating);
-                                    }
-                                    echo '</div>';
-                                break;
-                                case '3':
-                                    echo '<div class="row align-items-center">';
-                                        //avatar
-                                        unbreak_image_by_size([
-                                            'id'      => $testimonial['author_avatar'],
-                                            'size'    => $avatar_size,
-                                            'class'   => 'avatar circle',
-                                            'default' => true,
-                                            'before'  => '<div class="col-auto">',
-                                            'after'   => '</div>'   
-                                        ]);
-                                        echo '<div class="col">';
-                                            echo '<div class="ttmn-header">';
-                                                // name
-                                                echo '<div class="ttmn-name h3">'.$author_link_open.$testimonial['author_name'].$author_link_close.'</div>';
-                                                // position
-                                                echo '<div class="ttmn-position font-style-300i accent-color">'.$testimonial['author_position'].'</div>';
-                                            echo '</div>';
-                                        echo '</div>';
-                                    echo '</div>';
-                                    echo '<div class="ttmn-info">';
-                                    // text 
-                                    echo '<div class="ttmn-text size-h4 font-style-500i">'.$testimonial['text'].'</div>';
-                                    // star rating
-                                    if(!empty($testimonial['author_rate'])) {
-                                        $author_rate = ($testimonial['author_rate']/5)*100;
-                                        $star_rating = '<div class="ttmn-rate"><span class="ttmn-rated" style="width:'.$author_rate.'%"></span></div>';
-                                        echo wp_kses_post($star_rating);
-                                    }
-                                    echo '</div>';
-                                break;
-                                case '2':
-                                    echo '<div class="row align-items-center w-100">';
-                                        //avatar
-                                        unbreak_image_by_size([
-                                            'id'      => $testimonial['author_avatar'],
-                                            'size'    => $avatar_size,
-                                            'class'   => 'avatar circle',
-                                            'default' => true,
-                                            'before'  => '<div class="col-auto">',
-                                            'after'   => '</div>'   
-                                        ]);
-                                        echo '<div class="col">';
-                                            echo '<div class="ttmn-header">';
-                                                // name
-                                                echo '<div class="ttmn-name h3">'.$author_link_open.$testimonial['author_name'].$author_link_close.'</div>';
-                                                // position
-                                                echo '<div class="ttmn-position font-style-400i">'.$testimonial['author_position'].'</div>';
-                                            echo '</div>';
-                                        echo '</div>';
-                                    echo '</div>';
-                                    echo '<div class="ttmn-info">';
-                                    // text 
-                                    echo '<div class="ttmn-text size-h4">'.$testimonial['text'].'</div>';
-                                    // star rating
-                                    if(!empty($testimonial['author_rate'])) {
-                                        $author_rate = ($testimonial['author_rate']/5)*100;
-                                        $star_rating = '<div class="ttmn-rate"><span class="ttmn-rated" style="width:'.$author_rate.'%"></span></div>';
-                                        echo wp_kses_post($star_rating);
-                                    }
-                                    echo '</div>';
-                                break;
                         		default:
                         			echo '<div class="row">';
                             			//avatar
-                            			unbreak_image_by_size([
+                            			overcome_image_by_size([
     										'id'      => $testimonial['author_avatar'],
     										'size'    => $avatar_size,
     										'class'   => 'avatar circle',
@@ -238,9 +116,9 @@ if($layout_template === '1') $inner_css_classes[] = 'ef5-box-shadow-12';
         ?>
     </div>
     <?php if($layout_style === 'carousel'):
-        unbreak_loading_animation(); 
-        ef5_owl_dots_container($atts);
-        ef5_owl_nav_container($atts);
-        ef5_owl_dots_in_nav_container($atts);
+        overcome_loading_animation(); 
+        ef5systems_owl_dots_container($atts);
+        ef5systems_owl_nav_container($atts);
+        ef5systems_owl_dots_in_nav_container($atts);
     endif; ?>
 </div>
