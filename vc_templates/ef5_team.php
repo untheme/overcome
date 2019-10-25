@@ -50,9 +50,11 @@ $j=0;
                                             // image            
                                             $this->overcome_team_image($atts, $team);
                                         ?>
-                                        <div class="overlay ef5-overlay-bg"><?php
+                                        <div class="overlay ef5-overlay-bg ef5-rounded-10">
+                                            <div class="col-12 align-self-end"><?php
                                                 $this->overcome_team_socials($team);
-                                        ?></div>
+                                            ?></div>
+                                        </div>
                                     </div>
                                     <div class="team-info"><?php
                                             // name
