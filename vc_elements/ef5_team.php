@@ -196,6 +196,24 @@ class WPBakeryShortCode_ef5_team extends WPBakeryShortCode
         ef5systems_owl_call_settings($atts);
         return parent::content($atts, $content);
     }
+    protected function overcome_team_image($team, $args = []){
+        //if(!isset($team['name']) || empty($team['name'])) return;
+        $args = wp_parse_args($args, [
+            'class' => '',
+            'size'  => '270x340',
+            'img_class' => 'ef5-rounded-10'  
+        ]);
+    ?>
+        <div class="<?php echo trim(implode(' ', $classes));?>"><?php 
+            overcome_image_by_size([
+                'id'      => $team['image'],
+                'size'    => overcome_default_value($thumbnail_size,$args['size']),
+                'class'   => 'team-img transition '.$args['img_class'],
+                'default' => true
+            ]);
+        ?></div>
+    <?php
+    }
     protected function overcome_team_name($team, $args = []){
         if(!isset($team['name']) || empty($team['name'])) return;
         $args = wp_parse_args($args, [
@@ -241,6 +259,41 @@ class WPBakeryShortCode_ef5_team extends WPBakeryShortCode
     ?>
         <div class="<?php echo trim(implode(' ', $classes));?>"><?php 
             echo overcome_html($team['desc']);
+        ?></div>
+    <?php
+    }
+    protected function overcome_team_socials($team, $args = []){
+        if(!isset($team['social']) || empty($team['social'])) return;
+        $args = wp_parse_args($args, [
+            'class' => ''
+        ]);
+        $classes = ['team-socials', $args['class']];
+
+        $socials_list = '';
+        $socials = (array) vc_param_group_parse_atts( $team['social']);
+        foreach($socials as $social){
+            if(isset($social['icon'])) $icon = '<span class="'.$social['icon'].'"></span>';
+            /* parse social link */
+            $link = false;
+            if(isset($social['link'])){
+                $icon_link = vc_build_link( $social['link'] );
+                $icon_link = ( $icon_link == '||' ) ? '' : $icon_link;
+                if ( strlen( $icon_link['url'] ) > 0 ) {
+                    $link = true;
+                    $social_href = $icon_link['url'];
+                    $social_title = $icon_link['title'] ? $icon_link['title'] : '';
+                    $social_target = strlen( $icon_link['target'] ) > 0 ? str_replace(' ','',$icon_link['target']) : '_self';
+                }
+            }
+            if($link){
+                $link_open = '<a href="'.esc_url($social_href).'" title="'.esc_attr($social_title).'" target="'.esc_attr($social_target).'">';
+                $link_close = '</a>';
+                $socials_list .= $link_open.$icon.$link_close;
+            }     
+        }
+    ?>
+        <div class="<?php echo trim(implode(' ', $classes));?>"><?php 
+            echo overcome_html($socials_list);
         ?></div>
     <?php
     }
