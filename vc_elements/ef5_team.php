@@ -212,7 +212,7 @@ class WPBakeryShortCode_ef5_team extends WPBakeryShortCode
                 break;
             
             default:
-                $css_classes[] = 'row justify-content-center';
+                $css_classes[] = 'ef5-grid row justify-content-center';
                 break;
         }
         $css_classes[] = $args['class'];
