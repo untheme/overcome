@@ -196,4 +196,52 @@ class WPBakeryShortCode_ef5_team extends WPBakeryShortCode
         ef5systems_owl_call_settings($atts);
         return parent::content($atts, $content);
     }
+    protected function overcome_team_name($team, $args = []){
+        if(!isset($team['name']) || empty($team['name'])) return;
+        $args = wp_parse_args($args, [
+            'class' => ''
+        ]);
+        $classes = ['team-name', $args['class']];
+        $team_link_open = $team_link_close = '';
+        if(!empty($team['link'])){
+            $team_link = vc_build_link( $team['link']);
+            $team_link = ( $team_link == '||' ) ? '' : $team_link;  
+            if ( strlen( $team_link['url'] ) > 0 ) {
+                $a_href = $team_link['url'];
+                $a_title = !empty($team_link['title']) ? $team_link['title'] : $team['name'];
+                $a_target = strlen( $team_link['target'] ) > 0 ? $team_link['target'] : '_blank';
+            }
+            $team_link_open = '<a href="'.esc_url($a_href).'" title="'.esc_attr($a_title).'" target="'.esc_attr($a_target).'">';
+            $team_link_close = '</a>';
+        }
+    ?>
+        <div class="<?php echo trim(implode(' ', $classes));?>"><?php 
+            echo overcome_html($team_link_open.$team['name'].$team_link_close); 
+        ?></div>
+    <?php
+    }
+    protected function overcome_team_position($team, $args = []){
+        if(!isset($team['position']) || empty($team['position'])) return;
+        $args = wp_parse_args($args, [
+            'class' => ''
+        ]);
+        $classes = ['team-position', $args['class']];
+    ?>
+        <div class="<?php echo trim(implode(' ', $classes));?>"><?php 
+            echo overcome_html($team['position']);
+        ?></div>
+    <?php
+    }
+    protected function overcome_team_desc($team, $args = []){
+        if(!isset($team['desc']) || empty($team['desc'])) return;
+        $args = wp_parse_args($args, [
+            'class' => ''
+        ]);
+        $classes = ['team-desc', $args['class']];
+    ?>
+        <div class="<?php echo trim(implode(' ', $classes));?>"><?php 
+            echo overcome_html($team['desc']);
+        ?></div>
+    <?php
+    }
 }

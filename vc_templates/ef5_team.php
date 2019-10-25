@@ -153,17 +153,14 @@ $team_link_open = $team_link_close = $socials = '';
                                             <div class="team-social ef5-social text-white size-30"><?php echo overcome_html($socials_list);?></div>
                                         </div>
                                     </div>
-                            		<div class="team-info">
-    	                        		<?php
+                            		<div class="team-info"><?php
     	                        			// name
-    			                            echo '<div class="team-name h4 text-truncate">'.$team_link_open.$team['name'].$team_link_close.'</div>';
+    			                            overcome_team_name($team);
     			                            // position
-    			                            echo '<div class="team-position text-truncate">'.$team['position'].'</div>';
+                                            overcome_team_position($team);
     	                        			// desc 
-    			                        	if(!empty($team['desc'])) echo '<div class="team-desc">'.$team['desc'].'</div>';
-    			                        	
-    			                        ?>
-    			                    </div>
+    			                        	overcome_team_desc($team);
+    			                    ?></div>
                                 </div>
 			                    <?php
                         		break;
