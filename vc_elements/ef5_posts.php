@@ -223,7 +223,8 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
     }
     protected function overcome_posts_featured_item($atts, $args = []){
         $args = wp_parse_args($args, [
-            'class' => ''
+            'class' => '',
+            'thumbnail_size' => overcome_default_value($atts['thumbnail_size'],'570'),
         ]);
 
         $overlay_content = '<div class="overlay ef5-bg-overlay ef5-rounded-10"><div class="overlay-inner center-align w-100 p-30 pl-lg-75 pr-lg-75">';
@@ -244,7 +245,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
             <div class="<?php echo trim(implode(' ', $css_class));?>">
                 <?php 
                     overcome_post_media([
-                        'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '570x570'), 
+                        'thumbnail_size' => $args['thumbnail_size'], 
                         'default_thumb'  => true,
                         'after' => $overlay_content,
                         'img_class' => 'ef5-rounded-10'
