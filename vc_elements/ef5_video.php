@@ -388,6 +388,11 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
             'size'  => $poster_size,
             'class' => 'video-poster '.$poster_style
         ]);
+        overcome_image_by_size([
+            'id'    => $poster2,
+            'size'  => $poster_size,
+            'class' => 'video-poster video-poster2 '.$poster_style
+        ]);
     }
     protected function overcome_ef5_video_play_button($atts, $args=[])
     {
