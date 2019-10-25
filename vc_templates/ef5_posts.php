@@ -61,7 +61,10 @@
                         }
                         var_dump($thumbnail_size_index);
                         if($post_count2 != 1){
-                            $this->overcome_posts_item($atts,['class'=>'overlay-wrap','size' => $thumbnail_size[$thumbnail_size_index]]);
+                            $this->overcome_posts_item($atts,[
+                                'class'=>'overlay-wrap',
+                                'size' => $thumbnail_size[$thumbnail_size_index]
+                            ]);
                         }
                     }
                     wp_reset_postdata();
