@@ -103,7 +103,7 @@ if($layout_template === '1') $inner_css_classes[] = 'ef5-box-shadow-12';
     			                        		echo wp_kses_post($star_rating);
     			                        	}
     			                        	// text 
-    			                        	echo '<div class="ttmn-text">'.$testimonial['text'].'</div>';
+    			                        	if(isset($testimonial['text']) && !empty($testimonial['text'])) echo '<div class="ttmn-text">'.$testimonial['text'].'</div>';
     		                            echo '</div>';
                                     echo '</div>';
                         		break;
