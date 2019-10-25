@@ -27,6 +27,10 @@
     $grid_item_css_class = ['ef5-grid-item-wrap', $this->getCSSAnimation( $css_animation ), 'col-'.$col_sm, 'col-md-'.$col_md, 'col-lg-'.$col_lg, 'col-xl-'.$col_xl];
     // Items CSS Classes
     $item_css_class = ['post-grid-item','ef5-post-item-layout-'.$layout_template,'transition'];
+
+    // Thumbnail size
+    $thumbnail_size_index = -1;
+    $thumbnail_size = explode(',', $thumbnail_size);
 ?>
 <div class="ef5-posts" id="<?php echo esc_attr($el_id);?>">
     <?php $this->title($atts); ?>
@@ -49,8 +53,15 @@
                     while($posts->have_posts()){
                         $post_count2++;
                         $posts->the_post();
+
+                        // Thumbnail Size
+                        $thumbnail_size_index++;
+                        if($thumbnail_size_index >= count($thumbnail_size)){
+                            $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
+                        }
+
                         if($post_count2 != 1){
-                            $this->overcome_posts_item($atts,['class'=>'overlay-wrap']);
+                            $this->overcome_posts_item($atts,['class'=>'overlay-wrap','size' => $thumbnail_size_index]);
                         }
                     }
                     wp_reset_postdata();
