@@ -265,7 +265,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
             <div class="<?php echo trim(implode(' ', $css_class));?>">
                 <?php 
                     overcome_post_media([
-                        'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], $args['thumbnail_size']), 
+                        'thumbnail_size' => overcome_default_value($args['thumbnail_size'],'170'), 
                         'default_thumb'  => true,
                         'class'          => 'col-xs-auto p-0',
                         'before'         => '<div class="relative h-100">',
