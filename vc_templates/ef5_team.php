@@ -85,7 +85,7 @@ $team_link_open = $team_link_close = $socials = '';
                                     <div class="hover-inner team-images">
                                         <?php
                                             // image            
-                                            overcome_team_image($team);
+                                            $this->overcome_team_image($team);
                                 		?>
                                         <div class="hover-content content-flex align-items-end justify-content-<?php echo esc_attr($content_align);?> overlay-bg-1">
                                             <div class="team-social ef5-social text-white size-30"><?php
@@ -95,11 +95,11 @@ $team_link_open = $team_link_close = $socials = '';
                                     </div>
                             		<div class="team-info"><?php
     	                        			// name
-    			                            overcome_team_name($team);
+    			                            $this->overcome_team_name($team);
     			                            // position
-                                            overcome_team_position($team);
+                                            $this->overcome_team_position($team);
     	                        			// desc 
-    			                        	overcome_team_desc($team);
+    			                        	$this->overcome_team_desc($team);
     			                    ?></div>
                                 </div>
 			                    <?php
