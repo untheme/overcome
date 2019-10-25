@@ -40,33 +40,29 @@ $j=0;
                     if($i==1) : ?>
                         <div class="<?php $this->overcome_team_item_class($atts);?>" data-dot='<?php $this->overcome_owl_dot_data($atts, $team); ?>'>
                     <?php endif; ?>
-                        <div class="ef5-item-inner" <?php echo overcome_html($owl_item_space);?>>
-                            <div class="<?php $this->overcome_team_item_inner_class($atts);?>">
+                        <div class="ef5-item" <?php echo overcome_html($owl_item_space);?>>
+                            <div class="<?php $this->overcome_team_item_inner_class($atts,['class' => 'overlay-wrap']);?>">
                                 <?php switch ($layout_template) {
                                     default:
                                 ?>
-                                    <div class="hoverdir-wrap fade-in">
-                                        <div class="hover-inner team-images">
-                                            <?php
-                                                // image            
-                                                $this->overcome_team_image($atts, $team);
-                                            ?>
-                                            <div class="hover-content content-flex align-items-end justify-content-<?php echo esc_attr($content_align);?>">
-                                                <div class="team-social ef5-social text-white size-30"><?php
-                                                    $this->overcome_team_socials($team);
-                                                ?></div>
-                                            </div>
-                                        </div>
-                                        <div class="team-info"><?php
-                                                // name
-                                                $this->overcome_team_name($team);
-                                                // position
-                                                $this->overcome_team_position($team);
-                                                // desc 
-                                                $this->overcome_team_desc($team);
+                                    <div class="relative">
+                                        <?php
+                                            // image            
+                                            $this->overcome_team_image($atts, $team);
+                                        ?>
+                                        <div class="overlay ef5-overlay-bg"><?php
+                                                $this->overcome_team_socials($team);
                                         ?></div>
                                     </div>
-                                    <?php
+                                    <div class="team-info"><?php
+                                            // name
+                                            $this->overcome_team_name($team);
+                                            // position
+                                            $this->overcome_team_position($team);
+                                            // desc 
+                                            $this->overcome_team_desc($team);
+                                    ?></div>
+                                <?php
                                     break;
                                 } ?>
                             </div>
