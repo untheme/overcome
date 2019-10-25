@@ -334,7 +334,7 @@ vc_map(array(
             'param_name' => 'poster',
             'value'      => '',
             'group'      => esc_html__( 'Poster','overcome'),
-            'edit_field_class' => 'vc_col-md-6'
+            'edit_field_class' => 'vc_col-sm-6'
         ),
         array(
             'heading'    => esc_html__( 'Poster 2','overcome'),
@@ -347,7 +347,7 @@ vc_map(array(
                 'element' => 'layout_template',
                 'value'   => array('2'),
             ),
-            'edit_field_class' => 'vc_col-md-6'
+            'edit_field_class' => 'vc_col-sm-6'
         ),
         array(
             'type'       => 'textfield',
