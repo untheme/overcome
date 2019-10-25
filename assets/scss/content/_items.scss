@@ -34,6 +34,11 @@
 	}
 	.ef5-donation-amount{
 		padding-top: 12px;
+		.ef5-donation-raised .ef5-label{
+			display: inline-block;
+			font-size: $BodyFontSize;
+			font-weight: 400;
+		}
 		.ef5-donation-raised .ef5-value{
 			font-weight: 700;
 			color: #777;
@@ -43,9 +48,6 @@
 		.ef5-donation-goal .ef5-value{
 			font-weight: 700;
 			color: $accent_color;
-			display: inline-block;
-			font-size: $BodyFontSize;
-			margin-top: 0;
 		}
 	}
 	.ef5-readmore{
