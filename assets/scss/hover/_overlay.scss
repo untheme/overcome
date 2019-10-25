@@ -10,8 +10,6 @@
 .overlay-wrap{
 	.relative{
 		//overflow: hidden;
-		display: inline-block;
-		vertical-align: top;
 	}
 	.overlay{
 		@media (min-width: $desktop-screen){

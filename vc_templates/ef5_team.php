@@ -45,7 +45,7 @@ $j=0;
                                 <?php switch ($layout_template) {
                                     default:
                                 ?>
-                                    <div class="relative">
+                                    <div class="relative d-inline-block">
                                         <?php
                                             // image            
                                             $this->overcome_team_image($atts, $team);
