@@ -31,7 +31,6 @@
     // Thumbnail size
     $thumbnail_size_index = -1;
     $thumbnail_size = explode(',', $thumbnail_size);
-    var_dump($thumbnail_size);
 ?>
 <div class="ef5-posts" id="<?php echo esc_attr($el_id);?>">
     <?php $this->title($atts); ?>
@@ -60,7 +59,7 @@
                         if($thumbnail_size_index >= count($thumbnail_size)){
                             $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
                         }
-
+                        var_dump($thumbnail_size_index);
                         if($post_count2 != 1){
                             $this->overcome_posts_item($atts,['class'=>'overlay-wrap','size' => $thumbnail_size_index]);
                         }
