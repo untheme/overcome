@@ -196,8 +196,7 @@ class WPBakeryShortCode_ef5_team extends WPBakeryShortCode
         ef5systems_owl_call_settings($atts);
         return parent::content($atts, $content);
     }
-    protected function overcome_team_image($team, $args = []){
-        //if(!isset($team['name']) || empty($team['name'])) return;
+    protected function overcome_team_image($atts, $team, $args = []){
         $args = wp_parse_args($args, [
             'class' => '',
             'size'  => '270x340',
@@ -207,7 +206,7 @@ class WPBakeryShortCode_ef5_team extends WPBakeryShortCode
         <div class="<?php echo trim(implode(' ', $classes));?>"><?php 
             overcome_image_by_size([
                 'id'      => $team['image'],
-                'size'    => overcome_default_value($thumbnail_size,$args['size']),
+                'size'    => overcome_default_value($atts['thumbnail_size'], $args['size']),
                 'class'   => 'team-img transition '.$args['img_class'],
                 'default' => true
             ]);
