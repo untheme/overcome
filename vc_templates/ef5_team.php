@@ -78,11 +78,11 @@ $j=0;
                 }
             ?>
         </div>
-        <?php 
+        <?php if($layout_style === 'carousel'){
             overcome_loading_animation(); 
             ef5systems_owl_dots_container($atts);
             ef5systems_owl_nav_container($atts);
             ef5systems_owl_dots_in_nav_container($atts);
-        ?>
+        } ?>
     </div>
 </div>
