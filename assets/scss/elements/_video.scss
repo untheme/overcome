@@ -29,5 +29,17 @@
 	}
 }
 .ef5-video-2{
-	
+	text-align: end;
+	[dir="rtl"] &{
+		text-align: start;
+	}
+	.ef5-video2{
+		position: absolute;
+		top: 72px;
+		left: 0;
+		[dir="rtl"] &{
+			left: auto;
+			right: 0;
+		}
+	}
 }
