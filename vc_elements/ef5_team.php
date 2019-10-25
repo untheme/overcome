@@ -48,25 +48,13 @@ vc_map(array(
             ),
             /* Members Settings */
             array(
-                'type'          => 'dropdown',
-                'heading'       => esc_html__('Member image size','overcome'),
-                'param_name'    => 'thumbnail_size',
-                'value'         => overcome_thumbnail_sizes(),
-                'std'           => 'custom',
-                'group'         => esc_html__('Members','overcome'),
-            ),
-            array(
                 'type'          => 'textfield',
                 'heading'       => esc_html__('Custom member image size','overcome'),
                 'description'   => esc_html__('Alternatively enter size in pixels (Example: 200x100 (Width x Height)).','overcome'),
-                'param_name'    => 'thumbnail_size_custom',
+                'param_name'    => 'thumbnail_size',
                 'value'         => '',
                 'std'           => '',
                 'group'         => esc_html__('Members','overcome'),
-                'dependency'    => array(
-                    'element'   => 'thumbnail_size',
-                    'value'     => 'custom',
-                ),
             ),
             array(
                 'type'          => 'checkbox',
