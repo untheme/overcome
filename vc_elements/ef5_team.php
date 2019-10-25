@@ -297,4 +297,25 @@ class WPBakeryShortCode_ef5_team extends WPBakeryShortCode
         ?></div>
     <?php
     }
+    protected function overcome_owl_dot_data($atts, $team,$args=[]){
+        if($atts['layout_style'] !== 'carousel' || $atts['dot_style'] !== 'thumbnail') return;
+        $args = wp_parse_args($args, [
+            'size'  => '80',
+            'class' => ''
+        ]);
+        if(!empty($team['image'])){
+            $dot_image = overcome_image_by_size([
+                'id'    => $team['image'], 
+                'size'  => $args['size'], 
+                'class' => trim(implode(' ', ['dot-thumb', $args['class']])),
+                'echo'  => false
+            ]);
+        } else { 
+            $dot_image = overcome_default_image_thumbnail([
+                'size'  => $args['size'], 
+                'class' => trim(implode(' ', ['dot-thumb', $args['class']]))
+            ]);
+        }
+        echo overcome_html($dot_image);
+    }
 }
