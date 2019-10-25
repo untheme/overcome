@@ -12,14 +12,6 @@ $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
 $el_id = !empty($el_id) ? 'ef5-'.$el_id : uniqid('ef5-');
 
-$css_classes = array(
-    'ef5-team',
-    'ef5-team-'.$layout_style,
-    'ef5-team-'.$layout_template
-);
-if($layout_style === 'carousel')
-    $css_classes[] = 'ef5-owl owl-carousel';
-
 /* get space for owl item */
 $owl_item_space = '';
 if(isset($margin) && (isset($number_row) && $number_row > 1 )){
@@ -38,7 +30,7 @@ $j=0;
         ef5systems_owl_dots_top($atts); 
     ?>
     <div class="ef5-owl-wrap-inner relative">
-        <div id="<?php echo esc_attr($el_id);?>" class="<?php echo esc_attr(trim(implode(' ', $css_classes)));?>">
+        <div id="<?php echo esc_attr($el_id);?>" class="<?php $this->overcome_team_wrap_class($atts);?>">
             <?php
                 foreach($teams as $team) {
                     $team['image']  = isset($team['image']) ? $team['image'] : null;
