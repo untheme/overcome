@@ -37,10 +37,15 @@
 		.ef5-donation-raised .ef5-value{
 			font-weight: 700;
 			color: #777;
+			display: inline-block;
+			font-size: $BodyFontSize;
 		}
 		.ef5-donation-goal .ef5-value{
 			font-weight: 700;
 			color: $accent_color;
+			display: inline-block;
+			font-size: $BodyFontSize;
+			margin-top: 0;
 		}
 	}
 	.ef5-readmore{
