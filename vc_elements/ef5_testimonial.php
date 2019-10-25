@@ -1,11 +1,11 @@
 <?php
 vc_map(array(
-    'name' => 'OverCome Testimonial',
-    'base' => 'ef5_testimonial',
-    'icon'  => 'ef5-icon-quote',
-    'category' => esc_html__('OverCome', 'overcome'),
+    'name'        => 'OverCome Testimonial',
+    'base'        => 'ef5_testimonial',
+    'icon'        => 'ef5-icon-quote',
+    'category'    => esc_html__('OverCome', 'overcome'),
     'description' => esc_html__('Add clients testimonial', 'overcome'),
-    'params' => array_merge(
+    'params'      => array_merge(
         array(
             array(
                 'type'          => 'dropdown',
