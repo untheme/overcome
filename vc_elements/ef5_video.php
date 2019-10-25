@@ -381,17 +381,20 @@ class WPBakeryShortCode_ef5_video extends WPBakeryShortCode
         return parent::content($atts, $content);
     }
     protected function overcome_ef5_video_poster($atts, $args = []){
-        $args = wp_parse_args($args,[]);
+        $args = wp_parse_args($args,[
+            'class' => 'ef5-rounded-10'
+        ]);
+        $img_class = ['video-poster', $poster_style, $args['class']];
         extract($atts);
         overcome_image_by_size([
             'id'    => $poster,
             'size'  => $poster_size,
-            'class' => 'video-poster '.$poster_style
+            'class' => trim(implode(' ', $img_class))
         ]);
         overcome_image_by_size([
             'id'    => $poster2,
             'size'  => $poster_size,
-            'class' => 'video-poster video-poster2 '.$poster_style
+            'class' => trim(implode(' ', $img_class))
         ]);
     }
     protected function overcome_ef5_video_play_button($atts, $args=[])
