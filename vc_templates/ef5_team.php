@@ -38,7 +38,7 @@ $j=0;
         ef5systems_owl_dots_top($atts); 
     ?>
     <div class="ef5-owl-wrap-inner relative">
-        <div id="<?php echo esc_attr($el_id);?>" class="<?php echo esc_attr(trim($css));?>">
+        <div id="<?php echo esc_attr($el_id);?>" class="<?php echo esc_attr(trim(implode(' ', $css_classes)));?>">
             <?php
                 foreach($teams as $team) {
                     $team['image']  = isset($team['image']) ? $team['image'] : null;
