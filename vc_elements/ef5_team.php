@@ -196,6 +196,22 @@ class WPBakeryShortCode_ef5_team extends WPBakeryShortCode
         ef5systems_owl_call_settings($atts);
         return parent::content($atts, $content);
     }
+    protected function overcome_team_item_class($atts, $args =[]){
+        extract($atts);
+        $args = wp_parse_args($args,[
+            'class' => ''
+        ]);
+        switch ($layout_style) {
+            case 'carousel':
+                $css_class = 'ef5-carousel-item';
+                break;
+            
+            default:
+                $css_class = 'ef5-grid-item col-'.$col_sm.' col-md-'.$col_md.' col-lg-'.$col_lg.' col-xl-'.$col_xl;
+                break;
+        }
+        echo trim(implode(' ',[$css_class, $args['class']]));
+    }
     protected function overcome_team_image($atts, $team, $args = []){
         $args = wp_parse_args($args, [
             'class'     => '',
