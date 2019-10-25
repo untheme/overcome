@@ -31,6 +31,7 @@
     // Thumbnail size
     $thumbnail_size_index = -1;
     $thumbnail_size = explode(',', $thumbnail_size);
+    var_dump($thumbnail_size);
 ?>
 <div class="ef5-posts" id="<?php echo esc_attr($el_id);?>">
     <?php $this->title($atts); ?>
