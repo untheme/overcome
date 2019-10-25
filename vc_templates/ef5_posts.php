@@ -63,7 +63,7 @@
                         if($post_count2 != 1){
                             $this->overcome_posts_item($atts,[
                                 'class' => 'overlay-wrap',
-                                'size'  => $thumbnail_size[$thumbnail_size_index]
+                                'thumbnail_size'  => $thumbnail_size[$thumbnail_size_index]
                             ]);
                         }
                     }
