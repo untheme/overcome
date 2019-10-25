@@ -339,9 +339,9 @@ vc_map(array(
             'heading'    => esc_html__( 'Poster 2','overcome'),
             'type'       => 'attach_image',
             'class'      => '',
-            'param_name' => 'poster',
+            'param_name' => 'poster2',
             'value'      => '',
-            'group'      =>esc_html__( 'Poster','overcome'),
+            'group'      => esc_html__( 'Poster','overcome'),
             'dependency' => array(
                 'element' => 'layout_template',
                 'value'   => array('2'),
