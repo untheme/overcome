@@ -51,7 +51,7 @@ vc_map(array(
                 'type'          => 'dropdown',
                 'heading'       => esc_html__('Member image size','overcome'),
                 'param_name'    => 'thumbnail_size',
-                'value'         => unbreak_thumbnail_sizes(),
+                'value'         => overcome_thumbnail_sizes(),
                 'std'           => 'custom',
                 'group'         => esc_html__('Members','overcome'),
             ),
