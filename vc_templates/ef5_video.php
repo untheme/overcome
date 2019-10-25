@@ -15,9 +15,9 @@
             $this->overcome_ef5_video_link($atts);
         ?></div>
         <div class="<?php echo trim(implode(' ', $video_class));?>"><?php 
-            $this->overcome_ef5_video_poster2($atts,['class' => 'ef5-shadow-2']);
+            $this->overcome_ef5_video_poster2($atts,['class' => 'ef5-shadow-2 ef5-rounded-10']);
         ?><div class="relative"><?php
-            $this->overcome_ef5_video_poster($atts,['class' => 'ef5-shadow-2']);
+            $this->overcome_ef5_video_poster($atts,['class' => 'ef5-shadow-2 ef5-rounded-10']);
             $this->overcome_ef5_video_plain($atts);
             $this->overcome_ef5_video_popup($atts,['overlay' => true, 'overlay_class' => 'ef5-rounded-10']);
         ?></div>
