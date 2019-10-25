@@ -256,7 +256,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
     protected function overcome_posts_item($atts, $args = []){
         $args = wp_parse_args($args, [
             'class'          => '',
-            'thumbnail_size' => '170'
+            'thumbnail_size' => overcome_default_value($atts['thumbnail_size'],'170'),
         ]);
         $css_class = ['ef5-post-item-inner', 'row', $args['class'], 'ml-0 mr-0'];
         $after = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align"><a class="text-36 text-white" href="'.get_the_permalink().'"><span class="fa fa-link"></span></a></div></div>'
@@ -265,7 +265,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
             <div class="<?php echo trim(implode(' ', $css_class));?>">
                 <?php 
                     overcome_post_media([
-                        'thumbnail_size' => overcome_default_value($args['thumbnail_size'],'170'), 
+                        'thumbnail_size' => $args['thumbnail_size'], 
                         'default_thumb'  => true,
                         'class'          => 'col-xs-auto p-0',
                         'before'         => '<div class="relative h-100">',
