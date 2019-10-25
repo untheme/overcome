@@ -89,7 +89,7 @@ $team_link_open = $team_link_close = $socials = '';
                                 		?>
                                         <div class="hover-content content-flex align-items-end justify-content-<?php echo esc_attr($content_align);?> overlay-bg-1">
                                             <div class="team-social ef5-social text-white size-30"><?php
-                                                overcome_team_socials($team);
+                                                $this->overcome_team_socials($team);
                                             ?></div>
                                         </div>
                                     </div>
