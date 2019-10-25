@@ -1,5 +1,8 @@
 .ef5-team-1{
 	text-align: center;
+	.team-info{
+		padding-top: 23px;
+	}
 	.team-socials{
 		background-color: $white;
 		font-size: 14px;
@@ -13,5 +16,6 @@
 	}
 	.team-position{
 		color: #777777;
+		padding-top: 2px;
 	}
 }
