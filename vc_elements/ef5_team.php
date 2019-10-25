@@ -71,48 +71,24 @@ vc_map(array(
                 'param_name'    => 'teams',
                 'std'           => urlencode( json_encode( array(
                     array(
-                        'name'     => 'Roberto Antonio',
-                        'position' => 'Director',
-                        'link'     => 'title:Roberto Antonio||url:#',
+                        'name'     => 'Andrew Bright',
+                        'position' => 'CEO & Founder',
+                        'link'     => 'title:Andrew Bright||url:#',
                     ),
                     array(
-                        'name'     => 'Damien Ruth',
-                        'position' => 'Ceo & Architect',
-                        'link'     => 'title:Damien Ruth||url:#',
+                        'name'     => 'Conrad Smith',
+                        'position' => 'Volunteer',
+                        'link'     => 'title:Conrad Smith||url:#',
                     ),
                     array(
-                        'name'     => 'Ashley Fletcher',
-                        'position' => 'Director',
-                        'link'     => 'title:Ashley Fletcher||url:#',
+                        'name'     => 'Belle Hill',
+                        'position' => 'Volunteer',
+                        'link'     => 'title:Belle Hill||url:#',
                     ),
                     array(
-                        'name'     => 'Marie Mercury',
-                        'position' => 'Elevator',
-                        'link'     => 'title:Marie Mercury||url:#',
-                    ),
-                    array(
-                        'name'     => 'William',
-                        'position' => 'Founder & CEO',
-                        'desc'     => '',
-                        'link'     => 'title:William||url:#',
-                    ),
-                    array(
-                        'name'     => 'Charlotte',
-                        'position' => 'Marketing',
-                        'desc'     => '',
-                        'link'     => 'title:Charlotte||url:#',
-                    ),
-                    array(
-                        'name'     => 'Benjamin',
-                        'position' => 'Graphic Designer',
-                        'desc'     => '',
-                        'link'     => 'title:Benjamin||url:#',
-                    ),
-                    array(
-                        'name'     => 'Amelia',
-                        'position' => 'Support',
-                        'desc'     => '',
-                        'link'     => 'title:Amelia||url:#',
+                        'name'     => 'Alison Becker',
+                        'position' => 'Manager',
+                        'link'     => 'title:Alison Becker||url:#',
                     ),
                 ) ) ),
                 'params'        => array(
@@ -157,8 +133,8 @@ vc_map(array(
                                 'link' => 'title:Twitter||url:twitter.com'
                             ),
                             array(
-                                'icon' => 'fa fa-google-plus',
-                                'link' => 'title:Google Plus||url:plus.google.com'
+                                'icon' => 'fa fa-pinterest',
+                                'link' => 'title:pinterest||url:pinterest.com'
                             ),
                             array(
                                 'icon' => 'fa fa-linkedin',
