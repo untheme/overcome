@@ -195,8 +195,9 @@ function overcome_spacings(){
 		'custom1 pt-8 pb-8' => ['OverCome Space 01', 'Top 8px - Bottom 8px'],
 		'87-0-92'          	=> ['OverCome Space 02', 'Top 87px - Bottom 92px', '87px 0 92px 0'],
 		'93-0-100'          => ['OverCome Space 03', 'Top 93px - Bottom 100px', '93px 0 100px 0'],
-		'100-0'             => ['OverCome Space 04', 'Top 100px - Bottom 100px', '100px 0'],
-		'140-100'           => ['OverCome Space 05', 'Top 140px - Bottom 100px', '140px 0'],
+		'93-0-93'          	=> ['OverCome Space 04', 'Top 93px - Bottom 93px', '93px 0 93px 0'],
+		'100-0'             => ['OverCome Space 05', 'Top 100px - Bottom 100px', '100px 0'],
+		'140-100'           => ['OverCome Space 06', 'Top 140px - Bottom 100px', '140px 0'],
 	];
 }
 
