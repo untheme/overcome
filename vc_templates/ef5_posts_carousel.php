@@ -73,7 +73,7 @@
                 switch ($layout_template) {
                     case '4':
                     $large_item_class = ($thumbnail_size_index === 0) ? 'ef5-large-item' : 'ef5-small-item';
-                    $heading_class = ($thumbnail_size_index === 0 && count($thumbnail_size)>1) ? 'text-22 pb-8' : count($thumbnail_size)>1 ? 'text-16' : 'text-18';
+                    $heading_class = ($thumbnail_size_index === 0 && count($thumbnail_size)>1) ? 'text-22 pb-8' : count($thumbnail_size)>1 ? 'text-16 pb-10' : 'text-18 pb-15';
                 ?>
                     <div class="<?php echo trim(implode(' ', $item_css_class)). ' '.$large_item_class; ?>">
                         <?php 
