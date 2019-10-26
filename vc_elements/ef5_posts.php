@@ -380,7 +380,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                         'img_class'      => 'h-100'
                     ]);   
                 ?>
-                <div class="col pt-17 p-15">
+                <div class="col pt-17 p-15 pb-8">
                     <?php 
                         overcome_post_title(['class'=>'text-22 pb-5']);
                         overcome_post_excerpt([
