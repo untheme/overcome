@@ -7,18 +7,18 @@
 		&:last-child{
 			margin-bottom: 0;
 		}
-	}
-	.ef5-featured{
-		margin: -1px 0 -1px -1px;
-		[dir="rtl"] &{
-			margin: -1px -1px -1px 0;
+		.post-image,
+		.overlay{
+			@include border-radius(10px 0 0 10px);
+			[dir="rtl"] &{
+				@include border-radius(0 10px 10px 0);
+			}
 		}
-	}
-	.post-image,
-	.overlay{
-		@include border-radius(10px 10px 0 0);
-		[dir="rtl"] &{
-			@include border-radius(0 10px 10px 0);
+		.ef5-featured{
+			margin: -1px 0 -1px -1px;
+			[dir="rtl"] &{
+				margin: -1px -1px -1px 0;
+			}
 		}
 	}
 }
