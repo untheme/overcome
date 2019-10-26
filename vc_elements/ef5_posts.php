@@ -390,7 +390,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                             'class'        => 'text-13 mb-17' 
                         ]);
                         overcome_tribe_events_info_hori(['class' => 'text-13']);
-                        overcome_loop_donate_info(['layout' => '3']);
+                        overcome_loop_donate_info2();
                     ?>
                 </div>
             </div>
