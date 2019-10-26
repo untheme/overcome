@@ -237,7 +237,10 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
             'echo'         => false 
         ]);
         $overlay_content .= overcome_tribe_events_info(['echo' => false, 'class'=>'text-white mb-13 pb-15 pb-lg-45']);
-        $overlay_content .= get_post_type() === 'tribe_events'?  overcome_post_read_more(['show_readmore' => '1', 'echo' => false, 'title' => esc_html__('View Event','overcome'),'class'=>'ef5-btn ef5-btn-md accent outline']) :  overcome_post_read_more(['show_readmore' => '1', 'echo' => false,'class'=>'ef5-btn ef5-btn-md accent outline']);
+        $overlay_content .= get_post_type() === 'tribe_events' ?  overcome_post_read_more(['show_readmore' => '1', 'echo' => false, 'title' => esc_html__('View Event','overcome'),'class'=>'ef5-btn ef5-btn-md accent outline']) :  overcome_post_read_more(['show_readmore' => '1', 'echo' => false,'class'=>'ef5-btn ef5-btn-md accent outline']);
+
+        $overlay_content .= overcome_loop_donate_info(); 
+
         $overlay_content .= '</div></div>';
 
         $css_class = ['ef5-post-item-featured','col-lg-6', $args['class'],'mb-30 mb-lg-0'];
@@ -247,8 +250,8 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                     overcome_post_media([
                         'thumbnail_size' => $args['thumbnail_size'], 
                         'default_thumb'  => true,
-                        'after' => $overlay_content,
-                        'img_class' => 'ef5-rounded-10'
+                        'after'          => $overlay_content,
+                        'img_class'      => 'ef5-rounded-10'
                     ]);   
                 ?>
             </div>
