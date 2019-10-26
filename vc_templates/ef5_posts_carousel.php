@@ -106,6 +106,8 @@
                                             'heading_tag' => $heading_class .' text-white font-style-500'
                                         ]);
                                         overcome_post_read_more([
+                                            'before'         => '<div class="xxx">',
+                                            'after'          => '</div>',
                                             'readmore_class' => 'text-14 ef5-text-accent font-style-500',
                                             'icon_right'     => is_rtl() ? 'text-12 flaticon-go-back-left-arrow' : 'flaticon-right-arrow-forward text-12'
                                         ]);
