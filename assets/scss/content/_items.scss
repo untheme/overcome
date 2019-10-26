@@ -85,6 +85,31 @@
 	.ef5-date a{
 		color: $white;
 	}
+	.ef5-post-info {
+		.ef5-readmore-wrap{
+			visibility: hidden;
+			@include opacity(0);
+			@include transition();
+		}
+		.align-self-end{
+			@include transition();
+			@include transform(translateY(20px));
+		}
+		.ef5-large-item{
+			.align-self-end{
+				@include transform(translateY(24px));
+			}
+		}
+	}
+	&:hover{
+		.ef5-readmore-wrap{
+			visibility: visible;
+			@include opacity(1);
+		}
+		.align-self-end{
+			@include transform(translateY(0));
+		}
+	}
 }
 
 // Layout 5
