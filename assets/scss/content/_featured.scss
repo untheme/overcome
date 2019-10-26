@@ -35,28 +35,28 @@
 	.ef5-posted-in,
 	.ef5-shares,
 	.ef5-posted-on{
-		position: absolute;
+		//position: absolute;
 	}
 	.ef5-posted-in{
-		top: 20px;
-		left: 20px;
+		//top: 20px;
+		//left: 20px;
 		[dir="rtl"] &{
-			left: auto;
-			right: 20px;
+			//left: auto;
+			//right: 20px;
 		}
 	}
 	.ef5-shares{
-		bottom: 15px;
-		left: 0;
-		right: 0;
-		z-index: 1;
+		//bottom: 15px;
+		//left: 0;
+		//right: 0;
+		//z-index: 1;
 	}
 	.ef5-posted-on{
-		bottom: -5px;
-		left: 30px;
+		//bottom: -5px;
+		//left: 30px;
 		[dir="rtl"] &{
-			left: auto;
-			right: 30px;
+			//left: auto;
+			//right: 30px;
 		}
 	}
 }
