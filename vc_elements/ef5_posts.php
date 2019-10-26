@@ -315,10 +315,10 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
             'thumbnail_size' => '570x370',
         ]);
 
-        $overlay_content = '<div class="overlay ef5-bg-overlay ef5-rounded-10"><div class="overlay-inner center-align w-100 p-30 pl-lg-75 pr-lg-75">';
+        $overlay_content = '<div class="overlay ef5-bg-overlay ef5-rounded-10"><div class="overlay-inner row align-items-end h-100"><div class="col-12 align-sefl-end"><div class="p-15 pl-lg-35 pr-lg-35">';
         $overlay_content .= overcome_post_title([
             'echo' => false, 
-            'class'=>'text-22 text-md-36 text-lg-22 text-xl-36 lh-xl-46 text-white pb-15 pb-xl-58'
+            'class'=>'text-22 text-white pb-15'
         ]);
         $overlay_content .= overcome_post_excerpt([
             'show_excerpt' => '1', 
@@ -344,7 +344,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                 break;
         }
 
-        $overlay_content .= '</div></div>';
+        $overlay_content .= '</div></div></div></div>';
 
         $css_class = ['ef5-post-item-featured','col-lg-6', $args['class'],'mb-30 mb-lg-0'];
         ?>
