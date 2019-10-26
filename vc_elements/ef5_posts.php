@@ -245,6 +245,9 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
             case 'ef5_donation': 
                 $overlay_content .= overcome_loop_donate_info(['echo' => false]); 
                 break;
+            case 'ef5_stories': 
+                $overlay_content .= overcome_loop_donate_info(['echo' => false]); 
+                break;
             default:
                 $overlay_content .= overcome_post_read_more(['show_readmore' => '1', 'echo' => false,'class'=>'ef5-btn ef5-btn-md accent outline']);
                 break;
