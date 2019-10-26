@@ -87,9 +87,7 @@
 	}
 	.ef5-post-info {
 		.ef5-readmore-wrap{
-			visibility: hidden;
 			@include opacity(0);
-			@include transition();
 		}
 		.align-self-end{
 			@include transition();
@@ -103,7 +101,6 @@
 	}
 	&:hover{
 		.ef5-readmore-wrap{
-			visibility: visible;
 			@include opacity(1);
 		}
 		.align-self-end{
