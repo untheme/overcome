@@ -88,12 +88,13 @@ vc_map(array(
                 'heading'    => esc_html__('Layout Template','unbreak'),
                 'param_name' => 'layout_template',
                 'value' =>  array(
-                    '1'  => get_template_directory_uri().'/vc_elements/layouts/post-1.png',
-                    '2'  => get_template_directory_uri().'/vc_elements/layouts/post-2.png',
-                    '3'  => get_template_directory_uri().'/vc_elements/layouts/post-3.png',
-                    '4'  => get_template_directory_uri().'/vc_elements/layouts/post-4.png',
-                    '5'  => get_template_directory_uri().'/vc_elements/layouts/post-5.png',
-                    '6'  => get_template_directory_uri().'/vc_elements/layouts/post-6.png',
+                    '1'   => get_template_directory_uri().'/vc_elements/layouts/post-1.png',
+                    '1_2' => get_template_directory_uri().'/vc_elements/layouts/post-1_2.png',
+                    '2'   => get_template_directory_uri().'/vc_elements/layouts/post-2.png',
+                    '3'   => get_template_directory_uri().'/vc_elements/layouts/post-3.png',
+                    '4'   => get_template_directory_uri().'/vc_elements/layouts/post-4.png',
+                    '5'   => get_template_directory_uri().'/vc_elements/layouts/post-5.png',
+                    '6'   => get_template_directory_uri().'/vc_elements/layouts/post-6.png',
                 ),
                 'std'   => '1',
                 'group' => esc_html__('Layouts','unbreak'),
@@ -228,7 +229,10 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
         ]);
 
         $overlay_content = '<div class="overlay ef5-bg-overlay ef5-rounded-10"><div class="overlay-inner center-align w-100 p-30 pl-lg-75 pr-lg-75">';
-        $overlay_content .= overcome_post_title(['echo' => false, 'class'=>'text-22 text-md-36 text-lg-22 text-xl-36 lh-xl-46 text-white pb-15 pb-xl-58']);
+        $overlay_content .= overcome_post_title([
+            'echo' => false, 
+            'class'=>'text-22 text-md-36 text-lg-22 text-xl-36 lh-xl-46 text-white pb-15 pb-xl-58'
+        ]);
         $overlay_content .= overcome_post_excerpt([
             'show_excerpt' => '1', 
             'length'       => '15', 
@@ -295,6 +299,93 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                         overcome_post_excerpt([
                             'show_excerpt' => '1', 
                             'length'       => '15', 
+                            'more'         => '',
+                            'class'        => 'text-13 mb-17' 
+                        ]);
+                        overcome_tribe_events_info_hori(['class' => 'text-13']);
+                    ?>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
+    protected function overcome_posts_featured_item2($atts, $args = []){
+        $args = wp_parse_args($args, [
+            'class'          => '',
+            'thumbnail_size' => '570x370',
+        ]);
+
+        $overlay_content = '<div class="overlay ef5-bg-overlay ef5-rounded-10"><div class="overlay-inner center-align w-100 p-30 pl-lg-75 pr-lg-75">';
+        $overlay_content .= overcome_post_title([
+            'echo' => false, 
+            'class'=>'text-22 text-md-36 text-lg-22 text-xl-36 lh-xl-46 text-white pb-15 pb-xl-58'
+        ]);
+        $overlay_content .= overcome_post_excerpt([
+            'show_excerpt' => '1', 
+            'length'       => '15', 
+            'more'         => '',
+            'class'        => 'text-white d-none d-md-block',
+            'echo'         => false 
+        ]);
+        $overlay_content .= overcome_tribe_events_info(['echo' => false, 'class'=>'text-white mb-13 pb-15 pb-lg-45']);
+
+        switch (get_post_type()) {
+            case 'tribe_events':
+                $overlay_content .= overcome_post_read_more(['show_readmore' => '1', 'echo' => false, 'title' => esc_html__('View Event','overcome'),'class'=>'ef5-btn ef5-btn-md accent outline']);
+                break;
+            case 'ef5_donation': 
+                $overlay_content .= overcome_loop_donate_info(['layout' => '2', 'echo' => false]); 
+                break;
+            case 'ef5_stories': 
+                $overlay_content .= overcome_loop_donate_info(['layout' => '2', 'echo' => false]); 
+                break;
+            default:
+                $overlay_content .= overcome_post_read_more(['show_readmore' => '1', 'echo' => false,'class'=>'ef5-btn ef5-btn-md accent outline']);
+                break;
+        }
+
+        $overlay_content .= '</div></div>';
+
+        $css_class = ['ef5-post-item-featured','col-lg-6', $args['class'],'mb-30 mb-lg-0'];
+        ?>
+            <div class="<?php echo trim(implode(' ', $css_class));?>">
+                <?php 
+                    overcome_post_media([
+                        'thumbnail_size' => $args['thumbnail_size'], 
+                        'default_thumb'  => true,
+                        'after'          => $overlay_content,
+                        'img_class'      => 'ef5-rounded-10'
+                    ]);   
+                ?>
+            </div>
+        <?php
+    }
+    protected function overcome_posts_item2($atts, $args = []){
+        $args = wp_parse_args($args, [
+            'class'          => '',
+            'thumbnail_size' => '170',
+        ]);
+        $css_class = ['ef5-post-item-inner', 'row', $args['class'], 'ml-0 mr-0'];
+        $after = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align"><a class="text-36 text-white" href="'.get_the_permalink().'"><span class="fa fa-link"></span></a></div></div>'
+        ?>
+        <div class="ef5-post-item ef5-rounded-10 ef5-hover-shadow-1 transition">
+            <div class="<?php echo trim(implode(' ', $css_class));?>">
+                <?php 
+                    overcome_post_media([
+                        'thumbnail_size' => $args['thumbnail_size'], 
+                        'default_thumb'  => true,
+                        'class'          => 'col-xs-auto p-0',
+                        'before'         => '<div class="relative h-100">',
+                        'after'          => $after.'</div>',
+                        'img_class'      => 'h-100'
+                    ]);   
+                ?>
+                <div class="col pt-17 p-15 pb-xs-0">
+                    <?php 
+                        overcome_post_title(['class'=>'text-22 pb-5']);
+                        overcome_post_excerpt([
+                            'show_excerpt' => '1', 
+                            'length'       => '5', 
                             'more'         => '',
                             'class'        => 'text-13 mb-17' 
                         ]);

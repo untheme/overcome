@@ -79,6 +79,48 @@
             </div>
         <?php
             break;
+            case '1_2':
+            $post_count = $post_count2 = 0;
+            while($posts->have_posts()){
+                $post_count++;
+                $posts->the_post();
+                // Thumbnail Size
+                $thumbnail_size_index++;
+                if($thumbnail_size_index >= count($thumbnail_size)){
+                    $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
+                }
+                if($post_count === 1){
+                    $this->overcome_posts_featured_item2($atts,[
+                        'class'          => 'ef5-rounded-10 overlay-wrap',
+                        'thumbnail_size' => overcome_default_value($thumbnail_size[$thumbnail_size_index], '570')
+                    ]);
+                }
+            }
+            wp_reset_postdata();
+        ?>
+            <div class="col-lg-6">
+                <?php
+                    while($posts->have_posts()){
+                        $post_count2++;
+                        $posts->the_post();
+
+                        // Thumbnail Size
+                        $thumbnail_size_index++;
+                        if($thumbnail_size_index >= count($thumbnail_size)){
+                            $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
+                        }
+                        if($post_count2 != 1){
+                            $this->overcome_posts_item2($atts,[
+                                'class'          => 'overlay-wrap',
+                                'thumbnail_size' => overcome_default_value($thumbnail_size[$thumbnail_size_index], '170')
+                            ]);
+                        }
+                    }
+                    wp_reset_postdata();
+                ?>
+            </div>
+        <?php
+            break;
             case '2':
                 $item_css_class[] = 'ef5-rounded-10 overlay-wrap ef5-hover-shadow-1';
                 $d = 0;
