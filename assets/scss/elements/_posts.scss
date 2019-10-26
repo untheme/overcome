@@ -14,7 +14,7 @@
 			margin: -1px -1px -1px 0;
 		}
 	}
-	.post-image img,
+	.post-image,
 	.overlay{
 		@include border-radius(10px 10px 0 0);
 		[dir="rtl"] &{
