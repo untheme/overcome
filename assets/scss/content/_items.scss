@@ -88,6 +88,7 @@
 	.ef5-post-info {
 		.ef5-readmore-wrap{
 			@include opacity(0);
+			@include transition();
 		}
 		.align-self-end{
 			@include transition();
