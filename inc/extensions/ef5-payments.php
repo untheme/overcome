@@ -70,7 +70,7 @@ function overcome_loop_donate_info2($args = []){
 							overcome_post_share([
 								'show_share' => '1',
 								'show_title' => false, 
-								'show_all'   => false
+								'show_all'   => '0'
 							]);
 							ef5payments_donation_donate_button([
 								'class' => 'ef5-btn ef5-btn-md accent outline2'
