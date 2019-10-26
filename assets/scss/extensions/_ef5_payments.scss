@@ -55,5 +55,14 @@
 			}
 		}
 	}
+	&.layout-2{
+		border-top: 1px solid #d7d7d7;
+		padding-top: 24px;
+		.ef5-donation-raised .ef5-label{
+			color: $white;
+		}
+		.ef5-payments-trigger{
+			margin-top: 5px;
+		}
+	}
 }
-
