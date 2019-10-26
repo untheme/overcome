@@ -60,16 +60,16 @@ vc_map(array(
                 'type'       => 'checkbox',
                 'param_name' => 'add_heading_icon',
                 'value'      => array(
-                    esc_html__('Add icon?','overcome') => true
+                    esc_html__('Add icon?','overcome') => 'true'
                 ),
-                'std'        => false,
+                'std'        => 'false',
                 'group'      => esc_html__('Heading','overcome')   
             )
         ),
         ef5systems_icon_libs([
             'dependency'        => 'add_heading_icon',
             'dependency_option' => 'value',
-            'dependency_value'  => true,
+            'dependency_value'  => 'true',
             'group'             => esc_html__('Heading','overcome') 
         ]),
         ef5systems_icon_libs_icon([
