@@ -224,7 +224,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
     protected function overcome_posts_featured_item($atts, $args = []){
         $args = wp_parse_args($args, [
             'class' => '',
-            'thumbnail_size' => overcome_default_value($atts['thumbnail_size'],'570'),
+            'thumbnail_size' => overcome_default_value('570', $atts['thumbnail_size']),
         ]);
 
         $overlay_content = '<div class="overlay ef5-bg-overlay ef5-rounded-10"><div class="overlay-inner center-align w-100 p-30 pl-lg-75 pr-lg-75">';
@@ -257,7 +257,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
     protected function overcome_posts_item($atts, $args = []){
         $args = wp_parse_args($args, [
             'class'          => '',
-            'thumbnail_size' => overcome_default_value($atts['thumbnail_size'],'170'),
+            'thumbnail_size' => overcome_default_value('170', $atts['thumbnail_size']),
         ]);
         $css_class = ['ef5-post-item-inner', 'row', $args['class'], 'ml-0 mr-0'];
         $after = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align"><a class="text-36 text-white" href="'.get_the_permalink().'"><span class="fa fa-link"></span></a></div></div>'
