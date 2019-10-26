@@ -43,7 +43,10 @@
                 $post_count++;
                 $posts->the_post();
                 if($post_count === 1){
-                    $this->overcome_posts_featured_item($atts,['class' => 'ef5-rounded-10 overlay-wrap']);
+                    $this->overcome_posts_featured_item($atts,[
+                        'class' => 'ef5-rounded-10 overlay-wrap'],
+                        'thumbnail_size' => overcome_default_value($thumbnail_size[$thumbnail_size_index], '570')
+                    );
                 }
             }
             wp_reset_postdata();
@@ -63,7 +66,7 @@
                         if($post_count2 != 1){
                             $this->overcome_posts_item($atts,[
                                 'class'          => 'overlay-wrap',
-                                'thumbnail_size' => $thumbnail_size[$thumbnail_size_index]
+                                'thumbnail_size' => overcome_default_value($thumbnail_size[$thumbnail_size_index], '170')
                             ]);
                         }
                     }
