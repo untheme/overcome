@@ -2,10 +2,16 @@
 .ef5-posts-1_2{
 	.ef5-post-item{
 		@include box-shadow('0 0 1px #000');
-		overflow: hidden;
 		margin-bottom: 29px;
 		&:last-child{
 			margin-bottom: 0;
+		}
+	}
+	.post-image img,
+	.overlay{
+		@include border-radius(10px 10px 0 0);
+		[dir="rlt"] &{
+			@include border-radius(0 10px 10px 0);
 		}
 	}
 }
