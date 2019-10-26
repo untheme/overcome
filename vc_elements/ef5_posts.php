@@ -315,7 +315,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
             'thumbnail_size' => '570x370',
         ]);
 
-        $overlay_content = '<div class="overlay ef5-bg-overlay ef5-rounded-10"><div class="overlay-inner row align-items-end h-100"><div class="col-12 align-sefl-end"><div class="p-15 pl-lg-35 pr-lg-35">';
+        $overlay_content = '<div class="overlay ef5-bg-overlay ef5-rounded-10"><div class="overlay-inner row align-items-end h-100"><div class="col-12 align-sefl-end"><div class="p-15 pb-lg-25 pl-lg-35 pr-lg-35">';
         $overlay_content .= overcome_post_title([
             'echo' => false, 
             'class'=>'text-22 text-white pb-15'
