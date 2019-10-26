@@ -73,7 +73,7 @@ function overcome_loop_donate_info2($args = []){
 								'show_all'   => 'false'
 							]);
 							ef5payments_donation_donate_button([
-								'class' => 'ef5-btn ef5-btn-md accent outline2'
+								'class' => 'ef5-btn ef5-btn-tn accent fill'
 							]);
 						?>
 					</div>
