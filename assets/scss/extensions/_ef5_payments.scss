@@ -63,10 +63,16 @@
 		}
 		.ef5-payments-trigger{
 			margin-top: 5px;
-			color: $white;
+			color: $white!important;
 		}
 		.ef5-shares{
 			color: $white;
+			a{
+				color: $white;
+				&:hover{
+					color: $accent_color;
+				}
+			}
 		}
 	}
 }
