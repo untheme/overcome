@@ -86,17 +86,19 @@
 		color: $white;
 	}
 	.ef5-post-info {
-		.ef5-readmore-wrap{
-			@include opacity(0);
-			@include transition();
-		}
-		.align-self-end{
-			@include transition();
-			@include transform(translateY(20px));
-		}
-		.ef5-large-item &{
+		@media (min-width: $desktop-screen){
+			.ef5-readmore-wrap{
+				@include opacity(0);
+				@include transition();
+			}
 			.align-self-end{
-				@include transform(translateY(34px));
+				@include transition();
+				@include transform(translateY(20px));
+			}
+			.ef5-large-item &{
+				.align-self-end{
+					@include transform(translateY(34px));
+				}
 			}
 		}
 	}
