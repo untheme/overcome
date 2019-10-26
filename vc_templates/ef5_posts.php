@@ -44,7 +44,7 @@
                 $posts->the_post();
                 if($post_count === 1){
                     $this->overcome_posts_featured_item($atts,[
-                        'class' => 'ef5-rounded-10 overlay-wrap'],
+                        'class'          => 'ef5-rounded-10 overlay-wrap'],
                         'thumbnail_size' => overcome_default_value($thumbnail_size[$thumbnail_size_index], '570')
                     );
                 }
