@@ -55,6 +55,15 @@ vc_map(array(
                 'std'        => 'This is OverCome custom heading element',
                 'holder'     => 'h4',
                 'group'      => esc_html__('Heading','overcome')   
+            ),
+            array(
+                'type'       => 'checkbox',
+                'param_name' => 'add_heading_icon',
+                'value'      => array(
+                    esc_html__('Add icon?','overcome') => true
+                ),
+                'std'        => false,
+                'group'      => esc_html__('Heading','overcome')   
             )
         ),
         ef5systems_icon_libs([
