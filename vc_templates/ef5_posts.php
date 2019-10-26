@@ -42,6 +42,11 @@
             while($posts->have_posts()){
                 $post_count++;
                 $posts->the_post();
+                // Thumbnail Size
+                $thumbnail_size_index++;
+                if($thumbnail_size_index >= count($thumbnail_size)){
+                    $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
+                }
                 if($post_count === 1){
                     $this->overcome_posts_featured_item($atts,[
                         'class'          => 'ef5-rounded-10 overlay-wrap',
