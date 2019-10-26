@@ -67,8 +67,8 @@ vc_map(array(
             )
         ),
         ef5systems_icon_libs([
-            'dependency'        => 'heading_text',
-            'dependency_option' => 'not_empty',
+            'dependency'        => 'add_heading_icon',
+            'dependency_option' => 'value',
             'dependency_value'  => true,
             'group'             => esc_html__('Heading','overcome') 
         ]),
