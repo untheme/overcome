@@ -29,7 +29,31 @@ vc_map(array(
                 'std'         => '1',
                 'admin_label' => true
             ),
-            
+            // Text Color
+            array(
+                'type'         => 'dropdown',
+                'heading'      => esc_html__( 'Text Color', 'overcome' ),
+                'param_name'   => 'text_color_opts',
+                'value'        => ef5systems_colors_option_for_vc([
+                    esc_html__('Custom','overcome') => 'custom'
+                ]),
+                'std'          => '',
+                'description'  => esc_html__( 'Choose color for this row', 'overcome' ),
+                'group'        => esc_html__('Heading','overcome'),
+                'edit_field_class' => 'vc_col-sm-6',
+            ),
+            array(
+                'type'         => 'colorpicker',
+                'heading'      => esc_html__( 'Custom Text Color', 'overcome' ),
+                'param_name'   => 'text_color',
+                'description'  => esc_html__( 'Choose your color for this row', 'overcome' ),
+                'dependency' => array(
+                    'element'   => 'text_color_opts',
+                    'value'     => 'custom'
+                ),
+                'group'        => esc_html__('Heading','overcome'),
+                'edit_field_class' => 'vc_col-sm-6',
+            ),
             array(
                 'type'        => 'el_id',
                 'settings' => array(
@@ -172,5 +196,86 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
         $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
         ef5systems_owl_call_settings($atts);
         return parent::content($atts, $content);
+    }
+    protected function overcome_tm_text_color($atts, $args = []){
+        extract($atts);
+        $args = wp_parse_args($args, [
+            'echo' => true
+        ]);
+        $color = (!empty($text_color_opts) && !empty($text_color)) ? 'style="color:'.$text_color.'"' : '';
+        if($args['echo'])
+            echo overcome_html($color);
+        else 
+            return $color;
+    }
+    protected function overcome_tm_text($testimonial, $atts, $args=[]){
+        if(empty($testimonial['text'])) return;
+        $args = wp_parse_args($args,[
+            'class' => ''
+        ]);
+        $classes = ['ttmn-text', $args['class']];
+        ?>
+            <div class="<?php echo trim(implode('', $classes));?>" <?php $this->overcome_tm_text_color($atts);?>>
+                <?php echo overcome_html($testimonial['text']);?>
+            </div>
+        <?php
+    }
+    protected function overcome_tm_name($testimonial, $atts, $args=[]){
+        if(empty($testimonial['author_name'])) return;
+        $args = wp_parse_args($args,[
+            'class' => ''
+        ]);
+        $classes = ['ttmn-name', $args['class']];
+        $author_link_open = $author_link_close = '';
+        if(!empty($testimonial['author_url'])){
+            $author_link_open = '<a href="'.esc_url($testimonial['author_url']).'" target="_blank">';
+            $author_link_close = '</a>';
+        }
+        ?>
+            <span class="<?php echo trim(implode('', $classes));?>" <?php $this->overcome_tm_text_color($atts);?>>
+                <?php echo overcome_html($author_link_open.$testimonial['author_name'].$author_link_close);?>
+            </span>
+        <?php
+    }
+    protected function overcome_tm_position($testimonial, $args=[]){
+        if(empty($testimonial['author_position'])) return;
+        $args = wp_parse_args($args,[
+            'class' => 'ef5-text-accent'
+        ]);
+        $classes = ['ttmn-position', $args['class']];
+        ?>
+            <span class="<?php echo trim(implode('', $classes));?>">
+                <?php echo overcome_html($testimonial['author_position']);?>
+            </span>
+        <?php
+    }
+    protected function overcome_tm_rate($testimonial,$atts, $args=[]){
+        if(empty($testimonial['author_rate'])) return;
+        $args = wp_parse_args($args,[
+            'class' => ''
+        ]);
+        $classes = ['ttmn-rate', $args['class']];
+        $author_rate = ($testimonial['author_rate']/5)*100;
+        ?>
+            <div class="<?php echo trim(implode('', $classes));?>"><span class="ttmn-rated" style="width:<?php echo esc_attr($author_rate);?>%"></span></div>
+        <?php
+    }
+    protected function overcome_tm_avatar($testimonial,$atts, $args=[]){
+        $args = wp_parse_args($args,[
+            'class' => '',
+            'size'  => '90',
+            'before' => '',
+            'after'  => ''
+        ]);
+        $classes = ['avatar circle', $args['class']];
+
+        overcome_image_by_size([
+            'id'      => $testimonial['author_avatar'],
+            'size'    => $args['size'],
+            'class'   => trim(implode('', $classes)),
+            'default' => true,
+            'before'  => $args['before'],
+            'after'   => $args['after']  
+        ]);
     }
 }

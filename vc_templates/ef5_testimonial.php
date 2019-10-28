@@ -37,7 +37,7 @@ $testimonials = (array) vc_param_group_parse_atts( $atts['testimonials'] );
 // avatar size
 switch ($layout_template) {
 	default:
-		$dot_thumbnail_size = $avatar_size = '90';
+		$dot_thumbnail_size = '90';
 		break;
 }
 $ttmn_icon = '<div class="ttmn-icon"><span class="fa fa-quote-left"></span></div>';
@@ -56,13 +56,7 @@ if($layout_template === '1') $inner_css_classes[] = 'ef5-box-shadow-12';
             foreach($testimonials as $testimonial){
                 $j++;
                 if($i > $number_row) $i=1;
-                $testimonial['author_avatar'] = isset($testimonial['author_avatar']) ? $testimonial['author_avatar'] : null;
-
                 if(isset($testimonial['author_name'])) {
-                	if(!empty($testimonial['author_url'])){
-                		$author_link_open = '<a href="'.esc_url($testimonial['author_url']).'" target="_blank">';
-                		$author_link_close = '</a>';
-                	}
                 	// dot image
                 	$dot_image = overcome_image_by_size([
 						'id'    => $testimonial['author_avatar'],
@@ -81,30 +75,18 @@ if($layout_template === '1') $inner_css_classes[] = 'ef5-box-shadow-12';
                         		default:
                         			echo '<div class="row">';
                             			//avatar
-                            			overcome_image_by_size([
-    										'id'      => $testimonial['author_avatar'],
-    										'size'    => $avatar_size,
-    										'class'   => 'avatar circle',
-    										'default' => true,
-    										'before'  => '<div class="col-12 col-md-auto">',
-    										'after'	  => '</div>'	
-                            			]);
+                            			$this->overcome_tm_avatar($testimonial,$atts);
                             			echo '<div class="col text-center text-md-start">';
                             				echo '<div class="ttmn-header">';
     		                        			// name
-    				                            echo '<span class="ttmn-name h4-1">'.$author_link_open.$testimonial['author_name'].$author_link_close.'</span>';
+    				                            $this->overcome_tm_name($testimonial, $atts);
     				                            // position
-    				                            echo '<span class="ttmn-position font-style-400i"> - '.$testimonial['author_position'].'</span>';
+    				                            $this->overcome_tm_position($testimonial);
     			                            echo '</div>';
     			                        	// star rating
-    					                    if(!empty($testimonial['author_rate'])) {
-    					                    	$author_rate = ($testimonial['author_rate']/5)*100;
-    					                    	$star_rating = '<div class="ttmn-rate"><span class="ttmn-rated" style="width:'.$author_rate.'%"></span></div>';
-    			                        		echo wp_kses_post($star_rating);
-    			                        	}
+    					                    $this->overcome_tm_rate($testimonial, $atts);
     			                        	// text 
-    			                        	if(isset($testimonial['text']) && !empty($testimonial['text'])) 
-                                                echo '<div class="ttmn-text">'.$testimonial['text'].'</div>';
+    			                        	$this->overcome_tm_text($testimonial, $atts);
     		                            echo '</div>';
                                     echo '</div>';
                         		break;
