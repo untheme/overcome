@@ -41,15 +41,11 @@ switch ($layout_template) {
 		$dot_thumbnail_size = '90';
 		break;
 }
-$ttmn_icon = '<div class="ttmn-icon"><span class="fa fa-quote-left"></span></div>';
 $count = count($testimonials);
 $i=1;
 $j=0;
-$author_link_open = $author_link_close = '';
 
 $inner_css_classes = ['ttmn-inner','transition'];
-if($layout_template === '1') $inner_css_classes[] = 'ef5-box-shadow-12';
-
 ?>
 <div class="ef5-testimonials <?php echo ef5systems_owl_css_class($atts);?>">
     <?php 
