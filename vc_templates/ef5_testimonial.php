@@ -76,7 +76,7 @@ if($layout_template === '1') $inner_css_classes[] = 'ef5-box-shadow-12';
                         		default:
                         			echo '<div class="row">';
                             			//avatar
-                            			$this->overcome_tm_avatar($testimonial,$atts);
+                            			$this->overcome_tm_avatar($testimonial,$atts,['size' => '73']);
                             			echo '<div class="col text-center text-md-start">';
                             				echo '<div class="ttmn-header">';
     		                        			// name
