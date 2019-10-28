@@ -222,6 +222,7 @@ function overcome_gutters(){
 add_filter('ef5systems_colors','overcome_colors');
 function overcome_colors(){
 	return [
+		'inherit' => ['Inherit', 'inherit'],
 		'overlay' => ['Overlay Background', 'rgba(0,0,0,0.5)'],
 		'ababab' => ['OverCome Color 01', '#ababab'],
 		'f5f5f5' => ['OverCome Color 02', '#f5f5f5'],
