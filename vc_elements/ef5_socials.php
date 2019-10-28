@@ -66,6 +66,13 @@ vc_map(array(
                 'std'        => '',
             ),
             array(
+                'type'       => 'textfield',
+                'heading'    => esc_html__('Extra Class','overcome'),
+                'param_name' => 'el_class',
+                'value'      => '',
+                'description' => esc_html__('Style particular content element differently - add a class name and refer to it in custom CSS.', 'overcome'),
+            ),
+            array(
                 'type'       => 'param_group',
                 'heading'    => esc_html__( 'Add your icons', 'overcome' ),
                 'param_name' => 'values',

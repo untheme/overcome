@@ -18,7 +18,8 @@ if ( ! defined( 'ABSPATH' ) ) {
     $wrap_css_classes = array(
         'ef5-social',
         'ef5-social-'.$layout_template,
-        'text-'.$el_content_align
+        'text-'.$el_content_align,
+        $el_class
     );
     if($ef5_padding !== 'default') $wrap_css_classes[] = 'ef5-padding-'.$ef5_padding;
     if($ef5_margin !== 'default') $wrap_css_classes[]  = 'ef5-padding-'.$ef5_margin;
