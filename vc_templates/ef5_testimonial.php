@@ -10,6 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
+$el_id = !empty($el_id) ? 'ef5-'.$el_id : uniqid('ef5-');
 $wrap_css_class = ['ef5-testimonial-wrap'];
 $css_class_attr = $item_class = array();
 $css_class_attr[] = 'ef5-testimonial ef5-testimonial-layout-'.$layout_template;
