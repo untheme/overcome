@@ -303,7 +303,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         vc_icon_element_fonts_enqueue($i_type);
         
         ?>
-            <<?php echo overcome_html($args['tag']);?> class="<?php echo trim(implode(' ', $css_classes));?>" <?php echo overcome_html($styles);?>>
+            <<?php echo overcome_html($args['tag']);?> class="<?php echo trim(implode(' ', $css_classes));?>">
                 <span class="<?php echo esc_attr($iconClass); ?>"></span>
             </<?php echo overcome_html($args['tag']);?>>
         <?php
