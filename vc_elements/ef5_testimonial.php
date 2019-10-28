@@ -244,7 +244,7 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
         ]);
         $classes = ['ttmn-position', $args['class']];
         ?>
-            <span class="<?php echo trim(implode('', $classes));?>">
+            <span class="<?php echo trim(implode(' ', $classes));?>">
                 <?php echo overcome_html($testimonial['author_position']);?>
             </span>
         <?php
