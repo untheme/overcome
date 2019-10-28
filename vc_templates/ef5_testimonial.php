@@ -74,22 +74,16 @@ if($layout_template === '1') $inner_css_classes[] = 'ef5-box-shadow-12';
                         echo '<div class="'.trim(implode(' ', $inner_css_classes)).'" '.$owl_item_space.'>';
                         	switch ($layout_template) {
                         		default:
-                        			echo '<div class="row">';
-                            			//avatar
-                            			$this->overcome_tm_avatar($testimonial,$atts,['size' => '73']);
-                            			echo '<div class="col text-center text-md-start">';
-                            				echo '<div class="ttmn-header">';
-    		                        			// name
-    				                            $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500']);
-    				                            // position
-    				                            $this->overcome_tm_position($testimonial,['class' => 'text-13 ef5-text-accent']);
-    			                            echo '</div>';
-    			                        	// star rating
-    					                    $this->overcome_tm_rate($testimonial, $atts);
-    			                        	// text 
-    			                        	$this->overcome_tm_text($testimonial, $atts,['class' => 'text-22 font-style-300']);
-    		                            echo '</div>';
-                                    echo '</div>';
+                        			// text 
+                                    $this->overcome_tm_text($testimonial, $atts,['class' => 'text-22 font-style-300']);
+                        			//avatar
+                        			$this->overcome_tm_avatar($testimonial,$atts,['size' => '73']);
+                                    // name
+                                    $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500']);
+                                    // position
+                                    $this->overcome_tm_position($testimonial,['class' => 'text-13 ef5-text-accent']);
+                                    // star rating
+                                    $this->overcome_tm_rate($testimonial, $atts);
                         		break;
                         	}
                         echo '</div>';
