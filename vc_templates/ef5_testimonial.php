@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
 $el_id = !empty($el_id) ? 'ef5-'.$el_id : uniqid('ef5-');
-$wrap_css_class = ['ef5-testimonial-wrap'];
+$wrap_css_class = ['ef5-testimonial-wrap','ef5-owl-wrap-inner relative'];
 $css_class_attr = $item_class = array();
 $css_class_attr[] = 'ef5-testimonial ef5-testimonial-layout-'.$layout_template;
 $item_class[] = 'testimonial-item';
@@ -51,53 +51,59 @@ $inner_css_classes = ['ttmn-inner','transition'];
 if($layout_template === '1') $inner_css_classes[] = 'ef5-box-shadow-12';
 
 ?>
-<div class="<?php echo trim(implode(' ', $wrap_css_class));?>">
-    <div id="<?php echo esc_attr($el_id);?>" class="<?php echo trim(implode(' ',$css_class_attr));?>"> 
-        <?php
-            foreach($testimonials as $testimonial){
-                $j++;
-                if($i > $number_row) $i=1;
+<div class="ef5-testimonials <?php echo ef5systems_owl_css_class($atts);?>">
+    <?php 
+        ef5systems_owl_nav_top($atts);
+        ef5systems_owl_dots_top($atts); 
+    ?>
+    <div class="<?php echo trim(implode(' ', $wrap_css_class));?>">
+        <div id="<?php echo esc_attr($el_id);?>" class="<?php echo trim(implode(' ',$css_class_attr));?>"> 
+            <?php
+                foreach($testimonials as $testimonial){
+                    $j++;
+                    if($i > $number_row) $i=1;
 
-                if(isset($testimonial['author_name'])) {
-                	// dot image
-                	$dot_image = overcome_image_by_size([
-						'id'    => isset($testimonial['author_avatar']) ? $testimonial['author_avatar'] : null,
-						'size'  => $dot_thumbnail_size, 
-						'class' => 'dot-thumb circle', 
-						'echo'  => false
-                	]);
-                    // star rating
-                    $testimonial['author_rate'] = isset($testimonial['author_rate']) ? $testimonial['author_rate'] : '';
-                    if($i==1) : ?>
-                        <div class="<?php echo join(' ',$item_class);?>" data-dot='<?php echo overcome_html($dot_image); ?>'>
-                    <?php  
-                        endif;
-                        echo '<div class="'.trim(implode(' ', $inner_css_classes)).'" '.$owl_item_space.'>';
-                        	switch ($layout_template) {
-                        		default:
-                        			// text 
-                                    $this->overcome_tm_text($testimonial, $atts,['class' => 'text-22 font-style-300 pb-40']);
-                        			//avatar
-                        			$this->overcome_tm_avatar($testimonial,$atts,['size' => '73', 'img_class' => 'mb-20 circle ml-auto mr-auto']);
-                                    // name
-                                    $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500 d-block']);
-                                    // position
-                                    $this->overcome_tm_position($testimonial,['class' => 'text-13 ef5-text-accent d-block']);
-                                    // star rating
-                                    $this->overcome_tm_rate($testimonial, $atts);
-                        		break;
-                        	}
-                        echo '</div>';
-                    if($i == $number_row || $j==$count) echo '</div>';
-                    $i ++;
+                    if(isset($testimonial['author_name'])) {
+                    	// dot image
+                    	$dot_image = overcome_image_by_size([
+    						'id'    => isset($testimonial['author_avatar']) ? $testimonial['author_avatar'] : null,
+    						'size'  => $dot_thumbnail_size, 
+    						'class' => 'dot-thumb circle', 
+    						'echo'  => false
+                    	]);
+                        // star rating
+                        $testimonial['author_rate'] = isset($testimonial['author_rate']) ? $testimonial['author_rate'] : '';
+                        if($i==1) : ?>
+                            <div class="<?php echo join(' ',$item_class);?>" data-dot='<?php echo overcome_html($dot_image); ?>'>
+                        <?php  
+                            endif;
+                            echo '<div class="'.trim(implode(' ', $inner_css_classes)).'" '.$owl_item_space.'>';
+                            	switch ($layout_template) {
+                            		default:
+                            			// text 
+                                        $this->overcome_tm_text($testimonial, $atts,['class' => 'text-22 font-style-300 pb-40']);
+                            			//avatar
+                            			$this->overcome_tm_avatar($testimonial,$atts,['size' => '73', 'img_class' => 'mb-20 circle ml-auto mr-auto']);
+                                        // name
+                                        $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500 d-block']);
+                                        // position
+                                        $this->overcome_tm_position($testimonial,['class' => 'text-13 ef5-text-accent d-block']);
+                                        // star rating
+                                        $this->overcome_tm_rate($testimonial, $atts);
+                            		break;
+                            	}
+                            echo '</div>';
+                        if($i == $number_row || $j==$count) echo '</div>';
+                        $i ++;
+                    }
                 }
-            }
-        ?>
+            ?>
+        </div>
+        <?php if($layout_style === 'carousel'):
+            overcome_loading_animation(); 
+            ef5systems_owl_dots_container($atts);
+            ef5systems_owl_nav_container($atts);
+            ef5systems_owl_dots_in_nav_container($atts);
+        endif; ?>
     </div>
-    <?php if($layout_style === 'carousel'):
-        overcome_loading_animation(); 
-        ef5systems_owl_dots_container($atts);
-        ef5systems_owl_nav_container($atts);
-        ef5systems_owl_dots_in_nav_container($atts);
-    endif; ?>
 </div>
