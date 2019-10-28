@@ -226,7 +226,7 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
         $classes = ['ttmn-name', 'text-'.$atts['text_color'], $args['class']];
         $author_link_open = $author_link_close = '';
         if(!empty($testimonial['author_url'])){
-            $author_link_open = '<a href="'.esc_url($testimonial['author_url']).'" target="_blank">';
+            $author_link_open = '<a class="ef5-text-inherit" href="'.esc_url($testimonial['author_url']).'" target="_blank">';
             $author_link_close = '</a>';
         }
         ?>
