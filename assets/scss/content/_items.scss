@@ -114,9 +114,11 @@
 
 // Layout 5
 .ef5-post-item-layout-5{
-	margin-bottom: 18px;
 	.ef5-content-info{
-		@include transform(translate(-18px,-9px));
+		margin: -18px 0 0 -9px;
+		[dir="rtl"] &{
+			margin: -18px -9px 0 0;
+		}
 	}
 	.ef5-grid-item-wrap:last-child &{
 		margin-bottom: 0;
