@@ -226,7 +226,8 @@ function overcome_colors(){
 		'white'   => ['White', '#fff'],
 		'overlay' => ['Overlay Background', 'rgba(0,0,0,0.5)'],
 		'ababab'  => ['OverCome Color 01', '#ababab'],
-		'f5f5f5'  => ['OverCome Color 02', '#f5f5f5'],
+		'eee8d9'  => ['OverCome Color 02', '#eee8d9'],
+		'f5f5f5'  => ['OverCome Color 03', '#f5f5f5'],
 	];
 }
 
