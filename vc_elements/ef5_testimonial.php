@@ -211,7 +211,7 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
         $args = wp_parse_args($args,[
             'class' => ''
         ]);
-        $classes = ['ttmn-text', $args['class']];
+        $classes = ['ttmn-text', 'text-'.$atts['text_color'], $args['class']];
         ?>
             <div class="<?php echo trim(implode('', $classes));?>" <?php $this->overcome_tm_text_color($atts);?>>
                 <?php echo overcome_html($testimonial['text']);?>
@@ -223,7 +223,7 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
         $args = wp_parse_args($args,[
             'class' => ''
         ]);
-        $classes = ['ttmn-name', $args['class']];
+        $classes = ['ttmn-name', 'text-'.$atts['text_color'], $args['class']];
         $author_link_open = $author_link_close = '';
         if(!empty($testimonial['author_url'])){
             $author_link_open = '<a href="'.esc_url($testimonial['author_url']).'" target="_blank">';
