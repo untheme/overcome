@@ -1,3 +1,7 @@
 .ef5-testimonial-layout-1{
 	text-align: center;
+	@media (min-width : $desktop-screen){
+		padding-left: 100px;
+		padding-right: 100px;
+	}
 }
