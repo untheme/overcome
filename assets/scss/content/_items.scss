@@ -115,10 +115,7 @@
 // Layout 5
 .ef5-post-item-layout-5{
 	.ef5-content-info{
-		margin: -8px 0 0 -9px;
-		[dir="rtl"] &{
-			margin: -8px -9px 0 0;
-		}
+		margin-bottom: -8px;
 	}
 	.ef5-grid-item-wrap:last-child &{
 		margin-bottom: 0;
