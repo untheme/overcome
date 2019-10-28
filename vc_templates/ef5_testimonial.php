@@ -79,9 +79,9 @@ if($layout_template === '1') $inner_css_classes[] = 'ef5-box-shadow-12';
                         			//avatar
                         			$this->overcome_tm_avatar($testimonial,$atts,['size' => '73']);
                                     // name
-                                    $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500']);
+                                    $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500 d-block']);
                                     // position
-                                    $this->overcome_tm_position($testimonial,['class' => 'text-13 ef5-text-accent']);
+                                    $this->overcome_tm_position($testimonial,['class' => 'text-13 ef5-text-accent d-block']);
                                     // star rating
                                     $this->overcome_tm_rate($testimonial, $atts);
                         		break;
