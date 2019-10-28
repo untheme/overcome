@@ -238,7 +238,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         ?>
             <div <?php echo trim(implode(' ', $heading_attrs));?>><?php 
                 echo overcome_html($heading_string);
-                ef5_heading_heading_icon($atts,[
+                $this->ef5_heading_heading_icon($atts,[
                     'class' => $args['icon_class'],
                     'tag'   => $args['icon_tag']  
                 ]);
