@@ -64,7 +64,32 @@ vc_map(array(
                 ),
                 'std'        => 'false',
                 'group'      => esc_html__('Heading','overcome')   
-            )
+            ),
+            // Text Color
+            array(
+                'type'         => 'dropdown',
+                'heading'      => esc_html__( 'Text Color', 'overcome' ),
+                'param_name'   => 'text_color_opts',
+                'value'        => ef5systems_colors_option_for_vc([
+                    esc_html__('Custom','overcome') => 'custom'
+                ]),
+                'std'          => '',
+                'description'  => esc_html__( 'Choose color for this row', 'overcome' ),
+                'group'        => esc_html__('Theme Custom','overcome'),
+                'edit_field_class' => 'vc_col-sm-6',
+            ),
+            array(
+                'type'         => 'colorpicker',
+                'heading'      => esc_html__( 'Custom Text Color', 'overcome' ),
+                'param_name'   => 'text_color',
+                'description'  => esc_html__( 'Choose your color for this row', 'overcome' ),
+                'dependency' => array(
+                    'element'   => 'text_color_opts',
+                    'value'     => 'custom'
+                ),
+                'group'        => esc_html__('Theme Custom','overcome'),
+                'edit_field_class' => 'vc_col-sm-6',
+            ),
         ),
         ef5systems_icon_libs([
             'dependency'        => 'add_heading_icon',
@@ -274,8 +299,9 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $iconClass = isset($atts[$icon_name]) ? $atts[$icon_name]: '';
         if(empty($iconClass)) return;
         vc_icon_element_fonts_enqueue($i_type);
+        $styles = (!empty($text_color_opts) && !empty($text_color)) ? 'style="color:'.$text_color'"';
         ?>
-            <<?php echo overcome_html($args['tag']);?> class="<?php echo trim(implode(' ', $css_classes));?>">
+            <<?php echo overcome_html($args['tag']);?> class="<?php echo trim(implode(' ', $css_classes));?>" <?php echo overcome_html($styles);?>>
                 <span class="<?php echo esc_attr($iconClass); ?>"></span>
             </<?php echo overcome_html($args['tag']);?>>
         <?php
