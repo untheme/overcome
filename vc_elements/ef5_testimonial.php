@@ -39,7 +39,6 @@ vc_map(array(
                 ]),
                 'std'          => '',
                 'description'  => esc_html__( 'Choose color for this row', 'overcome' ),
-                'group'        => esc_html__('Heading','overcome'),
                 'edit_field_class' => 'vc_col-sm-6',
             ),
             array(
@@ -51,7 +50,6 @@ vc_map(array(
                     'element'   => 'text_color_opts',
                     'value'     => 'custom'
                 ),
-                'group'        => esc_html__('Heading','overcome'),
                 'edit_field_class' => 'vc_col-sm-6',
             ),
             array(
