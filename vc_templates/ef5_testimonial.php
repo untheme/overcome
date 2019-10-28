@@ -77,7 +77,7 @@ if($layout_template === '1') $inner_css_classes[] = 'ef5-box-shadow-12';
                         			// text 
                                     $this->overcome_tm_text($testimonial, $atts,['class' => 'text-22 font-style-300 pb-40']);
                         			//avatar
-                        			$this->overcome_tm_avatar($testimonial,$atts,['size' => '73', 'class' => 'mb-20']);
+                        			$this->overcome_tm_avatar($testimonial,$atts,['size' => '73', 'img_class' => 'mb-20']);
                                     // name
                                     $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500 d-block']);
                                     // position
