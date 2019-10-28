@@ -261,6 +261,7 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
         <?php
     }
     protected function overcome_tm_avatar($testimonial,$atts, $args=[]){
+        $testimonial['author_avatar'] = isset($testimonial['author_avatar']) ? $testimonial['author_avatar'] : null;
         $args = wp_parse_args($args,[
             'class' => '',
             'size'  => '90',
