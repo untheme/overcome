@@ -213,7 +213,7 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
         ]);
         $classes = ['ttmn-text', 'text-'.$atts['text_color'], $args['class']];
         ?>
-            <div class="<?php echo trim(implode('', $classes));?>" <?php $this->overcome_tm_text_color($atts);?>>
+            <div class="<?php echo trim(implode(' ', $classes));?>" <?php $this->overcome_tm_text_color($atts);?>>
                 <?php echo overcome_html($testimonial['text']);?>
             </div>
         <?php
@@ -230,7 +230,7 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
             $author_link_close = '</a>';
         }
         ?>
-            <span class="<?php echo trim(implode('', $classes));?>" <?php $this->overcome_tm_text_color($atts);?>>
+            <span class="<?php echo trim(implode(' ', $classes));?>" <?php $this->overcome_tm_text_color($atts);?>>
                 <?php echo overcome_html($author_link_open.$testimonial['author_name'].$author_link_close);?>
             </span>
         <?php
@@ -271,7 +271,7 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
         overcome_image_by_size([
             'id'      => $testimonial['author_avatar'],
             'size'    => $args['size'],
-            'class'   => trim(implode('', $classes)),
+            'class'   => trim(implode(' ', $classes)),
             'default' => true,
             'before'  => $args['before'],
             'after'   => $args['after']  
