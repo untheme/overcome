@@ -56,12 +56,11 @@ if($layout_template === '1') $inner_css_classes[] = 'ef5-box-shadow-12';
             foreach($testimonials as $testimonial){
                 $j++;
                 if($i > $number_row) $i=1;
-                $testimonial['author_avatar'] = isset($testimonial['author_avatar']) ? $testimonial['author_avatar'] : null;
 
                 if(isset($testimonial['author_name'])) {
                 	// dot image
                 	$dot_image = overcome_image_by_size([
-						'id'    => $testimonial['author_avatar'],
+						'id'    => isset($testimonial['author_avatar']) ? $testimonial['author_avatar'] : null,
 						'size'  => $dot_thumbnail_size, 
 						'class' => 'dot-thumb circle', 
 						'echo'  => false
