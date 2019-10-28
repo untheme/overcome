@@ -299,7 +299,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $iconClass = isset($atts[$icon_name]) ? $atts[$icon_name]: '';
         if(empty($iconClass)) return;
         vc_icon_element_fonts_enqueue($i_type);
-        $styles = (!empty($text_color_opts) && !empty($text_color)) ? 'style="color:'.$text_color'"' : '';
+        $styles = (!empty($text_color_opts) && !empty($text_color)) ? 'style="color:'.$text_color.'"' : '';
         ?>
             <<?php echo overcome_html($args['tag']);?> class="<?php echo trim(implode(' ', $css_classes));?>" <?php echo overcome_html($styles);?>>
                 <span class="<?php echo esc_attr($iconClass); ?>"></span>
