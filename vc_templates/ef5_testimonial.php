@@ -82,7 +82,7 @@ if($layout_template === '1') $inner_css_classes[] = 'ef5-box-shadow-12';
     		                        			// name
     				                            $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500']);
     				                            // position
-    				                            $this->overcome_tm_position($testimonial,['class' => 'text-13']);
+    				                            $this->overcome_tm_position($testimonial,['class' => 'text-13 ef5-text-accent']);
     			                            echo '</div>';
     			                        	// star rating
     					                    $this->overcome_tm_rate($testimonial, $atts);
