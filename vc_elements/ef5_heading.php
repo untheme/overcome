@@ -275,9 +275,9 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         if(empty($iconClass)) return;
         vc_icon_element_fonts_enqueue($i_type);
         ?>
-            <<?php echo overcome_html($tag);?> class="<?php echo trim(implode(' ', $css_classes));?>">
+            <<?php echo overcome_html($args['tag']);?> class="<?php echo trim(implode(' ', $css_classes));?>">
                 <span class="<?php echo esc_attr($iconClass); ?>"></span>
-            </<?php echo overcome_html($tag);?>>
+            </<?php echo overcome_html($args['tag']);?>>
         <?php
     }
     protected function ef5_heading_sub_heading($atts,$args = []){
