@@ -80,9 +80,9 @@ if($layout_template === '1') $inner_css_classes[] = 'ef5-box-shadow-12';
                             			echo '<div class="col text-center text-md-start">';
                             				echo '<div class="ttmn-header">';
     		                        			// name
-    				                            $this->overcome_tm_name($testimonial, $atts);
+    				                            $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500']);
     				                            // position
-    				                            $this->overcome_tm_position($testimonial);
+    				                            $this->overcome_tm_position($testimonial,['class' => 'text-13']);
     			                            echo '</div>';
     			                        	// star rating
     					                    $this->overcome_tm_rate($testimonial, $atts);
