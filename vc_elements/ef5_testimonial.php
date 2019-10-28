@@ -265,8 +265,8 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
         $args = wp_parse_args($args,[
             'class' => '',
             'size'  => '90',
-            'before' => '',
-            'after'  => ''
+            'before' => '<div class="tm-avatar">',
+            'after'  => '</div>'
         ]);
         $classes = ['avatar circle', $args['class']];
 
