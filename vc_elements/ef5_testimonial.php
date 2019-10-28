@@ -266,7 +266,7 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
             'before'    => '<div class="tm-avatar">',
             'after'     => '</div>'
         ]);
-        $classes = ['avatar circle', $args['img_class']];
+        $classes = ['avatar w-auto', $args['img_class']];
 
         overcome_image_by_size([
             'id'      => $testimonial['author_avatar'],
