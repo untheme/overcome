@@ -163,6 +163,8 @@ vc_map(array(
                 'type'       => 'textfield',
                 'heading'    => esc_html__('Extra Class','overcome'),
                 'param_name' => 'heading_text_class',
+                'value'      => '',
+                'std'        => '',
                 'group'      => esc_html__('Heading','overcome'),
                 'dependency' => array(
                     'element'   => 'heading_text',
