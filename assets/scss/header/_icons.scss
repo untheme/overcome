@@ -81,3 +81,8 @@
     width: auto;
     max-width: 100%;
 }
+.ef5-header-donate {
+    @media (max-width: 560px){
+        display: none;
+    }
+}

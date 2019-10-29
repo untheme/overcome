@@ -12,7 +12,7 @@ function overcome_header_donate_button(){
         'target'	   => '_self'	
     ],$post_id);
     ?>
-    <span class="header-icon">
+    <span class="header-icon ef5-header-donate">
     	<a class="<?php echo esc_attr($data['class']); ?>"
        data-options="<?php echo esc_attr($data['data-options']) ?>"
        data-target="<?php echo esc_attr($data['data-target']) ?>"
