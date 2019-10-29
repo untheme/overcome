@@ -97,7 +97,11 @@ vc_map(array(
                     esc_html__('Add icon?','overcome') => 'true'
                 ),
                 'std'        => 'false',
-                'group'      => esc_html__('Heading','overcome')   
+                'group'      => esc_html__('Heading','overcome'),
+                'dependency' => array(
+                    'element'   => 'heading_text',
+                    'not_empty' => true
+                ),
             ),
         ),
         ef5systems_icon_libs([
