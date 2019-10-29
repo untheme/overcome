@@ -85,7 +85,7 @@ vc_map(array(
                 'group'        => esc_html__('Heading','overcome'),
                 'edit_field_class' => 'vc_col-sm-6'
             ),*/
-        )
+        ),
         ef5systems_vc_text_style([
             'color'     => 'text_color_opts',
             'element'   => 'heading_text',
