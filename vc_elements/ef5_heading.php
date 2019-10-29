@@ -159,6 +159,16 @@ vc_map(array(
                     'not_empty' => true
                 ),
             ]),
+            array(
+                'type'       => 'textfield',
+                'heading'    => esc_html__('Extra Class','overcome'),
+                'param_name' => 'heading2_text_class',
+                'dependency' => array(
+                    'element'   => 'heading_text',
+                    'not_empty' => true
+                ),
+                'group'      => esc_html__('Heading','overcome')   
+            ),
             // Sub Heading 
             array(
                 'type'       => 'textfield',
@@ -256,6 +266,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
 
         $heading_css_class = [
             'main-heading',
+            $heading2_text_class,
             $args['class']
         ];
         
