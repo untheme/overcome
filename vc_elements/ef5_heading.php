@@ -83,11 +83,7 @@ vc_map(array(
                     'value'     => 'custom'
                 ),
                 'group'        => esc_html__('Heading','overcome'),
-                'edit_field_class' => 'vc_col-sm-6',
-                'dependency' => array(
-                    'element'   => 'heading_text',
-                    'not_empty' => true
-                ),
+                'edit_field_class' => 'vc_col-sm-6'
             ),
             array(
                 'type'       => 'checkbox',
