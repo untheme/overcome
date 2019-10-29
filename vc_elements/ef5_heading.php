@@ -89,7 +89,8 @@ vc_map(array(
                 'color'     => 'text_color_opts',
                 'element'   => 'heading_text',
                 'value'     => 'not_empty',
-                'value_opt' => true
+                'value_opt' => true,
+                'group'     => esc_html__('Heading','overcome')
             ]),
             array(
                 'type'       => 'checkbox',
