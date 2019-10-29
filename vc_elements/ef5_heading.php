@@ -56,15 +56,6 @@ vc_map(array(
                 'holder'     => 'h4',
                 'group'      => esc_html__('Heading','overcome')   
             ),
-            array(
-                'type'       => 'checkbox',
-                'param_name' => 'add_heading_icon',
-                'value'      => array(
-                    esc_html__('Add icon?','overcome') => 'true'
-                ),
-                'std'        => 'false',
-                'group'      => esc_html__('Heading','overcome')   
-            ),
             // Text Color
             array(
                 'type'         => 'dropdown',
@@ -89,6 +80,15 @@ vc_map(array(
                 ),
                 'group'        => esc_html__('Heading','overcome'),
                 'edit_field_class' => 'vc_col-sm-6',
+            ),
+            array(
+                'type'       => 'checkbox',
+                'param_name' => 'add_heading_icon',
+                'value'      => array(
+                    esc_html__('Add icon?','overcome') => 'true'
+                ),
+                'std'        => 'false',
+                'group'      => esc_html__('Heading','overcome')   
             ),
         ),
         ef5systems_icon_libs([
@@ -162,12 +162,9 @@ vc_map(array(
             array(
                 'type'       => 'textfield',
                 'heading'    => esc_html__('Extra Class','overcome'),
-                'param_name' => 'heading2_text_class',
-                'dependency' => array(
-                    'element'   => 'heading_text',
-                    'not_empty' => true
-                ),
-                'group'      => esc_html__('Heading','overcome')   
+                'param_name' => 'heading_text_class',
+                'value'      => '',
+                'std'        => ''
             ),
             // Sub Heading 
             array(
@@ -266,7 +263,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
 
         $heading_css_class = [
             'main-heading',
-            $heading2_text_class,
+            $heading_text_class,
             $args['class']
         ];
         
