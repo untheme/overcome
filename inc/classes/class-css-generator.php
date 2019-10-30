@@ -234,6 +234,8 @@ class OverCome_CSS_Generator
         printf('$ef5-colors:(%s);',ef5systems_colors_option_for_scss());
         // Theme Font Size 
         printf('$ef5-font-sizes:(%s);',ef5systems_font_sizes_option_for_scss());
+        // Theme Font Size 
+        printf('$ef5-font-line-height:(%s);',ef5systems_font_line_height_option_for_scss());
         // Theme Spacings
         printf('$ef5-spacings:(%s);',ef5systems_spacing_option_for_scss());
         // Theme Gutters
