@@ -40,7 +40,7 @@ $line-heights: (
 		}
 		@each $size in $ef5-font-sizes{
 			.text#{$infix}-#{nth($size, 1)}{
-				font-size: #{nth($size, 2)}px;
+				font-size: #{nth($size, 2)};
 			}
 		}
 		// Line Height
