@@ -93,10 +93,9 @@ $customs_gutters: (
 					margin-right: ($gutters-value / 2);
 				}
 				@for $i from 1 through $grid-columns{
-					display: none;
 			        > .col#{$infix}-#{$i} {
 			        	display: none;
-			          	@include make-col-gap($i, $gutters, $grid-columns);
+			          	//@include make-col-gap($i, $gutters, $grid-columns);
 			        }
 			    }
 			}
