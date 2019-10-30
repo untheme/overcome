@@ -50,6 +50,7 @@ vc_map(array(
         ef5systems_vc_text_style([
             'color'       => 'small_heading_text_color_opts',
             'font_size'   => 'small_heading_size',
+            'font_style'  => 'small_heading_font_style',
             'line_height' => 'small_heading_line_height',
             'element'     => 'small_heading_text',
             'value'       => 'not_empty',
