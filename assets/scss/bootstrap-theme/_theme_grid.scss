@@ -94,7 +94,8 @@ $customs_gutters: (
 				}
 				@for $i from 1 through 12{
 			        .col#{$infix}-#{$i} {
-			          @include make-col-gap($i, $gutters, 12);
+			        	display: none;
+			          	@include make-col-gap($i, $gutters, 12);
 			        }
 			    }
 			}
