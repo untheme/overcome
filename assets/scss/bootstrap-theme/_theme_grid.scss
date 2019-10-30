@@ -84,6 +84,15 @@ $customs_gutters: (
 					}
 				}
 			}
+			.ef5-column-gap#{$infix}-#{$gutters}{
+				margin-left: ($gutters-value / -2);
+				margin-right: ($gutters-value / -2);
+				> [class*='col'],
+				> *{
+					margin-left: ($gutters-value / 2);
+					margin-right: ($gutters-value / 2);
+				}
+			}
 		}
 	}
 }
