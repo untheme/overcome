@@ -280,7 +280,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
 
         $text_size = ef5systems_get_vc_param_value($atts, 'ef5_size');
         $custom_text_size = ef5systems_get_vc_param_value($atts, 'ef5_size', true);
-
+        $custom_text_size = is_numeric($custom_text_size) ? $custom_text_size.'px' : $custom_text_size;
         extract( $atts );
         if(!empty($heading2_text)) $heading2_text = '<span class="part2">'.$heading2_text.'</span>';
         if(!empty($heading3_text)) $heading3_text = '<span class="part3">'.$heading3_text.'</span>';
