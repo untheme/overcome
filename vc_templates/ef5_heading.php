@@ -23,16 +23,9 @@ extract( $atts );
 				$this->ef5_heading_button($atts,['class' => 'ef5-btn accent outline ef5-btn-md']);
 				break;
 			default:
-				$text_size = ef5systems_get_vc_param_value($atts, 'ef5_size');
-        		$custom_text_size = ef5systems_get_vc_param_value($atts, 'ef5_size', true);
-        		if($text_size === '' )
-        			$ef5_heading_main_heading_class = 'text-36';
-        		else
-        			$ef5_heading_main_heading_class = '';
-
 				$this->ef5_heading_small_heading($atts, ['class' => 'text-uppercase']);
 				$this->ef5_heading_main_heading_icon($atts);
-				$this->ef5_heading_main_heading($atts,['class' => 'ef5-heading '.$ef5_heading_main_heading_class]);
+				$this->ef5_heading_main_heading($atts,['class' => 'ef5-heading']);
 				$this->ef5_heading_sub_heading($atts, ['class' => 'text-22']);
 				$this->ef5_heading_desccription($atts);
 				$this->ef5_heading_button($atts,['class' => 'ef5-btn accent fill ef5-btn-md']);
