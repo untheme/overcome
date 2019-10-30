@@ -84,21 +84,6 @@ $customs_gutters: (
 					}
 				}
 			}
-			.ef5-column-gap#{$infix}-#{$gutters}{
-				margin-left: ($gutters-value / -2);
-				margin-right: ($gutters-value / -2);
-				> [class*='col'],
-				> *{
-					margin-left: ($gutters-value / 2);
-					margin-right: ($gutters-value / 2);
-				}
-				@for $i from 1 through $grid-columns{
-			        > .col#{$infix}-#{$i} {
-			        	display: none;
-			          	//@include make-col-gap($i, $gutters, $grid-columns);
-			        }
-			    }
-			}
 		}
 	}
 }
