@@ -79,7 +79,10 @@ $inner_css_classes = ['ttmn-inner','transition'];
                                         echo '<div class="ef5-bg-white ef5-rounded-10 p-25">';
                                             echo '<div class="row align-items-center">';
                                                 echo '<div class="col-auto">';
-                                                    $this->overcome_tm_avatar($testimonial,$atts,['size' => '65', 'img_class' => 'mb-20 circle']);
+                                                    $this->overcome_tm_avatar($testimonial,$atts,[
+                                                        'size'      => '65', 
+                                                        'img_class' => 'circle'
+                                                    ]);
                                                 echo '</div>';
                                                 echo '<div class="col">';
                                                     // name
