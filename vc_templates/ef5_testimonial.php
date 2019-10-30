@@ -77,7 +77,7 @@ $inner_css_classes = ['ttmn-inner','transition'];
                             	switch ($layout_template) {
                                     case '2' :
                                         echo '<div class="ef5-bg-white ef5-rounded-10 p-25">';
-                                            echo '<div class="row align-items-center">';
+                                            echo '<div class="row align-items-center pb-25">';
                                                 echo '<div class="col-auto">';
                                                     $this->overcome_tm_avatar($testimonial,$atts,[
                                                         'size'      => '65', 
