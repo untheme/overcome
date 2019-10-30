@@ -18,7 +18,7 @@ $wrap_css_class = ['ef5-fancybox','ef5-fancybox-'.$layout_template, 'transition'
 	<?php switch ($layout_template) {
 		case '3':
 		?>
-			<div class="row gutter-40">
+			<div class="row">
 				<div class="col-auto">
 					<?php
 					echo overcome_html($this->ef5_fancy_box_icon($atts,['class' => 'text-67 lh-1 ef5-text-accent']));
