@@ -25,7 +25,7 @@ extract( $atts );
 			default:
 				$text_size = ef5systems_get_vc_param_value($atts, 'ef5_size');
         		$custom_text_size = ef5systems_get_vc_param_value($atts, 'ef5_size', true);
-        		$ef5_heading_main_heading_class = 'text-36 font-style-700';
+        		$ef5_heading_main_heading_class = 'text-36';
         		if($text_size === 'custom' && !empty($custom_text_size)) $ef5_heading_main_heading_class = '';
 
 				$this->ef5_heading_small_heading($atts, ['class' => 'text-22 text-uppercase ef5-text-accent']);
