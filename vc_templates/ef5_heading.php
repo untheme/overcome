@@ -30,7 +30,7 @@ extract( $atts );
         		else
         			$ef5_heading_main_heading_class = '';
 
-				$this->ef5_heading_small_heading($atts, ['class' => 'text-22 text-uppercase ef5-text-accent']);
+				$this->ef5_heading_small_heading($atts, ['class' => 'text-uppercase']);
 				$this->ef5_heading_main_heading_icon($atts);
 				$this->ef5_heading_main_heading($atts,['class' => 'ef5-heading '.$ef5_heading_main_heading_class]);
 				$this->ef5_heading_sub_heading($atts, ['class' => 'text-22']);
