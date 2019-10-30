@@ -48,11 +48,13 @@ vc_map(array(
             ])
         ),
         ef5systems_vc_text_style([
-            'color'     => 'small_heading_text_color_opts',
-            'element'   => 'small_heading_text',
-            'value'     => 'not_empty',
-            'value_opt' => true,
-            'group'     => esc_html__('Small Heading','overcome')
+            'color'       => 'small_heading_text_color_opts',
+            'font_size'   => 'small_heading_size',
+            'line_height' => 'small_heading_line_height',
+            'element'     => 'small_heading_text',
+            'value'       => 'not_empty',
+            'value_opt'   => true,
+            'group'       => esc_html__('Small Heading','overcome')
         ]),
         array(
             // Heading 
@@ -264,6 +266,19 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $args = wp_parse_args($args, [
             'class' => ''
         ]);
+        $text_color = ef5systems_get_vc_param_value($atts, 'small_heading_text_color_opts');
+        $custom_text_color = ef5systems_get_vc_param_value($atts,'small_heading_text_color_opts', true);
+
+        $text_size = ef5systems_get_vc_param_value($atts, 'small_heading_size');
+        $custom_text_size = ef5systems_get_vc_param_value($atts, 'small_heading_size', true);
+        $custom_text_size = is_numeric($custom_text_size) ? $custom_text_size.'px' : $custom_text_size;
+
+        $font_style = ef5systems_get_vc_param_value($atts, 'small_heading_font_style');
+
+        $line_height = ef5systems_get_vc_param_value($atts, 'small_heading_line_height');
+        $custom_line_height = ef5systems_get_vc_param_value($atts,'small_heading_line_height', true);
+
+
         extract( $atts );
         $small_heading_attrs = $small_heading_css = [];
         $small_heading_css_class = [
