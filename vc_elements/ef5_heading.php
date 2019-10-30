@@ -294,6 +294,8 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $heading_string = trim(implode(' ',[$heading_text, $heading2_text, $heading3_text]));
         // Heading 
         $heading_attrs = $heading_css = [];
+        $text_color = isset($text_color) && !empty($text_color) ? $text_color : 'default';
+        $text_size = isset($text_size) && !empty($text_size) ? $text_size : 'default';
         $font_style = isset($font_style) && !empty($font_style) ? $font_style : '700';
         $heading_css_class = [
             'main-heading',
