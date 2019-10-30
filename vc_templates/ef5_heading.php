@@ -23,8 +23,8 @@ extract( $atts );
 				$this->ef5_heading_button($atts,['class' => 'ef5-btn accent outline ef5-btn-md']);
 				break;
 			default:
-				$text_size = ef5systems_get_vc_param_value($atts, 'ef5_size'); var_dump($text_size);
-        		$custom_text_size = ef5systems_get_vc_param_value($atts, 'ef5_size', true); var_dump($custom_text_size);
+				$text_size = ef5systems_get_vc_param_value($atts, 'ef5_size');
+        		$custom_text_size = ef5systems_get_vc_param_value($atts, 'ef5_size', true);
         		if($text_size === '' )
         			$ef5_heading_main_heading_class = 'text-36';
         		else
