@@ -94,7 +94,7 @@ $inner_css_classes = ['ttmn-inner','transition'];
                                                 echo '</div>';
                                             echo '</div>';
                                             // text 
-                                            $this->overcome_tm_text($testimonial, $atts,['class' => 'pb-20']);
+                                            $this->overcome_tm_text($testimonial, $atts,['class' => 'pb-20 pl-lg-25 pr-lg-25']);
                                         echo '</div>';
                                     break;
                             		default:
