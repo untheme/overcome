@@ -45,7 +45,16 @@ vc_map(array(
                     'element'   => 'small_heading_text',
                     'not_empty' => true
                 ),
-            ]),
+            ])
+        ),
+        ef5systems_vc_text_style([
+            'color'     => 'small_heading_text_color_opts',
+            'element'   => 'small_heading_text',
+            'value'     => 'not_empty',
+            'value_opt' => true,
+            'group'     => esc_html__('Small Heading','overcome')
+        ]),
+        array(
             // Heading 
             array(
                 'type'       => 'textarea',
