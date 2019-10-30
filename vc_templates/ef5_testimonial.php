@@ -76,19 +76,23 @@ $inner_css_classes = ['ttmn-inner','transition'];
                             echo '<div class="'.trim(implode(' ', $inner_css_classes)).'" '.$owl_item_space.'>';
                             	switch ($layout_template) {
                                     case '2' :
-                                        echo '<div class="ef5-bg-white ef5-rounded-10 p-25"><div class="row align-items-center">';
-                                            echo '<div class="col-auto">';
-                                                $this->overcome_tm_avatar($testimonial,$atts,['size' => '65', 'img_class' => 'mb-20 circle']);
+                                        echo '<div class="ef5-bg-white ef5-rounded-10 p-25">';
+                                            echo '<div class="row align-items-center">';
+                                                echo '<div class="col-auto">';
+                                                    $this->overcome_tm_avatar($testimonial,$atts,['size' => '65', 'img_class' => 'mb-20 circle']);
+                                                echo '</div>';
+                                                echo '<div class="col">';
+                                                    // name
+                                                    $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500 d-block']);
+                                                    // position
+                                                    $this->overcome_tm_position($testimonial,['class' => 'text-13 ef5-text-accent d-block']);
+                                                    // star rating
+                                                    $this->overcome_tm_rate($testimonial, $atts);
+                                                echo '</div>';
                                             echo '</div>';
-                                            echo '<div class="col">';
-                                                // name
-                                                $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500 d-block']);
-                                                // position
-                                                $this->overcome_tm_position($testimonial,['class' => 'text-13 ef5-text-accent d-block']);
-                                                // star rating
-                                                $this->overcome_tm_rate($testimonial, $atts);
-                                            echo '</div>';
-                                        echo '</div></div>';
+                                            // text 
+                                            $this->overcome_tm_text($testimonial, $atts,['class' => 'pb-20']);
+                                        echo '</div>';
                                     break;
                             		default:
                             			// text 
