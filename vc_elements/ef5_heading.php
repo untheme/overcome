@@ -309,9 +309,9 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         
         // Custom Style
         $styles = [];
-        $styles[] = (!empty($text_color_opts) && !empty($custom_text_color)) ? 'color:'.$custom_text_color : '';
-        $styles[] = (!empty($text_size) && !empty($custom_text_size)) ? 'font-size:'.$custom_text_size : '';
-        $styles[] = (!empty($line_height) && !empty($custom_line_height)) ? 'line-height:'.$custom_line_height : '';
+        if(!empty($text_color_opts) && !empty($custom_text_color)) $styles[] = 'color:'.$custom_text_color;
+        if(!empty($text_size) && !empty($custom_text_size)) $styles[] = 'font-size:'.$custom_text_size;
+        if(!empty($line_height) && !empty($custom_line_height)) $styles[] = 'line-height:'.$custom_line_height;
         $heading_attrs[] = !empty($styles) ? 'style="'.implode(';', $styles).'"' : '';
         ?>
             <div <?php echo trim(implode(' ', $heading_attrs));?>><?php 
