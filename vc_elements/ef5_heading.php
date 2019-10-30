@@ -284,8 +284,8 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
 
         $font_style = ef5systems_get_vc_param_value($atts, 'ef5_font_style');
 
-        $line_height = ef5systems_get_vc_param_value($atts, 'line_height');
-        $custom_line_height = ef5systems_get_vc_param_value($atts,'text_line_height', true);
+        $line_height = ef5systems_get_vc_param_value($atts, 'ef5_line_height');
+        $custom_line_height = ef5systems_get_vc_param_value($atts,'ef5_line_height', true);
 
         extract( $atts );
         if(!empty($heading2_text)) $heading2_text = '<span class="part2">'.$heading2_text.'</span>';
