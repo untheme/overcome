@@ -1,3 +1,9 @@
+// Make col with GAP
+@mixin make-col-gap($size, $gap, $columns: $grid-columns) {
+  flex: 0 0 calc(percentage($size / $columns) - $gap);
+  max-width: calc(percentage($size / $columns) - $gap);
+}
+
 // RTL offset
 @mixin make-col-offset-rtl($size, $columns: $grid-columns) {
   $num: $size / $columns;
@@ -67,7 +73,7 @@ $customs_gutters: (
 	.grid-gutters-#{$gutters}{
 		margin: $gutters-value / -2!important;
 		> [class*='col']{
-			padding: $gutters-value / 2;
+			padding: $gutters-value / 2; 
 		}
 	}
 }
