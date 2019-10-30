@@ -76,7 +76,7 @@ $inner_css_classes = ['ttmn-inner','transition'];
                             echo '<div class="'.trim(implode(' ', $inner_css_classes)).'" '.$owl_item_space.'>';
                             	switch ($layout_template) {
                                     case '2' :
-                                        echo '<div class="row align-items-center ef5-bg-white">';
+                                        echo '<div class="ef5-bg-white"><div class="row align-items-center">';
                                             echo '<div class="col-auto">';
                                                 $this->overcome_tm_avatar($testimonial,$atts,['size' => '65', 'img_class' => 'mb-20 circle']);
                                             echo '</div>';
@@ -88,7 +88,7 @@ $inner_css_classes = ['ttmn-inner','transition'];
                                                 // star rating
                                                 $this->overcome_tm_rate($testimonial, $atts);
                                             echo '</div>';
-                                        echo '</div>';
+                                        echo '</div></div>';
                                     break;
                             		default:
                             			// text 
