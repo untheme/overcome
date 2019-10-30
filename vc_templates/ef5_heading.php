@@ -25,8 +25,10 @@ extract( $atts );
 			default:
 				$text_size = ef5systems_get_vc_param_value($atts, 'ef5_size'); var_dump($text_size);
         		$custom_text_size = ef5systems_get_vc_param_value($atts, 'ef5_size', true); var_dump($custom_text_size);
-        		$ef5_heading_main_heading_class = 'text-36';
-        		if($text_size === 'custom' && !empty($custom_text_size)) die('111'); // $ef5_heading_main_heading_class = '';
+        		if($text_size === '' )
+        			$ef5_heading_main_heading_class = 'text-36';
+        		else
+        			$ef5_heading_main_heading_class = '';
 
 				$this->ef5_heading_small_heading($atts, ['class' => 'text-22 text-uppercase ef5-text-accent']);
 				$this->ef5_heading_main_heading_icon($atts);
