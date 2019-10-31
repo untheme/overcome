@@ -203,9 +203,11 @@ $ef5-rounded: (
 
 // Border 
 .ef5-bl-1-e2e2e1{
-	border-left: 1px solid #e2e2e1;
-	[dir="rtl"] &{
-		border-left: 0;
-		border-right: 1px solod #e2e2e1;
+	@media (min-width: $screen-lg-min){
+		border-left: 1px solid #e2e2e1;
+		[dir="rtl"] &{
+			border-left: 0;
+			border-right: 1px solod #e2e2e1;
+		}
 	}
 }
