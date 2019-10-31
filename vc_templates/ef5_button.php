@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     $btn_wrap_cls   = array('ef5-btn-wrap', $btn_display);
     $btn_wrap_cls[] = !empty($btn_align) ? 'text-'.$btn_align : '';
 
-    $wrapper_attributes[] = 'class="'.unbreak_optimize_css_class(implode(' ', $btn_wrap_cls)).'"'; 
+    $wrapper_attributes[] = 'class="'.trim(implode(' ', $btn_wrap_cls)).'"'; 
 
 
     $btn_attributes = $btn_custom_styles = [];
@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     $_btn_color = ($btn_style === 'simple') ? $btn_color.'-color' : $btn_color;
 
     $btn_cls   = array($_btn_class, $_btn_color, $btn_style, $btn_shape, 'ef5-btn-'.$btn_size, $btn_hover_style, $icon_position, $btn_icon_style, $btn_icon_animation,$btn_underline,'transition','ef5-scroll');
-    $btn_attributes[] = 'class="'.unbreak_optimize_css_class(implode(' ', $btn_cls)).'"';
+    $btn_attributes[] = 'class="'.trim(implode(' ', $btn_cls)).'"';
     // Button link
     $button_link = vc_build_link( $button_link);
     $button_link = ( $button_link == '||' ) ? '' : $button_link;
@@ -65,8 +65,8 @@ if ( ! defined( 'ABSPATH' ) ) {
         ];
 
         if(!empty($iconClass)) {
-            if($icon_position === 'icon-left') $icon = '<span class="'.unbreak_optimize_css_class(implode(' ', $icon_css_class)).'"></span>&nbsp;&nbsp;';
-            if($icon_position === 'icon-right') $icon = '&nbsp;&nbsp;<span class="'.unbreak_optimize_css_class(implode(' ', $icon_css_class)).'"></span>';
+            if($icon_position === 'icon-left') $icon = '<span class="'.trim(implode(' ', $icon_css_class)).'"></span>&nbsp;&nbsp;';
+            if($icon_position === 'icon-right') $icon = '&nbsp;&nbsp;<span class="'.trim(implode(' ', $icon_css_class)).'"></span>';
         }
     }
     
@@ -78,12 +78,12 @@ if ( ! defined( 'ABSPATH' ) ) {
             switch ($icon_position) {
                 case 'icon-right':
             ?>
-                <span class="btn-title"><?php echo esc_attr( $btn_text );?></span> <?php echo unbreak_html($icon); ?>
+                <span class="btn-title"><?php echo esc_attr( $btn_text );?></span> <?php echo overcome_html($icon); ?>
             <?php   
                 break;
                 default:
             ?>
-                <?php echo unbreak_html($icon); ?> <span class="btn-title"><?php echo esc_attr( $btn_text );?></span>
+                <?php echo overcome_html($icon); ?> <span class="btn-title"><?php echo esc_attr( $btn_text );?></span>
             <?php
                 break;
             }
