@@ -261,7 +261,7 @@ class WPBakeryShortCode_ef5_button extends WPBakeryShortCode
         $btn_classes[] = ($btn_style === 'simple') ? 'ef5-text-'.$btn_color : $btn_color;
         $btn_classes[] = 'transition ef5-scroll';
         $btn_classes[] = $args['class'];
-        $btn_attributes[] = 'class="'.str_replace(' ', '',trim(implode(' ', $btn_classes))).'"';
+        $btn_attributes[] = 'class="'.str_replace('  ', ' ',trim(implode(' ', $btn_classes))).'"';
 
         // Button link
         $button_link = vc_build_link( $button_link);
