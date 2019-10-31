@@ -53,7 +53,10 @@ vc_map(array(
                 'type'          => 'dropdown',
                 'param_name'    => 'btn_style',
                 'heading'       => esc_html__( 'Button Style', 'overcome' ),
-                'value'         => overcome_button_style(),
+                'value'         => array(
+                    esc_html__('Fill', 'overcome')    => 'fill',
+                    esc_html__('Outline', 'overcome') => 'ouline',
+                ),
                 'std'           => 'fill',
                 'admin_label'   => true,
                 'edit_field_class' => 'vc_col-sm-6'
@@ -62,15 +65,17 @@ vc_map(array(
                 'type'          => 'dropdown',
                 'param_name'    => 'btn_color',
                 'heading'       => esc_html__( 'Button Color', 'overcome' ),
-                'value'         => overcome_button_colors(),
-                'std'           => 'primary',
+                'value'         => ef5systems_color_option_for_vc([
+                    esc_html__('Custom','overcome') => 'custom'
+                ]),
+                'std'           => '',
                 'admin_label'   => true,
                 'edit_field_class' => 'vc_col-sm-6'
             ),
             array(
                 'type'          => 'colorpicker',
                 'param_name'    => 'btn_custom_bg_color',
-                'heading'       => esc_html__( 'Background/Border Color', 'overcome' ),
+                'heading'       => esc_html__( 'Custom Background/Border Color', 'overcome' ),
                 'value'         => '',
                 'std'           => '',
                 'edit_field_class' => 'vc_col-sm-6',
@@ -95,11 +100,13 @@ vc_map(array(
                 'type'          => 'dropdown',
                 'param_name'    => 'btn_shape',
                 'heading'       => esc_html__( 'Button Shape', 'overcome' ),
-                'value'         => overcome_button_shapes(),
-                'std'           => '',
-                'admin_label'   => true,
+                'value'         => array(
+                    esc_html__('Default','overcome') => ''
+                ),
+                'std'              => '',
+                'admin_label'      => true,
                 'edit_field_class' => 'vc_col-sm-6',
-                'dependency'    => array(
+                'dependency'       => array(
                     'element'            => 'btn_style',
                     'value_not_equal_to' => 'simple',
                 ),
