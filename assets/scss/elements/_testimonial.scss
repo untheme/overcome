@@ -12,14 +12,16 @@
 			font-family: $FontAwesome;
 			content: "\f10e";
 			font-size: 79px;
+			font-weight: 900;
+			line-height: 1;
 			color: $accent_color;
 			@include opacity(0.2);
 			position: absolute;
 			top: 0;
-			right: 0;
+			right: 33px;
 			[dir="rtl"] &{
 				right: auto;
-				left: 0;
+				left: 33px;
 				content: "\f10d";
 			}
 		}
