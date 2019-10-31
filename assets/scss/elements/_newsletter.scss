@@ -30,18 +30,26 @@
 	}
 	.tnp-subscription-minimal{
 		position: relative;
-	}
-	.tnp-submit{
-		position: absolute;
-		top: 0;
-		right: 0;
-		background: $accent_color;
-		&:hover{
-			background: $primary_color;
+		.tnp-email{
+			padding: 10px 120px 10px 20px;
+			[dir="rtl"] &{
+				padding: 10px 20px 10px 120px;
+			}
 		}
-		[dir="rtl"] &{
-			right: auto;
-			left: 0;
+		.tnp-submit{
+			position: absolute;
+			top: 0;
+			right: 0;
+			background: $accent_color;
+			padding: 11.5px 31px;
+			@include border-radius(21px);
+			&:hover{
+				background: $primary_color;
+			}
+			[dir="rtl"] &{
+				right: auto;
+				left: 0;
+			}
 		}
 	}
 }
