@@ -68,35 +68,6 @@ vc_map(array(
                 'holder'     => 'h4',
                 'group'      => esc_html__('Heading','overcome')   
             ),
-            // Text Color
-            /*array(
-                'type'         => 'dropdown',
-                'heading'      => esc_html__( 'Text Color', 'overcome' ),
-                'param_name'   => 'text_color_opts',
-                'value'        => ef5systems_colors_option_for_vc([
-                    esc_html__('Custom','overcome') => 'custom'
-                ]),
-                'std'          => '',
-                'description'  => esc_html__( 'Choose color for this row', 'overcome' ),
-                'group'        => esc_html__('Heading','overcome'),
-                'edit_field_class' => 'vc_col-sm-6',
-                'dependency' => array(
-                    'element'   => 'heading_text',
-                    'not_empty' => true
-                ),
-            ),
-            array(
-                'type'         => 'colorpicker',
-                'heading'      => esc_html__( 'Custom Text Color', 'overcome' ),
-                'param_name'   => 'text_color',
-                'description'  => esc_html__( 'Choose your color for this row', 'overcome' ),
-                'dependency' => array(
-                    'element'   => 'text_color_opts',
-                    'value'     => 'custom'
-                ),
-                'group'        => esc_html__('Heading','overcome'),
-                'edit_field_class' => 'vc_col-sm-6'
-            ),*/
         ),
         ef5systems_vc_text_style([
             'color'     => 'text_color_opts',
