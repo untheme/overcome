@@ -289,4 +289,30 @@ class WPBakeryShortCode_ef5_button extends WPBakeryShortCode
         // output
         echo implode(' ', $btn_attributes);
     }
+    protected function overcome_btn_icon($atts, $args = []){
+        extract($atts);
+        $args = wp_parse_args($args, [
+            'class' => ''
+        ]);
+        if(!$add_icon) return;
+        // Button Icon
+        $icon = '';
+        vc_icon_element_fonts_enqueue( $i_type );
+        $icon_name = 'i_icon_' . $i_type ; /* get icon class */
+        $icon_default = is_rtl() ? '' : '';
+        $iconClass = (isset($atts[$icon_name]) && !empty($atts[$icon_name])) ? $atts[$icon_name] : $icon_default;
+        $icon_css_class = [
+            'ef5-btn-icon',
+            $iconClass,
+            $btn_icon_style,
+            $btn_icon_animation,
+            $icon_position,
+            !empty($btn_icon_color) ? $btn_icon_color.'-color' : ''
+        ];
+        if(!empty($iconClass)) {
+            $icon = '<span class="'.trim(implode(' ', $icon_css_class)).'"></span>';
+        }
+        if(empty($icon)) return;
+        echo overcome_html($icon);
+    }
 }
