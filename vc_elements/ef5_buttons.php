@@ -117,11 +117,11 @@ vc_map(array(
                 'heading'       => esc_html__( 'Button Size', 'overcome' ),
                 'value'         => array(
                     esc_html__('Default','overcome')     => '',
-                    esc_html__('Tiny','overcome')        => '-tn',
-                    esc_html__('Small','overcome')       => '-sm',
-                    esc_html__('Medium','overcome')      => '-md',
-                    esc_html__('Large','overcome')       => '-lg',
-                    esc_html__('Extra Large','overcome') => '-xlg',
+                    esc_html__('Tiny','overcome')        => 'tn',
+                    esc_html__('Small','overcome')       => 'sm',
+                    esc_html__('Medium','overcome')      => 'md',
+                    esc_html__('Large','overcome')       => 'lg',
+                    esc_html__('Extra Large','overcome') => 'xlg',
                 ),
                 'std'           => '',
                 'edit_field_class' => 'vc_col-sm-6'
