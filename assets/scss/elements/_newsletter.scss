@@ -33,5 +33,15 @@
 	}
 	.tnp-submit{
 		position: absolute;
+		top: 0;
+		right: 0;
+		background: $accent_color;
+		&:hover{
+			background: $primary_color;
+		}
+		[dir="rtl"] &{
+			right: auto;
+			left: 0;
+		}
 	}
 }
