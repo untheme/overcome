@@ -65,7 +65,7 @@ vc_map(array(
                 'type'          => 'dropdown',
                 'param_name'    => 'btn_color',
                 'heading'       => esc_html__( 'Button Color', 'overcome' ),
-                'value'         => ef5systems_color_option_for_vc([
+                'value'         => ef5systems_colors_option_for_vc([
                     esc_html__('Custom','overcome') => 'custom'
                 ]),
                 'std'           => '',
