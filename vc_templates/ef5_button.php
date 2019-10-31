@@ -18,35 +18,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     $wrapper_attributes[] = 'class="'.trim(implode(' ', $btn_wrap_cls)).'"'; 
 
 
-    $btn_attributes = $btn_custom_styles = [];
-    /* Button Class */
-    $_btn_class = ($btn_style === 'simple') ? 'ef5-btn-link' : 'ef5-btn';
-    $_btn_color = ($btn_style === 'simple') ? $btn_color.'-color' : $btn_color;
-
-    $btn_cls   = array($_btn_class, $_btn_color, $btn_style, $btn_shape, 'ef5-btn-'.$btn_size, $btn_hover_style, $icon_position, $btn_icon_style, $btn_icon_animation,$btn_underline,'transition','ef5-scroll');
-    $btn_attributes[] = 'class="'.trim(implode(' ', $btn_cls)).'"';
-    // Button link
-    $button_link = vc_build_link( $button_link);
-    $button_link = ( $button_link == '||' ) ? '' : $button_link;
-    $btn_attributes[] = !empty($button_link['url']) ? 'href="'.esc_url($button_link['url']).'"' : '';
-    // Button Text
-    $btn_text = !empty($button_link['title']) ? esc_attr($button_link['title']) : esc_attr($btn_text);
-    $btn_attributes[] = 'data-title="'.(!empty($button_link['title']) ? esc_attr($button_link['title']) : esc_attr($btn_text)).'"';
-    // Button target
-    $btn_attributes[] = strlen( $button_link['target'] ) > 0 ? 'target="'.$button_link['target'].'"' : '';
-    // Button Custom Css Style
-    if($btn_color === 'custom'){
-        if(!empty($btn_custom_bg_color)) {
-            if($btn_style === 'outline')
-                $btn_custom_styles[] = 'border-color:'.$btn_custom_bg_color;
-            elseif($btn_style === 'fill') 
-                $btn_custom_styles[] = 'background-color:'.$btn_custom_bg_color;
-        }
-        if(!empty($btn_custom_text_color)) $btn_custom_styles[] = 'color:'.$btn_custom_text_color;
-    }
-    if(!empty($btn_custom_styles)){
-        $btn_attributes[] = 'style="'.implode(';', $btn_custom_styles).'"';
-    }
+    
 
     // Button Icon
     $icon = '';
@@ -73,7 +45,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <?php if(!empty($btn_text)) { ?>
     <div <?php echo implode( ' ', $wrapper_attributes ); ?>>
-        <a <?php echo implode(' ', $btn_attributes);?> >
+        <a <?php $this->overcome_btn_link($atts);?>>
         <?php 
             switch ($icon_position) {
                 case 'icon-right':

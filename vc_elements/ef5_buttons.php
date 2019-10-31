@@ -246,4 +246,47 @@ class WPBakeryShortCode_ef5_button extends WPBakeryShortCode
     {
         return parent::content($atts, $content);
     }
+    protected function overcome_btn_link($atts, $args = []){
+        extract($atts);
+        $args = wp_parse_args($args, [
+            'class' => ''
+        ]);
+        $btn_attributes = $btn_custom_styles = [];
+        /* Button Class */
+        $btn_classes = [];
+        $btn_classes[] = ($btn_style === 'simple') ? 'ef5-btn-link' : 'ef5-btn';
+        $btn_classes[] = !empty($btn_size) ? 'ef5-btn-'.$btn_size : '';
+        $btn_classes[] = $btn_style;
+        $btn_classes[] = $btn_shape;
+        $btn_classes[] = ($btn_style === 'simple') ? 'ef5-text-'.$btn_color : 'ef5-btn-'.$btn_color;
+        $btn_classes[] = 'transition ef5-scroll';
+        $btn_classes[] = $args['class'];
+        $btn_attributes[] = 'class="'.trim(implode(' ', $btn_cls)).'"';
+
+        // Button link
+        $button_link = vc_build_link( $button_link);
+        $button_link = ( $button_link == '||' ) ? '' : $button_link;
+        $btn_attributes[] = !empty($button_link['url']) ? 'href="'.esc_url($button_link['url']).'"' : '';
+
+        // Button Text
+        $btn_text = !empty($button_link['title']) ? esc_attr($button_link['title']) : esc_attr($btn_text);
+        $btn_attributes[] = 'data-title="'.(!empty($button_link['title']) ? esc_attr($button_link['title']) : esc_attr($btn_text)).'"';
+        // Button target
+        $btn_attributes[] = strlen( $button_link['target'] ) > 0 ? 'target="'.$button_link['target'].'"' : '';
+        // Button Custom Css Style
+        if($btn_color === 'custom'){
+            if(!empty($btn_custom_bg_color)) {
+                if($btn_style === 'outline')
+                    $btn_custom_styles[] = 'border-color:'.$btn_custom_bg_color;
+                elseif($btn_style === 'fill') 
+                    $btn_custom_styles[] = 'background-color:'.$btn_custom_bg_color;
+            }
+            if(!empty($btn_custom_text_color)) $btn_custom_styles[] = 'color:'.$btn_custom_text_color;
+        }
+        if(!empty($btn_custom_styles)){
+            $btn_attributes[] = 'style="'.implode(';', $btn_custom_styles).'"';
+        }
+        // output
+        echo implode(' ', $btn_attributes);
+    }
 }
