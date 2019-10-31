@@ -54,6 +54,7 @@
 			@include border-radius(21px);
 			&:hover{
 				background: $primary_color;
+				color: $white;
 			}
 			[dir="rtl"] &{
 				right: auto;
