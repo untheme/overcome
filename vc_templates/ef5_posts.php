@@ -202,8 +202,8 @@
                                 'thumbnail_size' => '70', 
                                 'default_thumb'  => true,
                                 'class'          => '',
-                                'before'         => '<div class="">',
-                                'after'          => '</div>',
+                                'before'         => '<a href="'.get_the_permalink().'">',
+                                'after'          => '</a>',
                                 'img_class'      => 'ef5-rounded-5'
                             ]); 
                         ?>
