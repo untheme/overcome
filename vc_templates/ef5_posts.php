@@ -195,7 +195,7 @@
                     $d++;
                     $posts->the_post();
                 ?>
-                <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
+                <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?> gutter-10" style="animation-delay: <?php echo esc_html($d*100);?>ms">
                     <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
                         <?php
                             overcome_post_media([
