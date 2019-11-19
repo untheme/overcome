@@ -188,31 +188,6 @@
                     }// end while
                     wp_reset_postdata();
             break;
-            case '7':
-                $item_css_class[] = '';
-                $d = 0;
-                while($posts->have_posts()){
-                    $d++;
-                    $posts->the_post();
-                ?>
-                <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
-                    <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
-                        <?php
-                            overcome_post_media([
-                                'thumbnail_size' => '70', 
-                                'default_thumb'  => true,
-                                'class'          => '',
-                                'before'         => '<div class="">',
-                                'after'          => '</div>',
-                                'img_class'      => 'ef5-rounded-10'
-                            ]); 
-                        ?>
-                    </div>
-                </div>
-                <?php
-                    }// end while
-                    wp_reset_postdata();
-            break;
         } 
     ?>
     </div>

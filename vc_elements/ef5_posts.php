@@ -95,7 +95,6 @@ vc_map(array(
                     '4'   => get_template_directory_uri().'/vc_elements/layouts/post-4.png',
                     '5'   => get_template_directory_uri().'/vc_elements/layouts/post-5.png',
                     '6'   => get_template_directory_uri().'/vc_elements/layouts/post-6.png',
-                    '7'   => get_template_directory_uri().'/vc_elements/layouts/post-7.png',
                 ),
                 'std'   => '1',
                 'group' => esc_html__('Layouts','unbreak'),
@@ -219,7 +218,6 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
             'justify-content-center',
             vc_shortcode_custom_css_class( $css ),
         );
-        if($layout_template === '7') $css_classes[] = 'gutters-10';
         $css_class = preg_replace( '/\s+/', ' ', apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, implode( ' ', array_filter( $css_classes ) ), $this->settings['base'], $atts ) );
 
         echo trim($css_class);
