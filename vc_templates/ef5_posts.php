@@ -199,7 +199,7 @@
                     <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
                         <?php
                             overcome_post_media([
-                                'thumbnail_size' => $thumbnail_size, 
+                                'thumbnail_size' => '70', 
                                 'default_thumb'  => true,
                                 'class'          => '',
                                 'before'         => '<div class="">',
