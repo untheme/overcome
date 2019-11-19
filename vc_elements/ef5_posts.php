@@ -219,7 +219,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
             'justify-content-center',
             vc_shortcode_custom_css_class( $css ),
         );
-        if($layout_template === '7') $css_classes[] = 'gutters-10';
+        
         $css_class = preg_replace( '/\s+/', ' ', apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, implode( ' ', array_filter( $css_classes ) ), $this->settings['base'], $atts ) );
 
         echo trim($css_class);
