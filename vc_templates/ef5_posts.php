@@ -204,7 +204,7 @@
                                 'class'          => '',
                                 'before'         => '<div class="">',
                                 'after'          => '</div>',
-                                'img_class'      => 'ef5-rounded-10'
+                                'img_class'      => 'ef5-rounded-5'
                             ]); 
                         ?>
                     </div>
