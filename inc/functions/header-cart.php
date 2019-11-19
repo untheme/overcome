@@ -14,6 +14,8 @@ if(!function_exists('overcome_header_cart')){
 		]);
 		$show_cart = overcome_get_opts('header_cart', '0');
 		if('0' === $show_cart) return;
+		wp_enqueue_script( 'magnific-popup' );
+ 		wp_enqueue_style( 'magnific-popup' );
 		$cart_classes = ['ef5-header-popup', 'ef5-header-cart-icon', 'header-icon', 'style-'.$args['style']];
 		switch ($args['style']) {
 			case '2':

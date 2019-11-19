@@ -13,7 +13,8 @@ if(!function_exists('overcome_header_search')){
 		]);
 		$show_search = overcome_get_opts('header_search', '0');
 		if('0' === $show_search) return;
-
+		wp_enqueue_script( 'magnific-popup' );
+ 		wp_enqueue_style( 'magnific-popup' );
 		$link_classes = ['header-icon'];
 		
 		if($args['type'] === 'popup'){
