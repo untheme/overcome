@@ -378,8 +378,8 @@ function overcome_ef5systems_styles(){
 
 function overcome_inline_styles() {
     ob_start();
-    $preset_primary_color = overcome_get_opts( 'primary_color', apply_filters('overcome_primary_color', overcome_configs('primary_color')) );
-    $preset_accent_color  = overcome_get_opts( 'accent_color', apply_filters('overcome_accent_color', overcome_configs('accent_color')) );
+    $preset_primary_color = $primary_color = overcome_get_opts( 'primary_color', apply_filters('overcome_primary_color', overcome_configs('primary_color')) );
+    $preset_accent_color = $accent_color = overcome_get_opts( 'accent_color', apply_filters('overcome_accent_color', overcome_configs('accent_color')) );
     $darkent_accent_color  = overcome_get_opts( 'darkent_accent_color', apply_filters('overcome_darkent_accent_color', overcome_configs('darkent_accent_color')) );
     $lightent_accent_color  = overcome_get_opts( 'lightent_accent_color', apply_filters('overcome_lightent_accent_color', overcome_configs('lightent_accent_color')) );
     $preset_secondary_color = overcome_get_opts( 'secondary_color', apply_filters('overcome_secondary_color',overcome_configs('secondary_color') ));
@@ -393,7 +393,6 @@ function overcome_inline_styles() {
         --darkent-accent-color:%s;
         --lightent-accent-color:%s;
         --secondary-color:%s;
-        --main-menu-height:%s;
         }', 
         $preset_primary_color,
         $preset_accent_color,
@@ -401,8 +400,7 @@ function overcome_inline_styles() {
         overcome_hex2rgba($preset_accent_color, 0.3),
         $darkent_accent_color,
         $lightent_accent_color,
-        $preset_secondary_color,
-        $main_menu_height['height']
+        $preset_secondary_color
     );
     // Header Variable
     $header_bg = overcome_get_opts('header_bg',[
@@ -415,6 +413,8 @@ function overcome_inline_styles() {
     ]);
     printf(
         ':root{
+            --main-menu-height:%s;
+            --header-text-color: %s;
             --header-bg-color: %s;
             --header-bg-image: %s;
             --header-bg-size: %s;
@@ -422,6 +422,8 @@ function overcome_inline_styles() {
             --header-bg-attachment: %s;
             --header-bg-position: %s;
         }',
+        $main_menu_height['height'],
+        overcome_get_opts('header_text_color','inherit'),
         $header_bg['background-color'],
         $header_bg['background-image'],
         $header_bg['background-size'],
@@ -429,7 +431,53 @@ function overcome_inline_styles() {
         $header_bg['background-attachment'],
         $header_bg['background-position']
     );
-
+    /* Default Header Color */
+    $header_link_color = overcome_get_opts('header_link_colors',apply_filters('overcome_header_link_color', ['regular' => $primary_color, 'hover' => $accent_color, 'active' => $accent_color]) );
+    printf(':root{
+            --header_regular: %1$s;
+            --header_hover: %2$s;
+            --header_active: %3$s;
+        }', 
+        $header_link_color['regular'],
+        $header_link_color['hover'],
+        $header_link_color['active']
+    );
+    /* Ontop Header Color */
+    $ontop_link_color = overcome_get_theme_opt('ontop_link_colors', apply_filters('overcome_ontop_link_color', ['regular' => '#FFFFFF', 'hover' => $accent_color, 'active' => $accent_color]) );
+    printf(':root{
+            --ontop_regular: %1$s;
+            --ontop_hover: %2$s;
+            --ontop_active: %3$s;
+        }', 
+        $ontop_link_color['regular'],
+        $ontop_link_color['hover'],
+        $ontop_link_color['active']
+    );
+    /* Sticky Header Color */
+    $sticky_link_color = overcome_get_theme_opt('sticky_link_colors',apply_filters('overcome_sticky_link_color',['regular' => '#FFFFFF', 'hover' => $accent_color, 'active' => $accent_color]));    
+    printf(':root{
+            --sticky_regular: %1$s;
+            --sticky_hover: %2$s;
+            --sticky_active: %3$s;
+        }', 
+        $sticky_link_color['regular'],
+        $sticky_link_color['hover'],
+        $sticky_link_color['active']
+    );
+    /* Dropdown && Mobile */
+    $dropdown_bg_opt = overcome_get_theme_opt('dropdown_bg',['rgba' => apply_filters('overcome_dropdown_bg', overcome_configs('dropdown_bg'))]);
+    $dropdown_link_colors = overcome_get_theme_opt('dropdown_link_colors', apply_filters('overcome_dropdown_link_colors',['regular' => overcome_configs('dropdown_regular'), 'hover' => overcome_configs('dropdown_hover'), 'active' => overcome_configs('dropdown_active')]) );
+    printf(':root{
+            --dropdown_regular: %1$s;
+            --dropdown_hover: %2$s;
+            --dropdown_active: %3$s;
+            --dropdown_bg: %4$s;
+        }', 
+        $dropdown_link_colors['regular'],
+        $dropdown_link_colors['hover'],
+        $dropdown_link_colors['active'],
+        $dropdown_bg_opt['rgba']
+    );
     return ob_get_clean();
 }
 
