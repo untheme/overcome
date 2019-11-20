@@ -39,7 +39,6 @@ $ontop_logo_url         = get_template_directory_uri() . '/assets/images/logo/lo
 $ontop_logo_url_retina  = get_template_directory_uri() . '/assets/images/logo/logo-ontop-retina.png';
 if ( !empty($ontop_logo['id']) ) {
     $logo_mime_type  = get_post_mime_type($ontop_logo['id']);
-    var_dump($logo_mime_type );
     if($logo_mime_type !== 'image/svg+xml'){
         $ontop_logo_url        =  overcome_get_image_url_by_size( [
             'id'   => $ontop_logo['id'], 
@@ -54,7 +53,7 @@ if ( !empty($ontop_logo['id']) ) {
         $ontop_logo_url_retina =  $ontop_logo['url'];
     }
 }
-var_dump($ontop_logo_url, $ontop_logo_url_retina);  
+var_dump($ontop_logo['url']);  
 // Sticky Logo 
 $header_sticky           = overcome_get_opts('header_sticky','0');
 $sticky_logo             = overcome_get_opts( 'sticky_logo', array( 'url' => '', 'id' => '' ) );
