@@ -396,12 +396,12 @@ function overcome_inline_styles() {
 
     // Header Variable
     $header_bg = overcome_get_opts('header_bg',[
-        'background-color'      => '',
-        'background-image'      => '',
-        'background-size'       => '',
-        'background-repeat'     => '',
-        'background-attachment' => '', 
-        'background-position'   => '' 
+        'background-color'      => 'unset',
+        'background-image'      => 'unset',
+        'background-size'       => 'unset',
+        'background-repeat'     => 'unset',
+        'background-attachment' => 'unset', 
+        'background-position'   => 'unset' 
     ]);
     printf(
         ':root{
