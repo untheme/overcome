@@ -467,6 +467,7 @@ function overcome_inline_styles() {
     );
     /* Dropdown && Mobile */
     $dropdown_bg_opt = overcome_get_theme_opt('dropdown_bg',['rgba' => apply_filters('overcome_dropdown_bg', overcome_configs('dropdown_bg'))]);
+    
     $dropdown_link_colors = overcome_get_theme_opt('dropdown_link_colors', apply_filters('overcome_dropdown_link_colors',['regular' => overcome_configs('dropdown_regular'), 'hover' => overcome_configs('dropdown_hover'), 'active' => overcome_configs('dropdown_active')]) );
     printf(':root{
             --dropdown_regular: %1$s;

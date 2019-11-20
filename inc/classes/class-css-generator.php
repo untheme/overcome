@@ -294,7 +294,6 @@ class OverCome_CSS_Generator
         printf( '$sticky_active: %s;', 'var(--sticky_active)' );
 
         /* Dropdown && Mobile */
-        $dropdown_bg_opt = overcome_get_theme_opt('dropdown_bg',['rgba' => apply_filters('overcome_dropdown_bg', overcome_configs('dropdown_bg'))]);
         printf('$dropdown_bg: %s;', 'var(--dropdown_bg)');
         $dropdown_link_colors = overcome_get_theme_opt('dropdown_link_colors', apply_filters('overcome_dropdown_link_colors',['regular' => overcome_configs('dropdown_regular'), 'hover' => overcome_configs('dropdown_hover'), 'active' => overcome_configs('dropdown_active')]) );
         printf( '$dropdown_regular: %s;', 'var(--dropdown_regular)' );
