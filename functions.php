@@ -423,7 +423,7 @@ function overcome_inline_styles() {
             --header-bg-position: %s;
         }',
         $main_menu_height['height'],
-        overcome_get_opts('header_text_color',['rgba' => 'inherit']),
+        overcome_get_opts('header_text_color',['color' => '', 'alpha' => '', 'rgba' => '']),
         $header_bg['background-color'],
         $header_bg['background-image'],
         $header_bg['background-size'],
