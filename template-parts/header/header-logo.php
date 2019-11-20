@@ -107,7 +107,7 @@ if ( has_custom_logo() ){
         esc_attr($logo_size_h)
     );
     // On Top Logo 
-    var_dump($ontop_logo['url']);  
+    var_dump($ontop_logo_url);  
     if ( $ontop_logo_url && $header_ontop )
     {
         printf(
