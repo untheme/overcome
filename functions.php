@@ -404,12 +404,12 @@ function overcome_inline_styles() {
     );
     // Header Variable
     $header_bg = overcome_get_opts('header_bg',[
-        'background-color'      => 'unset',
-        'background-image'      => 'unset',
-        'background-size'       => 'unset',
-        'background-repeat'     => 'unset',
-        'background-attachment' => 'unset', 
-        'background-position'   => 'unset' 
+        'background-color'      => 'inherit',
+        'background-image'      => 'inherit',
+        'background-size'       => 'inherit',
+        'background-repeat'     => 'inherit',
+        'background-attachment' => 'inherit', 
+        'background-position'   => 'inherit' 
     ]);
     $header_text_color = overcome_get_opts('header_text_color',['color' => '', 'alpha' => '', 'rgba' => 'inherit']);
     printf(
