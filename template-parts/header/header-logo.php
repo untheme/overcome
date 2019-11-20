@@ -31,7 +31,6 @@ if ( !empty($logo['id']) ) {
 // On Top Logo
 $header_ontop           = overcome_get_opts('header_ontop','0');
 $ontop_logo             = overcome_get_opts( 'ontop_logo', array( 'url' => '', 'id' => '' ) );
-var_dump($ontop_logo);
 $ontop_logo_size        = overcome_get_opts( 'ontop_logo_maxh', array( 'width' => overcome_configs('logo_width'), 'height' => overcome_configs('logo_height'), 'units' => overcome_configs('logo_units') ) );
 $ontop_logo_size_w      = overcome_extract_numbers($ontop_logo_size['width']) ?  overcome_extract_numbers($ontop_logo_size['width']) : overcome_configs('logo_width');
 $ontop_logo_size_h      = overcome_extract_numbers($ontop_logo_size['height']) ? overcome_extract_numbers($ontop_logo_size['height']) : overcome_configs('logo_height');
@@ -54,7 +53,7 @@ if ( !empty($ontop_logo['id']) ) {
         $ontop_logo_url_retina =  $ontop_logo['url'];
     }
 }
-var_dump($ontop_logo_url, $ontop_logo_url_retina);  
+var_dump($ontop_logo, $ontop_logo_url_retina);  
 // Sticky Logo 
 $header_sticky           = overcome_get_opts('header_sticky','0');
 $sticky_logo             = overcome_get_opts( 'sticky_logo', array( 'url' => '', 'id' => '' ) );
