@@ -117,7 +117,8 @@ vc_map(array(
                 'param_name'    => 'btn_shape',
                 'heading'       => esc_html__( 'Button Shape', 'overcome' ),
                 'value'         => array(
-                    esc_html__('Default','overcome') => ''
+                    esc_html__('Default','overcome') => '',
+                    esc_html__('Square','overcome')  => 'square'
                 ),
                 'std'              => '',
                 'admin_label'      => true,
