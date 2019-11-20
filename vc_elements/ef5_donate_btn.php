@@ -35,6 +35,7 @@ vc_map(array(
             	'heading'		=> esc_html__('Select a post','overcome'),
             	'param_name'	=> 'donation_item',
             	'value'			=> ef5systems_options_list_post_for_vc('ef5_donation'),
+            	'description'	=> esc_html__('Leave blank to use the first donation','overcome')
             ),
             array(
                 'type'          => 'dropdown',
