@@ -53,7 +53,7 @@ if ( !empty($ontop_logo['id']) ) {
         $ontop_logo_url_retina =  $ontop_logo['url'];
     }
 }
-var_dump($ontop_logo['url']);  
+
 // Sticky Logo 
 $header_sticky           = overcome_get_opts('header_sticky','0');
 $sticky_logo             = overcome_get_opts( 'sticky_logo', array( 'url' => '', 'id' => '' ) );
@@ -107,6 +107,7 @@ if ( has_custom_logo() ){
         esc_attr($logo_size_h)
     );
     // On Top Logo 
+    var_dump($ontop_logo['url']);  
     if ( $ontop_logo_url && $header_ontop )
     {
         printf(
