@@ -10,7 +10,7 @@ $btn-sizes: (
 	df 16px 30px 13px 700 uppercase 0.5px 4px, 
 	lg 16px 30px 13px 700 uppercase 0.5px 4px, 
 	xlg 16px 30px 13px 700 uppercase 0.5px 4px 179px,
-	donate 16px 22px 14px '' '' '' '' ''
+	donate 15.5px 21px 14px '' '' '' '' ''
 );
 @each $size in $btn-sizes {
   	.ef5-btn-#{nth($size, 1)} {
