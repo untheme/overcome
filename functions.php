@@ -385,15 +385,24 @@ function overcome_inline_styles() {
     $preset_secondary_color = overcome_get_opts( 'secondary_color', apply_filters('overcome_secondary_color',overcome_configs('secondary_color') ));
     $main_menu_height = overcome_get_opts( 'main_menu_height', ['height' => overcome_configs('main_menu_height')]);
     // CSS Variable
-    printf(':root{--primary-color:%s;}', $preset_primary_color);
-    printf(':root{--accent-color:%s;}', $preset_accent_color);
-    printf(':root{--accent-color-05:%s;}', overcome_hex2rgba($preset_accent_color, 0.5));
-    printf(':root{--accent-color-03:%s;}', overcome_hex2rgba($preset_accent_color, 0.3));
-    printf(':root{--darkent-accent-color:%s;}', $darkent_accent_color);
-    printf(':root{--lightent-accent-color:%s;}', $lightent_accent_color);
-    printf(':root{--secondary-color:%s;}', $preset_secondary_color);
-    printf(':root{--main-menu-height:%s;}', $main_menu_height['height']);
-
+    printf(':root{
+        --primary-color:%s;
+        --accent-color:%s;
+        --accent-color-05:%s;
+        --accent-color-03:%s;
+        --darkent-accent-color:%s;
+        --lightent-accent-color:%s;
+        --secondary-color:%s;
+        --main-menu-height:%s;
+        }', 
+        $preset_primary_color,
+        overcome_hex2rgba($preset_accent_color, 0.5),
+        overcome_hex2rgba($preset_accent_color, 0.3),
+        $darkent_accent_color,
+        $lightent_accent_color,
+        $preset_secondary_color,
+        $main_menu_height['height']
+    );
     // Header Variable
     $header_bg = overcome_get_opts('header_bg',[
         'background-color'      => 'unset',
