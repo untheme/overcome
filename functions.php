@@ -404,7 +404,7 @@ function overcome_inline_styles() {
     );
     // Header Variable
     $header_bg = overcome_get_opts('header_bg',[
-        'background-color'      => 'inherit',
+        'background-color'      => '#fff',
         'background-image'      => 'inherit',
         'background-size'       => 'inherit',
         'background-repeat'     => 'inherit',
