@@ -411,6 +411,7 @@ function overcome_inline_styles() {
         'background-attachment' => 'unset', 
         'background-position'   => 'unset' 
     ]);
+    $header_text_color = overcome_get_opts('header_text_color',['color' => '', 'alpha' => '', 'rgba' => '']);
     printf(
         ':root{
             --main-menu-height:%s;
@@ -423,7 +424,7 @@ function overcome_inline_styles() {
             --header-bg-position: %s;
         }',
         $main_menu_height['height'],
-        overcome_get_opts('header_text_color',['color' => '', 'alpha' => '', 'rgba' => '']),
+        $header_text_color['rgba'],
         $header_bg['background-color'],
         $header_bg['background-image'],
         $header_bg['background-size'],
