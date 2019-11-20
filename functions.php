@@ -414,7 +414,7 @@ function overcome_inline_styles() {
     printf(
         ':root{
             --main-menu-height:%s;
-            
+            --header-text-color: %s;
             --header-bg-color: %s;
             --header-bg-image: %s;
             --header-bg-size: %s;
@@ -423,7 +423,7 @@ function overcome_inline_styles() {
             --header-bg-position: %s;
         }',
         $main_menu_height['height'],
-        ///overcome_get_opts('header_text_color','inherit'),
+        overcome_get_opts('header_text_color',['rgba' => 'inherit']),
         $header_bg['background-color'],
         $header_bg['background-image'],
         $header_bg['background-size'],
