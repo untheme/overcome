@@ -23,6 +23,20 @@ vc_map(array(
                 'value'         => '',
             ),
             array(
+            	'type'			=> 'dropdown',
+            	'heading'		=> esc_html__('Select an post type','overcome'),
+            	'param_name'	=> 'post_type',
+            	'value'			=> array(
+            		esc_html__('Donation') => 'donation'
+            	)
+            ),
+            array(
+            	'type'			=> 'dropdown',
+            	'heading'		=> esc_html__('Select a post','overcome'),
+            	'param_name'	=> 'donation_item',
+            	'value'			=> ef5systems_options_list_post_for_vc('ef5_donation'),
+            ),
+            array(
                 'type'          => 'dropdown',
                 'param_name'    => 'btn_display',
                 'heading'       => esc_html__( 'Button Display', 'overcome' ),
@@ -243,6 +257,7 @@ class WPBakeryShortCode_ef5_donate_btn extends WPBakeryShortCode
 {
     protected function content($atts, $content = null)
     {
+    	wp_enqueue_script('bootstrap');
         return parent::content($atts, $content);
     }
     protected function overcome_donate_btn_link($atts, $args = []){
@@ -314,4 +329,24 @@ class WPBakeryShortCode_ef5_donate_btn extends WPBakeryShortCode
         if(empty($icon)) return;
         echo overcome_html($icon);
     }
+    function overcome_donate_btn($atts){
+	    wp_enqueue_script('bootstrap');
+	    $post_id = ef5payments_default_donation(overcome_get_id_by_slug($atts['donation_item'],'ef5_donation'));
+	    $data = apply_filters('ef5payments_get_payment_form_data',[
+	        'class'        => 'ef5-btn ef5-btn-sm accent fill',
+	        'data-options' => '',
+	        'data-target'  => '',
+	        'title'	 	   => $atts['btn_text'],	
+	        'url'		   => '#',
+	        'target'	   => '_self'	
+	    ],$post_id);
+	    ?>
+	    <span class="header-icon ef5-header-donate">
+	    	<a class="<?php echo esc_attr($data['class']); ?>"
+	       data-options="<?php echo esc_attr($data['data-options']) ?>"
+	       data-target="<?php echo esc_attr($data['data-target']) ?>"
+	       href="<?php echo esc_attr($data['url']); ?>" target="<?php echo esc_attr($data['target']); ?>" ><?php echo wp_kses_post($data['title']) ?></a>
+	   </span>
+	    <?php
+	}
 }

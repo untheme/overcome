@@ -150,8 +150,6 @@ vc_map(array(
                 'heading'       => esc_html__( 'Hover Style', 'overcome' ),
                 'value'         => array(
                     esc_html__('Default', 'overcome') => '',
-                    //esc_html__('Slide', 'overcome')   => 'ef5-btn-slide',
-                    //esc_html__('3D', 'overcome')      => 'ef5-btn-3d',
                 ),
                 'std'              => '',
                 'edit_field_class' => 'vc_col-sm-6',
