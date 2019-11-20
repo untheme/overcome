@@ -393,6 +393,33 @@ function overcome_inline_styles() {
     printf(':root{--lightent-accent-color:%s;}', $lightent_accent_color);
     printf(':root{--secondary-color:%s;}', $preset_secondary_color);
     printf(':root{--main-menu-height:%s;}', $main_menu_height['height']);
+
+    // Header Variable
+    $header_bg = overcome_get_opts('header_bg',[
+        'background-color'      => '',
+        'background-image'      => '',
+        'background-size'       => '',
+        'background-repeat'     => '',
+        'background-attachment' => '' 
+        'background-position'   => '' 
+    ]);
+    printf(
+        ':root{
+            --header-bg-color: %s;
+            --header-bg-image: %s;
+            --header-bg-size: %s;
+            --header-bg-repeat: %s;
+            --header-bg-attachment: %s;
+            --header-bg-position: %s;
+        }',
+        $header_bg['background-color'],
+        $header_bg['background-image'],
+        $header_bg['background-size'],
+        $header_bg['background-repeat'],
+        $header_bg['background-attachment'],
+        $header_bg['background-position'],
+    );
+
     return ob_get_clean();
 }
 
