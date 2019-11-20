@@ -279,30 +279,27 @@ class OverCome_CSS_Generator
         printf('$header_sidewidth: %s;', esc_attr($header_sidewidth['width']));
 
         /* Default Header Color */
-        $header_link_color = overcome_get_theme_opt('header_link_colors',apply_filters('overcome_header_link_color', ['regular' => overcome_configs('menu_link_color_regular'), 'hover' => overcome_configs('menu_link_color_hover'), 'active' => overcome_configs('menu_link_color_active')]) );
-        printf( '$header_regular: %s;', esc_attr( $header_link_color['regular'] ) );
-        printf( '$header_hover: %s;', esc_attr( $header_link_color['hover'] ) );
-        printf( '$header_active: %s;', esc_attr( $header_link_color['active'] ) );
+        printf( '$header_regular: %s;', 'var(--header_regular)' );
+        printf( '$header_hover: %s;','var(--header_hover)' );
+        printf( '$header_active: %s;','var(--header_active)' );
 
         /* Ontop Header Color */
-        $ontop_link_color = overcome_get_theme_opt('ontop_link_colors', apply_filters('overcome_ontop_link_color', ['regular' => overcome_configs('ontop_link_color_regular'), 'hover' => overcome_configs('ontop_link_color_hover'), 'active' => overcome_configs('ontop_link_color_active')]) );
-        printf( '$ontop_regular: %s;', esc_attr( $ontop_link_color['regular'] ) );
-        printf( '$ontop_hover: %s;', esc_attr( $ontop_link_color['hover'] ) );
-        printf( '$ontop_active: %s;', esc_attr( $ontop_link_color['active'] ) );
+        printf( '$ontop_regular: %s;', 'var(--ontop_regular)' );
+        printf( '$ontop_hover: %s;', 'var(--ontop_hover)' );
+        printf( '$ontop_active: %s;', 'var(--ontop_active)' );
 
         /* Sticky Header Color */
-        $sticky_link_color = overcome_get_theme_opt('sticky_link_colors',apply_filters('overcome_sticky_link_color',['regular' => overcome_configs('sticky_link_color_regular'), 'hover' => overcome_configs('sticky_link_color_hover'), 'active' => overcome_configs('sticky_link_color_active')]));
-        printf( '$sticky_regular: %s;', esc_attr( $sticky_link_color['regular'] ) );
-        printf( '$sticky_hover: %s;', esc_attr( $sticky_link_color['hover'] ) );
-        printf( '$sticky_active: %s;', esc_attr( $sticky_link_color['active'] ) );
+        printf( '$sticky_regular: %s;', 'var(--sticky_regular)' );
+        printf( '$sticky_hover: %s;', 'var(--sticky_hover)' );
+        printf( '$sticky_active: %s;', 'var(--sticky_active)' );
 
         /* Dropdown && Mobile */
         $dropdown_bg_opt = overcome_get_theme_opt('dropdown_bg',['rgba' => apply_filters('overcome_dropdown_bg', overcome_configs('dropdown_bg'))]);
-        printf('$dropdown_bg: %s;', esc_attr($dropdown_bg_opt['rgba']));
+        printf('$dropdown_bg: %s;', 'var(--dropdown_bg)');
         $dropdown_link_colors = overcome_get_theme_opt('dropdown_link_colors', apply_filters('overcome_dropdown_link_colors',['regular' => overcome_configs('dropdown_regular'), 'hover' => overcome_configs('dropdown_hover'), 'active' => overcome_configs('dropdown_active')]) );
-        printf( '$dropdown_regular: %s;', esc_attr( $dropdown_link_colors['regular'] ) );
-        printf( '$dropdown_hover: %s;', esc_attr( $dropdown_link_colors['hover'] ) );
-        printf( '$dropdown_active: %s;', esc_attr( $dropdown_link_colors['active'] ) );
+        printf( '$dropdown_regular: %s;', 'var(--dropdown_regular)' );
+        printf( '$dropdown_hover: %s;', 'var(--dropdown_hover)') ;
+        printf( '$dropdown_active: %s;', 'var(--dropdown_active)'  );
 
         /* Side Header Width */
 
