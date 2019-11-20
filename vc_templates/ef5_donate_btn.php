@@ -20,17 +20,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <?php if(!empty($btn_text)) { ?>
     <div <?php echo implode( ' ', $wrapper_attributes ); ?>>
-        <a <?php $this->overcome_btn_link($atts);?>>
+        <a <?php $this->overcome_donate_btn_link($atts);?>>
         <?php 
             switch ($icon_position) {
                 case 'icon-right':
             ?>
-                <span class="btn-title"><?php echo esc_attr( $btn_text );?></span><?php $this->overcome_btn_icon($atts); ?>
+                <span class="btn-title"><?php echo esc_attr( $btn_text );?></span><?php $this->overcome_donate_btn_icon($atts); ?>
             <?php   
                 break;
                 default:
             ?>
-                <?php $this->overcome_btn_icon($atts); ?><span class="btn-title"><?php echo esc_attr( $btn_text );?></span>
+                <?php $this->overcome_donate_btn_icon($atts); ?><span class="btn-title"><?php echo esc_attr( $btn_text );?></span>
             <?php
                 break;
             }

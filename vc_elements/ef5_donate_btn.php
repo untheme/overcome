@@ -1,7 +1,7 @@
 <?php
 if(!class_exists('EF5Payments')) return;
 vc_map(array(
-    'name'          => 'OverCome Button',
+    'name'          => 'OverCome Donate Button',
     'base'          => 'ef5_donate_btn',
     'category'      => esc_html__('OverCome', 'overcome'),
     'description'   => esc_html__('Add a donate button', 'overcome'),
