@@ -400,7 +400,7 @@ function overcome_inline_styles() {
         'background-image'      => '',
         'background-size'       => '',
         'background-repeat'     => '',
-        'background-attachment' => '' 
+        'background-attachment' => '', 
         'background-position'   => '' 
     ]);
     printf(
