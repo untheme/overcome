@@ -269,7 +269,7 @@ class WPBakeryShortCode_ef5_donate_btn extends WPBakeryShortCode
         ]);
         $post_id = ef5payments_default_donation(overcome_get_id_by_slug($atts['donation_item'],'ef5_donation'));
 	    $data = apply_filters('ef5payments_get_payment_form_data',[
-	        'class'        => '',
+	        'class'        => 'ef5-btn-donate',
 	        'data-options' => '',
 	        'data-target'  => '',
 	        'title'	 	   => $atts['btn_text'],	
