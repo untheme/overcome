@@ -276,11 +276,9 @@ class WPBakeryShortCode_ef5_donate_btn extends WPBakeryShortCode
 	        'target'	   => '_self'	
 	    ],$post_id);
 
-
-
         $btn_attributes = $btn_custom_styles = [];
         /* Button Class */
-        $btn_classes = [];
+        $btn_classes = [$data['class']];
         $btn_classes[] = ($btn_style === 'simple') ? 'ef5-btn-link' : 'ef5-btn';
         if(!empty($btn_size)) $btn_classes[] =  'ef5-btn-'.$btn_size;
         if(!empty($btn_style)) $btn_classes[] = $btn_style;
