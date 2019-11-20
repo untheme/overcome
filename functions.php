@@ -417,7 +417,7 @@ function overcome_inline_styles() {
         $header_bg['background-size'],
         $header_bg['background-repeat'],
         $header_bg['background-attachment'],
-        $header_bg['background-position'],
+        $header_bg['background-position']
     );
 
     return ob_get_clean();
