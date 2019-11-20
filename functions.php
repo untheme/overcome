@@ -396,6 +396,7 @@ function overcome_inline_styles() {
         --main-menu-height:%s;
         }', 
         $preset_primary_color,
+        $preset_accent_color,
         overcome_hex2rgba($preset_accent_color, 0.5),
         overcome_hex2rgba($preset_accent_color, 0.3),
         $darkent_accent_color,
