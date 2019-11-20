@@ -30,6 +30,10 @@ form [type="submit"],
         color: $btn-color-hover;
         background: $btn-bg-color-hover;
     }
+
+    &.square {
+        @include border-radius(0);
+    }
 }
 .ef5-btn-wrap [class*="underline-"]{
     padding-bottom: 5px;
