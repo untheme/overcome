@@ -412,6 +412,7 @@ function overcome_inline_styles() {
         'background-position'   => 'inherit' 
     ]);
     $header_text_color = overcome_get_opts('header_text_color',['color' => '', 'alpha' => '', 'rgba' => 'inherit']);
+    $header_ontop_top_space = overcome_get_opts('header_ontop_top_space',['height' => '']);
     printf(
         ':root{
             --main-menu-height:%s;
@@ -422,6 +423,7 @@ function overcome_inline_styles() {
             --header-bg-repeat: %s;
             --header-bg-attachment: %s;
             --header-bg-position: %s;
+            --header_ontop_top_space: %s;
         }',
         $main_menu_height['height'],
         $header_text_color['rgba'],
@@ -430,7 +432,8 @@ function overcome_inline_styles() {
         $header_bg['background-size'],
         $header_bg['background-repeat'],
         $header_bg['background-attachment'],
-        $header_bg['background-position']
+        $header_bg['background-position'],
+        $header_ontop_top_space['height']
     );
     /* Default Header Color */
     $header_link_color = overcome_get_opts('header_link_colors',apply_filters('overcome_header_link_color', ['regular' => $primary_color, 'hover' => $accent_color, 'active' => $accent_color]) );

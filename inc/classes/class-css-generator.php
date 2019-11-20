@@ -287,6 +287,7 @@ class OverCome_CSS_Generator
         printf( '$ontop_regular: %s;', 'var(--ontop_regular)' );
         printf( '$ontop_hover: %s;', 'var(--ontop_hover)' );
         printf( '$ontop_active: %s;', 'var(--ontop_active)' );
+        printf( '$header_ontop_top_space: %s;', 'var(--header_ontop_top_space)' );
 
         /* Sticky Header Color */
         printf( '$sticky_regular: %s;', 'var(--sticky_regular)' );

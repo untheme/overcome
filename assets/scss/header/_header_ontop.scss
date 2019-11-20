@@ -1,6 +1,6 @@
 .header-ontop{
 	position: absolute;
-	top: 50px;
+	top: $header_ontop_top_space;
 	left: 0;
 	right: 0;
 	z-index: 2;

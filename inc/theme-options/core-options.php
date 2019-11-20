@@ -909,6 +909,16 @@ if(!function_exists('overcome_ontop_header_opts')){
                     'default'  => $default_value
                 ),
                 array(
+                    'id'       => 'header_ontop_top_space',
+                    'type'     => 'dimensions',
+                    'title'    => esc_html__('Top Space', 'overcome'),
+                    'subtitle' => esc_html__('Add a space from top to header', 'overcome'),
+                    'units'    => array('px'),
+                    'width'    => false,
+                    'default'  => array(),
+                    'required' => array('header_ontop', '=', '1')
+                ),
+                array(
                     'id'       => 'ontop_logo_design',
                     'type'     => 'info',
                     'style'    => 'success',
