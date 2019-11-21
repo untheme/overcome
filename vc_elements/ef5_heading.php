@@ -349,7 +349,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
             $args['class']
         ];
         
-        $heading_attrs[] = 'class="'.trim(implode(' ', $heading_css_class)).'"';
+        $heading_attrs[] = 'class="'.overcome_optimize_css_class(implode(' ', $heading_css_class)).'"';
         
         // Custom Style
         $styles = [];
