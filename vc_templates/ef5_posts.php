@@ -148,7 +148,7 @@
                         $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
                     }
                     $overlay = overcome_post_donate_button(['echo' => false, 'class'=>'ef5-btn ef5-btn-md accent outline']);
-                ?>  <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
+                ?>  <div class="<?php echo overcome_optimize_css_class(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
                         <div class="<?php echo overcome_optimize_css_class(implode(' ', $item_css_class)); ?> overlay-wrap ef5-hover-shadow-1">
                             <?php 
                                 overcome_post_media([
