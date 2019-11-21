@@ -412,7 +412,7 @@ function overcome_inline_styles() {
         'background-position'   => 'inherit' 
     ]);
     $header_text_color = overcome_get_opts('header_text_color',['color' => '', 'alpha' => '', 'rgba' => 'inherit']);
-    $header_ontop_top_space = overcome_get_opts('header_ontop_top_space',['height' => '0']);
+    $header_ontop_top_space = overcome_get_opts('header_ontop_top_space',['height' => '']);
     printf(
         ':root{
             --main-menu-height:%s;
