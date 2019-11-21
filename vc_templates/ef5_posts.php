@@ -138,7 +138,11 @@
                     wp_reset_postdata();
             break;
             case '3':
-                $overlay = overcome_post_donate_button(['echo' => false, 'class'=>'ef5-btn ef5-btn-md accent outline']);
+                $d = 0;
+                while($posts->have_posts()){
+                    $d++;
+                    $posts->the_post();
+                    $overlay = overcome_post_donate_button(['echo' => false, 'class'=>'ef5-btn ef5-btn-md accent outline']);
                 ?>  
                     <div class="<?php echo trim(implode(' ', $item_css_class)); ?> overlay-wrap ef5-hover-shadow-1">
                         <?php 
@@ -172,6 +176,8 @@
                         </div>
                     </div>
                 <?php
+                    }// end while
+                    wp_reset_postdata();
             break;
             case '5':
                 $d = 0;
