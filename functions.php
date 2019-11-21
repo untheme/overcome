@@ -447,7 +447,7 @@ function overcome_inline_styles() {
         $header_link_color['active']
     );
     /* Ontop Header Color */
-    $ontop_link_color = overcome_get_theme_opt('ontop_link_colors', apply_filters('overcome_ontop_link_color', ['regular' => '#FFFFFF', 'hover' => $accent_color, 'active' => $accent_color]) );
+    $ontop_link_color = overcome_get_theme_opt('ontop_link_colors', apply_filters('overcome_ontop_link_color', ['regular' => $primary_color, 'hover' => $accent_color, 'active' => $accent_color]) );
     printf(':root{
             --ontop_regular: %1$s;
             --ontop_hover: %2$s;
