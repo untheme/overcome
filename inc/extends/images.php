@@ -387,7 +387,7 @@ if(!function_exists('overcome_image_by_size')){
                 if($show_image){
                     $overcome_image_by_size = '<img ' . $attributes . ' />';
                 } else {
-                    $overcome_image_by_size = '<div style="width:'.$p_img['width'].'px; height:'.$p_img['height'].'px; max-width:100%;"></div>';
+                    $overcome_image_by_size = '<div style="width:'.$p_img['width'].'px;height:'.$p_img['height'].'px;max-width:100%;"></div>';
                 }
             }
         }
