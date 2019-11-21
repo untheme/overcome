@@ -143,7 +143,7 @@
                     <div class="<?php echo trim(implode(' ', $item_css_class)); ?> overlay-wrap ef5-hover-shadow-1">
                         <?php 
                             overcome_post_media([
-                                'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
+                                'thumbnail_size' => $thumbnail_size, 
                                 'default_thumb'  => true,
                                 'img_class'      => 'w-auto',   
                                 'after'          => '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">'.$overlay.'</div></div>'
