@@ -45,7 +45,7 @@ function overcome_spacing($mode = '',$dir = '',$space = '', $echo = true){
 // Optimize CSS class
 function overcome_optimize_css_class($string){
     $string = preg_replace('!\s+!', ' ', $string);
-    return $string;
+    return trim($string);
 }
 /**
  * Page CSS Class
