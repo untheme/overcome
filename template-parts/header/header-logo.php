@@ -54,6 +54,7 @@ if ( !empty($ontop_logo['id']) ) {
         $ontop_logo_url_retina =  $ontop_logo['url'];
     }
 }
+var_dump($ontop_logo_url );
 
 // Sticky Logo 
 $header_sticky           = overcome_get_opts('header_sticky','0');
