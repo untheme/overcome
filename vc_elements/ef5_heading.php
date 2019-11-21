@@ -296,7 +296,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
             $line_height,
             $args['class']
         ];
-        $small_heading_attrs[] = 'class="'.trim(implode(' ', $small_heading_css_class)).'"';
+        $small_heading_attrs[] = 'class="'.overcome_optimize_css_class(implode(' ', $small_heading_css_class)).'"';
 
         // Custom Style
         $styles = [];
@@ -380,7 +380,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         if(empty($iconClass)) return;
         vc_icon_element_fonts_enqueue($i_type);
         ?>
-            <div class="<?php echo trim(implode(' ', $css_classes));?>">
+            <div class="<?php echo overcome_optimize_css_class(implode(' ', $css_classes));?>">
                 <span class="<?php echo esc_attr($iconClass); ?>"></span>
             </div>
         <?php
@@ -417,7 +417,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         if(empty($iconClass)) return;
         vc_icon_element_fonts_enqueue($i_top_type);
         ?>
-            <<?php echo overcome_html($args['tag']);?> class="<?php echo trim(implode(' ', $css_classes));?>">
+            <<?php echo overcome_html($args['tag']);?> class="<?php echo overcome_optimize_css_class(implode(' ', $css_classes));?>">
                 <span class="<?php echo esc_attr($iconClass); ?>"></span>
             </<?php echo overcome_html($args['tag']);?>>
         <?php
@@ -434,7 +434,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
             'subheading',
             $args['class']
         ];
-        $subheading_attrs[] = 'class="'.trim(implode(' ', $subheading_css_class)).'"';
+        $subheading_attrs[] = 'class="'.overcome_optimize_css_class(implode(' ', $subheading_css_class)).'"';
         ?>
             <div <?php echo implode(' ', $subheading_attrs);?>><?php 
                 echo overcome_html($subheading_text); 
@@ -453,7 +453,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
             'desc',
             $args['class']
         ];
-        $desc_attrs[] = 'class="'.trim(implode(' ', $desc_css_class)).'"';
+        $desc_attrs[] = 'class="'.overcome_optimize_css_class(implode(' ', $desc_css_class)).'"';
         ?>
             <div <?php echo trim(implode(' ', $desc_attrs));?>><?php 
                 echo overcome_html($desc_text);
