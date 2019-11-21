@@ -14,6 +14,7 @@ vc_map(array(
                 'value'      =>  array(
                     '1' => get_template_directory_uri().'/vc_elements/layouts/fancy-box1.png',
                     '3' => get_template_directory_uri().'/vc_elements/layouts/fancy-box3.png',
+                    '4' => get_template_directory_uri().'/vc_elements/layouts/fancy-box4.png',
                 ),
                 'std'        => '1',
                 'admin_label' => true
