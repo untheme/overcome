@@ -404,6 +404,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
     }
     protected function ef5_heading_icon_top($atts, $args=[]){
         extract($atts);
+        var_dump($atts['add_icon_top']);
         if($atts['add_icon_top'] !== 'true') return;
         $args = wp_parse_args($args,[
             'class' => '',
