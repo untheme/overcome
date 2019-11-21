@@ -397,6 +397,8 @@ function overcome_inline_styles() {
         --lightent-accent-color:%s;
         --secondary-color:%s;
         --thirdary-color: %s;
+        --thirdary-color-05: %s;
+        --thirdary-color-03: %s;
         }', 
         $preset_primary_color,
         $preset_accent_color,
@@ -405,7 +407,9 @@ function overcome_inline_styles() {
         $darkent_accent_color,
         $lightent_accent_color,
         $preset_secondary_color,
-        $thirdary_color
+        $thirdary_color,
+        overcome_hex2rgba($thirdary_color, 0.5),
+        overcome_hex2rgba($thirdary_color, 0.3),
     );
     // Header Variable
     $header_bg = overcome_get_opts('header_bg',[
