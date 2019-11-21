@@ -7,3 +7,16 @@
 		margin-top: 16px;
 	}
 }
+.ef5-fancybox-4{
+	.ef5-fancybox-icon{
+		width: 163px;
+	    height: 163px;
+	    line-height: 153px;
+	    text-align: center;
+	    border: 5px solid $primary_color;
+	    @include border-radius(50%);
+	    margin-left: auto;
+	    margin-right: auto;
+	}
+	.ef5-fancybox-heading{}
+}
