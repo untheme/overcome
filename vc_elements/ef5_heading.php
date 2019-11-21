@@ -47,12 +47,14 @@ vc_map(array(
             ),
         ),
         ef5systems_icon_libs([
+            'field_prefix'      => 'i_top_',
             'dependency'        => 'add_icon_top',
             'dependency_option' => 'value',
             'dependency_value'  => 'true',
             'group'             => esc_html__('Icon','overcome') 
         ]),
         ef5systems_icon_libs_icon([
+            'field_prefix'      => 'i_top_',
             'group'             => esc_html__('Icon','overcome') 
         ]),
         array(
