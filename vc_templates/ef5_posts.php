@@ -142,12 +142,17 @@
                 while($posts->have_posts()){
                     $d++;
                     $posts->the_post();
+                    // Thumbnail Size
+                    $thumbnail_size_index++;
+                    if($thumbnail_size_index >= count($thumbnail_size)){
+                        $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
+                    }
                     $overlay = overcome_post_donate_button(['echo' => false, 'class'=>'ef5-btn ef5-btn-md accent outline']);
                 ?>  <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
                         <div class="<?php echo trim(implode(' ', $item_css_class)); ?> overlay-wrap ef5-hover-shadow-1">
                             <?php 
                                 overcome_post_media([
-                                    'thumbnail_size' => $thumbnail_size, 
+                                    'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
                                     'default_thumb'  => true,
                                     'img_class'      => 'w-auto',   
                                     'after'          => '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">'.$overlay.'</div></div>'
