@@ -60,7 +60,7 @@
 	.ef5-heading-btn{
 		padding-top: 40px;
 		a{
-			
+			@include box-shadow(0 10px 30px -10px $accent_color);
 
 		}
 	}
