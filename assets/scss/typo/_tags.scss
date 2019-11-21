@@ -16,6 +16,9 @@ img{
 		}
 	}
 }
+.thumbnai-is-bg img{
+	height: inherit;
+}
 .post-image.thumbnai-is-bg .ef5-img{
 	//@include image-fit();
 }
