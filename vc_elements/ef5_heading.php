@@ -16,6 +16,7 @@ vc_map(array(
                     '2'  => get_template_directory_uri().'/vc_elements/layouts/heading-2.png',
                     '3'  => get_template_directory_uri().'/vc_elements/layouts/heading-3.png',
                     '4'  => get_template_directory_uri().'/vc_elements/layouts/heading-4.png',
+                    '5'  => get_template_directory_uri().'/vc_elements/layouts/heading-5.png',
                 ),
                 'std'              => '1',
                 'admin_label'      => true,
