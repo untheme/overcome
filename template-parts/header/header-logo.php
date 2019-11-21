@@ -37,7 +37,7 @@ $ontop_logo_size_h      = overcome_extract_numbers($ontop_logo_size['height']) ?
 $ontop_logo_size_retina = ($ontop_logo_size_w*2).'x'.($ontop_logo_size_h*2);
 $ontop_logo_url         = get_template_directory_uri() . '/assets/images/logo/logo-ontop.png';
 $ontop_logo_url_retina  = get_template_directory_uri() . '/assets/images/logo/logo-ontop-retina.png';
-var_dump($ontop_logo['id']);
+var_dump(empty($ontop_logo['id']);
 if ( !empty($ontop_logo['id']) ) {
     $logo_mime_type  = get_post_mime_type($ontop_logo['id']);
     if($logo_mime_type !== 'image/svg+xml'){
