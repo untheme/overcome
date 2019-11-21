@@ -14,6 +14,7 @@ if(!function_exists('overcome_configs')){
             'primary_color'         => '#303030',
             'accent_color'          => '#f5b91b',
             'secondary_color'       => '#e6a423',
+            'thirdary_color'        => '#5580ff',
             'darkent_accent_color'  => '#e6a423',
             'lightent_accent_color' => '#ffdd65',
             'invalid_color'         => 'red',
@@ -383,6 +384,8 @@ function overcome_inline_styles() {
     $darkent_accent_color  = overcome_get_opts( 'darkent_accent_color', apply_filters('overcome_darkent_accent_color', overcome_configs('darkent_accent_color')) );
     $lightent_accent_color  = overcome_get_opts( 'lightent_accent_color', apply_filters('overcome_lightent_accent_color', overcome_configs('lightent_accent_color')) );
     $preset_secondary_color = overcome_get_opts( 'secondary_color', apply_filters('overcome_secondary_color',overcome_configs('secondary_color') ));
+
+    $thirdary_color = overcome_get_opts( 'thirdary_color', apply_filters('overcome_thirdary_color',overcome_configs('thirdary_color') ));
     $main_menu_height = overcome_get_opts( 'main_menu_height', ['height' => overcome_configs('main_menu_height')]);
     // CSS Variable
     printf(':root{
@@ -393,6 +396,7 @@ function overcome_inline_styles() {
         --darkent-accent-color:%s;
         --lightent-accent-color:%s;
         --secondary-color:%s;
+        --thirdary-color: %s;
         }', 
         $preset_primary_color,
         $preset_accent_color,
@@ -400,7 +404,8 @@ function overcome_inline_styles() {
         overcome_hex2rgba($preset_accent_color, 0.3),
         $darkent_accent_color,
         $lightent_accent_color,
-        $preset_secondary_color
+        $preset_secondary_color,
+        $thirdary_color
     );
     // Header Variable
     $header_bg = overcome_get_opts('header_bg',[
