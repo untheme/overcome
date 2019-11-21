@@ -336,13 +336,13 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         // Heading 
         $heading_attrs = $heading_css = [];
         $text_color = isset($text_color) && !empty($text_color) ? $text_color : 'default';
-        $text_size = isset($text_size) && !empty($text_size) ? $text_size : '36';
-        $font_style = isset($font_style) && !empty($font_style) ? $font_style : '700';
+        $text_size = isset($text_size) && !empty($text_size) ? 'text-'.$text_size : '';
+        $font_style = isset($font_style) && !empty($font_style) ? 'font-style-'.$font_style : '';
         $heading_css_class = [
             'main-heading',
             'ef5-text-'.$text_color,
-            'text-'.$text_size,
-            'font-style-'.$font_style,
+            $text_size,
+            $font_style,
             'lh-'.$line_height,
             $heading_text_class,
             $args['class']
