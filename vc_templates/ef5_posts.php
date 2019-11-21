@@ -143,36 +143,37 @@
                     $d++;
                     $posts->the_post();
                     $overlay = overcome_post_donate_button(['echo' => false, 'class'=>'ef5-btn ef5-btn-md accent outline']);
-                ?>  
-                    <div class="<?php echo trim(implode(' ', $item_css_class)); ?> overlay-wrap ef5-hover-shadow-1">
-                        <?php 
-                            overcome_post_media([
-                                'thumbnail_size' => $thumbnail_size, 
-                                'default_thumb'  => true,
-                                'img_class'      => 'w-auto',   
-                                'after'          => '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">'.$overlay.'</div></div>'
-                            ]);
-                        ?>
-                        <div class="ef5-post-info">
+                ?>  <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
+                        <div class="<?php echo trim(implode(' ', $item_css_class)); ?> overlay-wrap ef5-hover-shadow-1">
                             <?php 
-                                overcome_post_title([
-                                    'heading_tag' => 'text-20'
+                                overcome_post_media([
+                                    'thumbnail_size' => $thumbnail_size, 
+                                    'default_thumb'  => true,
+                                    'img_class'      => 'w-auto',   
+                                    'after'          => '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">'.$overlay.'</div></div>'
                                 ]);
-                                overcome_post_excerpt([
-                                    'show_excerpt' => '1', 
-                                    'length'       => '16', 
-                                    'more'         => ''
-                                ]);
-                                if(class_exists('EF5Payments')) {
-                                    ef5systems_donation_progress_donors([
-                                        'donor_icon' => '<span class="flaticon-like"></span>'
-                                    ]);
-                                    ef5payments_donation_donate_amount([
-                                        'goal_label' => esc_html__('Goal:','overcome'),
-                                        'raised_label' => esc_html__('Raised:','overcome')
-                                    ]);
-                                }
                             ?>
+                            <div class="ef5-post-info">
+                                <?php 
+                                    overcome_post_title([
+                                        'heading_tag' => 'text-20'
+                                    ]);
+                                    overcome_post_excerpt([
+                                        'show_excerpt' => '1', 
+                                        'length'       => '16', 
+                                        'more'         => ''
+                                    ]);
+                                    if(class_exists('EF5Payments')) {
+                                        ef5systems_donation_progress_donors([
+                                            'donor_icon' => '<span class="flaticon-like"></span>'
+                                        ]);
+                                        ef5payments_donation_donate_amount([
+                                            'goal_label' => esc_html__('Goal:','overcome'),
+                                            'raised_label' => esc_html__('Raised:','overcome')
+                                        ]);
+                                    }
+                                ?>
+                            </div>
                         </div>
                     </div>
                 <?php
