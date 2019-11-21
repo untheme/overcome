@@ -359,7 +359,7 @@ class OverCome_CSS_Generator
         //--------------------------------------------------
         $header_link_colors = overcome_get_page_opt( 'header_link_colors', ['regular' => '', 'hover' => '', 'active' => ''] );
         // menu regular
-        if(!empty($header_link_colors['regular'])){
+        /*if(!empty($header_link_colors['regular'])){
             printf(
                 '.menu-default > li > a,
                 .header-default a{
@@ -397,9 +397,9 @@ class OverCome_CSS_Generator
                 }',
                 esc_attr($header_link_colors['hover'])
             );
-        }
+        }*/
         // menu hover
-        if(!empty($header_link_colors['hover'])){
+        /*if(!empty($header_link_colors['hover'])){
             printf(
                 '.menu-default > li:hover > a,
                 .menu-default > li:focus > a,
@@ -417,9 +417,9 @@ class OverCome_CSS_Generator
                 }',
                 esc_attr($header_link_colors['hover'])
             );
-        }
+        }*/
         // menu active
-        if(!empty($header_link_colors['active'])){
+        /*if(!empty($header_link_colors['active'])){
             printf(
                 '.menu-default li.current_page_item > a,
                 .menu-default li.current-menu-item > a,
@@ -440,11 +440,11 @@ class OverCome_CSS_Generator
                 }',
                 esc_attr($header_link_colors['active'])
             );
-        }
+        }*/
         // OnTop Menu
         $ontop_link_colors = overcome_get_page_opt( 'ontop_link_colors', ['regular' => '', 'hover' => '', 'active' => ''] );
         // menu regular
-        if(!empty($ontop_link_colors['regular'])){
+        /*if(!empty($ontop_link_colors['regular'])){
             printf(
                 '.menu-ontop > li > a{
                     color: %s!important;
@@ -494,7 +494,7 @@ class OverCome_CSS_Generator
                 }',
                 esc_attr($ontop_link_colors['active'])
             );
-        }
+        }*/
         /**
          * Header side menu 
          *
