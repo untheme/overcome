@@ -409,7 +409,7 @@ function overcome_inline_styles() {
         $preset_secondary_color,
         $thirdary_color,
         overcome_hex2rgba($thirdary_color, 0.5),
-        overcome_hex2rgba($thirdary_color, 0.3),
+        overcome_hex2rgba($thirdary_color, 0.3)
     );
     // Header Variable
     $header_bg = overcome_get_opts('header_bg',[
