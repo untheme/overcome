@@ -109,7 +109,7 @@ if ( has_custom_logo() ){
         esc_attr($logo_size_h)
     );
     // On Top Logo 
-    if ( $ontop_logo['url'] && $header_ontop )
+    if ( $ontop_logo_url && $header_ontop )
     {
         printf(
             '<a class="ontop-logo" href="%1$s" title="%2$s" rel="home"><img src="%3$s" alt="%4$s" srcset="%5$s %6$s" sizes="(max-width: %7$s) 100vw, %8$s" width="%9$s" height="%10$s"/></a>',
