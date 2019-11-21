@@ -84,7 +84,11 @@
 			box-shadow: 0 0 0 8.5px var(--thirdary-color-05), 0 0 0 17px var(--thirdary-color-03);
 		}
 	}
+	.subheading,
+	.desc{
+		padding-top: 25px;
+	}
 	.ef5-btn{
-		margin-top: 67px;
+		margin-top: 65px;
 	}
 }
