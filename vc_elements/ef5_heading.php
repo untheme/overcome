@@ -413,6 +413,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $css_classes = ['ef5-heading-icon', $args['class']];
         $icon_name = "i_top_icon_" . $i_type;
         $iconClass = isset($atts[$icon_name]) ? $atts[$icon_name]: '';
+        var_dump($iconClass);
         if(empty($iconClass)) return;
         vc_icon_element_fonts_enqueue($i_type);
         
