@@ -19,7 +19,7 @@ extract( $atts );
 				$this->ef5_heading_small_heading($atts, ['class' => 'text-22 text-uppercase font-style-600 text-white']);
 				$this->ef5_heading_main_heading($atts,['class' => 'text-45 lh-1/15555556 font-style-600 ef5-heading text-white']);
 				$this->ef5_heading_sub_heading($atts, ['class' => 'text-22 text-white']);
-				$this->ef5_heading_desccription($atts);
+				$this->ef5_heading_desccription($atts,['class' => 'text-white']);
 				$this->ef5_heading_button($atts,['class' => 'ef5-btn accent fill ef5-btn-lg']);
 				break;
 			case '4':
