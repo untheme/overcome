@@ -126,6 +126,7 @@
                 <?php
                         break;
                     case '3':
+                    $overlay = '';
                 ?>
                     <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
                         <?php 
