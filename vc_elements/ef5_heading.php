@@ -311,7 +311,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $font_style = isset($font_style) && !empty($font_style) ? $font_style : '700';
         $heading_css_class = [
             'main-heading',
-            'text-'.$text_color,
+            'ef5-text-'.$text_color,
             'text-'.$text_size,
             'font-style-'.$font_style,
             'lh-'.$line_height,
