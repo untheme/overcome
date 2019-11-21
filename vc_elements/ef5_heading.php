@@ -404,20 +404,16 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
     }
     protected function ef5_heading_icon_top($atts, $args=[]){
         extract($atts);
-        var_dump($atts['add_icon_top']);
         if($atts['add_icon_top'] !== 'true') return;
         $args = wp_parse_args($args,[
             'class' => '',
             'tag'   => 'span'
         ]);
-        var_dump($i_top_type);
         $css_classes = ['ef5-heading-icon', $args['class']];
         $icon_name = "i_top_icon_" . $i_top_type;
         $iconClass = isset($atts[$icon_name]) ? $atts[$icon_name]: '';
-        var_dump($iconClass);
         if(empty($iconClass)) return;
         vc_icon_element_fonts_enqueue($i_top_type);
-        
         ?>
             <<?php echo overcome_html($args['tag']);?> class="<?php echo trim(implode(' ', $css_classes));?>">
                 <span class="<?php echo esc_attr($iconClass); ?>"></span>
