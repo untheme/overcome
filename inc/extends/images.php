@@ -312,7 +312,8 @@ if(!function_exists('overcome_image_by_size')){
             'echo'    => true , 
             'default' => false,
             'before'  => '',
-            'after'   => ''
+            'after'   => '',
+            'show_image' => true
         ];
         $args = wp_parse_args($args, $default);
         extract($args);
@@ -383,7 +384,11 @@ if(!function_exists('overcome_image_by_size')){
                 if(isset($p_img['srcset']) && !empty($p_img['srcset'])) $img_atts['srcset'] = $p_img['srcset'];
                 if(isset($p_img['sizes']) && !empty($p_img['sizes'])) $img_atts['sizes'] = $p_img['sizes'];
                 $attributes = overcome_stringify_attributes( $img_atts );
-                $overcome_image_by_size = '<img ' . $attributes . ' />';
+                if($show_image){
+                    $overcome_image_by_size = '<img ' . $attributes . ' />';
+                } else {
+                    $overcome_image_by_size = '<div style="width:'.$p_img['width'].'px; height:'.$p_img['height'].'px; max-width:100%;"></div>';
+                }
             }
         }
 

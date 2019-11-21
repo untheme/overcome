@@ -10,7 +10,8 @@ if(!function_exists('overcome_post_thumbnail')){
             'echo'            => true,
             'default_thumb'   => overcome_configs('overcome_default_post_thumbnail'),
             'thumbnail_is_bg' => overcome_configs('overcome_thumbnail_is_bg'),
-            'img_class'       => ''  
+            'img_class'       => '',
+            'show_image'      => true    
         ]);
         extract($args);
         if(!has_post_thumbnail() && !$default_thumb) return;
@@ -27,7 +28,7 @@ if(!function_exists('overcome_post_thumbnail')){
         if($echo) {
         ?>
             <div <?php echo implode(' ', $thumbnail_atts);?>>
-                <?php overcome_image_by_size(['id' => $id,'size' => $thumbnail_size, 'class' => $args['img_class']]);?>
+                <?php overcome_image_by_size(['id' => $id,'size' => $thumbnail_size, 'class' => $args['img_class'], 'show_image' => $show_image]);?>
             </div>
             <?php do_action('overcome_post_thumbnail_content');
         } else {
