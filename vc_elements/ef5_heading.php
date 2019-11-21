@@ -29,7 +29,33 @@ vc_map(array(
                 'param_name' => 'el_class',
                 'value'      => '',
                 'std'        => ''
+            )
+        ),
+        array(
+            array(
+                'type'       => 'checkbox',
+                'param_name' => 'add_icon_top',
+                'value'      => array(
+                    esc_html__('Add icon?','overcome') => 'true'
+                ),
+                'std'        => 'false',
+                'group'      => esc_html__('Icon','overcome'),
+                'dependency' => array(
+                    'element'   => 'layout_template',
+                    'value'     => array('5')
+                ),
             ),
+        ),
+        ef5systems_icon_libs([
+            'dependency'        => 'add_icon_top',
+            'dependency_option' => 'value',
+            'dependency_value'  => 'true',
+            'group'             => esc_html__('Icon','overcome') 
+        ]),
+        ef5systems_icon_libs_icon([
+            'group'             => esc_html__('Icon','overcome') 
+        ]),
+        array(
             // Small Heading 
             array(
                 'type'       => 'textarea',
@@ -86,7 +112,7 @@ vc_map(array(
                     esc_html__('Add icon?','overcome') => 'true'
                 ),
                 'std'        => 'false',
-                'group'      => esc_html__('Icon','overcome'),
+                'group'      => esc_html__('Heading','overcome'),
                 'dependency' => array(
                     'element'   => 'heading_text',
                     'not_empty' => true
@@ -97,10 +123,10 @@ vc_map(array(
             'dependency'        => 'add_heading_icon',
             'dependency_option' => 'value',
             'dependency_value'  => 'true',
-            'group'             => esc_html__('Icon','overcome') 
+            'group'             => esc_html__('Heading','overcome') 
         ]),
         ef5systems_icon_libs_icon([
-            'group'             => esc_html__('Icon','overcome') 
+            'group'             => esc_html__('Heading','overcome') 
         ]),
         array(
             // Heading part 2 
@@ -376,7 +402,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
     }
     protected function ef5_heading_heading_icon_top($atts, $args=[]){
         extract($atts);
-        if($atts['add_heading_icon'] !== 'true') return;
+        if($atts['add_icon_top'] !== 'true') return;
         $args = wp_parse_args($args,[
             'class' => '',
             'tag'   => 'span'
