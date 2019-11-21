@@ -284,15 +284,16 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         extract( $atts );
         $small_heading_attrs = $small_heading_css = [];
 
-        $text_color = isset($text_color) && !empty($text_color) ? $text_color : 'accent';
-        $text_size = isset($text_size) && !empty($text_size) ? $text_size : '22';
-        $font_style = isset($font_style) && !empty($font_style) ? $font_style : '';
+        $text_color = isset($text_color) && !empty($text_color) ? 'ef5-text-'.$text_color : '';
+        $text_size = isset($text_size) && !empty($text_size) ? 'text-'.$text_size : '';
+        $font_style = isset($font_style) && !empty($font_style) ? 'font-style-'.$font_style : '';
+        $line_height = isset($line_height) && !empty($line_height) ? 'lh-'.$line_height : '';
         $small_heading_css_class = [
             'small-heading',
-            'ef5-text-'.$text_color,
-            'text-'.$text_size,
-            'font-style-'.$font_style,
-            'lh-'.$line_height,
+            $text_color,
+            $text_size,
+            $font_style,
+            $line_height,
             $args['class']
         ];
         $small_heading_attrs[] = 'class="'.trim(implode(' ', $small_heading_css_class)).'"';
