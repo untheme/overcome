@@ -447,7 +447,7 @@ function overcome_inline_styles() {
         $header_link_color['active']
     );
     /* Ontop Header Color */
-    $ontop_link_color = overcome_get_theme_opt('ontop_link_colors', apply_filters('overcome_ontop_link_color', ['regular' => $primary_color, 'hover' => $accent_color, 'active' => $accent_color]) );
+    $ontop_link_color = overcome_get_opts('ontop_link_colors', apply_filters('overcome_ontop_link_color', ['regular' => $primary_color, 'hover' => $accent_color, 'active' => $accent_color]) );
     printf(':root{
             --ontop_regular: %1$s;
             --ontop_hover: %2$s;
@@ -458,7 +458,7 @@ function overcome_inline_styles() {
         $ontop_link_color['active']
     );
     /* Sticky Header Color */
-    $sticky_link_color = overcome_get_theme_opt('sticky_link_colors',apply_filters('overcome_sticky_link_color',['regular' => '#FFFFFF', 'hover' => $accent_color, 'active' => $accent_color]));    
+    $sticky_link_color = overcome_get_opts('sticky_link_colors',apply_filters('overcome_sticky_link_color',['regular' => '#FFFFFF', 'hover' => $accent_color, 'active' => $accent_color]));    
     printf(':root{
             --sticky_regular: %1$s;
             --sticky_hover: %2$s;
@@ -469,9 +469,9 @@ function overcome_inline_styles() {
         $sticky_link_color['active']
     );
     /* Dropdown && Mobile */
-    $dropdown_bg_opt = overcome_get_theme_opt('dropdown_bg',['rgba' => apply_filters('overcome_dropdown_bg', overcome_configs('dropdown_bg'))]);
+    $dropdown_bg_opt = overcome_get_opts('dropdown_bg',['rgba' => apply_filters('overcome_dropdown_bg', overcome_configs('dropdown_bg'))]);
 
-    $dropdown_link_colors = overcome_get_theme_opt('dropdown_link_colors', apply_filters('overcome_dropdown_link_colors',['regular' => overcome_configs('dropdown_regular'), 'hover' => overcome_configs('dropdown_hover'), 'active' => overcome_configs('dropdown_active')]) );
+    $dropdown_link_colors = overcome_get_opts('dropdown_link_colors', apply_filters('overcome_dropdown_link_colors',['regular' => overcome_configs('dropdown_regular'), 'hover' => overcome_configs('dropdown_hover'), 'active' => overcome_configs('dropdown_active')]) );
     printf(':root{
             --dropdown_regular: %1$s;
             --dropdown_hover: %2$s;
