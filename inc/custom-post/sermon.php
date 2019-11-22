@@ -137,6 +137,15 @@ function overcome_sermon_options_register($metabox)
                 'date_format' => 'dd-mm-yy',
                 'time_format' => 'hh:mm',
                 'show_time'	  => false
+            ),
+            array(
+                'id'          => 'sermon_date_2',
+                'type'        => 'ef5_datetime',
+                'title'       => esc_html__('Date', 'overcome'),
+                'date_format' => 'dd-mm-yy',
+                'time_format' => 'hh:mm',
+                'show_date'	  => false
+                'show_time'	  => true
             )
         )
     ));
