@@ -83,7 +83,7 @@ function overcome_sermon_icons($args = []){
     ?>
     <div class="sermon-icon">
     	<a href="#sermon-video-<?php the_ID();?>" class="mfp-inline">video</a>
-    	<?php add_action('wp_footer','sermon_popup_video'); ?>
+    	<?php add_action('wp_footer','sermon_popup_video',['id'=> get_the_ID()]); ?>
     </div>
     <?php
 }
