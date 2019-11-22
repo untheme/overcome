@@ -20,7 +20,7 @@ function overcome_get_theme_opt_name()
  */
 function overcome_get_theme_opt($opt_id, $default = false){
     $opt_name      = overcome_get_theme_opt_name();
-    var_dump($opt_name);
+    
     if (empty($opt_name)) {
         return $default;
     }
