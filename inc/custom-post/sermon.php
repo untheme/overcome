@@ -127,7 +127,7 @@ function overcome_sermon_options_register($metabox)
         'fields' => array(
             array(
                 'id'          => 'sermon_date',
-                'type'        => 'date',
+                'type'        => 'ef5_datetime',
                 'title'       => esc_html__('Date', 'overcome'),
             )
         )
