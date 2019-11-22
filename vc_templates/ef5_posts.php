@@ -247,13 +247,52 @@
                     <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
                         <?php
                             overcome_post_media([
-                                'thumbnail_size' => '70', 
+                                'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '70'), 
                                 'default_thumb'  => true,
                                 'class'          => '',
                                 'before'         => '<a href="'.get_the_permalink().'">',
                                 'after'          => '</a>',
                                 'img_class'      => 'ef5-rounded-5'
                             ]); 
+                        ?>
+                    </div>
+                </div>
+                <?php
+                    }// end while
+                    wp_reset_postdata();
+            break;
+            case '8':
+                $item_css_class[] = '';
+                $d = 0;
+                while($posts->have_posts()){
+                    $d++;
+                    $posts->the_post();
+                ?>
+                <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
+                    <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                        <?php
+                            overcome_post_media([
+                                'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '370x240'), 
+                                'default_thumb'  => true,
+                                'class'          => '',
+                                'before'         => '<a href="'.get_the_permalink().'">',
+                                'after'          => '</a>',
+                                'img_class'      => 'ef5-rounded-5'
+                            ]); 
+                        ?>
+                        <?php 
+                            overcome_posted_on([
+                                'class' => 'text-13 ef5-text-accent',
+                                'icon'  => ''
+                            ]);
+                            overcome_post_title([
+                                'heading_tag' => 'text-22 lh-26 font-style-500'
+                            ]);
+                            overcome_post_excerpt([
+                                'show_excerpt' => '1', 
+                                'length'       => '15', 
+                                'more'         => ''
+                            ]);
                         ?>
                     </div>
                 </div>
