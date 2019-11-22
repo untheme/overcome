@@ -289,6 +289,7 @@
                                 'length'       => '15', 
                                 'more'         => ''
                             ]);
+                            overcome_sermon_icons();
                         ?>
                     </div>
                 </div>

@@ -150,15 +150,18 @@ if(!function_exists('overcome_post_video')){
     function overcome_post_video($args=[]){
         global $wp_embed;
         $args = wp_parse_args($args, [
+            'video_url'      => 'post-video-url',
+            'video_file'     => 'post-video-file',
+            'video_html'     => 'post-video-html',
             'id'             => null,
             'thumbnail_size' => is_single() ? 'large' : 'medium',
             'echo'           => true,
             'default_thumb'  => apply_filters('overcome_default_post_thumbnail', false)
         ]);
-        $video_url = overcome_get_post_format_value('post-video-url', '');
-        $video_file = overcome_get_post_format_value('post-video-file', []);
+        $video_url = overcome_get_post_format_value($args['video_url'], '');
+        $video_file = overcome_get_post_format_value($args['video_file'], []);
             $video_file_id  = isset($video_file['id']) ? $video_file['id'] : '';
-        $video_html = overcome_get_post_format_value('post-video-html', '');
+        $video_html = overcome_get_post_format_value($args['video_html'], '');
 
         // Only get video from the content if a playlist isn't present.
         $_video_in_content = apply_filters( 'the_content', get_the_content() );
