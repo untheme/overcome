@@ -146,6 +146,7 @@ function overcome_sermon_options_register($metabox)
     ));
     $metabox->add_section('ef5_sermons', array(
         'title'  => esc_html__('Video', 'overcome'),
+        'desc'   => esc_html__('Add Video', 'overcome'),
         'fields' => array(
             array(
                 'id'    => 'sermon_video_url',
@@ -171,21 +172,9 @@ function overcome_sermon_options_register($metabox)
             )
         )
     ));
-
-    $metabox->add_section('ef5_sermons', array(
-        'title'  => esc_html__('Gallery', 'overcome'),
-        'fields' => array(
-            array(
-                'id'          => 'sermon_gallery_images',
-                'type'        => 'gallery',
-                'title'       => esc_html__('Gallery Images ', 'overcome'),
-                'subtitle'    => esc_html__('Upload images or add from media library.', 'overcome')
-            )
-        )
-    ));
-
     $metabox->add_section('ef5_sermons', array(
         'title'  => esc_html__('Audio', 'overcome'),
+        'desc'   => esc_html__('Add Audio', 'overcome'),
         'fields' => array(
             array(
                 'id'       => 'sermon_audio_url',
@@ -204,9 +193,21 @@ function overcome_sermon_options_register($metabox)
             )
         )
     ));
-
+    $metabox->add_section('ef5_sermons', array(
+        'title'  => esc_html__('Gallery', 'overcome'),
+        'desc'   => esc_html__('Add Gallery', 'overcome'),
+        'fields' => array(
+            array(
+                'id'          => 'sermon_gallery_images',
+                'type'        => 'gallery',
+                'title'       => esc_html__('Gallery Images ', 'overcome'),
+                'subtitle'    => esc_html__('Upload images or add from media library.', 'overcome')
+            )
+        )
+    ));
     $metabox->add_section('ef5_sermons', array(
         'title'  => esc_html__('Download', 'overcome'),
+        'desc'   => esc_html__('Add download file', 'overcome'),
         'fields' => array(
             array(
                 'id'       => 'sermon_download',
@@ -218,6 +219,7 @@ function overcome_sermon_options_register($metabox)
 
     $metabox->add_section('ef5_sermons', array(
         'title'  => esc_html__('PDF', 'overcome'),
+        'desc'   => esc_html__('Add PDF file', 'overcome'),
         'fields' => array(
             array(
                 'id'       => 'sermon_pdf',
