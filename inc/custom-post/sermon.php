@@ -98,8 +98,8 @@ function overcome_sermon_metas($args = []){
 */
 function overcome_sermon_options_register($metabox)
 {
-    if (!$metabox->isset_args('ef5_sermon')) {
-        $metabox->set_args('ef5_sermon', array(
+    if (!$metabox->isset_args('ef5_sermons')) {
+        $metabox->set_args('ef5_sermons', array(
             'opt_name'     => overcome_get_page_opt_name(),
             'display_name' => esc_html__('Sermon Settings', 'overcome'),
         ), array(
