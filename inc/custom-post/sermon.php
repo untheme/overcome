@@ -58,9 +58,6 @@ function overcome_cpts_sermons_tax($taxo) {
 	* add_filter('ef5payments_metabox_attach_post_types','ef5payments_post_type_sermons');
 	* add_filter('ef5payments_payment_attach_post_types','ef5payments_post_type_sermons');
 */
-add_filter('ef5payments_post_type_support','ef5payments_post_type_sermons');
-add_filter('ef5payments_metabox_attach_post_types','ef5payments_post_type_sermons');
-add_filter('ef5payments_payment_attach_post_types','ef5payments_post_type_sermons');
 function ef5payments_post_type_sermons($post_type){
 	$post_type[] = 'ef5_sermons';
 	return $post_type;
