@@ -579,4 +579,5 @@ if(class_exists('WooCommerce')){
 overcome_require_folder('inc/extensions', get_template_directory());
 
 // Google Map
+var_dump( overcome_get_theme_opt('google_api_key',''));
 add_filter('ef5-google-api-key', overcome_get_theme_opt('google_api_key',''));
