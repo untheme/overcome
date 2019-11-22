@@ -116,7 +116,7 @@ function overcome_sermon_options_register($metabox)
                 'id'          => 'sermon_speaker',
                 'type'        => 'textfield',
                 'title'       => esc_html__('Speaker', 'overcome'),
-            ),
+            )
         )
     ));
     $metabox->add_section('ef5_sermon_date', array(
@@ -128,7 +128,7 @@ function overcome_sermon_options_register($metabox)
                 'id'          => 'sermon_date',
                 'type'        => 'textfield',
                 'title'       => esc_html__('Date', 'overcome'),
-            ),
+            )
         )
     ));
     $metabox->add_section('ef5_sermon_location', array(
@@ -140,7 +140,7 @@ function overcome_sermon_options_register($metabox)
                 'id'          => 'sermon_location',
                 'type'        => 'textfield',
                 'title'       => esc_html__('Location', 'overcome'),
-            ),
+            )
         )
     ));
     $metabox->add_section('ef5_sermon_video', array(
@@ -200,7 +200,7 @@ function overcome_sermon_options_register($metabox)
                 'library_filter' => array('mp3','m4a','ogg','wav'),
                 'title'          => esc_html__( 'Add a audio', 'overcome' ),
                 'desc'           => esc_html__( 'Upload or Choose audio file', 'overcome' ),                        
-            ),
+            )
         )
     ));
 
