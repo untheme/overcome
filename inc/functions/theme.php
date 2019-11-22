@@ -1,4 +1,10 @@
 <?php
+// Google API Key
+function overcome_google_api_key(){
+    $api = overcome_get_theme_opt('google_api_key','');
+    return $api;
+}
+add_filter('ef5-google-api-key','overcome_google_api_key');
 /**
  * Language direction 
 */

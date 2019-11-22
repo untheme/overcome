@@ -572,10 +572,3 @@ if(class_exists('WooCommerce')){
  *
 */
 overcome_require_folder('inc/extensions', get_template_directory());
-
-// Google API Key
-function overcome_google_api_key(){
-    $api = overcome_get_theme_opt('google_api_key','');
-    return $api;
-}
-add_filter('ef5-google-api-key','overcome_google_api_key');
