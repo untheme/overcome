@@ -144,7 +144,7 @@ function overcome_sermon_options_register($metabox)
                 'title'       => esc_html__('Date', 'overcome'),
                 'date_format' => 'dd-mm-yy',
                 'time_format' => 'hh:mm',
-                'show_date'	  => false
+                'show_date'	  => false,
                 'show_time'	  => true
             )
         )
