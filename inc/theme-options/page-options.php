@@ -290,7 +290,7 @@ function overcome_sermon_options_register($metabox)
         'fields' => array_merge(
             array(
                 'id'          => 'sermon_speaker',
-                'type'        => 'textfield',
+                'type'        => 'text',
                 'title'       => esc_html__('Speaker', 'overcome'),
             )
         )
@@ -302,7 +302,7 @@ function overcome_sermon_options_register($metabox)
         'fields' => array_merge(
             array(
                 'id'          => 'sermon_date',
-                'type'        => 'textfield',
+                'type'        => 'text',
                 'title'       => esc_html__('Date', 'overcome'),
             )
         )
@@ -314,7 +314,7 @@ function overcome_sermon_options_register($metabox)
         'fields' => array_merge(
             array(
                 'id'          => 'sermon_location',
-                'type'        => 'textfield',
+                'type'        => 'text',
                 'title'       => esc_html__('Location', 'overcome'),
             )
         )
