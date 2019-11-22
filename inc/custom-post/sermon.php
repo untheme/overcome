@@ -223,15 +223,15 @@ function overcome_sermon_options_register($metabox)
     ));
 
     $metabox->add_section('ef5_sermons', array(
-        'title'  => esc_html__('PDF', 'overcome'),
-        'desc'   => esc_html__('Add PDF file', 'overcome'),
+        'title'  => esc_html__('Document', 'overcome'),
+        'desc'   => esc_html__('Add Document file', 'overcome'),
         'icon'   => 'el-icon-file',
         'fields' => array(
             array(
                 'id'       => 'sermon_pdf',
                 'type'     => 'media',
-                'library_filter' => array('pdf'),
-                'title'    => esc_html__('PDF File', 'overcome')
+                'library_filter' => array('pdf','doc','docx','txt','html'),
+                'title'    => esc_html__('Document File', 'overcome')
             )
         )
     ));
