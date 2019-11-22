@@ -217,7 +217,7 @@ function overcome_sermon_options_register($metabox)
             array(
                 'id'       => 'sermon_download',
                 'type'     => 'media',
-                'title'    => esc_html__('URL', 'overcome'),
+                'title'    => esc_html__('Download File', 'overcome'),
             )
         )
     ));
