@@ -140,7 +140,7 @@ function overcome_sermon_options_register($metabox)
         'fields' => array(
             array(
                 'id'          => 'sermon_location',
-                'type'        => 'text',
+                'type'        => 'ef5_address_input',
                 'title'       => esc_html__('Location', 'overcome'),
             )
         )
