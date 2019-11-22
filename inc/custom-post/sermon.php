@@ -75,17 +75,33 @@ function overcome_sermon_icons($args = []){
 		'icon_pdf'      => 'icon-pdf',
 		'class'			=> ''
     ]);
-    $video = overcome_get_post_format_value('sermon_video_url')
+    $video_url = overcome_get_post_format_value('sermon_video_url');
+    $video_file = overcome_get_post_format_value('sermon_video_file');
+    $video_html = overcome_get_post_format_value('sermon_video_html');
     ?>
     <div class="sermon-icon">
-    	<?php overcome_post_video([
-    		'video_url' => 'sermon_video_url',
-    		'video_file' => 'sermon_video_file',
-    		'video_html' => 'sermon_video_html',
-    	]); ?>
+    	<a href="#sermon-video-<?php the_ID();?>">video</a>
+    	<?php add_action('wp_footer','sermon_popup_video'); ?>
     </div>
     <?php
 }
+
+function sermon_popup_video($args =[]){
+	$args = wp_parse_args($args,[
+		'id'    => get_the_ID(),
+		'class' => ''
+	]);
+	?>
+		<div id="sermon-video-<?php esc_attr_e($args['id']);?>" class="d-none">
+			<?php overcome_post_video([
+	    		'video_url' => 'sermon_video_url',
+	    		'video_file' => 'sermon_video_file',
+	    		'video_html' => 'sermon_video_html',
+	    	]); ?>
+		</div>
+	<?php
+}
+
 
 function overcome_sermon_metas($args = []){
     $post_type = get_post_type(get_the_ID());
