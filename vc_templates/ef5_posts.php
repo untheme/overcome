@@ -280,11 +280,7 @@
                                 'img_class'      => 'ef5-rounded-5'
                             ]); 
                         ?>
-                        <?php 
-                            overcome_posted_on([
-                                'class' => 'text-13 ef5-text-accent',
-                                'icon'  => ''
-                            ]);
+                        <?php
                             overcome_post_title([
                                 'heading_tag' => 'text-22 lh-26 font-style-500'
                             ]);
