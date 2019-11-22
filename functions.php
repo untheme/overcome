@@ -575,8 +575,7 @@ overcome_require_folder('inc/extensions', get_template_directory());
 
 // Google API Key
 function overcome_google_api_key(){
-    $api = overcome_get_theme_opt('google_api_key','AIzaSyBV5KRZqOgbVnnb4V99iATIdz9n3OogM48xxx');
+    $api = overcome_get_theme_opt('google_api_key','AIzaSyBV5KRZqOgbVnnb4V99iATIdz9n3OogM48');
     return $api;
 }
-var_dump(overcome_google_api_key());
 add_filter('ef5-google-api-key','overcome_google_api_key');
