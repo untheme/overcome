@@ -112,7 +112,7 @@ function overcome_sermon_options_register($metabox)
         'title'  => esc_html__('Speaker', 'overcome'),
         'desc'   => esc_html__('Add Speaker', 'overcome'),
         'icon'   => 'el-icon-home',
-        'fields' => array_merge(
+        'fields' => array(
             array(
                 'id'          => 'sermon_speaker',
                 'type'        => 'text',
@@ -124,7 +124,7 @@ function overcome_sermon_options_register($metabox)
         'title'  => esc_html__('Date', 'overcome'),
         'desc'   => esc_html__('Add Date', 'overcome'),
         'icon'   => 'el-icon-home',
-        'fields' => array_merge(
+        'fields' => array(
             array(
                 'id'          => 'sermon_date',
                 'type'        => 'text',
@@ -136,7 +136,7 @@ function overcome_sermon_options_register($metabox)
         'title'  => esc_html__('Location', 'overcome'),
         'desc'   => esc_html__('Add Location', 'overcome'),
         'icon'   => 'el-icon-home',
-        'fields' => array_merge(
+        'fields' => array(
             array(
                 'id'          => 'sermon_location',
                 'type'        => 'text',
