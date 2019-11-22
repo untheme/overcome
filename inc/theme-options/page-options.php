@@ -283,7 +283,7 @@ function overcome_sermon_options_register($metabox)
             'priority' => 'default',
         ));
     }
-    $metabox->add_section('ef5_sermon_speaker', array(
+    $metabox->add_section('ef5_sermons', array(
         'title'  => esc_html__('Speaker', 'overcome'),
         'desc'   => esc_html__('Add Speaker', 'overcome'),
         'icon'   => 'el-icon-home',
@@ -295,7 +295,7 @@ function overcome_sermon_options_register($metabox)
             )
         )
     ));
-    $metabox->add_section('ef5_sermon_date', array(
+    $metabox->add_section('ef5_sermons', array(
         'title'  => esc_html__('Date', 'overcome'),
         'desc'   => esc_html__('Add Date', 'overcome'),
         'icon'   => 'el-icon-home',
@@ -307,7 +307,7 @@ function overcome_sermon_options_register($metabox)
             )
         )
     ));
-    $metabox->add_section('ef5_sermon_location', array(
+    $metabox->add_section('ef5_sermons', array(
         'title'  => esc_html__('Location', 'overcome'),
         'desc'   => esc_html__('Add Location', 'overcome'),
         'icon'   => 'el-icon-home',
@@ -319,7 +319,7 @@ function overcome_sermon_options_register($metabox)
             )
         )
     ));
-    $metabox->add_section('ef5_sermon_video', array(
+    $metabox->add_section('ef5_sermons', array(
         'title'  => esc_html__('Video', 'overcome'),
         'fields' => array(
             array(
@@ -347,7 +347,7 @@ function overcome_sermon_options_register($metabox)
         )
     ));
 
-    $metabox->add_section('ef5_sermon_gallery', array(
+    $metabox->add_section('ef5_sermons', array(
         'title'  => esc_html__('Gallery', 'overcome'),
         'fields' => array(
             array(
@@ -359,7 +359,7 @@ function overcome_sermon_options_register($metabox)
         )
     ));
 
-    $metabox->add_section('ef5_sermon_audio', array(
+    $metabox->add_section('ef5_sermons', array(
         'title'  => esc_html__('Audio', 'overcome'),
         'fields' => array(
             array(
@@ -380,7 +380,7 @@ function overcome_sermon_options_register($metabox)
         )
     ));
 
-    $metabox->add_section('ef5_sermon_download', array(
+    $metabox->add_section('ef5_sermons', array(
         'title'  => esc_html__('Download', 'overcome'),
         'fields' => array(
             array(
@@ -391,7 +391,7 @@ function overcome_sermon_options_register($metabox)
         )
     ));
 
-    $metabox->add_section('ef5_sermon_pdf', array(
+    $metabox->add_section('ef5_sermons', array(
         'title'  => esc_html__('PDF', 'overcome'),
         'fields' => array(
             array(
