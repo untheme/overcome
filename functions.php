@@ -499,7 +499,7 @@ function overcome_google_api_key(){
     $api = overcome_get_theme_opt('google_api_key','');
     return $api;
 }
-//var_dump(overcome_google_api_key());
+var_dump(overcome_google_api_key());
 //add_filter('ef5-google-api-key','overcome_google_api_key');
 
 /**
