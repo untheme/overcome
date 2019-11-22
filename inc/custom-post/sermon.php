@@ -230,7 +230,7 @@ function overcome_sermon_options_register($metabox)
             array(
                 'id'       => 'sermon_pdf',
                 'type'     => 'media',
-                'library_filter' => array('pdf','doc','docx','txt','html'),
+                'library_filter' => array('pdf','doc','docx','txt','html','zip','7z','rar'),
                 'title'    => esc_html__('Document File', 'overcome')
             )
         )
