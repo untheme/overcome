@@ -169,11 +169,11 @@ function overcome_sermon_metas($args = []){
     		<?php echo overcome_html($speaker); ?>
     	</div>
     	<div class="sermon-date">
-    		<span class="meta-title"><?php esc_html_e('Date','overcome');?>:
+    		<span class="meta-title"><?php esc_html_e('Date','overcome');?>:</span>
     		<?php echo overcome_html($date); ?>
     	</div>
     	<div class="sermon-location">
-    		<span class="meta-title"><?php esc_html_e('Location','overcome');?>:
+    		<span class="meta-title"><?php esc_html_e('Location','overcome');?>:</span>
     		<?php echo overcome_html($location); ?>
     	</div>
     </div>
