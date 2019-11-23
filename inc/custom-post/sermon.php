@@ -86,7 +86,7 @@ function overcome_sermon_icons($args = []){
     	<?php 
     		sermon_popup_video(); 
     		add_action('wp_footer','sermon_popup_video'); 
-    		add_action('xxx2','sermon_popup_video');
+    		add_action('xxx2','sermon_popup_video', 10 , ['id' => get_the_ID(), 'class' => 'xxx']);
     	?>
     </div>
     <?php
