@@ -161,7 +161,7 @@ function overcome_sermon_metas($args = []){
 
     $location = overcome_get_post_format_value('sermon_location','');
 
-    echo date(get_option('date_format'), $date);
+    echo date('d M Y, G:H:s', $date);
 
     ?>
     <div class="<?php esc_attr_e($args['class']);?>">
