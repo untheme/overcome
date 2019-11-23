@@ -104,7 +104,7 @@ function sermon_popup_video($id, $args = []){
 		</div>
 	<?php
 }
-function sermon_popup_video_action(){
+function sermon_popup_video_action($args){
 	do_action('sermon_popup_video_action', $args);
 }
 add_action('wp_footer', 'sermon_popup_video_action');
