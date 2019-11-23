@@ -287,7 +287,8 @@
                             overcome_post_excerpt([
                                 'show_excerpt' => '1', 
                                 'length'       => '15', 
-                                'more'         => ''
+                                'more'         => '',
+                                'class'        => 'ef5-text-fourth'
                             ]);
                         ?>
                         <div class="separator"></div>
