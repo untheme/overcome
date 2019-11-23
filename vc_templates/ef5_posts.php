@@ -290,7 +290,7 @@
                                 'more'         => ''
                             ]);
                             overcome_sermon_icons([
-                                
+                                'class' => 'd-flex align-items-center lh-1 text-16'
                             ]);
                         ?>
                     </div>

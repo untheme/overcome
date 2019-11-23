@@ -75,6 +75,7 @@ function overcome_sermon_icons($args = []){
 		'icon_docs'  => '<span class="flaticon-pdf-1"></span>',
 		'class'      => ''
     ]);
+    $classes = ['sermon-icon', $args['class']];
 	$video_url  = overcome_get_post_format_value('sermon_video_url','');
 	$video_file = overcome_get_post_format_value('sermon_video_file',['id'=>'']);
 	$video_html = overcome_get_post_format_value('sermon_video_html','');
@@ -87,7 +88,7 @@ function overcome_sermon_icons($args = []){
     wp_enqueue_script( 'magnific-popup' );
     wp_enqueue_style( 'magnific-popup' );
     ?>
-    <div class="sermon-icon d-flex align-items-center lh-1 text-16">
+    <div class="<?php echo overcome_optimize_css_class(implode(' ', $classes));?>">
     	<a href="#sermon-video-<?php the_ID();?>" class="mfp-inline"><?php echo overcome_html($args['icon_video']); ?></a>
     	<a href="#sermon-audio-<?php the_ID();?>" class="mfp-inline"><?php echo overcome_html($args['icon_audio']); ?></a>
     	<a href="<?php echo esc_url($sermon_download['url']);?>" download><?php echo overcome_html($args['icon_file']); ?></a>
