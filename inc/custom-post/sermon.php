@@ -94,7 +94,7 @@ function overcome_sermon_icons($args = []){
 function x1111($args=[]){
 	echo get_the_ID();
 }
-function xxx(){
+function xxx( $args){
 	do_action('xxx2', $args);
 }
 add_action('wp_footer','xxx');
