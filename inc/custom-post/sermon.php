@@ -128,8 +128,8 @@ function sermon_popup_audio($args = []){
 		<div class="d-none">
 			<div id="sermon-audio-<?php esc_attr_e($args['id']);?>" class="<?php echo overcome_optimize_css_class(implode(' ', $classes));?>">
 				<?php overcome_post_audio([
-		    		'video_url' => 'sermon_audio_url',
-		    		'video_file' => 'sermon_audio_file'
+		    		'audio_url' => 'sermon_audio_url',
+		    		'audio_file' => 'sermon_audio_file'
 		    	]); ?>
 			</div>
 		</div>
