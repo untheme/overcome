@@ -88,7 +88,7 @@ function overcome_sermon_icons($args = []){
     <?php
 }
 
-function sermon_popup_video($id, $args = []){
+function sermon_popup_video($args = []){
 	$args = wp_parse_args($args,[
 		'id'	=> get_the_ID(),
 		'class' => ''
