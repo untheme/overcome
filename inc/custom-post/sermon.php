@@ -86,16 +86,16 @@ function overcome_sermon_icons($args = []){
     	<?php 
     		sermon_popup_video(); 
     		add_action('wp_footer','sermon_popup_video'); 
-    		add_action('xxx2','x1111');
+    		add_action('xxx2','sermon_popup_video');
     	?>
     </div>
     <?php
 }
-function x1111(){
+function x1111($args=[]){
 	echo get_the_ID();
 }
 function xxx(){
-	do_action('xxx2');
+	do_action('xxx2', $args);
 }
 add_action('wp_footer','xxx');
 
