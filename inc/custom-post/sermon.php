@@ -88,8 +88,8 @@ function overcome_sermon_icons($args = []){
     <div class="sermon-icon">
     	<a href="#sermon-video-<?php the_ID();?>" class="mfp-inline"><?php echo overcome_html($args['icon_video']); ?>video</a>
     	<a href="#sermon-audio-<?php the_ID();?>" class="mfp-inline"><?php echo overcome_html($args['icon_audio']); ?>audio</a>
-    	<a href="#sermon-file-<?php the_ID();?>"><?php echo overcome_html($args['icon_file']); ?></a>
-    	<a href="#sermon-docs-<?php the_ID();?>"><?php echo overcome_html($args['icon_docs']); ?></a>
+    	<a href="#sermon-file-<?php the_ID();?>"><?php echo overcome_html($args['icon_file']); ?>download</a>
+    	<a href="#sermon-docs-<?php the_ID();?>"><?php echo overcome_html($args['icon_docs']); ?>pdf</a>
     	<div class="d-none">
 	    	<?php 
 	    		sermon_popup_video();
