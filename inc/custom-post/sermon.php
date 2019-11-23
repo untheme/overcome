@@ -72,7 +72,7 @@ function overcome_sermon_icons($args = []){
 		'icon_video' => '<span class="icon-video"></span>',
 		'icon_audio' => '<span class="icon-audio"></span>',
 		'icon_file'  => '<span class="icon-file"></span>',
-		'icon_docs'  => '<span class="icon-docs></span>',
+		'icon_docs'  => '<span class="icon-docs"></span>',
 		'class'      => ''
     ]);
 	$video_url  = overcome_get_post_format_value('sermon_video_url','');
