@@ -289,6 +289,9 @@
                                 'length'       => '15', 
                                 'more'         => ''
                             ]);
+                        ?>
+                        <div class="separator"></div>
+                        <?php
                             overcome_sermon_icons([
                                 'class' => 'd-flex align-items-center lh-1 text-16'
                             ]);
