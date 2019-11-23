@@ -93,7 +93,7 @@ function sermon_popup_video($args = []){
 		'id'	=> get_the_ID(),
 		'class' => ''
 	]);
-	$classes = ['container', $args['class']];
+	$classes = ['container','d-flex','justify-content-center', $args['class']];
 	?>
 		<div class="d-none">
 			<div id="sermon-video-<?php esc_attr_e($args['id']);?>" class="<?php echo overcome_optimize_css_class(implode(' ', $classes));?>">
