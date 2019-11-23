@@ -91,7 +91,7 @@ function overcome_sermon_icons($args = []){
     <div class="<?php echo overcome_optimize_css_class(implode(' ', $classes));?>">
     	<a href="#sermon-video-<?php the_ID();?>" class="mfp-inline ef5-text-accent"><?php echo overcome_html($args['icon_video']); ?></a>
     	<a href="#sermon-audio-<?php the_ID();?>" class="mfp-inline ef5-text-accent"><?php echo overcome_html($args['icon_audio']); ?></a>
-    	<a href="<?php echo esc_url($sermon_download['url']);?>" class="ef5-text-accent" download><?php echo overcome_html($args['icon_file']); ?></a>
+    	<a href="<?php echo esc_url($sermon_download['url']);?>" class="ef5-text-accent download" download><?php echo overcome_html($args['icon_file']); ?></a>
     	<a href="<?php echo esc_url($sermon_pdf['url']);?>" class="ef5-text-accent" download><?php echo overcome_html($args['icon_docs']); ?></a>
     	<div class="d-none">
 	    	<?php 

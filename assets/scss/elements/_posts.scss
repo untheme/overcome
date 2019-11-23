@@ -59,8 +59,12 @@
 	}
 	.sermon-icon{
 		padding-bottom: 20px;
+		.download{
+			font-size: 18px;
+		}
 	}
 	.sermon-meta .meta-title{
 		min-width: 80px;
+		display: inline-block;
 	}
 }
