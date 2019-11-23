@@ -147,11 +147,16 @@ function overcome_sermon_metas($args = []){
     $args = wp_parse_args($args,[
 		'class'			=> ''
     ]);
+
+    $speaker = overcome_get_post_format_value('sermon_speaker','');
+    $date = overcome_get_post_format_value('sermon_date','');
+    $location = overcome_get_post_format_value('sermon_location','');
+
     ?>
     <div class="<?php esc_attr_e($args['class']);?>">
-    	<div class="sermon-speaker">Speaker:</div>
-    	<div class="sermon-date">date:</div>
-    	<div class="sermon-location">location:</div>
+    	<div class="sermon-speaker">Speaker: <?php echo overcome_html($speaker); ?></div>
+    	<div class="sermon-date">date:<?php echo overcome_html($date); ?></div>
+    	<div class="sermon-location">location:<?php echo overcome_html($location); ?></div>
     </div>
     <?php
 }
