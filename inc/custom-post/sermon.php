@@ -86,24 +86,23 @@ function overcome_sermon_icons($args = []){
     	<?php 
     		//sermon_popup_video(); 
     		//add_action('wp_footer','sermon_popup_video'); 
-    		add_action('xxx2','sermon_popup_video', 10 , ['id' => get_the_ID(), 'class' => 'xxx']);
+    		add_action('sermon_popup_video_do_action','sermon_popup_video', 10 , ['id' => get_the_ID(), 'class' => 'xxx']);
     	?>
     </div>
     <?php
 }
-function x1111($args=[]){
-	echo get_the_ID();
+
+function sermon_popup_video_action( $args){
+	do_action('sermon_popup_video_do_action', $args);
 }
-function xxx( $args){
-	do_action('xxx2', $args);
-}
-add_action('wp_footer','xxx');
+add_action('wp_footer','sermon_popup_video_action');
 
 function sermon_popup_video($args = []){
 	$args = wp_parse_args($args,[
 		'id'	=> get_the_ID(),
 		'class' => ''
 	]);
+	var_dump($args['id']);
 	$classes = ['container','d-flex','justify-content-center', $args['class']];
 	?>
 		<div class="d-none">
