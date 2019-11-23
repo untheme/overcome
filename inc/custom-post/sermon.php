@@ -150,6 +150,7 @@ function overcome_sermon_metas($args = []){
 
     $speaker = overcome_get_post_format_value('sermon_speaker','');
     $date = overcome_get_post_format_value('sermon_date','');
+    var_dump($date);
     $date = strtotime($date);
 	$date_sever = date_i18n('Y-m-d G:i:s');   
 	$gmt_offset = get_option( 'gmt_offset' );
