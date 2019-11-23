@@ -67,7 +67,7 @@ function ef5payments_post_type_sermons($post_type){
 // Elements function
 function overcome_sermon_icons($args = []){
     $post_type = get_post_type(get_the_ID());
-    //if($post_type !== 'ef5_sermons') return;
+    if($post_type !== 'ef5_sermons') return;
     $args = wp_parse_args($args,[
 		'icon_video'    => 'icon-video',
 		'icon_audio'    => 'icon-audio',
@@ -83,7 +83,7 @@ function overcome_sermon_icons($args = []){
     ?>
     <div class="sermon-icon">
     	<a href="#sermon-video-<?php the_ID();?>" class="mfp-inline">video</a>
-    	<?php add_action('sermon_popup_video_action','sermon_popup_video', 10, 1); ?>
+    	<?php sermon_popup_video(); //add_action('sermon_popup_video_action','sermon_popup_video', 10, 1); ?>
     </div>
     <?php
 }
