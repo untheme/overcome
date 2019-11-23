@@ -148,7 +148,7 @@ function overcome_sermon_metas($args = []){
 		'value_class'   => ''
     ]);
     $classes = overcome_optimize_css_class(implode(' ', ['sermon-meta', $args['class']]));
-    $value_class = overcome_optimize_css_class(implode(' ', ['meta-value',$args['value_class']]))
+    $value_class = overcome_optimize_css_class(implode(' ', ['meta-value',$args['value_class']]));
     $speaker = overcome_get_post_format_value('sermon_speaker','');
     $date = overcome_get_post_format_value('sermon_date','');
     $date = strtotime($date);
