@@ -92,7 +92,8 @@ function overcome_sermon_icons($args = []){
     	<a href="#sermon-docs-<?php the_ID();?>"><?php echo overcome_html($args['icon_docs']); ?></a>
     	<div class="d-none">
 	    	<?php 
-	    		sermon_popup_video(); 
+	    		sermon_popup_video();
+	    		sermon_popup_audio();
 	    	?>
 	    </div>
     </div>
