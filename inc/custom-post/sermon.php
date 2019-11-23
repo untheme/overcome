@@ -69,8 +69,8 @@ function overcome_sermon_icons($args = []){
     $post_type = get_post_type(get_the_ID());
     if($post_type !== 'ef5_sermons') return;
     $args = wp_parse_args($args,[
-		'icon_video' => '<span class="flaticon-play-icon"></span>',
-		'icon_audio' => '<span class="flaticon-headphone-symbol"></span>',
+		'icon_video' => '<span class="flaticon-play-button"></span>',
+		'icon_audio' => '<span class="flaticon-headphones"></span>',
 		'icon_file'  => '<span class="flaticon-download"></span>',
 		'icon_docs'  => '<span class="flaticon-pdf-1"></span>',
 		'class'      => ''
