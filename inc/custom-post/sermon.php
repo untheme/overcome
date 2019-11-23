@@ -156,7 +156,7 @@ function overcome_sermon_metas($args = []){
 	/* check if current time from config is empty or less than current time 
 	 * && (strtotime($time) < strtotime('now'))
 	 */
-	if(empty($date)) $date = strtotime("+22 days 18 hours 30 minutes");
+	if(empty($date)) $date = strtotime("+5 days");
 
     $location = overcome_get_post_format_value('sermon_location','');
 
