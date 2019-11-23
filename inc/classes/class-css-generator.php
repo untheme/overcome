@@ -221,12 +221,14 @@ class OverCome_CSS_Generator
         $lightent_accent_accent  = 'var(--lightent-accent-color)';
         $secondary_color  = 'var(--secondary-color)';
         $thirdary_color  = 'var(--thirdary-color)';
+        $fourth_color  = 'var(--fourth-color)';
         printf('$primary_color:%s;',$primary_color);
         printf('$accent_color:%s;',$accent_color);
         printf('$darkent_accent_accent:%s;',$darkent_accent_accent);
         printf('$lightent_accent_accent:%s;',$lightent_accent_accent);
         printf('$secondary_color:%s;',$secondary_color);
         printf('$thirdary_color:%s;',$thirdary_color);
+        printf('$fourth_color:%s;',$fourth_color);
         printf('$invalid_color:%s;',overcome_configs('invalid_color'));
         printf('$color_red:%s;',overcome_configs('color_red'));
         printf('$color_green:%s;',overcome_configs('color_green'));
