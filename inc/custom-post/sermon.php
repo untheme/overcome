@@ -82,6 +82,11 @@ function overcome_sermon_icons($args = []){
 	$audio_url  = overcome_get_post_format_value('sermon_audio_url','');
 	$audio_file = overcome_get_post_format_value('sermon_audio_file',['id'=>'']);
 
+	$sermon_download = overcome_get_post_format_value('sermon_download','');
+	$sermon_pdf = overcome_get_post_format_value('sermon_pdf','');
+
+	var_dump($sermon_download, $sermon_pdf);
+
     wp_enqueue_script( 'magnific-popup' );
     wp_enqueue_style( 'magnific-popup' );
     ?>
