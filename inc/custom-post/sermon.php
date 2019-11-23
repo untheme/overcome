@@ -129,7 +129,7 @@ function sermon_popup_audio($args = []){
 	$classes = ['container','d-flex','justify-content-center', $args['class']];
 	?>
 		<div class="d-none">
-			<div id="sermon-audio-<?php esc_attr_e($args['id']);?>" class="<?php echo overcome_optimize_css_class(implode(' ', $classes));?>">
+			<div id="sermon-audio-<?php echo esc_attr($args['id']);?>" class="<?php echo overcome_optimize_css_class(implode(' ', $classes));?>">
 				<?php overcome_post_audio([
 		    		'audio_url' => 'sermon_audio_url',
 		    		'audio_file' => 'sermon_audio_file'
@@ -143,38 +143,29 @@ function sermon_popup_audio($args = []){
 function overcome_sermon_metas($args = []){
     $post_type = get_post_type(get_the_ID());
     if($post_type !== 'ef5_sermons') return;
-
     $args = wp_parse_args($args,[
 		'class'			=> ''
     ]);
-
+    $classes = overcome_optimize_css_class(implode(' ', ['sermon-meta', $args['class']]));
     $speaker = overcome_get_post_format_value('sermon_speaker','');
     $date = overcome_get_post_format_value('sermon_date','');
     $date = strtotime($date);
-	$date_sever = date_i18n('Y-m-d G:i:s');   
-	$gmt_offset = get_option( 'gmt_offset' );
-	/* check if current time from config is empty or less than current time 
-	 * && (strtotime($time) < strtotime('now'))
-	 */
 	if(empty($date)) $date = strtotime("+5 days 9:00 AM");
-
+	$date = date('j F Y, g:i a', $date);
     $location = overcome_get_post_format_value('sermon_location','');
-
-    $date = date('j F Y, g:i a', $date);
-
     ?>
-    <div class="<?php esc_attr_e($args['class']);?>">
-    	<div class="sermon-speaker">
-    		<span class="meta-title"><?php esc_html_e('Speaker','overcome');?>:</span>
-    		<?php echo overcome_html($speaker); ?>
+    <div class="<?php echo esc_attr($classes);?>">
+    	<div class="sermon-meta speaker">
+    		<span class="meta-title"><?php esc_html_e('Speaker','overcome');?>:</span><?php 
+    		echo overcome_html($speaker); ?>
     	</div>
-    	<div class="sermon-date">
-    		<span class="meta-title"><?php esc_html_e('Date','overcome');?>:</span>
-    		<?php echo overcome_html($date); ?>
+    	<div class="sermon-meta date">
+    		<span class="meta-title"><?php esc_html_e('Date','overcome');?>:</span><?php 
+    		echo overcome_html($date); ?>
     	</div>
-    	<div class="sermon-location">
-    		<span class="meta-title"><?php esc_html_e('Location','overcome');?>:</span>
-    		<?php echo overcome_html($location); ?>
+    	<div class="sermon-meta location">
+    		<span class="meta-title"><?php esc_html_e('Location','overcome');?>:</span><?php 
+    		echo overcome_html($location); ?>
     	</div>
     </div>
     <?php
