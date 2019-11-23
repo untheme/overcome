@@ -295,7 +295,7 @@
                             overcome_sermon_icons([
                                 'class' => 'd-flex align-items-center lh-1 text-16'
                             ]);
-                            overcome_sermon_metas();
+                            overcome_sermon_metas(['class'=>'text-13']);
                         ?>
                     </div>
                 </div>
