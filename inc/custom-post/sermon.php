@@ -159,8 +159,9 @@ function overcome_sermon_metas($args = []){
 	 */
 	if(empty($date)) $date = strtotime("+22 days 18 hours 30 minutes");
 
-
     $location = overcome_get_post_format_value('sermon_location','');
+
+    echo date_i18n($date);
 
     ?>
     <div class="<?php esc_attr_e($args['class']);?>">
