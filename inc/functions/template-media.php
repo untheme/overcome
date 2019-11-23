@@ -225,14 +225,16 @@ if(!function_exists('overcome_post_video')){
 if(!function_exists('overcome_post_audio')){
     function overcome_post_audio($args = []){
         $args = wp_parse_args($args, [
+            'audio_url'      => 'post-audio-url',
+            'audio_file'     => 'post-audio-file',
             'id'             => null,
             'thumbnail_size' => is_single() ? 'large' : 'medium',
             'echo'           => true,
             'default_thumb'  => apply_filters('overcome_default_post_thumbnail', false)
         ]);
         global $wp_embed;
-        $audio_url = overcome_get_post_format_value('post-audio-url', '');
-        $audio_file = overcome_get_post_format_value('post-audio-file', ['id'=>'']);
+        $audio_url = overcome_get_post_format_value($args['audio_url'], '');
+        $audio_file = overcome_get_post_format_value($args['audio_file'], ['id'=>'']);
         if(!empty($audio_file['id'])){
             /* Get default video poster */
             $poster = (is_array($audio_file) && !empty(get_the_post_thumbnail_url($audio_file['id']))) ? get_the_post_thumbnail_url($audio_file['id'],'full') : get_the_post_thumbnail_url(get_the_ID(),'full');

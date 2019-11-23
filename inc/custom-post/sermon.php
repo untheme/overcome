@@ -69,40 +69,41 @@ function overcome_sermon_icons($args = []){
     $post_type = get_post_type(get_the_ID());
     if($post_type !== 'ef5_sermons') return;
     $args = wp_parse_args($args,[
-		'icon_video'    => 'icon-video',
-		'icon_audio'    => 'icon-audio',
-		'icon_download' => 'icon-download',
-		'icon_pdf'      => 'icon-pdf',
-		'class'			=> ''
+		'icon_video' => '<span class="icon-video"></span>',
+		'icon_audio' => '<span class="icon-audio"></span>',
+		'icon_file'  => '<span class="icon-file"></span>',
+		'icon_docs'  => '<span class="icon-docs></span>',
+		'class'      => ''
     ]);
-	$video_url  = overcome_get_post_format_value('sermon_video_url');
-	$video_file = overcome_get_post_format_value('sermon_video_file');
-	$video_html = overcome_get_post_format_value('sermon_video_html');
+	$video_url  = overcome_get_post_format_value('sermon_video_url','');
+	$video_file = overcome_get_post_format_value('sermon_video_file',['id'=>'']);
+	$video_html = overcome_get_post_format_value('sermon_video_html','');
+
+	$audio_url  = overcome_get_post_format_value('sermon_audio_url','');
+	$audio_file = overcome_get_post_format_value('sermon_audio_file',['id'=>'']);
+
     wp_enqueue_script( 'magnific-popup' );
     wp_enqueue_style( 'magnific-popup' );
     ?>
     <div class="sermon-icon">
-    	<a href="#sermon-video-<?php the_ID();?>" class="mfp-inline">video</a>
-    	<?php 
-    		sermon_popup_video(); 
-    		//add_action('wp_footer','sermon_popup_video'); 
-    		//add_action('sermon_popup_video_do_action','sermon_popup_video', 10 , ['id' => get_the_ID(), 'class' => 'xxx']);
-    	?>
+    	<a href="#sermon-video-<?php the_ID();?>" class="mfp-inline"><?php echo overcome_html($args['icon_video']); ?></a>
+    	<a href="#sermon-audio-<?php the_ID();?>" class="mfp-inline"><?php echo overcome_html($args['icon_audio']); ?></a>
+    	<a href="#sermon-file-<?php the_ID();?>"><?php echo overcome_html($args['icon_file']); ?></a>
+    	<a href="#sermon-docs-<?php the_ID();?>"><?php echo overcome_html($args['icon_docs']); ?></a>
+    	<div class="d-none">
+	    	<?php 
+	    		sermon_popup_video(); 
+	    	?>
+	    </div>
     </div>
     <?php
 }
-
-function sermon_popup_video_action( $args){
-	do_action('sermon_popup_video_do_action', $args);
-}
-add_action('wp_footer','sermon_popup_video_action');
 
 function sermon_popup_video($args = []){
 	$args = wp_parse_args($args,[
 		'id'	=> get_the_ID(),
 		'class' => ''
 	]);
-	var_dump($args['id']);
 	$classes = ['container','d-flex','justify-content-center', $args['class']];
 	?>
 		<div class="d-none">
@@ -111,6 +112,23 @@ function sermon_popup_video($args = []){
 		    		'video_url' => 'sermon_video_url',
 		    		'video_file' => 'sermon_video_file',
 		    		'video_html' => 'sermon_video_html',
+		    	]); ?>
+			</div>
+		</div>
+	<?php
+}
+function sermon_popup_audio($args = []){
+	$args = wp_parse_args($args,[
+		'id'	=> get_the_ID(),
+		'class' => ''
+	]);
+	$classes = ['container','d-flex','justify-content-center', $args['class']];
+	?>
+		<div class="d-none">
+			<div id="sermon-audio-<?php esc_attr_e($args['id']);?>" class="<?php echo overcome_optimize_css_class(implode(' ', $classes));?>">
+				<?php overcome_post_audio([
+		    		'video_url' => 'sermon_audio_url',
+		    		'video_file' => 'sermon_audio_file'
 		    	]); ?>
 			</div>
 		</div>
