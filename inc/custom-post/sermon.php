@@ -93,14 +93,16 @@ function sermon_popup_video($args = []){
 		'id'	=> get_the_ID(),
 		'class' => ''
 	]);
-	$classes = ['d-none', $args['class']];
+	$classes = ['container', $args['class']];
 	?>
-		<div id="sermon-video-<?php esc_attr_e($args['id']);?>" class="<?php echo overcome_optimize_css_class(implode(' ', $classes));?>">
-			<?php overcome_post_video([
-	    		'video_url' => 'sermon_video_url',
-	    		'video_file' => 'sermon_video_file',
-	    		'video_html' => 'sermon_video_html',
-	    	]); ?>
+		<div class="d-none">
+			<div id="sermon-video-<?php esc_attr_e($args['id']);?>" class="<?php echo overcome_optimize_css_class(implode(' ', $classes));?>">
+				<?php overcome_post_video([
+		    		'video_url' => 'sermon_video_url',
+		    		'video_file' => 'sermon_video_file',
+		    		'video_html' => 'sermon_video_html',
+		    	]); ?>
+			</div>
 		</div>
 	<?php
 }
