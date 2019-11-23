@@ -144,9 +144,11 @@ function overcome_sermon_metas($args = []){
     $post_type = get_post_type(get_the_ID());
     if($post_type !== 'ef5_sermons') return;
     $args = wp_parse_args($args,[
-		'class'			=> ''
+		'class'			=> '',
+		'value_class'   => ''
     ]);
     $classes = overcome_optimize_css_class(implode(' ', ['sermon-meta', $args['class']]));
+    $value_class = overcome_optimize_css_class(implode(' ', ['meta-value',$args['value_class']]))
     $speaker = overcome_get_post_format_value('sermon_speaker','');
     $date = overcome_get_post_format_value('sermon_date','');
     $date = strtotime($date);
@@ -156,16 +158,16 @@ function overcome_sermon_metas($args = []){
     ?>
     <div class="<?php echo esc_attr($classes);?>">
     	<div class="sermon-meta speaker">
-    		<span class="meta-title"><?php esc_html_e('Speaker','overcome');?>:</span><?php 
-    		echo overcome_html($speaker); ?>
+    		<span class="meta-title"><?php esc_html_e('Speaker','overcome');?>:</span> <span class="<?php echo esc_attr($value_class);?>"><?php 
+    		echo overcome_html($speaker); ?></span>
     	</div>
     	<div class="sermon-meta date">
-    		<span class="meta-title"><?php esc_html_e('Date','overcome');?>:</span><?php 
-    		echo overcome_html($date); ?>
+    		<span class="meta-title"><?php esc_html_e('Date','overcome');?>:</span> <span class="<?php echo esc_attr($value_class);?>"><?php 
+    		echo overcome_html($date); ?></span>
     	</div>
     	<div class="sermon-meta location">
-    		<span class="meta-title"><?php esc_html_e('Location','overcome');?>:</span><?php 
-    		echo overcome_html($location); ?>
+    		<span class="meta-title"><?php esc_html_e('Location','overcome');?>:</span> <span class="<?php echo esc_attr($value_class);?>"><?php 
+    		echo overcome_html($location); ?></span>
     	</div>
     </div>
     <?php

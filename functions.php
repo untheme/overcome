@@ -15,6 +15,7 @@ if(!function_exists('overcome_configs')){
             'accent_color'          => '#f5b91b',
             'secondary_color'       => '#e6a423',
             'thirdary_color'        => '#5580ff',
+            'fourth_color'          => '#3b2e4d',
             'darkent_accent_color'  => '#e6a423',
             'lightent_accent_color' => '#ffdd65',
             'invalid_color'         => 'red',
@@ -386,6 +387,7 @@ function overcome_inline_styles() {
     $preset_secondary_color = overcome_get_opts( 'secondary_color', apply_filters('overcome_secondary_color',overcome_configs('secondary_color') ));
 
     $thirdary_color = overcome_get_opts( 'thirdary_color', apply_filters('overcome_thirdary_color',overcome_configs('thirdary_color') ));
+    $fourth_color = overcome_get_opts( 'fourth_color', apply_filters('overcome_fourth_color',overcome_configs('fourth_color') ));
     $main_menu_height = overcome_get_opts( 'main_menu_height', ['height' => overcome_configs('main_menu_height')]);
     // CSS Variable
     printf(':root{
@@ -399,6 +401,7 @@ function overcome_inline_styles() {
         --thirdary-color: %s;
         --thirdary-color-05: %s;
         --thirdary-color-03: %s;
+        --fourth-color: %s;
         }', 
         $preset_primary_color,
         $preset_accent_color,
@@ -410,6 +413,7 @@ function overcome_inline_styles() {
         $thirdary_color,
         overcome_hex2rgba($thirdary_color, 0.5),
         overcome_hex2rgba($thirdary_color, 0.3)
+        $fourth_color
     );
     // Header Variable
     $header_bg = overcome_get_opts('header_bg',[
