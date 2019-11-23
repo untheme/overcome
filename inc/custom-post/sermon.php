@@ -69,10 +69,10 @@ function overcome_sermon_icons($args = []){
     $post_type = get_post_type(get_the_ID());
     if($post_type !== 'ef5_sermons') return;
     $args = wp_parse_args($args,[
-		'icon_video' => '<span class="icon-video"></span>',
-		'icon_audio' => '<span class="icon-audio"></span>',
-		'icon_file'  => '<span class="icon-file"></span>',
-		'icon_docs'  => '<span class="icon-docs"></span>',
+		'icon_video' => '<span class="falaticon-play-icon"></span>',
+		'icon_audio' => '<span class="falaticon-headphone-symbol"></span>',
+		'icon_file'  => '<span class="falaticon-download"></span>',
+		'icon_docs'  => '<span class="falaticon-pdf-1"></span>',
 		'class'      => ''
     ]);
 	$video_url  = overcome_get_post_format_value('sermon_video_url','');
