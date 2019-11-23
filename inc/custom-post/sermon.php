@@ -88,10 +88,10 @@ function overcome_sermon_icons($args = []){
     wp_enqueue_style( 'magnific-popup' );
     ?>
     <div class="sermon-icon">
-    	<a href="#sermon-video-<?php the_ID();?>" class="mfp-inline"><?php echo overcome_html($args['icon_video']); ?>video</a>
-    	<a href="#sermon-audio-<?php the_ID();?>" class="mfp-inline"><?php echo overcome_html($args['icon_audio']); ?>audio</a>
-    	<a href="<?php echo esc_url($sermon_download['url']);?>" download><?php echo overcome_html($args['icon_file']); ?>download</a>
-    	<a href="<?php echo esc_url($sermon_pdf['url']);?>" download><?php echo overcome_html($args['icon_docs']); ?>pdf</a>
+    	<a href="#sermon-video-<?php the_ID();?>" class="mfp-inline"><?php echo overcome_html($args['icon_video']); ?></a>
+    	<a href="#sermon-audio-<?php the_ID();?>" class="mfp-inline"><?php echo overcome_html($args['icon_audio']); ?></a>
+    	<a href="<?php echo esc_url($sermon_download['url']);?>" download><?php echo overcome_html($args['icon_file']); ?></a>
+    	<a href="<?php echo esc_url($sermon_pdf['url']);?>" download><?php echo overcome_html($args['icon_docs']); ?></a>
     	<div class="d-none">
 	    	<?php 
 	    		sermon_popup_video();
