@@ -164,9 +164,18 @@ function overcome_sermon_metas($args = []){
 
     ?>
     <div class="<?php esc_attr_e($args['class']);?>">
-    	<div class="sermon-speaker">Speaker: <?php echo overcome_html($speaker); ?></div>
-    	<div class="sermon-date">date:<?php echo overcome_html($date); ?></div>
-    	<div class="sermon-location">location:<?php echo overcome_html($location); ?></div>
+    	<div class="sermon-speaker">
+    		<span class="meta-title"><?php esc_html_e('Speaker','overcome');?>:</span>
+    		<?php echo overcome_html($speaker); ?>
+    	</div>
+    	<div class="sermon-date">
+    		<span class="meta-title"><?php esc_html_e('Date','overcome');?>:
+    		<?php echo overcome_html($date); ?>
+    	</div>
+    	<div class="sermon-location">
+    		<span class="meta-title"><?php esc_html_e('Location','overcome');?>:
+    		<?php echo overcome_html($location); ?>
+    	</div>
     </div>
     <?php
 }
