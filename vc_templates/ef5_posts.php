@@ -304,6 +304,64 @@
                     }// end while
                     wp_reset_postdata();
             break;
+
+            case '9':
+                $item_css_class[] = '';
+                $d = 0;
+                while($posts->have_posts()){
+                    $d++;
+                    $posts->the_post();
+                ?>
+                <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
+                    <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                        <div class="row">
+                            <?php
+                                overcome_post_media([
+                                    'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '370x240'), 
+                                    'default_thumb'  => true,
+                                    'class'          => 'col-md4',
+                                    'before'         => '<a href="'.get_the_permalink().'">',
+                                    'after'          => '</a>',
+                                    'img_class'      => 'ef5-rounded-5'
+                                ]); 
+                            ?>
+                            <div class="col-md-8">
+                                <?php
+                                    overcome_post_title([
+                                        'heading_tag' => 'text-28 lh-32 font-style-500'
+                                    ]);
+                                    overcome_post_excerpt([
+                                        'show_excerpt' => '1', 
+                                        'length'       => '15', 
+                                        'more'         => '',
+                                        'class'        => 'ef5-text-fourth'
+                                    ]);
+                                    
+                                    if(class_exists('EF5Payments')) {
+                                        ef5systems_donation_progress_donors([
+                                            'donor_icon' => '<span class="flaticon-like"></span>'
+                                        ]);
+                                        ef5payments_donation_donate_amount([
+                                            'goal_label' => esc_html__('Goal:','overcome'),
+                                            'raised_label' => esc_html__('Raised:','overcome')
+                                        ]);
+                                    }
+
+                                    overcome_sermon_icons([
+                                        'class' => 'd-flex align-items-center lh-1 text-16'
+                                    ]);
+                                    overcome_sermon_metas(['class'=>'text-13', 'value_class' => 'ef5-text-fourth']);
+                                ?>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+                <?php
+                    }// end while
+                    wp_reset_postdata();
+            break;
         } 
     ?>
     </div>
