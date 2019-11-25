@@ -110,14 +110,16 @@
 			@include border-radius(9px);
 		}
 	}
-	.ef5-donation-donor {
+	.ef5-donation-donor,
+	.ef5-countdown-time {
 		font-size: 32px;
 		color: $fourth_color;
 		font-weight: 500;
-		span{
-			display: block;
+	}
+	.ef5-donation-donor span,
+	.ef5-countdown-time .title{
+		display: block;
 			font-size: $BodyFontSize;
 			font-weight: 400;
-		}
 	}
 }
