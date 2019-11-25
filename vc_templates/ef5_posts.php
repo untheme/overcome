@@ -317,7 +317,7 @@
                         <div class="row">
                             <?php
                                 overcome_post_media([
-                                    'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '370x240'), 
+                                    'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '400x274'), 
                                     'default_thumb'  => true,
                                     'class'          => 'col-md-4 col-lg-35/8333333',
                                     'before'         => '<a href="'.get_the_permalink().'">',
