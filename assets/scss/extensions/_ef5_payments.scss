@@ -101,6 +101,9 @@
 		color: $fourth_color;
 		padding: 11px 0 17px;
 	}
+	.section-3 > div:first-child{
+		@include transform(translate(0, -10px));
+	}
 	.ef5-donate-progress-bar{
 		height: 18px;
 		margin-bottom: 30px;
