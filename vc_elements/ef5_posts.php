@@ -278,7 +278,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
             </div>
         <?php
     }
-    protected function overcome_posts_featured_item2($atts, $args = []){
+    protected function overcome_posts_featured_item_1_3($atts, $args = []){
         $args = wp_parse_args($args, [
             'class'          => '',
             'thumbnail_size' => '570',

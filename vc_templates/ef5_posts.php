@@ -90,7 +90,7 @@
                     $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
                 }
                 if($post_count === 1){
-                    $this->overcome_posts_featured_item2($atts,[
+                    $this->overcome_posts_featured_item_1_3($atts,[
                         'class'          => 'ef5-rounded-10 overlay-wrap overlay-primary-0/7',
                         'thumbnail_size' => overcome_default_value($thumbnail_size[$thumbnail_size_index], '570')
                     ]);
