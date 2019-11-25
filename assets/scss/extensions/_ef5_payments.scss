@@ -110,4 +110,14 @@
 			@include border-radius(9px);
 		}
 	}
+	.ef5-donation-donor {
+		font-size: 32px;
+		color: $fourth_color;
+		font-weight: 500;
+		span{
+			display: block;
+			font-size: $BodyFontSize;
+			font-weight: 400;
+		}
+	}
 }
