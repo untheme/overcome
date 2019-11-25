@@ -259,7 +259,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                 $overlay_content .= overcome_loop_donate_info(['layout' => '2', 'echo' => false]); 
                 break;
             default:
-                $overlay_content .= overcome_post_read_more(['show_readmore' => '1', 'echo' => false,'class' => $args['btn_class']]);
+                $overlay_content .= overcome_post_read_more(['show_readmore' => '1', 'echo' => false,'class' => $args['btn_class'],'readmore_class' => '']);
                 break;
         }
 
