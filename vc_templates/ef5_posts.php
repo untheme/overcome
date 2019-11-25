@@ -314,7 +314,7 @@
                 ?>
                 <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
                     <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
-                        <div class="row">
+                        <div class="row align-items-center">
                             <?php
                                 overcome_post_media([
                                     'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '400x274'), 
