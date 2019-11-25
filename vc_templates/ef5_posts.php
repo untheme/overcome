@@ -330,12 +330,12 @@
                                     overcome_post_title([
                                         'heading_tag' => 'text-28 lh-32 font-style-500'
                                     ]);
-                                    overcome_post_excerpt([
+                                    /*overcome_post_excerpt([
                                         'show_excerpt' => '1', 
                                         'length'       => '15', 
                                         'more'         => '',
                                         'class'        => 'ef5-text-fourth'
-                                    ]);
+                                    ]);*/
                                     
                                     if(class_exists('EF5Payments')) {
                                         ef5payments_donation_layout_2();
