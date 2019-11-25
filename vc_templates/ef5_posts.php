@@ -319,13 +319,13 @@
                                 overcome_post_media([
                                     'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '370x240'), 
                                     'default_thumb'  => true,
-                                    'class'          => 'col-md-4 col-lg-400',
+                                    'class'          => 'col-md-4 col-lg-35/8333333',
                                     'before'         => '<a href="'.get_the_permalink().'">',
                                     'after'          => '</a>',
                                     'img_class'      => 'ef5-rounded-5'
                                 ]); 
                             ?>
-                            <div class="col-md-8 col-lg-auto">
+                            <div class="col-md-8 col-lg-64/1666667">
                                 <?php
                                     overcome_post_title([
                                         'heading_tag' => 'text-28 lh-32 font-style-500'

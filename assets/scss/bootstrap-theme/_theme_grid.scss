@@ -13,6 +13,7 @@ $grid-x-columns : (
 	'7\/10' : 70%,
 	'9\/10' : 90%,
 	'35\/8333333' : 35.8333333%
+	'64\/1666667' : 64.1666667%
 );
 
 @each $breakpoint in map-keys($grid-breakpoints) {
