@@ -113,11 +113,12 @@
 	.ef5-donation-donor,
 	.ef5-countdown-time {
 		font-size: 32px;
-		color: $fourth_color !important;
+		color: $fourth_color;
 		font-weight: 500;
 	}
 	.ef5-heading{
 		font-weight: 500;
+		color: $fourth_color;
 	}
 	.ef5-donation-donor span,
 	.ef5-countdown-time .title{
