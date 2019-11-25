@@ -103,6 +103,7 @@
 	}
 	.ef5-donate-progress-bar{
 		height: 18px;
+		margin-bottom: 30px;
 		@include border-radius(9px);
 		.ef5-donate-progress-bar-value{
 			background-color: $thirdary_color;
