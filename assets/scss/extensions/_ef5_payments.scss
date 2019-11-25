@@ -101,4 +101,12 @@
 		color: $fourth_color;
 		padding: 11px 0 17px;
 	}
+	.ef5-donate-progress-bar{
+		height: 18px;
+		@include border-radius(9px);
+		.ef5-donate-progress-bar-value{
+			background-color: $thirdary_color;
+			@include border-radius(9px);
+		}
+	}
 }
