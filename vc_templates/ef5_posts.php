@@ -92,7 +92,8 @@
                 if($post_count === 1){
                     $this->overcome_posts_featured_item($atts,[
                         'class'          => 'ef5-rounded-10 overlay-wrap overlay-primary-0/7',
-                        'thumbnail_size' => overcome_default_value($thumbnail_size[$thumbnail_size_index], '570')
+                        'thumbnail_size' => overcome_default_value($thumbnail_size[$thumbnail_size_index], '570'),
+                        'btn_class'      => 'ef5-btn ef5-btn-md accent'
                     ]);
                 }
             }

@@ -231,8 +231,9 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
         $args = wp_parse_args($args, [
             'class'          => '',
             'thumbnail_size' => '570',
+            'btn_class'      => 'ef5-btn ef5-btn-md accent outline'
         ]);
-
+        //$btn_classes = ['ef5-btn ef5-btn-md accent outline']
         $overlay_content = '<div class="overlay ef5-bg-overlay ef5-rounded-10"><div class="overlay-inner center-align w-100 p-30 pl-lg-75 pr-lg-75">';
         $overlay_content .= overcome_post_title([
             'echo' => false, 
@@ -258,7 +259,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                 $overlay_content .= overcome_loop_donate_info(['layout' => '2', 'echo' => false]); 
                 break;
             default:
-                $overlay_content .= overcome_post_read_more(['show_readmore' => '1', 'echo' => false,'class'=>'ef5-btn ef5-btn-md accent outline']);
+                $overlay_content .= overcome_post_read_more(['show_readmore' => '1', 'echo' => false,'class' => $args['btn_class']]);
                 break;
         }
 
