@@ -319,7 +319,7 @@
                                 overcome_post_media([
                                     'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '370x240'), 
                                     'default_thumb'  => true,
-                                    'class'          => 'col-md4',
+                                    'class'          => 'col-md-4',
                                     'before'         => '<a href="'.get_the_permalink().'">',
                                     'after'          => '</a>',
                                     'img_class'      => 'ef5-rounded-5'
@@ -338,7 +338,7 @@
                                     ]);
                                     
                                     if(class_exists('EF5Payments')) {
-                                        ef5systems_donation_layout_2();
+                                        ef5payments_donation_layout_2();
                                     }
 
                                     overcome_sermon_icons([
