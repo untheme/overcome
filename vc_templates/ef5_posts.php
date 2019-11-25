@@ -338,13 +338,7 @@
                                     ]);
                                     
                                     if(class_exists('EF5Payments')) {
-                                        ef5systems_donation_progress_donors([
-                                            'donor_icon' => '<span class="flaticon-like"></span>'
-                                        ]);
-                                        ef5payments_donation_donate_amount([
-                                            'goal_label' => esc_html__('Goal:','overcome'),
-                                            'raised_label' => esc_html__('Raised:','overcome')
-                                        ]);
+                                        ef5systems_donation_layout_2();
                                     }
 
                                     overcome_sermon_icons([
