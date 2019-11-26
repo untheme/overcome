@@ -330,6 +330,42 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
             </div>
         <?php
     }
+    protected function overcome_posts_item_1_3($atts, $args = []){
+        $args = wp_parse_args($args, [
+            'class'          => '',
+            'thumbnail_size' => '170',
+        ]);
+        $css_class = ['ef5-post-item-inner', 'row', $args['class'], 'ml-0 mr-0'];
+        $after = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align"><a class="text-36 text-white" href="'.get_the_permalink().'"><span class="fa fa-link"></span></a></div></div>'
+        ?>
+        <div class="ef5-post-item ef5-rounded-10 ef5-hover-shadow-1 transition">
+            <div class="<?php echo trim(implode(' ', $css_class));?>">
+                <?php 
+                    overcome_post_media([
+                        'thumbnail_size' => $args['thumbnail_size'], 
+                        'default_thumb'  => true,
+                        'class'          => 'col-xs-auto p-0',
+                        'before'         => '<div class="relative h-100">',
+                        'after'          => $after.'</div>',
+                        'img_class'      => 'h-100'
+                    ]);   
+                ?>
+                <div class="col pt-17 p-15 pb-xs-0">
+                    <?php 
+                        overcome_post_title(['class'=>'text-20 pb-5 font-style-500']);
+                        overcome_post_excerpt([
+                            'show_excerpt' => '1', 
+                            'length'       => '15', 
+                            'more'         => '',
+                            'class'        => 'text-13 mb-17 ef5-text-787878' 
+                        ]);
+                        overcome_tribe_events_info_hori(['class' => 'text-13']);
+                    ?>
+                </div>
+            </div>
+        </div>
+        <?php
+    }
     protected function overcome_posts_item($atts, $args = []){
         $args = wp_parse_args($args, [
             'class'          => '',
