@@ -46,12 +46,11 @@ $i=1;
 $j=0;
 
 $inner_css_classes = ['ttmn-inner','transition'];
-var_dump($atts['content_align']);
-if(empty($atts['content_align'])) $atts['content_align'] = 'text-center';
-var_dump($atts['content_align']);
 
+$ttmn_wrap_classes = ['ef5-testimonials', ef5systems_owl_css_class($atts)];
+if(empty($atts['content_align'])) $ttmn_wrap_classes[] = 'text-center';
 ?>
-<div class="ef5-testimonials <?php echo ef5systems_owl_css_class($atts);?>">
+<div class="<?php echo overcome_optimize_css_class(implode(' ', $ttmn_wrap_classes));?>">
     <?php 
         ef5systems_owl_nav_top($atts);
         ef5systems_owl_dots_top($atts); 
