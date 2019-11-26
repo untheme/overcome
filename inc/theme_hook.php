@@ -245,6 +245,12 @@ function overcome_owl_custom_nav_style(){
 /**
  * Custom OWL Dots Style
 */
+add_filter('ef5systems_carousel_custom_dot_style', 'overcome_owl_custom_dot_style');
+function overcome_owl_custom_dot_style(){
+	return [
+		esc_html__('Circle (11x11)','overcome') => 'circle size-11'
+	];
+}
 add_filter('ef5systems_carousel_custom_dot_color', 'overcome_owl_custom_dot_color');
 function overcome_owl_custom_dot_color(){
 	return [
