@@ -143,9 +143,9 @@ vc_map(array(
             'font_size'   => 'text_size',
             'font_style'  => 'text_font_style',
             'line_height' => 'text_line_height',
-            'element'     => 'text_color_opts',
-            'value'       => 'custom',
-            'value_opt'   => true,
+            'element'     => '',
+            'value'       => '',
+            'value_opt'   => '',
             'group'       => esc_html__('Testimonial Item','overcome')
         ]),
         array(
