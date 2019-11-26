@@ -34,3 +34,19 @@
 		}
 	}
 }
+
+.ef5-owl-dots-circle{
+	.ef5-owl-dot{
+		@include border-radius(50%);
+	}
+	&.size-11{
+		margin-left: -6px;
+		margin-right: -6px;
+		.ef5-owl-dot{
+			width: 23px;
+			height: 23px;
+			padding: 6px;
+			margin: 0;
+		}
+	}
+}
