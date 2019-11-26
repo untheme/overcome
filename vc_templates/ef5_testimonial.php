@@ -46,6 +46,9 @@ $i=1;
 $j=0;
 
 $inner_css_classes = ['ttmn-inner','transition'];
+
+if(empty($atts['content_align'] && $atts['layout_template'] !== '2' )) $atts['content_align'] = 'text-center';
+
 ?>
 <div class="ef5-testimonials <?php echo ef5systems_owl_css_class($atts);?>">
     <?php 
