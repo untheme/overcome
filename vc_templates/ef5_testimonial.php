@@ -86,7 +86,7 @@ if(empty($atts['content_align']) && $atts['layout_template'] !== '2') $ttmn_wrap
                                         // name
                                         $this->overcome_tm_name($testimonial, $atts,['class' => 'text-22 font-style-400 d-block']);
                                         // position
-                                        $this->overcome_tm_position($testimonial,['class' => 'text-12 text-uppercase d-block text-'.$atts['text_color']]);
+                                        $this->overcome_tm_position($testimonial,['class' => 'text-12 text-uppercase d-block text-'.{$atts['text_color']}]);
                                         // star rating
                                         $this->overcome_tm_rate($testimonial, $atts);
                                     break;
