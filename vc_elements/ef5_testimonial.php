@@ -30,6 +30,29 @@ vc_map(array(
                 'std'         => '1',
                 'admin_label' => true
             ),
+            // Text Color
+            array(
+                'type'         => 'dropdown',
+                'heading'      => esc_html__( 'Text Color', 'overcome' ),
+                'param_name'   => 'text_color_opts',
+                'value'        => ef5systems_colors_option_for_vc([
+                    esc_html__('Custom','overcome') => 'custom'
+                ]),
+                'std'          => '',
+                'description'  => esc_html__( 'Choose color for this row', 'overcome' ),
+                'edit_field_class' => 'vc_col-sm-6',
+            ),
+            array(
+                'type'         => 'colorpicker',
+                'heading'      => esc_html__( 'Custom Text Color', 'overcome' ),
+                'param_name'   => 'text_color',
+                'description'  => esc_html__( 'Choose your color for this row', 'overcome' ),
+                'dependency' => array(
+                    'element'   => 'text_color_opts',
+                    'value'     => 'custom'
+                ),
+                'edit_field_class' => 'vc_col-sm-6',
+            ),
             array(
                 'type'        => 'el_id',
                 'settings' => array(
@@ -134,21 +157,8 @@ vc_map(array(
                         'std'           => 'Donec euismod sem ac urna finibus, sit amet efficitur erat tem pus. Ut dapibus dictum turpis, vel faucibus erat posuere vitae icitur erat tem puna'
                     ),
                 ),
-                'group' => esc_html__('Testimonial Item','overcome'),
-            )
-        ),
-        // Text Style
-        ef5systems_vc_text_style([
-            'color'       => 'text_color_opts',
-            'font_size'   => 'text_size',
-            'font_style'  => 'text_font_style',
-            'line_height' => 'text_line_height',
-            'element'     => '',
-            'value'       => '',
-            'value_opt'   => '',
-            'group'       => esc_html__('Testimonial Item','overcome')
-        ]),
-        array(
+                'group' => esc_html__('Testimonial Item','overcome')
+            ),
             array(
                 'type'       => 'dropdown',
                 'heading'    => esc_html__('Layout Style','overcome'),
@@ -209,57 +219,6 @@ class WPBakeryShortCode_ef5_testimonial extends WPBakeryShortCode
             </div>
         <?php
     }
-
-    protected function overcome_tm_text2($testimonial, $atts,$args = []){
-        if(empty($testimonial['text'])) return;
-        $args = wp_parse_args($args, [
-            'class' => ''
-        ]);
-        $classes = ['ttmn-text', 'text-'.$atts['text_color_opts'], $args['class']];
-
-        $text_color = ef5systems_get_vc_param_value($atts, 'text_color_opts');
-        $custom_text_color = ef5systems_get_vc_param_value($atts,'text_color_opts', true);
-
-        $text_size = ef5systems_get_vc_param_value($atts, 'text_size');
-        $custom_text_size = ef5systems_get_vc_param_value($atts, 'text_size', true);
-        $custom_text_size = is_numeric($custom_text_size) ? $custom_text_size.'px' : $custom_text_size;
-
-        $font_style = ef5systems_get_vc_param_value($atts, 'text_font_style');
-
-        $line_height = ef5systems_get_vc_param_value($atts, 'text_line_height');
-        $custom_line_height = ef5systems_get_vc_param_value($atts,'text_line_height', true);
-
-
-        extract( $atts );
-        $text_attrs = $text_css = [];
-
-        $text_color = isset($text_color) && !empty($text_color) ? 'ef5-text-'.$text_color : '';
-        $text_size = isset($text_size) && !empty($text_size) ? 'text-'.$text_size : '';
-        $font_style = isset($font_style) && !empty($font_style) ? 'font-style-'.$font_style : '';
-        $line_height = isset($line_height) && !empty($line_height) ? 'lh-'.$line_height : '';
-        $text_css_class = [
-            'ttmn-text',
-            $text_color,
-            $text_size,
-            $font_style,
-            $line_height,
-            $args['class']
-        ];
-        $text_attrs[] = 'class="'.overcome_optimize_css_class(implode(' ', $text_css_class)).'"';
-
-        // Custom Style
-        $styles = [];
-        if(!empty($text_color_opts) && !empty($custom_text_color)) $styles[] = 'color:'.$custom_text_color;
-        if(!empty($text_size) && !empty($custom_text_size)) $styles[] = 'font-size:'.$custom_text_size;
-        if(!empty($line_height) && !empty($custom_line_height)) $styles[] = 'line-height:'.$custom_line_height;
-        $text_attrs[] = !empty($styles) ? 'style="'.implode(';', $styles).'"' : ''
-    ?>
-        <div <?php echo trim(implode(' ', $text_attrs));?>><?php 
-            echo overcome_html($testimonial['text']); 
-        ?></div>
-    <?php
-    }
-
     protected function overcome_tm_name($testimonial, $atts, $args=[]){
         if(empty($testimonial['author_name'])) return;
         $args = wp_parse_args($args,[

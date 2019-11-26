@@ -75,6 +75,18 @@ $inner_css_classes = ['ttmn-inner','transition'];
                             endif;
                             echo '<div class="'.trim(implode(' ', $inner_css_classes)).'" '.$owl_item_space.'>';
                             	switch ($layout_template) {
+                                    case '3':
+                                        // text 
+                                        $this->overcome_tm_text($testimonial, $atts,['class' => 'text-20 font-style-300 pb-40']);
+                                        //avatar
+                                        $this->overcome_tm_avatar($testimonial,$atts,['size' => '73', 'img_class' => 'mb-20 circle ml-auto mr-auto']);
+                                        // name
+                                        $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500 d-block']);
+                                        // position
+                                        $this->overcome_tm_position($testimonial,['class' => 'text-13 ef5-text-accent d-block']);
+                                        // star rating
+                                        $this->overcome_tm_rate($testimonial, $atts);
+                                    break;
                                     case '2' :
                                         echo '<div class="ef5-bg-white ef5-rounded-10 p-25">';
                                             echo '<div class="ttmn-header row align-items-center pb-25">';
@@ -100,7 +112,6 @@ $inner_css_classes = ['ttmn-inner','transition'];
                             		default:
                             			// text 
                                         $this->overcome_tm_text($testimonial, $atts,['class' => 'text-22 font-style-300 pb-40']);
-                                        $this->overcome_tm_text2($testimonial, $atts);
                             			//avatar
                             			$this->overcome_tm_avatar($testimonial,$atts,['size' => '73', 'img_class' => 'mb-20 circle ml-auto mr-auto']);
                                         // name
