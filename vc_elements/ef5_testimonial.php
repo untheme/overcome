@@ -30,29 +30,6 @@ vc_map(array(
                 'std'         => '1',
                 'admin_label' => true
             ),
-            // Text Color
-            array(
-                'type'         => 'dropdown',
-                'heading'      => esc_html__( 'Text Color', 'overcome' ),
-                'param_name'   => 'text_color_opts',
-                'value'        => ef5systems_colors_option_for_vc([
-                    esc_html__('Custom','overcome') => 'custom'
-                ]),
-                'std'          => '',
-                'description'  => esc_html__( 'Choose color for this row', 'overcome' ),
-                'edit_field_class' => 'vc_col-sm-6',
-            ),
-            array(
-                'type'         => 'colorpicker',
-                'heading'      => esc_html__( 'Custom Text Color', 'overcome' ),
-                'param_name'   => 'text_color',
-                'description'  => esc_html__( 'Choose your color for this row', 'overcome' ),
-                'dependency' => array(
-                    'element'   => 'text_color_opts',
-                    'value'     => 'custom'
-                ),
-                'edit_field_class' => 'vc_col-sm-6',
-            ),
             array(
                 'type'        => 'el_id',
                 'settings' => array(
@@ -157,8 +134,20 @@ vc_map(array(
                         'std'           => 'Donec euismod sem ac urna finibus, sit amet efficitur erat tem pus. Ut dapibus dictum turpis, vel faucibus erat posuere vitae icitur erat tem puna'
                     ),
                 ),
-                'group' => esc_html__('Testimonial Item','overcome')
-            ),
+                'group' => esc_html__('Testimonial Item','overcome'),
+            )
+        ),
+        ef5systems_vc_text_style([
+            'color'       => 'text_color_opts',
+            'font_size'   => 'text_size',
+            'font_style'  => 'text_font_style',
+            'line_height' => 'text_line_height',
+            'element'     => '',
+            'value'       => '',
+            'value_opt'   => true,
+            'group'       => esc_html__('Testimonial Item','overcome')
+        ]),
+        array(
             array(
                 'type'       => 'dropdown',
                 'heading'    => esc_html__('Layout Style','overcome'),
