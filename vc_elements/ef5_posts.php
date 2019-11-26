@@ -352,7 +352,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                 ?>
                 <div class="col pt-17 p-15 pb-xs-0">
                     <?php 
-                        overcome_post_title(['class'=>'text-20 pb-5 font-style-500']);
+                        overcome_post_title(['class'=>'text-20 pb-8 font-style-500']);
                         overcome_post_excerpt([
                             'show_excerpt' => '1', 
                             'length'       => '15', 
