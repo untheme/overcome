@@ -26,6 +26,7 @@ vc_map(array(
                 'value'      =>  array(
                     '1'       => get_template_directory_uri().'/vc_elements/layouts/testimonial-1.png',
                     '2'       => get_template_directory_uri().'/vc_elements/layouts/testimonial-2.png',
+                    '3'       => get_template_directory_uri().'/vc_elements/layouts/testimonial-3.png',
                 ),
                 'std'         => '1',
                 'admin_label' => true
