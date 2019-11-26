@@ -82,11 +82,11 @@ if(empty($atts['content_align']) && $atts['layout_template'] !== '2') $ttmn_wrap
                                         // text 
                                         $this->overcome_tm_text($testimonial, $atts,['class' => 'text-20 font-style-300 pb-40']);
                                         //avatar
-                                        $this->overcome_tm_avatar($testimonial,$atts,['size' => '73', 'img_class' => 'mb-20 circle ml-auto mr-auto']);
+                                        $this->overcome_tm_avatar($testimonial,$atts,['size' => '80', 'img_class' => 'mb-20 circle ml-auto mr-auto']);
                                         // name
                                         $this->overcome_tm_name($testimonial, $atts,['class' => 'text-22 font-style-400 d-block']);
                                         // position
-                                        $this->overcome_tm_position($testimonial,['class' => 'text-12 text-uppercase d-block']);
+                                        $this->overcome_tm_position($testimonial,['class' => 'text-12 text-uppercase d-block text-'.$atts['text_color']]);
                                         // star rating
                                         $this->overcome_tm_rate($testimonial, $atts);
                                     break;
