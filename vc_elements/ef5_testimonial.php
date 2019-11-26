@@ -137,13 +137,14 @@ vc_map(array(
                 'group' => esc_html__('Testimonial Item','overcome'),
             )
         ),
+        // Text Style
         ef5systems_vc_text_style([
             'color'       => 'text_color_opts',
             'font_size'   => 'text_size',
             'font_style'  => 'text_font_style',
             'line_height' => 'text_line_height',
-            'element'     => '',
-            'value'       => '',
+            'element'     => 'text_color_opts',
+            'value'       => 'custom',
             'value_opt'   => true,
             'group'       => esc_html__('Testimonial Item','overcome')
         ]),
