@@ -37,7 +37,12 @@
 
 .ef5-owl-dots-circle{
 	.ef5-owl-dot{
+		background: transparent;
 		@include border-radius(50%);
+		&:hover,
+		&.active{
+			background: transparent;
+		}
 	}
 	&.size-11{
 		margin-left: -6px;
@@ -47,6 +52,22 @@
 			height: 23px;
 			padding: 6px;
 			margin: 0;
+			span{
+				width: 11px;
+				height: 11px;
+				display: block;
+			}
+		}
+	}
+}
+.ef5-owl-dots-color-white-blue-5580ff{
+	.ef5-owl-dot{
+		span{
+			background-color: $white;
+		}
+		&:hover,
+		&.active{
+			background-color: #5580ff;
 		}
 	}
 }
