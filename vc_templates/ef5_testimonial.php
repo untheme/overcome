@@ -100,6 +100,7 @@ $inner_css_classes = ['ttmn-inner','transition'];
                             		default:
                             			// text 
                                         $this->overcome_tm_text($testimonial, $atts,['class' => 'text-22 font-style-300 pb-40']);
+                                        $this->overcome_tm_text2($testimonial, $atts);
                             			//avatar
                             			$this->overcome_tm_avatar($testimonial,$atts,['size' => '73', 'img_class' => 'mb-20 circle ml-auto mr-auto']);
                                         // name
