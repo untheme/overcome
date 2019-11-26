@@ -38,10 +38,12 @@
 .ef5-owl-dots-circle{
 	.ef5-owl-dot{
 		background: transparent;
-		@include border-radius(50%);
 		&:hover,
 		&.active{
 			background: transparent;
+		}
+		span{
+			@include border-radius(50%);
 		}
 	}
 	&.size-11{
