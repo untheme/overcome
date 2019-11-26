@@ -60,16 +60,16 @@
 			}
 		}
 	}
-}
-.ef5-owl-dots-color-white-blue-5580ff{
-	.ef5-owl-dot{
-		span{
-			background-color: $white;
-		}
-		&:hover,
-		&.active{
+	&.ef5-owl-dots-color-white-blue-5580ff{
+		.ef5-owl-dot{
 			span{
-				background-color: #5580ff;
+				background-color: $white;
+			}
+			&:hover,
+			&.active{
+				span{
+					background-color: #5580ff;
+				}
 			}
 		}
 	}
