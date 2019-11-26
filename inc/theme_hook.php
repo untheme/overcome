@@ -255,5 +255,6 @@ add_filter('ef5systems_carousel_custom_dot_color', 'overcome_owl_custom_dot_colo
 function overcome_owl_custom_dot_color(){
 	return [
 		esc_html__('White - Primary','overcome') => 'white-primary'
+		esc_html__('White - Blue (#5580ff)','overcome') => 'white-blue-5580ff'
 	];
 }
