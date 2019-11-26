@@ -50,9 +50,6 @@ $j=0;
                                             // image            
                                             $this->overcome_team_image($atts, $team, ['size' => '180', 'img_class' => 'circle']);
                                         ?>
-                                        <div class="overlay ef5-bg-overlay ef5-rounded-10 ef5-hover-shadow-3 d-flex justify-content-center"><div class="col-auto align-self-end"><?php
-                                                $this->overcome_team_socials($team,['class' => 'ef5-rounded-5']);
-                                        ?></div></div>
                                     </div>
                                     <div class="team-info"><?php
                                             // name
@@ -61,6 +58,8 @@ $j=0;
                                             $this->overcome_team_position($team,['class' => 'text-18']);
                                             // desc 
                                             $this->overcome_team_desc($team);
+                                            // social
+                                            $this->overcome_team_socials($team);
                                     ?></div>
                                 <?php
                                     break;
