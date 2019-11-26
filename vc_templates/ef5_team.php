@@ -48,7 +48,7 @@ $j=0;
                                     <div class="relative d-inline-block">
                                         <?php
                                             // image            
-                                            $this->overcome_team_image($atts, $team, ['size' => '180']);
+                                            $this->overcome_team_image($atts, $team, ['size' => '180', 'img_class' => 'circle']);
                                         ?>
                                         <div class="overlay ef5-bg-overlay ef5-rounded-10 ef5-hover-shadow-3 d-flex justify-content-center"><div class="col-auto align-self-end"><?php
                                                 $this->overcome_team_socials($team,['class' => 'ef5-rounded-5']);
