@@ -301,7 +301,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
 
         switch (get_post_type()) {
             case 'tribe_events':
-                $overlay_content .= overcome_post_read_more(['show_readmore' => '1', 'title' => $args['readmore_title'], 'echo' => false,'class'=>'ef5-btn ef5-btn-md accent outline']); 
+                $overlay_content .= overcome_post_read_more(['show_readmore' => '1', 'title' => $args['readmore_title'], 'echo' => false,'class'=>'ef5-btn ef5-btn-md accent']); 
                 break;
             case 'ef5_donation': 
                 $overlay_content .= overcome_loop_donate_info(['layout' => '2', 'echo' => false]); 
@@ -310,7 +310,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                 $overlay_content .= overcome_loop_donate_info(['layout' => '2', 'echo' => false]); 
                 break;
             default:
-                $overlay_content .= overcome_post_read_more(['show_readmore' => '1', 'echo' => false,'class'=>'ef5-btn ef5-btn-md accent outline']);
+                $overlay_content .= overcome_post_read_more(['show_readmore' => '1', 'echo' => false,'class'=>'ef5-btn ef5-btn-md accent']);
                 break;
         }
 
