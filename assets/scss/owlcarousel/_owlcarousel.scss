@@ -35,7 +35,7 @@
 	}
 }
 
-.ef5-owl-dots-circle{
+.ef5-owl-dots.ef5-owl-dots-circle{
 	.ef5-owl-dot{
 		background: transparent;
 		&:hover,
@@ -68,7 +68,9 @@
 		}
 		&:hover,
 		&.active{
-			background-color: #5580ff;
+			span{
+				background-color: #5580ff;
+			}
 		}
 	}
 }
