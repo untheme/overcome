@@ -85,7 +85,7 @@
                         <div class="ef5-post-info">
                             <?php 
                                 overcome_post_title([
-                                    'heading_tag' => 'text-22'
+                                    'heading_tag' => 'text-22 font-style-400'
                                 ]);
                                 overcome_post_excerpt([
                                     'show_excerpt' => '1', 
