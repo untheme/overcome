@@ -78,7 +78,7 @@
                             overcome_post_media([
                                 'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
                                 'default_thumb'  => true,
-                                'img_class'      => '',   
+                                'img_class'      => 'ef5-rounded-10',   
                                 'after'          => ''
                             ]);
                         ?>
