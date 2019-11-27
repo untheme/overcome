@@ -378,7 +378,7 @@ function overcome_ef5systems_styles(){
     }
 }
 
-function    () {
+function overcome_inline_styles() {
     ob_start();
     $preset_primary_color = $primary_color = overcome_get_opts( 'primary_color', apply_filters('overcome_primary_color', overcome_configs('primary_color')) );
     $preset_accent_color = $accent_color = overcome_get_opts( 'accent_color', apply_filters('overcome_accent_color', overcome_configs('accent_color')) );
@@ -578,6 +578,5 @@ if(class_exists('WooCommerce')){
  *
 */
 overcome_require_folder('inc/extensions', get_template_directory());
-
 
 var_dump(ef5systems_twitter());
