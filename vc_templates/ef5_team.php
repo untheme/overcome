@@ -45,7 +45,7 @@ $j=0;
                                 <?php switch ($layout_template) {
                                     case '2':
                                 ?>
-                                <div class="ef5-hover-shadow-4 transition ef5-rounded-10 p-30 p-lg-45">
+                                <div class="ef5-shadow-4 ef5-hover-shadow-4 transition ef5-rounded-10 p-30 p-lg-45">
                                     <div class="relative d-inline-block">
                                         <?php
                                             // image            
