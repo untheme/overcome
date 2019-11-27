@@ -409,7 +409,8 @@ $social-colors: (
 // loop, to style social media links
 @mixin overcome_social_color($tag : color, $priority : ''){
     @each $name, $color in $social-colors {
-        &[class*='#{$name}']{
+        &[class*='#{$name}'],
+        &[href*='#{$name}']{
             @if $priority != '' {
                 #{$tag}: $color $priority;
             } @else {
