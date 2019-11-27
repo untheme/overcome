@@ -217,6 +217,7 @@ class WPBakeryShortCode_ef5_team extends WPBakeryShortCode
                 break;
         }
         $css_classes[] = $args['class'];
+        if(empty($atts['content_align'])) $css_classes[] = 'text-center';
         echo trim(implode(' ', $css_classes));
     }
     protected function overcome_team_item_class($atts, $args =[]){
