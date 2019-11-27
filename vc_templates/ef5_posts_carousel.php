@@ -91,7 +91,7 @@
                                     'show_excerpt' => '1', 
                                     'length'       => '16', 
                                     'more'         => '',
-                                    'class'        => 'ef5-text-fourth pt-13' 
+                                    'class'        => 'ef5-text-fourth pt-13 mb-15' 
                                 ]);
                                 if(class_exists('EF5Payments')) {
                                     ef5systems_donation_progress_donors([
