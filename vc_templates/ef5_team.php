@@ -54,7 +54,7 @@ $j=0;
                                     </div>
                                     <div class="team-info"><?php
                                             // name
-                                            $this->overcome_team_name($team,['class' => 'text-18 font-style-500']);
+                                            $this->overcome_team_name($team,['class' => 'text-22 font-style-500']);
                                             // position
                                             $this->overcome_team_position($team,['class' => 'text-18']);
                                             // desc 
