@@ -71,6 +71,48 @@
             <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
             <?php
                 switch ($layout_template) {
+                    case '10':
+                    ?>  
+                    <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                        <?php 
+                            overcome_post_media([
+                                'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
+                                'default_thumb'  => true,
+                                'img_class'      => '',   
+                                'after'          => ''
+                            ]);
+                        ?>
+                        <div class="ef5-post-info">
+                            <?php 
+                                overcome_post_title([
+                                    'heading_tag' => 'text-22'
+                                ]);
+                                overcome_post_excerpt([
+                                    'show_excerpt' => '1', 
+                                    'length'       => '16', 
+                                    'more'         => '',
+                                    'class'        => 'ef5-text-fourth' 
+                                ]);
+                                if(class_exists('EF5Payments')) {
+                                    ef5systems_donation_progress_donors([
+                                        'donor_icon' => '<span class="flaticon-like"></span>'
+                                    ]);
+                                    ef5payments_donation_donate_amount([
+                                        'goal_label' => esc_html__('Goal:','overcome'),
+                                        'raised_label' => esc_html__('Raised:','overcome')
+                                    ]);
+                                }
+                                overcome_post_read_more([
+                                    'before'         => '<div class="ef5-readmore-wrap">',
+                                    'after'          => '</div>',
+                                    'readmore_class' => 'text-12 ef5-text-thirdary font-style-500',
+                                    'icon_right'     => is_rtl() ? 'flaticon-go-back-left-arrow' : 'flaticon-right-arrow-forward'
+                                ]);
+                            ?>
+                        </div>
+                    </div>
+                    <?php
+                        break;
                     case '4':
                     $large_item_class = ($thumbnail_size_index === 0) ? 'ef5-large-item' : 'ef5-small-item';
                     
@@ -81,7 +123,7 @@
                     } else {
                         $heading_class = 'text-18 pb-15';
                     }
-                ?>
+            ?>
                     <div class="<?php echo trim(implode(' ', $item_css_class)). ' '.$large_item_class; ?>">
                         <?php 
                             overcome_post_media([

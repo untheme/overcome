@@ -83,6 +83,7 @@ vc_map(array(
                     '2' => get_template_directory_uri().'/vc_elements/layouts/post-2.png',
                     '3' => get_template_directory_uri().'/vc_elements/layouts/post-3.png',
                     '4' => get_template_directory_uri().'/vc_elements/layouts/post-4.png',
+                    '10' => get_template_directory_uri().'/vc_elements/layouts/post-10.png',
                 ),
                 'std'   => '2',
                 'group' => esc_html__('Layouts','unbreak'),
