@@ -33,6 +33,8 @@
 }
 // Custom Colors
 $custom_colors:(
+	'secondary' : $secondary_color
+	'thirdary' : $thirdary_color
 	'fourth' : $fourth_color
 );
 @each $name, $color in $custom_colors{

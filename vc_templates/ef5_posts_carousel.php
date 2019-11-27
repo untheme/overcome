@@ -105,7 +105,7 @@
                                 overcome_post_read_more([
                                     'before'         => '<div class="ef5-readmore-wrap">',
                                     'after'          => '</div>',
-                                    'readmore_class' => 'text-12 ef5-text-thirdary font-style-500',
+                                    'readmore_class' => 'text-12 text-uppercase ef5-text-thirdary font-style-500',
                                     'icon_right'     => is_rtl() ? 'flaticon-go-back-left-arrow' : 'flaticon-right-arrow-forward'
                                 ]);
                             ?>
