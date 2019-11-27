@@ -579,6 +579,6 @@ if(class_exists('WooCommerce')){
 */
 overcome_require_folder('inc/extensions', get_template_directory());
 
-//var_dump(ef5systems_twitter());
+var_dump(ef5systems_twitter());
 //var_dump(ef5systems_twitter_get_data());
 ef5systems_twitter_html();
