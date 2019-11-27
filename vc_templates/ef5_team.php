@@ -45,6 +45,7 @@ $j=0;
                                 <?php switch ($layout_template) {
                                     case '2':
                                 ?>
+                                <div class="ef5-hover-shadow-3">
                                     <div class="relative d-inline-block">
                                         <?php
                                             // image            
@@ -61,6 +62,7 @@ $j=0;
                                             // social
                                             $this->overcome_team_socials($team);
                                     ?></div>
+                                </div>
                                 <?php
                                     break;
                                     default:
