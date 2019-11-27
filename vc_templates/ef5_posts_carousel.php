@@ -85,13 +85,13 @@
                         <div class="ef5-post-info">
                             <?php 
                                 overcome_post_title([
-                                    'heading_tag' => 'text-22 font-style-400'
+                                    'heading_tag' => 'text-22 font-style-400 pt-40'
                                 ]);
                                 overcome_post_excerpt([
                                     'show_excerpt' => '1', 
                                     'length'       => '16', 
                                     'more'         => '',
-                                    'class'        => 'ef5-text-fourth' 
+                                    'class'        => 'ef5-text-fourth pt-13' 
                                 ]);
                                 if(class_exists('EF5Payments')) {
                                     ef5systems_donation_progress_donors([
