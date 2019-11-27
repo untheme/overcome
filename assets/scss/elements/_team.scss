@@ -32,6 +32,7 @@
 		margin-right: -11px;
 		a{
 			padding: 0 11px;
+			@include overcome_social_color();
 		}
 	}
 }
