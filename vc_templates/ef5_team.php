@@ -56,11 +56,11 @@ $j=0;
                                             // name
                                             $this->overcome_team_name($team,['class' => 'text-22 font-style-500']);
                                             // position
-                                            $this->overcome_team_position($team,['class' => 'text-12 text-uppercase text-fourth']);
+                                            $this->overcome_team_position($team,['class' => 'text-12 text-uppercase ef5-text-fourth']);
                                             // desc 
                                             $this->overcome_team_desc($team);
                                             // social
-                                            $this->overcome_team_socials($team);
+                                            $this->overcome_team_socials($team,['class' => 'ef5-colored']);
                                     ?></div>
                                 </div>
                                 <?php
