@@ -1,6 +1,7 @@
 .ef5-tweets-1{
 	.ef5-tweet-text{
 		padding-bottom: 9px;
+		position: relative;
 		.ef5-tweet-text-inner{
 			font-size: 14px;
 			background-color: #2f2e4b;
@@ -24,6 +25,12 @@
 			position: absolute;
 			left: 20px;
 			bottom: 0;
+			[dir="rtl"] &{
+				left: auto;
+				right: 20px;
+				border-width: 0 9px 9px 0;
+				border-color: transparent #2f2e4b transparent transparent;
+			}
 		}
 	}
 }
