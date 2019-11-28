@@ -70,6 +70,7 @@ vc_map(array(
             ),
             array(
                 'type'       => 'dropdown',
+                'heading'    => esc_html__('Show Date As','overcome'),
                 'param_name' => 'relative_date',
                 'value'      => array(
                 	esc_html__('Default','overcome') => '0',
@@ -78,7 +79,6 @@ vc_map(array(
                 'std'		  => '0',	
                 'group'		  => esc_html__('Settings','overcome')
             ),
-
             array(
                 'type'       => 'textfield',
                 'heading'    => esc_html__('Date Format','overcome'),
@@ -112,7 +112,6 @@ class WPBakeryShortCode_ef5_tweets extends WPBakeryShortCode
 {
     protected function content($atts, $content = null){
         $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
-        ef5systems_owl_call_settings($atts);
         return parent::content($atts, $content);
     }
 }
