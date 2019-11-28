@@ -579,4 +579,11 @@ if(class_exists('WooCommerce')){
 */
 overcome_require_folder('inc/extensions', get_template_directory());
 
-ef5systems_twitter_html(['relative_date' => true]);
+ef5systems_twitter_html([
+    'screen_name' => 'joomskys',
+    'num'         => '1', // interger
+    'rts'         => true, // bool
+    'ats'         => true, // bool
+    'pop'         => '5', // interger
+    'relative_date' => true]
+);
