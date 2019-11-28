@@ -1,0 +1,26 @@
+.ef5-tweets-1{
+	.ef5-tweet-text{
+		font-size: 14px;
+		background-color: #2f2e4b;
+		color: $white;
+		padding: 13px 20px;
+		@include border-radius(10px);
+		a{
+			color: #777777;
+			&:hover{
+				color: $accent_color;
+			}
+		}
+		&:after{
+			content: '';
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 9px 9px 0 0;
+			border-color: #2f2e4b transparent transparent transparent;
+			position: absolute;
+			left: 20px;
+			bottom: -9px;
+		}
+	}
+}
