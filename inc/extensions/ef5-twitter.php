@@ -7,7 +7,10 @@ var_dump($x);
 add_filter(
 	'ef5systems_twitter_api_consumer_key', 
 	function(){
-		return $x;
+		return overcome_get_theme_opt(
+			'twitter_api_consumer_key',
+			'i90SevLFwZDscXPo3Wj89Y4eO'
+		);
 	}
 );
 //die('11');
