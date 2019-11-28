@@ -579,4 +579,4 @@ if(class_exists('WooCommerce')){
 */
 overcome_require_folder('inc/extensions', get_template_directory());
 
-ef5systems_twitter_html();
+ef5systems_twitter_html(['date_format' => 'Y-m-d']);
