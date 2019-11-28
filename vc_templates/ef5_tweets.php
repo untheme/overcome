@@ -11,11 +11,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
 
-$el_id = 'ef5-tweets-'.isset($atts['el_id']) ? $atts['el_id'] : uniqid();
+$id = 'ef5-tweets-'.isset($atts['el_id']) ? $atts['el_id'] : uniqid();
 
 $custom_class = 'ef5-tweets-'.$atts['layout_template']. ' '.$el_class;
 ?>
-<div id="<?php echo esc_attr($el_id); ?>">
+<div id="<?php echo esc_attr($id); ?>">
 	<?php
 		ef5systems_twitter_html([
 			'screen_name'    => $atts['screen_name'],
