@@ -8,7 +8,7 @@ add_filter(
 	'ef5systems_twitter_api_consumer_key', 
 	$x
 );
-die('11');
+//die('11');
 // add_filter(
 // 	'ef5systems_twitter_api_consumer_secret', 
 // 	overcome_get_theme_opt(
