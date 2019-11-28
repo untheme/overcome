@@ -63,7 +63,7 @@ vc_map(array(
                 'type'       => 'dropdown',
                 'param_name' => 'relative_date',
                 'value'      => array(
-                	esc_html__('Default','overcome') => false
+                	esc_html__('Default','overcome') => false,
                 	esc_html__('Relative','overcome') => true
                 ),
                 'std'		  => false,	
