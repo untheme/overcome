@@ -14,8 +14,10 @@ extract( $atts );
 $id = 'ef5-tweets-'.uniqid();
 
 $custom_class = 'ef5-tweets-'.$atts['layout_template']. ' '.$el_class;
+
 ?>
 <div id="<?php echo esc_attr($id); ?>">
+	<?php $this->title($atts); ?>
 	<?php
 		ef5systems_twitter_html([
 			'screen_name'    => $atts['screen_name'],

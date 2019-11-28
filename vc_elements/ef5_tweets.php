@@ -25,6 +25,16 @@ vc_map(array(
                 'value'      => '',
                 'description' => esc_html__('Style particular content element differently - add a class name and refer to it in custom CSS.', 'overcome'),
             ),
+            array(
+                'type'        => 'textfield',
+                'heading'     => esc_html__( 'Element Title', 'overcome' ),
+                'description' => esc_html__( 'Enter the text you want to show as title', 'overcome' ),
+                'param_name'  => 'el_title',
+                'value'       => '',
+                'std'         => '',
+                'admin_label' => true,
+                'group'		  => esc_html__('Settings','overcome')
+            ),
         	array(
                 'type'       => 'textfield',
                 'heading'    => esc_html__('Twitter Name','overcome'),
@@ -113,5 +123,17 @@ class WPBakeryShortCode_ef5_tweets extends WPBakeryShortCode
     protected function content($atts, $content = null){
         $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
         return parent::content($atts, $content);
+    }
+    protected function title($atts, $args=[]){
+        if(empty($atts['el_title'])) return;
+        $args = wp_parse_args($args, [
+            'class' => ''
+        ]);
+        $classes = ['ef5-el-title', 'ef5-heading', $args['class']];
+        ?>
+            <div class="<?php echo trim(implode(' ', $classes));?>">
+                <?php echo esc_html($atts['el_title']); ?>
+            </div>
+        <?php
     }
 }
