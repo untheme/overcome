@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
 
-$id = 'ef5-tweets-'.isset($atts['el_id']) ? $atts['el_id'] : uniqid();
+$id = 'ef5-tweets-'.uniqid();
 
 $custom_class = 'ef5-tweets-'.$atts['layout_template']. ' '.$el_class;
 ?>
