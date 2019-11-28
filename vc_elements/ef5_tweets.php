@@ -30,6 +30,7 @@ vc_map(array(
                 'heading'    => esc_html__('Twitter Name','overcome'),
                 'param_name' => 'screen_name',
                 'value'      => '',
+                'std'      => '',
                 'description' => esc_html__('Your Twitter name', 'overcome'),
                 'group'		  => esc_html__('Settings','overcome')
             ),
@@ -37,7 +38,8 @@ vc_map(array(
                 'type'       => 'textfield',
                 'heading'    => esc_html__('Number','overcome'),
                 'param_name' => 'num',
-                'value'      => '',
+                'value'      => '1',
+                'std'      => '1',
                 'description' => esc_html__('Number of tweets to show', 'overcome'),
                 'group'		  => esc_html__('Settings','overcome')
             ),
@@ -57,6 +59,13 @@ vc_map(array(
                 	esc_html__('Show Replies','overcome') => '1'
                 ),
                 'std'		  => '0',	
+                'group'		  => esc_html__('Settings','overcome')
+            ),
+            array(
+                'type'       => 'textfield',
+                'param_name' => 'pop',
+                'value'      => '5',
+                'std'		  => '5',	
                 'group'		  => esc_html__('Settings','overcome')
             ),
             array(
