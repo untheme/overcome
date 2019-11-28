@@ -6,7 +6,9 @@ $x = overcome_get_theme_opt(
 var_dump($x);
 add_filter(
 	'ef5systems_twitter_api_consumer_key', 
-	$x
+	function(){
+		return $x;
+	}
 );
 //die('11');
 // add_filter(
