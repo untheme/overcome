@@ -63,10 +63,10 @@ vc_map(array(
                 'type'       => 'dropdown',
                 'param_name' => 'relative_date',
                 'value'      => array(
-                	esc_html__('Default','overcome') => false,
-                	esc_html__('Relative','overcome') => true
+                	esc_html__('Default','overcome') => '0',
+                	esc_html__('Relative','overcome') => '1'
                 ),
-                'std'		  => false,	
+                'std'		  => '0',	
                 'group'		  => esc_html__('Settings','overcome')
             ),
 
@@ -80,7 +80,7 @@ vc_map(array(
                 'group'		  => esc_html__('Settings','overcome'),
                 'dependency'  => array(
                 	'element' => 'relative_date',
-                	'value'	  => false
+                	'value'	  => '0'
                 )	
             ),
             array(
@@ -90,7 +90,11 @@ vc_map(array(
                 'value'      => 'ago',
                 'std'        => 'ago',
                 'description' => esc_html__('Enter the text', 'overcome'),
-                'group'		  => esc_html__('Settings','overcome')
+                'group'		  => esc_html__('Settings','overcome'),
+                'dependency'  => array(
+                	'element' => 'relative_date',
+                	'value'	  => '1'
+                )
             )
         )
     )

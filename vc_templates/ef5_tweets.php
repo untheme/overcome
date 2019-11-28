@@ -18,13 +18,15 @@ $custom_class = 'ef5-tweets-'.$atts['layout_template']. ' '.$el_class;
 <div id="<?php echo esc_attr($el_id); ?>">
 	<?php
 		ef5systems_twitter_html([
-			'screen_name'   => $atts['screen_name'],
-			'num'           => $atts['num'], // interger
-			'rts'           => $atts['rts'], // bool
-			'ats'           => $atts['ats'], // bool
-			'pop'           => $atts['pop'], // interger
-			'relative_date' => $atts['relative_date'],
-			'class'			=> $custom_class 
+			'screen_name'    => $atts['screen_name'],
+			'num'            => $atts['num'], // interger
+			'rts'            => $atts['rts'], // bool
+			'ats'            => $atts['ats'], // bool
+			'pop'            => $atts['pop'], // interger
+			'date_format'    => !empty($atts['date_format']) ? $atts['date_format'] : get_option('date_format'),
+			'relative_date'  => (bool)$atts['relative_date'],
+			'relative_label' => $atts['relative_label'],
+			'class'          => $custom_class 
 		]);
 	?>
 </div>
