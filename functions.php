@@ -581,9 +581,9 @@ overcome_require_folder('inc/extensions', get_template_directory());
 
 ef5systems_twitter_html([
     'screen_name' => 'joomskys',
-    'num'         => '1', // interger
+    'num'         => '3', // interger
     'rts'         => true, // bool
     'ats'         => true, // bool
     'pop'         => '5', // interger
-    'relative_date' => true]
-);
+    'relative_date' => true    
+]);
