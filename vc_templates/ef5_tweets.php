@@ -20,8 +20,8 @@ $custom_class = 'ef5-tweets-'.$atts['layout_template']. ' '.$el_class;
 		ef5systems_twitter_html([
 			'screen_name'    => $atts['screen_name'],
 			'num'            => $atts['num'], // interger
-			'rts'            => $atts['rts'], // bool
-			'ats'            => $atts['ats'], // bool
+			'rts'            => (bool)$atts['rts'], // bool
+			'ats'            => (bool)$atts['ats'], // bool
 			'pop'            => $atts['pop'], // interger
 			'date_format'    => !empty($atts['date_format']) ? $atts['date_format'] : get_option('date_format'),
 			'relative_date'  => (bool)$atts['relative_date'],
