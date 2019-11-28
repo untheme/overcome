@@ -1,10 +1,13 @@
 .ef5-tweets-1{
 	.ef5-tweet-text{
-		font-size: 14px;
-		background-color: #2f2e4b;
-		color: $white;
-		padding: 13px 20px;
-		@include border-radius(10px);
+		padding-bottom: 9px;
+		.ef5-tweet-text-inner{
+			font-size: 14px;
+			background-color: #2f2e4b;
+			color: $white;
+			padding: 13px 20px;
+			@include border-radius(10px);
+		}
 		a{
 			color: #777777;
 			&:hover{
@@ -20,7 +23,7 @@
 			border-color: #2f2e4b transparent transparent transparent;
 			position: absolute;
 			left: 20px;
-			bottom: -9px;
+			bottom: 0;
 		}
 	}
 }
