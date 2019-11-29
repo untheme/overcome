@@ -94,37 +94,10 @@ $customs_gutters: (
 	padding-left: $grid-gutter-width / 2;
 	padding-right: $grid-gutter-width / 2;
 }
-.ef5-container2,
-.ef5-container3{
-	position: relative;
-	&:before{
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		width: 200%;
-		background: inherit;
-		[dir="rtl"] &{
-			left: auto;
-			right: 0;
-		}
-	}
-}
-.ef5-container2{
-	padding: 30px;
-	@media (min-width: 1366px){
-		max-width: 75%;
-	}
-}
-.ef5-container3{
-	@media (min-width: 1366px){
-		max-width: 87.5%;
-		margin-right: unset;
-		[dir="rtl"] &{
-			margin-right: auto;
-			margin-left: unset;
-		}
+.container-wide{
+	@media (min-width: 1400px){
+		padding-left: 110px;
+		padding-right: 110px;
 	}
 }
 .ef5-grid{
