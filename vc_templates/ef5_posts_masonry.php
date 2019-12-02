@@ -139,7 +139,7 @@
                 $overcome_post_media_date  = overcome_posted_on(['echo' => false, 'show_date' => '1','class' => 'ef5-box-meta ef5-box-meta2 text-uppercase', 'sep' => '']);
 
             ?>
-            <div class="<?php $this->ef5_posts_masonry_items_class($atts,['class' => $item_w.' '.$filters_class]); ?>">
+            <div class="<?php $this->ef5_posts_masonry_items_class($atts); ?>">
             <?php  
                 switch ($item_template) {
                     default:
