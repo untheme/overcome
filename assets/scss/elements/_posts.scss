@@ -43,7 +43,8 @@
 .ef5-posts-2-1{
 	.post-grid-item{
 		@include box-shadow('0 0 1px #000');
-		.post-image {
+		.post-image,
+		.overlay {
 			@include border-radius(10px 10px 0 0);
 		}
 	}
