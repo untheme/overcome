@@ -230,7 +230,7 @@ function overcome_colors(){
 		'f5f5f5'  => ['OverCome Color 03', '#f5f5f5'],
 		'f7f7f8'  => ['OverCome Color 04', '#f7f7f8'],
 		'787878'  => ['OverCome Color 05', '#787878'],
-		'cecece'  => ['OverCome Color 06', '#cecece']
+		'cecece'  => ['OverCome Color 06', '#cecece'],
 		'353353'  => ['OverCome Color 07', '#353353']
 	];
 }
