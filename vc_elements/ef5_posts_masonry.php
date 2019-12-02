@@ -123,7 +123,7 @@ vc_map(array(
                 ), 
                 'group' => esc_html__('Filter','overcome'),
             ),
-            overcome_vc_content_align_opts([
+            ef5systems_vc_content_align_opts([
                 'param_name' => 'filter_content_align',
                 'group'      => esc_html__('Filter','overcome'),
                 'dependency' => [
