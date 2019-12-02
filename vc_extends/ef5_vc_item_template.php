@@ -39,7 +39,7 @@ function overcome_vc_post_layout2_1($atts){
                 ]);
             ?>
         </div>
-        <div class="pl-15 pr-15 pl-lg-35 pr-lg-35 pt-25 pb-25">
+        <div class="pl-15 pr-15 pl-lg-30 pr-lg-30 pt-25 pb-25">
             <?php 
                 overcome_post_title([
                     'heading_tag' => 'text-20',
