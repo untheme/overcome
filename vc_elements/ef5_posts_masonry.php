@@ -11,7 +11,7 @@ vc_map(array(
                 'type'        => 'dropdown',
                 'heading'     => esc_html__( 'Data source', 'overcome' ),
                 'param_name'  => 'post_type',
-                'value'       => overcome_vc_post_type_list(),
+                'value'       => ef5systems_vc_post_type_list(),
                 'std'         => 'post',
                 'description' => esc_html__( 'Select content type for your grid.', 'overcome' ),
                 'admin_label' => true,
