@@ -10,8 +10,6 @@
         'ef5-posts-masonry-'.$layout_template,
         'ef5-posts-grid-'.$item_template
     );
-    
-    $css_class = preg_replace( '/\s+/', ' ', apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, implode( ' ', array_filter( $css_classes ) ), $this->settings['base'], $atts ) );
 
     /* Post query */
     $tax_query = overcome_tax_query($post_type, $taxonomies, $taxonomies_exclude);
@@ -87,7 +85,7 @@
             ?>
         </div>
     <?php endif; ?>
-    <div class="<?php echo esc_attr(trim($css_class));?>" data-masonry="<?php echo esc_attr(json_encode($masonry_opts));?>">
+    <div class="<?php ef5_posts_masonry_wrap_class($atts);?>" data-masonry="<?php echo esc_attr(json_encode($masonry_opts));?>">
         <div class="ef5-masonry-sizer"></div>
         <div class="ef5-masonry-gutter"></div>
         <?php 

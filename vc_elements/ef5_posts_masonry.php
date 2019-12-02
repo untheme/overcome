@@ -157,4 +157,18 @@ class WPBakeryShortCode_ef5_posts_masonry extends WPBakeryShortCode
         wp_enqueue_script( 'isotope');
         return parent::content($atts, $content);
     }
+    protected function ef5_posts_masonry_wrap_class($atts, $args=[]){
+        $args = wp_parse_args($args, [
+            'class' => ''
+        ]);
+        extract($atts);
+        $css_classes = array(
+            'ef5-posts-masonry',
+            'ef5-masonry',
+            'ef5-posts-masonry-'.$layout_template,
+            'ef5-posts-grid-'.$item_template,
+            $args['class']
+        );
+        echo overcome_optimize_css_class(implode(' ', $css_classes));
+    }
 }
