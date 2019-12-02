@@ -180,6 +180,54 @@
                     }// end while
                     wp_reset_postdata();
             break;
+            case '2-1':
+                $d = 0;
+                while($posts->have_posts()){
+                    $d++;
+                    $posts->the_post();
+                    // Thumbnail Size
+                    $thumbnail_size_index++;
+                    if($thumbnail_size_index >= count($thumbnail_size)){
+                        $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
+                    }
+                    $overlay = overcome_post_donate_button(['echo' => false, 'class'=>'ef5-btn ef5-btn-md accent outline']);
+                ?>  <div class="<?php echo overcome_optimize_css_class(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
+                        <div class="<?php echo overcome_optimize_css_class(implode(' ', $item_css_class)); ?> overlay-wrap ef5-hover-shadow-1">
+                            <?php 
+                                overcome_post_media([
+                                    'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
+                                    'default_thumb'  => true,
+                                    'img_class'      => 'w-auto',   
+                                    'after'          => '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">'.$overlay.'</div></div>'
+                                ]);
+                            ?>
+                            <div class="ef5-post-info">
+                                <?php 
+                                    overcome_post_title([
+                                        'heading_tag' => 'text-20'
+                                    ]);
+                                    overcome_post_excerpt([
+                                        'show_excerpt' => '1', 
+                                        'length'       => '16', 
+                                        'more'         => ''
+                                    ]);
+                                    if(class_exists('EF5Payments')) {
+                                        ef5systems_donation_progress_donors([
+                                            'donor_icon' => '<span class="flaticon-like"></span>'
+                                        ]);
+                                        ef5payments_donation_donate_amount([
+                                            'goal_label' => esc_html__('Goal:','overcome'),
+                                            'raised_label' => esc_html__('Raised:','overcome')
+                                        ]);
+                                    }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                <?php
+                    }// end while
+                    wp_reset_postdata();
+            break;
             case '3':
                 $d = 0;
                 while($posts->have_posts()){
