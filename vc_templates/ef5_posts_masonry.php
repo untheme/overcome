@@ -64,6 +64,7 @@
             break;
     }
     // Filters
+    $filter_content_align = 'text-center';
     $filters_class = ['ef5-filters', 'ef5-masonry-filters', 'ef5-filters-'.$filter_template, str_replace('text-', 'justify-content-lg-',$filter_content_align), $this->getCSSAnimation('fadeInUp')];
     // Filter Button Data 
     $filter_terms_args = [
