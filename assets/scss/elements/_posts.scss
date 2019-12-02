@@ -47,6 +47,19 @@
 			@include border-radius(10px 10px 0 0);
 		}
 	}
+	.ef5-donation-raised {
+		span{
+			display: inline;
+			font-size: $BodyFontSize;
+		}
+		.ef5-label{
+			font-weight: 400;
+			color: #2f2f2f;
+		}
+		.ef5-value{
+			color: #787878;
+		}
+	}
 }
 
 .ef5-posts-7{
