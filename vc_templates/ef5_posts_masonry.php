@@ -154,10 +154,9 @@
                         ]);
                     ?>
                     <?php 
-                        overcome_post_header([
-                            'heading_tag' => overcome_default_value($heading_tag,'h2'), 
-                            'before_args' => ['show_cat'=> '1'], 
-                            'after_args'  => ['show_cat' => false,'show_author' => '1', 'show_date'=> '1', 'show_cmt' => '1', 'show_view' => '0', 'show_like' => '0', 'sep' => '|' ]]);
+                        overcome_post_title([
+                            'heading_tag' => '', 
+                        ]);
 
                         overcome_post_excerpt([
                             'show_excerpt' => '1', 
