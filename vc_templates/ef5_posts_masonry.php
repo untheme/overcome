@@ -34,7 +34,7 @@
     // Grid columns css class
     $grid_item_css_class = ['ef5-masonry-item', 'ef5-grid-item','ef5-hover-wrap','hoverdir-wrap','fade-in'];
     // Items CSS Classes
-    $item_css_class = ['post-masonry-item','transition', $this->getCSSAnimation($item_css_animation)];
+    $item_css_class = ['post-masonry-item','transition'];
 
     $has_shadow = ['2','3','4','5','6','14'];
     if(in_array($item_template, $has_shadow)) $item_css_class[] = 'ef5-box ef5-box-shadow-13';
