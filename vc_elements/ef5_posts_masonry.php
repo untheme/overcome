@@ -123,14 +123,14 @@ vc_map(array(
                 ), 
                 'group' => esc_html__('Filter','overcome'),
             ),
-            ef5systems_vc_content_align_opts([
+            /*ef5systems_vc_content_align_opts([
                 'param_name' => 'filter_content_align',
                 'group'      => esc_html__('Filter','overcome'),
                 'dependency' => [
                     'element' => 'filter_template',
                     'value'   => array('2','3','4')
                 ]
-            ]),
+            ]),*/
         ),
         // Item Template
         array(
