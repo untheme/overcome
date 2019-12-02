@@ -42,13 +42,14 @@ function overcome_vc_post_layout2_1($atts){
         <div class="pl-15 pr-15 pl-lg-35 pr-lg-35 pt-25 pb-25">
             <?php 
                 overcome_post_title([
-                    'heading_tag' => 'text-22',
-                    'class'       => 'pb-15'  
+                    'heading_tag' => 'text-20',
+                    'class'       => 'pb-13'  
                 ]);
                 overcome_post_excerpt([
                     'show_excerpt' => '1', 
                     'length'       => '15', 
-                    'more'         => ''
+                    'more'         => '',
+                    'class'        => 'mb-18 text-787878' 
                 ]);
                 //overcome_loop_donate_info();
                 if(class_exists('EF5Payments')) {
