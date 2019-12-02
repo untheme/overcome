@@ -28,7 +28,18 @@ function overcome_vc_post_layout2($atts){
 	<?php
 }
 function overcome_vc_post_layout2_1($atts){
-    $after = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align"><a class="text-36 text-white" href="'.get_the_permalink().'"><span class="fa fa-link"></span></a></div></div>';
+    $after = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">';
+
+    switch (get_post_type()) {
+        case 'ef5_donation':
+            $after .= ef5_donation_button();
+            break;
+        
+        default:
+            $after .= '<a class="text-36 text-white" href="'.get_the_permalink().'"><span class="fa fa-link"></span></a>';
+            break;
+    }
+    $after .= '</div></div>';
     ?>
         <div class="relative">
             <?php 
