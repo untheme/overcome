@@ -29,8 +29,7 @@
     );
     global $wp_query;
     $posts = $wp_query = new WP_Query($posts_args);
-    // Grid columns css class
-    $grid_item_css_class = ['ef5-masonry-item', 'ef5-grid-item','ef5-hover-wrap','hoverdir-wrap','fade-in'];
+    
     // Items CSS Classes
     $item_css_class = ['post-masonry-item','transition'];
 
@@ -140,7 +139,7 @@
                 $overcome_post_media_date  = overcome_posted_on(['echo' => false, 'show_date' => '1','class' => 'ef5-box-meta ef5-box-meta2 text-uppercase', 'sep' => '']);
 
             ?>
-            <div class="<?php echo overcome_optimize_css_class(implode(' ',$grid_item_css_class).' '.$item_w.' '.$filter_class); ?>">
+            <div class="<?php ef5_posts_masonry_items_class($atts,['class' => $item_w.' '.$filters_class]); ?>">
             <?php  
                 switch ($item_template) {
                     default:

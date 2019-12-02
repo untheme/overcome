@@ -169,6 +169,28 @@ class WPBakeryShortCode_ef5_posts_masonry extends WPBakeryShortCode
             'ef5-posts-grid-'.$item_template,
             $args['class']
         );
+        if($layout_template === '1'){
+            $css_classes[] = 'row';
+        } 
+        echo overcome_optimize_css_class(implode(' ', $css_classes));
+    }
+    protected function ef5_posts_masonry_items_class($atts, $args=[]){
+        $args = wp_parse_args($args, [
+            'overlay_dir' => 'fade-in',
+            'class'       => ''
+        ]);
+        extract($atts);
+        $css_classes = [
+            'ef5-masonry-item', 
+            'ef5-grid-item',
+            'ef5-hover-wrap',
+            'hoverdir-wrap',
+            $args['overlay_dir'],
+            $args['class']
+        ];
+        if($layout_template === '1'){
+            $css_classes[] = 'col-lg-3 col-md-2';
+        } 
         echo overcome_optimize_css_class(implode(' ', $css_classes));
     }
 }
