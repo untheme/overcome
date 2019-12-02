@@ -49,7 +49,7 @@ function overcome_vc_post_layout2_1($atts){
                     'show_excerpt' => '1', 
                     'length'       => '15', 
                     'more'         => '',
-                    'class'        => 'mb-18 text-787878' 
+                    'class'        => 'mb-18 ef5-text-787878' 
                 ]);
                 //overcome_loop_donate_info();
                 if(class_exists('EF5Payments')) {
