@@ -84,7 +84,7 @@
             ?>
         </div>
     <?php endif; ?>
-    <div class="<?php ef5_posts_masonry_wrap_class($atts);?>" data-masonry="<?php echo esc_attr(json_encode($masonry_opts));?>">
+    <div class="<?php $this->ef5_posts_masonry_wrap_class($atts);?>" data-masonry="<?php echo esc_attr(json_encode($masonry_opts));?>">
         <div class="ef5-masonry-sizer"></div>
         <div class="ef5-masonry-gutter"></div>
         <?php 
@@ -139,7 +139,7 @@
                 $overcome_post_media_date  = overcome_posted_on(['echo' => false, 'show_date' => '1','class' => 'ef5-box-meta ef5-box-meta2 text-uppercase', 'sep' => '']);
 
             ?>
-            <div class="<?php ef5_posts_masonry_items_class($atts,['class' => $item_w.' '.$filters_class]); ?>">
+            <div class="<?php $this->ef5_posts_masonry_items_class($atts,['class' => $item_w.' '.$filters_class]); ?>">
             <?php  
                 switch ($item_template) {
                     default:
