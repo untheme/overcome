@@ -36,7 +36,6 @@ $custom_colors:(
 	'secondary' : $secondary_color,
 	'thirdary' : $thirdary_color,
 	'fourth' : $fourth_color,
-	'787878' : '#787878'
 );
 @each $name, $color in $custom_colors{
 	@if $color != null and $color != '' {
