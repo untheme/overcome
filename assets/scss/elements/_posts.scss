@@ -48,6 +48,10 @@
 			@include border-radius(10px 10px 0 0);
 		}
 	}
+	.ef5-donate-progress{
+		@include border-radius(3.5px);
+		margin-bottom: 11px;
+	}
 	.ef5-donation-raised {
 		span{
 			display: inline;
