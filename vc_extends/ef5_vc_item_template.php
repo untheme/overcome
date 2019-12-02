@@ -31,7 +31,7 @@ function overcome_vc_post_layout2_1($atts){
     $after = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">';
     switch (get_post_type()) {
         case 'ef5_donation':
-                $after .= ef5payments_donation_donate_button(['echo' => false]);
+                $after .= ef5payments_donation_donate_button(['echo' => false, 'class' => 'ef5-btn accent fill']);
             break;
         
         default:
