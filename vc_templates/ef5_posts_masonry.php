@@ -49,7 +49,7 @@
         'columnWidth'     => '.ef5-masonry-sizer',
         'gutter'          => '.ef5-masonry-gutter',
         'percentPosition' => true,
-        //'originLeft'      => $originLeft,
+        'originLeft'      => $originLeft,
         'horizontalOrder' => true,
         //'layoutMode' => 'fitRows'
     );
