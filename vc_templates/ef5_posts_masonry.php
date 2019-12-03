@@ -57,7 +57,7 @@
     $masonry_size_index = -1;
     switch ($layout_template) {
         default:
-            $masonry_size = ['100x200','200x300','300x150','300x150','300x200','100'];
+            $masonry_size = ['100x200','200x300','300x150','300x150','100','300x200'];
             break;
     }
     // Filters
