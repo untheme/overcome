@@ -199,6 +199,7 @@ class WPBakeryShortCode_ef5_posts_masonry extends WPBakeryShortCode
         $args = wp_parse_args($args, [
             'class'       => ''
         ]);
+        var_dump($atts);
         extract($atts);
         if($show_filter === '0') return;
         // Filters
