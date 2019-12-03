@@ -208,7 +208,7 @@ class WPBakeryShortCode_ef5_posts_masonry extends WPBakeryShortCode
             'ef5-masonry-filters', 
             'ef5-filters-'.$filter_template,
             'd-flex',
-            str_replace($filter_align, 'text-', 'justify-content-'),
+            str_replace('text-', 'justify-content-', $filter_align),
             $args['class']
         ];
         // Filter Button Data 
