@@ -732,7 +732,6 @@
             if (jQuery(".ef5-posts-masonry").length) {
                 var blog_dom = jQuery(".ef5-posts-masonry").get(0),
                     originLeft = jQuery(".ef5-posts-masonry").data('originleft');
-                    console.log(originLeft);
                 var $grid = imagesLoaded( blog_dom, function() {
                     jQuery(".ef5-posts-masonry").isotope({
                         layoutMode: 'masonry',
@@ -745,14 +744,12 @@
                         }
                     });
                     jQuery(window).trigger('resize');
-                
                 }); 
             }
             var $filter = jQuery(".ef5-masonry-filters .filter-item");
             $filter.on("click", function (e){
               e.preventDefault();
               jQuery(this).addClass("active").siblings().removeClass("active");
-
               var filterValue = jQuery(this).attr('data-filter');  
               jQuery($grid.elements).isotope({ filter: filterValue });
             
