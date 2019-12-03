@@ -122,9 +122,9 @@ vc_map(array(
                     'value'   => array('1')
                 ), 
                 'group' => esc_html__('Filter','overcome'),
-            )
+            ),
+            ef5systems_content_align_option_for_vc()
         ),
-        ef5systems_content_align_option_for_vc(),
         // Item Template
         array(
             array(
