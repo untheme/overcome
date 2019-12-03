@@ -50,7 +50,7 @@
         'gutter'          => '.ef5-masonry-gutter',
         'percentPosition' => true,
         'originLeft'      => $originLeft,
-        //'horizontalOrder' => true,
+        'horizontalOrder' => true,
         //'layoutMode' => 'fitRows'
     );
     // Thumbnail Size 
