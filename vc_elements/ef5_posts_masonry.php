@@ -124,6 +124,7 @@ vc_map(array(
                 'group' => esc_html__('Filter','overcome'),
             ),
             ef5systems_content_align_option_for_vc([
+                'param_name' => 'filter_align',
                 'group'      => esc_html__('Filter','overcome'),
                 'dependency' => [
                     'element' => 'show_filter',
@@ -205,7 +206,8 @@ class WPBakeryShortCode_ef5_posts_masonry extends WPBakeryShortCode
             'ef5-filters', 
             'ef5-masonry-filters', 
             'ef5-filters-'.$filter_template,
-            'row',
+            'd-flex',
+            str_replace($filter_align, 'text-', 'justify-contnet-'),
             $args['class']
         ];
         // Filter Button Data 
@@ -218,12 +220,12 @@ class WPBakeryShortCode_ef5_posts_masonry extends WPBakeryShortCode
 
     ?>
         <div class="<?php echo overcome_optimize_css_class(implode(' ', $filters_class));?>">
-            <div class="filter-item active col-auto" data-filter="*">
+            <div class="filter-item active" data-filter="*">
                 <span><?php esc_html_e('All','unbreak'); ?></span>
             </div>
             <?php 
                 foreach ($filter_terms as $term) {
-                    echo '<div class="filter-item col-auto" data-filter="'.esc_attr('.'.$term->slug).'"><span>'.esc_html($term->name).'</span><span class="d-none">'.$term->count.'</span></div>';
+                    echo '<div class="filter-item" data-filter="'.esc_attr('.'.$term->slug).'"><span>'.esc_html($term->name).'</span><span class="d-none">'.$term->count.'</span></div>';
                 } 
             ?>
         </div>
