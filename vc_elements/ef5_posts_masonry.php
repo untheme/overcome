@@ -175,7 +175,7 @@ class WPBakeryShortCode_ef5_posts_masonry extends WPBakeryShortCode
             'ef5-posts-masonry',
             'ef5-masonry',
             'ef5-posts-masonry-'.$layout_template,
-            'ef5-posts-grid-'.$item_template,
+            'ef5-posts-'.$item_template,
             $args['class']
         );
         if($layout_template === '1'){
