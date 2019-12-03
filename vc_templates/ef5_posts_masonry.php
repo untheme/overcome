@@ -51,7 +51,7 @@
         'percentPosition' => true,
         'originLeft'      => $originLeft,
         'horizontalOrder' => true,
-        
+        'layoutMode' => 'fitRows'
     );
     // Thumbnail Size 
     $masonry_size_index = -1;
