@@ -141,7 +141,7 @@ vc_map(array(
                 'heading'    => esc_html__('Items Template','overcome'),
                 'param_name' => 'item_template',
                 'value' =>  array(
-                    '2-1' => get_template_directory_uri().'/vc_elements/layouts/posts-2.png',
+                    '2-1' => get_template_directory_uri().'/vc_elements/layouts/post-2.png',
                 ),
                 'std'   => '2',
                 'group' => esc_html__('Item Layout','overcome'),
