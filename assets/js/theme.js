@@ -732,7 +732,7 @@
             if (jQuery(".ef5-posts-masonry").length) {
                 var blog_dom = jQuery(".ef5-posts-masonry").get(0),
                     originLeft = jQuery(".ef5-posts-masonry").data('originleft');
-                    console.log(blog_dom);
+                    console.log(originLeft);
                 var $grid = imagesLoaded( blog_dom, function() {
                     jQuery(".ef5-posts-masonry").isotope({
                         layoutMode: 'masonry',
