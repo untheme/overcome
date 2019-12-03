@@ -47,7 +47,7 @@
     $masonry_opts = array(
         'itemSelector'    => '.ef5-masonry-item',
         'columnWidth'     => '.ef5-masonry-sizer',
-        'gutter'          => 10,
+        'gutter'          => '.ef5-masonry-gutter',
         'percentPosition' => true,
         'originLeft'      => $originLeft,
         'horizontalOrder' => true,
@@ -86,7 +86,7 @@
     <?php endif; ?>
     <div class="<?php $this->ef5_posts_masonry_wrap_class($atts);?>" data-masonry="<?php echo esc_attr(json_encode($masonry_opts));?>">
         <div class="ef5-masonry-sizer"></div>
-        
+        <div class="ef5-masonry-gutter"></div>
         <?php 
             $d = 0; $large_item = [1,5,9,10]; $large_item_index = -1;
             while($posts->have_posts()){
@@ -151,9 +151,7 @@
                             'default_thumb'  => true
                         ]);
                     ?>
-                    <?php 
-                        
-                    ?>
+                    
                 </div>
             <?php
                     break;
