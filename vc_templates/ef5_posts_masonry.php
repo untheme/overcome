@@ -99,36 +99,6 @@
                 $masonry_size_index++;
                 if($masonry_size_index >= count($masonry_size))
                     $masonry_size_index = $masonry_size_index - count($masonry_size) ;
-                // Post Metas
-                $post_metas   = [];
-                $post_metas[] = overcome_posted_on(['show_date'=>'1','echo' => false]);
-                $post_metas[] = overcome_posted_by(['show_author'=>'1','author_avatar' => false, 'echo' => false]);
-                /**
-                 * Layout 5 Post Metas 
-                */
-                $post_metas_5   = [];
-                $post_metas_5[] = overcome_posted_by(['show_author'=>'1','author_avatar' => false, 'echo' => false]);
-                $post_metas_5[] = overcome_comments_popup_link(['show_cmt'=>'1','echo' => false]);
-
-                // Readmore button 
-                $overcome_post_media_readmore = overcome_post_read_more([
-                    'before'         => '<div class="center-align">',
-                    'after'          => '</div>',
-                    'echo'           => false, 
-                    'show_readmore'  => '1', 
-                    'readmore_class' => ''
-                ]);
-                $overcome_post_media_readmore2 = overcome_post_read_more_circle([
-                    'before'         => '<div class="center-align">',
-                    'after'          => '</div>',
-                    'echo'           => false, 
-                    'show_readmore'  => '1', 
-                    'readmore_class' => ''
-                ]);
-                $overcome_post_media_cat   = overcome_posted_in(['echo' => false, 'show_cat' => '1','class' => 'ef5-box-meta ef5-box-meta2', 'sep' => '']);
-                $overcome_post_media_share = overcome_post_share(['echo' => false, 'class' => 'col-auto', 'show_share' => '0', 'show_title' => false, 'social_args' => ['class' => 'shape-circle colored-hover outline justify-content-center', 'size' => '30']]);
-                $overcome_post_media_date  = overcome_posted_on(['echo' => false, 'show_date' => '1','class' => 'ef5-box-meta ef5-box-meta2 text-uppercase', 'sep' => '']);
-
             ?>
             <div class="<?php $this->ef5_posts_masonry_items_class($atts,['class' => $item_w.' '.$filter_class]); ?>">
             <?php  
@@ -137,12 +107,6 @@
                     $item_css_class[] = 'ef5-rounded-10 overlay-wrap ef5-hover-shadow-1';
             ?>	
             	<div class="<?php echo overcome_optimize_css_class(implode(' ', $item_css_class)); ?>">
-                    <?php 
-                        overcome_post_media([
-                            'thumbnail_size' => $masonry_size[$masonry_size_index], 
-                            'default_thumb'  => true
-                        ]);
-                    ?>
                     <?php overcome_vc_post_layout2_1($atts); ?>
                 </div>
             <?php
