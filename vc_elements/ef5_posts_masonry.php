@@ -200,7 +200,7 @@ class WPBakeryShortCode_ef5_posts_masonry extends WPBakeryShortCode
             'class'       => ''
         ]);
         extract($atts);
-        if($show_filter !== '1') return;
+        if($show_filter === '0') return;
         // Filters
         $filters_class = [
             'ef5-filters', 
