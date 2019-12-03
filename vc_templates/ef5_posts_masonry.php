@@ -31,7 +31,7 @@
     $posts = $wp_query = new WP_Query($posts_args);
     
     // Items CSS Classes
-    $item_css_class = ['post-masonry-item','transition'];
+    $item_css_class = ['post-masonry-item','post-grid-item','transition'];
 
     $has_shadow = ['2','3','4','5','6','14'];
     if(in_array($item_template, $has_shadow)) $item_css_class[] = 'ef5-box ef5-box-shadow-13';

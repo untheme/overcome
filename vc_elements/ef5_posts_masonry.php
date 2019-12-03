@@ -191,7 +191,6 @@ class WPBakeryShortCode_ef5_posts_masonry extends WPBakeryShortCode
         extract($atts);
         $css_classes = [
             'ef5-masonry-item', 
-            'ef5-grid-item', 
             'ef5-grid-item',
             'ef5-hover-wrap',
             'hoverdir-wrap',
