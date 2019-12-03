@@ -46,12 +46,12 @@
     $originLeft = is_rtl() ? false : true;
     $masonry_opts = array(
         'itemSelector'    => '.ef5-masonry-item',
-        'columnWidth'     => '.ef5-masonry-sizer',
-        'gutter'          => '.ef5-masonry-gutter',
-        'percentPosition' => true,
-        'originLeft'      => $originLeft,
+        //'columnWidth'     => '.ef5-masonry-sizer',
+        //'gutter'          => '.ef5-masonry-gutter',
+        //'percentPosition' => true,
+        //'originLeft'      => $originLeft,
         //'horizontalOrder' => true,
-        'layoutMode' => 'masonry'
+        //'layoutMode' => 'masonry'
     );
     // Thumbnail Size 
     $masonry_size_index = -1;
