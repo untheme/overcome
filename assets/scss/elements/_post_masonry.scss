@@ -22,6 +22,7 @@
 		font-weight: 600;
 		border-bottom: 2px solid transparent;
 		color: #777777;
+		cursor: pointer;
 		&:hover,
 		&.active{
 			color: $accent_color;
