@@ -84,7 +84,7 @@
             ?>
         </div>
     <?php endif; ?>
-    <div class="<?php $this->ef5_posts_masonry_wrap_class($atts);?>" data-masonry="<?php echo esc_attr(json_encode($masonry_opts));?>">
+    <div class="<?php $this->ef5_posts_masonry_wrap_class($atts);?>" data-masonryxxxx="<?php echo esc_attr(json_encode($masonry_opts));?>">
         <div class="ef5-masonry-sizer"></div>
         <div class="ef5-masonry-gutter"></div>
         <?php 
