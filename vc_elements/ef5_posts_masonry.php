@@ -123,8 +123,16 @@ vc_map(array(
                 ), 
                 'group' => esc_html__('Filter','overcome'),
             ),
-            ef5systems_content_align_option_for_vc()
+            ef5systems_content_align_option_for_vc([
+                'group'      => esc_html__('Filter','overcome'),
+                'dependency' => [
+                    'element' => 'show_filter',
+                    'value'   => array('1')
+                ],
+                'std'        => 'center'
+            ])
         ),
+
         // Item Template
         array(
             array(
