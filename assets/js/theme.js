@@ -729,7 +729,7 @@
     function overcome_masonry_filter(){
         "use strict";
         if(typeof $.fn.masonry != 'undefined'){
-            /*if (jQuery(".ef5-posts-masonry").length) {
+            if (jQuery(".ef5-posts-masonry").length) {
                 var blog_dom = jQuery(".ef5-posts-masonry").get(0);
 
                 var $grid = imagesLoaded( blog_dom, function() {
@@ -747,7 +747,7 @@
                     jQuery(window).trigger('resize');
                 
                 }); 
-            }*/
+            }
             var $filter = jQuery(".ef5-masonry-filters .filter-item");
             $filter.on("click", function (e){
               e.preventDefault();
