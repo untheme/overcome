@@ -44,15 +44,6 @@
 
     // Masonry 
     $originLeft = is_rtl() ? false : true;
-    $masonry_opts = array(
-        'itemSelector'    => '.ef5-masonry-item',
-        //'columnWidth'     => '.ef5-masonry-sizer',
-        //'gutter'          => '.ef5-masonry-gutter',
-        //'percentPosition' => true,
-        //'originLeft'      => $originLeft,
-        //'horizontalOrder' => true,
-        'layoutMode' => 'masonry'
-    );
     // Thumbnail Size 
     $masonry_size_index = -1;
     switch ($layout_template) {
@@ -84,7 +75,7 @@
             ?>
         </div>
     <?php endif; ?>
-    <div class="<?php $this->ef5_posts_masonry_wrap_class($atts);?>" data-gutter="<?php echo esc_attr($gutter);?>">
+    <div class="<?php $this->ef5_posts_masonry_wrap_class($atts);?>" data-gutter="<?php echo esc_attr($gutter);?>" data-originleft="<?php echo esc_attr($originLeft);?>">
         <div class="ef5-masonry-sizer"></div>
         <div class="ef5-masonry-gutter"></div>
         <?php 
