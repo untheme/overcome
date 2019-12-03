@@ -736,9 +736,7 @@
                     jQuery(".ef5-posts-masonry").isotope({
                         layoutMode: 'masonry',
                         percentPosition: true,
-                        
-                        //itemSelector: '.ef5-masonry-item',
-                        
+                        itemSelector: '.ef5-masonry-item',
                         masonry: {
                             columnWidth: '.ef5-masonry-sizer',
                             gutter: '.ef5-masonry-gutter'
