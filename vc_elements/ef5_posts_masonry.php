@@ -218,12 +218,12 @@ class WPBakeryShortCode_ef5_posts_masonry extends WPBakeryShortCode
 
     ?>
         <div class="<?php echo overcome_optimize_css_class(implode(' ', $filters_class));?>">
-            <div class="filter-item active col" data-filter="*">
+            <div class="filter-item active col-auto" data-filter="*">
                 <span><?php esc_html_e('All','unbreak'); ?></span>
             </div>
             <?php 
                 foreach ($filter_terms as $term) {
-                    echo '<div class="filter-item col" data-filter="'.esc_attr('.'.$term->slug).'"><span>'.esc_html($term->name).'</span><span class="d-none">'.$term->count.'</span></div>';
+                    echo '<div class="filter-item col-auto" data-filter="'.esc_attr('.'.$term->slug).'"><span>'.esc_html($term->name).'</span><span class="d-none">'.$term->count.'</span></div>';
                 } 
             ?>
         </div>
