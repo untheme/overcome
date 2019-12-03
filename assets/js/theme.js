@@ -32,7 +32,7 @@
         overcome_vcRow();
         overcome_woo_price_filter_add_data_title();
         overcome_wooscp_change_text();
-        overcome_masonry_filter();
+        //overcome_masonry_filter();
         overcome_vc_animation_callback();
 	});
 	// On scroll
@@ -57,7 +57,7 @@
         overcome_video_size();
         overcome_popup();
         overcome_init_price_filter();
-        overcome_masonry_filter();
+        //overcome_masonry_filter();
         overcome_vc_animation_callback();
         overcome_remove_cart_actions();
     });
