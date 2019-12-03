@@ -196,7 +196,6 @@ class WPBakeryShortCode_ef5_posts_masonry extends WPBakeryShortCode
     }
     protected function ef5_posts_masonry_filters($atts, $args=[]){
         $args = wp_parse_args($args, [
-            'overlay_dir' => 'fade-in',
             'class'       => ''
         ]);
         extract($atts);
@@ -206,7 +205,8 @@ class WPBakeryShortCode_ef5_posts_masonry extends WPBakeryShortCode
             'ef5-filters', 
             'ef5-masonry-filters', 
             'ef5-filters-'.$filter_template,
-            'row'
+            'row',
+            $args['class']
         ];
         // Filter Button Data 
         $filter_terms_args = [
