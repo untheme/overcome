@@ -122,17 +122,9 @@ vc_map(array(
                     'value'   => array('1')
                 ), 
                 'group' => esc_html__('Filter','overcome'),
-            ),
-            array(
-                'type'          => 'textfield',
-                'heading'    => esc_html__('Item gutter','overcome'),
-                'heading'    => esc_html__('Enter the space between each item. Number Only!','overcome'),
-                'param_name'    => 'gutter',
-                'value'         => '30',
-                'std'           => '30',
-                'group'         => esc_html__('Layouts','overcome')
             )
         ),
+        ef5systems_content_align_option_for_vc(),
         // Item Template
         array(
             array(
