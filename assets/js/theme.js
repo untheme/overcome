@@ -731,7 +731,7 @@
         if(typeof $.fn.masonry != 'undefined'){
             if (jQuery(".ef5-posts-masonry").length) {
                 var blog_dom = jQuery(".ef5-posts-masonry").get(0),
-                    originLeft = jQuery(this).data('originleft');
+                    originLeft = jQuery(".ef5-posts-masonry").data('originleft');
                     console.log(blog_dom);
                 var $grid = imagesLoaded( blog_dom, function() {
                     jQuery(".ef5-posts-masonry").isotope({
