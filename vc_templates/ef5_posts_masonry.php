@@ -84,7 +84,7 @@
             ?>
         </div>
     <?php endif; ?>
-    <div class="<?php $this->ef5_posts_masonry_wrap_class($atts);?>" data-masonry="<?php echo esc_attr(json_encode($masonry_opts));?>">
+    <div class="<?php $this->ef5_posts_masonry_wrap_class($atts);?>" data-gutter="<?php echo esc_attr($gutter);?>">
         <div class="ef5-masonry-sizer"></div>
         <div class="ef5-masonry-gutter"></div>
         <?php 
@@ -144,7 +144,7 @@
                 switch ($item_template) {
                     default:
             ?>	
-            	<div class="<?php echo overcome_optimize_css_class(implode(' ', $item_css_class)); ?>" data-gutter="<?php echo esc_attr($gutter);?>">
+            	<div class="<?php echo overcome_optimize_css_class(implode(' ', $item_css_class)); ?>">
                     <?php 
                         overcome_post_media([
                             'thumbnail_size' => $masonry_size[$masonry_size_index], 
