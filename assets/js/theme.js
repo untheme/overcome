@@ -32,7 +32,7 @@
         overcome_vcRow();
         overcome_woo_price_filter_add_data_title();
         overcome_wooscp_change_text();
-        //overcome_masonry_filter();
+        overcome_masonry_filter();
         overcome_vc_animation_callback();
 	});
 	// On scroll
@@ -57,7 +57,7 @@
         overcome_video_size();
         overcome_popup();
         overcome_init_price_filter();
-        //overcome_masonry_filter();
+        overcome_masonry_filter();
         overcome_vc_animation_callback();
         overcome_remove_cart_actions();
     });
@@ -729,16 +729,16 @@
     function overcome_masonry_filter(){
         "use strict";
         if(typeof $.fn.masonry != 'undefined'){
-            if (jQuery(".ef5-posts-masonry").length) {
+            /*if (jQuery(".ef5-posts-masonry").length) {
                 var blog_dom = jQuery(".ef5-posts-masonry").get(0);
 
                 var $grid = imagesLoaded( blog_dom, function() {
                     jQuery(".ef5-posts-masonry").isotope({
                         layoutMode: 'masonry',
                         percentPosition: true,
-                        /*
-                         * itemSelector: '.ef5-masonry-item',
-                        */
+                        
+                        //itemSelector: '.ef5-masonry-item',
+                        
                         masonry: {
                             columnWidth: '.ef5-masonry-sizer',
                             gutter: '.ef5-masonry-gutter'
@@ -747,7 +747,7 @@
                     jQuery(window).trigger('resize');
                 
                 }); 
-            }
+            }*/
             var $filter = jQuery(".ef5-masonry-filters .filter-item");
             $filter.on("click", function (e){
               e.preventDefault();
