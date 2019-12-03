@@ -43,7 +43,7 @@
     $title_class = '';
 
     // Masonry 
-    $originLeft = is_rtl() ? false : true;
+    $originLeft = is_rtl() ? 'false' : 'true';
     // Thumbnail Size 
     $masonry_size_index = -1;
     switch ($layout_template) {
