@@ -130,7 +130,7 @@ vc_map(array(
                     'element' => 'show_filter',
                     'value'   => array('1')
                 ],
-                'std'        => 'center'
+                'std'        => 'text-center'
             ])
         ),
 
@@ -209,7 +209,6 @@ class WPBakeryShortCode_ef5_posts_masonry extends WPBakeryShortCode
             'ef5-filters-'.$filter_template,
             'd-flex',
             str_replace('text-', 'justify-content-', $filter_align),
-            $filter_align,
             $args['class']
         ];
         // Filter Button Data 
