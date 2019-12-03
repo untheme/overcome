@@ -21,3 +21,19 @@
 	//margin: -15px;
 
 }
+
+.ef5-filters{
+	margin: -15px;
+	.filter-item{
+		margin: 15px;
+		font-size: 18px;
+		font-weight: 600;
+		border-bottom: 2px solid transparent;
+		color: #777777;
+		&:hover,
+		&.active{
+			color: $accent_color;
+			border-bottom-color: $accent_color;
+		}
+	}
+}
