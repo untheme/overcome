@@ -197,13 +197,15 @@ class WPBakeryShortCode_ef5_posts_masonry extends WPBakeryShortCode
     }
     protected function ef5_posts_masonry_filters($atts, $args=[]){
         $args = wp_parse_args($args, [
+            'layout'      => '1',  
             'class'       => ''
         ]);
         extract($atts);
         if($show_filter === '0') return;
         // Filters
         $filters_class = [
-            'ef5-filters', 
+            'ef5-filters',
+            'ef5-filters-'.$args['layout'],
             'ef5-masonry-filters', 
             'ef5-filters-'.$filter_template,
             'd-flex',
