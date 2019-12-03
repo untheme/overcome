@@ -134,6 +134,7 @@
             <?php  
                 switch ($item_template) {
                     default:
+                    $item_css_class[] = 'ef5-rounded-10 overlay-wrap ef5-hover-shadow-1';
             ?>	
             	<div class="<?php echo overcome_optimize_css_class(implode(' ', $item_css_class)); ?>">
                     <?php 
@@ -142,7 +143,7 @@
                             'default_thumb'  => true
                         ]);
                     ?>
-                    
+                    <?php overcome_vc_post_layout2_1($atts); ?>
                 </div>
             <?php
                     break;
