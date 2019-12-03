@@ -47,7 +47,7 @@
     $masonry_opts = array(
         'itemSelector'    => '.ef5-masonry-item',
         'columnWidth'     => '.ef5-masonry-sizer',
-        'gutter'          => '.ef5-masonry-gutter',
+        'gutter'          => 10,
         'percentPosition' => true,
         'originLeft'      => $originLeft,
         'horizontalOrder' => true,
