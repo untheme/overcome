@@ -132,14 +132,6 @@ vc_map(array(
                 'std'           => '30',
                 'group'         => esc_html__('Layouts','overcome')
             )
-            /*ef5systems_vc_content_align_opts([
-                'param_name' => 'filter_content_align',
-                'group'      => esc_html__('Filter','overcome'),
-                'dependency' => [
-                    'element' => 'filter_template',
-                    'value'   => array('2','3','4')
-                ]
-            ]),*/
         ),
         // Item Template
         array(
@@ -201,5 +193,40 @@ class WPBakeryShortCode_ef5_posts_masonry extends WPBakeryShortCode
             $css_classes[] = 'col-lg-4 col-md-6';
         } 
         echo overcome_optimize_css_class(implode(' ', $css_classes));
+    }
+    protected function ef5_posts_masonry_filters($atts, $args=[]){
+        $args = wp_parse_args($args, [
+            'overlay_dir' => 'fade-in',
+            'class'       => ''
+        ]);
+        extract($atts);
+        if($$show_filter !== '1') return;
+        // Filters
+        $filters_class = [
+            'ef5-filters', 
+            'ef5-masonry-filters', 
+            'ef5-filters-'.$filter_template,
+            'row'
+        ];
+        // Filter Button Data 
+        $filter_terms_args = [
+            'taxonomy' => overcome_get_custom_post_taxonomies( $post_type , 'cat'), 
+            'exclude'  => overcome_get_term_id_by_slug($post_type, 'cat', $taxonomies_exclude)
+        ];
+        if(!empty($taxonomies))  $filter_terms_args['slug'] = explode(',', $taxonomies);
+        $filter_terms = get_terms($filter_terms_args);
+
+    ?>
+        <div class="<?php echo overcome_optimize_css_class(implode(' ', $filters_class));?>">
+            <div class="filter-item active col" data-filter="*">
+                <span><?php esc_html_e('All','unbreak'); ?></span>
+            </div>
+            <?php 
+                foreach ($filter_terms as $term) {
+                    echo '<div class="filter-item col" data-filter="'.esc_attr('.'.$term->slug).'"><span>'.esc_html($term->name).'</span><span class="d-none">'.$term->count.'</span></div>';
+                } 
+            ?>
+        </div>
+    <?php
     }
 }

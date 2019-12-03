@@ -51,30 +51,10 @@
             $masonry_size = ['100x200','200x300','300x150','300x150','100','300x200'];
             break;
     }
-    // Filters
-    $filter_content_align = 'text-center';
-    $filters_class = ['ef5-filters', 'ef5-masonry-filters', 'ef5-filters-'.$filter_template, str_replace('text-', 'justify-content-lg-',$filter_content_align)];
-    // Filter Button Data 
-    $filter_terms_args = [
-        'taxonomy' => overcome_get_custom_post_taxonomies( $post_type , 'cat'), 
-        'exclude'  => overcome_get_term_id_by_slug($post_type, 'cat', $taxonomies_exclude)
-    ];
-    if(!empty($taxonomies))  $filter_terms_args['slug'] = explode(',', $taxonomies);
-    $filter_terms = get_terms($filter_terms_args);
+    
 ?>
 <div class="ef5-posts" id="<?php echo esc_attr($el_id);?>">
-    <?php if($show_filter === '1'): ?>
-        <div class="<?php echo overcome_optimize_css_class(implode(' ', $filters_class));?>">
-            <div class="filter-item active" data-filter="*">
-                <span><?php esc_html_e('All','unbreak'); ?></span>
-            </div>
-            <?php 
-                foreach ($filter_terms as $term) {
-                    echo '<div class="filter-item" data-filter="'.esc_attr('.'.$term->slug).'"><span>'.esc_html($term->name).'</span><span class="d-none">'.$term->count.'</span></div>';
-                } 
-            ?>
-        </div>
-    <?php endif; ?>
+    <?php ef5_posts_masonry_filters($atts); ?>
     <div class="<?php $this->ef5_posts_masonry_wrap_class($atts);?>" data-gutter="<?php echo esc_attr($gutter);?>" data-originleft="<?php echo $originLeft;?>">
         <div class="ef5-masonry-sizer"></div>
         <div class="ef5-masonry-gutter"></div>
