@@ -74,7 +74,7 @@
                 } 
             ?>
         </div>
-    <?php endif; var_dump($originLeft); ?>
+    <?php endif; ?>
     <div class="<?php $this->ef5_posts_masonry_wrap_class($atts);?>" data-gutter="<?php echo esc_attr($gutter);?>" data-originleft="<?php echo $originLeft;?>">
         <div class="ef5-masonry-sizer"></div>
         <div class="ef5-masonry-gutter"></div>
