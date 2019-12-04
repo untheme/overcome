@@ -4,13 +4,9 @@ function overcome_header_donate_button(){
     wp_enqueue_script('bootstrap');
     if(is_singular('ef5_donation')){
       $post_id = get_the_ID();
-      //die('111');
-    }
-    else {
+    } else {
       $post_id = ef5payments_default_donation(overcome_get_id_by_slug(overcome_get_opts('header_donate_item',''),'ef5_donation'));
     }
-
-    var_dump($post_id);
     $data = apply_filters('ef5payments_get_payment_form_data',[
         'class'        => 'ef5-btn ef5-btn-sm accent fill',
         'data-options' => '',
