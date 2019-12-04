@@ -144,7 +144,7 @@ vc_map(array(
                     esc_html__( 'Center', 'overcome' )  => 'center',
                     esc_html__( 'End', 'overcome' )     => 'end'
                 ),
-                'std'           => '',
+                'std'           => 'center',
                 'group'         => esc_html__('Post Meta','overcome'),
                 'dependency'    => [
                     'element' => 'show_pagination',

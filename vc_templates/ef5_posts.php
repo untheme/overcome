@@ -433,7 +433,7 @@
     ?>
     </div>
 <?php 
-    overcome_loop_pagination(['show_pagination' => $show_pagination, 'style' => '2']); 
+    overcome_loop_pagination(['show_pagination' => $show_pagination, 'style' => '2', 'class' => 'text-'.$pagination_align]); 
     $this->view_all($atts);
 ?>
 </div>
