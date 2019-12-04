@@ -20,7 +20,7 @@ vc_map(array(
                 'type'        => 'dropdown',
                 'heading'     => esc_html__( 'Taxonomy', 'overcome' ),
                 'param_name'  => 'taxonomy',
-                'value'       => '',//ef5systems_vc_taxonomy_list(),
+                'value'       => ef5systems_vc_taxonomy_list(),
                 'std'         => 'category',
                 'description' => esc_html__( 'Select taxonomy', 'overcome' ),
                 'admin_label' => true,
