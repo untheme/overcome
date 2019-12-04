@@ -205,7 +205,7 @@ if(!function_exists('overcome_loop_pagination')){
                 the_posts_pagination([
                     'prev_text' => '<span class="prev hint--top" data-hint="'.apply_filters('overcome_loop_pagination_prev_text', esc_html__('Previous', 'overcome')).'"><span>'.apply_filters('overcome_loop_pagination_prev_text', esc_html__('Previous', 'overcome')).'</span></span>',
                     'next_text' => '<span class="next hint--top" data-hint="'.apply_filters('overcome_loop_pagination_next_text', esc_html__('Next', 'overcome')).'"><span>'.apply_filters('overcome_loop_pagination_next_text', esc_html__('Next', 'overcome')).'</span></span>',
-                    'screen_reader_text' => '<span></span>'
+                    'screen_reader_text' => ''
                 ]);
                 break;
             default:
