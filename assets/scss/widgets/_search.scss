@@ -10,7 +10,8 @@
 		@include border-radius(23px);
 	}
 	input[name="s"]{
-		padding-right: 118px;
+		padding: 11px 118px 11px 20px;
+		font-size: 14px;
 		[dir="rtl"] &{
 			padding-left: 118px;
 			padding-right: 20px;
