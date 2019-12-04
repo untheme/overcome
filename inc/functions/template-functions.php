@@ -261,8 +261,8 @@ function overcome_the_posts_pagination( $args = array() ) {
 add_filter('navigation_markup_template', 'overcome_navigation_markup_template', 10, 2);
 function overcome_navigation_markup_template($template, $class){
     $template = '
-        <nav class="navigation %1$s">
-            <div class="nav-links">%3$s</div>
+        <nav class="navigation">
+            <div class="nav-links %1$s">%3$s</div>
         </nav>
     ';
     return $template;
