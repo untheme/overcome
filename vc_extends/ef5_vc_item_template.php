@@ -61,6 +61,7 @@ function overcome_vc_post_layout2_1($atts){
                     'more'         => '',
                     'class'        => 'mb-18 ef5-text-787878' 
                 ]);
+                //overcome_loop_donate_info();
                 if(class_exists('EF5Payments')) {
                 ef5systems_donation_progress_donors([
                     'donor_icon' => '<span class="flaticon-like"></span>'
@@ -152,5 +153,46 @@ function overcome_vc_post_layout6($atts, $args = []){
         <?php endif; ?>
         </div>
     </div>
+    <?php
+}
+function overcome_vc_post_layout_11($atts, $args =[]){
+    $args = wp_parse_args($args, [
+        'class' => ''
+    ]);
+    extract($atts);
+    ?>
+        <div class="row align-items-center">
+            <?php
+                overcome_post_media([
+                    'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '350x240'), 
+                    'default_thumb'  => true,
+                    'class'          => 'col-md-4 mw-350 col',
+                    'before'         => '<a href="'.get_the_permalink().'">',
+                    'after'          => '</a>',
+                    'img_class'      => 'ef5-rounded-10'
+                ]); 
+            ?>
+            <div class="col-md-8 col-lg-auto">
+                <?php
+                    overcome_post_title([
+                        'heading_tag' => 'text-20 font-style-600'
+                    ]);
+                    overcome_post_excerpt([
+                        'show_excerpt' => '1', 
+                        'length'       => '15', 
+                        'more'         => '',
+                        'class'        => 'ef5-text-787878'
+                    ]);
+                    
+                    if(class_exists('EF5Payments')) {
+                        ef5payments_donation_layout_2();
+                    }
+                    overcome_sermon_icons([
+                        'class' => 'd-flex align-items-center lh-1 text-16'
+                    ]);
+                    overcome_sermon_metas(['class'=>'text-13', 'value_class' => 'ef5-text-fourth']);
+                ?>
+            </div>
+        </div>
     <?php
 }
