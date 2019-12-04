@@ -166,13 +166,13 @@ function overcome_vc_post_layout_11($atts, $args =[]){
                 overcome_post_media([
                     'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '350x240'), 
                     'default_thumb'  => true,
-                    'class'          => 'col-md-4 mw-350 col',
+                    'class'          => 'col-md-4 mw-lg-350 col-auto',
                     'before'         => '<a href="'.get_the_permalink().'">',
                     'after'          => '</a>',
                     'img_class'      => 'ef5-rounded-10'
                 ]); 
             ?>
-            <div class="col-md-8 col-lg-auto">
+            <div class="col-md-8 col">
                 <?php
                     overcome_post_title([
                         'heading_tag' => 'text-20 font-style-600'
