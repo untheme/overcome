@@ -34,16 +34,16 @@ function overcome_cpts_event_tax($taxo) {
 	    $taxo['event_cat'] = array(
 	    	'status'     => true,
     		'post_type'  => array('ef5_event'),
-	        'taxonomy'   => esc_html__('Category', 'overcome'),
-	        'taxonomies' => esc_html__('Categories', 'overcome'),
+	        'taxonomy'   => esc_html__('Event Category', 'overcome'),
+	        'taxonomies' => esc_html__('Event Categories', 'overcome'),
 	        'args'       => array(),
         	'labels'     => array()
 	    );
 	    $taxo['event_tag'] = array(
 	    	'status'     => true,
 	    	'post_type'  => array('ef5_event'),
-	        'taxonomy'   => esc_html__('Tag', 'overcome'),
-	        'taxonomies' => esc_html__('Tags', 'overcome'),
+	        'taxonomy'   => esc_html__('Event Tag', 'overcome'),
+	        'taxonomies' => esc_html__('Event Tags', 'overcome'),
 	        'args'       => array(
 	        	'hierarchical' => false,
 	        ),

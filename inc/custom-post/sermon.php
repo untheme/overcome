@@ -34,16 +34,16 @@ function overcome_cpts_sermons_tax($taxo) {
 	    $taxo['sermons_cat'] = array(
 	    	'status'     => true,
     		'post_type'  => array('ef5_sermons'),
-	        'taxonomy'   => esc_html__('Category', 'overcome'),
-	        'taxonomies' => esc_html__('Categories', 'overcome'),
+	        'taxonomy'   => esc_html__('Sermon Category', 'overcome'),
+	        'taxonomies' => esc_html__('Sermon Categories', 'overcome'),
 	        'args'       => array(),
         	'labels'     => array()
 	    );
 	    $taxo['sermons_tag'] = array(
 	    	'status'     => true,
 	    	'post_type'  => array('ef5_sermons'),
-	        'taxonomy'   => esc_html__('Tag', 'overcome'),
-	        'taxonomies' => esc_html__('Tags', 'overcome'),
+	        'taxonomy'   => esc_html__('Sermon Tag', 'overcome'),
+	        'taxonomies' => esc_html__('Sermon Tags', 'overcome'),
 	        'args'       => array(
 	        	'hierarchical' => false,
 	        ),
