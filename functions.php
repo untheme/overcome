@@ -578,3 +578,8 @@ if(class_exists('WooCommerce')){
  *
 */
 overcome_require_folder('inc/extensions', get_template_directory());
+add_action( 'wp_footer', function()
+{    
+    $taxonomies = get_taxonomies( array( '_builtin' => FALSE ) );
+    print '<pre>' . print_r( $taxonomies, 1 ) . '</pre>';
+});

@@ -19,12 +19,6 @@ get_header();
                 while ( have_posts() ) :
                     the_post();
                     the_content();
-
-                    var_dump(taxonomy_exists( 'category' ) );
-wp_list_categories(['taxonomy' => 'ef5_donation_cat']);
-$get_categories = get_categories(['taxonomy' => 'ef5_donation_cat']);
-var_dump($get_categories);
-
                 endwhile; // End of the loop.
             ?>
         </div>
