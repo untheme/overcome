@@ -175,7 +175,7 @@ function overcome_vc_post_layout_11($atts, $args =[]){
             <div class="col">
                 <?php
                     overcome_post_title([
-                        'heading_tag' => 'text-20 font-style-600 pb-15'
+                        'heading_tag' => 'text-20 font-style-600 mt-20 mt-md-0 pb-15'
                     ]);
                     overcome_post_excerpt([
                         'show_excerpt' => '1', 
