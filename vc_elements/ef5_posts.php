@@ -131,10 +131,12 @@ vc_map(array(
                     esc_html__( 'Show Pagination', 'overcome' ) => '1'
                 ),
                 'std'           => '1',
-                'group'         => esc_html__('Post Meta','overcome')
+                'group'         => esc_html__('Post Meta','overcome'),
+                'edit_field_class' => 'vc_col-sm-6'
             ),
             array(
                 'type'          => 'dropdown',
+                'heading'       => esc_html__('Pagination Align','overcome'),
                 'param_name'    => 'pagination_align',
                 'value'         => array(
                     esc_html__( 'Default', 'overcome' ) => '',
@@ -147,7 +149,8 @@ vc_map(array(
                 'dependency'    => [
                     'element' => 'show_pagination',
                     'value'   => '1'
-                ]
+                ],
+                'edit_field_class' => 'vc_col-sm-6'
             ),
             array(
                 'type'       => 'dropdown',
