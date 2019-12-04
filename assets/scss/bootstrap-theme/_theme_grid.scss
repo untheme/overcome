@@ -92,7 +92,7 @@ $customs_gutters: (
 
 // Dimensions
 $dimensions : (
-  350
+  380
 );
 @each $breakpoint in map-keys($grid-breakpoints) {
   $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
