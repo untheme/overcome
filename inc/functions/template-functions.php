@@ -219,7 +219,7 @@ if(!function_exists('overcome_loop_pagination')){
 
 add_filter('navigation_markup_template', 'overcome_navigation_markup_template', 10, 2);
 function overcome_navigation_markup_template($template, $class){
-    $class = 'fuck';
+    $class .= 'fuck';
     $template = '
         <nav class="navigation %1$s">
             <div class="nav-links">%3$s</div>
