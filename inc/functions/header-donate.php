@@ -2,7 +2,7 @@
 function overcome_header_donate_button(){
 	if(!class_exists('EF5Payments') || overcome_get_opts('header_donate', '0') === '0') return;
     wp_enqueue_script('bootstrap');
-    if(is_single('ef5_donation')){
+    if(is_singular('ef5_donation')){
       $post_id = get_the_ID();
       die('111');
     }
