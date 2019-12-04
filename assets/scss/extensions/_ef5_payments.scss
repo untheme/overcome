@@ -91,6 +91,42 @@
 	}
 }
 
+.ef5-donation-layout-1{
+	.ef5-donation-donor{
+		color: $accent_color;
+	}
+	.ef5-donate-progress{
+		margin-bottom: 11px;
+		.ef5-progress-bar,
+		.ef5-donate-progress-bar-value{
+			@include border-radius(3.5px);
+		}
+		.ef5-donate-progress-bar-value{
+			background-image: -moz-linear-gradient( 0deg, rgb(230,164,36) 0%, rgb(243,192,69) 40%, rgb(255,220,101) 67%, rgb(255,220,101) 84%, rgb(255,220,101) 90%, rgb(255,220,101) 100%);
+			background-image: -webkit-linear-gradient( 0deg, rgb(230,164,36) 0%, rgb(243,192,69) 40%, rgb(255,220,101) 67%, rgb(255,220,101) 84%, rgb(255,220,101) 90%, rgb(255,220,101) 100%);
+			background-image: -ms-linear-gradient( 0deg, rgb(230,164,36) 0%, rgb(243,192,69) 40%, rgb(255,220,101) 67%, rgb(255,220,101) 84%, rgb(255,220,101) 90%, rgb(255,220,101) 100%);
+		}
+	}
+	.ef5-donation-raised {
+		span{
+			display: inline;
+			font-size: $BodyFontSize;
+		}
+		.ef5-label{
+			font-weight: 400;
+			color: #2f2f2f;
+		}
+		.ef5-value{
+			color: #787878;
+		}
+	}
+	.ef5-donation-goal{
+		.ef5-value{
+			font-weight: 700;
+			color: $accent_color;
+		}
+	}
+}
 
 .ef5-donation-layout-2{
 	.ef5-donation-raised .ef5-value{
