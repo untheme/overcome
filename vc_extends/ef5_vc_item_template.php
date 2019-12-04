@@ -166,7 +166,7 @@ function overcome_vc_post_layout_11($atts, $args =[]){
                 overcome_post_media([
                     'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '350x240'), 
                     'default_thumb'  => true,
-                    'class'          => 'col-md-6 mw-lg-380 col-auto',
+                    'class'          => 'col-12 col-md-6 mw-lg-380 col-auto',
                     'before'         => '<a href="'.get_the_permalink().'">',
                     'after'          => '</a>',
                     'img_class'      => 'ef5-rounded-10'
