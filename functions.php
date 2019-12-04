@@ -578,7 +578,3 @@ if(class_exists('WooCommerce')){
  *
 */
 overcome_require_folder('inc/extensions', get_template_directory());
-var_dump(taxonomy_exists( 'category' ) );
-wp_list_categories(['taxonomy' => 'ef5_donation_cat']);
-$get_categories = get_categories(['taxonomy' => 'ef5_donation_cat']);
-var_dump($get_categories);
