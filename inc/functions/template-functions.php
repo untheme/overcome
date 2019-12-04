@@ -202,10 +202,10 @@ if(!function_exists('overcome_loop_pagination')){
                 echo '</div>';
                 break;
             case '2':
-                the_posts_pagination([
+                overcome_the_posts_pagination([
                     'prev_text' => '<span class="prev hint--top" data-hint="'.apply_filters('overcome_loop_pagination_prev_text', esc_html__('Previous', 'overcome')).'"><span>'.apply_filters('overcome_loop_pagination_prev_text', esc_html__('Previous', 'overcome')).'</span></span>',
                     'next_text' => '<span class="next hint--top" data-hint="'.apply_filters('overcome_loop_pagination_next_text', esc_html__('Next', 'overcome')).'"><span>'.apply_filters('overcome_loop_pagination_next_text', esc_html__('Next', 'overcome')).'</span></span>',
-                    'screen_reader_text' => ''
+                    'class' => $args['class']
                 ]);
                 break;
             default:
@@ -217,21 +217,55 @@ if(!function_exists('overcome_loop_pagination')){
     }
 }
 
+function overcome_get_the_posts_pagination( $args = array() ) {
+    $navigation = '';
+ 
+    // Don't print empty markup if there's only one page.
+    if ( $GLOBALS['wp_query']->max_num_pages > 1 ) {
+        // Make sure the nav element has an aria-label attribute: fallback to the screen reader text.
+        if ( ! empty( $args['screen_reader_text'] ) && empty( $args['aria_label'] ) ) {
+            $args['aria_label'] = $args['screen_reader_text'];
+        }
+ 
+        $args = wp_parse_args(
+            $args,
+            array(
+                'mid_size'           => 1,
+                'prev_text'          => _x( 'Previous', 'previous set of posts' ,'overcome' ),
+                'next_text'          => _x( 'Next', 'next set of posts' ,'overcome' ),
+                'screen_reader_text' => esc_html__( 'Posts navigation' ,'overcome' ),
+                'aria_label'         => esc_html__( 'Posts' ,'overcome' ),
+                'class'              => ''
+            )
+        );
+ 
+        // Make sure we get a string back. Plain is the next best thing.
+        if ( isset( $args['type'] ) && 'array' == $args['type'] ) {
+            $args['type'] = 'plain';
+        }
+ 
+        // Set up paginated links.
+        $links = paginate_links( $args );
+ 
+        if ( $links ) {
+            $navigation = _navigation_markup( $links, $args['class'], $args['screen_reader_text'], $args['aria_label'] );
+        }
+    }
+ 
+    return $navigation;
+}
+function overcome_the_posts_pagination( $args = array() ) {
+    echo overcome_get_the_posts_pagination($args);
+}
+
 add_filter('navigation_markup_template', 'overcome_navigation_markup_template', 10, 2);
 function overcome_navigation_markup_template($template, $class){
-    $class .= 'fuck';
     $template = '
         <nav class="navigation %1$s">
             <div class="nav-links">%3$s</div>
         </nav>
     ';
     return $template;
-}
-add_filter('navigation_markup_template', 'overcome_navigation_markup_templatex', 10, 2);
-function overcome_navigation_markup_templatex($template, $class){
-    $class .= 'fuck';
-    
-    return $class;
 }
 
 /**
