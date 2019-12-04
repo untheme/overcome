@@ -217,6 +217,11 @@ if(!function_exists('overcome_loop_pagination')){
     }
 }
 
+add_filter('navigation_markup_template', 'overcome_navigation_markup_template', 10, 2);
+function overcome_navigation_markup_template($template, $class){
+    $class = 'fuck';
+    return $template;
+}
 
 /**
  * Single post Author
