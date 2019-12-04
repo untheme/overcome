@@ -221,7 +221,7 @@ add_filter('navigation_markup_template', 'overcome_navigation_markup_template', 
 function overcome_navigation_markup_template($template, $class){
     $class = 'fuck';
     $template = '
-        <nav class="navigation %1$s" role="navigation" aria-label="%4$s">
+        <nav class="navigation %1$s">
             <div class="nav-links">%3$s</div>
         </nav>
     ';
