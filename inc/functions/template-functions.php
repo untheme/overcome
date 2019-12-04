@@ -227,6 +227,12 @@ function overcome_navigation_markup_template($template, $class){
     ';
     return $template;
 }
+add_filter('navigation_markup_template', 'overcome_navigation_markup_templatex', 10, 2);
+function overcome_navigation_markup_templatex($template, $class){
+    $class .= 'fuck';
+    
+    return $class;
+}
 
 /**
  * Single post Author
