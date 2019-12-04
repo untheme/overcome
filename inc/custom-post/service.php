@@ -43,8 +43,8 @@ function overcome_cpts_service_tax($taxo) {
         $taxo['service_tag'] = array(
         	'status'     => true,
         	'post_type'  => array('ef5_service'), 
-            'taxonomy'   => esc_html__('Tag', 'overcome'),
-            'taxonomies' => esc_html__('Tags', 'overcome'),
+            'taxonomy'   => esc_html__('Service Tag', 'overcome'),
+            'taxonomies' => esc_html__('Service Tags', 'overcome'),
             'args'       => array(
                 'hierarchical' => false,
             ),

@@ -42,8 +42,8 @@ function overcome_cpts_stories_tax($taxo) {
 	    $taxo['stories_tag'] = array(
 	    	'status'     => true,
 	    	'post_type'  => array('ef5_stories'),
-	        'taxonomy'   => esc_html__('Tag', 'overcome'),
-	        'taxonomies' => esc_html__('Tags', 'overcome'),
+	        'taxonomy'   => esc_html__('Story Tag', 'overcome'),
+	        'taxonomies' => esc_html__('Stories Tags', 'overcome'),
 	        'args'       => array(
 	        	'hierarchical' => false,
 	        ),
