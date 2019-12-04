@@ -269,6 +269,9 @@
                                     overcome_post_title([
                                         'heading_tag' => 'text-13 lh-18 text-white font-style-400'
                                     ]);
+                                    if(class_exists('EF5Payments')) {
+                                        ef5payments_donation_layout_1();
+                                    }
                                 ?>
                             </div>
                         </div>
