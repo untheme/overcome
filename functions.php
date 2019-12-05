@@ -579,8 +579,5 @@ if(class_exists('WooCommerce')){
 */
 overcome_require_folder('inc/extensions', get_template_directory());
 
-add_filter('ef5systems_instagram_api_key', function(){
-    //return '25613480134.1677ed0.6f0e0cf4d9934d19bd05c2d8398d2973';
-    return overcome_get_theme_opt('instagram_api_key','');
-});
+
 //var_dump(overcome_get_theme_opt('instagram_api_key',''));
