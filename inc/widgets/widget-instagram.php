@@ -10,7 +10,7 @@ if(!function_exists('enable_instagram_widget')){
 if(!function_exists('overcome_instagram_api_username')){
     add_filter('ef5_instagram_api_username', 'overcome_instagram_api_username');
     function overcome_instagram_api_username(){
-        return overcome_get_opts('instagram_api_username','zooka.studio');
+        return overcome_get_opts('instagram_api_username','');
     }
 }
 /**
