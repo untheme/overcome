@@ -41,7 +41,7 @@ if(!function_exists('overcome_instagram_html_output')){
                     ?>
                         <div class="<?php echo trim(implode(' ', array('instagram-item', $span, 'overlay-wrap')));?>">
                             <a href="<?php echo esc_url( $item['link'] ); ?>" target="<?php echo esc_attr( $target );?>">
-                                <img src="<?php echo esc_url($item[$size]['url']);?>" alt="<?php echo esc_attr(get_bloginfo('name'));?>" />
+                                <img src="<?php echo esc_url($item[$size]);?>" alt="<?php echo esc_attr(get_bloginfo('name'));?>" />
                             </a>
                             <div class="overlay d-flex align-items-center animated" data-animation-in="zoomIn" data-animation-out="zoomOut">
                                 <div class="overlay-inner col-12 text-center">
