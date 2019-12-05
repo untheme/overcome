@@ -719,7 +719,7 @@ Redux::setSection($opt_name, array(
             'id'        => 'instagram_api_username',
             'type'      => 'text',
             'default'   => 'zooka.studio'
-        ),/*
+        ),
         array(
             'title'     => esc_html__('API Key', 'overcome'),
             'subtitle'      => sprintf(__('Generate YOUR Instagram Access Token <a href="%s" target="_blank">Click Here</a>','melokids'), 'http://instagram.pixelunion.net/'),
@@ -727,7 +727,7 @@ Redux::setSection($opt_name, array(
             'id'        => 'instagram_api_key',
             'type'      => 'text',
             'default'   => '6500395100.1677ed0.96ebe958c36346fca373fd4ed7016e47'
-        )*/
+        )
     )
 ));
 
