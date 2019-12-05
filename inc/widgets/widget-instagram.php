@@ -8,19 +8,19 @@ if(!function_exists('enable_instagram_widget')){
 }
 // Update Instagrame username from theme options to widget
 if(!function_exists('overcome_instagram_api_username')){
-    //add_filter('ef5_instagram_api_username', 'overcome_instagram_api_username');
+    add_filter('ef5_instagram_api_username', 'overcome_instagram_api_username');
     function overcome_instagram_api_username(){
-        return overcome_get_opts('instagram_api_username','zooka.studio');
+        return overcome_get_opts('instagram_api_username','');
     }
 }
 
 if(!function_exists('overcome_instagram_api_key')){
-    //add_filter('ef5systems_instagram_api_key', 'overcome_instagram_api_key');
+    add_filter('ef5systems_instagram_api_key', 'overcome_instagram_api_key');
     function overcome_instagram_api_key(){
         //return overcome_get_opts('instagram_api_key','zooka.studio');
         //return '25613480134.1677ed0.6f0e0cf4d9934d19bd05c2d8398d2973';
-        //return overcome_get_theme_opt('instagram_api_key','');
-        return '8585929404.1677ed0.a939878ff8604187a68e1b72b1ce5f2d';
+        return overcome_get_theme_opt('instagram_api_key','');
+        //return '8585929404.1677ed0.a939878ff8604187a68e1b72b1ce5f2d';
     }
 }
 
