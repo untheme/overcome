@@ -37,7 +37,7 @@ if(!function_exists('overcome_instagram_html_output')){
                     <div class="row grid-gutters-<?php echo esc_attr($columns_space);?> clearfix">
                     <?php
                     foreach ($media_array as $item) {
-                        var_dump($item);
+                        //var_dump($item);
                     ?>
                         <div class="<?php echo trim(implode(' ', array('instagram-item', $span, 'overlay-wrap')));?>">
                             <a href="<?php echo esc_url( $item['link'] ); ?>" target="<?php echo esc_attr( $target );?>">
