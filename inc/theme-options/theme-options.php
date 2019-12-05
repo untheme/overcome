@@ -722,7 +722,7 @@ Redux::setSection($opt_name, array(
         ),
         array(
             'title'     => esc_html__('API Key', 'overcome'),
-            'subtitle'      => sprintf(__('Generate YOUR Instagram Access Token <a href="%s" target="_blank">Click Here</a>','melokids'), 'http://instagram.pixelunion.net/'),
+            'subtitle'      => sprintf(__('Generate YOUR Instagram Access Token <a href="%s" target="_blank">Click Here</a>','overcome'), 'http://instagram.pixelunion.net/'),
             'desc'      => esc_html__('Copy and Paste YOUR Instagram Access Token here!','overcome'),
             'id'        => 'instagram_api_key',
             'type'      => 'text',
