@@ -60,6 +60,17 @@ class WPBakeryShortCode_ef5_taxonomy_list extends WPBakeryShortCode
     	]);
     	extract($atts);
     	if($taxonomy_style){
+    	?>
+    		<div class="tagcloud">
+    			<?php 
+    				wp_tag_cloud([
+    					'taxonomy'   => $taxonomy,
+						'echo'       => false,
+						'show_count' => 1,
+    				]);
+    			?>
+    		</div>
+    	<?php
 
     	} else {
     	?>
