@@ -48,6 +48,10 @@ vc_map(array(
                 	esc_html__(' Show hierarchy','overcome') => '1'
                 ],
                 'std'         => '0',
+                'dependency'  => array(
+                	'element'	=> 'taxonomy_style',
+                	'value'		=> '0'
+                )
             ),
         )
     )
