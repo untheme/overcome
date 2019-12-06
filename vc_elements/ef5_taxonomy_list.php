@@ -23,7 +23,10 @@ vc_map(array(
                 'param_name'  => 'el_title_class',
                 'value'       => '',
                 'std'         => '',
-                'admin_label' => true,
+                'dependency'	=> [
+                	'element' => 'el_title',
+                	'not_empty' => true
+                ]
             ),
             array(
                 'type'        => 'dropdown',
