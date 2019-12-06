@@ -17,6 +17,15 @@ vc_map(array(
                 'admin_label' => true,
             ),
             array(
+                'type'        => 'textfield',
+                'heading'     => esc_html__( 'Element Title Class', 'overcome' ),
+                'description' => esc_html__( 'Enter custom class', 'overcome' ),
+                'param_name'  => 'el_title_class',
+                'value'       => '',
+                'std'         => '',
+                'admin_label' => true,
+            ),
+            array(
                 'type'        => 'dropdown',
                 'heading'     => esc_html__( 'Taxonomy', 'overcome' ),
                 'param_name'  => 'taxonomy',
@@ -65,7 +74,7 @@ class WPBakeryShortCode_ef5_taxonomy_list extends WPBakeryShortCode
     protected function title($atts, $args=[]){
         if(empty($atts['el_title'])) return;
         $args = wp_parse_args($args, [
-            'class' => ''
+            'class' => $el_title_class
         ]);
         $classes = ['ef5-el-title', 'ef5-heading', $args['class']];
         ?>
