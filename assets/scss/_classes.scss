@@ -133,7 +133,7 @@ $ef5-opacity : (
 }
 $ef5-overflow: (
 	hidden,
-	visibility
+	visible
 );
 @each $name in $ef5-overflow{
 	.ef5-overflow-#{$name}{
