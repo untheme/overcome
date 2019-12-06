@@ -432,6 +432,44 @@
                     }// end while
                     wp_reset_postdata();
             break;
+            case '12':
+                $d = 0;
+                while($posts->have_posts()){
+                    $d++;
+                    $posts->the_post();
+                ?>
+                <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
+                    <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                        <div class="row gutter-12">
+                            <div class="col-auto">
+                                <?php overcome_post_media([
+                                    'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '48'), 
+                                    'default_thumb'  => true,
+                                    'img_class'      => 'ef5-rounded-5'   
+                                ]); ?>
+                            </div>
+                            <div class="col ef5-content-info">
+                                <?php 
+                                    overcome_posted_on([
+                                        'class' => 'text-13 ef5-text-accent',
+                                        'icon'  => ''
+                                    ]);
+                                    overcome_post_title([
+                                        'heading_tag' => 'text-13 lh-18 text-white font-style-400'
+                                    ]);
+                                    if(class_exists('EF5Payments')) {
+                                        ef5payments_donation_layout_1(['progress_bar' => false, 'show_percent'=>false]);
+                                    }
+                                ?>
+                            </div>
+                        </div>
+                        <?php ?>
+                    </div>
+                </div>
+                <?php
+                    }// end while
+                    wp_reset_postdata();
+            break;
         } 
     ?>
     </div>
