@@ -443,19 +443,15 @@
                         <div class="row gutter-12">
                             <div class="col-auto">
                                 <?php overcome_post_media([
-                                    'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '48'), 
+                                    'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '85'), 
                                     'default_thumb'  => true,
-                                    'img_class'      => 'ef5-rounded-5'   
+                                    'img_class'      => ''   
                                 ]); ?>
                             </div>
                             <div class="col ef5-content-info">
-                                <?php 
-                                    overcome_posted_on([
-                                        'class' => 'text-13 ef5-text-accent',
-                                        'icon'  => ''
-                                    ]);
+                                <?php
                                     overcome_post_title([
-                                        'heading_tag' => 'text-13 lh-18 text-white font-style-400'
+                                        'heading_tag' => 'text-18 font-style-500'
                                     ]);
                                     if(class_exists('EF5Payments')) {
                                         ef5payments_donation_layout_1(['progress_bar' => false, 'show_percent'=>false]);
