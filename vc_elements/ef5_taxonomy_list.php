@@ -77,7 +77,7 @@ class WPBakeryShortCode_ef5_taxonomy_list extends WPBakeryShortCode
     protected function title($atts, $args=[]){
         if(empty($atts['el_title'])) return;
         $args = wp_parse_args($args, [
-            'class' => $el_title_class
+            'class' => $atts['el_title_class']
         ]);
         $classes = ['ef5-el-title', 'ef5-heading', $args['class']];
         ?>
