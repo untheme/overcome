@@ -28,3 +28,19 @@ vc_map(array(
         )
     )
 ));
+class WPBakeryShortCode_ef5_taxonomy_list extends WPBakeryShortCode
+{
+    protected function content($atts, $content = null){
+        $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
+        return parent::content($atts, $content);
+    }
+    protected function overcome_taxonomy_list($atts, $args=[]){
+    	$args = wp_parse_args($args, [
+    		'class' => ''
+    	]);
+    	extract($atts);
+    	wp_list_category([
+    		'taxonomy' => $taxonomy
+    	]);
+    }
+}
