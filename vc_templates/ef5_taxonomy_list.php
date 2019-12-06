@@ -12,7 +12,7 @@ $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 ?>
 <div class="widget widget_categories ef5-taxonomy-list">
 	<?php 
-		$this->title($atts); 
+		$this->title($atts,['class' => 'text-22 mb-20']); 
 		$this->overcome_taxonomy_list($atts);
 	?>
 </div>
