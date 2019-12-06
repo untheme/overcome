@@ -50,7 +50,7 @@ vc_map(array(
                 'std'         => '0',
                 'dependency'  => array(
                 	'element'	=> 'taxonomy_style',
-                	'value'		=> ''
+                	'value_not_equal_to'		=> '1'
                 )
             ),
         )
