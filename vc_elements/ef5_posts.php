@@ -113,6 +113,7 @@ vc_map(array(
                     '8'   => get_template_directory_uri().'/vc_elements/layouts/post-8.png',
                     '9'   => get_template_directory_uri().'/vc_elements/layouts/post-9.png',
                     '11'   => get_template_directory_uri().'/vc_elements/layouts/post-11.png',
+                    '12'   => get_template_directory_uri().'/vc_elements/layouts/post-12.png',
                 ),
                 'std'   => '1',
                 'group' => esc_html__('Layouts','overcome'),
