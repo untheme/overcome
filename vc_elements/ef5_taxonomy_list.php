@@ -37,7 +37,7 @@ vc_map(array(
                 'type'        => 'checkbox',
                 'param_name'  => 'show_count',
                 'value'       => [
-                	esc_html__(' Show post counts','overcome') => '1'
+                	esc_html__(' Show counts','overcome') => '1'
                 ],
                 'std'         => '0',
             ),
@@ -50,7 +50,7 @@ vc_map(array(
                 'std'         => '0',
                 'dependency'  => array(
                 	'element'	=> 'taxonomy_style',
-                	'value'		=> '0'
+                	'value'		=> ''
                 )
             ),
         )
