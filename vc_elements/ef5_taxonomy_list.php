@@ -49,9 +49,9 @@ class WPBakeryShortCode_ef5_taxonomy_list extends WPBakeryShortCode
         ]);
         $classes = ['ef5-el-title', 'ef5-heading', $args['class']];
         ?>
-            <div class="<?php echo trim(implode(' ', $classes));?>">
-                <?php echo esc_html($atts['el_title']); ?>
-            </div>
+            <div class="<?php echo trim(implode(' ', $classes));?>"><?php 
+            	echo esc_html($atts['el_title']); 
+            ?></div>
         <?php
     }
     protected function overcome_taxonomy_list($atts, $args=[]){
