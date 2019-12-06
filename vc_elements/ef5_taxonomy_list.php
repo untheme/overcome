@@ -63,11 +63,19 @@ class WPBakeryShortCode_ef5_taxonomy_list extends WPBakeryShortCode
     	?>
     		<div class="tagcloud">
     			<?php 
-    				wp_tag_cloud([
-    					'taxonomy'   => $taxonomy,
-						//'echo'       => false,
-						'show_count' => 1,
-    				]);
+    				$tag_cloud = wp_tag_cloud(
+						apply_filters(
+							'widget_tag_cloud_args',
+							array(
+								'taxonomy'   => $taxonomy,
+								'echo'       => false,
+								'show_count' => 1,
+							),
+							$atts
+						)
+					);
+
+					echo overcome_html($tag_cloud);
     			?>
     		</div>
     	<?php
