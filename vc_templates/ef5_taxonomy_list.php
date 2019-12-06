@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 ?>
-<div class="ef5-taxonomy-list">
+<div class="widget ef5-taxonomy-list">
 	<?php 
 		$this->title($atts); 
 		$this->overcome_taxonomy_list($atts);
