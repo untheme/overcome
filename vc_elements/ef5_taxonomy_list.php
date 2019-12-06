@@ -40,7 +40,9 @@ class WPBakeryShortCode_ef5_taxonomy_list extends WPBakeryShortCode
     	]);
     	extract($atts);
     	wp_list_categories([
-    		'taxonomy' => $taxonomy
+    		'taxonomy' => $taxonomy,
+    		'title_li' => '',
+    		'style'		=> 'none'	
     	]);
     }
 }
