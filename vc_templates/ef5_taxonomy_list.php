@@ -9,5 +9,10 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @var $this WPBakeryShortCode_cms_team
  */
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
-
-$this->overcome_taxonomy_list($atts);
+?>
+<div class="ef5-taxonomy-list">
+	<?php 
+		$this->title($atts); 
+		$this->overcome_taxonomy_list($atts);
+	?>
+</div>
