@@ -42,7 +42,7 @@ class WPBakeryShortCode_ef5_taxonomy_list extends WPBakeryShortCode
     	wp_list_categories([
     		'taxonomy' => $taxonomy,
     		'title_li' => '',
-    		'style'		=> 'none',
+    		'style'		=> '',
     		'orderby'      => 'name',
 			'show_count'   => 1,
 			'hierarchical' => 1,
