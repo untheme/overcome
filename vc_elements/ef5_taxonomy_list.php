@@ -41,7 +41,7 @@ class WPBakeryShortCode_ef5_taxonomy_list extends WPBakeryShortCode
     	extract($atts);
     	wp_list_categories([
     		'taxonomy' => $taxonomy,
-    		'echo'		=> '0'
+    		'echo'		=> 0
     	]);
     }
 }
