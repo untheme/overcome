@@ -10,4 +10,4 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 
-$this->overcome_taxonomy_list($atts);
+echo $this->overcome_taxonomy_list($atts);
