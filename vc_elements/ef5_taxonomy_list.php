@@ -33,6 +33,22 @@ vc_map(array(
                 ],
                 'std'         => '0',
             ),
+            array(
+                'type'        => 'checkbox',
+                'param_name'  => 'show_count',
+                'value'       => [
+                	esc_html__(' Show post counts','overcome') => '1'
+                ],
+                'std'         => '0',
+            ),
+            array(
+                'type'        => 'checkbox',
+                'param_name'  => 'hierarchical',
+                'value'       => [
+                	esc_html__(' Show hierarchy','overcome') => '1'
+                ],
+                'std'         => '0',
+            ),
         )
     )
 ));
@@ -69,19 +85,15 @@ class WPBakeryShortCode_ef5_taxonomy_list extends WPBakeryShortCode
 							array(
 								'taxonomy'   => $taxonomy,
 								'echo'       => false,
-								'show_count' => 1,
+								'show_count' => $show_count,
 							),
 							$atts
 						)
 					);
-
 					echo overcome_html($tag_cloud);
     			?>
     		</div>
-    	<?php
-
-    	} else {
-    	?>
+    	<?php } else { ?>
     		<ul class="ef5-taxonomy-list">
 	    		<?php 
 		    	wp_list_categories([
@@ -89,8 +101,8 @@ class WPBakeryShortCode_ef5_taxonomy_list extends WPBakeryShortCode
 					'title_li'     => '',
 					'style'        => 'list',
 					'orderby'      => 'name',
-					'show_count'   => 1,
-					'hierarchical' => 1,
+					'show_count'   => $show_count,
+					'hierarchical' => $hierarchical,
 					'walker'       => new OverCome_Categories_Walker
 		    	]);
 		    	?>
