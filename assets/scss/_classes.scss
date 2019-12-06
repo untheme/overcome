@@ -131,6 +131,15 @@ $ef5-opacity : (
 .ef5-no-overflow-hidden{
 	overflow: unset!important;
 }
+$ef5-overflow: (
+	hidden,
+	visibility
+);
+@each $name in $ef5-overflow{
+	.ef5-overflow-#{$name}{
+		overflow: #{$name};
+	}
+}
 // Toggle Block 
 .ef5-toggle-block-wrap{
 	position: relative;
