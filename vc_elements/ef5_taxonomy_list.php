@@ -65,7 +65,7 @@ class WPBakeryShortCode_ef5_taxonomy_list extends WPBakeryShortCode
     			<?php 
     				wp_tag_cloud([
     					'taxonomy'   => $taxonomy,
-						'echo'       => false,
+						//'echo'       => false,
 						'show_count' => 1,
     				]);
     			?>
