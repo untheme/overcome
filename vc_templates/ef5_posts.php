@@ -451,7 +451,7 @@
                             <div class="col ef5-content-info">
                                 <?php
                                     overcome_post_title([
-                                        'heading_tag' => 'text-18 font-style-500'
+                                        'heading_tag' => 'text-18 font-style-500 pb-4'
                                     ]);
                                     if(class_exists('EF5Payments')) {
                                         ef5payments_donation_layout_1(['progress_bar' => false, 'show_percent'=>false]);
