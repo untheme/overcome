@@ -62,15 +62,21 @@ class WPBakeryShortCode_ef5_taxonomy_list extends WPBakeryShortCode
     	if($taxonomy_style){
 
     	} else {
-	    	wp_list_categories([
-				'taxonomy'     => $taxonomy,
-				'title_li'     => '',
-				'style'        => 'list',
-				'orderby'      => 'name',
-				'show_count'   => 1,
-				'hierarchical' => 1,
-				'walker'       => new OverCome_Categories_Walker
-	    	]);
+    	?>
+    		<ul class="ef5-taxonomy-list">
+	    		<?php 
+		    	wp_list_categories([
+					'taxonomy'     => $taxonomy,
+					'title_li'     => '',
+					'style'        => 'list',
+					'orderby'      => 'name',
+					'show_count'   => 1,
+					'hierarchical' => 1,
+					'walker'       => new OverCome_Categories_Walker
+		    	]);
+		    	?>
+		    </ul>
+		<?php
 	    }
     }
 }
