@@ -34,6 +34,8 @@
         overcome_wooscp_change_text();
         overcome_masonry_filter();
         overcome_vc_animation_callback();
+
+        overcome_tabs();
 	});
 	// On scroll
 	$( window ).scroll( function() {
@@ -749,17 +751,25 @@
             var $filter = jQuery(".ef5-masonry-filters .filter-item");
             $filter.on("click", function (e){
               e.preventDefault();
+
               jQuery(this).addClass("active").siblings().removeClass("active");
-              var filterValue = jQuery(this).attr('data-filter');
-              filterValue = filterValue.join(', ');
-              jQuery($grid.elements).isotope(
-                { filter: filterValue }, 
-                function( $changedItems, instance ) {
-                    instance.$allAtoms.filter('.isotope-hidden').removeClass('is-filtered');
-                    instance.$filteredAtoms.addClass('is-filtered');
-                });
+              var filterValue = jQuery(this).attr('data-filter');  
+              jQuery($grid.elements).isotope({ filter: filterValue });
             });
         }
+    }
+    /* Tabs */
+    function overcome_tabs(){
+        'use strict';
+        $('.ef5-tabs-nav a').on('click', function (event) {
+            event.preventDefault();
+            
+            $('.ef5-tab-active').removeClass('ef5-tab-active');
+            $(this).parent().addClass('ef5-tab-active');
+            $('.ef5-tabs-stage div').hide();
+            $($(this).attr('data-tab')).show();
+        });
+        $('.ef5-tabs-nav .filter-item:first').trigger('click');
     }
     /* VC Animation */
     function overcome_vc_animation_callback(){
