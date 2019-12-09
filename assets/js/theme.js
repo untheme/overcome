@@ -766,8 +766,8 @@
         $('.ef5-tabs-nav .filter-item').on('click', function (event) {
             event.preventDefault();
             console.log($(this));
-            $('.ef5-tab-active').removeClass('ef5-tab-active');
-            $(this).addClass('ef5-tab-active');
+            $('.ef5-tab-active').removeClass('ef5-tab-active active');
+            $(this).addClass('ef5-tab-active active');
             $('.ef5-tabs-stage .ef5-tab-item').hide().removeClass('go');
             $($(this).attr('data-tab')).show().addClass('go');
         });
