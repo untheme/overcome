@@ -171,6 +171,7 @@
 // Single donation
 .ef5p-single-donation{
 	.thumbnail-wrap{
+		margin-bottom: 40px;
 		a:after{
 			content: '';
 			display: block;
@@ -216,6 +217,9 @@
 				display: none;
 			}
 		}
+	}
+	.entry-conent-inner{
+		padding-top: 35px;
 	}
 }
 .ef5-tabs-stage{
