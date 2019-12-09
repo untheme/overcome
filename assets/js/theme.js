@@ -24,6 +24,8 @@
 
         overcome_svg_color();
         overcome_smooth_scroll();
+
+        overcome_tabs();
     });
 	// On Load 
 	$(window).load(function() {
