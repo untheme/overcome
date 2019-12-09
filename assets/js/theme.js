@@ -763,7 +763,7 @@
         'use strict';
         $('.ef5-tabs-nav a').on('click', function (event) {
             event.preventDefault();
-            
+            console.log($(this));
             $('.ef5-tab-active').removeClass('ef5-tab-active');
             $(this).addClass('ef5-tab-active');
             $('.ef5-tabs-stage .ef5-tab-item').hide();
