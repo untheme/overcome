@@ -208,9 +208,12 @@
 	}
 	.ef5-donation-content{
 		.ef5-masonry-item{
-			display: none;
+			//display: none;
 			&.is-filtered{
 				display: block;
+			}
+			&.isotope-hidden{
+				display: none;
 			}
 		}
 	}
