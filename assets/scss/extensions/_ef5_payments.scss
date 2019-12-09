@@ -206,5 +206,13 @@
 		left: 0;
 		right: 0;
 	}
+	.ef5-donation-content{
+		.ef5-masonry-item{
+			display: none;
+			&.active{
+				display: block;
+			}
+		}
+	}
 
 }
