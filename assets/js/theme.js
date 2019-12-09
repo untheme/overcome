@@ -750,7 +750,8 @@
             $filter.on("click", function (e){
               e.preventDefault();
               jQuery(this).addClass("active").siblings().removeClass("active");
-              var filterValue = jQuery(this).attr('data-filter');  
+              var filterValue = jQuery(this).attr('data-filter');
+              filterValue = filterValue.join(', ');
               jQuery($grid.elements).isotope(
                 { filter: filterValue }, 
                 function( $changedItems, instance ) {
