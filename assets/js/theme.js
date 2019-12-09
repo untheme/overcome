@@ -751,8 +751,12 @@
               e.preventDefault();
               jQuery(this).addClass("active").siblings().removeClass("active");
               var filterValue = jQuery(this).attr('data-filter');  
-              jQuery($grid.elements).isotope({ filter: filterValue });
-            
+              jQuery($grid.elements).isotope(
+                { filter: filterValue }, 
+                function( $changedItems, instance ) {
+                    instance.$allAtoms.filter('.isotope-hidden').removeClass('is-filtered');
+                    instance.$filteredAtoms.addClass('is-filtered');
+                });
             });
         }
     }
