@@ -763,7 +763,7 @@
     /* Tabs */
     function overcome_tabs(){
         'use strict';
-        $('.ef5-tabs-nav a').on('click', function (event) {
+        $('.ef5-tabs-nav .filter-item').on('click', function (event) {
             event.preventDefault();
             console.log($(this));
             $('.ef5-tab-active').removeClass('ef5-tab-active');
