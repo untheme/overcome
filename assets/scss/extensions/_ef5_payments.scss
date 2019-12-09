@@ -259,7 +259,10 @@
     -webkit-transform: translateX(-400px); 
     transform: translateX(-400px);
 }
-.fadeInLeft.go { 
+.fadeInLeft.go {
+	opacity: 1;
+	-webkit-transform: translateX(0); 
+    transform: translateX(0);
     -webkit-animation-name: fadeInLeft; 
     animation-name: fadeInLeft; 
 }
