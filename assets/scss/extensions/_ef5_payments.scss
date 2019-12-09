@@ -220,7 +220,10 @@
 }
 .ef5-tabs-stage{
 	.ef5-tab-item{
-		//@include 
+		height: 0;
+		&.go{
+			height: auto;
+		}
 	}
 }
 
