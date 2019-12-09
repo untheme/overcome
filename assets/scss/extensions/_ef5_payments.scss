@@ -234,7 +234,7 @@
 @-webkit-keyframes fadeInLeft { 
     0% { 
         opacity: 0; 
-        -webkit-transform: translateX(-400px); 
+        -webkit-transform: translateX(-100%); 
     } 
     50%{
        opacity: 0.3; 
@@ -247,7 +247,7 @@
 @keyframes fadeInLeft { 
     0% { 
         opacity: 0; 
-        transform: translateX(-400px); 
+        transform: translateX(-100%); 
     } 
     50%{
        opacity: 0.3; 
@@ -259,8 +259,8 @@
 } 
 .fadeInLeft{ 
     opacity: 0; 
-    -webkit-transform: translateX(-400px); 
-    transform: translateX(-400px);
+    -webkit-transform: translateX(-100%); 
+    transform: translateX(-100%);
 }
 .fadeInLeft.go {
 	opacity: 1;
