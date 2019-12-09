@@ -209,7 +209,7 @@
 	.ef5-donation-content{
 		.ef5-masonry-item{
 			display: none;
-			&.active{
+			&.is-filtered{
 				display: block;
 			}
 		}
