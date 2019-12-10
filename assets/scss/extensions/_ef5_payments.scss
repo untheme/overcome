@@ -237,6 +237,21 @@
 		display: block;
 	}
 }
+.ef5-payment-donor-wrap{
+	margin: -15px;
+	.ef5-payment-donor{
+		margin: 15px;
+		padding: 15px;
+		border: 1px solid #ddd;
+		@include border-radius(10px);
+		.ef5-label{
+			min-width: 100px;
+			&:empty{
+				display: none;
+			}
+		}
+	}
+}
 
 /*************
 * FadeInLeft *
