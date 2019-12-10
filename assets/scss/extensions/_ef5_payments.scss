@@ -207,16 +207,8 @@
 		left: 0;
 		right: 0;
 	}
-	.ef5-donation-content{
-		.ef5-masonry-item{
-			//display: none;
-			&.is-filtered{
-				display: block;
-			}
-			&.isotope-hidden{
-				display: none;
-			}
-		}
+	.entry-conent-inner{
+		margin-bottom: 100px;
 	}
 }
 .ef5-tabs-stage{
