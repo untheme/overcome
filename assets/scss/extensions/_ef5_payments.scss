@@ -244,8 +244,13 @@
 		padding: 15px;
 		border: 1px solid #ddd;
 		@include border-radius(10px);
+		.donor-name{
+			padding-bottom: 15px;
+		}
 		.ef5-label{
 			min-width: 100px;
+			display: inline;
+			font-weight: 400;
 			&:empty{
 				display: none;
 			}
