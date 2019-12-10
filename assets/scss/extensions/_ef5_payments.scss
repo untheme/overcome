@@ -226,6 +226,12 @@
 		&.go{
 			height: auto;
 		}
+		.commentlist-wrap{
+			margin-top: 0;
+			+ .ef5-comment-form-flex .comment-respond{
+				margin-top: 0;
+			}
+		}
 	}
 }
 .ef5-payments-attachment{
@@ -249,7 +255,7 @@
 		}
 		.ef5-label{
 			min-width: 100px;
-			display: inline;
+			display: inline-block;
 			font-weight: 400;
 			&:empty{
 				display: none;
