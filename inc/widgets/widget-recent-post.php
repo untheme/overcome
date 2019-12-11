@@ -107,9 +107,12 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
 
                 echo '<div class="ef5-brief col" style="max-width: calc(100% - '.$thumbnail_size[0].'px);">';
 
-                overcome_post_title([
-                    'class' => 'text-18 font-style-500'
-                ]);
+                printf(
+                    '<h4 class="ef5-heading font-style-500"><a href="%1$s" title="%2$s">%3$s</a></h4>',
+                    esc_url( get_permalink() ),
+                    esc_attr( get_the_title() ),
+                    get_the_title()
+                );
                 if(class_exists('EF5Payments')) {
                     ef5payments_donation_layout_1(['progress_bar' => false, 'show_percent'=>false]);
                 }
