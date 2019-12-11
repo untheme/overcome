@@ -8,6 +8,7 @@ function overcome_header_donate_button(){
       $post_id = ef5payments_default_donation(overcome_get_id_by_slug(overcome_get_opts('header_donate_item',''),'ef5_donation'));
     }
     var_dump($post_id);
+    var_dump(get_post_meta($post_id));
     $data = apply_filters('ef5payments_get_payment_form_data',[
         'class'        => 'ef5-btn ef5-btn-sm accent fill',
         'data-options' => '',
