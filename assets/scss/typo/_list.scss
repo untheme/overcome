@@ -47,9 +47,11 @@ dd {
 }
 
 .ef5-list{
-	list-style: none;
+	list-style: none inside;
+	&.unordered{
+
+	}
 	&.ordered {
-		list-style: none;
 	  	counter-reset: ef5-list-counter;
 		li{
 			padding: 7px 0;
