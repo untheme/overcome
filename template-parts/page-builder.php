@@ -23,7 +23,7 @@ get_header();
             ?>
         </div>
         <?php overcome_sidebar(); ?>
-        <?php tribe_get_view(true); ?>
+        <?php tribe_get_view(true); echo 'xxx'; ?>
     </div>
 <?php
 get_footer();
