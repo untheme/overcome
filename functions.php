@@ -585,4 +585,4 @@ function overcome_tribe_is_ajax_view_request($view){
     return $view;
 }
 
-//add_filter('tribe_events_shortcode_tag', function(){ return 'tribe_events';  });
+add_filter('tribe_events_shortcode_tag', function(){ return 'tribe_events';  });
