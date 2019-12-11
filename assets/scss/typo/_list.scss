@@ -57,6 +57,11 @@ dd {
 				height: 5px;
 				@include border-radius(50%);
 				background-color: $accent_color;
+				margin-right: 10px;
+    			transform: translate(0, -3px);
+    			[dir="rtl"] &{
+    				margin: 0 0 0 10px;
+    			}
 			}
 		}
 	}
