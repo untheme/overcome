@@ -207,6 +207,19 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
+		.post-author,
+		.post-time{
+			&:before{
+				font-family: $FontFlaticon;
+				color: $accent_color;
+			}
+		}
+		.post-author:before{
+			content: "\f10f";
+		}
+		.post-time:before{
+			content: "\f10d";
+		}
 	}
 	.entry-conent-inner{
 		margin-bottom: 100px;
