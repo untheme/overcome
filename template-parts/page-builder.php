@@ -23,21 +23,6 @@ get_header();
             ?>
         </div>
         <?php overcome_sidebar(); ?>
-        <?php 
-
-            do_action( 'tribe_events_before_template' );
-
-// Title Bar
-tribe_get_template_part( 'month/title-bar' );
-
-// Tribe Bar
-tribe_get_template_part( 'modules/bar' );
-
-// Main Events Content
-tribe_get_template_part( 'month/content' );
-
-do_action( 'tribe_events_after_template' );
-        ?>
     </div>
 <?php
 get_footer();
