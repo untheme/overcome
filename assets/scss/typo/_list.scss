@@ -49,7 +49,16 @@ dd {
 .ef5-list{
 	list-style: none inside;
 	&.unordered{
-
+		li{
+			&:before{
+				content: '';
+				display: inline-block;
+				width: 5px;
+				height: 5px;
+				@include border-radius(50%);
+				background-color: $accent_color;
+			}
+		}
 	}
 	&.ordered {
 	  	counter-reset: ef5-list-counter;
