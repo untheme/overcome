@@ -40,7 +40,7 @@ if($show_search == '0' && $show_cart === '0') $nav_extra_class[] = 'no-icon';
                                     overcome_header_cart();
                                     overcome_header_signin_signup();
                                     overcome_header_contact();
-                                    overcome_header_donate_button();
+                                        //overcome_header_donate_button();
                                     overcome_header_popup_nav_icon();
                                     overcome_header_mobile_menu_icon();
                                     overcome_header_side_nav_icon();
