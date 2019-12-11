@@ -107,12 +107,9 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
 
                 echo '<div class="ef5-brief col" style="max-width: calc(100% - '.$thumbnail_size[0].'px);">';
 
-                printf(
-                    '<h4 class="ef5-heading"><a href="%1$s" title="%2$s">%3$s</a></h4>',
-                    esc_url( get_permalink() ),
-                    esc_attr( get_the_title() ),
-                    get_the_title()
-                );
+                overcome_post_title([
+                    'class' => 'text-18 font-style-500'
+                ]);
                 if(class_exists('EF5Payments')) {
                     ef5payments_donation_layout_1(['progress_bar' => false, 'show_percent'=>false]);
                 }
@@ -124,7 +121,7 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
                     if($show_comments) overcome_comments_popup_link(['show_text'=> true]);
                     if($show_cat) overcome_posted_in();
                     $post_meta = ob_get_clean();
-                    
+
                     if ( $post_meta )
                     {
                         printf( '<div class="ef5-meta row gutter-20 justify-content-between">%s</div>', $post_meta );
