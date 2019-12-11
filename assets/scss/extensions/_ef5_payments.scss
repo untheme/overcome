@@ -209,6 +209,7 @@
 		right: 0;
 		.post-author,
 		.post-time{
+			text-transform: capitalize;
 			&:before{
 				font-family: $FontFlaticon;
 				color: $accent_color;
