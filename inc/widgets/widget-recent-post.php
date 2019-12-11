@@ -113,7 +113,9 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
                     esc_attr( get_the_title() ),
                     get_the_title()
                 );
-
+                if(class_exists('EF5Payments')) {
+                    ef5payments_donation_layout_1(['progress_bar' => false, 'show_percent'=>false]);
+                }
                 if ( $show_author || $show_comments || $show_date || $show_cat )
                 {
                     ob_start();
@@ -122,7 +124,7 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
                     if($show_comments) overcome_comments_popup_link(['show_text'=> true]);
                     if($show_cat) overcome_posted_in();
                     $post_meta = ob_get_clean();
-
+                    
                     if ( $post_meta )
                     {
                         printf( '<div class="ef5-meta row gutter-20 justify-content-between">%s</div>', $post_meta );
