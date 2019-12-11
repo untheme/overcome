@@ -10,7 +10,7 @@
 	}
 }
 .ef5-prev-post{
-	.icon{
+	.icon:before{
 		content: "\f10e";
 		[dir="rtl"] &{
 			content: "\f111";
@@ -18,7 +18,7 @@
 	}
 }
 .ef5-next-post{
-	.icon{
+	.icon:before{
 		content: "\f111";
 		[dir="rtl"] &{
 			content: "\f10e";
