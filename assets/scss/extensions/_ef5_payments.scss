@@ -213,6 +213,11 @@
 			&:before{
 				font-family: $FontOverCome;
 				color: $accent_color;
+				margin-right: 5px;
+				[dir="rtl"] &{
+					margin-right: 0;
+					margin-left: 5px;
+				}
 			}
 		}
 		.post-author:before{
