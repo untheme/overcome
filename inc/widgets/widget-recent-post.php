@@ -85,7 +85,7 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
                 $r->the_post();
 
                 printf(
-                    '<div class="post-list-entry transition %s"><div class="row gutters-20">',
+                    '<div class="post-list-item transition %s"><div class="row gutters-20">',
                     ( has_post_thumbnail() ? 'has-post-thumbnail' : '' )
                 );
 
@@ -108,7 +108,7 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
                 echo '<div class="ef5-brief col" style="max-width: calc(100% - '.$thumbnail_size[0].'px);">';
 
                 printf(
-                    '<h4 class="ef5-heading font-style-500"><a href="%1$s" title="%2$s">%3$s</a></h4>',
+                    '<h4 class="ef5-heading font-style-500 pb-10"><a href="%1$s" title="%2$s">%3$s</a></h4>',
                     esc_url( get_permalink() ),
                     esc_attr( get_the_title() ),
                     get_the_title()
