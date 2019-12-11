@@ -3,6 +3,25 @@
 	font-weight: 600;
 	text-transform: uppercase;
 	border-top: 1px solid #dedede;
-	padding: 50px;
+	padding: 44px;
 	margin-top: 50px;
+	.icon{
+		font-family: Flaticon;
+	}
+}
+.ef5-prev-post{
+	.icon{
+		content: "\f10e";
+		[dir="rtl"] &{
+			content: "\f111";
+		}
+	}
+}
+.ef5-next-post{
+	.icon{
+		content: "\f111";
+		[dir="rtl"] &{
+			content: "\f10e";
+		}
+	}
 }
