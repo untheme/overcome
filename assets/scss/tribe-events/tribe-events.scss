@@ -16,6 +16,16 @@
 		flex-wrap: wrap;
 	}
 }
+#tribe-bar-form {
+	label{
+		font-weight: 400;
+		font-size: 13;
+	}
+	input[type=text]{
+		font-weight: 600;
+		color: #777;
+	}
+}
 .tribe-bar-views-inner{
 	background: none;
 }

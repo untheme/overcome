@@ -59,7 +59,7 @@ if ( count( $views ) > 1 ) {
 					<div class="tribe-bar-filters-inner tribe-clearfix">
 						<h3 class="tribe-events-visuallyhidden"><?php printf( esc_html__( '%s Search', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?></h3>
 						<?php foreach ( $filters as $filter ) : ?>
-							<div class="<?php echo esc_attr( $filter['name'] ) ?>-filter">
+							<div class="<?php echo esc_attr( $filter['name'] ) ?>-filter ef5-bar-filter">
 								<label class="label-<?php echo esc_attr( $filter['name'] ) ?>" for="<?php echo esc_attr( $filter['name'] ) ?>"><?php echo $filter['caption'] ?></label>
 								<?php echo $filter['html'] ?>
 							</div>
