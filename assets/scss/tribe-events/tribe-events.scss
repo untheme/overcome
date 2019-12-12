@@ -9,9 +9,23 @@
 	flex-wrap: wrap;
 }
 #tribe-bar-form.tribe-bar-full.tribe-events-bar--has-views #tribe-bar-filters-wrap, 
-#tribe-bar-form.tribe-bar-mini.tribe-events-bar--has-views #tribe-bar-filters-wrap{
+#tribe-bar-form.tribe-bar-mini.tribe-events-bar--has-views #tribe-bar-filters-wrap,
+#tribe-bar-form.tribe-bar-full.tribe-events-bar--has-filters #tribe-bar-views, 
+#tribe-bar-form.tribe-bar-mini.tribe-events-bar--has-filters #tribe-bar-views{
 	float: none;
 	width: auto;
+}
+#tribe-bar-form.tribe-bar-full.tribe-events-bar--has-views #tribe-bar-filters-wrap, 
+#tribe-bar-form.tribe-bar-mini.tribe-events-bar--has-views #tribe-bar-filters-wrap{
+	flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+}
+#tribe-bar-form.tribe-bar-full.tribe-events-bar--has-filters #tribe-bar-views, 
+#tribe-bar-form.tribe-bar-mini.tribe-events-bar--has-filters #tribe-bar-views{
+	flex: 0 0 auto;
+    width: auto;
+    max-width: 100%;
 }
 .tribe-bar-views-inner{
 	background: none;
