@@ -19,7 +19,7 @@
 #tribe-bar-form {
 	label{
 		font-weight: 400;
-		font-size: 13;
+		font-size: 13px;
 	}
 	.tribe-bar-views-inner label{
 		text-align: start;
@@ -34,6 +34,7 @@
 		&:active{
 			border: 0;
 			border-bottom: 1px solid var(--accent-color);
+			outline: none;
 		}
 	}
 	input[name*=tribe-bar-]::-webkit-input-placeholder{
