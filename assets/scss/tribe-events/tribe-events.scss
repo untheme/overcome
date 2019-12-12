@@ -12,6 +12,7 @@
 	}
 	.tribe-bar-views-inner {
 		padding: 0;
+		background: transparent;
 		label{
 			text-align: start;
 			padding: 0 0 10px;
@@ -71,9 +72,11 @@
 		width: auto;
 	}
 	#tribe-bar-views-toggle{
-		padding: 0;
+		padding: 0 0 7px;
 		font-weight: 600;
 		font-style: italic;
+		color: #777;
+		border-bottom: 1px solid var(--accent-color);
 		[class*="tribe-icon-"]{
 			display: none;
 		}
