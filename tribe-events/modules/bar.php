@@ -40,7 +40,7 @@ if ( count( $views ) > 1 ) {
 	<form id="tribe-bar-form" class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>" name="tribe-bar-form" method="post" action="<?php echo esc_attr( $current_url ); ?>">
 
 		<?php if ( ! empty( $filters ) ) : ?>
-			<div id="ef5-tribe-bar-filters-wrap">
+			<div id="tribe-bar-filters-wrap">
 				<button
 					id="tribe-bar-collapse-toggle"
 					aria-expanded="false"
