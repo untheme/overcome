@@ -22,8 +22,6 @@ tribe_get_template_part( 'modules/bar' );
 // Title Bar
 tribe_get_template_part( 'month/title-bar' );
 
-
-
 // Main Events Content
 tribe_get_template_part( 'month/content' );
 
