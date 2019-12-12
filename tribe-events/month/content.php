@@ -18,24 +18,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div id="tribe-events-content" class="tribe-events-month">
 
 	<!-- Notices -->
-	<?php tribe_the_notices() ?>
+	<?php //tribe_the_notices() ?>
 
 	<!-- Month Header -->
-	<?php do_action( 'tribe_events_before_header' ) ?>
+	<?php //do_action( 'tribe_events_before_header' ) ?>
 	<div id="tribe-events-header" <?php tribe_events_the_header_attributes() ?>>
 
 		<!-- Header Navigation -->
-		<?php tribe_get_template_part( 'month/nav' ); ?>
+		<?php //tribe_get_template_part( 'month/nav' ); ?>
 
 	</div>
 	<!-- #tribe-events-header -->
-	<?php do_action( 'tribe_events_after_header' ) ?>
+	<?php //do_action( 'tribe_events_after_header' ) ?>
 
 	<!-- Month Grid -->
-	<?php tribe_get_template_part( 'month/loop', 'grid' ) ?>
+	<?php //tribe_get_template_part( 'month/loop', 'grid' ) ?>
 
 	<!-- Month Footer -->
-	<?php do_action( 'tribe_events_before_footer' ) ?>
+	<?php //do_action( 'tribe_events_before_footer' ) ?>
 	<div id="tribe-events-footer">
 
 		<!-- Footer Navigation -->
