@@ -14,6 +14,7 @@
 		padding: 0;
 		label{
 			text-align: start;
+			padding: 0 0 10px;
 		}
 	}
 	.ef5-bar-filter {
@@ -69,6 +70,17 @@
 		float: none;
 		width: auto;
 	}
+	#tribe-bar-views-toggle{
+		padding: 0;
+		font-weight: 600;
+		font-style: italic;
+		[class*="tribe-icon-"]{
+			display: none;
+		}
+		&:after{
+			display: none;
+		}
+	}
 	@media (min-width: 992px){
 		border-width: 0.556px;
 		border-radius: 10px;
@@ -85,10 +97,6 @@
 		display: flex;
 		flex-wrap: wrap;
 	}
-}
-
-.tribe-bar-views-inner{
-	background: none;
 }
 .tribe-bar-submit{
 	float: none;
