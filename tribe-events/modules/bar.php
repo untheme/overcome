@@ -91,7 +91,7 @@ if ( count( $views ) > 1 ) {
 								</div>
 							</div>
 						<?php endif; ?>
-						<div class="tribe-bar-submit">
+						<div class="tribe-bar-submit ef5-bar-filter">
 							<input
 								class="tribe-events-button tribe-no-param"
 								type="submit"
