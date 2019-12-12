@@ -130,6 +130,9 @@
 	#tribe-bar-filters{
 		display: none;
 	}
+	#tribe-bar-form.tribe-bar-collapse .tribe-bar-filters{
+		background: white;
+	}
 }
 .tribe-bar-submit{
 	float: none;
