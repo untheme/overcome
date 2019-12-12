@@ -65,7 +65,7 @@ if ( count( $views ) > 1 ) {
 							</div>
 						<?php endforeach; ?>
 						<?php if ( count( $views ) > 1 ) : ?>
-							<div id="tribe-bar-views" class="ef5-tribe-bar-views">
+							<div id="tribe-bar-views" class="ef5-tribe-bar-views ef5-bar-filter">
 								<div class="tribe-bar-views-inner tribe-clearfix">
 									<h3 class="tribe-events-visuallyhidden"><?php printf( esc_html__( '%s Views Navigation', 'the-events-calendar' ), tribe_get_event_label_singular() ); ?></h3>
 									<label id="tribe-bar-views-label" aria-label="<?php printf( esc_html__( 'View %s As', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?>">
