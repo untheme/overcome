@@ -1,32 +1,26 @@
 #tribe-bar-form{
-	border-width: 0.556px;
+	border-width: 0;
 	border-color: rgb(183, 183, 183);
 	border-style: solid;
-	border-radius: 10px;
+	border-radius: 18.5px;
 	background-color: rgb(255, 255, 255);
 	box-shadow: 0px 3px 9.9px 0.1px rgba(0, 0, 0, 0.25);
-	display: flex;
-	flex-wrap: wrap;
+	@media (min-width: 992px){
+		border-width: 0.556px;
+		border-radius: 10px;
+	}
 }
-#tribe-bar-form.tribe-bar-full.tribe-events-bar--has-views #tribe-bar-filters-wrap, 
-#tribe-bar-form.tribe-bar-mini.tribe-events-bar--has-views #tribe-bar-filters-wrap,
-#tribe-bar-form.tribe-bar-full.tribe-events-bar--has-filters #tribe-bar-views, 
-#tribe-bar-form.tribe-bar-mini.tribe-events-bar--has-filters #tribe-bar-views{
-	float: none;
-	width: auto;
-}
-#tribe-bar-form.tribe-bar-full.tribe-events-bar--has-views #tribe-bar-filters-wrap, 
-#tribe-bar-form.tribe-bar-mini.tribe-events-bar--has-views #tribe-bar-filters-wrap{
-	flex-basis: 0;
-    flex-grow: 1;
-    max-width: 100%;
-}
-#tribe-bar-form.tribe-bar-full.tribe-events-bar--has-filters #tribe-bar-views, 
-#tribe-bar-form.tribe-bar-mini.tribe-events-bar--has-filters #tribe-bar-views{
-	flex: 0 0 auto;
-    width: auto;
-    max-width: 100%;
+@media (min-width: 992px){
+	.tribe-bar-filters-inner{
+		@include d-flex();
+	}
 }
 .tribe-bar-views-inner{
 	background: none;
+}
+.tribe-bar-submit{
+	float: none;
+	margin: 0;
+	width: auto;
+	max-width: 146px;
 }
