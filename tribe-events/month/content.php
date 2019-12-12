@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 } ?>
 
-<div id="tribe-events-content" class="tribe-events-month xxxx">
+<div id="tribe-events-content" class="tribe-events-month xxxxx">
 
 	<!-- Notices -->
 	<?php //tribe_the_notices() ?>
