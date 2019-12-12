@@ -114,6 +114,18 @@
 			padding: 15px 25px;
 			max-width: 260px;
 			min-width: 260px;
+			&.tribe-bar-submit{
+				max-width: unset;
+				min-width: unset;
+				.tribe-events-button{
+					font-size: 14px;
+				    font-weight: 500;
+				    background: var(--accent-color);
+				    padding-top: 7px;
+				    padding-bottom: 7px;
+				    border-radius: 21px;
+				}
+			}
 		}
 	}
 }
