@@ -11,9 +11,6 @@
 		padding: 2px 5px 10px;
 		.ef5-bar-filter {
 			padding: 15px 25px;
-			.tribe-bar-views-inner{
-				padding: 0;
-			}
 		}
 	}
 }
@@ -31,6 +28,10 @@
 	}
 	.tribe-bar-views-inner label{
 		text-align: start;
+	}
+	.ef5-bar-filter {
+		float: none;
+		padding: 15px;
 	}
 	input{
 		margin: 0;
