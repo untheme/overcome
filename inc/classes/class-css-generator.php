@@ -78,6 +78,8 @@ class OverCome_CSS_Generator
             $this->generate_file();
             $this->generate_min_file();
             $this->generate_editor_style();
+            // tribe event
+            $this->generate_tribe_events_css();
         }
         else
         {
