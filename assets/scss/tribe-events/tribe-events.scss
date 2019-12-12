@@ -8,6 +8,10 @@
 	@media (min-width: 992px){
 		border-width: 0.556px;
 		border-radius: 10px;
+		padding: 2px 5px 10px;
+		.tribe-bar-date-filter {
+			padding: 15px 25px;
+		}
 	}
 }
 @media (min-width: 992px){
@@ -20,6 +24,7 @@
 	label{
 		font-weight: 400;
 		font-size: 13px;
+		margin-bottom: 1px;
 	}
 	.tribe-bar-views-inner label{
 		text-align: start;
