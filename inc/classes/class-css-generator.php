@@ -205,6 +205,39 @@ class OverCome_CSS_Generator
             'content' => $this->scssc->compile( '@'.'import "admin.scss"' )
         ) );
     }
+
+    /**
+     * Tribe Events
+     */
+    function generate_tribe_events_css()
+    {   
+        // Theme
+        $scss_dir = get_template_directory() . '/assets/scss/';
+        $css_dir  = get_template_directory() . '/tribe-events/';
+        $css_file = $css_dir . 'tribe-events.css';
+        // Child Theme
+        $child_scss_dir = get_stylesheet_directory() . '/assets/scss/';
+        $child_css_dir  = get_stylesheet_directory() . '/tribe-events/';
+        $child_css_file = $child_css_dir . 'tribe-events.css';
+
+        $this->scssc = new \Leafo\ScssPhp\Compiler();
+        $this->scssc->setImportPaths( $scss_dir );
+
+        
+        $this->scssc->setFormatter( 'Leafo\ScssPhp\Formatter\Crunched' );
+        
+        // Theme
+        $this->redux->filesystem->execute( 'put_contents', $css_file, array(
+            'content' => $this->scssc->compile( '@'.'import "tribe-events.scss"' )
+        ) );
+        // Child Theme
+        if(is_child_theme()){
+            $this->redux->filesystem->execute( 'put_contents', $child_css_file, array(
+                'content' => $this->scssc->compile( '@'.'import "tribe-events.scss"' )
+            ) );
+        }
+    }
+
     /**
      * Output options to _variables.scss
      *
