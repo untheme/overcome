@@ -214,11 +214,11 @@ class OverCome_CSS_Generator
     function generate_tribe_events_css()
     {   
         // Theme
-        $scss_dir = get_template_directory() . '/assets/scss/';
+        $scss_dir = get_template_directory() . '/assets/scss/tribe-events/';
         $css_dir  = get_template_directory() . '/tribe-events/';
         $css_file = $css_dir . 'tribe-events.css';
         // Child Theme
-        $child_scss_dir = get_stylesheet_directory() . '/assets/scss/';
+        $child_scss_dir = get_stylesheet_directory() . '/assets/scss/tribe-events/';
         $child_css_dir  = get_stylesheet_directory() . '/tribe-events/';
         $child_css_file = $child_css_dir . 'tribe-events.css';
 
