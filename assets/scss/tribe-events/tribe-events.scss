@@ -21,7 +21,7 @@
 			color: #777;
 			border-bottom: 1px solid var(--accent-color);
 			outline: none;
-			padding: 5px 0;
+			padding: 5px 0 2px;
 			&:hover,
 			&:focus,
 			&:active{
@@ -67,7 +67,7 @@
 		margin-right: auto;
 	}
 	.tribe-bar-views-inner {
-		padding: 0 0 7px;
+		padding: 0 0 4px;
 		background: transparent;
 		border-bottom: 1px solid var(--accent-color);
 		label{
