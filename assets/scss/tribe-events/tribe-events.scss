@@ -11,9 +11,10 @@
 		padding: 2px 5px 10px;
 		.ef5-bar-filter {
 			padding-left: 25px;
-		}
-		.tribe-bar-views-inner{
-			padding: 0;
+			padding-right: 25px;
+			.tribe-bar-views-inner{
+				padding: 0;
+			}
 		}
 	}
 }
