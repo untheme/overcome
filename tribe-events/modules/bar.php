@@ -55,7 +55,7 @@ if ( count( $views ) > 1 ) {
 					<span class="tribe-bar-toggle-arrow"></span>
 				</button>
 
-				<div id="ef5-tribe-bar-filters" class="tribe-bar-filters" aria-hidden="true">
+				<div id="tribe-bar-filters" class="tribe-bar-filters" aria-hidden="true">
 					<div class="tribe-bar-filters-inner tribe-clearfix">
 						<h3 class="tribe-events-visuallyhidden"><?php printf( esc_html__( '%s Search', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?></h3>
 						<?php foreach ( $filters as $filter ) : ?>
