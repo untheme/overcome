@@ -21,11 +21,15 @@
 		font-weight: 400;
 		font-size: 13;
 	}
+	.tribe-bar-views-inner label{
+		text-align: start;
+	}
 	input[type=text]{
 		font-weight: 600;
 		color: #777;
 	}
 }
+
 .tribe-bar-views-inner{
 	background: none;
 }
