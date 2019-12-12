@@ -55,6 +55,17 @@
 		font-weight:600;
 		line-height:1.3
 	}
+
+	.tribe-events-button{
+		font-size: 14px;
+	    font-weight: 500;
+	    background: var(--accent-color);
+	    padding: 7px 21px;
+	    border-radius: 21px;
+	    min-width: 146px;
+	    cursor: pointer;
+	}
+
 	&.tribe-bar-full.tribe-events-bar--has-filters, 
 	&.tribe-bar-mini.tribe-events-bar--has-filters{
 		#tribe-bar-filters-wrap,
@@ -122,15 +133,6 @@
 				min-width: unset;
 				padding-top: 21px;
     			padding-bottom: 9px;
-				.tribe-events-button{
-					font-size: 14px;
-				    font-weight: 500;
-				    background: var(--accent-color);
-				    padding: 7px 21px;
-				    border-radius: 21px;
-				    min-width: 146px;
-				    cursor: pointer;
-				}
 			}
 		}
 	}
