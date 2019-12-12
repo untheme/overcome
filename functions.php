@@ -578,3 +578,5 @@ if(class_exists('WooCommerce')){
  *
 */
 overcome_require_folder('inc/extensions', get_template_directory());
+
+remove_action( 'tribe_events_after_footer', 'maybe_add_link' );
