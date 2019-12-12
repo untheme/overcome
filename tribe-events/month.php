@@ -23,6 +23,6 @@ tribe_get_template_part( 'modules/bar' );
 tribe_get_template_part( 'month/title-bar' );
 
 // Main Events Content
-tribe_get_template_part( 'month/content' );
+//tribe_get_template_part( 'month/content' );
 
 do_action( 'tribe_events_after_template' );
