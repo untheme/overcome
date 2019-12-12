@@ -28,6 +28,12 @@
 		font-weight: 600;
 		color: #777;
 		border-bottom: 1px solid var(--accent-color);
+		&:hover,
+		&:focus,
+		&:active{
+			border: 0;
+			border-bottom: 1px solid var(--accent-color);
+		}
 	}
 }
 
