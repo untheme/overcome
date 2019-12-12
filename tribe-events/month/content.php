@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</div>
 	<!-- #tribe-events-footer -->
-	<?php //do_action( 'tribe_events_after_footer' ) ?>
+	<?php do_action( 'tribe_events_after_footer' ) ?>
 
 	<?php tribe_get_template_part( 'month/mobile' ); ?>
 	<?php tribe_get_template_part( 'month/tooltip' ); ?>
