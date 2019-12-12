@@ -16,17 +16,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 do_action( 'tribe_events_before_template' );
 ?>
-
-	<!-- Title Bar -->
-<?php tribe_get_template_part( 'day/title-bar' ); ?>
-
 <!-- Tribe Bar -->
 <?php tribe_get_template_part( 'modules/bar' ); ?>
-
+<!-- Title Bar -->
+<?php tribe_get_template_part( 'day/title-bar' ); ?>
 <!-- Main Events Content -->
 <?php tribe_get_template_part( 'day/content' ) ?>
-
 <div class="tribe-clear"></div>
-
 <?php
 do_action( 'tribe_events_after_template' );
