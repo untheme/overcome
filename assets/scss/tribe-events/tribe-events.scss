@@ -82,12 +82,26 @@
 		&:after{
 			display: none;
 		}
+		&:hover,
+		&:active,
+		&:focus{
+			background: transparent;
+		}
 	}
 	.tribe-bar-views-select{
 		display: none;
 	}
 	.tribe-bar-views-list{
 		display: none;
+		background: transparent;
+		margin: 10px 0 0;
+		padding: 0 15px;
+		.tribe-bar-views-option{
+			&:hover,
+			&.tribe-bar-active{
+				background: var(--accent-color);
+			}
+		}
 	}
 	@media (min-width: 992px){
 		border-width: 0.556px;
