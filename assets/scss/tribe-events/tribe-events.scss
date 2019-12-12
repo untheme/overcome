@@ -24,19 +24,21 @@
 	.tribe-bar-views-inner label{
 		text-align: start;
 	}
-	input[type=text]{
-		font-weight: 600;
-		color: #777;
-		border-bottom: 1px solid var(--accent-color);
-		outline: none;
-		padding: 5px 0;
+	input{
 		margin: 0;
-		&:hover,
-		&:focus,
-		&:active{
-			border: 0;
+		&[type=text]{
+			font-weight: 600;
+			color: #777;
 			border-bottom: 1px solid var(--accent-color);
 			outline: none;
+			padding: 5px 0;
+			&:hover,
+			&:focus,
+			&:active{
+				border: 0;
+				border-bottom: 1px solid var(--accent-color);
+				outline: none;
+			}
 		}
 	}
 	input[name*=tribe-bar-]::-webkit-input-placeholder{
