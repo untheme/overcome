@@ -12,7 +12,8 @@
 }
 @media (min-width: 992px){
 	.tribe-bar-filters-inner{
-		@include d-flex();
+		display: flex;
+		flex-wrap: wrap;
 	}
 }
 .tribe-bar-views-inner{
