@@ -175,6 +175,9 @@
 .tribe-events-calendar div[id*=tribe-events-daynum-], .tribe-events-calendar div[id*=tribe-events-daynum-] a{
 	background: #f4b919;
 }
+.tribe-events-calendar td.tribe-events-othermonth.tribe-events-future div[id*=tribe-events-daynum-], .tribe-events-calendar td.tribe-events-othermonth.tribe-events-future div[id*=tribe-events-daynum-]>a{
+	color: white;
+}
 @media (min-width: 992px){
 	.tribe-bar-filters-inner{
 		display: flex;
