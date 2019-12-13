@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<li class="tribe-events-nav-previous">
 			<?php tribe_events_the_previous_month_link(); ?>
 		</li>
-		<li>
+		<li class="ef5-tribe-events-nav-export">
 			<?php do_action('ef5_tribe_events_middle_nav'); ?>
 		</li>
 		<!-- .tribe-events-nav-previous -->

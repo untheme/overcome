@@ -205,6 +205,32 @@
 		}
 	}
 }
+
+#tribe-events-footer{
+	#tribe-events-nav-pagination{
+		.tribe-events-sub-nav{
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -50px;
+			justify-content: center;
+			li{
+				padding: 0 50px;
+				a{
+					font-size: 14px;
+					font-weight: 600;
+					text-transform: uppercase;
+				}
+			}
+		}
+		.ef5-tribe-events-nav-export{
+			.tribe-events-button{
+				padding: 0;
+				background: none;
+			}
+		}
+	}
+}
+
 @media (min-width: 992px){
 	.tribe-bar-filters-inner{
 		display: flex;
