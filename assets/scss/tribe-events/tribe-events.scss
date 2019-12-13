@@ -207,7 +207,7 @@
 }
 
 #tribe-events-footer{
-	#tribe-events-nav-pagination{
+	.tribe-events-nav-pagination{
 		.tribe-events-sub-nav{
 			display: flex;
 			flex-wrap: wrap;
@@ -226,6 +226,7 @@
 			.tribe-events-button{
 				padding: 0;
 				background: none;
+				margin: 0;
 			}
 		}
 	}
