@@ -580,5 +580,10 @@ if(class_exists('WooCommerce')){
 overcome_require_folder('inc/extensions', get_template_directory());
 
 add_action('ef5_tribe_events_middle_nav', function(){ echo 'fuck';});
-//add_action( 'tribe_events_after_footer', [ $this, 'maybe_add_link' ], 10, 1 );
-remove_action('tribe_events_after_footer','maybe_add_link');
+
+function tribe_remove_calendar_export_links() {
+    if ( function_exists( 'tribe' ) ) {
+        remove_action( 'tribe_events_after_footer', array( tribe( 'tec.iCal' ), 'maybe_add_link' ) );
+    }
+}
+add_action( 'init', 'tribe_remove_calendar_export_links' );
