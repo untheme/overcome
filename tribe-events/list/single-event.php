@@ -28,8 +28,10 @@ $organizer = tribe_get_organizer();
 ?>
 <div class="row">
 	<div class="col">
-		<!-- Event Image -->
-		<?php echo tribe_event_featured_image( null, 'medium' ); ?>
+		<!-- Event Image 
+			variable: $post_id = null, $size = 'full', $link = true, $wrapper = true 
+		-->
+		<?php echo tribe_event_featured_image( null, 'medium', true, false ); ?>
 	</div>
 	<div class="col-auto">
 		<!-- Event Title -->
