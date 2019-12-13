@@ -578,3 +578,5 @@ if(class_exists('WooCommerce')){
  *
 */
 overcome_require_folder('inc/extensions', get_template_directory());
+
+add_action('ef5_tribe_events_middle_nav', function(){ echo 'fuck';});

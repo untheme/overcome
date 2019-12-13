@@ -33,5 +33,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 </nav>
 <?php
 do_action( 'tribe_events_after_nav' );
-
-add_action('ef5_tribe_events_middle_nav', function(){ echo 'fuck';});
