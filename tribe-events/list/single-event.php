@@ -28,13 +28,13 @@ $organizer = tribe_get_organizer();
 add_filter('tribe_events_featured_image_wrap', '__return_false');
 ?>
 <div class="row">
-	<div class="col">
+	<div class="col-12 col-md-auto">
 		<!-- Event Image 
 			variable: $post_id = null, $size = 'full', $link = true, $wrapper = true 
 		-->
 		<?php echo tribe_event_featured_image( null, 'medium'); ?>
 	</div>
-	<div class="col-auto">
+	<div class="col">
 		<!-- Event Title -->
 		<?php do_action( 'tribe_events_before_the_event_title' ) ?>
 		<h3 class="tribe-events-list-event-title">
