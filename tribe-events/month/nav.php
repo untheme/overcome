@@ -21,6 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<li class="tribe-events-nav-previous">
 			<?php tribe_events_the_previous_month_link(); ?>
 		</li>
+		<li>
+			<?php do_action('ef5_tribe_events_middle_nav'); ?>
+		</li>
 		<!-- .tribe-events-nav-previous -->
 		<li class="tribe-events-nav-next">
 			<?php tribe_events_the_next_month_link(); ?>
@@ -30,3 +33,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 </nav>
 <?php
 do_action( 'tribe_events_after_nav' );
+
+add_action('ef5_tribe_events_middle_nav', function(){ echo 'fuck';});
