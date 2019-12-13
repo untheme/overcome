@@ -160,6 +160,15 @@
 	font-weight: 600;
 	color: #777;
 }
+#tribe-events-content .tribe-events-calendar td{
+	border-color: #b7b7b7;
+}
+.tribe-events-calendar td.tribe-events-past div[id*=tribe-events-daynum-], .tribe-events-calendar td.tribe-events-past div[id*=tribe-events-daynum-]>a{
+	background: #b7b7b7;
+}
+.tribe-events-calendar div[id*=tribe-events-daynum-], .tribe-events-calendar div[id*=tribe-events-daynum-] a{
+	background: #f4b919;
+}
 @media (min-width: 992px){
 	.tribe-bar-filters-inner{
 		display: flex;
