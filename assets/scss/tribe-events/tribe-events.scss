@@ -193,9 +193,11 @@
 		.tribe-event-duration{
 			font-size: 12px;
 		}
-		.tribe-events-event-thumb img{
-			max-width: 114px;
+		.tribe-events-event-thumb {
 			padding: 12px 10px 0 0;
+			img{
+				max-width: 114px;
+			}
 		}
 		.tribe-event-description{
 			color: var(--primary-color);
