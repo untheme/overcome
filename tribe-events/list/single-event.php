@@ -25,13 +25,14 @@ $has_venue_address = ( ! empty( $venue_details['address'] ) ) ? ' location' : ''
 // Organizer
 $organizer = tribe_get_organizer();
 
+add_filter('tribe_events_featured_image_wrap', '__return_false');
 ?>
 <div class="row">
 	<div class="col">
 		<!-- Event Image 
 			variable: $post_id = null, $size = 'full', $link = true, $wrapper = true 
 		-->
-		<?php echo tribe_event_featured_image( null, 'medium', true, false ); ?>
+		<?php echo tribe_event_featured_image( null, 'medium'); ?>
 	</div>
 	<div class="col-auto">
 		<!-- Event Title -->
