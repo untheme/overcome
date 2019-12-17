@@ -117,7 +117,7 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
                     ef5payments_donation_layout_1(['progress_bar' => false, 'show_percent'=>false]);
                 }
                 overcome_tribe_events_time([
-                    'before' => '<div class"text-15 font-style-500">',
+                    'before' => '<div class"text-15 font-style-500 ef5-text-primary">',
                     'after'  => '</div>'
                 ]);
                 if ( $show_author || $show_comments || $show_date || $show_cat )
