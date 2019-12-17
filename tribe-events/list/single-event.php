@@ -56,10 +56,10 @@ add_filter('tribe_events_featured_image_wrap', '__return_false');
 		<?php overcome_tribe_events_info_hori(['show_date' => false]); ?>
 		<!-- Event Content -->
 		<?php do_action( 'tribe_events_before_the_content' ); ?>
-		<div class="tribe-events-list-event-description tribe-events-content description entry-summary">
+		<div class="ef5-tribe-desc">
 			<?php echo tribe_events_get_the_excerpt( null, wp_kses_allowed_html( 'post' ) ); ?>
 		</div><!-- .tribe-events-list-event-description -->
-		<div class="pt-20">
+		<div class="pt-40">
 			<a href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="ef5-btn accent fill ef5-btn-md" rel="bookmark"><?php esc_html_e( 'Find out more', 'overcome' ) ?></a>
 		</div>
 		<?php
