@@ -33,7 +33,7 @@ $venue_address = tribe_get_address();
 				*/
 				overcome_post_thumbnail([
 					'thumbnail_size' => '500x295',
-					'class'			 => 'ef5-rounded-10'
+					'img_class'			 => 'ef5-rounded-10'
 				]);
 			?>
 		</div>
