@@ -54,7 +54,7 @@ class OverCome_Featured_Posts_Widget extends WP_Widget
 
         $number         = absint( $instance['number'] );
         $gutters        = absint( $instance['gutters'] );
-        $thumbnail_size = absint( $instance['thumbnail_size'] );
+        $thumbnail_size = $instance['thumbnail_size'];
         if ( $number <= 0 || $number > 10)
         {
             $number = 4;
