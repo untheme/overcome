@@ -1,4 +1,5 @@
 <?php
+die('xxx123');
 if(isset($args)){
     $titles = [
         'title' => $args['title'],
