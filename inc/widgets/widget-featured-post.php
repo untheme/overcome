@@ -81,7 +81,7 @@ class OverCome_Featured_Posts_Widget extends WP_Widget
                     ( has_post_thumbnail() ? 'has-post-thumbnail' : '' )
                 );
                 if(has_post_thumbnail())
-                	$thumbnail_url = overcome_get_image_url_by_size( null, $thumbnail_size, true );
+                	$thumbnail_url = overcome_get_image_url_by_size( ['size' => $thumbnail_size] );
                 else 
                 	$thumbnail_url = overcome_default_image_thumbnail_url(['size'=>$thumbnail_size]);
                 printf(
