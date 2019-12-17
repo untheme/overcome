@@ -9,7 +9,7 @@ if(function_exists('tribe')){
 }
 
 //add_filter('tribe_events_the_previous_month_link', 'overcome_tribe_events_the_previous_month_link', 10, 4);
-function overcome_tribe_events_the_previous_month_link($date, $url, $text, $html){
+/*function overcome_tribe_events_the_previous_month_link($date, $url, $text, $html){
     $html = '<a data-month="' . $date . '" href="' . esc_url( $url ) . '" rel="prev"> ' . $text . ' </a>';
     return $html; 
-}
+}*/
