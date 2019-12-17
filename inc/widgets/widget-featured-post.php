@@ -119,7 +119,7 @@ class OverCome_Featured_Posts_Widget extends WP_Widget
         $instance['post_type']      = sanitize_text_field( $new_instance['post_type'] );
         $instance['number']         = absint( $new_instance['number'] );
         $instance['gutters']        = absint( $new_instance['gutters'] );
-        $instance['thumbnail_size'] = absint( $new_instance['thumbnail_size'] );
+        $instance['thumbnail_size'] = sanitize_text_field( $new_instance['thumbnail_size'] );
         return $instance;
     }
 
