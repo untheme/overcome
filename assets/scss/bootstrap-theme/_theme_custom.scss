@@ -59,12 +59,6 @@ $customs_gutters: (
 					padding-right: $gutters-value / 2;
 				}
 			}
-			.ef5-gutters#{$infix}-#{$gutters}{
-				margin: $gutters-value / -2!important;
-				> [class*='col']{
-					padding: $gutters-value / 2;
-				}
-			}
 		}
 	}
 }

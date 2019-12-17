@@ -70,7 +70,7 @@ class OverCome_Featured_Posts_Widget extends WP_Widget
 
         if ( $r->have_posts() )
         {
-            echo '<div class="featured-list row ef5-gutters-'.$gutters.'">';
+            echo '<div class="featured-list row grid-gutters-'.$gutters.'">';
 
             while ( $r->have_posts() )
             {
