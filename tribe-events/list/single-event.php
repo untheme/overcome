@@ -27,12 +27,25 @@ $organizer = tribe_get_organizer();
 
 add_filter('tribe_events_featured_image_wrap', '__return_false');
 ?>
-<div class="row">
+<div class="ef5-tribe-list row">
 	<div class="col-12 col-md-auto">
 		<!-- Event Image 
 			variable: $post_id = null, $size = 'full', $link = true, $wrapper = true 
 		-->
-		<?php echo tribe_event_featured_image( null, 'medium'); ?>
+		<div class="ef5-tribe-list-thumb relative">
+			<?php echo tribe_event_featured_image( null, 'medium'); ?>
+			<div class="ef5-tribe-event-start-date">
+				<span class="ef5-tribe-date">
+					<?php overcome_tribe_events_start_date(['format' => 'd']); ?>
+				</span>
+				<span class="ef5-tribe-month">
+					<?php overcome_tribe_events_start_date(['format' => 'F']); ?>
+				</span>
+				<span class="ef5-tribe-year">
+					<?php overcome_tribe_events_start_date(['format' => 'Y']); ?>
+				</span>
+			</div>
+		</div>
 	</div>
 	<div class="col">
 		<!-- Event Title -->

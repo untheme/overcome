@@ -75,6 +75,22 @@ function overcome_tribe_events_time($args=[]){
 		return tribe_get_start_date($event, true, $event_date_format).'&nbsp;-&nbsp;'.tribe_get_end_date($event, true, $event_date_format);
 	}
 }
+
+function overcome_tribe_events_start_date($args=[]){
+	if(!class_exists('Tribe__Events__Main')) return;
+	$args = wp_parse_args($args,[
+		'class' => '',
+		'format' => 'd',
+		'echo' => true
+	]);
+	global $post;
+	$event = get_post( $post );
+	if($args['echo']){
+		echo tribe_get_start_date($event, true, $args['format']);
+	} else {
+		return tribe_get_start_date($event, true, $args['format']);
+	}
+}
 /**
  * Register widget area.
  */
