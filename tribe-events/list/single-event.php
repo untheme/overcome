@@ -56,32 +56,7 @@ add_filter('tribe_events_featured_image_wrap', '__return_false');
 		<?php do_action( 'tribe_events_after_the_event_title' ) ?>
 		<!-- Event Meta -->
 		<?php do_action( 'tribe_events_before_the_meta' ) ?>
-		<div class="tribe-events-event-meta">
-			<div class="author <?php echo esc_attr( $has_venue_address ); ?>">
-
-				<!-- Schedule & Recurrence Details -->
-				<div class="tribe-event-schedule-details">
-					<?php echo tribe_events_event_schedule_details() ?>
-				</div>
-
-				<?php if ( $venue_details ) : ?>
-					<!-- Venue Display Info -->
-					<div class="tribe-events-venue-details">
-					<?php
-						$address_delimiter = empty( $venue_address ) ? ' ' : ', ';
-
-						// These details are already escaped in various ways earlier in the process.
-						echo implode( $address_delimiter, $venue_details );
-
-						if ( tribe_show_google_map_link() ) {
-							echo tribe_get_map_link_html();
-						}
-					?>
-					</div> <!-- .tribe-events-venue-details -->
-				<?php endif; ?>
-
-			</div>
-		</div><!-- .tribe-events-event-meta -->
+		<!-- .tribe-events-event-meta -->
 
 		<!-- Event Cost -->
 		<?php if ( tribe_get_cost() ) : ?>
