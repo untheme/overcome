@@ -1,5 +1,5 @@
 <?php
-echo 'xxxx';
+die('123456');
 if(isset($args)){
     $titles = [
         'title' => $args['title'],
