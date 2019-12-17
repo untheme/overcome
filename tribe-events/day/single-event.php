@@ -23,7 +23,7 @@ $has_venue_address = ( ! empty( $venue_details['address'] ) ) ? ' location' : ''
 // no address, so let's get the address string on its own for a couple of checks below.
 $venue_address = tribe_get_address();
 ?>
-<div class="ef5-tribe-event-day row">
+<div class="ef5-tribe-event-day row align-items-center">
 	<div class="col-auto">
 		<div class="ef5-tribe-thumbnail">
 			<?php 
