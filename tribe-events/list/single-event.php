@@ -39,7 +39,7 @@ add_filter('tribe_events_featured_image_wrap', '__return_false');
 					<?php overcome_tribe_events_start_date(['format' => 'd']); ?>
 				</span>
 				<span class="ef5-tribe-month">
-					<?php overcome_tribe_events_start_date(['format' => 'F']); ?>
+					<?php overcome_tribe_events_start_date(['format' => 'M']); ?>
 				</span>
 				<span class="ef5-tribe-year">
 					<?php overcome_tribe_events_start_date(['format' => 'Y']); ?>
