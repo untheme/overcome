@@ -24,5 +24,11 @@
 			float: none;
 			margin: 0;
 		}
+		.ef5-tribe-events-info{
+			> .col-auto {
+				width: 100%;
+				flex: 0 0 100%;
+			}
+		}
 	}
 }
