@@ -1,0 +1,19 @@
+.ef5-tribe-list{
+	.ef5-tribe-event-start-date{
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		background: white;
+		@include border-radius(5px);
+		text-transform: uppercase;
+		font-size: 10px;
+		color: var(--primary-color);
+		.ef5-tribe-date{
+			font-size: 18px;
+			color: var(--accent-color);
+		}
+		.ef5-tribe-year{
+			font-size: 11px;
+		}
+	}
+}
