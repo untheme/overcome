@@ -73,16 +73,20 @@ function overcome_tribe_events_info_hori($args=[]){
 function overcome_tribe_events_time($args=[]){
 	if(!class_exists('Tribe__Events__Main')) return;
 	$args = wp_parse_args($args,[
-		'class' => '',
-		'echo' => true
+		'class'  => '',
+		'echo'   => true,
+		'before' => '',
+		'after'  => ''
 	]);
 	global $post;
 	$event = get_post( $post );
 	$event_date_format = tribe_get_date_format( true );
 	if($args['echo']){
+		echo overcome_html($args['before']);
 		echo tribe_get_start_date($event, true, $event_date_format).'&nbsp;-&nbsp;'.tribe_get_end_date($event, true, $event_date_format);
+		echo overcome_html($args['after']);
 	} else {
-		return tribe_get_start_date($event, true, $event_date_format).'&nbsp;-&nbsp;'.tribe_get_end_date($event, true, $event_date_format);
+		return $args['before'].tribe_get_start_date($event, true, $event_date_format).'&nbsp;-&nbsp;'.tribe_get_end_date($event, true, $event_date_format).$args['after'];
 	}
 }
 
