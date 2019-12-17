@@ -121,6 +121,8 @@ function overcome_get_sidebar($check = true){
         $sidebar = 'sidebar-shop';
     } elseif(class_exists('Tribe__Events__Main') && $_REQUEST['tribe_event_display'] === 'list'){
         $sidebar = 'sidebar-tribe-event';
+    }  elseif(class_exists('Tribe__Events__Main') && $_REQUEST['tribe_event_display'] !== 'list'){
+        $sidebar = 'none';
     } elseif (is_archive() || is_search()){
         $sidebar = 'sidebar-main';
     }
