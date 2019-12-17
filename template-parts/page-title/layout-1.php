@@ -1,5 +1,4 @@
 <?php
-die('xxx123');
 if(isset($args)){
     $titles = [
         'title' => $args['title'],
@@ -35,7 +34,7 @@ ob_start();
     }
 
 $titles_html = ob_get_clean();
-
+var_dump($titles_html);
 if ( ! $titles_html )
 {
     return;
