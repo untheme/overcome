@@ -8,6 +8,7 @@ if(isset($args)){
     $ptitle_layout = $args['ptitle_layout'];
     die('xx12222');
 } else {
+    die('123');
    $titles = overcome_get_page_titles();
    $show_breadcrumb = overcome_get_opts( 'breadcrumb_on', '1' );
    $ptitle_layout = overcome_get_opts('ptitle_layout','1');
