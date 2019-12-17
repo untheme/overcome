@@ -42,11 +42,11 @@ $venue_address = tribe_get_address();
 		<?php 
 		/** Event Title */
 		do_action( 'tribe_events_before_the_event_title' ) ?>
-		<h3 class="tribe-events-list-event-title summary">
+		<div class="ef5-heading text-22 font-style-600">
 			<a class="url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark">
 				<?php the_title() ?>
 			</a>
-		</h3>
+		</div>
 		<?php do_action( 'tribe_events_after_the_event_title' ) ?>
 		<?php do_action( 'tribe_events_before_the_meta' ) ?>
 		<div class="tribe-events-event-meta <?php echo esc_attr( $has_venue . $has_venue_address ); ?>">
