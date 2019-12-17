@@ -26,8 +26,11 @@ $venue_address = tribe_get_address();
 <div class="ef5-tribe-event-day row">
 	<div class="col-auto">
 		<div class="ef5-tribe-thumbnail">
-			<!-- Event Image -->
-			<?php //echo tribe_event_featured_image( null, 'medium' ); 
+			<?php 
+				/**
+				 * Event Image
+				 * tribe_event_featured_image( null, 'medium' );
+				*/
 				overcome_post_thumbnail([
 					'thumbnail_size' => '500x295'
 				]);
