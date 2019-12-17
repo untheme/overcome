@@ -27,4 +27,4 @@
             overcome_page_title();
         ?>
     </div>
-    <main id="ef5-main" class="ef5-main">
+    <div id="ef5-main" class="ef5-main">

@@ -10,7 +10,7 @@
  *
  */
 ?>
-    </main>
+    </div>
     <?php overcome_footer(); ?> 
 </div>
 <?php wp_footer(); ?>

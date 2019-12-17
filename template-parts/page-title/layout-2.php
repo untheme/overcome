@@ -1,4 +1,5 @@
 <?php
+echo 'xxxx';
 if(isset($args)){
     $titles = [
         'title' => $args['title'],
