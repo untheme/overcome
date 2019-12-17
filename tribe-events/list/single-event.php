@@ -53,27 +53,7 @@ add_filter('tribe_events_featured_image_wrap', '__return_false');
 				<?php the_title() ?>
 			</a>
 		</div>
-		<?php do_action( 'tribe_events_after_the_event_title' ) ?>
-		<!-- Event Meta -->
-		<?php do_action( 'tribe_events_before_the_meta' ) ?>
-		<!-- .tribe-events-event-meta -->
-
-		<!-- Event Cost -->
-		<?php if ( tribe_get_cost() ) : ?>
-			<div class="tribe-events-event-cost">
-				<span class="ticket-cost"><?php echo tribe_get_cost( null, true ); ?></span>
-				<?php
-				/**
-				 * Runs after cost is displayed in list style views
-				 *
-				 * @since 4.5
-				 */
-				do_action( 'tribe_events_inside_cost' )
-				?>
-			</div>
-		<?php endif; ?>
-
-		<?php do_action( 'tribe_events_after_the_meta' ) ?>
+		<?php overcome_tribe_events_info_hori(); ?>
 		<!-- Event Content -->
 		<?php do_action( 'tribe_events_before_the_content' ); ?>
 		<div class="tribe-events-list-event-description tribe-events-content description entry-summary">
