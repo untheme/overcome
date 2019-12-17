@@ -244,6 +244,26 @@
 					color: #373737;
 					letter-spacing: 0;
 					float: none;
+					span{
+						display: none;
+					}
+				}
+				&.tribe-events-nav-previous,
+				&.tribe-events-nav-next{
+					a:before{
+						font-family: 'Flation';
+						display: inline-block;
+					}
+				}
+				&.tribe-events-nav-previous{
+					a:before{
+						content: "\f10e";
+					}
+				}
+				&.tribe-events-nav-next{
+					a:after{
+						content: "\f111";
+					}
 				}
 			}
 		}
