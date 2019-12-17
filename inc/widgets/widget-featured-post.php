@@ -36,9 +36,11 @@ class OverCome_Featured_Posts_Widget extends WP_Widget
     function widget( $args, $instance )
     {
         $instance = wp_parse_args( (array) $instance, array(
-            'title'         => esc_html__( 'Featured Posts', 'overcome' ),
-            'post_type'     => 'post',
-            'number'        => 6,
+            'title'          => esc_html__( 'Featured Posts', 'overcome' ),
+            'post_type'      => 'post',
+            'number'         => 6,
+            'gutters'        => 20,
+            'thumbnail_size' => 110,
         ) );
 
         $title = empty( $instance['title'] ) ? esc_html__( 'Featured Posts', 'overcome' ) : $instance['title'];
@@ -50,13 +52,14 @@ class OverCome_Featured_Posts_Widget extends WP_Widget
 
         printf('%s', $args['before_title'] . $title . $args['after_title']);
 
-        $number = absint( $instance['number'] );
+        $number         = absint( $instance['number'] );
+        $gutters        = absint( $instance['gutters'] );
+        $thumbnail_size = absint( $instance['thumbnail_size'] );
         if ( $number <= 0 || $number > 10)
         {
             $number = 4;
         }
 
-        $thumbnail_size = [118,118];
         $r = new WP_Query( array(
             'post_type'           => $post_type,
             'posts_per_page'      => $number,
@@ -67,7 +70,7 @@ class OverCome_Featured_Posts_Widget extends WP_Widget
 
         if ( $r->have_posts() )
         {
-            echo '<div class="featured-list row gutters-4">';
+            echo '<div class="featured-list row gutters-'.$gutters.'">';
 
             while ( $r->have_posts() )
             {
@@ -111,9 +114,11 @@ class OverCome_Featured_Posts_Widget extends WP_Widget
     function update( $new_instance, $old_instance )
     {
         $instance = $old_instance;
-        $instance['title']         = sanitize_text_field( $new_instance['title'] );
-        $instance['post_type']     = sanitize_text_field( $new_instance['post_type'] );
-        $instance['number']        = absint( $new_instance['number'] );
+        $instance['title']          = sanitize_text_field( $new_instance['title'] );
+        $instance['post_type']      = sanitize_text_field( $new_instance['post_type'] );
+        $instance['number']         = absint( $new_instance['number'] );
+        $instance['gutters']        = absint( $new_instance['gutters'] );
+        $instance['thumbnail_size'] = absint( $new_instance['thumbnail_size'] );
         return $instance;
     }
 
@@ -126,14 +131,18 @@ class OverCome_Featured_Posts_Widget extends WP_Widget
     function form( $instance )
     {
         $instance = wp_parse_args( (array) $instance, array(
-            'title'         => esc_html__( 'Featured Posts', 'overcome' ),
-            'post_type'     => 'post',
-            'number'        => 6,
+            'title'          => esc_html__( 'Featured Posts', 'overcome' ),
+            'post_type'      => 'post',
+            'number'         => 6,
+            'gutters'        => 20,
+            'thumbnail_size' => '100',
         ) );
 
-        $title         = $instance['title'] ? esc_attr( $instance['title'] ) : esc_html__( 'Featured Posts', 'overcome' );
-        $post_type         = $instance['post_type'] ? esc_attr( $instance['post_type'] ) : 'post';
-        $number        = absint( $instance['number'] );
+        $title     = $instance['title'] ? esc_attr( $instance['title'] ) : esc_html__( 'Featured Posts', 'overcome' );
+        $post_type = $instance['post_type'] ? esc_attr( $instance['post_type'] ) : 'post';
+        $number    = absint( $instance['number'] );
+        $gutters    = absint( $instance['gutters'] );
+        $thumbnail_size    = absint( $instance['thumbnail_size'] );
 
         ?>
         <p>
@@ -147,6 +156,14 @@ class OverCome_Featured_Posts_Widget extends WP_Widget
         <p>
             <label for="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>"><?php esc_html_e( 'Number of posts to show:', 'overcome' ); ?></label>
             <input class="tiny-text" id="<?php echo esc_attr( $this->get_field_id( 'number' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'number' ) ); ?>" type="number" step="1" min="1" value="<?php echo esc_attr( $number ); ?>" size="3" />
+        </p>
+        <p>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'gutters' ) ); ?>"><?php esc_html_e( 'Item space:', 'overcome' ); ?></label>
+            <input class="tiny-text" id="<?php echo esc_attr( $this->get_field_id( 'gutters' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'gutters' ) ); ?>" type="number" step="1" min="1" value="<?php echo esc_attr( $gutters ); ?>" size="3" />
+        </p>
+        <p>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'thumbnail_size' ) ); ?>"><?php esc_html_e( 'Thumbnail Size:', 'overcome' ); ?></label>
+            <input class="tiny-text" id="<?php echo esc_attr( $this->get_field_id( 'thumbnail_size' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'thumbnail_size' ) ); ?>" type="number" step="1" min="1" value="<?php echo esc_attr( $thumbnail_size ); ?>" size="3" />
         </p>
         <?php
     }
