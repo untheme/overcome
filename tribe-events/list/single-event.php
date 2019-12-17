@@ -53,7 +53,7 @@ add_filter('tribe_events_featured_image_wrap', '__return_false');
 				<?php the_title() ?>
 			</a>
 		</div>
-		<?php overcome_tribe_events_info_hori(); ?>
+		<?php overcome_tribe_events_info_hori(['show_date' => false]); ?>
 		<!-- Event Content -->
 		<?php do_action( 'tribe_events_before_the_content' ); ?>
 		<div class="tribe-events-list-event-description tribe-events-content description entry-summary">

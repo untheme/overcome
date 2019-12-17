@@ -37,8 +37,11 @@ function overcome_tribe_events_info_hori($args=[]){
 	$post_type = get_post_type();
 	if(!class_exists('Tribe__Events__Main') || $post_type !== 'tribe_events') return;
 	$args = wp_parse_args($args,[
-		'class' => '',
-		'echo'	=> true
+		'class'       => '',
+		'echo'        => true,
+		'show_date'   => true,
+		'show_locate' => true,
+		'show_price'  => true
 	]);
 	$css_classes = ['ef5-tribe-events-info','empty-none', 'row', $args['class']];
 	$venue_details = tribe_get_venue_details();
@@ -46,9 +49,16 @@ function overcome_tribe_events_info_hori($args=[]){
 	if($args['echo']){
 	?>
 		<div class="<?php echo trim(implode(' ', $css_classes));?>">
-			<div class="date empty-none col-auto pb-5"><span class="flaticon-calendar ef5-text-accent"></span>&nbsp;&nbsp;<?php overcome_tribe_events_time(['echo' => $args['echo'] ]) ?></div>
-			<div class="venue empty-none col-auto pb-5"><span class="flaticon-maps-and-flags ef5-text-accent"></span>&nbsp;&nbsp;<?php echo implode( $address_delimiter, $venue_details ); ?></div>
-			<div class="cost empty-none col-auto"><span class="flaticon-coin-1 ef5-text-accent"></span>&nbsp;&nbsp;<?php echo tribe_get_cost( null, true ); ?></div>
+			<?php if($args['show_date']) : ?>
+				<div class="date empty-none col-auto pb-5"><span class="flaticon-calendar ef5-text-accent"></span>&nbsp;&nbsp;<?php overcome_tribe_events_time(['echo' => $args['echo'] ]) ?></div>
+			<?php endif;
+				if($args['show_locate']) : 
+			?>
+				<div class="venue empty-none col-auto pb-5"><span class="flaticon-maps-and-flags ef5-text-accent"></span>&nbsp;&nbsp;<?php echo implode( $address_delimiter, $venue_details ); ?></div>
+			<?php endif;
+				if($args['show_price']): ?>
+				<div class="cost empty-none col-auto"><span class="flaticon-coin-1 ef5-text-accent"></span>&nbsp;&nbsp;<?php echo tribe_get_cost( null, true ); ?></div>
+			<?php endif; ?>
 		</div>
 	<?php
 	} else {
