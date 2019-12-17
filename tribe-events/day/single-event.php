@@ -42,7 +42,7 @@ $venue_address = tribe_get_address();
 		<?php 
 		/** Event Title */
 		do_action( 'tribe_events_before_the_event_title' ) ?>
-		<div class="ef5-heading text-22 font-style-600">
+		<div class="ef5-heading text-22 font-style-600 pb-15">
 			<a class="url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark">
 				<?php the_title() ?>
 			</a>
@@ -50,12 +50,14 @@ $venue_address = tribe_get_address();
 		<?php 
 			do_action( 'tribe_events_after_the_event_title' );
 			do_action( 'tribe_events_before_the_meta' );
-			overcome_tribe_events_info_hori(['class' => 'text-13 ef5-text-primary font-style-600']); 
+			overcome_tribe_events_info_hori(['class' => 'text-13 ef5-text-primary font-style-500']); 
 			do_action( 'tribe_events_after_the_meta' );
 			do_action( 'tribe_events_before_the_content' ); 
 		?>
-		<div class="ef5-tribe-desc ef5-text-777777">
+		<div class="ef5-tribe-desc ef5-text-777777 pt-35">
 			<?php echo tribe_events_get_the_excerpt(); ?>
+		</div>
+		<div class="pt-25 clearfix">
 			<a href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="ef5-btn accent fill ef5-btn-md" rel="bookmark"><?php esc_html_e( 'Find out more', 'overcome' ) ?></a>
 		</div>
 		<?php do_action( 'tribe_events_after_the_content' ); ?>
