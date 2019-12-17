@@ -129,7 +129,6 @@ function overcome_get_sidebar($check = true){
     else 
         return $sidebar;
 }
-var_dump($_REQUEST['tribe_event_display']); die('xxxx');
 function overcome_sidebar_position(){
     if((is_archive() || is_post_type_archive('post') || is_home() || is_search()) && !is_post_type_archive('product')){
         $sidebar_position = overcome_get_opts('archive_sidebar_pos', overcome_archive_sidebar_position());
