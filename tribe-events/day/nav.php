@@ -18,12 +18,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<ul class="tribe-events-sub-nav">
 
 		<!-- Previous Page Navigation -->
-		<li class="tribe-events-nav-previous"><?php tribe_the_day_link( 'previous day' ) ?></li>
+		<li class="tribe-events-nav-previous"><?php tribe_the_day_link( 'previous dayxxx' ) ?></li>
 		<li class="ef5-tribe-events-nav-export">
 			<?php do_action('ef5_tribe_events_middle_nav'); ?>
 		</li>
 		<!-- Next Page Navigation -->
-		<li class="tribe-events-nav-next"><?php tribe_the_day_link( 'next day' ) ?></li>
+		<li class="tribe-events-nav-next"><?php tribe_the_day_link( 'next dayxxx' ) ?></li>
 
 	</ul>
 </nav>
