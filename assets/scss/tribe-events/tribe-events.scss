@@ -127,6 +127,11 @@
 				background: var(--accent-color);
 			}
 		}
+		span[class^=tribe-icon-]{
+			[dir="rtl"] &{
+				background-position: 100% 50%;
+			}
+		}
 	}
 	@media (min-width: 992px){
 		border-width: 0.556px;
