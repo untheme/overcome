@@ -24,7 +24,7 @@ $has_venue_address = ( ! empty( $venue_details['address'] ) ) ? ' location' : ''
 $venue_address = tribe_get_address();
 ?>
 <div class="ef5-tribe-event-day row grid-gutters-30 align-items-center">
-	<div class="col-auto">
+	<div class="col-12 col-lg-auto">
 		<div class="ef5-tribe-thumbnail">
 			<?php 
 				/**
