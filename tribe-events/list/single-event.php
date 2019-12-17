@@ -56,7 +56,7 @@ add_filter('tribe_events_featured_image_wrap', '__return_false');
 		<?php overcome_tribe_events_info_hori(['show_date' => false]); ?>
 		<!-- Event Content -->
 		<?php do_action( 'tribe_events_before_the_content' ); ?>
-		<div class="ef5-tribe-desc text-777777">
+		<div class="ef5-tribe-desc ef5-text-777777">
 			<?php echo tribe_events_get_the_excerpt( null, wp_kses_allowed_html( 'post' ) ); ?>
 		</div><!-- .tribe-events-list-event-description -->
 		<div class="pt-40">
