@@ -50,11 +50,11 @@ $venue_address = tribe_get_address();
 		<?php 
 			do_action( 'tribe_events_after_the_event_title' );
 			do_action( 'tribe_events_before_the_meta' );
-			overcome_tribe_events_info_hori(['show_date' => false]); 
+			overcome_tribe_events_info(); 
 			do_action( 'tribe_events_after_the_meta' );
 			do_action( 'tribe_events_before_the_content' ); 
 		?>
-		<div class="tribe-events-list-event-description tribe-events-content description entry-summary">
+		<div class="ef5-tribe-desc ef5-text-777777">
 			<?php echo tribe_events_get_the_excerpt(); ?>
 			<a href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="ef5-btn accent fill ef5-btn-md" rel="bookmark"><?php esc_html_e( 'Find out more', 'overcome' ) ?></a>
 		</div>
