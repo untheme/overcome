@@ -32,7 +32,8 @@ $venue_address = tribe_get_address();
 				 * tribe_event_featured_image( null, 'medium' );
 				*/
 				overcome_post_thumbnail([
-					'thumbnail_size' => '500x295'
+					'thumbnail_size' => '500x295',
+					'class'			 => 'ef5-rounded-10'
 				]);
 			?>
 		</div>
