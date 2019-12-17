@@ -33,7 +33,11 @@ add_filter('tribe_events_featured_image_wrap', '__return_false');
 			variable: $post_id = null, $size = 'full', $link = true, $wrapper = true 
 		-->
 		<div class="ef5-tribe-list-thumb relative">
-			<?php echo tribe_event_featured_image( null, 'medium'); ?>
+			<?php //echo tribe_event_featured_image( null, 'medium'); 
+				overcome_post_thumbnail([
+					'size' => '300x240'
+				]);
+			?>
 			<div class="ef5-tribe-event-start-date">
 				<span class="ef5-tribe-date"><?php overcome_tribe_events_start_date(['format' => 'd']); ?></span>
 				<span class="ef5-tribe-month"><?php overcome_tribe_events_start_date(['format' => 'M']); ?></span>
