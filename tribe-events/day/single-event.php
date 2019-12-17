@@ -50,7 +50,7 @@ $venue_address = tribe_get_address();
 		<?php 
 			do_action( 'tribe_events_after_the_event_title' );
 			do_action( 'tribe_events_before_the_meta' );
-			overcome_tribe_events_info_hori(); 
+			overcome_tribe_events_info_hori(['class' => 'text-13 ef5-text-primary']); 
 			do_action( 'tribe_events_after_the_meta' );
 			do_action( 'tribe_events_before_the_content' ); 
 		?>
