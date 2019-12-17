@@ -27,7 +27,7 @@ $organizer = tribe_get_organizer();
 
 add_filter('tribe_events_featured_image_wrap', '__return_false');
 ?>
-<div class="ef5-tribe-list row">
+<div class="ef5-tribe-list row align-items-center">
 	<div class="col-12 col-md-auto">
 		<!-- Event Image 
 			variable: $post_id = null, $size = 'full', $link = true, $wrapper = true 
