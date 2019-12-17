@@ -35,7 +35,7 @@ add_filter('tribe_events_featured_image_wrap', '__return_false');
 		<div class="ef5-tribe-list-thumb relative">
 			<?php //echo tribe_event_featured_image( null, 'medium'); 
 				overcome_post_thumbnail([
-					'size' => '300x240'
+					'thumbnail_size' => '300x240'
 				]);
 			?>
 			<div class="ef5-tribe-event-start-date">
