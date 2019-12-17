@@ -47,19 +47,15 @@ $venue_address = tribe_get_address();
 			</a>
 		</h3>
 		<?php do_action( 'tribe_events_after_the_event_title' ) ?>
-		<!-- Event Meta -->
 		<?php do_action( 'tribe_events_before_the_meta' ) ?>
 		<div class="tribe-events-event-meta <?php echo esc_attr( $has_venue . $has_venue_address ); ?>">
-			<!-- Schedule & Recurrence Details -->
 			<div class="tribe-updated published time-details">
 				<?php echo tribe_events_event_schedule_details(); ?>
 			</div>
 			<?php if ( $venue_details ) : ?>
-				<!-- Venue Display Info -->
 				<div class="tribe-events-venue-details">
 				<?php
 					$address_delimiter = empty( $venue_address ) ? ' ' : ', ';
-
 					// These details are already escaped in various ways earlier in the code.
 					echo implode( $address_delimiter, $venue_details );
 
@@ -67,9 +63,9 @@ $venue_address = tribe_get_address();
 						echo tribe_get_map_link_html();
 					}
 				?>
-				</div> <!-- .tribe-events-venue-details -->
+				</div>
 			<?php endif; ?>
-		</div><!-- .tribe-events-event-meta -->
+		</div>
 		<?php if ( tribe_get_cost() ) : ?>
 			<div class="tribe-events-event-cost">
 				<span class="ticket-cost"><?php echo tribe_get_cost( null, true ); ?></span>
@@ -80,12 +76,11 @@ $venue_address = tribe_get_address();
 			</div>
 		<?php endif; ?>
 		<?php do_action( 'tribe_events_after_the_meta' ) ?>
-		<!-- Event Content -->
 		<?php do_action( 'tribe_events_before_the_content' ) ?>
 		<div class="tribe-events-list-event-description tribe-events-content description entry-summary">
 			<?php echo tribe_events_get_the_excerpt(); ?>
-			<a href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="tribe-events-read-more" rel="bookmark"><?php esc_html_e( 'Find out more', 'the-events-calendar' ) ?> &raquo;</a>
-		</div><!-- .tribe-events-list-event-description -->
+			<a href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="ef5-btn accent fill ef5-btn-md" rel="bookmark"><?php esc_html_e( 'Find out more', 'the-events-calendar' ) ?></a>
+		</div>
 		<?php do_action( 'tribe_events_after_the_content' ); ?>
 	</div>
 </div>
