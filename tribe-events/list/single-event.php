@@ -35,15 +35,9 @@ add_filter('tribe_events_featured_image_wrap', '__return_false');
 		<div class="ef5-tribe-list-thumb relative">
 			<?php echo tribe_event_featured_image( null, 'medium'); ?>
 			<div class="ef5-tribe-event-start-date">
-				<span class="ef5-tribe-date">
-					<?php overcome_tribe_events_start_date(['format' => 'd']); ?>
-				</span>
-				<span class="ef5-tribe-month">
-					<?php overcome_tribe_events_start_date(['format' => 'M']); ?>
-				</span>
-				<span class="ef5-tribe-year">
-					<?php overcome_tribe_events_start_date(['format' => 'Y']); ?>
-				</span>
+				<span class="ef5-tribe-date"><?php overcome_tribe_events_start_date(['format' => 'd']); ?></span>
+				<span class="ef5-tribe-month"><?php overcome_tribe_events_start_date(['format' => 'M']); ?></span>
+				<span class="ef5-tribe-year"><?php overcome_tribe_events_start_date(['format' => 'Y']); ?></span>
 			</div>
 		</div>
 	</div>
