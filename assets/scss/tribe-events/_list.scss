@@ -11,15 +11,18 @@
 		min-width: 36px;
 		text-align: center;
 		font-weight: 500;
+		padding: 0 5px;
 		span{
 			display: block;
 		}
 		.ef5-tribe-date{
 			font-size: 18px;
 			color: var(--accent-color);
+			margin-bottom: -6px;
 		}
 		.ef5-tribe-month{
 			font-weight: 600;
+			margin-bottom: -6px;
 		}
 		.ef5-tribe-year{
 			font-size: 11px;
