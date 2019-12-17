@@ -133,8 +133,6 @@
 		padding: 2px 5px 10px;
 		.ef5-bar-filter {
 			padding: 15px 25px;
-			max-width: 260px;
-			min-width: 260px;
 			&.tribe-bar-submit{
 				max-width: unset;
 				min-width: unset;
@@ -143,6 +141,21 @@
 			}
 		}
 	}
+}
+#tribe-bar-form{
+	@media (min-width: 992px){
+		.ef5-bar-filter {
+			max-width: 260px;
+			min-width: 260px;
+		}
+		&.tribe-bar-mini{
+			.ef5-bar-filter {
+				max-width: 50%;
+				min-width: 50%;
+			}
+		}
+	}
+
 }
 #tribe-bar-form.tribe-bar-mini *{
 	font-size: inherit;
