@@ -119,7 +119,7 @@ function overcome_get_sidebar($check = true){
         }
     } elseif (class_exists('WooCommerce') && (is_woocommerce() || is_post_type_archive('product') || is_singular('product') ) ) {
         $sidebar = 'sidebar-shop';
-    } elseif(class_exists('Tribe__Events__Main')){
+    } elseif(class_exists('Tribe__Events__Main') && $_REQUEST['tribe_event_display'] === 'list'){
         $sidebar = 'sidebar-tribe-event';
     } elseif (is_archive() || is_search()){
         $sidebar = 'sidebar-main';
