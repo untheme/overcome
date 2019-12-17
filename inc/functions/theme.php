@@ -150,7 +150,7 @@ function overcome_sidebar_position(){
         $sidebar_position = overcome_get_opts('shop_sidebar_pos',overcome_shop_sidebar_position());
     } elseif (is_singular('product')) {
         $sidebar_position = overcome_get_opts('product_sidebar_pos',overcome_product_sidebar_position());
-    } elseif (class_exists('Tribe__Events__Main') && is_post_type_archive('tribe_events') && $_REQUEST['tribe_event_display'] === 'list') {
+    } elseif (class_exists('Tribe__Events__Main') && is_post_type_archive('tribe_events') && ( isset($_REQUEST['tribe_event_display']) && $_REQUEST['tribe_event_display'] === 'list') ){
         $sidebar_position = overcome_get_opts('trible_events_sidebar_pos','right');
     } else {
         $sidebar_position = 'none';
