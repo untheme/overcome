@@ -48,11 +48,11 @@ add_filter('tribe_events_featured_image_wrap', '__return_false');
 	<div class="col">
 		<!-- Event Title -->
 		<?php do_action( 'tribe_events_before_the_event_title' ) ?>
-		<h3 class="tribe-events-list-event-title">
+		<div class="ef5-heading text-22 lh-28 font-style-600">
 			<a class="tribe-event-url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark">
 				<?php the_title() ?>
 			</a>
-		</h3>
+		</div>
 		<?php do_action( 'tribe_events_after_the_event_title' ) ?>
 		<!-- Event Meta -->
 		<?php do_action( 'tribe_events_before_the_meta' ) ?>
