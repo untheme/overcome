@@ -21,10 +21,10 @@ function overcome_single_tribe_event_upcoming(){
         'post_status'         => 'publish',
         'ignore_sticky_posts' => true
     ) );
-
+	$thumbnail_size = ['85','85'];
     if ( $r->have_posts() )
     {
-        echo '<div class="posts-list layout-'.esc_attr($layout).'">';
+        echo '<div class="posts-list layout-1">';
 
         while ( $r->have_posts() )
         {
