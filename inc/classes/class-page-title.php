@@ -40,7 +40,7 @@ function overcome_get_page_titles()
         elseif (is_singular()) {
             if(is_singular('tribe_events')){
                 $post = get_post();
-                var_dump($post);
+                //var_dump($post);
                 while ( have_posts() ) {
                     the_post();
                     var_dump(get_the_ID());
