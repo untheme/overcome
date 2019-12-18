@@ -44,6 +44,8 @@ function overcome_get_page_titles()
             }
             var_dump(get_the_title());
             var_dump(get_the_ID());
+            global $posts;
+            var_dump($posts->ID);
             $desc = get_post_meta(get_the_ID(), 'custom_desc', true);
         } 
         // 404
