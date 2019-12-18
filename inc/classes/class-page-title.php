@@ -44,6 +44,7 @@ function overcome_get_page_titles()
                     $wp_query->the_post();
                     //var_dump($wp_query->post->ID);
                     $id = $wp_query->post->ID;
+                    var_dump($id);
                     $title = get_post_meta($id, 'custom_title', true);
                     $desc = get_post_meta($id, 'custom_desc', true);
                     var_dump($title); die('x');
