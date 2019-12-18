@@ -105,11 +105,6 @@ $website = tribe_get_event_website_link();
 			// Single day events
 			else :
 				?>
-
-				<!-- <dt class="tribe-events-start-date-label"> <?php esc_html_e( 'Date:', 'overcome' ) ?> </dt>
-				<dd>
-					<abbr class="tribe-events-abbr tribe-events-start-date published dtstart" title="<?php esc_attr_e( $start_ts ) ?>"> <?php esc_html_e( $start_date ) ?> </abbr>
-				</dd> -->
 				<div class="ef5-events-single-day">
 					<div class="row text-13">
 						<div class="col-auto ef5-heading"><?php echo esc_html( $time_title ); ?></div>
