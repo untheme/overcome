@@ -46,6 +46,7 @@ function overcome_get_page_titles()
                     $id = $wp_query->post->ID;
                     $title = get_post_meta($id, 'custom_title', true);
                     $desc = get_post_meta($id, 'custom_desc', true);
+                    var_dump($title); die('x');
                 }
                 wp_reset_postdata();
             } else {
@@ -77,7 +78,6 @@ function overcome_get_page_titles()
 		$title = get_the_archive_title();
 		$desc  = get_the_archive_description();
     }
-    var_dump($title);
     return array(
         'title' => $title,
         'desc'  => $desc
