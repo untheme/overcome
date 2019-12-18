@@ -61,14 +61,12 @@ function overcome_get_page_titles()
         } 
         // Anything else
         else {
-            //die('xx');
             $title = get_the_title();
         }
     } elseif (function_exists('is_shop') && is_shop()){
         $title = get_the_title(get_option('woocommerce_shop_page_id'));
         $desc  = get_the_archive_description();
     } else {
-        die('xx');
 		$title = get_the_archive_title();
 		$desc  = get_the_archive_description();
     }
