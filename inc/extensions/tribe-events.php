@@ -17,13 +17,13 @@ function overcome_single_tribe_event_upcoming(){
 	$query_args = apply_filters(
 		'tribe_events_list_widget_query_args',
 		[
-			'eventDisplay' => 'list',
-			'posts_per_page' => self::$limit,
-			'is_tribe_widget' => true,
-			'post_status' => $post_status,
+			'eventDisplay'         => 'list',
+			'posts_per_page'       => '3',
+			'is_tribe_widget'      => true,
+			'post_status'          => 'publish',
 			'tribe_render_context' => 'widget',
-			'featured' => empty( $instance['featured_events_only'] ) ? null : (bool) $instance['featured_events_only'],
-			'ends_after' => Dates::build_date_object( 'now' ),
+			'featured'             => false,
+			'ends_after'           => Dates::build_date_object( 'now' ),
 		]
 	);
 
