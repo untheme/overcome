@@ -55,45 +55,32 @@ $event_id = get_the_ID();
 	<?php while ( have_posts() ) :  the_post(); ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="row">
-				<div class="col-lg-8 ef5-tribe-event-content">
-					<!-- Event featured image, but exclude link -->
+				<div class="col-lg-8 ef5-tribe-event-content">					
 					<?php //echo tribe_event_featured_image( $event_id, 'full', false ); 
 						overcome_post_thumbnail([
 							'thumbnail_size' => 'large',
 							'img_class'		 => 'ef5-rounded-10 mb-30'
 						]);
 					?>
-
-					<!-- Event content -->
 					<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
 					<div class="tribe-events-single-event-description tribe-events-content">
 						<?php the_content(); ?>
 					</div>
-					<!-- .tribe-events-single-event-description -->
 					<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
+					<nav class="tribe-events-nav-pagination" aria-label="<?php printf( esc_html__( '%s Navigation', 'overcome' ), $events_label_singular ); ?>">
+						<ul class="tribe-events-sub-nav">
+							<li class="tribe-events-nav-previous"><?php tribe_the_prev_event_link( '<span>&laquo;</span> %title%' ) ?></li>
+							<li class="tribe-events-nav-next"><?php tribe_the_next_event_link( '%title% <span>&raquo;</span>' ) ?></li>
+						</ul>
+					</nav>
 					<?php if ( get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option( 'showComments', false ) ) comments_template() ?>
 				</div>
 				<div class="col-lg-4 ef5-tribe-event-meta">
-					<!-- Event meta -->
 					<?php do_action( 'tribe_events_single_event_before_the_meta' ) ?>
 					<?php tribe_get_template_part( 'modules/meta' ); ?>
 					<?php do_action( 'tribe_events_single_event_after_the_meta' ) ?>
 				</div>
 			</div>
-		</div> <!-- #post-x -->
+		</div>
 	<?php endwhile; ?>
-
-	<!-- Event footer -->
-	<div id="tribe-events-footer">
-		<!-- Navigation -->
-		<nav class="tribe-events-nav-pagination" aria-label="<?php printf( esc_html__( '%s Navigation', 'overcome' ), $events_label_singular ); ?>">
-			<ul class="tribe-events-sub-nav">
-				<li class="tribe-events-nav-previous"><?php tribe_the_prev_event_link( '<span>&laquo;</span> %title%' ) ?></li>
-				<li class="tribe-events-nav-next"><?php tribe_the_next_event_link( '%title% <span>&raquo;</span>' ) ?></li>
-			</ul>
-			<!-- .tribe-events-sub-nav -->
-		</nav>
-	</div>
-	<!-- #tribe-events-footer -->
-
 </div><!-- #tribe-events-content -->
