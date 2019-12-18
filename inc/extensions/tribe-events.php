@@ -14,7 +14,7 @@ if(function_exists('tribe')){
 // Single Event Upcoming
 add_action('tribe_events_single_meta_after', 'overcome_single_tribe_event_upcoming', 10, 1);
 function overcome_single_tribe_event_upcoming(){
-	use Tribe__Date_Utils as Dates;
+	//use Tribe__Date_Utils as Dates;
 	$query_args = apply_filters(
 		'tribe_events_list_widget_query_args',
 		[
