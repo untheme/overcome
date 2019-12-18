@@ -17,7 +17,7 @@ $email = tribe_get_organizer_email();
 $website = tribe_get_organizer_website_link();
 ?>
 
-<div class="tribe-events-meta-group tribe-events-meta-group-organizer">
+<div class="ef5-tribe-single-meta-block tribe-events-meta-group tribe-events-meta-group-organizer">
 	<?php
 	do_action( 'tribe_events_single_meta_organizer_section_start' );
 

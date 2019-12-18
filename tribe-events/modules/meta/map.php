@@ -17,7 +17,7 @@ if ( empty( $map ) ) {
 
 ?>
 
-<div class="ef5-tribe-events-venue-map">
+<div class="ef5-tribe-single-meta-block ef5-tribe-events-venue-map">
 	<?php
 	// Display the map.
 	do_action( 'tribe_events_single_meta_map_section_start' );

@@ -18,7 +18,7 @@ $website = tribe_get_venue_website_link();
 
 ?>
 
-<div class="tribe-events-meta-group tribe-events-meta-group-venue">
+<div class="ef5-tribe-single-meta-block tribe-events-meta-group tribe-events-meta-group-venue">
 		<?php do_action( 'tribe_events_single_meta_venue_section_start' ) ?>
 		<div class="row">
 			<div class="col-auto"><?php esc_html_e( 'Venue:', 'overcome' ) ?></div>
