@@ -21,7 +21,7 @@ function overcome_single_tribe_event_upcoming(){
         'no_found_rows'       => true,
         'post_status'         => 'publish',
         'ignore_sticky_posts' => true,
-        //'post__not_in'		  => get_the_ID()
+        'post__not_in'		  => get_the_ID()
     ) );
 	$thumbnail_size = ['85','85'];
     if ( $r->have_posts() )
