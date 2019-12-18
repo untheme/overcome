@@ -38,13 +38,11 @@ function overcome_get_page_titles()
         }
         // Single page view
         elseif (is_singular()) {
-            //die('xx1');
             $title = get_post_meta(get_the_ID(), 'custom_title', true);
-            //var_dump($title);
             if (!$title) {
                 $title = get_the_title();
             }
-            //var_dump($title);
+            var_dump(get_the_title());
             $desc = get_post_meta(get_the_ID(), 'custom_desc', true);
         } 
         // 404
