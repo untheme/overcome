@@ -6,7 +6,7 @@ if(isset($args)){
     ];
     $show_breadcrumb = $args['show_breadcrumb'];
     $ptitle_layout = $args['ptitle_layout'];
-    die('xx12222');
+    //die('xx12222');
 } else {
     //die('123');
    $titles = overcome_get_page_titles();
