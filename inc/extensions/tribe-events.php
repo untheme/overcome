@@ -14,13 +14,14 @@ if(function_exists('tribe')){
 // Single Event Upcoming
 add_action('tribe_events_single_meta_after', 'overcome_single_tribe_event_upcoming', 10, 1);
 function overcome_single_tribe_event_upcoming(){
+	var_dump(get_the_ID());
 	$r = new WP_Query( array(
         'post_type'           => 'tribe_events',
         'posts_per_page'      => '3',
         'no_found_rows'       => true,
         'post_status'         => 'publish',
         'ignore_sticky_posts' => true,
-        'post__not_in'		  => get_the_ID()
+        //'post__not_in'		  => get_the_ID()
     ) );
 	$thumbnail_size = ['85','85'];
     if ( $r->have_posts() )
