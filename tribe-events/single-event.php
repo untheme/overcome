@@ -23,23 +23,23 @@ $event_id = get_the_ID();
 ?>
 
 <div id="tribe-events-content" class="tribe-events-single">
-
+	<!--
 	<p class="tribe-events-back">
 		<a href="<?php echo esc_url( tribe_get_events_link() ); ?>"> <?php printf( '&laquo; ' . esc_html_x( 'All %s', '%s Events plural label', 'overcome' ), $events_label_plural ); ?></a>
 	</p>
-
+	-->
 	<!-- Notices -->
 	<?php tribe_the_notices() ?>
 
 	<?php //the_title( '<h1 class="tribe-events-single-event-title">', '</h1>' ); ?>
-
+	<!-- 
 	<div class="tribe-events-schedule tribe-clearfix">
 		<?php echo tribe_events_event_schedule_details( $event_id, '<h2>', '</h2>' ); ?>
 		<?php if ( tribe_get_cost() ) : ?>
 			<span class="tribe-events-cost"><?php echo tribe_get_cost( null, true ) ?></span>
 		<?php endif; ?>
 	</div>
-
+	-->
 	<!-- Event header
 	<div id="tribe-events-header" <?php tribe_events_the_header_attributes() ?>>
 		<nav class="tribe-events-nav-pagination" aria-label="<?php printf( esc_html__( '%s Navigation', 'overcome' ), $events_label_singular ); ?>">
@@ -57,7 +57,12 @@ $event_id = get_the_ID();
 			<div class="row">
 				<div class="col-lg-8 ef5-tribe-event-content">
 					<!-- Event featured image, but exclude link -->
-					<?php echo tribe_event_featured_image( $event_id, 'full', false ); ?>
+					<?php //echo tribe_event_featured_image( $event_id, 'full', false ); 
+						overcome_post_thumbnail([
+							'thumbnail_size' => 'large',
+							'img_class'		 => 'ef5-rounded-10 mb-30'
+						]);
+					?>
 
 					<!-- Event content -->
 					<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
