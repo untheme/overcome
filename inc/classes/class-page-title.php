@@ -38,15 +38,15 @@ function overcome_get_page_titles()
         }
         // Single page view
         elseif (is_singular()) {
-            $title = get_post_meta(get_the_ID(), 'custom_title', true);
-            if (!$title) {
-                $title = get_the_title();
+            if(is_singular('tribe_events')){
+                die('xxx');
+            } else {
+                $title = get_post_meta(get_the_ID(), 'custom_title', true);
+                if (!$title) {
+                    $title = get_the_title();
+                }
+                $desc = get_post_meta(get_the_ID(), 'custom_desc', true);
             }
-            var_dump(get_the_title());
-            var_dump(get_the_ID());
-            global $post;
-            var_dump($post->ID);
-            $desc = get_post_meta(get_the_ID(), 'custom_desc', true);
         } 
         // 404
         elseif (is_404()) {
