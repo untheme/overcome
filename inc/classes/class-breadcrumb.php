@@ -532,7 +532,7 @@ class OverCome_Breadcrumb
          */
         $post_object = get_post_type_object( $post_type );
         $entries     = array();
-
+        var_dump($post_object);
         if ( $post_object )
         {
             $post_type_archive_link = $post_object->has_archive ? get_post_type_archive_link( get_post_type() ) : '';
