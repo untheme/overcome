@@ -59,7 +59,7 @@ $event_id = get_the_ID();
 					<?php //echo tribe_event_featured_image( $event_id, 'full', false ); 
 						overcome_post_thumbnail([
 							'thumbnail_size' => 'large',
-							'img_class'		 => 'ef5-rounded-10 mb-30'
+							'img_class'		 => 'ef5-rounded-10 mb-40'
 						]);
 					?>
 					<?php do_action( 'tribe_events_single_event_before_the_content' ) ?>
