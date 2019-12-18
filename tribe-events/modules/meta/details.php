@@ -53,82 +53,90 @@ $website = tribe_get_event_website_link();
 ?>
 
 <div class="ef5-tribe-single-meta-block ef5-bg-f5f5f5 ef5-rounded-10 mb-30 p-30 ef5-tribe-events-meta-group ef5-tribe-events-meta-group-details">
-	<?php
-	do_action( 'tribe_events_single_meta_details_section_start' );
+	<?php do_action( 'tribe_events_single_meta_details_section_start' ); ?>
+	<div class="row">
+		<div class="col-auto"><?php
+			echo $start_date;
+		?></div>
+		<div class="col"><?php
+			// All day (multiday) events
+			if ( tribe_event_is_all_day() && tribe_event_is_multiday() ) :
+				?>
+				<div class="ef5-events-all-multiday">
+					<div class="row text-13">
+						<div class="col-auto ef5-heading text-13"><?php esc_html_e( 'Start:', 'overcome' ) ?></div>
+						<div class="col text-end"><?php esc_html_e( $start_date ) ?></div>
+					</div>
+					<div class="row text-13">
+						<div class="col-auto ef5-heading"><?php esc_html_e( 'End:', 'overcome' ) ?></div>
+						<div class="col text-end"><?php esc_html_e( $end_date ) ?></div>
+					</div>
+				</div>
+			<?php
+			// All day (single day) events
+			elseif ( tribe_event_is_all_day() ):
+				?>
+				<div class="ef5-events-all-day">
+					<div class="row text-13">
+						<div class="col-auto ef5-heading"><?php esc_html_e( 'Date:', 'overcome' ) ?> </div>
+						<div class="col text-end"><?php esc_html_e( $start_date ) ?></div>
+					</div>
+				</div>
 
-	// All day (multiday) events
-	if ( tribe_event_is_all_day() && tribe_event_is_multiday() ) :
+			<?php
+			// Multiday events
+			elseif ( tribe_event_is_multiday() ) :
+				?>
+				<div class="ef5-events-multiday">
+					<div class="row text-13">
+						<div class="col-auto ef5-heading"><?php esc_html_e( 'Start:', 'overcome' ) ?></div>
+						<div class="col text-end"><?php esc_html_e( $start_datetime ) ?></div>
+					</div>
+					<div class="row text-13">
+						<div class="col-auto ef5-heading"><?php esc_html_e( 'End:', 'overcome' ) ?></div>
+						<div class="col text-end"><?php esc_html_e( $start_datetime ) ?></div>
+					</div>
+				</div>
+			<?php
+			// Single day events
+			else :
+				?>
+
+				<!-- <dt class="tribe-events-start-date-label"> <?php esc_html_e( 'Date:', 'overcome' ) ?> </dt>
+				<dd>
+					<abbr class="tribe-events-abbr tribe-events-start-date published dtstart" title="<?php esc_attr_e( $start_ts ) ?>"> <?php esc_html_e( $start_date ) ?> </abbr>
+				</dd> -->
+				<div class="row text-13">
+					<div class="col-auto ef5-heading"><?php echo esc_html( $time_title ); ?></div>
+					<div class="col text-end"><?php echo $time_formatted; ?></div>
+				</div>
+			<?php endif ?>
+
+			<?php
+			// Event Cost
+			if ( ! empty( $cost ) ) : ?>
+				<div class="row text-13">
+					<div class="col-auto ef5-heading"><?php esc_html_e( 'Cost:', 'overcome' ); ?></div>
+					<div class="col text-end"><?php esc_html_e( $cost ); ?></div>
+				</div>
+			<?php endif;
+			echo tribe_get_event_categories(
+				get_the_id(), array(
+					'before'       => '',
+					'sep'          => ', ',
+					'after'        => '',
+					'label'        => null, // An appropriate plural/singular label will be provided
+					'label_before' => '<div class="row text-13"><div class="col-auto ef5-heading">',
+					'label_after'  => '</div>',
+					'wrap_before'  => '<div class="col text-end">',
+					'wrap_after'   => '</div></div>',
+				)
+			);
 		?>
-		<div class="ef5-events-all-multiday">
-			<div class="row text-13">
-				<div class="col-auto ef5-heading text-13"><?php esc_html_e( 'Start:', 'overcome' ) ?></div>
-				<div class="col text-end"><?php esc_html_e( $start_date ) ?></div>
-			</div>
-			<div class="row text-13">
-				<div class="col-auto ef5-heading"><?php esc_html_e( 'End:', 'overcome' ) ?></div>
-				<div class="col text-end"><?php esc_html_e( $end_date ) ?></div>
-			</div>
 		</div>
-	<?php
-	// All day (single day) events
-	elseif ( tribe_event_is_all_day() ):
-		?>
-		<div class="ef5-events-all-day">
-			<div class="row text-13">
-				<div class="col-auto ef5-heading"><?php esc_html_e( 'Date:', 'overcome' ) ?> </div>
-				<div class="col text-end"><?php esc_html_e( $start_date ) ?></div>
-			</div>
-		</div>
+	</div> 
 
 	<?php
-	// Multiday events
-	elseif ( tribe_event_is_multiday() ) :
-		?>
-		<div class="ef5-events-multiday">
-			<div class="row text-13">
-				<div class="col-auto ef5-heading"><?php esc_html_e( 'Start:', 'overcome' ) ?></div>
-				<div class="col text-end"><?php esc_html_e( $start_datetime ) ?></div>
-			</div>
-			<div class="row text-13">
-				<div class="col-auto ef5-heading"><?php esc_html_e( 'End:', 'overcome' ) ?></div>
-				<div class="col text-end"><?php esc_html_e( $start_datetime ) ?></div>
-			</div>
-		</div>
-	<?php
-	// Single day events
-	else :
-		?>
-
-		<!-- <dt class="tribe-events-start-date-label"> <?php esc_html_e( 'Date:', 'overcome' ) ?> </dt>
-		<dd>
-			<abbr class="tribe-events-abbr tribe-events-start-date published dtstart" title="<?php esc_attr_e( $start_ts ) ?>"> <?php esc_html_e( $start_date ) ?> </abbr>
-		</dd> -->
-		<div class="row text-13">
-			<div class="col-auto ef5-heading"><?php echo esc_html( $time_title ); ?></div>
-			<div class="col text-end"><?php echo $time_formatted; ?></div>
-		</div>
-	<?php endif ?>
-
-	<?php
-	// Event Cost
-	if ( ! empty( $cost ) ) : ?>
-		<div class="row text-13">
-			<div class="col-auto ef5-heading"><?php esc_html_e( 'Cost:', 'overcome' ); ?></div>
-			<div class="col text-end"><?php esc_html_e( $cost ); ?></div>
-		</div>
-	<?php endif;
-	echo tribe_get_event_categories(
-		get_the_id(), array(
-			'before'       => '',
-			'sep'          => ', ',
-			'after'        => '',
-			'label'        => null, // An appropriate plural/singular label will be provided
-			'label_before' => '<div class="row text-13"><div class="col-auto ef5-heading">',
-			'label_after'  => '</div>',
-			'wrap_before'  => '<div class="col text-end">',
-			'wrap_after'   => '</div></div>',
-		)
-	);
 	// Event Website
 	if ( ! empty( $website ) ) : ?>
 		<div class="row">
