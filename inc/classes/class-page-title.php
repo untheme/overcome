@@ -49,7 +49,7 @@ function overcome_get_page_titles()
                     //var_dump($wp_query->ID);
                 }
                 wp_reset_postdata();
-                die('xxx');
+                //die('xxx');
             } else {
                 $title = get_post_meta(get_the_ID(), 'custom_title', true);
                 if (!$title) {
