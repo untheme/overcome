@@ -28,10 +28,10 @@ function overcome_single_tribe_event_upcoming(){
 		]
 	);
 
-	$query = tribe_get_events( $query_args, true );
-	var_dump($query);
-	$posts = $query->posts;
-	var_dump($posts);
+	$posts = tribe_get_events( $query_args, true );
+	//var_dump($query);
+	//$posts = $query->posts;
+	//var_dump($posts);
 // Check if any event posts are found.
 if ( $posts ) : ?>
 
