@@ -15,7 +15,7 @@ if(function_exists('tribe')){
 add_action('tribe_events_single_meta_after', 'overcome_single_tribe_event_upcoming', 10, 1);
 function overcome_single_tribe_event_upcoming(){
 	$posts = tribe_get_list_widget_events();
-
+var_dump($posts);
 // Check if any event posts are found.
 if ( $posts ) : ?>
 
