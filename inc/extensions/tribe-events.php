@@ -13,3 +13,10 @@ if(function_exists('tribe')){
     $html = '<a data-month="' . $date . '" href="' . esc_url( $url ) . '" rel="prev"> ' . $text . ' </a>';
     return $html; 
 }*/
+
+
+// Single Events 
+add_action('tribe_events_single_meta_after','overcome_single_tribe_event_tags');
+function overcome_single_tribe_event_tags(){
+	echo tribe_meta_event_tags( sprintf( esc_html__( '%s Tags:', 'overcome' ), tribe_get_event_label_singular() ), ', ', false );
+}

@@ -116,9 +116,7 @@ $website = tribe_get_event_website_link();
 			<div class="col-auto"><?php esc_html_e( 'Cost:', 'overcome' ); ?></div>
 			<div class="col text-end"><?php esc_html_e( $cost ); ?></div>
 		</div>
-	<?php endif ?>
-
-	<?php
+	<?php endif;
 	echo tribe_get_event_categories(
 		get_the_id(), array(
 			'before'       => '',
@@ -131,11 +129,6 @@ $website = tribe_get_event_website_link();
 			'wrap_after'   => '</div></div>',
 		)
 	);
-	?>
-
-	<?php echo tribe_meta_event_tags( sprintf( esc_html__( '%s Tags:', 'overcome' ), tribe_get_event_label_singular() ), ', ', false ) ?>
-
-	<?php
 	// Event Website
 	if ( ! empty( $website ) ) : ?>
 		<div class="row">
