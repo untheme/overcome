@@ -55,13 +55,13 @@ $website = tribe_get_event_website_link();
 <div class="ef5-tribe-single-meta-block ef5-bg-f5f5f5 ef5-rounded-10 mb-30 p-30 ef5-tribe-events-meta-group ef5-tribe-events-meta-group-details">
 	<?php do_action( 'tribe_events_single_meta_details_section_start' ); ?>
 	<div class="row">
-		<div class="col-auto"><?php
-			echo $start_date;
-		?><div class="ef5-tribe-event-start-date">
+		<div class="col-auto">
+			<div class="ef5-tribe-event-start-date">
 				<span class="ef5-tribe-date"><?php overcome_tribe_events_start_date(['format' => 'd']); ?></span>
 				<span class="ef5-tribe-month"><?php overcome_tribe_events_start_date(['format' => 'M']); ?></span>
 				<span class="ef5-tribe-year"><?php overcome_tribe_events_start_date(['format' => 'Y']); ?></span>
-			</div></div>
+			</div>
+		</div>
 		<div class="col"><?php
 			// All day (multiday) events
 			if ( tribe_event_is_all_day() && tribe_event_is_multiday() ) :
