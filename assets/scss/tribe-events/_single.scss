@@ -1,6 +1,9 @@
 .tribe-events-single-event-description{
 	p{
-		margin-bottom: 24px;
+		margin-bottom: 24px!important;
+		&:last-child{
+			margin-bottom: 0!important;
+		}
 	}
 	h4{
 		margin-bottom: 10px;
