@@ -40,13 +40,15 @@ function overcome_get_page_titles()
         elseif (is_singular()) {
             if(is_singular('tribe_events')){
                 global $wp_query;
-                var_dump($wp_query);
+                //var_dump($wp_query);
                 $post = get_post();
                 //var_dump($post);
-                while ( have_posts() ) {
-                    the_post();
+                while ($wp_query->have_posts() ) {
+                    $wp_query->the_post();
                     var_dump(get_the_ID());
+                    var_dump($wp_query->ID);
                 }
+                wp_reset_postdata();
                 die('xxx');
             } else {
                 $title = get_post_meta(get_the_ID(), 'custom_title', true);
