@@ -22,7 +22,7 @@ function overcome_single_tribe_event_upcoming(){
 			'posts_per_page'       => '3',
 			'is_tribe_widget'      => false,
 			'post_status'          => 'publish',
-			'tribe_render_context' => 'widget',
+			'tribe_render_context' => 'content',
 			'featured'             => false,
 			'ends_after'           => '',
 		]
