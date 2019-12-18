@@ -39,6 +39,8 @@ function overcome_get_page_titles()
         // Single page view
         elseif (is_singular()) {
             if(is_singular('tribe_events')){
+                global $wp_query;
+                var_dump($wp_query);
                 $post = get_post();
                 //var_dump($post);
                 while ( have_posts() ) {
