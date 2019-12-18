@@ -40,16 +40,15 @@ function overcome_get_page_titles()
         elseif (is_singular()) {
             if(is_singular('tribe_events')){
                 global $wp_query;
-                //var_dump($wp_query);
-                //$post = get_post();
-                //var_dump($post);
                 while ($wp_query->have_posts() ) {
                     $wp_query->the_post();
-                    //var_dump(get_the_ID());
-                    var_dump($wp_query->post->ID);
+                    //var_dump($wp_query->post->ID);
+                    $id = $wp_query->post->ID;
+                    $title = get_post_meta($id, 'custom_title', true);
+                    $desc = get_post_meta($id, 'custom_desc', true);
                 }
                 wp_reset_postdata();
-                //die('xxx');
+                
             } else {
                 $title = get_post_meta(get_the_ID(), 'custom_title', true);
                 if (!$title) {
