@@ -60,8 +60,8 @@ $website = tribe_get_event_website_link();
 	if ( tribe_event_is_all_day() && tribe_event_is_multiday() ) :
 		?>
 		<div class="ef5-events-all-multiday">
-			<div class="row">
-				<div class="col-auto ef5-heading"><?php esc_html_e( 'Start:', 'overcome' ) ?></div>
+			<div class="row text-13">
+				<div class="col-auto ef5-heading text-13"><?php esc_html_e( 'Start:', 'overcome' ) ?></div>
 				<div class="col text-end"><?php esc_html_e( $start_date ) ?></div>
 			</div>
 			<div class="row">
@@ -74,7 +74,7 @@ $website = tribe_get_event_website_link();
 	elseif ( tribe_event_is_all_day() ):
 		?>
 		<div class="ef5-events-all-day">
-			<div class="row">
+			<div class="row text-13">
 				<div class="col-auto ef5-heading"><?php esc_html_e( 'Date:', 'overcome' ) ?> </div>
 				<div class="col text-end"><?php esc_html_e( $start_date ) ?></div>
 			</div>
@@ -85,7 +85,7 @@ $website = tribe_get_event_website_link();
 	elseif ( tribe_event_is_multiday() ) :
 		?>
 		<div class="ef5-events-multiday">
-			<div class="row">
+			<div class="row text-13">
 				<div class="col-auto ef5-heading"><?php esc_html_e( 'Start:', 'overcome' ) ?></div>
 				<div class="col text-end"><?php esc_html_e( $start_datetime ) ?></div>
 			</div>
@@ -99,11 +99,11 @@ $website = tribe_get_event_website_link();
 	else :
 		?>
 
-		<dt class="tribe-events-start-date-label"> <?php esc_html_e( 'Date:', 'overcome' ) ?> </dt>
+		<!-- <dt class="tribe-events-start-date-label"> <?php esc_html_e( 'Date:', 'overcome' ) ?> </dt>
 		<dd>
 			<abbr class="tribe-events-abbr tribe-events-start-date published dtstart" title="<?php esc_attr_e( $start_ts ) ?>"> <?php esc_html_e( $start_date ) ?> </abbr>
-		</dd>
-		<div class="row">
+		</dd> -->
+		<div class="row text-13">
 			<div class="col-auto ef5-heading"><?php echo esc_html( $time_title ); ?></div>
 			<div class="col text-end"><?php echo $time_formatted; ?></div>
 		</div>
