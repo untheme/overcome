@@ -56,7 +56,7 @@ $website = tribe_get_event_website_link();
 	<?php do_action( 'tribe_events_single_meta_details_section_start' ); ?>
 	<div class="row">
 		<div class="col-auto"><?php
-			echo $start_datetime;
+			echo $start_time;
 		?></div>
 		<div class="col"><?php
 			// All day (multiday) events
