@@ -60,42 +60,41 @@ $website = tribe_get_event_website_link();
 		// All day (multiday) events
 		if ( tribe_event_is_all_day() && tribe_event_is_multiday() ) :
 			?>
-
-			<dt class="tribe-events-start-date-label"> <?php esc_html_e( 'Start:', 'overcome' ) ?> </dt>
-			<dd>
-				<abbr class="tribe-events-abbr tribe-events-start-date published dtstart" title="<?php esc_attr_e( $start_ts ) ?>"> <?php esc_html_e( $start_date ) ?> </abbr>
-			</dd>
-
-			<dt class="tribe-events-end-date-label"> <?php esc_html_e( 'End:', 'overcome' ) ?> </dt>
-			<dd>
-				<abbr class="tribe-events-abbr tribe-events-end-date dtend" title="<?php esc_attr_e( $end_ts ) ?>"> <?php esc_html_e( $end_date ) ?> </abbr>
-			</dd>
-
+			<div class="ef5-events-all-multiday">
+				<div class="row">
+					<div class="col-auto"><?php esc_html_e( 'Start:', 'overcome' ) ?></div>
+					<div class="col text-end"><?php esc_html_e( $start_date ) ?></div>
+				</div>
+				<div class="row">
+					<div class="col-auto"><?php esc_html_e( 'End:', 'overcome' ) ?></div>
+					<div class="col text-end"><?php esc_html_e( $end_date ) ?></div>
+				</div>
+			</div>
 		<?php
 		// All day (single day) events
 		elseif ( tribe_event_is_all_day() ):
 			?>
-
-			<dt class="tribe-events-start-date-label"> <?php esc_html_e( 'Date:', 'overcome' ) ?> </dt>
-			<dd>
-				<abbr class="tribe-events-abbr tribe-events-start-date published dtstart" title="<?php esc_attr_e( $start_ts ) ?>"> <?php esc_html_e( $start_date ) ?> </abbr>
-			</dd>
+			<div class="ef5-events-all-day">
+				<div class="row">
+					<div class="col-auto"><?php esc_html_e( 'Date:', 'overcome' ) ?> </div>
+					<div class="col text-end"><?php esc_html_e( $start_date ) ?></div>
+				</div>
+			</div>
 
 		<?php
 		// Multiday events
 		elseif ( tribe_event_is_multiday() ) :
 			?>
-
-			<dt class="tribe-events-start-datetime-label"> <?php esc_html_e( 'Start:', 'overcome' ) ?> </dt>
-			<dd>
-				<abbr class="tribe-events-abbr tribe-events-start-datetime updated published dtstart" title="<?php esc_attr_e( $start_ts ) ?>"> <?php esc_html_e( $start_datetime ) ?> </abbr>
-			</dd>
-
-			<dt class="tribe-events-end-datetime-label"> <?php esc_html_e( 'End:', 'overcome' ) ?> </dt>
-			<dd>
-				<abbr class="tribe-events-abbr tribe-events-end-datetime dtend" title="<?php esc_attr_e( $end_ts ) ?>"> <?php esc_html_e( $end_datetime ) ?> </abbr>
-			</dd>
-
+			<div class="ef5-events-multiday">
+				<div class="row">
+					<div class="col-auto"><?php esc_html_e( 'Start:', 'overcome' ) ?></div>
+					<div class="col text-end"><?php esc_html_e( $start_datetime ) ?></div>
+				</div>
+				<div class="row">
+					<div class="col-auto"><?php esc_html_e( 'End:', 'overcome' ) ?></div>
+					<div class="col text-end"><?php esc_html_e( $start_datetime ) ?></div>
+				</div>
+			</div>
 		<?php
 		// Single day events
 		else :
