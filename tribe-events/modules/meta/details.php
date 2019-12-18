@@ -64,7 +64,7 @@ $website = tribe_get_event_website_link();
 				<div class="col-auto ef5-heading text-13"><?php esc_html_e( 'Start:', 'overcome' ) ?></div>
 				<div class="col text-end"><?php esc_html_e( $start_date ) ?></div>
 			</div>
-			<div class="row">
+			<div class="row text-13">
 				<div class="col-auto ef5-heading"><?php esc_html_e( 'End:', 'overcome' ) ?></div>
 				<div class="col text-end"><?php esc_html_e( $end_date ) ?></div>
 			</div>
@@ -89,7 +89,7 @@ $website = tribe_get_event_website_link();
 				<div class="col-auto ef5-heading"><?php esc_html_e( 'Start:', 'overcome' ) ?></div>
 				<div class="col text-end"><?php esc_html_e( $start_datetime ) ?></div>
 			</div>
-			<div class="row">
+			<div class="row text-13">
 				<div class="col-auto ef5-heading"><?php esc_html_e( 'End:', 'overcome' ) ?></div>
 				<div class="col text-end"><?php esc_html_e( $start_datetime ) ?></div>
 			</div>
@@ -112,7 +112,7 @@ $website = tribe_get_event_website_link();
 	<?php
 	// Event Cost
 	if ( ! empty( $cost ) ) : ?>
-		<div class="row">
+		<div class="row text-13">
 			<div class="col-auto ef5-heading"><?php esc_html_e( 'Cost:', 'overcome' ); ?></div>
 			<div class="col text-end"><?php esc_html_e( $cost ); ?></div>
 		</div>
@@ -123,7 +123,7 @@ $website = tribe_get_event_website_link();
 			'sep'          => ', ',
 			'after'        => '',
 			'label'        => null, // An appropriate plural/singular label will be provided
-			'label_before' => '<div class="row"><div class="col-auto ef5-heading">',
+			'label_before' => '<div class="row text-13"><div class="col-auto ef5-heading">',
 			'label_after'  => '</div>',
 			'wrap_before'  => '<div class="col text-end">',
 			'wrap_after'   => '</div></div>',
