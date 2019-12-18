@@ -176,7 +176,7 @@ $website = tribe_get_event_website_link();
 				?>
 				<div class="row">
 					<div class="col-auto"><?php esc_html_e( 'Email:', 'overcome' ) ?></div>
-					<div class="col text-end"><?php echo esc_html( $email ); ?></div>
+					<div class="col text-end"><?php echo esc_html( $organizer_email ); ?></div>
 				</div>
 				<?php
 			}//end if
