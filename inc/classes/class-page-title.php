@@ -39,6 +39,8 @@ function overcome_get_page_titles()
         // Single page view
         elseif (is_singular()) {
             if(is_singular('tribe_events')){
+                $post = get_post( $post );
+                var_dump($post);
                 die('xxx');
             } else {
                 $title = get_post_meta(get_the_ID(), 'custom_title', true);
