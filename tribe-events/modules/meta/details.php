@@ -62,7 +62,7 @@ $website = tribe_get_event_website_link();
 				<span class="ef5-tribe-year"><?php overcome_tribe_events_start_date(['format' => 'Y']); ?></span>
 			</div>
 		</div>
-		<div class="col"><?php
+		<div class="col lh-30 text-13"><?php
 			// All day (multiday) events
 			if ( tribe_event_is_all_day() && tribe_event_is_multiday() ) :
 				?>
