@@ -14,7 +14,6 @@ if(function_exists('tribe')){
 // Single Event Upcoming
 add_action('tribe_events_single_meta_after', 'overcome_single_tribe_event_upcoming', 10, 1);
 function overcome_single_tribe_event_upcoming(){
-	var_dump(get_the_ID());
 	$r = new WP_Query( array(
         'post_type'           => 'tribe_events',
         'posts_per_page'      => '3',
@@ -26,6 +25,7 @@ function overcome_single_tribe_event_upcoming(){
 	$thumbnail_size = ['85','85'];
     if ( $r->have_posts() )
     {
+    	echo '<div class="ef5-heading text-22 font-style-500 mb-40">'.esc_html__('Tags','overcome').'</div>';
         echo '<div class="posts-list layout-1">';
 
         while ( $r->have_posts() )
