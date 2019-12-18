@@ -44,6 +44,7 @@ function overcome_get_page_titles()
             if (!$title) {
                 $title = get_the_title();
             }
+            var_dump($title);
             $desc = get_post_meta(get_the_ID(), 'custom_desc', true);
         } 
         // 404
