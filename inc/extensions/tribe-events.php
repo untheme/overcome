@@ -93,6 +93,7 @@ if ( $posts ) : ?>
 		endforeach; ?>
 	</ol>
 	<?php
+endif;
 }
 // Single Events Tags
 add_action('tribe_events_single_meta_after','overcome_single_tribe_event_tags', 10, 2);
