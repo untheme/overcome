@@ -8,7 +8,6 @@
 */
 function overcome_page_title(){
     $ptitle_layout = overcome_get_opts('ptitle_layout', '2');
-    var_dump($ptitle_layout);
     if($ptitle_layout === 'none' || is_404() ) return;
     get_template_part('template-parts/page-title/layout', $ptitle_layout);
 }
