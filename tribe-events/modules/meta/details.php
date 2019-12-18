@@ -135,7 +135,65 @@ $website = tribe_get_event_website_link();
 			);
 		?>
 		</div>
-	</div> 
+	</div>
+	<?php
+	//Organizer
+	$organizer_ids = tribe_get_organizer_ids();
+	$organizer_multiple = count( $organizer_ids ) > 1;
+
+	$organizer_phone = tribe_get_organizer_phone();
+	$organizer_email = tribe_get_organizer_email();
+	$organizer_website = tribe_get_organizer_website_link();
+	?>
+
+	<div class="ef5-tribe-events-meta-group-organizer">
+		<?php
+		do_action( 'tribe_events_single_meta_organizer_section_start' );
+
+		foreach ( $organizer_ids as $organizer ) {
+			if ( ! $organizer ) {
+				continue;
+			}
+			?>
+			<div class="row">
+				<div class="col-auto"><?php esc_html_e('Organized by: ','overcome'); ?></div>
+				<div class="col text-end"><?php echo tribe_get_organizer_link( $organizer ) ?></div>
+			</div>
+			<?php
+		}
+
+		if ( ! $organizer_multiple ) { // only show organizer details if there is one
+			if ( ! empty( $organizer_phone ) ) {
+				?>
+				<div class="row">
+					<div class="col-auto"><?php esc_html_e( 'Phone:', 'overcome' ) ?></div>
+					<div class="col text-end"><?php echo esc_html( $organizer_phone ); ?></div>
+				</div>
+				<?php
+			}//end if
+
+			if ( ! empty( $organizer_email ) ) {
+				?>
+				<div class="row">
+					<div class="col-auto"><?php esc_html_e( 'Email:', 'overcome' ) ?></div>
+					<div class="col text-end"><?php echo esc_html( $email ); ?></div>
+				</div>
+				<?php
+			}//end if
+
+			if ( ! empty( $organizer_website ) ) {
+				?>
+				<div class="row">
+					<div class="col-auto"><?php esc_html_e( 'Website:', 'overcome' ) ?></div>
+					<div class="col text-end"><?php echo esc_html( $organizer_website ); ?></div>
+				</div>
+				<?php
+			}//end if
+		}//end if
+
+		do_action( 'tribe_events_single_meta_organizer_section_end' );
+		?>
+	</div>
 
 	<?php
 	// Event Website
