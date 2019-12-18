@@ -14,7 +14,21 @@ if(function_exists('tribe')){
 // Single Event Upcoming
 add_action('tribe_events_single_meta_after', 'overcome_single_tribe_event_upcoming', 10, 1);
 function overcome_single_tribe_event_upcoming(){
-	$posts = tribe_get_list_widget_events();
+	$query_args = apply_filters(
+		'tribe_events_list_widget_query_args',
+		[
+			'eventDisplay' => 'list',
+			'posts_per_page' => self::$limit,
+			'is_tribe_widget' => true,
+			'post_status' => $post_status,
+			'tribe_render_context' => 'widget',
+			'featured' => empty( $instance['featured_events_only'] ) ? null : (bool) $instance['featured_events_only'],
+			'ends_after' => Dates::build_date_object( 'now' ),
+		]
+	);
+
+	$query = tribe_get_events( $query_args, true );
+	$posts = $query->posts;
 var_dump($posts);
 // Check if any event posts are found.
 if ( $posts ) : ?>
