@@ -68,6 +68,7 @@ function overcome_get_page_titles()
         $title = get_the_title(get_option('woocommerce_shop_page_id'));
         $desc  = get_the_archive_description();
     } else {
+        die('xx');
 		$title = get_the_archive_title();
 		$desc  = get_the_archive_description();
     }
