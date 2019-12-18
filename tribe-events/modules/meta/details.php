@@ -123,14 +123,14 @@ $website = tribe_get_event_website_link();
 		<?php
 		echo tribe_get_event_categories(
 			get_the_id(), array(
-				'before'       => '<div class="row">',
+				'before'       => '',
 				'sep'          => ', ',
-				'after'        => '</div>	',
+				'after'        => '',
 				'label'        => null, // An appropriate plural/singular label will be provided
-				'label_before' => '<div class="col-auto">',
+				'label_before' => '<div class="row"><div class="col-auto">',
 				'label_after'  => '</div>',
 				'wrap_before'  => '<div class="col text-end">',
-				'wrap_after'   => '</div>',
+				'wrap_after'   => '</div></div>',
 			)
 		);
 		?>
