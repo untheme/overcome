@@ -36,7 +36,7 @@ ob_start();
     }
 
 $titles_html = ob_get_clean();
-var_dump($titles_html);
+//var_dump($titles_html);
 if ( ! $titles_html )
 {
     return;
