@@ -15,18 +15,15 @@ if(function_exists('tribe')){
 add_action('tribe_events_single_meta_after', 'overcome_single_tribe_event_upcoming', 10, 1);
 function overcome_single_tribe_event_upcoming(){
 	//use Tribe__Date_Utils as Dates;
-	$query_args = apply_filters(
-		'tribe_events_list_widget_query_args',
-		[
-			'eventDisplay'         => 'list',
-			'posts_per_page'       => '3',
-			'is_tribe_widget'      => false,
-			'post_status'          => 'publish',
-			'tribe_render_context' => 'content',
-			'featured'             => false,
-			'ends_after'           => '',
-		]
-	);
+	$query_args = [
+		'eventDisplay'         => 'list',
+		'posts_per_page'       => '3',
+		'is_tribe_widget'      => false,
+		'post_status'          => 'publish',
+		'tribe_render_context' => 'content',
+		'featured'             => false,
+		'ends_after'           => '',
+	];
 
 	$posts = tribe_get_events( $query_args, true );
 	//var_dump($query);
