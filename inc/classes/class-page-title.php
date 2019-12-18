@@ -43,6 +43,7 @@ function overcome_get_page_titles()
                 $title = get_the_title();
             }
             var_dump(get_the_title());
+            var_dump(get_the_ID());
             $desc = get_post_meta(get_the_ID(), 'custom_desc', true);
         } 
         // 404
