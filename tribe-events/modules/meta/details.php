@@ -53,98 +53,96 @@ $website = tribe_get_event_website_link();
 ?>
 
 <div class="ef5-tribe-events-meta-group ef5-tribe-events-meta-group-details">
-	<dl>
-		<?php
-		do_action( 'tribe_events_single_meta_details_section_start' );
+	<?php
+	do_action( 'tribe_events_single_meta_details_section_start' );
 
-		// All day (multiday) events
-		if ( tribe_event_is_all_day() && tribe_event_is_multiday() ) :
-			?>
-			<div class="ef5-events-all-multiday">
-				<div class="row">
-					<div class="col-auto"><?php esc_html_e( 'Start:', 'overcome' ) ?></div>
-					<div class="col text-end"><?php esc_html_e( $start_date ) ?></div>
-				</div>
-				<div class="row">
-					<div class="col-auto"><?php esc_html_e( 'End:', 'overcome' ) ?></div>
-					<div class="col text-end"><?php esc_html_e( $end_date ) ?></div>
-				</div>
-			</div>
-		<?php
-		// All day (single day) events
-		elseif ( tribe_event_is_all_day() ):
-			?>
-			<div class="ef5-events-all-day">
-				<div class="row">
-					<div class="col-auto"><?php esc_html_e( 'Date:', 'overcome' ) ?> </div>
-					<div class="col text-end"><?php esc_html_e( $start_date ) ?></div>
-				</div>
-			</div>
-
-		<?php
-		// Multiday events
-		elseif ( tribe_event_is_multiday() ) :
-			?>
-			<div class="ef5-events-multiday">
-				<div class="row">
-					<div class="col-auto"><?php esc_html_e( 'Start:', 'overcome' ) ?></div>
-					<div class="col text-end"><?php esc_html_e( $start_datetime ) ?></div>
-				</div>
-				<div class="row">
-					<div class="col-auto"><?php esc_html_e( 'End:', 'overcome' ) ?></div>
-					<div class="col text-end"><?php esc_html_e( $start_datetime ) ?></div>
-				</div>
-			</div>
-		<?php
-		// Single day events
-		else :
-			?>
-
-			<dt class="tribe-events-start-date-label"> <?php esc_html_e( 'Date:', 'overcome' ) ?> </dt>
-			<dd>
-				<abbr class="tribe-events-abbr tribe-events-start-date published dtstart" title="<?php esc_attr_e( $start_ts ) ?>"> <?php esc_html_e( $start_date ) ?> </abbr>
-			</dd>
+	// All day (multiday) events
+	if ( tribe_event_is_all_day() && tribe_event_is_multiday() ) :
+		?>
+		<div class="ef5-events-all-multiday">
 			<div class="row">
-				<div class="col-auto"><?php echo esc_html( $time_title ); ?></div>
-				<div class="col text-end"><?php echo $time_formatted; ?></div>
+				<div class="col-auto"><?php esc_html_e( 'Start:', 'overcome' ) ?></div>
+				<div class="col text-end"><?php esc_html_e( $start_date ) ?></div>
 			</div>
-		<?php endif ?>
-
-		<?php
-		// Event Cost
-		if ( ! empty( $cost ) ) : ?>
 			<div class="row">
-				<div class="col-auto"><?php esc_html_e( 'Cost:', 'overcome' ); ?></div>
-				<div class="col text-end"><?php esc_html_e( $cost ); ?></div>
+				<div class="col-auto"><?php esc_html_e( 'End:', 'overcome' ) ?></div>
+				<div class="col text-end"><?php esc_html_e( $end_date ) ?></div>
 			</div>
-		<?php endif ?>
+		</div>
+	<?php
+	// All day (single day) events
+	elseif ( tribe_event_is_all_day() ):
+		?>
+		<div class="ef5-events-all-day">
+			<div class="row">
+				<div class="col-auto"><?php esc_html_e( 'Date:', 'overcome' ) ?> </div>
+				<div class="col text-end"><?php esc_html_e( $start_date ) ?></div>
+			</div>
+		</div>
 
-		<?php
-		echo tribe_get_event_categories(
-			get_the_id(), array(
-				'before'       => '',
-				'sep'          => ', ',
-				'after'        => '',
-				'label'        => null, // An appropriate plural/singular label will be provided
-				'label_before' => '<div class="row"><div class="col-auto">',
-				'label_after'  => '</div>',
-				'wrap_before'  => '<div class="col text-end">',
-				'wrap_after'   => '</div></div>',
-			)
-		);
+	<?php
+	// Multiday events
+	elseif ( tribe_event_is_multiday() ) :
+		?>
+		<div class="ef5-events-multiday">
+			<div class="row">
+				<div class="col-auto"><?php esc_html_e( 'Start:', 'overcome' ) ?></div>
+				<div class="col text-end"><?php esc_html_e( $start_datetime ) ?></div>
+			</div>
+			<div class="row">
+				<div class="col-auto"><?php esc_html_e( 'End:', 'overcome' ) ?></div>
+				<div class="col text-end"><?php esc_html_e( $start_datetime ) ?></div>
+			</div>
+		</div>
+	<?php
+	// Single day events
+	else :
 		?>
 
-		<?php echo tribe_meta_event_tags( sprintf( esc_html__( '%s Tags:', 'overcome' ), tribe_get_event_label_singular() ), ', ', false ) ?>
+		<dt class="tribe-events-start-date-label"> <?php esc_html_e( 'Date:', 'overcome' ) ?> </dt>
+		<dd>
+			<abbr class="tribe-events-abbr tribe-events-start-date published dtstart" title="<?php esc_attr_e( $start_ts ) ?>"> <?php esc_html_e( $start_date ) ?> </abbr>
+		</dd>
+		<div class="row">
+			<div class="col-auto"><?php echo esc_html( $time_title ); ?></div>
+			<div class="col text-end"><?php echo $time_formatted; ?></div>
+		</div>
+	<?php endif ?>
 
-		<?php
-		// Event Website
-		if ( ! empty( $website ) ) : ?>
-			<div class="row">
-				<div class="col-auto"><?php esc_html_e( 'Website:', 'overcome' ) ?></div>
-				<div class="col text-end"><?php echo $website; ?></div>
-			</div>
-		<?php endif ?>
+	<?php
+	// Event Cost
+	if ( ! empty( $cost ) ) : ?>
+		<div class="row">
+			<div class="col-auto"><?php esc_html_e( 'Cost:', 'overcome' ); ?></div>
+			<div class="col text-end"><?php esc_html_e( $cost ); ?></div>
+		</div>
+	<?php endif ?>
 
-		<?php do_action( 'tribe_events_single_meta_details_section_end' ) ?>
-	</dl>
+	<?php
+	echo tribe_get_event_categories(
+		get_the_id(), array(
+			'before'       => '',
+			'sep'          => ', ',
+			'after'        => '',
+			'label'        => null, // An appropriate plural/singular label will be provided
+			'label_before' => '<div class="row"><div class="col-auto">',
+			'label_after'  => '</div>',
+			'wrap_before'  => '<div class="col text-end">',
+			'wrap_after'   => '</div></div>',
+		)
+	);
+	?>
+
+	<?php echo tribe_meta_event_tags( sprintf( esc_html__( '%s Tags:', 'overcome' ), tribe_get_event_label_singular() ), ', ', false ) ?>
+
+	<?php
+	// Event Website
+	if ( ! empty( $website ) ) : ?>
+		<div class="row">
+			<div class="col-auto"><?php esc_html_e( 'Website:', 'overcome' ) ?></div>
+			<div class="col text-end"><?php echo $website; ?></div>
+		</div>
+	<?php endif ?>
+
+	<?php do_action( 'tribe_events_single_meta_details_section_end' ) ?>
 </div>
