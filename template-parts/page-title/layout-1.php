@@ -11,7 +11,6 @@ if(isset($args)){
    $show_breadcrumb = overcome_get_opts( 'breadcrumb_on', '1' );
    $ptitle_layout = overcome_get_opts('ptitle_layout','1');
 }
-var_dump($titles);
 
 $pt_cls = array(
     'ef5-pagetitle',
