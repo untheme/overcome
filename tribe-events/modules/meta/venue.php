@@ -25,13 +25,10 @@ $website = tribe_get_venue_website_link();
 			<div class="col text-end">
 				<?php echo tribe_get_venue() ?>
 				<?php if ( tribe_address_exists() ) : ?>
-					<address class="tribe-events-address">
-						<?php echo tribe_get_full_address(); ?>
-
-						<?php if ( tribe_show_google_map_link() ) : ?>
-							<?php echo tribe_get_map_link_html(); ?>
-						<?php endif; ?>
-					</address>
+					<address class="tribe-events-address"><?php 
+						echo tribe_get_full_address(); 
+						if ( tribe_show_google_map_link() ) echo tribe_get_map_link_html(); 
+					?></address>
 				<?php endif; ?>
 				<?php if ( ! empty( $phone ) ): ?>
 				<div class="row">
