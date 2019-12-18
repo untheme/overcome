@@ -64,20 +64,7 @@ function overcome_single_tribe_event_upcoming(){
                 'before' => '<div class="text-15 font-style-500 ef5-text-primary">',
                 'after'  => '</div>'
             ]);
-            if ( $show_author || $show_comments || $show_date || $show_cat )
-            {
-                ob_start();
-                if($show_author) overcome_posted_by();
-                if($show_date) overcome_posted_on();
-                if($show_comments) overcome_comments_popup_link(['show_text'=> true]);
-                if($show_cat) overcome_posted_in();
-                $post_meta = ob_get_clean();
-
-                if ( $post_meta )
-                {
-                    printf( '<div class="ef5-meta row gutter-20 justify-content-between">%s</div>', $post_meta );
-                }
-            }
+            
             echo '</div>';
 
             echo '</div></div>';
