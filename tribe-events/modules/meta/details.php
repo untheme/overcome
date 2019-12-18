@@ -52,7 +52,7 @@ $cost    = tribe_get_formatted_cost();
 $website = tribe_get_event_website_link();
 ?>
 
-<div class="ef5-tribe-single-meta-block ef5-bg-f5f5f5 ef5-rounded-10 mb-30 ef5-tribe-events-meta-group ef5-tribe-events-meta-group-details">
+<div class="ef5-tribe-single-meta-block ef5-bg-f5f5f5 ef5-rounded-10 mb-30 p-30 ef5-tribe-events-meta-group ef5-tribe-events-meta-group-details">
 	<?php
 	do_action( 'tribe_events_single_meta_details_section_start' );
 
