@@ -27,7 +27,7 @@ $website = tribe_get_organizer_website_link();
 		}
 		?>
 		<div class="row">
-			<div class="col-auto"></div>
+			<div class="col-auto"><?php esc_html_e('Organized by: ','overcome'); ?></div>
 			<div class="col text-end"><?php echo tribe_get_organizer_link( $organizer ) ?></div>
 		</div>
 		<?php
