@@ -44,11 +44,8 @@ function overcome_get_page_titles()
                     $wp_query->the_post();
                     //var_dump($wp_query->post->ID);
                     $id = $wp_query->post->ID;
-                    var_dump($id);
-                    var_dump(get_the_title($id));
-                    $title = get_post_meta($id, 'custom_title', true);
+                    $title = get_the_title($id);
                     $desc = get_post_meta($id, 'custom_desc', true);
-                    var_dump($title); die('x');
                 }
                 wp_reset_postdata();
             } else {
