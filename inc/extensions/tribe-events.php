@@ -52,16 +52,16 @@ function overcome_single_tribe_event_sponsor(){
 	    <div class="ef5-tribe-single-sponsor-list">
 	    	<div class="row align-items-center grid-gutters-30">
 	    		<div class="col-6">
-	    			<img src="<?php echo get_template_directory().'/assets/images/tribe-events/event-sponsor-1.png';?>" alt="sponsor"/>
+	    			<img src="<?php echo get_template_directory_uri().'/assets/images/tribe-events/event-sponsor-1.png';?>" alt="sponsor"/>
 	    		</div>
 	    		<div class="col-6">
-	    			<img src="<?php echo get_template_directory().'/assets/images/tribe-events/event-sponsor-2.png';?>" alt="sponsor"/>
+	    			<img src="<?php echo get_template_directory_uri().'/assets/images/tribe-events/event-sponsor-2.png';?>" alt="sponsor"/>
 	    		</div>
 	    		<div class="col-6">
-	    			<img src="<?php echo get_template_directory().'/assets/images/tribe-events/event-sponsor-3.png';?>" alt="sponsor"/>
+	    			<img src="<?php echo get_template_directory_uri().'/assets/images/tribe-events/event-sponsor-3.png';?>" alt="sponsor"/>
 	    		</div>
 	    		<div class="col-6">
-	    			<img src="<?php echo get_template_directory().'/assets/images/tribe-events/event-sponsor-4.png';?>" alt="sponsor"/>
+	    			<img src="<?php echo get_template_directory_uri().'/assets/images/tribe-events/event-sponsor-4.png';?>" alt="sponsor"/>
 	    		</div>
 	    	</div>
 	    </div>
