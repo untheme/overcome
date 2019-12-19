@@ -63,7 +63,7 @@ if(!function_exists('overcome_post_gallery')){
         $light_box = $args['light_box'];  //overcome_get_post_format_value('post-gallery-lightbox', '1');
         global $post;
         if('1' === $light_box ) 
-            $gallery_classes = ['ef5-gallery-lightbox'];
+            $gallery_classes = ['ef5-gallery ef5-gallery-lightbox'];
         else 
             $gallery_classes = ['ef5-gallery-carousel'];
         if( !empty($gallery_list[0]) || has_post_thumbnail() ){
