@@ -101,6 +101,7 @@ $dimensions : (
     @each $dimension in $dimensions{
       .mw#{$infix}-#{$dimension}{
         max-width: #{$dimension}px;
+        min-width: unset;
       }
     }
   }
