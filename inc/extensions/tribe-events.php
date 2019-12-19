@@ -170,7 +170,7 @@ function overcome_single_tribe_event_tags(){
  * Add meta box
 */
 add_action('ef5_post_metabox_register', 'overcome_tribe_event_meta_box');
-function overcome_tribe_event_meta_box(){
+function overcome_tribe_event_meta_box($metabox){
 	if (!$metabox->isset_args('tribe_events')) {
         $metabox->set_args('tribe_events', array(
             'opt_name'     => overcome_get_page_opt_name(),
