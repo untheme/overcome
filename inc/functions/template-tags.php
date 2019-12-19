@@ -457,7 +457,7 @@ if(!function_exists('overcome_post_share')){
         ob_start();
         if($show_fb == '1' || $show_tw == '1' || $show_gplus == '1' || $show_pin == '1' || $show_all == '1') {
         ?>
-        <div class="<?php echo trim(implode(' ', $classes)); ?>">
+        <div class="<?php echo overcome_optimize_css_class(trim(implode(' ', $classes))); ?>">
             <?php if($show_title): ?>
                 <div class="<?php echo esc_attr($row_class);?>">
                     <div class="col-auto share-title">
