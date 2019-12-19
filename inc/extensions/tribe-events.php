@@ -19,11 +19,17 @@ function overcome_single_event_share(){
 
 add_action('tribe_events_single_event_after_the_content', 'overcome_single_event_gallery');
 function overcome_single_event_gallery(){
-	overcome_post_gallery([
-		'show_media'     => '1',
-        'thumbnail_size' => '730x381',
-        'show_author'    => '0',
-	]);
+?>
+	<div class="ef5-bg-f5f5f5 ef5-rounded-10 p-20">
+		<?php 
+		overcome_post_gallery([
+			'show_media'     => '1',
+	        'thumbnail_size' => '730x381',
+	        'show_author'    => '0',
+		]);
+		?>
+	</div>
+<?php
 }
 
 // Single event booking form
