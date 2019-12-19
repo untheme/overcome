@@ -98,11 +98,15 @@ if(!function_exists('overcome_post_gallery')){
                         
                     );
                     wp_localize_script('owl-carousel', 'overcome_owl', $overcome_owl);
+                } else {
+                    wp_enqueue_script( 'magnific-popup' );
+                    wp_enqueue_style( 'magnific-popup' );
                 }
             ?>
                 <div id="gal-<?php echo get_the_ID();?>" class="<?php echo trim(implode(' ', $gallery_classes));?>">
                     <?php 
                     if($light_box === '1'){
+
                         $d = 0; 
                         foreach ($gallery_list as $img_id): 
                         $d++;
