@@ -66,6 +66,8 @@ if(!function_exists('overcome_post_gallery')){
                 'autoHeight'         => true,
                 'responsiveClass'    => true,
                 'slideBy'            => 'page',
+                'animationIn'        => 'fadeIn',
+                'animationOut'        => 'fadeOut',
                 'dot_thumbnail_size' => '138x97'
             ] 
         ));
