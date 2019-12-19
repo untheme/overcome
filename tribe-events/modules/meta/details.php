@@ -126,7 +126,7 @@ $website = tribe_get_event_website_link();
 					'before'       => '',
 					'sep'          => ', ',
 					'after'        => '',
-					'label'        => null, // An appropriate plural/singular label will be provided
+					'label'        => esc_html__('Category','overcome'), // An appropriate plural/singular label will be provided
 					'label_before' => '<div class="row text-13"><div class="col-auto ef5-heading">',
 					'label_after'  => '</div>',
 					'wrap_before'  => '<div class="col text-end">',
