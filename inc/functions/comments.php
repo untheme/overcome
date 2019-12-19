@@ -184,7 +184,8 @@ if ( ! function_exists( 'overcome_comment_form' ) ) :
 					'label_submit'  => esc_html__( 'Post Your Comment','overcome' ),
 					'class_submit'  => 'btn btn-pri',
 					'submit_button' => '<button name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s"><span>%4$s</span></button>',
-					'submit_field'  => '<div class="form-submit">%1$s %2$s</div>'
+					'submit_field'  => '<div class="form-submit">%1$s %2$s</div>',
+					'format'		=> 'html5'
 				)
 			);
 		}
