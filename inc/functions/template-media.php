@@ -57,8 +57,8 @@ if(!function_exists('overcome_post_gallery')){
             'autoHeight'         => true,
             'responsiveClass'    => true,
             'slideBy'            => 'page',
-            'animationIn'        => 'fadeIn',
-            'animationOut'        => 'fadeOut',
+            'animateIn'        => 'fadeIn',
+            'animateOut'        => 'fadeOut',
             'dot_thumbnail_size' => '138x97'
         ];
         $args = wp_parse_args($args, array(
