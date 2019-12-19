@@ -32,7 +32,7 @@ function overcome_single_tribe_event_booking_form(){
 	    		<input class="input" type="text" name="phone" placeholder="Phone number*" required="required" />
 	    	</div>
 	    	<div class="field">
-	    		<input class="input" type="textarea" name="message" placeholder="Massage" required="required" />
+	    		<textarea class="input" type="textarea" name="message" placeholder="Massage"></textarea>
 	    	</div>
 	    </div>
 	</div>
