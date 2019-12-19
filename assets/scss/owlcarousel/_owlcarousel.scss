@@ -75,3 +75,19 @@
 		}
 	}
 }
+
+.ef5-owl-dots{
+	// Thumbanail 
+	&.thumbnail{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: -5px;
+		.ef5-owl-dot{
+			flex: 0 0 auto;
+		    width: auto;
+		    max-width: 100%;
+		    padding: 5px;
+		}
+	}
+}
