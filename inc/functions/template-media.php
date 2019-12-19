@@ -107,7 +107,7 @@ if(!function_exists('overcome_post_gallery')){
                     wp_enqueue_style( 'magnific-popup' );
                 }
             ?>
-                <div class="ef5-gallery-wrap relative">
+                <div class="ef5-gallery-wrap ef5-single-gallery-wrap relative">
                     <div id="gal-<?php echo get_the_ID();?>" class="<?php echo trim(implode(' ', $gallery_classes));?>">
                         <?php 
                         if($light_box === '1'){
