@@ -46,8 +46,8 @@ $event_id = get_the_ID();
 							<li class="tribe-events-nav-next"><?php tribe_the_next_event_link( esc_html__('Next Event').'<span></span>' ) ?></li>
 						</ul>
 					</nav>
-					<div class="xxx">12345<?php 
-						if ( get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option( 'showComments', false ) ) { //comments_template();
+					<div class="ef5-single-event-cmt"><?php 
+						if ( get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option( 'showComments', false ) ) {comments_template();
 						}
 					?></div>
 				</div>
