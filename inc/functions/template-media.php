@@ -70,7 +70,7 @@ if(!function_exists('overcome_post_gallery')){
             'default_thumb'  => apply_filters('overcome_default_post_thumbnail', false),
             'light_box'      => overcome_get_post_format_value('post-gallery-lightbox', '1'),
             'source'         => 'post-gallery-images',
-            'owl'            => [] 
+            'owl'            => wp_parse_args($owl,[]) 
         ));
         if('0' === $args['show_media']) return;
         // Get gallery from option
@@ -102,7 +102,7 @@ if(!function_exists('overcome_post_gallery')){
                         array(
                             'rtl'                => $rtl
                         ),
-                        wp_parse_args($args['owl'],$owl)
+                        $args['owl']
                     );
                     wp_localize_script('owl-carousel', 'ef5systems_owl', $ef5systems_owl);
                 } else {
