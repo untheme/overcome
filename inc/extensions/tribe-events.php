@@ -50,17 +50,17 @@ function overcome_single_tribe_event_sponsor(){
 	<div class="ef5-tribe-single-meta-block ef5-bg-f5f5f5 ef5-rounded-10 pt-20 pr-30 pl-30 pb-30 mb-65 clearfix">
 	    <div class="ef5-heading text-22 font-style-500 mb-20"><?php esc_html_e('Event Sponsor','overcome'); ?></div>
 	    <div class="ef5-tribe-single-sponsor-list">
-	    	<div class="row align-items-center grid-gutters-30">
-	    		<div class="col-6">
+	    	<div class="row align-items-center justify-content-center grid-gutters-30">
+	    		<div class="col-auto">
 	    			<img src="<?php echo get_template_directory_uri().'/assets/images/tribe-events/event-sponsor-1.png';?>" alt="sponsor"/>
 	    		</div>
-	    		<div class="col-6">
+	    		<div class="col-auto">
 	    			<img src="<?php echo get_template_directory_uri().'/assets/images/tribe-events/event-sponsor-2.png';?>" alt="sponsor"/>
 	    		</div>
-	    		<div class="col-6">
+	    		<div class="col-auto">
 	    			<img src="<?php echo get_template_directory_uri().'/assets/images/tribe-events/event-sponsor-3.png';?>" alt="sponsor"/>
 	    		</div>
-	    		<div class="col-6">
+	    		<div class="col-auto">
 	    			<img src="<?php echo get_template_directory_uri().'/assets/images/tribe-events/event-sponsor-4.png';?>" alt="sponsor"/>
 	    		</div>
 	    	</div>
