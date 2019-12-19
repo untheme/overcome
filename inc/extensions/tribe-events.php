@@ -23,8 +23,6 @@ function overcome_single_event_gallery(){
 		'show_media'     => '1',
         'thumbnail_size' => 'large',
         'show_author'    => '0',
-        'light_box'      => '0',
-        'source'         => 'post-gallery-images' 
 	]);
 }
 
