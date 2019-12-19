@@ -24,7 +24,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="ef5-comments" class="<?php echo comments_open() ? 'comments-area' : 'comments-area comments-closed'; ?> clearfix">
+<div id="ef5-comments" class="<?php echo comments_open() ? 'comments-areaxxx' : 'comments-areaxxx comments-closed'; ?> clearfix">
 	<?php if ( have_comments() ) : ?>
 		<div class="commentlist-wrap">
 			<div class="comments-title h3"><?php
