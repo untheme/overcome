@@ -9,10 +9,45 @@ if(function_exists('tribe')){
     add_action( 'init', 'tribe_remove_calendar_export_links' );
 }
 
-
+// Single event booking form
+add_action('tribe_events_single_meta_after', 'overcome_single_tribe_event_booking_form', 10, 1);
+function overcome_single_tribe_event_booking_form(){
+	?>
+	<div class="ef5-tribe-single-meta-block clearfix">
+	    <div class="ef5-heading text-22 font-style-500 mb-40"><?php esc_html_e('Booking Online','overcome'); ?>
+	    	<div class="small-heading"><?php esc_html_e('will be closed until','overcome'); ?></div>
+	    </div>
+	    <div class="ef5-tribe-single-book-form">
+	    	<div class="field">
+	    		<input type="text" name="name" placeholder="Name*" required="required" />
+	    	</div>
+	    	<div class="field">
+	    		<input type="email" name="mail" placeholder="Email*" required="required" />
+	    	</div>
+	    	<div class="field">
+	    		<input type="text" name="phone" placeholder="Phone number*" required="required" />
+	    	</div>
+	    	<div class="field">
+	    		<input type="textarea" name="message" placeholder="Massage" required="required" />
+	    	</div>
+	    </div>
+	</div>
+	<?php
+}
+add_action('tribe_events_single_meta_after', 'overcome_single_tribe_event_sponsor', 10, 2);
+function overcome_single_tribe_event_sponsor(){
+	?>
+	<div class="ef5-tribe-single-meta-block clearfix">
+	    <div class="ef5-heading text-22 font-style-500 mb-40"><?php esc_html_e('Event Sponsor','overcome'); ?></div>
+	    <div class="ef5-tribe-single-book-form">
+	    	xxx
+	    </div>
+	</div>
+	<?php
+}
 
 // Single Event Upcoming
-add_action('tribe_events_single_meta_after', 'overcome_single_tribe_event_upcoming', 10, 1);
+add_action('tribe_events_single_meta_after', 'overcome_single_tribe_event_upcoming', 10, 3);
 function overcome_single_tribe_event_upcoming(){
 	$r = new WP_Query( array(
         'post_type'           => 'tribe_events',
@@ -79,7 +114,7 @@ function overcome_single_tribe_event_upcoming(){
     wp_reset_postdata();
 }
 // Single Events Tags
-add_action('tribe_events_single_meta_after','overcome_single_tribe_event_tags', 10, 2);
+add_action('tribe_events_single_meta_after','overcome_single_tribe_event_tags', 10, 4);
 function overcome_single_tribe_event_tags(){
 	?>
 	<div class="ef5-tribe-single-meta-block clearfix">
