@@ -179,6 +179,7 @@ if ( ! function_exists( 'overcome_comment_form' ) ) :
 		if ( true === $order || strtolower( $order ) === strtolower( get_option( 'comment_order', 'asc' ) ) ) {
 			comment_form(
 				array(
+					'id_form'		=> 'ef5-respond',
 					'title_reply'	=> esc_html__('Write a Comment', 'overcome'),
 					'label_submit'  => esc_html__( 'Post Your Comment','overcome' ),
 					'class_submit'  => 'btn btn-pri',
