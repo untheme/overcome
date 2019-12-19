@@ -83,12 +83,12 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		margin: -5px;
-		@include transition();
 		.ef5-owl-dot{
 			flex: 0 0 auto;
 		    width: auto;
 		    max-width: 100%;
 		    padding: 5px;
+		    @include transition();
 		    &.active{
 		    	width: 0;
 		    	padding: 0;
