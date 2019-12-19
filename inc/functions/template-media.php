@@ -59,7 +59,7 @@ if(!function_exists('overcome_post_gallery')){
                 'autoplayTimeout'    => 5000,
                 'nav'                => true,
                 'navClass'           => ['ef5-owl-nav-button ef5-owl-prev','ef5-owl-nav-button ef5-owl-next'],
-                'navText'            => '<span class="ef5-owl-nav-icon prev" data-title="'.esc_attr__('Previous','overcome').'"></span>', '<span class="ef5-owl-nav-icon next" data-title="'.esc_attr__('Next','overcome').'"></span>',
+                'navText'            => ['<span class="ef5-owl-nav-icon prev" data-title="'.esc_attr__('Previous','overcome').'"></span>', '<span class="ef5-owl-nav-icon next" data-title="'.esc_attr__('Next','overcome').'"></span>'],
                 'dots'               => false,
                 'dotClass'           => 'ef5-owl-dot',
                 'autoHeight'         => true,
