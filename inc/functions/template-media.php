@@ -66,6 +66,7 @@ if(!function_exists('overcome_post_gallery')){
                 'autoHeight'         => true,
                 'responsiveClass'    => true,
                 'slideBy'            => 'page',
+                'dot_thumbnail_size' => '138x97'
             ] 
         ));
         if('0' === $args['show_media']) return;
@@ -129,12 +130,25 @@ if(!function_exists('overcome_post_gallery')){
                         endforeach; 
                     } else {
                         foreach ($gallery_list as $img_id): 
+                        $dot_thumb = '<img 
+                            src='.overcome_get_image_url_by_size([
+                                'id'            => $img_id, 
+                                'size'          => $args['owl']['dot_thumbnail_size'], 
+                                'default_thumb' => true
+                                ])).'
+                            alt = "'.get_the_title().'"
+                        />';
+                            
                     ?>
-                        <img src="<?php echo esc_url(overcome_get_image_url_by_size([
-                            'id'            => $img_id, 
-                            'size'          => $args['thumbnail_size'], 
-                            'default_thumb' => true
-                            ]));?>" alt="<?php echo esc_attr(get_post_meta( $img_id, '_wp_attachment_image_alt', true )) ?>">
+                        <div class="" data-dot="<?php echo overcome_html($dot_thumb);?>">
+                            <img src="<?php echo esc_url(overcome_get_image_url_by_size([
+                                'id'            => $img_id, 
+                                'size'          => $args['thumbnail_size'], 
+                                'default_thumb' => true
+                                ]));?>" 
+                                alt="<?php echo esc_attr(get_post_meta( $img_id, '_wp_attachment_image_alt', true )) ?>" 
+                            />
+                        </div>
                     <?php
                         endforeach; 
                     }
