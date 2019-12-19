@@ -47,7 +47,7 @@ $event_id = get_the_ID();
 						</ul>
 					</nav>
 					<div class="ef5-single-event-cmt">cai loz j the<?php 
-						var_dump(ribe__Events__Main::POSTTYPE);
+						var_dump(Tribe__Events__Main::POSTTYPE);
 						var_dump(tribe_get_option( 'showComments', false ));
 						if ( get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option( 'showComments', false ) ) { 
 							comments_template();
