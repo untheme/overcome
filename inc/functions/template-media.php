@@ -131,16 +131,16 @@ if(!function_exists('overcome_post_gallery')){
                     } else {
                         foreach ($gallery_list as $img_id): 
                         $dot_thumb = '<img 
-                            src='.overcome_get_image_url_by_size([
+                            src="'.overcome_get_image_url_by_size([
                                 'id'            => $img_id, 
                                 'size'          => $args['owl']['dot_thumbnail_size'], 
                                 'default_thumb' => true
-                                ]).'
-                            alt = '.get_the_title().'
+                                ]).'""
+                            alt = "'.get_the_title().'"
                         />';
                             
                     ?>
-                        <div class="gallery-item" data-dot="<?php echo overcome_html($dot_thumb);?>">
+                        <div class="gallery-item" data-dot='<?php echo overcome_html($dot_thumb);?>'>
                             <img src="<?php echo esc_url(overcome_get_image_url_by_size([
                                 'id'            => $img_id, 
                                 'size'          => $args['thumbnail_size'], 
