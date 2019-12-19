@@ -89,10 +89,10 @@
 		    max-width: 100%;
 		    padding: 5px;
 		    @include transition();
+		    @include opacity(0.8);
+		    &:hover,
 		    &.active{
-		    	width: 0;
-		    	padding:5px 0;
-		    	visibility: hidden;
+		    	@include opacity(1);
 		    }
 		}
 	}
