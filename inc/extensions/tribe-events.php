@@ -12,6 +12,7 @@ if(function_exists('tribe')){
 // Single event booking form
 add_action('tribe_events_single_meta_after', 'overcome_single_tribe_event_booking_form', 10, 1);
 function overcome_single_tribe_event_booking_form(){
+	$time_format = get_option( 'time_format', Tribe__Date_Utils::TIMEFORMAT );
 	$end_datetime = tribe_get_end_date();
 	$end_date = tribe_get_display_end_date( null, false );
 	$end_time = tribe_get_end_date( null, false, $time_format );
