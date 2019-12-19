@@ -91,6 +91,7 @@
 		    padding: 5px;
 		    &.active{
 		    	width: 0;
+		    	padding: 0;
 		    	visibility: hidden;
 		    }
 		}
