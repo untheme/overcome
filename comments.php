@@ -22,9 +22,9 @@
 if ( post_password_required() ) {
 	return;
 }
-die('fuck');
+//die('fuck');
 ?>
-
+fsdafdfsdfsfdfsa
 <div id="comments" class="<?php echo comments_open() ? 'comments-area' : 'comments-area comments-closed'; ?> clearfix">
 	<?php if ( have_comments() ) : ?>
 		<div class="commentlist-wrap">
