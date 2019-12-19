@@ -1,0 +1,23 @@
+.ef5-owl-nav {
+	&.vertical .ef5-owl-nav-button{
+		position: absolute;
+		top: 50%;
+		@include transform(translateY(-50%));
+		&.inside{
+			.ef5-owl-prev{
+				left: 30px;
+			}
+			.ef5-owl-nex{
+				right: 30px;
+			}
+		}
+		&.outside{
+			.ef5-owl-prev{
+				left: -30px;
+			}
+			.ef5-owl-nex{
+				right: -30px;
+			}
+		}
+	} 
+}
