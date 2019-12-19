@@ -19,7 +19,7 @@ function overcome_single_tribe_event_booking_form(){
 	?>
 	<div class="ef5-tribe-single-meta-block ef5-bg-f5f5f5 ef5-rounded-10 p-30 mb-30 clearfix">
 	    <div class="ef5-heading text-22 font-style-500 mb-40"><?php esc_html_e('Booking Online','overcome'); ?>
-	    	<div class="ef5-heading text-15"><?php printf('%s %s - %s', esc_html_e('will be closed until','overcome'), $end_date, $end_time); ?></div>
+	    	<div class="ef5-heading text-15 font-style-400"><?php printf('%s %s - %s', esc_html_e('will be closed until','overcome'), $end_date, $end_time); ?></div>
 	    </div>
 	    <div class="ef5-tribe-single-book-form">
 	    	<div class="field">
