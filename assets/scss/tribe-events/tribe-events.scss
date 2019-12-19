@@ -233,64 +233,67 @@
 #tribe-events-footer{
 	.tribe-events-nav-pagination{
 		margin-top: 68px;
-		.tribe-events-sub-nav{
-			display: flex;
-			flex-wrap: wrap;
-			margin: 0 -50px;
-			justify-content: center;
-			li{
-				padding: 0 50px;
-				float: none;
-				margin: 0;
-				text-align: start;
-				a{
-					font-size: 14px;
-					font-weight: 600;
-					text-transform: uppercase;
-					color: #373737;
-					letter-spacing: 0;
-					float: none;
-					span{
-						display: none;
-					}
-				}
-				&.tribe-events-nav-previous,
-				&.tribe-events-nav-next{
-					a:before,
-					a:after{
-						font-family: 'Flaticon';
-						display: inline-block;
-					}
-				}
-				&.tribe-events-nav-previous{
-					a:before{
-						content: "\f10e";
-						padding-right: 20px;
-						[dir="rtl"] &{
-							content: "\f111";
-							padding-right: 0;
-							padding-left: 20px;
-						}
-					}
-				}
-				&.tribe-events-nav-next{
-					a:after{
-						content: "\f111";
-						padding-left: 20px;
-						[dir="rtl"] &{
-							content: "\f10e";
-							padding-left: 0;
-							padding-right: 20px;
-						}
-					}
-				}
-			}
-		}
 		.ef5-tribe-events-nav-export{
 			.tribe-events-button{
 				padding: 0;
 				background: none;
 				margin: 0;
+			}
+		}
+	}
+}
+.tribe-events-sub-nav{
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -50px;
+	justify-content: center;
+	li{
+		padding: 0 50px;
+		float: none;
+		margin: 0;
+		text-align: start;
+		&:empty{
+			display: none;
+		}
+		a{
+			font-size: 14px;
+			font-weight: 600;
+			text-transform: uppercase;
+			color: #373737;
+			letter-spacing: 0;
+			float: none;
+			span{
+				display: none;
+			}
+		}
+		&.tribe-events-nav-previous,
+		&.tribe-events-nav-next{
+			a:before,
+			a:after{
+				font-family: 'Flaticon';
+				display: inline-block;
+			}
+		}
+		&.tribe-events-nav-previous{
+			a:before{
+				content: "\f10e";
+				padding-right: 20px;
+				[dir="rtl"] &{
+					content: "\f111";
+					padding-right: 0;
+					padding-left: 20px;
+				}
+			}
+		}
+		&.tribe-events-nav-next{
+			a:after{
+				content: "\f111";
+				padding-left: 20px;
+				[dir="rtl"] &{
+					content: "\f10e";
+					padding-left: 0;
+					padding-right: 20px;
+				}
 			}
 		}
 	}
