@@ -107,7 +107,7 @@ if(!function_exists('overcome_post_gallery')){
                     wp_enqueue_style( 'magnific-popup' );
                 }
             ?>
-                <div class="ef5-owl-carousel-wrap relative">
+                <div class="ef5-gallery-wrap relative">
                     <div id="gal-<?php echo get_the_ID();?>" class="<?php echo trim(implode(' ', $gallery_classes));?>">
                         <?php 
                         if($light_box === '1'){
@@ -155,13 +155,13 @@ if(!function_exists('overcome_post_gallery')){
                         }
                         ?>
                     </div>
+                    <?php if($light_box === '0') {
+                        overcome_loading_animation();
+                        echo '<div class="ef5-owl-nav vertical inside"></div>
+                        <div class="ef5-owl-dots"></div>';
+                    } ?>
                 </div>
             <?php 
-                if($light_box === '0') {
-                    overcome_loading_animation();
-                    echo '<div class="ef5-owl-nav vertical inside"></div>
-                    <div class="ef5-owl-dots"></div>';
-                }
             } elseif(has_post_thumbnail()) {
                 overcome_post_thumbnail($args);
             }
