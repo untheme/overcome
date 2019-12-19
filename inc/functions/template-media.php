@@ -138,7 +138,7 @@ if(!function_exists('overcome_post_gallery')){
                                     ]).'"" alt = "'.get_the_title().'" />';
                                 
                         ?>
-                            <div class="gallery-item" data-dot='<?php echo overcome_html($dot_thumb);?>'>
+                            <div class="ef5-gallery-item" data-dot='<?php echo overcome_html($dot_thumb);?>'>
                                 <img src="<?php echo esc_url(overcome_get_image_url_by_size([
                                     'id'            => $img_id, 
                                     'size'          => $args['thumbnail_size'], 
