@@ -175,7 +175,7 @@ function overcome_tribe_event_meta_box($metabox){
             'display_name' => esc_html__('OverCome Tribe Event Settings', 'overcome'),
         ), array(
             'context'  => 'advanced',
-            'priority' => 'default'
+            'priority' => 'high'
         ));
     }
 
