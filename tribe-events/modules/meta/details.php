@@ -156,7 +156,7 @@ $website = tribe_get_event_website_link();
 			}
 			?>
 			<div class="row">
-				<div class="col-auto"><?php esc_html_e('Organized by: ','overcome'); ?></div>
+				<div class="col-auto ef5-heading"><?php esc_html_e('Organized by: ','overcome'); ?></div>
 				<div class="col text-end"><?php echo tribe_get_organizer_link( $organizer ) ?></div>
 			</div>
 			<?php
@@ -170,10 +170,27 @@ $website = tribe_get_event_website_link();
 			<div class="ef5-tribe-single-meta-block tribe-events-meta-group tribe-events-meta-group-venue">
 					<?php do_action( 'tribe_events_single_meta_venue_section_start' ) ?>
 					<div class="row">
-						<div class="col-auto"><?php esc_html_e( 'Venue:', 'overcome' ) ?></div>
+						<div class="col-auto ef5-heading"><?php esc_html_e( 'Venue:', 'overcome' ) ?></div>
 						<div class="col text-end"><?php 
 							echo tribe_get_venue();
-							 ?>
+							if ( tribe_address_exists() ) : ?>
+								<address class="tribe-events-address"><?php 
+									echo tribe_get_full_address(); 
+									if ( tribe_show_google_map_link() ) echo tribe_get_map_link_html(); 
+								?></address>
+							<?php endif;
+							if ( ! empty( $venue_phone ) ): ?>
+							<div class="row">
+								<div class="col-auto ef5-heading"><?php esc_html_e( 'Phone:', 'the-events-calendar' ) ?></div>
+								<div class="col text-end"><?php echo $venue_phone ?></div>
+							</div>
+							<?php endif;
+							if ( ! empty( $venue_website ) ): ?>
+							<div class="row">
+								<div class="col-auto ef5-heading"><?php esc_html_e( 'Website:', 'the-events-calendar' ) ?></div>
+								<div class="col text-end"><?php echo $venue_website ?></div>
+							</div>
+							<?php endif; ?>
 						</div>
 					</div>
 					<?php do_action( 'tribe_events_single_meta_venue_section_end' ) ?>
@@ -183,7 +200,7 @@ $website = tribe_get_event_website_link();
 			if ( ! empty( $organizer_phone ) ) {
 				?>
 				<div class="row">
-					<div class="col-auto"><?php esc_html_e( 'Phone:', 'overcome' ) ?></div>
+					<div class="col-auto ef5-heading"><?php esc_html_e( 'Phone:', 'overcome' ) ?></div>
 					<div class="col text-end"><?php echo esc_html( $organizer_phone ); ?></div>
 				</div>
 				<?php
@@ -192,7 +209,7 @@ $website = tribe_get_event_website_link();
 			if ( ! empty( $organizer_email ) ) {
 				?>
 				<div class="row">
-					<div class="col-auto"><?php esc_html_e( 'Email:', 'overcome' ) ?></div>
+					<div class="col-auto ef5-heading"><?php esc_html_e( 'Email:', 'overcome' ) ?></div>
 					<div class="col text-end"><?php echo esc_html( $organizer_email ); ?></div>
 				</div>
 				<?php
@@ -201,7 +218,7 @@ $website = tribe_get_event_website_link();
 			if ( ! empty( $organizer_website ) ) {
 				?>
 				<div class="row">
-					<div class="col-auto"><?php esc_html_e( 'Website:', 'overcome' ) ?></div>
+					<div class="col-auto ef5-heading"><?php esc_html_e( 'Website:', 'overcome' ) ?></div>
 					<div class="col text-end"><?php echo esc_html( $organizer_website ); ?></div>
 				</div>
 				<?php
