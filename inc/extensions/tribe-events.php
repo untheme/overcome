@@ -21,7 +21,7 @@ add_action('tribe_events_single_event_after_the_content', 'overcome_single_event
 function overcome_single_event_gallery(){
 	overcome_post_gallery([
 		'show_media'     => '1',
-        'thumbnail_size' => 'large',
+        'thumbnail_size' => '730x381',
         'show_author'    => '0',
 	]);
 }
