@@ -12,7 +12,8 @@ if(function_exists('tribe')){
 add_action('tribe_events_single_event_after_the_content', 'overcome_single_event_share');
 function overcome_single_event_share(){
 	overcome_post_share([
-		'show_share' => '1'
+		'show_share' => '1',
+		'title'		 => esc_html__('Share:','overcome')
 	]);
 }
 // Single event booking form
