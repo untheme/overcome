@@ -47,7 +47,7 @@ $event_id = get_the_ID();
 						</ul>
 					</nav>
 					<div class="xxx">123<?php 
-						if ( get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option( 'showComments', false ) ) {comments_template();
+						if ( get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option( 'showComments', false ) ) { //comments_template();
 						}
 					?></div>
 				</div>
