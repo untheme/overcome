@@ -173,24 +173,7 @@ $website = tribe_get_event_website_link();
 						<div class="col-auto"><?php esc_html_e( 'Venue:', 'overcome' ) ?></div>
 						<div class="col text-end"><?php 
 							echo tribe_get_venue();
-							if ( tribe_address_exists() ) : ?>
-								<address class="tribe-events-address"><?php 
-									echo tribe_get_full_address(); 
-									if ( tribe_show_google_map_link() ) echo tribe_get_map_link_html(); 
-								?></address>
-							<?php endif;
-							if ( ! empty( $venue_phone ) ): ?>
-							<div class="row">
-								<div class="col-auto"><?php esc_html_e( 'Phone:', 'the-events-calendar' ) ?></div>
-								<div class="col text-end"><?php echo $venue_phone ?></div>
-							</div>
-							<?php endif;
-							if ( ! empty( $venue_website ) ): ?>
-							<div class="row">
-								<div class="col-auto"><?php esc_html_e( 'Website:', 'the-events-calendar' ) ?></div>
-								<div class="col text-end"><?php echo $venue_website ?></div>
-							</div>
-							<?php endif; ?>
+							 ?>
 						</div>
 					</div>
 					<?php do_action( 'tribe_events_single_meta_venue_section_end' ) ?>
