@@ -9,7 +9,12 @@ if(function_exists('tribe')){
     add_action( 'init', 'tribe_remove_calendar_export_links' );
 }
 // Single Event Share 
-add_action('tribe_events_single_event_after_the_content', 'overcome_post_share');
+add_action('tribe_events_single_event_after_the_content', 'overcome_single_event_share');
+function overcome_single_event_share(){
+	overcome_post_share([
+		'show_share' => '1'
+	]);
+}
 // Single event booking form
 add_action('tribe_events_single_meta_after', 'overcome_single_tribe_event_booking_form', 10, 1);
 function overcome_single_tribe_event_booking_form(){
