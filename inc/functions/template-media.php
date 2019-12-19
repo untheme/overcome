@@ -108,52 +108,56 @@ if(!function_exists('overcome_post_gallery')){
                 }
             ?>
                 <div class="ef5-gallery-wrap ef5-single-gallery-wrap relative">
-                    <div id="gal-<?php echo get_the_ID();?>" class="<?php echo trim(implode(' ', $gallery_classes));?>">
-                        <?php 
-                        if($light_box === '1'){
+                    <div class="ef5-gallery-wrap-inner relative">
+                        <div id="gal-<?php echo get_the_ID();?>" class="<?php echo trim(implode(' ', $gallery_classes));?>">
+                            <?php 
+                            if($light_box === '1'){
 
-                            $d = 0; 
-                            foreach ($gallery_list as $img_id): 
-                            $d++;
-                        ?>
-                            <a 
-                                class="light-box" 
-                                href="<?php echo esc_url(wp_get_attachment_image_url($img_id, 'full'));?>" 
-                                title="<?php echo esc_attr(get_post_meta( $img_id, '_wp_attachment_image_alt', true )) ?>" 
-                                data-effect="ef5-zoomIn"><?php if($light_box === '1' && $d === 1) { ?><img 
-                                    src="<?php echo esc_url(overcome_get_image_url_by_size([
+                                $d = 0; 
+                                foreach ($gallery_list as $img_id): 
+                                $d++;
+                            ?>
+                                <a 
+                                    class="light-box" 
+                                    href="<?php echo esc_url(wp_get_attachment_image_url($img_id, 'full'));?>" 
+                                    title="<?php echo esc_attr(get_post_meta( $img_id, '_wp_attachment_image_alt', true )) ?>" 
+                                    data-effect="ef5-zoomIn"><?php if($light_box === '1' && $d === 1) { ?><img 
+                                        src="<?php echo esc_url(overcome_get_image_url_by_size([
+                                            'id'            => $img_id, 
+                                            'size'          => $args['thumbnail_size'],
+                                            'default_thumb' => true
+                                        ]));?>"
+                                        alt="<?php echo esc_attr(get_post_meta( $img_id, '_wp_attachment_image_alt', true )) ?>" /><?php } ?></a>
+                            <?php
+                                endforeach; 
+                            } else {
+                                foreach ($gallery_list as $img_id): 
+                                $dot_thumb = '<img src="'.overcome_get_image_url_by_size([
                                         'id'            => $img_id, 
-                                        'size'          => $args['thumbnail_size'],
+                                        'size'          => $args['owl']['dot_thumbnail_size'], 
                                         'default_thumb' => true
-                                    ]));?>"
-                                    alt="<?php echo esc_attr(get_post_meta( $img_id, '_wp_attachment_image_alt', true )) ?>" /><?php } ?></a>
-                        <?php
-                            endforeach; 
-                        } else {
-                            foreach ($gallery_list as $img_id): 
-                            $dot_thumb = '<img src="'.overcome_get_image_url_by_size([
-                                    'id'            => $img_id, 
-                                    'size'          => $args['owl']['dot_thumbnail_size'], 
-                                    'default_thumb' => true
-                                    ]).'"" alt = "'.get_the_title().'" />';
-                                
-                        ?>
-                            <div class="ef5-gallery-item" data-dot='<?php echo overcome_html($dot_thumb);?>'>
-                                <img src="<?php echo esc_url(overcome_get_image_url_by_size([
-                                    'id'            => $img_id, 
-                                    'size'          => $args['thumbnail_size'], 
-                                    'default_thumb' => true
-                                    ]));?>" alt="<?php echo esc_attr(get_post_meta( $img_id, '_wp_attachment_image_alt', true )) ?>" />
-                            </div>
-                        <?php
-                            endforeach; 
-                        }
-                        ?>
+                                        ]).'"" alt = "'.get_the_title().'" />';
+                                    
+                            ?>
+                                <div class="ef5-gallery-item" data-dot='<?php echo overcome_html($dot_thumb);?>'>
+                                    <img src="<?php echo esc_url(overcome_get_image_url_by_size([
+                                        'id'            => $img_id, 
+                                        'size'          => $args['thumbnail_size'], 
+                                        'default_thumb' => true
+                                        ]));?>" alt="<?php echo esc_attr(get_post_meta( $img_id, '_wp_attachment_image_alt', true )) ?>" />
+                                </div>
+                            <?php
+                                endforeach; 
+                            }
+                            ?>
+                        </div>
+                        <?php if($light_box === '0') {
+                            overcome_loading_animation();
+                            echo '<div class="ef5-owl-nav vertical inside"></div>';
+                        } ?>
                     </div>
                     <?php if($light_box === '0') {
-                        overcome_loading_animation();
-                        echo '<div class="ef5-owl-nav vertical inside"></div>
-                        <div class="ef5-owl-dots"></div>';
+                        echo '<div class="ef5-owl-dots"></div>';
                     } ?>
                 </div>
             <?php 
