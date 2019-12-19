@@ -24,9 +24,9 @@ function overcome_single_event_gallery(){
 		<?php 
 		overcome_post_gallery([
 			'show_media'     => '1',
-	        'thumbnail_size' => '730x381',
-	        'show_author'    => '0',
-	        'owl'	=> []
+			'thumbnail_size' => '730x381',
+			'show_author'    => '0',
+			'owl'            => []
 		]);
 		?>
 	</div>
