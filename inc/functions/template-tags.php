@@ -420,6 +420,7 @@ if(!function_exists('overcome_post_share')){
         $defaults = array(
             'show_share'  => is_single() ? overcome_get_theme_opt( 'post_share_on', '0' ) : overcome_get_theme_opt( 'archive_share_on', '0' ),
             'class'       => '',
+            'row_class'       => '',
             'show_title'  => true,
             'title'       => esc_html__('Share this article','overcome'),
             'social_args' => [],
@@ -429,11 +430,13 @@ if(!function_exists('overcome_post_share')){
         $args = wp_parse_args($args, $defaults);
         extract($args);
         if($show_share !== '1') return;
-        $social_classes = trim(implode(' ', ['ef5-social', isset($social_args['class']) ? $social_args['class'] : '', isset($social_args['size']) ? 'size-'.$social_args['size'] : ''] ));
+        $social_classes = overcome_optimize_css_class(trim(implode(' ', ['ef5-social', isset($social_args['class']) ? $social_args['class'] : '', isset($social_args['size']) ? 'size-'.$social_args['size'] : ''] )));
         $classes   = array('ef5-shares');
         $classes[] = $class;
         $classes[] = overcome_is_loop() ? 'loop': 'single';        
         
+        $row_class = overcome_optimize_css_class(trim(implode(' ', ['row align-items-center', $args['row_class']])));
+
         $url   = get_the_permalink();
         $image = get_the_post_thumbnail_url($post->ID);
         $title = get_the_title();
@@ -456,7 +459,7 @@ if(!function_exists('overcome_post_share')){
         ?>
         <div class="<?php echo trim(implode(' ', $classes)); ?>">
             <?php if($show_title): ?>
-                <div class="row align-items-center">
+                <div class="<?php echo esc_attr($row_class);?>">
                     <div class="col-auto share-title">
                         <?php echo esc_html($args['title']); ?>
                     </div>

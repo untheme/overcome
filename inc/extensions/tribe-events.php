@@ -14,7 +14,7 @@ function overcome_single_event_share(){
 	overcome_post_share([
 		'show_share' => '1',
 		'title'		 => esc_html__('Share:','overcome'),
-		'class'		 => 'justify-content-end'
+		'row_class'  => 'justify-content-end'
 	]);
 }
 
