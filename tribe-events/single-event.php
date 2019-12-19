@@ -42,8 +42,8 @@ $event_id = get_the_ID();
 					<?php do_action( 'tribe_events_single_event_after_the_content' ) ?>
 					<nav class="ef5-single-tribe-events-nav-pagination" aria-label="<?php printf( esc_html__( '%s Navigation', 'overcome' ), $events_label_singular ); ?>">
 						<ul class="tribe-events-sub-nav">
-							<li class="tribe-events-nav-previous"><?php tribe_the_prev_event_link( '<span>&laquo;</span> %title%' ) ?></li>
-							<li class="tribe-events-nav-next"><?php tribe_the_next_event_link( '%title% <span>&raquo;</span>' ) ?></li>
+							<li class="tribe-events-nav-previous"><?php tribe_the_prev_event_link( '<span></span> %title%' ) ?></li>
+							<li class="tribe-events-nav-next"><?php tribe_the_next_event_link( '%title% <span></span>' ) ?></li>
 						</ul>
 					</nav>
 					<div class="xxx">123<?php 
