@@ -48,17 +48,19 @@ if(!function_exists('overcome_post_gallery')){
             'thumbnail_size' => 'large',
             'show_author'    => is_singular() ? overcome_get_opts('archive_author_on','1') : overcome_get_opts('post_author_on','1'),
             'echo'           => true,
-            'default_thumb'  => apply_filters('overcome_default_post_thumbnail', false)
+            'default_thumb'  => apply_filters('overcome_default_post_thumbnail', false),
+            'light_box'      => overcome_get_post_format_value('post-gallery-lightbox', '1'),
+            'source'         => 'post-gallery-images'   
         ));
         if('0' === $args['show_media']) return;
         // Get gallery from option
-        $gallery_list = explode(',', overcome_get_post_format_value('post-gallery-images', ''));
+        $gallery_list = explode(',', overcome_get_post_format_value($args['source'], ''));
         // Get first gallery in content 
         $gallery_in_content = get_post_gallery( get_the_ID(), false );
         if($gallery_in_content && empty($gallery_list[0]) && !is_singular()){
             $gallery_list = isset($gallery_in_content['ids']) ? explode(',', $gallery_in_content['ids']) : [];
         }
-        $light_box = overcome_get_post_format_value('post-gallery-lightbox', '1');
+        $light_box = $args['light_box'];  //overcome_get_post_format_value('post-gallery-lightbox', '1');
         global $post;
         if('1' === $light_box ) 
             $gallery_classes = ['ef5-gallery-lightbox'];

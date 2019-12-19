@@ -16,6 +16,18 @@ function overcome_single_event_share(){
 		'title'		 => esc_html__('Share:','overcome')
 	]);
 }
+
+add_action('tribe_events_single_event_after_the_content', 'overcome_single_event_gallery');
+function overcome_single_event_gallery(){
+	overcome_post_gallery([
+		'show_media'     => '1',
+        'thumbnail_size' => 'large',
+        'show_author'    => '0',
+        'light_box'      => '0',
+        'source'         => 'post-gallery-images' 
+	]);
+}
+
 // Single event booking form
 add_action('tribe_events_single_meta_after', 'overcome_single_tribe_event_booking_form', 10, 1);
 function overcome_single_tribe_event_booking_form(){
@@ -152,4 +164,43 @@ function overcome_single_tribe_event_tags(){
 		<div class="tagcloud"><?php echo get_the_term_list( get_the_ID(), 'post_tag');?></div>
 	</div>
 	<?php
+}
+
+/**
+ * Add meta box
+*/
+add_action('ef5_post_metabox_register', 'overcome_tribe_event_meta_box');
+function overcome_tribe_event_meta_box(){
+	if (!$metabox->isset_args('tribe_events')) {
+        $metabox->set_args('tribe_events', array(
+            'opt_name'     => overcome_get_page_opt_name(),
+            'display_name' => esc_html__('OverCome Tribe Event Settings', 'overcome'),
+        ), array(
+            'context'  => 'advanced',
+            'priority' => 'default'
+        ));
+    }
+
+    $metabox->add_section('tribe_events', array(
+        'title'  => esc_html__('Gallery', 'overcome'),
+        'desc'   => esc_html__('Add gallery for this event', 'overcome'),
+        'icon'   => 'el-icon-picture',
+        'fields' => array_merge(
+            array(
+                array(
+	                'id'       => 'post-gallery-lightbox',
+	                'type'     => 'switch',
+	                'title'    => esc_html__('Lightbox?', 'overcome'),
+	                'subtitle' => esc_html__('Enable lightbox for gallery images.', 'overcome'),
+	                'default'  => true
+	            ),
+	            array(
+	                'id'          => 'post-gallery-images',
+	                'type'        => 'gallery',
+	                'title'       => esc_html__('Gallery Images ', 'overcome'),
+	                'subtitle'    => esc_html__('Upload images or add from media library.', 'overcome')
+	            )
+            )
+        )
+    ));
 }
