@@ -13,7 +13,7 @@ if(function_exists('tribe')){
 add_action('tribe_events_single_meta_after', 'overcome_single_tribe_event_booking_form', 10, 1);
 function overcome_single_tribe_event_booking_form(){
 	?>
-	<div class="ef5-tribe-single-meta-block clearfix">
+	<div class="ef5-tribe-single-meta-block ef5-bg-f5f5f5 ef5-rounded-10 p-30 mb-30 clearfix">
 	    <div class="ef5-heading text-22 font-style-500 mb-40"><?php esc_html_e('Booking Online','overcome'); ?>
 	    	<div class="small-heading"><?php esc_html_e('will be closed until','overcome'); ?></div>
 	    </div>
@@ -37,7 +37,7 @@ function overcome_single_tribe_event_booking_form(){
 add_action('tribe_events_single_meta_after', 'overcome_single_tribe_event_sponsor', 10, 2);
 function overcome_single_tribe_event_sponsor(){
 	?>
-	<div class="ef5-tribe-single-meta-block clearfix">
+	<div class="ef5-tribe-single-meta-block ef5-bg-f5f5f5 ef5-rounded-10 p-30 clearfix">
 	    <div class="ef5-heading text-22 font-style-500 mb-40"><?php esc_html_e('Event Sponsor','overcome'); ?></div>
 	    <div class="ef5-tribe-single-book-form">
 	    	xxx
