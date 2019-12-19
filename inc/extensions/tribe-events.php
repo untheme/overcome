@@ -18,21 +18,21 @@ function overcome_single_tribe_event_booking_form(){
 	$end_time = tribe_get_end_date( null, false, $time_format );
 	?>
 	<div class="ef5-tribe-single-meta-block ef5-bg-f5f5f5 ef5-rounded-10 p-30 mb-30 clearfix">
-	    <div class="ef5-heading text-22 font-style-500 mb-40"><?php esc_html_e('Booking Online','overcome'); ?>
+	    <div class="ef5-heading text-22 font-style-500 mb-25"><?php esc_html_e('Booking Online','overcome'); ?>
 	    	<div class="ef5-heading text-15 font-style-400"><?php printf('%s %s - %s', esc_html_e('will be closed until','overcome'), $end_date, $end_time); ?></div>
 	    </div>
-	    <div class="ef5-tribe-single-book-form">
+	    <div class="ef5-tribe-single-book-form pt-30">
 	    	<div class="field">
-	    		<input type="text" name="name" placeholder="Name*" required="required" />
+	    		<input class="input" type="text" name="name" placeholder="Name*" required="required" />
 	    	</div>
 	    	<div class="field">
-	    		<input type="email" name="mail" placeholder="Email*" required="required" />
+	    		<input class="input" type="email" name="mail" placeholder="Email*" required="required" />
 	    	</div>
 	    	<div class="field">
-	    		<input type="text" name="phone" placeholder="Phone number*" required="required" />
+	    		<input class="input" type="text" name="phone" placeholder="Phone number*" required="required" />
 	    	</div>
 	    	<div class="field">
-	    		<input type="textarea" name="message" placeholder="Massage" required="required" />
+	    		<input class="input" type="textarea" name="message" placeholder="Massage" required="required" />
 	    	</div>
 	    </div>
 	</div>
