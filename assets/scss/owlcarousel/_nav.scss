@@ -9,10 +9,10 @@
 			background-position: center;
 			background-repeat: no-repeat;
 			background-color: transparent;
-			.ef5-owl-prev{
+			&.ef5-owl-prev{
 				background-image: url(../images/arrow-l.png);
 			}
-			.ef5-owl-next{
+			&.ef5-owl-next{
 				background-image: url(../images/arrow-r.png);
 			}
 		}
