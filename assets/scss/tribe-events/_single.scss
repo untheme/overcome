@@ -42,13 +42,16 @@
 		text-transform: uppercase;
 		color: #777;
 		border-top: 1px solid #dedede;
-		padding-top: 15px;
+		padding-top: 17px;
 		a{
 			color: #777;
 			&:hover{
 				color: var(--accent-color);
 			}
 		}
+	}
+	.ef5-event-galleries{
+		margin-top: 45px;
 	}
 }
 .ef5-tribe-events-meta-group-organizer{

@@ -21,7 +21,7 @@ function overcome_single_event_share(){
 add_action('tribe_events_single_event_after_the_content', 'overcome_single_event_gallery');
 function overcome_single_event_gallery(){
 ?>
-	<div class="ef5-bg-f5f5f5 ef5-rounded-10 p-20">
+	<div class="ef5-event-galleries ef5-bg-f5f5f5 ef5-rounded-10 p-20">
 		<?php 
 		overcome_post_gallery([
 			'show_media'     => '1',
