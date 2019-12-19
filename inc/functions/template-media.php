@@ -80,7 +80,7 @@ if(!function_exists('overcome_post_gallery')){
                     $icon_next = is_rtl() ? 'left' : 'right';
                     $nav_icon = ['<span class="ef5-owl-nav-icon prev" data-title="'.esc_attr__('Previous','overcome').'"></span>', '<span class="ef5-owl-nav-icon next" data-title="'.esc_attr__('Next','overcome').'"></span>'];
 
-                    $overcome_owl[$gal_id] = array(
+                    $ef5systems_owl[$gal_id] = array(
                         'items'              => 1,
                         'rtl'                => $rtl,
                         'margin'             => 0,
@@ -97,7 +97,7 @@ if(!function_exists('overcome_post_gallery')){
                         'slideBy'            => 'page',
                         
                     );
-                    wp_localize_script('owl-carousel', 'overcome_owl', $overcome_owl);
+                    wp_localize_script('owl-carousel', 'ef5systems_owl', $ef5systems_owl);
                 } else {
                     wp_enqueue_script( 'magnific-popup' );
                     wp_enqueue_style( 'magnific-popup' );
