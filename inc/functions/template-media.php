@@ -136,7 +136,7 @@ if(!function_exists('overcome_post_gallery')){
                                 'size'          => $args['owl']['dot_thumbnail_size'], 
                                 'default_thumb' => true
                                 ]).'
-                            alt = "'.get_the_title().'"
+                            alt = '.get_the_title().'
                         />';
                             
                     ?>
