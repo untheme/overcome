@@ -42,6 +42,25 @@ if(!function_exists('overcome_post_thumbnail')){
 */
 if(!function_exists('overcome_post_gallery')){
     function overcome_post_gallery($args=[]){
+        $owl = [
+            'items'              => 1,
+            'margin'             => 0,
+            'loop'               => false,
+            'autoplay'           => true,
+            'autoplayTimeout'    => 5000,
+            'nav'                => true,
+            'navClass'           => ['ef5-owl-nav-button ef5-owl-prev','ef5-owl-nav-button ef5-owl-next'],
+            'navText'            => ['<span class="ef5-owl-nav-icon prev" data-title="'.esc_attr__('Previous','overcome').'"></span>', '<span class="ef5-owl-nav-icon next" data-title="'.esc_attr__('Next','overcome').'"></span>'],
+            'dots'               => true,
+            'dotsData'           => true,
+            'dotClass'           => 'ef5-owl-dot',
+            'autoHeight'         => true,
+            'responsiveClass'    => true,
+            'slideBy'            => 'page',
+            'animationIn'        => 'fadeIn',
+            'animationOut'        => 'fadeOut',
+            'dot_thumbnail_size' => '138x97'
+        ];
         $args = wp_parse_args($args, array(
             'id'             => null,
             'show_media'     => '1',
@@ -51,25 +70,7 @@ if(!function_exists('overcome_post_gallery')){
             'default_thumb'  => apply_filters('overcome_default_post_thumbnail', false),
             'light_box'      => overcome_get_post_format_value('post-gallery-lightbox', '1'),
             'source'         => 'post-gallery-images',
-            'owl'            => [
-                'items'              => 1,
-                'margin'             => 0,
-                'loop'               => false,
-                'autoplay'           => true,
-                'autoplayTimeout'    => 5000,
-                'nav'                => true,
-                'navClass'           => ['ef5-owl-nav-button ef5-owl-prev','ef5-owl-nav-button ef5-owl-next'],
-                'navText'            => ['<span class="ef5-owl-nav-icon prev" data-title="'.esc_attr__('Previous','overcome').'"></span>', '<span class="ef5-owl-nav-icon next" data-title="'.esc_attr__('Next','overcome').'"></span>'],
-                'dots'               => true,
-                'dotsData'           => true,
-                'dotClass'           => 'ef5-owl-dot',
-                'autoHeight'         => true,
-                'responsiveClass'    => true,
-                'slideBy'            => 'page',
-                'animationIn'        => 'fadeIn',
-                'animationOut'        => 'fadeOut',
-                'dot_thumbnail_size' => '138x97'
-            ] 
+            'owl'            => [] 
         ));
         if('0' === $args['show_media']) return;
         // Get gallery from option
@@ -101,7 +102,7 @@ if(!function_exists('overcome_post_gallery')){
                         array(
                             'rtl'                => $rtl
                         ),
-                        $args['owl']
+                        wp_parse_args($args['owl'],$owl)
                     );
                     wp_localize_script('owl-carousel', 'ef5systems_owl', $ef5systems_owl);
                 } else {
