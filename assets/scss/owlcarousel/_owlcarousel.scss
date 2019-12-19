@@ -83,13 +83,15 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		margin: -5px;
+		@include transition();
 		.ef5-owl-dot{
 			flex: 0 0 auto;
 		    width: auto;
 		    max-width: 100%;
 		    padding: 5px;
 		    &.active{
-		    	display: none;
+		    	width: 0;
+		    	visibility: hidden;
 		    }
 		}
 	}
