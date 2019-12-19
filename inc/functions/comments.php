@@ -14,12 +14,13 @@ if(!function_exists('overcome_wp_list_comments_args')){
 
 if(!function_exists('overcome_comment')){
 	function overcome_comment(){
-		//if('tribe_events' === get_post_type()) return;
-		$show_cmt = overcome_get_opts('show_comment_form', '1');
-		if ( '1' === $show_cmt && (comments_open() || get_comments_number()) )
-        {
-            comments_template();
-        }
+		if('tribe_events' !== get_post_type()) {
+			$show_cmt = overcome_get_opts('show_comment_form', '1');
+			if ( '1' === $show_cmt && (comments_open() || get_comments_number()) )
+	        {
+	            comments_template();
+	        }
+	    }
 	}
 }
 
