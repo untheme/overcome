@@ -53,6 +53,26 @@
 	.ef5-event-galleries{
 		margin-top: 45px;
 	}
+	.ef5-single-tribe-events-nav-pagination{
+		margin-top: 50px;
+		padding-top: 45px;
+		border-top: 1px solid #dedede;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 600;
+		.tribe-events-sub-nav{
+			list-style: none;
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 -50px;
+			li{
+				flex: 0 0 auto;
+				width: auto;
+				max-width: 100%;
+				padding: 0 50px;
+			}
+		}
+	}
 }
 .ef5-tribe-events-meta-group-organizer{
 	padding-top: 20px;
