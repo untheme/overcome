@@ -70,8 +70,9 @@ if(!function_exists('overcome_post_gallery')){
             'default_thumb'  => apply_filters('overcome_default_post_thumbnail', false),
             'light_box'      => overcome_get_post_format_value('post-gallery-lightbox', '1'),
             'source'         => 'post-gallery-images',
-            'owl'            => wp_parse_args($owl,[]) 
+            'owl'            => [] 
         ));
+        $args['owl'] = wp_parse_args($owl,$args['owl']);
         if('0' === $args['show_media']) return;
         // Get gallery from option
         $gallery_list = explode(',', overcome_get_post_format_value($args['source'], ''));
