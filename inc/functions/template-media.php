@@ -50,7 +50,22 @@ if(!function_exists('overcome_post_gallery')){
             'echo'           => true,
             'default_thumb'  => apply_filters('overcome_default_post_thumbnail', false),
             'light_box'      => overcome_get_post_format_value('post-gallery-lightbox', '1'),
-            'source'         => 'post-gallery-images'   
+            'source'         => 'post-gallery-images',
+            'owl'            => [
+                'items'              => 1,
+                'margin'             => 0,
+                'loop'               => false,
+                'autoplay'           => true,
+                'autoplayTimeout'    => 5000,
+                'nav'                => true,
+                'navClass'           => ['ef5-owl-nav-button ef5-owl-prev','ef5-owl-nav-button ef5-owl-next'],
+                'navText'            => '<span class="ef5-owl-nav-icon prev" data-title="'.esc_attr__('Previous','overcome').'"></span>', '<span class="ef5-owl-nav-icon next" data-title="'.esc_attr__('Next','overcome').'"></span>',
+                'dots'               => false,
+                'dotClass'           => 'ef5-owl-dot',
+                'autoHeight'         => true,
+                'responsiveClass'    => true,
+                'slideBy'            => 'page',
+            ] 
         ));
         if('0' === $args['show_media']) return;
         // Get gallery from option
@@ -78,24 +93,11 @@ if(!function_exists('overcome_post_gallery')){
                     $rtl = is_rtl() ? true : false;
                     $icon_prev = is_rtl() ? 'right' : 'left';
                     $icon_next = is_rtl() ? 'left' : 'right';
-                    $nav_icon = ['<span class="ef5-owl-nav-icon prev" data-title="'.esc_attr__('Previous','overcome').'"></span>', '<span class="ef5-owl-nav-icon next" data-title="'.esc_attr__('Next','overcome').'"></span>'];
-
-                    $ef5systems_owl[$gal_id] = array(
-                        'items'              => 1,
-                        'rtl'                => $rtl,
-                        'margin'             => 0,
-                        'loop'               => false,
-                        'autoplay'           => true,
-                        'autoplayTimeout'    => 5000,
-                        'nav'                => true,
-                        'navClass'           => ['ef5-owl-nav-button ef5-owl-prev','ef5-owl-nav-button ef5-owl-next'],
-                        'navText'            => $nav_icon,
-                        'dots'               => false,
-                        'dotClass'           => 'ef5-owl-dot',
-                        'autoHeight'         => true,
-                        'responsiveClass'    => true,
-                        'slideBy'            => 'page',
-                        
+                    $ef5systems_owl[$gal_id] = array_merge(
+                        array(
+                            'rtl'                => $rtl
+                        ),
+                        $args['owl']
                     );
                     wp_localize_script('owl-carousel', 'ef5systems_owl', $ef5systems_owl);
                 } else {
