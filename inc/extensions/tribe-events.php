@@ -50,7 +50,16 @@ function overcome_single_tribe_event_sponsor(){
 	<div class="ef5-tribe-single-meta-block ef5-bg-f5f5f5 ef5-rounded-10 p-30 mb-65 clearfix">
 	    <div class="ef5-heading text-22 font-style-500 mb-40"><?php esc_html_e('Event Sponsor','overcome'); ?></div>
 	    <div class="ef5-tribe-single-book-form">
-	    	xxx
+	    	<div class="row align-items-center grid-gutter-30">
+	    		<div class="col-6" style="height: 100px;">1
+	    		</div>
+	    		<div class="col-6">2
+	    		</div>
+	    		<div class="col-6">3
+	    		</div>
+	    		<div class="col-6">4
+	    		</div>
+	    	</div>
 	    </div>
 	</div>
 	<?php
