@@ -37,7 +37,7 @@ function overcome_single_tribe_event_booking_form(){
 add_action('tribe_events_single_meta_after', 'overcome_single_tribe_event_sponsor', 10, 2);
 function overcome_single_tribe_event_sponsor(){
 	?>
-	<div class="ef5-tribe-single-meta-block ef5-bg-f5f5f5 ef5-rounded-10 p-30 clearfix">
+	<div class="ef5-tribe-single-meta-block ef5-bg-f5f5f5 ef5-rounded-10 p-30 mb-65 clearfix">
 	    <div class="ef5-heading text-22 font-style-500 mb-40"><?php esc_html_e('Event Sponsor','overcome'); ?></div>
 	    <div class="ef5-tribe-single-book-form">
 	    	xxx
@@ -60,7 +60,7 @@ function overcome_single_tribe_event_upcoming(){
 	$thumbnail_size = ['85','85'];
     if ( $r->have_posts() )
     {	
-    	echo '<div class="ef5-tribe-single-meta-block clearfix">';
+    	echo '<div class="ef5-tribe-single-meta-block mb-65 clearfix">';
 	    	echo '<div class="ef5-heading text-22 font-style-500 mb-40">'.esc_html__('Upcoming Events','overcome').'</div>';
 	        echo '<div class="posts-list layout-1">';
 
