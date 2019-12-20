@@ -275,7 +275,7 @@
                                         'show_excerpt' => '1', 
                                         'length'       => '10', 
                                         'more'         => '',
-                                        'class'        => 'text-777777 pt-4'
+                                        'class'        => 'ef5-text-777777 pt-4'
                                     ]);
                                     if(class_exists('EF5Payments')) {
                                     ?>
@@ -285,7 +285,7 @@
                                             <?php overcome_post_share([
                                                 'title' => esc_html__('Share:','overcome'),
                                                 'show_share' => '1',
-                                                'class'      => 'text-12 text-uppercase text-777777 font-style-500'   
+                                                'class'      => 'text-12 text-uppercase ef5-text-777777 font-style-500'   
                                             ]); ?>
                                         </div>
                                         <div class="col-auto text-end">
