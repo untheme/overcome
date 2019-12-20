@@ -287,12 +287,12 @@
                                                     'title' => esc_html__('Share:','overcome'),
                                                     'show_share' => '1',
                                                     'class'      => 'text-12 text-uppercase ef5-text-777777 font-style-500',
-                                                    'row_class'  => 'gutters-20',
+                                                    'row_class'  => 'gutters-15',
                                                     'social_args'  => [
                                                         'class' => 'ef5-link-777777',
                                                         'size'  => 'small'
                                                     ],
-                                                    'show_all'  => false  
+                                                    'show_all'  => '0'  
                                                 ]); ?>
                                             </div>
                                             <div class="col-auto text-end">
