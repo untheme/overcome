@@ -55,4 +55,10 @@
 	.form-submit{
 		text-align: center;
 	}
+	.gglcptch{
+		text-align: center;
+		.gglcptch_recaptcha{
+			display: inline-block;
+		}
+	}
 }
