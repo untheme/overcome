@@ -463,6 +463,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
     }
     protected function ef5_heading_button($atts,$args = []){
         $args = wp_parse_args($args, [
+            'wrap_class' => '',
             'before' => '<div class="ef5-heading-btn">',
             'after'  => '</div>',
             'class'  => ''
@@ -479,7 +480,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
             $a_target = strlen( $button_link['target'] ) > 0 ? $button_link['target'] : '_self';
         }
         if(!$use_link) return;
-            $html = $args['before'];
+            $html = str_replace('class="', 'class="'.$args['wrap_class'].' ', $args['before']);
                 $html .= '<a href="'.esc_url($a_href).'" class="'.$args['class'].'" target="'.esc_attr($a_target).'">'.$a_title.'</a>';
             $html .= $args['after'];
             echo overcome_html($html);
