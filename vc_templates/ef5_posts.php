@@ -280,14 +280,14 @@
                                     if(class_exists('EF5Payments')) {
                                     ?>
                                     <div class="row">
-                                        <div class="col-auto">
+                                        <div class="col">
                                             <div class="ef5-text-primary font-style-500"><?php esc_html_e('Donate so far:','overcome');?></div>
                                             <?php overcome_post_share([
                                                 'title' => esc_html__('Share:','overcome'),
                                                 'show_share' => '1'
                                             ]); ?>
                                         </div>
-                                        <div class="col text-end">
+                                        <div class="col-auto text-end">
                                             <?php 
                                                 ef5payments_donation_raised([
                                                     'label' => '',
