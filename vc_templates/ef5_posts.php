@@ -279,7 +279,7 @@
                                     ]);
                                     if(class_exists('EF5Payments')) {
                                         ef5payments_donation_raised([
-                                            'raised_label' => ''
+                                            'raised_label' => '',
                                             'class'        => 'text-28 ef5-text-accent'
                                         ]);
                                     }
