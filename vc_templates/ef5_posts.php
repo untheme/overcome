@@ -269,12 +269,13 @@
                             <div class="ef5-post-info">
                                 <?php 
                                     overcome_post_title([
-                                        'heading_tag' => 'text-20'
+                                        'heading_tag' => 'text-22'
                                     ]);
                                     overcome_post_excerpt([
                                         'show_excerpt' => '1', 
                                         'length'       => '10', 
-                                        'more'         => ''
+                                        'more'         => '',
+                                        'class'        => 'text-777777 pt-4'
                                     ]);
                                     if(class_exists('EF5Payments')) {
                                         ef5systems_donation_progress_donors([
