@@ -30,7 +30,7 @@ if ( post_password_required() ) {
 				$comments_number = get_comments_number();
 				printf(
 					_nx(
-						'&#8220;(%1$s)&#8221; %2$s',
+						'&#40;&#8220;(%1$s)&#8221;&#41; %2$s',
 						'&#8220;(%1$s)&#8221; %3$s',
 						$comments_number,
 						'comments title',
