@@ -499,9 +499,20 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
             $a_title  = strlen($button_link['title']) > 0 ? $button_link['title'] : esc_html__('Read More','overcome') ;
             $a_target = strlen( $button_link['target'] ) > 0 ? $button_link['target'] : '_self';
         }
+        $button_link2 = vc_build_link( $atts['button_link2'] );
+        $button_link2 = ( $button_link2 == '||' ) ? '' : $button_link2;
+        if ( strlen( $button_link2['url'] ) > 0 ) {
+            $use_link2 = true; 
+            $a_href2   = $button_link2['url'];
+            $a_title2  = strlen($button_link2['title']) > 0 ? $button_link2['title'] : esc_html__('Read More','overcome') ;
+            $a_target2 = strlen( $button_link2['target'] ) > 0 ? $button_link2['target'] : '_self';
+        }
         if(!$use_link) return;
             $html = str_replace('class="', 'class="'.$args['wrap_class'].' ', $args['before']);
                 $html .= '<a href="'.esc_url($a_href).'" class="'.$args['class'].'" target="'.esc_attr($a_target).'">'.$a_title.'</a>';
+                if($use_link2){
+                    $html .= '<span class="text-bt">'.esc_html($button_text_between).'<span><a href="'.esc_url($a_href2).'" class="'.$args['class'].'" target="'.esc_attr($a_target2).'">'.$a_title2.'</a>';
+                }
             $html .= $args['after'];
             echo overcome_html($html);
     }
