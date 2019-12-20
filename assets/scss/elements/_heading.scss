@@ -103,4 +103,10 @@
 		max-width: 100%;
 		margin: 10px;
 	}
+	.text-bt{
+		@media (max-width: 767px){
+			width: 100%;
+			flex: 0 0 100%;
+		}
+	}
 }
