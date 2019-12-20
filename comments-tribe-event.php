@@ -44,7 +44,7 @@ if ( post_password_required() ) {
 			<ol class="commentlist">
 				<?php
 					wp_list_comments(
-						overcome_wp_list_comments_args()
+						overcome_tribe_event_comments_args()
 					);
 				?>
 			</ol>
