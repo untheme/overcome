@@ -244,7 +244,7 @@ class OverCome_Tribe_Event_Walker_Comment extends Walker_Comment {
 		?>
 		<<?php echo esc_attr($tag); ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
 			<div id="div-comment-<?php comment_ID(); ?>" class="comment-body">
-				<div class="row">
+				<div class="row gutters-15">
 					<?php if ( 0 != $args['avatar_size'] ) { ?>
 					<div class="col-auto">
 						<?php 
