@@ -237,16 +237,39 @@ vc_map(array(
                     'not_empty' => true
                 )
             ]),
-            // Link 
+            // Link 1
             array(
                 'type'       => 'vc_link',
-                'heading'    => esc_html__('Link','overcome'),
+                'heading'    => esc_html__('Link 1','overcome'),
                 'description'=> esc_html__('Add your custom link','overcome'),
                 'param_name' => 'button_link',
                 'group'      => esc_html__('Link','overcome')
             ),
             ef5systems_vc_map_add_css_animation([
                 'param_name' => 'button_link_css_animation',
+                'group'      => esc_html__('Link','overcome')
+            ]),
+            // Link 2
+            array(
+                'type'       => 'vc_link',
+                'heading'    => esc_html__('Link 2','overcome'),
+                'description'=> esc_html__('Add your custom link','overcome'),
+                'param_name' => 'button_link2',
+                'group'      => esc_html__('Link','overcome')
+            ),
+            array(
+                'type'       => 'text',
+                'heading'    => esc_html__('Text between Link 1 and Link 2','overcome'),
+                'param_name' => 'button_text_between',
+                'value'      => 'Or',
+                'group'      => esc_html__('Link','overcome'),
+                'dependency'   => array(
+                    'element' => 'button_link2',
+                    'not_empty' => true
+                )
+            ),
+            ef5systems_vc_map_add_css_animation([
+                'param_name' => 'button_link2_css_animation',
                 'group'      => esc_html__('Link','overcome')
             ]),
         )
