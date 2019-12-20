@@ -486,7 +486,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
             'wrap_class' => '',
             'before' => '<div class="ef5-heading-btn">',
             'after'  => '</div>',
-            'class'  => ''
+            'class'  => '',
             'class2'  => ''
         ]);
         $args['class'] .= $this->getCSSAnimation( $atts['button_link_css_animation'] );
