@@ -282,7 +282,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
     protected function overcome_heading_wrap_css_class($atts, $class = ''){
         extract( $atts );
         $wrap_css_class = ['ef5-heading-wrap','ef5-heading-'.$layout_template, $content_align, $class, $el_class];
-        echo trim(implode(' ', $wrap_css_class));
+        echo overcome_optimize_css_class(trim(implode(' ', $wrap_css_class)));
     }
     protected function ef5_heading_small_heading($atts,$args = []){
         if(empty($atts['small_heading_text'])) return;
