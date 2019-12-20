@@ -217,7 +217,7 @@ function overcome_tribe_event_meta_box($metabox){
 function overcome_tribe_event_comments_args($args=[]){
 	$args = wp_parse_args($args, array(
 		'walker'      => new OverCome_Tribe_Event_Walker_Comment(),
-		'avatar_size' => overcome_get_avatar_size(),
+		'avatar_size' => 40,
 		'short_ping'  => true,
 		'style'       => 'ol'
 	));
