@@ -262,8 +262,8 @@
                                 overcome_post_media([
                                     'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
                                     'default_thumb'  => true,
-                                    'img_class'      => 'w-auto',   
-                                    'after'          => '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">'.$overlay.'</div></div>'
+                                    'img_class'      => 'w-auto ef5-rounded-t-10',   
+                                    'after'          => '<div class="overlay ef5-bg-overlay ef5-rounded-t-10"><div class="overlay-inner center-align">'.$overlay.'</div></div>'
                                 ]);
                             ?>
                             <div class="ef5-post-info">
