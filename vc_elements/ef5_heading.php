@@ -248,10 +248,6 @@ vc_map(array(
             ef5systems_vc_map_add_css_animation([
                 'param_name' => 'button_link_css_animation',
                 'group'      => esc_html__('Link','overcome'),
-                'dependency'   => array(
-                    'element' => 'button_link',
-                    'not_empty' => true
-                )
             ]),
             // Link 2
             array(
@@ -266,19 +262,12 @@ vc_map(array(
                 'heading'    => esc_html__('Text between Link 1 and Link 2','overcome'),
                 'param_name' => 'button_text_between',
                 'value'      => 'Or',
+                'std'      => 'Or',
                 'group'      => esc_html__('Link','overcome'),
-                'dependency'   => array(
-                    'element' => 'button_link2',
-                    'not_empty' => true
-                )
             ),
             ef5systems_vc_map_add_css_animation([
                 'param_name' => 'button_link2_css_animation',
                 'group'      => esc_html__('Link','overcome'),
-                'dependency'   => array(
-                    'element' => 'button_link2',
-                    'not_empty' => true
-                )
             ]),
         )
     )
