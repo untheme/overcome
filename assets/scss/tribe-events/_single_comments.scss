@@ -28,9 +28,12 @@
 	.comment-reply-title{
 		font-size: 18px;
 		font-weight: 600;
-		margin-bottom: 20px;
+		margin-bottom: 22px;
 	}
-
+	.comment-notes{
+		font-size: 12px;
+		color: #373737;
+	}
 	.comment-form .ef5-form-fields input, .comment-form textarea[name="comment"]{
 		border: 1px solid #c6c6c6;
 		border-radius: 23px;
