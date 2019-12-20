@@ -520,7 +520,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
             $html = str_replace('class="', 'class="'.$args['wrap_class'].' ', $args['before']);
                 $html .= '<a href="'.esc_url($a_href).'" class="'.$args['class'].'" target="'.esc_attr($a_target).'">'.$a_title.'</a>';
                 if($use_link2){
-                    $html .= '<span class="text-bt">'.esc_html($button_text_between).'<span><a href="'.esc_url($a_href2).'" class="'.$args['class2'].'" target="'.esc_attr($a_target2).'">'.$a_title2.'</a>';
+                    $html .= '<span class="text-bt">'.esc_html($button_text_between).'</span><a href="'.esc_url($a_href2).'" class="'.$args['class2'].'" target="'.esc_attr($a_target2).'">'.$a_title2.'</a>';
                 }
             $html .= $args['after'];
             echo overcome_html($html);
