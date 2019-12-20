@@ -58,7 +58,7 @@ if ( post_password_required() ) {
 	if ( comments_open() ) :
 		?>
 		<div class="ef5-comment-form-flex">
-			<?php overcome_comment_form('asc'); ?>
+			<?php overcome_comment_form(); ?>
 		</div>
 		<?php
 	endif;	

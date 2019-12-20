@@ -175,14 +175,19 @@ if ( ! function_exists( 'overcome_comment_form' ) ) :
 	/**
 	 * Documentation for function.
 	 */
-	function overcome_comment_form( $order ) {
+	function overcome_comment_form( $args = [] ) {
+		$args = wp_parse_args($args, [
+			'order' = 'asc',
+			'class_submit' => 'ef5-btn primary fill',
+		]);
+		$order = $args['order'];
 		if ( true === $order || strtolower( $order ) === strtolower( get_option( 'comment_order', 'asc' ) ) ) {
 			comment_form(
 				array(
 					'id_form'		=> 'ef5-respond',
 					'title_reply'	=> esc_html__('Write a Comment', 'overcome'),
 					'label_submit'  => esc_html__( 'Post Your Comment','overcome' ),
-					'class_submit'  => 'btn btn-pri',
+					'class_submit'  => $args['class_submit'],
 					'submit_button' => '<button name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s"><span>%4$s</span></button>',
 					'submit_field'  => '<div class="form-submit">%1$s %2$s</div>',
 					'format'		=> 'html5'
