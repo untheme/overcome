@@ -288,7 +288,7 @@
                                                 'class'      => 'text-12 text-uppercase ef5-text-777777 font-style-500',
                                                 'row_class'  => 'gutters-20',
                                                 'social_args'  => [
-                                                    'class' => 'ef5-text-inherit'
+                                                    'class' => 'ef5-link-777777'
                                                 ]  
                                             ]); ?>
                                         </div>
