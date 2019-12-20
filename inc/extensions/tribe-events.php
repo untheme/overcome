@@ -285,7 +285,7 @@ class OverCome_Tribe_Event_Walker_Comment extends Walker_Comment {
 				<?php if ( '0' == $comment->comment_approved ) : ?>
 					<div class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'overcome' ); ?></div>
 				<?php endif; ?>
-				<div class="comment-content">
+				<div class="comment-content pt-10">
 					<?php comment_text(); ?>
 				</div>
 			</div>
