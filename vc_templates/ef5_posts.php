@@ -273,7 +273,7 @@
                                     ]);
                                     overcome_post_excerpt([
                                         'show_excerpt' => '1', 
-                                        'length'       => '16', 
+                                        'length'       => '10', 
                                         'more'         => ''
                                     ]);
                                     if(class_exists('EF5Payments')) {
