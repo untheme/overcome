@@ -208,6 +208,12 @@ $ef5-rounded: (
 	.ef5-rounded-#{$name}{
 		@include border-radius($rounded);
 	}
+	.ef5-rounded-t-#{$name}{
+		@include border-radius-separate($rounded,$rounded, 0 0);
+	}
+	.ef5-rounded-b-#{$name}{
+		@include border-radius-separate(0,0,$rounded,$rounded);
+	}
 }
 
 // Border 
