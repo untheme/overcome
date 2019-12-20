@@ -258,7 +258,7 @@ vc_map(array(
                 'group'      => esc_html__('Link','overcome')
             ),
             array(
-                'type'       => 'text',
+                'type'       => 'textfield',
                 'heading'    => esc_html__('Text between Link 1 and Link 2','overcome'),
                 'param_name' => 'button_text_between',
                 'value'      => 'Or',
