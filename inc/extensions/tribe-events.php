@@ -258,6 +258,9 @@ class OverCome_Tribe_Event_Walker_Comment extends Walker_Comment {
 					<?php } ?>
 					<div class="col">
 						<?php $this->overcome_comment_author_info([], $comment , $comment_author ); ?>
+						<?php if ( '0' == $comment->comment_approved ) : ?>
+							<div class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'overcome' ); ?></div>
+						<?php endif; ?>
 						<div class="comment-metadata pt-5">
 							<span class="comment-time meta-color"><?php
 									/* translators: 1: comment date, 2: comment time */
@@ -282,9 +285,6 @@ class OverCome_Tribe_Event_Walker_Comment extends Walker_Comment {
 						</div>
 					</div>
 				</div>
-				<?php if ( '0' == $comment->comment_approved ) : ?>
-					<div class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'overcome' ); ?></div>
-				<?php endif; ?>
 				<div class="comment-content pt-10">
 					<?php comment_text(); ?>
 				</div>
