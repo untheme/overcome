@@ -452,7 +452,7 @@ if(!function_exists('overcome_post_share')){
             $show_tw    = overcome_get_theme_opt( 'archive_share_tw', '1' );
             $show_gplus = overcome_get_theme_opt( 'archive_share_gplus', '1' );
             $show_pin   = overcome_get_theme_opt( 'archive_share_pin', '1' );
-            $show_all   = !empty($args['show_all']) ? $args['show_all'] : overcome_get_theme_opt( 'archive_share_all', '1' );
+            $show_all   = $args['show_all'] != '' ? $args['show_all'] : overcome_get_theme_opt( 'archive_share_all', '1' );
         }
         ob_start();
         if($show_fb == '1' || $show_tw == '1' || $show_gplus == '1' || $show_pin == '1' || $show_all == '1') {
