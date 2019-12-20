@@ -48,7 +48,7 @@ $event_id = get_the_ID();
 					</nav>
 					<div class="ef5-single-event-cmt"><?php
 						if ( get_post_type() == Tribe__Events__Main::POSTTYPE && tribe_get_option( 'showComments', false ) ) { 
-							comments_template('tribe-comment');
+							comments_template('tribe-comments');
 						}
 					?></div>
 				</div>
