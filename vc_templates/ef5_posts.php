@@ -279,7 +279,7 @@
                                     ]);
                                     if(class_exists('EF5Payments')) {
                                     ?>
-                                    <div class="row">
+                                    <div class="row gutters-10">
                                         <div class="col">
                                             <div class="ef5-text-primary font-style-500"><?php esc_html_e('Donate so far:','overcome');?></div>
                                             <?php overcome_post_share([
