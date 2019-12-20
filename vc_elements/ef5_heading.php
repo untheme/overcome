@@ -315,7 +315,8 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
             $text_size,
             $font_style,
             $line_height,
-            $args['class']
+            $args['class'],
+            $this->getCSSAnimation( $atts['small_css_animation'] )
         ];
         $small_heading_attrs[] = 'class="'.overcome_optimize_css_class(implode(' ', $small_heading_css_class)).'"';
 
@@ -368,7 +369,8 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
             $font_style,
             $line_height,
             $heading_text_class,
-            $args['class']
+            $args['class'],
+            $this->getCSSAnimation( $atts['heading_css_animation'] )
         ];
         
         $heading_attrs[] = 'class="'.overcome_optimize_css_class(implode(' ', $heading_css_class)).'"';
@@ -453,7 +455,8 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $subheading_attrs = [];
         $subheading_css_class = [
             'subheading',
-            $args['class']
+            $args['class'],
+            $this->getCSSAnimation( $atts['subheading_text_css_animation'] )
         ];
         $subheading_attrs[] = 'class="'.overcome_optimize_css_class(implode(' ', $subheading_css_class)).'"';
         ?>
@@ -472,7 +475,8 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $desc_attrs = [];
         $desc_css_class = [
             'desc',
-            $args['class']
+            $args['class'],
+            $this->getCSSAnimation( $atts['desc_text_css_animation'] );
         ];
         $desc_attrs[] = 'class="'.overcome_optimize_css_class(implode(' ', $desc_css_class)).'"';
         ?>
