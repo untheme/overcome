@@ -257,10 +257,12 @@ class OverCome_Tribe_Event_Walker_Comment extends Walker_Comment {
 					</div>
 					<?php } ?>
 					<div class="col">
-						<?php $this->overcome_comment_author_info([], $comment , $comment_author ); ?>
-						<?php if ( '0' == $comment->comment_approved ) : ?>
+						<?php 
+							$this->overcome_comment_author_info([], $comment , $comment_author );
+							if ( '0' == $comment->comment_approved ) { 
+						?>
 							<div class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'overcome' ); ?></div>
-						<?php endif; ?>
+						<?php } ?>
 						<div class="comment-metadata pt-5">
 							<span class="comment-time meta-color"><?php
 									/* translators: 1: comment date, 2: comment time */
