@@ -14,24 +14,24 @@ $btn-sizes: (
 );
 @each $size in $btn-sizes {
   	.ef5-btn-#{nth($size, 1)} {
-  		padding: nth($size, 2) nth($size, 3);
+  		padding: nth($size, 2) nth($size, 3)!important;
   		@if (nth($size, 4) != ''){
-			font-size: nth($size, 4);
+			font-size: nth($size, 4)!important;
 		}
 		@if (nth($size, 5) != ''){
-			font-weight: nth($size, 5);
+			font-weight: nth($size, 5)!important;
 		}
 		@if (nth($size, 6) != ''){
-			text-transform: nth($size, 6);
+			text-transform: nth($size, 6)!important;
 		}
 		@if (nth($size, 7) != ''){
-			letter-spacing: nth($size, 7);
+			letter-spacing: nth($size, 7)!important;
 		}
 		@if (nth($size, 8) != ''){
-			border-radius: nth($size, 8);
+			border-radius: nth($size, 8)!important;
 		}
 		@if (nth($size, 9) != ''){
-			min-width: nth($size, 9);
+			min-width: nth($size, 9)!important;
 		}
     }
 }
