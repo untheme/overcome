@@ -177,7 +177,7 @@ if ( ! function_exists( 'overcome_comment_form' ) ) :
 	 */
 	function overcome_comment_form( $args = [] ) {
 		$args = wp_parse_args($args, [
-			'order' = 'asc',
+			'order'        => 'asc',
 			'class_submit' => 'ef5-btn primary fill',
 		]);
 		$order = $args['order'];
