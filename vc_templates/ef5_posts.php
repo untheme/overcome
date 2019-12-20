@@ -291,7 +291,8 @@
                                                     'social_args'  => [
                                                         'class' => 'ef5-link-777777',
                                                         'size'  => 'small'
-                                                    ]  
+                                                    ],
+                                                    'show_all'  => false  
                                                 ]); ?>
                                             </div>
                                             <div class="col-auto text-end">
