@@ -246,7 +246,7 @@
             break;
             case '3-1':
                 $d = 0;
-                $item_css_class[] = 'ef5-rounded-10 overlay-wrap ef5-hover-shadow-1'
+                $item_css_class[] = 'ef5-rounded-10 overlay-wrap ef5-hover-shadow-1';
                 while($posts->have_posts()){
                     $d++;
                     $posts->the_post();
