@@ -20,7 +20,7 @@ extract( $atts );
 				$this->ef5_heading_main_heading($atts,['class' => 'ef5-heading text-36 text-lg-48 font-style-700']);
 				$this->ef5_heading_sub_heading($atts, ['class' => 'text-22']);
 				$this->ef5_heading_desccription($atts,['class' => 'text-18 font-style-500 pt-20']);
-				$this->ef5_heading_button($atts,['class' => 'ef5-btn white fill ef5-btn-md']);
+				$this->ef5_heading_button($atts,['wrap_class' => 'pt-65', 'class' => 'ef5-btn white fill ef5-btn-md']);
 				break;
 			case '5':
 				$this->ef5_heading_icon_top($atts);
