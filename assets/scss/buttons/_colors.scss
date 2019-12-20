@@ -34,5 +34,8 @@
 				border-color: $color;
 			}
 		}
+		&.white.fill{
+			color: $primary_color;
+		}
 	}
 }
