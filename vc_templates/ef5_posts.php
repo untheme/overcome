@@ -283,7 +283,8 @@
                                         <div class="col-auto">
                                             <div class="ef5-text-primary font-style-500"><?php esc_html_e('Donate so far:','overcome');?></div>
                                             <?php overcome_post_share([
-                                                'title' => esc_html__('Share:','overcome')
+                                                'title' => esc_html__('Share:','overcome'),
+                                                'show_share' => '1'
                                             ]); ?>
                                         </div>
                                         <div class="col text-end">
