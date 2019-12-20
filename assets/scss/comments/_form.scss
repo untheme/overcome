@@ -31,7 +31,11 @@
 	margin: 0 0 30px;
 	padding: 0;
 }
-
+.comment-awaiting-moderation{
+	font-style: italic;
+	font-size: 80%;
+	color: red;
+}
 // WooCommerce
 .comment-form-rating{
 	margin-left: -15px;
