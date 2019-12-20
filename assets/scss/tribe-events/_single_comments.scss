@@ -19,4 +19,17 @@
 			margin-bottom: 15px;
 		}
 	}
+	// Respond
+	.comment-reply-title{
+		font-size: 18px;
+		font-weight: 600;
+		margin-bottom: 20px;
+	}
+
+	.comment-form .ef5-form-fields input, .comment-form textarea[name="comment"]{
+		border: 1px solid #959595;
+		border-radius: 23px;
+		padding: 10px 20px;
+		font-size: 15px;
+	}
 }
