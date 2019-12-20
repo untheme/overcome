@@ -278,10 +278,24 @@
                                         'class'        => 'text-777777 pt-4'
                                     ]);
                                     if(class_exists('EF5Payments')) {
-                                        ef5payments_donation_raised([
-                                            'label' => '',
-                                            'class' => 'text-28 ef5-text-accent font-style-600'
-                                        ]);
+                                    ?>
+                                    <div class="row">
+                                        <div class="col-auto">
+                                            <div class="ef5-text-primary font-style-500"><?php esc_html_e('Donate so far:','overcome');?></div>
+                                            <?php overcome_post_share([
+                                                'title' => esc_html__('Share:','overcome')
+                                            ]); ?>
+                                        </div>
+                                        <div class="col text-end">
+                                            <?php 
+                                                ef5payments_donation_raised([
+                                                    'label' => '',
+                                                    'class' => 'text-28 ef5-text-accent font-style-600'
+                                                ]);
+                                            ?>
+                                        </div>
+                                    </div>
+                                    <?php
                                     }
                                 ?>
                             </div>
