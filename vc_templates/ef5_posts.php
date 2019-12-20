@@ -275,7 +275,7 @@
                                         'show_excerpt' => '1', 
                                         'length'       => '10', 
                                         'more'         => '...',
-                                        'class'        => 'ef5-text-777777 pt-4'
+                                        'class'        => 'ef5-text-777777 pt-4 mb-10'
                                     ]);
                                     if(class_exists('EF5Payments')) {
                                     ?>
