@@ -25,7 +25,7 @@ get_header();
                         overcome_post_content();
                         overcome_link_pages();
                         posts_nav_link();
-                        overcome_comment();
+                        //overcome_comment();
 					endwhile;
                 ?>
                 </div>
