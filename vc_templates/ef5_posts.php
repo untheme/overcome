@@ -274,7 +274,7 @@
                                     overcome_post_excerpt([
                                         'show_excerpt' => '1', 
                                         'length'       => '10', 
-                                        'more'         => '',
+                                        'more'         => '...',
                                         'class'        => 'ef5-text-777777 pt-4'
                                     ]);
                                     if(class_exists('EF5Payments')) {
