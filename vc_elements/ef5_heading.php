@@ -476,7 +476,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $desc_css_class = [
             'desc',
             $args['class'],
-            $this->getCSSAnimation( $atts['desc_text_css_animation'] );
+            $this->getCSSAnimation( $atts['desc_text_css_animation'] )
         ];
         $desc_attrs[] = 'class="'.overcome_optimize_css_class(implode(' ', $desc_css_class)).'"';
         ?>
