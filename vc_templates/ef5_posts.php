@@ -285,7 +285,11 @@
                                             <?php overcome_post_share([
                                                 'title' => esc_html__('Share:','overcome'),
                                                 'show_share' => '1',
-                                                'class'      => 'text-12 text-uppercase ef5-text-777777 font-style-500'   
+                                                'class'      => 'text-12 text-uppercase ef5-text-777777 font-style-500',
+                                                'row_class'  => 'gutters-20',
+                                                'social_args'  => [
+                                                    'class' => 'xxx'
+                                                ]  
                                             ]); ?>
                                         </div>
                                         <div class="col-auto text-end">
