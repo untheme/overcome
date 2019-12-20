@@ -279,27 +279,29 @@
                                     ]);
                                     if(class_exists('EF5Payments')) {
                                     ?>
-                                    <div class="row gutters-10">
-                                        <div class="col">
-                                            <div class="ef5-text-primary font-style-500"><?php esc_html_e('Donate so far:','overcome');?></div>
-                                            <?php overcome_post_share([
-                                                'title' => esc_html__('Share:','overcome'),
-                                                'show_share' => '1',
-                                                'class'      => 'text-12 text-uppercase ef5-text-777777 font-style-500',
-                                                'row_class'  => 'gutters-20',
-                                                'social_args'  => [
-                                                    'class' => 'ef5-link-777777',
-                                                    'size'  => 'small'
-                                                ]  
-                                            ]); ?>
-                                        </div>
-                                        <div class="col-auto text-end">
-                                            <?php 
-                                                ef5payments_donation_raised([
-                                                    'label' => '',
-                                                    'class' => 'text-28 ef5-text-accent font-style-600'
-                                                ]);
-                                            ?>
+                                    <div class="ef5-donate-info">
+                                        <div class="row gutters-10">
+                                            <div class="col">
+                                                <div class="ef5-text-primary font-style-500"><?php esc_html_e('Donate so far:','overcome');?></div>
+                                                <?php overcome_post_share([
+                                                    'title' => esc_html__('Share:','overcome'),
+                                                    'show_share' => '1',
+                                                    'class'      => 'text-12 text-uppercase ef5-text-777777 font-style-500',
+                                                    'row_class'  => 'gutters-20',
+                                                    'social_args'  => [
+                                                        'class' => 'ef5-link-777777',
+                                                        'size'  => 'small'
+                                                    ]  
+                                                ]); ?>
+                                            </div>
+                                            <div class="col-auto text-end">
+                                                <?php 
+                                                    ef5payments_donation_raised([
+                                                        'label' => '',
+                                                        'class' => 'text-28 ef5-text-accent font-style-600'
+                                                    ]);
+                                                ?>
+                                            </div>
                                         </div>
                                     </div>
                                     <?php
