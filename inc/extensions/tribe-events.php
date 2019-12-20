@@ -322,7 +322,7 @@ class OverCome_Tribe_Event_Walker_Comment extends Walker_Comment {
 				$author_badge = '';
 				if ( overcome_is_comment_by_post_author( $comment ) ) {
 					/* translators: %s: SVG Icon */
-					$author_badge = sprintf( '<span class="post-author-badge">%s</span>', '<span class="far fa-user"></span>' );
+					//$author_badge = sprintf( '<span class="post-author-badge">%s</span>', '<span class="far fa-user"></span>' );
 				}
 
 				printf(
