@@ -94,6 +94,14 @@
 }
 .ef5-heading-6{
 	text-align: center;
+	.ef5-heading-btn{
+		justify-content:center;
+	}
+	&.text-end{
+		.ef5-heading-btn{
+			justify-content: end;
+		}
+	}
 }
 .ef5-heading-btn{
 	display: flex;
