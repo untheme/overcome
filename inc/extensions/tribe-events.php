@@ -258,7 +258,7 @@ class OverCome_Tribe_Event_Walker_Comment extends Walker_Comment {
 					<?php } ?>
 					<div class="col">
 						<?php $this->overcome_comment_author_info([], $comment , $comment_author ); ?>
-						<div class="comment-metadata">
+						<div class="comment-metadata pt-5">
 							<span class="comment-time meta-color"><?php
 									/* translators: 1: comment date, 2: comment time */
 									$comment_timestamp = sprintf( __( '%1$s at %2$s', 'overcome' ), get_comment_date( '', $comment ), get_comment_time() );
@@ -328,7 +328,7 @@ class OverCome_Tribe_Event_Walker_Comment extends Walker_Comment {
 				printf(
 					/* translators: %s: comment author link */
 					esc_html__( '%s', 'overcome' ),
-					sprintf( '<div class="author-name h5">%1$s %2$s</div>',$author_badge, $comment_author )
+					sprintf( '<div class="author-name h5 text-uppercase">%1$s %2$s</div>',$author_badge, $comment_author )
 				);
 			?>
 		</div>
