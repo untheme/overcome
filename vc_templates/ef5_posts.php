@@ -545,7 +545,7 @@
                         if($thumbnail_size_index >= count($thumbnail_size)){
                             $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
                         }
-                        $this->overcome_posts_item2($atts,[
+                        overcome_vc_post_layout_12($atts,[
                             'class'          => 'overlay-wrap',
                             'thumbnail_size' => overcome_default_value($thumbnail_size[$thumbnail_size_index], '270x212')
                         ]);
