@@ -545,10 +545,16 @@
                         if($thumbnail_size_index >= count($thumbnail_size)){
                             $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
                         }
-                        overcome_vc_post_layout_12($atts,[
-                            'class'          => 'overlay-wrap',
-                            'thumbnail_size' => overcome_default_value($thumbnail_size[$thumbnail_size_index], '270x212')
-                        ]);
+                        ?>
+                        <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
+                            <?php
+                            overcome_vc_post_layout_12($atts,[
+                                'class'          => 'overlay-wrap',
+                                'thumbnail_size' => overcome_default_value($thumbnail_size[$thumbnail_size_index], '270x212')
+                            ]);
+                            ?>
+                        </div>
+                        <?php
                     }
                     wp_reset_postdata();
             break;
