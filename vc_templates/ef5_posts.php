@@ -545,12 +545,10 @@
                         if($thumbnail_size_index >= count($thumbnail_size)){
                             $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
                         }
-                        if($post_count2 != 1){
-                            $this->overcome_posts_item2($atts,[
-                                'class'          => 'overlay-wrap',
-                                'thumbnail_size' => overcome_default_value($thumbnail_size[$thumbnail_size_index], '270x212')
-                            ]);
-                        }
+                        $this->overcome_posts_item2($atts,[
+                            'class'          => 'overlay-wrap',
+                            'thumbnail_size' => overcome_default_value($thumbnail_size[$thumbnail_size_index], '270x212')
+                        ]);
                     }
                     wp_reset_postdata();
             break;
