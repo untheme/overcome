@@ -217,7 +217,7 @@ function overcome_vc_post_layout_12($atts, $args = []){
                 ]);   
             ?>
             <div class="col">
-                <div class="p-30 pl-0"><?php 
+                <div class="pt-30 pb-30 pr-30"><?php 
                     overcome_post_title(['class'=>'text-22 pb-5']);
                     overcome_post_excerpt([
                         'show_excerpt' => '1', 
