@@ -81,6 +81,34 @@ function overcome_loop_donate_info2($args = []){
 			</div>
 		<?php
 				break;
+				case '4':
+		?>
+				<div class="<?php echo trim(implode(' ', $css_class));?>">
+					<div class="ef5-loop-donate-info-inner row justify-content-between">
+						<div class="col-auto">
+							<?php ef5payments_donation_raised([
+								'label' => esc_html__('Donate so far:','overcome'),
+								'class'	=> 'ef5-donation-raised d-block text-40 font-style-600 ef5-text-accent'
+							]); ?>
+						</div>
+						<div class="col-auto">
+							<?php 
+								ef5payments_donation_donate_button([
+									'class' => 'ef5-btn ef5-btn-tn accent fill'
+								]);
+								overcome_post_share([
+									'show_share' => '1',
+									'show_title' => '1',
+									'title'		 => esc_html__('Share:','overcome'), 
+									'show_all'   => '0'
+								]);
+							?>
+						</div>
+					</div>
+				</div>
+		<?php
+
+				break;
 	    	}
 		} else {
 			overcome_post_read_more(['show_readmore' => '1']); 
