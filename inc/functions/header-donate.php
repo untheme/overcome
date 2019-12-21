@@ -11,9 +11,9 @@ function overcome_header_donate_button(){
         'class'        => 'ef5-btn ef5-btn-sm accent fill',
         'data-options' => '',
         'data-target'  => '',
-        'title'	 	   => overcome_get_opts('header_donate_label', esc_html__('Donate Now','overcome')),	
-        'url'		   => '#',
-        'target'	   => '_self'	
+        'title'        => overcome_get_opts('header_donate_label', esc_html__('Donate Now','overcome')),	
+        'url'          => '#',
+        'target'       => '_self'	
     ],$post_id);
     ?>
     <span class="header-icon ef5-header-donate">
