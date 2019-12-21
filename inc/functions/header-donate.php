@@ -1,6 +1,5 @@
 <?php
 function overcome_header_donate_button(){
-  echo 'xxx';
 	if(!class_exists('EF5Payments') || overcome_get_opts('header_donate', '0') === '0') return;
     wp_enqueue_script('bootstrap');
     if(is_singular('ef5_donation')){
