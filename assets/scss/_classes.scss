@@ -244,7 +244,7 @@ $ef5-rounded: (
 			}
 		}
 		// RTL Offset 
-		@each $column, $column-value in $grid-x-columns{
+		@each $name, $rounded in $ef5-rounded{
 			.rtl .ef5-rounded#{$infix}-l-#{$name}{
 				@include border-radius-separate(0, $rounded, $rounded, 0);
 			}
