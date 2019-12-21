@@ -90,8 +90,14 @@
 		}
 	}
 	&.layout-4{
+		border-top: 1px solid #d7d7d7;
+		margin-top: -3px;
+		padding-top: 14px;
 		.ef5-shares{
 			margin-top: 5px;
+		}
+		.ef5-value{
+			padding-top: 5px;
 		}
 	}
 }
