@@ -226,7 +226,7 @@ function overcome_vc_post_layout_12($atts, $args = []){
                     'class'        => 'text-13 text-777777 mb-17' 
                 ]);
                 overcome_tribe_events_info_hori(['class' => 'text-13']);
-                overcome_loop_donate_info2(['layout' => '3']);
+                overcome_loop_donate_info2(['layout' => '4']);
             ?></div>
         </div>
     </div>
