@@ -217,8 +217,8 @@ $ef5-rounded: (
 	.ef5-rounded-tbl-#{$name}{
 		@include border-radius-separate($rounded, 0, $rounded, 0);
 	}
-	@media (max-width: $screen-xs-max){
-		.ef5-rounded-xs-t-#{$name}{
+	@media (max-width: $screen-sm-max){
+		.ef5-rounded-sm-t-#{$name}{
 			@include border-radius-separate($rounded, $rounded, 0, 0);
 		}
 	}
