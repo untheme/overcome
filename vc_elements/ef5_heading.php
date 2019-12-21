@@ -499,7 +499,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $args['class2'] .= $this->getCSSAnimation( $atts['button_link2_css_animation'] );
         extract( $atts );
         //  Button Link
-        $use_link = false;
+        $use_link = $use_link2 = false;
         $button_link = vc_build_link( $atts['button_link'] );
         $button_link = ( $button_link == '||' ) ? '' : $button_link;
         if ( strlen( $button_link['url'] ) > 0 ) {
