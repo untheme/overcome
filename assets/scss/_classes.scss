@@ -243,9 +243,9 @@ $ef5-rounded: (
 				}
 			}
 			.ef5-rounded#{$infix}-r-#{$name}{
-				@include border-radius-separate(0, $rounded, $rounded, 0);
+				@include border-radius-separate(0, $rounded, 0, $rounded);
 				[dir="rtl"] &{
-					@include border-radius-separate($rounded, 0, $rounded, 0);
+					@include border-radius-separate(0, $rounded, $rounded, 0);
 				}
 			}
 		}
