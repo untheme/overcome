@@ -217,7 +217,7 @@ function overcome_vc_post_layout_12($atts, $args = []){
                     'img_class'      => 'h-100 '.$rounded
                 ]);   
             ?>
-            <div class="col p-30"><?php 
+            <div class="col"><?php 
                 overcome_post_title(['class'=>'text-22 pb-5']);
                 overcome_post_excerpt([
                     'show_excerpt' => '1', 
