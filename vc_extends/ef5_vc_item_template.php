@@ -201,7 +201,7 @@ function overcome_vc_post_layout_12($atts, $args = []){
         'class'          => '',
         'thumbnail_size' => '270x212',
     ]);
-    $css_class = ['ef5-post-item-inner', 'row', $args['class']];
+    $css_class = ['ef5-post-item-inner', 'row gutters-0', $args['class']];
     $after = '<div class="overlay ef5-bg-overlay ef5-rounded-tbl-10 ef5-rounded-sm-t-10"><div class="overlay-inner center-align"><a class="text-36 text-white" href="'.get_the_permalink().'"><span class="fa fa-link"></span></a></div></div>'
     ?>
     <div class="ef5-post-item ef5-post-item-layout-<?php echo esc_attr($atts['layout_template']);?> ef5-rounded-10 ef5-hover-shadow-1 mb-20 transition">
@@ -217,7 +217,7 @@ function overcome_vc_post_layout_12($atts, $args = []){
                 ]);   
             ?>
             <div class="col">
-                <div class="pt-30 pb-30 pr-30"><?php 
+                <div class="p-30"><?php 
                     overcome_post_title(['class'=>'text-22 pb-5']);
                     overcome_post_excerpt([
                         'show_excerpt' => '1', 
