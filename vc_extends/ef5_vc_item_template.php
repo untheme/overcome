@@ -216,19 +216,17 @@ function overcome_vc_post_layout_12($atts, $args = []){
                     'img_class'      => 'h-100 ef5-rounded-tbl-10 ef5-rounded-sm-t-10'
                 ]);   
             ?>
-            <div class="col">
-                <div class="p-30"><?php 
-                    overcome_post_title(['class'=>'text-22 pb-5']);
-                    overcome_post_excerpt([
-                        'show_excerpt' => '1', 
-                        'length'       => '5', 
-                        'more'         => '',
-                        'class'        => 'text-13 mb-17' 
-                    ]);
-                    overcome_tribe_events_info_hori(['class' => 'text-13']);
-                    overcome_loop_donate_info2(['layout' => '3']);
-                ?></div>
-            </div>
+            <div class="col p-30"><?php 
+                overcome_post_title(['class'=>'text-22 pb-5']);
+                overcome_post_excerpt([
+                    'show_excerpt' => '1', 
+                    'length'       => '5', 
+                    'more'         => '',
+                    'class'        => 'text-13 mb-17' 
+                ]);
+                overcome_tribe_events_info_hori(['class' => 'text-13']);
+                overcome_loop_donate_info2(['layout' => '3']);
+            ?></div>
         </div>
     </div>
     <?php
