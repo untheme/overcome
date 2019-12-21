@@ -204,7 +204,7 @@ function overcome_vc_post_layout_12($atts, $args = []){
     $css_class = ['ef5-post-item-inner', 'row', $args['class']];
     $after = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align"><a class="text-36 text-white" href="'.get_the_permalink().'"><span class="fa fa-link"></span></a></div></div>'
     ?>
-    <div class="ef5-post-item ef5-post-item-<?php echo esc_attr($atts['layout_template']);?> ef5-rounded-10 ef5-hover-shadow-1 mb-50 transition">
+    <div class="ef5-post-item ef5-post-item-layout-<?php echo esc_attr($atts['layout_template']);?> ef5-rounded-10 ef5-hover-shadow-1 mb-50 transition">
         <div class="<?php echo trim(implode(' ', $css_class));?>">
             <?php 
                 overcome_post_media([
