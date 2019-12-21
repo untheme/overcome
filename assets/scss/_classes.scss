@@ -238,18 +238,15 @@ $ef5-rounded: (
 			}
 			.ef5-rounded#{$infix}-l-#{$name}{
 				@include border-radius-separate($rounded, 0, $rounded, 0);
+				[dir="rtl"] &{
+					@include border-radius-separate(0, $rounded, 0, $rounded);
+				}
 			}
 			.ef5-rounded#{$infix}-r-#{$name}{
 				@include border-radius-separate(0, $rounded, $rounded, 0);
-			}
-		}
-		// RTL Offset 
-		@each $name, $rounded in $ef5-rounded{
-			.rtl .ef5-rounded#{$infix}-l-#{$name}{
-				@include border-radius-separate(0, $rounded, 0, $rounded);
-			}
-			.rtl .ef5-rounded#{$infix}-r-#{$name}{
-				@include border-radius-separate($rounded, 0, $rounded, 0);
+				[dir="rtl"] &{
+					@include border-radius-separate($rounded, 0, $rounded, 0);
+				}
 			}
 		}
 	}
