@@ -201,8 +201,9 @@ function overcome_vc_post_layout_12($atts, $args = []){
         'class'          => '',
         'thumbnail_size' => '270x212',
     ]);
+    $rounded = 'ef5-rounded-sm-l-10 ef5-rounded-t-10';
     $css_class = ['ef5-post-item-inner', 'row gutters-0', $args['class']];
-    $after = '<div class="overlay ef5-bg-overlay ef5-rounded-tbl-10 ef5-rounded-sm-t-10"><div class="overlay-inner center-align"><a class="text-36 text-white" href="'.get_the_permalink().'"><span class="fa fa-link"></span></a></div></div>'
+    $after = '<div class="overlay ef5-bg-overlay '.$rounded.'"><div class="overlay-inner center-align"><a class="text-36 text-white" href="'.get_the_permalink().'"><span class="fa fa-link"></span></a></div></div>'
     ?>
     <div class="ef5-post-item ef5-post-item-layout-<?php echo esc_attr($atts['layout_template']);?> ef5-rounded-10 ef5-hover-shadow-1 mb-20 transition">
         <div class="<?php echo trim(implode(' ', $css_class));?>">
@@ -210,10 +211,10 @@ function overcome_vc_post_layout_12($atts, $args = []){
                 overcome_post_media([
                     'thumbnail_size' => $args['thumbnail_size'], 
                     'default_thumb'  => true,
-                    'class'          => 'col-xs-auto',
+                    'class'          => 'col-sm-auto',
                     'before'         => '<div class="relative h-100">',
                     'after'          => $after.'</div>',
-                    'img_class'      => 'h-100 ef5-rounded-tbl-10 ef5-rounded-sm-t-10'
+                    'img_class'      => 'h-100 '.$rounded
                 ]);   
             ?>
             <div class="col p-30"><?php 
