@@ -210,13 +210,13 @@ function overcome_vc_post_layout_12($atts, $args = []){
                 overcome_post_media([
                     'thumbnail_size' => $args['thumbnail_size'], 
                     'default_thumb'  => true,
-                    'class'          => 'col-xs-auto p-0',
+                    'class'          => 'col-xs-auto',
                     'before'         => '<div class="relative h-100">',
                     'after'          => $after.'</div>',
                     'img_class'      => 'h-100'
                 ]);   
             ?>
-            <div class="col pt-17 pb-8 pl-20 pr-20">
+            <div class="col">
                 <?php 
                     overcome_post_title(['class'=>'text-22 pb-5']);
                     overcome_post_excerpt([
