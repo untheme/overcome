@@ -213,7 +213,7 @@ function overcome_vc_post_layout_12($atts, $args = []){
                     'class'          => 'col-xs-auto',
                     'before'         => '<div class="relative h-100">',
                     'after'          => $after.'</div>',
-                    'img_class'      => 'h-100'
+                    'img_class'      => 'h-100 ef5-rounded-tbl-10 ef5-rounded-xs-tr-10'
                 ]);   
             ?>
             <div class="col">

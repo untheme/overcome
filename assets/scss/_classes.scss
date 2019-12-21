@@ -214,6 +214,9 @@ $ef5-rounded: (
 	.ef5-rounded-b-#{$name}{
 		@include border-radius-separate(0, 0, $rounded, $rounded);
 	}
+	.ef5-rounded-tbl-#{$name}{
+		@include border-radius-separate($rounded, 0, 0, $rounded);
+	}
 }
 
 // Border 
