@@ -89,6 +89,7 @@ function overcome_loop_donate_info2($args = []){
 							<?php ef5payments_donation_raised([
 								'label' => esc_html__('Donate so far:','overcome'),
 								'class'	=> 'ef5-donation-raised',
+								'label_class' => 'font-style-500',
 								'value_class' => 'd-block text-40 font-style-600 ef5-text-accent'
 							]); ?>
 						</div>
