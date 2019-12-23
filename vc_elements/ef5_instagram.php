@@ -57,25 +57,25 @@ vc_map(array(
             'type'          => 'checkbox',
             'param_name'    => 'show_like',
             'value'         => array(
-                esc_html__('Show like count?', 'overcome') => true
+                esc_html__('Show like count?', 'overcome') => 'true'
             ),
-            'std'           => false,
+            'std'           => 'false',
             'edit_field_class' => 'vc_col-sm-4'
         ),
         array(
             'type'          => 'checkbox',
             'param_name'    => 'show_cmt',
             'value'         => array(
-                esc_html__('Show comment count?', 'overcome') => true
+                esc_html__('Show comment count?', 'overcome') => 'true'
             ),
-            'std'           => false,
+            'std'           => 'false',
             'edit_field_class' => 'vc_col-sm-4'
         ),
         array(
             'type'          => 'checkbox',
             'param_name'    => 'show_author',
             'value'         => array(
-                esc_html__('Show Author?', 'overcome') => true
+                esc_html__('Show Author?', 'overcome') => 'true'
             ),
             'std'           => 'true',
             'edit_field_class' => 'vc_col-sm-4'
