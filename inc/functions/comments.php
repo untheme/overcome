@@ -16,7 +16,7 @@ if(!function_exists('overcome_comment')){
 	function overcome_comment($args = []){
 		$args = wp_parse_args($args, []);
 		if(isset($args['walker'])) {
-			add_filter('wp_list_comments_args', function (){ return ['walker'] => new $args['walker']})
+			add_filter('wp_list_comments_args', function (){ return ['walker' => new $args['walker']]})
 		}
 		$show_cmt = overcome_get_opts('show_comment_form', '1');
 		if ( '1' === $show_cmt && (comments_open() || get_comments_number()) )
