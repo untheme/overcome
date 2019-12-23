@@ -87,10 +87,10 @@ if(!function_exists('overcome_default_ins_data')){
                 ]
             ]
         ];
-        foreach ($default as $key => $value) {
+        foreach ($default['images'] as $key => $value) {
             $images[$key] = $value; 
         }
-        reutrn $images;
+        return $images;
     }
 }
 
