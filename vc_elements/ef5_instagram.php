@@ -115,5 +115,16 @@ class WPBakeryShortCode_ef5_instagram extends WPBakeryShortCode
         extract($atts);
         return parent::content($atts, $content);
     }
-    
+    protected function title($atts, $args=[]){
+        if(empty($atts['el_title'])) return;
+        $args = wp_parse_args($args, [
+            'class' => $atts['el_title_class']
+        ]);
+        $classes = ['ef5-el-title', 'ef5-heading', $args['class']];
+        ?>
+            <div class="<?php echo trim(implode(' ', $classes));?>">
+                <?php echo esc_html($atts['el_title']); ?>
+            </div>
+        <?php
+    }
 }

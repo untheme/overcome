@@ -47,6 +47,13 @@ $args = [
     'author_text'   => $author_text,
     'username'      => $username
 ];
-
-$html = apply_filters('ef5systems_instagram_output_html', $args);
-echo overcome_html($html);
+?>
+<div class="ef5-instagrams-wrap">
+    <?php 
+        // title
+        $this->title($atts);
+        // content
+        $html = apply_filters('ef5systems_instagram_output_html', $args);
+        echo overcome_html($html);
+    ?>
+</div>
