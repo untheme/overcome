@@ -18,7 +18,7 @@ class OverCome_WG_Single_Donate extends WP_Widget
     function __construct()
     {
         parent::__construct(
-            'ef5-single-payment',
+            'ef5-wg-single-payment',
             esc_html__( '[OverCome] Single Donate', 'overcome' ),
             array(
                 'description' => __( 'Shows donate button single', 'overcome' ),
