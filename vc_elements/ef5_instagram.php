@@ -54,7 +54,7 @@ vc_map(array(
             'type'          => 'textfield',
             'heading'       => esc_html__('Number Image', 'overcome'),
             'param_name'    => 'number',
-            'std'           => '4',
+            'std'           => '6',
             'edit_field_class' => 'vc_col-sm-6'
         ),
         array(
@@ -62,7 +62,7 @@ vc_map(array(
             'heading'       => esc_html__('Number Columns', 'overcome'),
             'param_name'    => 'columns',
             'value'         => array('1', '2', '3', '4', '6', '8', '12'),
-            'std'           => '4',
+            'std'           => '3',
             'edit_field_class' => 'vc_col-sm-6'
         ),
         array(
@@ -70,7 +70,7 @@ vc_map(array(
             'heading'       => esc_html__('Columns Space', 'overcome'),
             'param_name'    => 'columns_space',
             'value'         => array('0', '2', '5', '10', '20', '30'),
-            'std'           => '0',
+            'std'           => '20',
             'edit_field_class' => 'vc_col-sm-6'
         ),
         
