@@ -103,9 +103,9 @@ if (!function_exists('overcome_instagram_custom_layout')) {
     function overcome_instagram_custom_layout()
     {
         return [
-            '1' => esc_html__('Layout 1', 'theclick'),
-            '2' => esc_html__('Layout 2', 'theclick'),
-            '3' => esc_html__('Layout 3', 'theclick'),
+            '1' => esc_html__('Layout 1', 'overcome'),
+            '2' => esc_html__('Layout 2', 'overcome'),
+            '3' => esc_html__('Layout 3', 'overcome'),
         ];
     }
 }
@@ -154,8 +154,8 @@ if (!function_exists('overcome_instagram_html_output')) {
                                 ?>
                             </a>
                             <div class="user-follow">
-                                <span class="follower"><?php echo esc_attr($follower)?> <?php echo esc_html__('Followers','theclick')?></span>
-                                <span class="following"><?php echo esc_attr($following)?> <?php echo esc_html__('Following','theclick')?></span>
+                                <span class="follower"><?php echo esc_attr($follower)?> <?php echo esc_html__('Followers','overcome')?></span>
+                                <span class="following"><?php echo esc_attr($following)?> <?php echo esc_html__('Following','overcome')?></span>
                             </div>
                         </div>
                     </div>
