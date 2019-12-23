@@ -42,7 +42,7 @@ get_header();
                         // Related
                         overcome_post_related();
                         // Comment
-                        overcome_comment(['walker' => OverCome_Walker_Comment()]);
+                        overcome_comment(['walker' => 'OverCome_Tribe_Event_Walker_Comment']);
                     endwhile; // End of the loop.
                 ?>
                 </div>
