@@ -52,7 +52,6 @@ class OverCome_WG_Single_Donate extends WP_Widget
 
         printf('%s', $args['before_title'] . $title . $args['after_title']);
 
-        $number = absint( $instance['number'] );
 
         $layout         = absint($instance['layout']);
         $post_type      = $instance['post_type'];
