@@ -166,7 +166,7 @@ class OverCome_WG_Single_Donate extends WP_Widget
             'show_cat'       => false
         ) );
 
-        $title          = $instance['title'] ? esc_attr( $instance['title'] ) : esc_html__( 'Recent Posts', 'overcome' );
+        $title          = $instance['title'] ? esc_attr( $instance['title'] ) : get_the_title();
         $thumbnail_size = $instance['thumbnail_size'] ? $instance['thumbnail_size']  : '80x80';
         $layout         = absint($instance['layout']);
         $show_author    = (bool) $instance['show_author'];
