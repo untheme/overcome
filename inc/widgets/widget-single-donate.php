@@ -90,30 +90,7 @@ class OverCome_WG_Single_Donate extends WP_Widget
                 );
 
                 echo '<div class="ef5-brief col" style="max-width: calc(100% - '.$thumbnail_size[0].'px);">';
-
-                printf(
-                    '<h4 class="ef5-heading font-style-500 pb-10"><a href="%1$s" title="%2$s">%3$s</a></h4>',
-                    esc_url( get_permalink() ),
-                    esc_attr( get_the_title() ),
-                    get_the_title()
-                );
-                switch ($layout) {
-                    case '2':
-                         echo 'xxx';
-                        break;
-                    
-                    default:
-                        echo '111';
-                        if(class_exists('EF5Payments')) {
-                            ef5payments_donation_layout_1(['progress_bar' => false, 'show_percent'=>false]);
-                        }
-                        break;
-                }
                 
-                overcome_tribe_events_time([
-                    'before' => '<div class="text-15 font-style-500 ef5-text-primary">',
-                    'after'  => '</div>'
-                ]);
                 if ( $show_author || $show_comments || $show_date || $show_cat )
                 {
                     ob_start();
@@ -127,6 +104,9 @@ class OverCome_WG_Single_Donate extends WP_Widget
                     {
                         printf( '<div class="ef5-meta row gutter-20 justify-content-between">%s</div>', $post_meta );
                     }
+                }
+                if(class_exists('EF5Payments')) {
+                    ef5payments_donation_layout_1(['progress_bar' => false, 'show_percent'=>false]);
                 }
                 echo '</div>';
 
