@@ -36,7 +36,7 @@ if(!function_exists('overcome_default_ins_data')){
             'user' => [
                 'username'    => 'overcome',
                 'display_name' => 'OverCome',
-                'avatar'       => get_template_directory_uri().'/assets/images/avatar.png',
+                'avatar'       => get_template_directory_uri().'/assets/images/instagram/avatar.png',
                 'follower'     => '100',
                 'following'    => '10'
             ],
