@@ -21,10 +21,7 @@ function overcome_cpts_stories($post_types) {
 				'rewrite'       => array(
 					'slug'       => overcome_get_theme_opt('stories_slug','ef5_stories'), 
 					'with_front' => true
-	            ),
-                'supports' => [
-                    'comments'
-                ]
+	            )
 	        ) 
 	    );
 	}
