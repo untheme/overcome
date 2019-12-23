@@ -111,6 +111,8 @@ function overcome_get_sidebar($check = true){
         $sidebar = 'sidebar-main';
     } elseif (is_post_type_archive('portfolio') || is_singular('ef5_portfolio')) {
         $sidebar = 'sidebar-portfolio';
+    } elseif (is_singular('ef5_stories')) {
+        $sidebar = 'ef5_stories_widget';
     } elseif (is_page()) {
         if (class_exists('WooCommerce') && (is_checkout() || is_cart())) {
             $sidebar = 'sidebar-shop';
@@ -146,6 +148,8 @@ function overcome_sidebar_position(){
         $sidebar_position = overcome_get_opts('post_sidebar_pos',overcome_post_sidebar_position());
     } elseif (is_singular('ef5_portfolio')) {
         $sidebar_position = overcome_get_opts('portfolio_sidebar_pos',overcome_portfolio_sidebar_position());
+    } elseif (is_singular('ef5_stories')) {
+        $sidebar_position = 'ef5_stories_widget';
     } elseif (class_exists('WooCommerce') && is_post_type_archive('product')) {
         $sidebar_position = overcome_get_opts('shop_sidebar_pos',overcome_shop_sidebar_position());
     } elseif (is_singular('product')) {
