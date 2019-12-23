@@ -37,6 +37,7 @@ class OverCome_WG_Single_Donate extends WP_Widget
     function widget( $args, $instance )
     {
         $instance = wp_parse_args( (array) $instance, array(
+            'title'         => '',
             'thumbnail_size'=> '80x80',
             'layout'        => 1,
             'show_author'   => true,
@@ -50,70 +51,78 @@ class OverCome_WG_Single_Donate extends WP_Widget
 
         printf('%s', $args['before_widget']);
 
-        printf('%s', $args['before_title'] . $title . $args['after_title']);
-
+        if(!empty($title)) printf('%s', $args['before_title'] . $title . $args['after_title']);
 
         $layout         = absint($instance['layout']);
-        $post_type      = $instance['post_type'];
         $thumbnail_size = $instance['thumbnail_size'];
         $show_author    = (bool)$instance['show_author'];
         $show_date      = (bool)$instance['show_date'];
         $show_comments  = (bool)$instance['show_comments'];
         $show_cat       = (bool)$instance['show_cat'];
 
-            printf(
-                '<div class="post-list-item transition %s"><div class="row gutters-20">',
-                ( has_post_thumbnail() ? 'has-post-thumbnail' : '' )
-            );
+        $r = new WP_Query( array(
+            'post_type'           => $post_type,
+            'posts_per_page'      => $number,
+            'no_found_rows'       => true,
+            'post_status'         => 'publish',
+            'ignore_sticky_posts' => true
+        ) );
 
-            
-            $thumbnail_url = overcome_get_image_url_by_size([
-                'size'          => $thumbnail_size,
-                'default_thumb' => true,
-            ]);
-            printf(
-                '<div class="ef5-featured col-auto">' .
-                    '<a href="%1$s" title="%2$s" class="ef5-thumbnail">' .
-                        '<img src="%3$s" alt="%2$s" />' .
-                    '</a>' .
-                '</div>',
-                esc_url( get_permalink() ),
-                esc_attr( get_the_title() ),
-                esc_url( $thumbnail_url )
-            );
+        
 
-            echo '<div class="ef5-brief col" style="max-width: calc(100% - '.$thumbnail_size[0].'px);">';
+                printf(
+                    '<div class="post-list-item transition %s"><div class="row gutters-20">',
+                    ( has_post_thumbnail() ? 'has-post-thumbnail' : '' )
+                );
 
-            printf(
-                '<h4 class="ef5-heading font-style-500 pb-10"><a href="%1$s" title="%2$s">%3$s</a></h4>',
-                esc_url( get_permalink() ),
-                esc_attr( get_the_title() ),
-                get_the_title()
-            );
-            if(class_exists('EF5Payments')) {
-                ef5payments_donation_layout_1(['progress_bar' => false, 'show_percent'=>false]);
-            }
-            overcome_tribe_events_time([
-                'before' => '<div class="text-15 font-style-500 ef5-text-primary">',
-                'after'  => '</div>'
-            ]);
-            if ( $show_author || $show_comments || $show_date || $show_cat )
-            {
-                ob_start();
-                if($show_author) overcome_posted_by();
-                if($show_date) overcome_posted_on();
-                if($show_comments) overcome_comments_popup_link(['show_text'=> true]);
-                if($show_cat) overcome_posted_in();
-                $post_meta = ob_get_clean();
+                
+                $thumbnail_url = overcome_get_image_url_by_size([
+                    'size'          => $thumbnail_size,
+                    'default_thumb' => true,
+                ]);
+                printf(
+                    '<div class="ef5-featured col-auto">' .
+                        '<a href="%1$s" title="%2$s" class="ef5-thumbnail">' .
+                            '<img src="%3$s" alt="%2$s" />' .
+                        '</a>' .
+                    '</div>',
+                    esc_url( get_permalink() ),
+                    esc_attr( get_the_title() ),
+                    esc_url( $thumbnail_url )
+                );
 
-                if ( $post_meta )
-                {
-                    printf( '<div class="ef5-meta row gutter-20 justify-content-between">%s</div>', $post_meta );
+                echo '<div class="ef5-brief col" style="max-width: calc(100% - '.$thumbnail_size[0].'px);">';
+
+                printf(
+                    '<h4 class="ef5-heading font-style-500 pb-10"><a href="%1$s" title="%2$s">%3$s</a></h4>',
+                    esc_url( get_permalink() ),
+                    esc_attr( get_the_title() ),
+                    get_the_title()
+                );
+                if(class_exists('EF5Payments')) {
+                    ef5payments_donation_layout_1(['progress_bar' => false, 'show_percent'=>false]);
                 }
-            }
-            echo '</div>';
+                overcome_tribe_events_time([
+                    'before' => '<div class="text-15 font-style-500 ef5-text-primary">',
+                    'after'  => '</div>'
+                ]);
+                if ( $show_author || $show_comments || $show_date || $show_cat )
+                {
+                    ob_start();
+                    if($show_author) overcome_posted_by();
+                    if($show_date) overcome_posted_on();
+                    if($show_comments) overcome_comments_popup_link(['show_text'=> true]);
+                    if($show_cat) overcome_posted_in();
+                    $post_meta = ob_get_clean();
 
-            echo '</div></div>';
+                    if ( $post_meta )
+                    {
+                        printf( '<div class="ef5-meta row gutter-20 justify-content-between">%s</div>', $post_meta );
+                    }
+                }
+                echo '</div>';
+
+                echo '</div></div>';
 
         printf('%s', $args['after_widget']);
     }
@@ -129,6 +138,7 @@ class OverCome_WG_Single_Donate extends WP_Widget
     function update( $new_instance, $old_instance )
     {
         $instance                   = $old_instance;
+        $instance['title']          = sanitize_text_field( $new_instance['title'] );
         $instance['thumbnail_size'] = sanitize_text_field( $new_instance['thumbnail_size'] );
         $instance['layout']         = absint($new_instance['layout']) ;
         $instance['show_author']    = (bool)$new_instance['show_author'] ;
@@ -147,6 +157,7 @@ class OverCome_WG_Single_Donate extends WP_Widget
     function form( $instance )
     {
         $instance = wp_parse_args( (array) $instance, array(
+            'title'          => '',
             'thumbnail_size' => '80x80',
             'layout'         => 1,
             'show_author'    => true,
@@ -155,6 +166,7 @@ class OverCome_WG_Single_Donate extends WP_Widget
             'show_cat'       => false
         ) );
 
+        $title          = $instance['title'] ? esc_attr( $instance['title'] ) : esc_html__( 'Recent Posts', 'overcome' );
         $thumbnail_size = $instance['thumbnail_size'] ? $instance['thumbnail_size']  : '80x80';
         $layout         = absint($instance['layout']);
         $show_author    = (bool) $instance['show_author'];
@@ -163,6 +175,11 @@ class OverCome_WG_Single_Donate extends WP_Widget
         $show_cat       = (bool) $instance['show_cat'];
 
         ?>
+        <p>
+            <label for="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>"><?php esc_html_e( 'Title:', 'overcome' ); ?></label>
+            <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+        </p>
+        
         <p>
             <label for="<?php echo esc_attr( $this->get_field_id( 'thumbnail_size' ) ); ?>"><?php esc_html_e( 'Thumbnail Size', 'overcome' ); ?></label>
             <input class="widefat" id="<?php echo esc_attr( $this->get_field_id( 'thumbnail_size' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'thumbnail_size' ) ); ?>" type="text" value="<?php echo esc_attr( $thumbnail_size ); ?>" />
@@ -174,10 +191,12 @@ class OverCome_WG_Single_Donate extends WP_Widget
                 <option value="3" <?php if( $layout == '3' ){ echo 'selected="selected"';} ?>><?php esc_html_e('Layout 3', 'overcome');?></option>
             </select>
         </p>
+        
         <p>
             <input class="checkbox" type="checkbox"<?php checked( $show_author ); ?> id="<?php echo esc_attr( $this->get_field_id( 'show_author' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_author' ) ); ?>" value="1" />
             <label for="<?php echo esc_attr( $this->get_field_id( 'show_author' ) ); ?>"><?php esc_html_e( 'Display post Author?', 'overcome' ); ?></label>
         </p>
+
         <p>
             <input class="checkbox" type="checkbox"<?php checked( $show_date ); ?> id="<?php echo esc_attr( $this->get_field_id( 'show_date' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_date' ) ); ?>" value="1" />
             <label for="<?php echo esc_attr( $this->get_field_id( 'show_date' ) ); ?>"><?php esc_html_e( 'Display post date?', 'overcome' ); ?></label>
