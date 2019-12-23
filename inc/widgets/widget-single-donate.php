@@ -64,9 +64,20 @@ class OverCome_WG_Single_Donate extends WP_Widget
         $show_comments  = (bool)$instance['show_comments'];
         $show_cat       = (bool)$instance['show_cat'];
 
-        
+        if ( $show_author || $show_comments || $show_date || $show_cat )
+        {
+            ob_start();
+            if($show_author) overcome_posted_by();
+            if($show_date) overcome_posted_on();
+            if($show_comments) overcome_comments_popup_link(['show_text'=> true]);
+            if($show_cat) overcome_posted_in();
+            $post_meta = ob_get_clean();
 
-        
+            if ( $post_meta )
+            {
+                printf( '<div class="ef5-meta row gutter-20 justify-content-between">%s</div>', $post_meta );
+            }
+        }
 
                 printf(
                     '<div class="post-list-item transition %s"><div class="row gutters-20">',
@@ -74,41 +85,28 @@ class OverCome_WG_Single_Donate extends WP_Widget
                 );
 
                 
-                $thumbnail_url = overcome_get_image_url_by_size([
-                    'size'          => $thumbnail_size,
-                    'default_thumb' => true,
-                ]);
-                printf(
-                    '<div class="ef5-featured col-auto">' .
-                        '<a href="%1$s" title="%2$s" class="ef5-thumbnail">' .
-                            '<img src="%3$s" alt="%2$s" />' .
-                        '</a>' .
-                    '</div>',
-                    esc_url( get_permalink() ),
-                    esc_attr( get_the_title() ),
-                    esc_url( $thumbnail_url )
-                );
+                    $thumbnail_url = overcome_get_image_url_by_size([
+                        'size'          => $thumbnail_size,
+                        'default_thumb' => true,
+                    ]);
+                    printf(
+                        '<div class="ef5-featured col-auto">' .
+                            '<a href="%1$s" title="%2$s" class="ef5-thumbnail">' .
+                                '<img src="%3$s" alt="%2$s" />' .
+                            '</a>' .
+                        '</div>',
+                        esc_url( get_permalink() ),
+                        esc_attr( get_the_title() ),
+                        esc_url( $thumbnail_url )
+                    );
 
-                echo '<div class="ef5-brief col" style="max-width: calc(100% - '.$thumbnail_size[0].'px);">';
-                
-                if ( $show_author || $show_comments || $show_date || $show_cat )
-                {
-                    ob_start();
-                    if($show_author) overcome_posted_by();
-                    if($show_date) overcome_posted_on();
-                    if($show_comments) overcome_comments_popup_link(['show_text'=> true]);
-                    if($show_cat) overcome_posted_in();
-                    $post_meta = ob_get_clean();
-
-                    if ( $post_meta )
-                    {
-                        printf( '<div class="ef5-meta row gutter-20 justify-content-between">%s</div>', $post_meta );
-                    }
-                }
-                if(class_exists('EF5Payments')) {
-                    ef5payments_donation_layout_1(['progress_bar' => false, 'show_percent'=>false]);
-                }
-                echo '</div>';
+                    echo '<div class="ef5-brief col" style="max-width: calc(100% - '.$thumbnail_size[0].'px);">';
+                    
+                    
+                        if(class_exists('EF5Payments')) {
+                            ef5payments_donation_layout_1(['progress_bar' => false, 'show_percent'=>false]);
+                        }
+                    echo '</div>';
 
                 echo '</div></div>';
 
