@@ -43,10 +43,10 @@ if(!function_exists('overcome_default_ins_data')){
                     'time'          => '',
                     'comments'      => '0',
                     'likes'         => '0',
-                    'thumbnail'     => get_template_directory_uri('/assets/images/instagram/1_thumb.jpeg'),
-                    'small'         => get_template_directory_uri('/assets/images/instagram/1_small.jpeg'),
-                    'large'         => get_template_directory_uri('/assets/images/instagram/1_large.jpeg'),
-                    'original'      => get_template_directory_uri('/assets/images/instagram/1_original.jpeg'),
+                    'thumbnail'     => get_template_directory_uri().'/assets/images/instagram/1_thumb.jpeg',
+                    'small'         => get_template_directory_uri().'/assets/images/instagram/1_small.jpeg',
+                    'large'         => get_template_directory_uri().'/assets/images/instagram/1_large.jpeg',
+                    'original'      => get_template_directory_uri().'/assets/images/instagram/1_original.jpeg',
                     'type'          => 'image'
                 ],
                 '2' => [
@@ -55,10 +55,10 @@ if(!function_exists('overcome_default_ins_data')){
                     'time'          => '',
                     'comments'      => '0',
                     'likes'         => '0',
-                    'thumbnail'     => get_template_directory_uri('/assets/images/instagram/1_thumb.jpeg'),
-                    'small'         => get_template_directory_uri('/assets/images/instagram/1_small.jpeg'),
-                    'large'         => get_template_directory_uri('/assets/images/instagram/1_large.jpeg'),
-                    'original'      => get_template_directory_uri('/assets/images/instagram/1_original.jpeg'),
+                    'thumbnail'     => get_template_directory_uri().'/assets/images/instagram/1_thumb.jpeg',
+                    'small'         => get_template_directory_uri().'/assets/images/instagram/1_small.jpeg',
+                    'large'         => get_template_directory_uri().'/assets/images/instagram/1_large.jpeg',
+                    'original'      => get_template_directory_uri().'/assets/images/instagram/1_original.jpeg',
                     'type'          => 'image'
                 ],
                 '3' => [
@@ -67,10 +67,10 @@ if(!function_exists('overcome_default_ins_data')){
                     'time'          => '',
                     'comments'      => '0',
                     'likes'         => '0',
-                    'thumbnail'     => get_template_directory_uri('/assets/images/instagram/1_thumb.jpeg'),
-                    'small'         => get_template_directory_uri('/assets/images/instagram/1_small.jpeg'),
-                    'large'         => get_template_directory_uri('/assets/images/instagram/1_large.jpeg'),
-                    'original'      => get_template_directory_uri('/assets/images/instagram/1_original.jpeg'),
+                    'thumbnail'     => get_template_directory_uri().'/assets/images/instagram/1_thumb.jpeg',
+                    'small'         => get_template_directory_uri().'/assets/images/instagram/1_small.jpeg',
+                    'large'         => get_template_directory_uri().'/assets/images/instagram/1_large.jpeg',
+                    'original'      => get_template_directory_uri().'/assets/images/instagram/1_original.jpeg',
                     'type'          => 'image'
                 ],
                 '4' => [
@@ -79,10 +79,10 @@ if(!function_exists('overcome_default_ins_data')){
                     'time'          => '',
                     'comments'      => '0',
                     'likes'         => '0',
-                    'thumbnail'     => get_template_directory_uri('/assets/images/instagram/1_thumb.jpeg'),
-                    'small'         => get_template_directory_uri('/assets/images/instagram/1_small.jpeg'),
-                    'large'         => get_template_directory_uri('/assets/images/instagram/1_large.jpeg'),
-                    'original'      => get_template_directory_uri('/assets/images/instagram/1_original.jpeg'),
+                    'thumbnail'     => get_template_directory_uri().'/assets/images/instagram/1_thumb.jpeg',
+                    'small'         => get_template_directory_uri().'/assets/images/instagram/1_small.jpeg',
+                    'large'         => get_template_directory_uri().'/assets/images/instagram/1_large.jpeg',
+                    'original'      => get_template_directory_uri().'/assets/images/instagram/1_original.jpeg',
                     'type'          => 'image'
                 ]
             ]
