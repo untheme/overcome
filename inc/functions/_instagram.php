@@ -32,7 +32,7 @@ if(!function_exists('overcome_default_ins_data')){
             'user' => [
                 'user_name'    => 'overcome',
                 'display_name' => 'OverCome',
-                'avatar'       => get_template_directory_uri('/assets/images/map-marker.png'),
+                'avatar'       => get_template_directory_uri('/assets/images/avatar.png'),
                 'follower'     => '100',
                 'following'    => '10'
             ],
