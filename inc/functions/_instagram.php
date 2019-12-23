@@ -190,8 +190,11 @@ if (!function_exists('overcome_instagram_html_output')) {
                     foreach ($media_array['images'] as $item) {
                         ?>
                         <div class="<?php echo trim(implode(' ', array('instagram-item', $span, 'overlay-wrap'))); ?>">
-                            <a class="ins-img d-block relative" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>">
-                                <img src="<?php echo esc_url($item[$size]); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" />
+                            <div class="relative">
+                                <a class="ins-img d-block relative" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>">
+                                    <img src="<?php echo esc_url($item[$size]); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" />
+                                    
+                                </a>
                                 <div class="overlay ef5-bg-overlay d-flex align-items-center animated" data-animation-in="zoomIn" data-animation-out="zoomOut">
                                     <div class="overlay-inner col-12 text-center">
                                         <a class="ins-icon" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>"><span class="fa fa-instagram"></span></a>
@@ -199,7 +202,7 @@ if (!function_exists('overcome_instagram_html_output')) {
                                         <?php if ($show_cmt) : ?><a class="comments" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>"><span class="fa fa-comments-o"></span><span><?php echo esc_html($item['comments']); ?></span></a><?php endif; ?>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     <?php } ?>
                 </div>
@@ -214,8 +217,10 @@ if (!function_exists('overcome_instagram_html_output')) {
                     foreach ($media_array['images'] as $item) {
                         ?>
                         <div class="<?php echo trim(implode(' ', array('instagram-item', $span, 'overlay-wrap'))); ?>">
-                            <a class="ins-img d-block relative" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>">
-                                <img src="<?php echo esc_url($item[$size]); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" />
+                            <div class="relative">
+                                <a class="ins-img d-block relative" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>">
+                                    <img src="<?php echo esc_url($item[$size]); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" />
+                                </a>
                                 <div class="overlay ef5-bg-overlay d-flex align-items-center animated" data-animation-in="zoomIn" data-animation-out="zoomOut">
                                     <div class="overlay-inner col-12 text-center">
                                         <a class="ins-icon" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>"><span class="fa fa-instagram"></span></a>
@@ -223,7 +228,7 @@ if (!function_exists('overcome_instagram_html_output')) {
                                         <?php if ($show_cmt) : ?><a class="comments" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>"><span class="fa fa-comments-o"></span><span><?php echo esc_html($item['comments']); ?></span></a><?php endif; ?>
                                     </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
                     <?php } ?>
                 </div>
