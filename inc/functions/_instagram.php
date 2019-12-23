@@ -195,7 +195,7 @@ if (!function_exists('overcome_instagram_html_output')) {
                                     <img src="<?php echo esc_url($item[$size]); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" />
                                     
                                 </a>
-                                <div class="overlay ef5-bg-overlay d-flex align-items-center animated" data-animation-in="zoomIn" data-animation-out="zoomOut">
+                                <div class="overlay ef5-bg-overlay d-flex align-items-center animated text-white ef5-link-inherit" data-animation-in="zoomIn" data-animation-out="zoomOut">
                                     <div class="overlay-inner col-12 text-center">
                                         <a class="ins-icon" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>"><span class="fa fa-instagram"></span></a>
                                         <?php if ($show_like) : ?><a class="like" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>"><span class="fa fa-heart-o"></span><span><?php echo esc_html($item['likes']); ?></span></a><?php endif; ?>
@@ -221,7 +221,7 @@ if (!function_exists('overcome_instagram_html_output')) {
                                 <a class="ins-img d-block relative" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>">
                                     <img src="<?php echo esc_url($item[$size]); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" />
                                 </a>
-                                <div class="overlay ef5-bg-overlay d-flex align-items-center animated" data-animation-in="zoomIn" data-animation-out="zoomOut">
+                                <div class="overlay ef5-bg-overlay d-flex align-items-center animated text-white ef5-link-inherit" data-animation-in="zoomIn" data-animation-out="zoomOut">
                                     <div class="overlay-inner col-12 text-center">
                                         <a class="ins-icon" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>"><span class="fa fa-instagram"></span></a>
                                         <?php if ($show_like) : ?><a class="like" href="<?php echo esc_url($item['link']); ?>" target="<?php echo esc_attr($target); ?>"><span class="fa fa-heart-o"></span><span><?php echo esc_html($item['likes']); ?></span></a><?php endif; ?>
