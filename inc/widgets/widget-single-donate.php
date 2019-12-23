@@ -106,6 +106,7 @@ class OverCome_WG_Single_Donate extends WP_Widget
                     ef5payments_donation_donate_button([
                         'class' => 'ef5-btn accent fill'
                     ]);
+                    overcome_post_share();
                 echo '</div>';
 
             echo '</div></div>';
