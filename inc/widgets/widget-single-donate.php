@@ -47,9 +47,9 @@ class OverCome_WG_Single_Donate extends WP_Widget
         ) );
 
         if(!in_array(get_post_type(), ef5payments_supported_post_type())){
-            echo '123';
-         return;
+            return;
         }
+        
         $title = !empty($instance['title']) ? $instance['title'] : get_the_title();
         $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 
