@@ -101,7 +101,7 @@ class OverCome_WG_Single_Donate extends WP_Widget
                     ef5payments_donation_raised([
                         'label' => esc_html__('Donate so far:','overcome'),
                         'label_class' => 'font-style-500',
-                        'value_class' => 'text-40 ef5-text-accent font-style-600'
+                        'value_class' => 'text-40 ef5-text-accent font-style-600 d-block'
                     ]);
                     ef5payments_donation_donate_button();
                 echo '</div>';
