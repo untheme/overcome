@@ -718,7 +718,7 @@ Redux::setSection($opt_name, array(
             'desc'      => esc_html__('Ex: https://www.instagram.com/zooka.studio/. Get zooka.studio','overcome'),
             'id'        => 'instagram_api_username',
             'type'      => 'text',
-            'default'   => 'zooka.studio'
+            'default'   => ''
         ),
         array(
             'title'     => esc_html__('API Key', 'overcome'),
@@ -726,7 +726,7 @@ Redux::setSection($opt_name, array(
             'desc'      => esc_html__('Copy and Paste YOUR Instagram Access Token here!','overcome'),
             'id'        => 'instagram_api_key',
             'type'      => 'text',
-            'default'   => '6500395100.1677ed0.96ebe958c36346fca373fd4ed7016e47'
+            'default'   => ''
         )
     )
 ));
