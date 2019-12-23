@@ -224,7 +224,6 @@ if (!function_exists('overcome_instagram_html_output')) {
                                     </div>
                                 </div>
                             </a>
-                            
                         </div>
                     <?php } ?>
                 </div>
