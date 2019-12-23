@@ -49,7 +49,7 @@ class OverCome_WG_Single_Donate extends WP_Widget
         if(!in_array(get_post_type(), ef5payments_supported_post_type())){
             return;
         }
-        
+
         $title = !empty($instance['title']) ? $instance['title'] : get_the_title();
         $title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
 
@@ -164,7 +164,7 @@ class OverCome_WG_Single_Donate extends WP_Widget
             'show_cat'       => false
         ) );
 
-        $title          = '';
+        $title          = $instance['title'] ? $instance['title']  : '';;
         $thumbnail_size = $instance['thumbnail_size'] ? $instance['thumbnail_size']  : '80x80';
         $layout         = absint($instance['layout']);
         $show_author    = (bool) $instance['show_author'];
