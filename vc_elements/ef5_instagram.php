@@ -16,29 +16,6 @@ vc_map(array(
             'std'           => 'default'
         ),
         array(
-            'type'          => 'textfield',
-            'heading'       => esc_html__('Number Image', 'overcome'),
-            'param_name'    => 'number',
-            'std'           => '4',
-            'edit_field_class' => 'vc_col-sm-3'
-        ),
-        array(
-            'type'          => 'dropdown',
-            'heading'       => esc_html__('Number Columns', 'overcome'),
-            'param_name'    => 'columns',
-            'value'         => array('1', '2', '3', '4', '6', '8', '12'),
-            'std'           => '4',
-            'edit_field_class' => 'vc_col-sm-3'
-        ),
-        array(
-            'type'          => 'dropdown',
-            'heading'       => esc_html__('Columns Space', 'overcome'),
-            'param_name'    => 'columns_space',
-            'value'         => array('0', '2', '5', '10', '20', '30'),
-            'std'           => '0',
-            'edit_field_class' => 'vc_col-sm-3'
-        ),
-        array(
             'type'          => 'dropdown',
             'heading'       => esc_html__('Image Size', 'overcome'),
             'param_name'    => 'size',
@@ -50,8 +27,32 @@ vc_map(array(
             ),
             'std'           => 'thumbnail',
             'description'   => esc_html__('Auto-detect means that the plugin automatically sets the image resolution based on the size of your feed.', 'overcome'),
-            'edit_field_class' => 'vc_col-sm-3'
+            'edit_field_class' => 'vc_col-sm-6'
         ),
+        array(
+            'type'          => 'textfield',
+            'heading'       => esc_html__('Number Image', 'overcome'),
+            'param_name'    => 'number',
+            'std'           => '4',
+            'edit_field_class' => 'vc_col-sm-6'
+        ),
+        array(
+            'type'          => 'dropdown',
+            'heading'       => esc_html__('Number Columns', 'overcome'),
+            'param_name'    => 'columns',
+            'value'         => array('1', '2', '3', '4', '6', '8', '12'),
+            'std'           => '4',
+            'edit_field_class' => 'vc_col-sm-6'
+        ),
+        array(
+            'type'          => 'dropdown',
+            'heading'       => esc_html__('Columns Space', 'overcome'),
+            'param_name'    => 'columns_space',
+            'value'         => array('0', '2', '5', '10', '20', '30'),
+            'std'           => '0',
+            'edit_field_class' => 'vc_col-sm-6'
+        ),
+        
         array(
             'type'          => 'checkbox',
             'param_name'    => 'show_like',
@@ -59,7 +60,7 @@ vc_map(array(
                 esc_html__('Show like count?', 'overcome') => true
             ),
             'std'           => false,
-            'edit_field_class' => 'vc_col-sm-3'
+            'edit_field_class' => 'vc_col-sm-4'
         ),
         array(
             'type'          => 'checkbox',
@@ -68,7 +69,7 @@ vc_map(array(
                 esc_html__('Show comment count?', 'overcome') => true
             ),
             'std'           => false,
-            'edit_field_class' => 'vc_col-sm-3'
+            'edit_field_class' => 'vc_col-sm-4'
         ),
         array(
             'type'          => 'checkbox',
@@ -77,7 +78,7 @@ vc_map(array(
                 esc_html__('Show Author?', 'overcome') => true
             ),
             'std'           => 'true',
-            'edit_field_class' => 'vc_col-sm-3'
+            'edit_field_class' => 'vc_col-sm-4'
         ),
         array(
             'type'          => 'textfield',
