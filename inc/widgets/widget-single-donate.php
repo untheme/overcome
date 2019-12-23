@@ -97,9 +97,19 @@ class OverCome_WG_Single_Donate extends WP_Widget
                     esc_attr( get_the_title() ),
                     get_the_title()
                 );
-                if(class_exists('EF5Payments')) {
-                    ef5payments_donation_layout_1(['progress_bar' => false, 'show_percent'=>false]);
+                switch ($layout) {
+                    case '2':
+                         echo 'xxx';
+                        break;
+                    
+                    default:
+                        echo '111';
+                        if(class_exists('EF5Payments')) {
+                            ef5payments_donation_layout_1(['progress_bar' => false, 'show_percent'=>false]);
+                        }
+                        break;
                 }
+                
                 overcome_tribe_events_time([
                     'before' => '<div class="text-15 font-style-500 ef5-text-primary">',
                     'after'  => '</div>'
