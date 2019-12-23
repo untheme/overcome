@@ -6,6 +6,27 @@ vc_map(array(
     'description' => esc_html__('Show your Instagram image', 'overcome'),
     'icon'        => 'icon-wpb-ui-icon',
     'params'      => array(
+    	array(
+            'type'        => 'textfield',
+            'heading'     => esc_html__( 'Element Title', 'overcome' ),
+            'description' => esc_html__( 'Enter the text you want to show as title', 'overcome' ),
+            'param_name'  => 'el_title',
+            'value'       => '',
+            'std'         => '',
+            'admin_label' => true,
+        ),
+        array(
+            'type'        => 'textfield',
+            'heading'     => esc_html__( 'Element Title Class', 'overcome' ),
+            'description' => esc_html__( 'Enter custom class', 'overcome' ),
+            'param_name'  => 'el_title_class',
+            'value'       => '',
+            'std'         => '',
+            'dependency'    => [
+                'element' => 'el_title',
+                'not_empty' => true
+            ]
+        ),
         array(
             'type'          => 'dropdown',
             'heading'       => esc_html__('Layout', 'overcome'),
