@@ -86,7 +86,7 @@ class OverCome_WG_Single_Donate extends WP_Widget
                     'size'          => $thumbnail_size,
                     'default_thumb' => true,
                 ]);
-                printf(
+                /*printf(
                     '<div class="ef5-featured col-auto">' .
                         '<a href="%1$s" title="%2$s" class="ef5-thumbnail">' .
                             '<img src="%3$s" alt="%2$s" />' .
@@ -95,7 +95,7 @@ class OverCome_WG_Single_Donate extends WP_Widget
                     esc_url( get_permalink() ),
                     esc_attr( get_the_title() ),
                     esc_url( $thumbnail_url )
-                );
+                );*/
 
                 echo '<div class="ef5-brief col" style="max-width: calc(100% - '.$thumbnail_size[0].'px);">';
                 
