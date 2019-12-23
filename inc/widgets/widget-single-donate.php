@@ -60,13 +60,7 @@ class OverCome_WG_Single_Donate extends WP_Widget
         $show_comments  = (bool)$instance['show_comments'];
         $show_cat       = (bool)$instance['show_cat'];
 
-        $r = new WP_Query( array(
-            'post_type'           => $post_type,
-            'posts_per_page'      => $number,
-            'no_found_rows'       => true,
-            'post_status'         => 'publish',
-            'ignore_sticky_posts' => true
-        ) );
+        
 
         
 
