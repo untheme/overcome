@@ -18,7 +18,7 @@ if(!function_exists('overcome_comment')){
 		if(isset($args['walker'])) {
 			add_filter('wp_list_comments_args', function (){ 
 				return [
-					'walker' => new '{$args['walker']()}'
+					'walker' => new '{$args[walker]()}'
 				];
 			});
 		}
