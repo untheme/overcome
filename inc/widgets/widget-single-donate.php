@@ -98,9 +98,8 @@ class OverCome_WG_Single_Donate extends WP_Widget
                 );*/
 
                 echo '<div class="ef5-brief col" style="max-width: calc(100% - '.$thumbnail_size[0].'px);">';
-                    if(class_exists('EF5Payments')) {
-                        ef5payments_donation_layout_1(['progress_bar' => false, 'show_percent'=>false]);
-                    }
+                    ef5payments_donation_raised();
+                    ef5payments_donation_donate_button();
                 echo '</div>';
 
             echo '</div></div>';
