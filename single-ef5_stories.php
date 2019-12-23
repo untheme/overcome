@@ -27,7 +27,7 @@ get_header();
                         <div <?php post_class('ef5-single clearfix'); ?>>
                             <?php 
                                 overcome_post_media([
-                                    'class' => 'mb-40',
+                                    'class' => 'mb-45',
                                     'img_class' => 'ef5-rounded-10'
                                 ]); 
                                 overcome_post_content(['class' => 'ef5-single-content']);
