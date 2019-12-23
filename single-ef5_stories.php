@@ -23,7 +23,15 @@ get_header();
                     /* Start the Loop */
                     while ( have_posts() ) :
                         the_post();
-                        get_template_part( 'template-parts/single/content', get_post_format() );
+                    ?>
+                        <div <?php post_class('ef5-single clearfix'); ?>>
+                            <?php 
+                                overcome_post_media(); 
+                                overcome_post_content(['class' => 'ef5-single-content']);
+                                overcome_link_pages(['class' => 'ef5-single-page-links']);
+                            ?>
+                        </div>
+                    <?php
                         // Post Navigation
                         overcome_post_navigation();
                         // About Author
