@@ -109,7 +109,11 @@ class OverCome_WG_Single_Donate extends WP_Widget
                     overcome_post_share([
                         'show_share' => '1',
                         'show_title' => '0',
-                        'show_all'   => '0' 
+                        'show_all'   => '0',
+                        'class'      => 'ef5-text-777777',
+                        'social_args' => [
+                            'class' => 'size-small text-12 ef5-link-inherit'
+                        ]   
                     ]);
                 echo '</div>';
 
