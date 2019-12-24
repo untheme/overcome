@@ -109,7 +109,7 @@ class OverCome_WG_Single_Donate extends WP_Widget
                                 'class' => 'ef5-btn accent fill'
                             ]);
                         echo '</div>';
-                        echo '<div class="col text-end">'
+                        echo '<div class="col text-end">';
                             overcome_post_share([
                                 'show_share' => '1',
                                 'show_title' => '0',
