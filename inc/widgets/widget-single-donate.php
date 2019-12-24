@@ -109,7 +109,7 @@ class OverCome_WG_Single_Donate extends WP_Widget
                     overcome_post_share([
                         'show_share' => '1',
                         'show_title' => '0',
-                        'show_all'   => 'false' 
+                        'show_all'   => '0' 
                     ]);
                 echo '</div>';
 
