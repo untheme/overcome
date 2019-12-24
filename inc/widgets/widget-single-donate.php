@@ -103,18 +103,24 @@ class OverCome_WG_Single_Donate extends WP_Widget
                         'label_class' => 'font-style-500',
                         'value_class' => 'text-40 ef5-text-accent font-style-600 d-block'
                     ]);
-                    ef5payments_donation_donate_button([
-                        'class' => 'ef5-btn accent fill'
-                    ]);
-                    overcome_post_share([
-                        'show_share' => '1',
-                        'show_title' => '0',
-                        'show_all'   => '0',
-                        'class'      => 'ef5-text-777777',
-                        'social_args' => [
-                            'class' => 'size-small text-12 ef5-link-inherit'
-                        ]   
-                    ]);
+                    echo '<div class="row gutter-10">';
+                        echo '<div class="col">';
+                            ef5payments_donation_donate_button([
+                                'class' => 'ef5-btn accent fill'
+                            ]);
+                        echo '</div>';
+                        echo '<div class="col text-end">'
+                            overcome_post_share([
+                                'show_share' => '1',
+                                'show_title' => '0',
+                                'show_all'   => '0',
+                                'class'      => 'ef5-text-777777',
+                                'social_args' => [
+                                    'class' => 'size-small text-12 ef5-link-inherit'
+                                ]   
+                            ]);
+                        echo '</div>';
+                    echo '</div>';
                 echo '</div>';
 
             echo '</div></div>';
