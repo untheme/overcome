@@ -402,7 +402,7 @@ if(!function_exists('overcome_post_navigation')){
         $navigation = get_the_post_navigation();
         $previous = get_previous_post_link(
             '<div class="nav-previous">%link</div>',
-            '<div class="meta-nav" data-title="%title">'.esc_html__('Previous Post','overcome').'</div></div>'
+            '<div class="meta-nav" data-title="%title">'.esc_html__('Prev Post','overcome').'</div></div>'
         );
         $next = get_next_post_link(
             '<div class="nav-next">%link</div>',
