@@ -419,7 +419,7 @@ if(!function_exists('overcome_post_navigation')){
             );
         } elseif (is_singular('ef5_portfolio')){
             overcome_portfolio_navigation($args);
-        } else ( is_singular( 'post' ) ) {
+        } else {
             // Previous/next post navigation.
             switch ($args['layout']) {
                 default:
