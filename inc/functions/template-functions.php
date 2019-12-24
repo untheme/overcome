@@ -405,11 +405,11 @@ if(!function_exists('overcome_post_navigation')){
         $post_type_name = str_replace(['ies'], 'y', $post_type_name);
 
         $previous = get_previous_post_link(
-            '<div class="nav-previous">%link</div>',
+            '<div class="col-auto"><div class="nav-previous">%link</div></div>',
             '<div class="meta-nav" data-title="%title">'.esc_html__('Prev','overcome').' '.$post_type_name.'</div>'
         );
         $next = get_next_post_link(
-            '<div class="nav-next text-end">%link</div>',
+            '<div class="col-auto"><div class="nav-next text-end">%link</div></div>',
             '<div class="meta-nav" data-title="%title">'.esc_html__('Next','overcome').' '.$post_type_name.'</div>'
         );
 
