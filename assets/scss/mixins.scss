@@ -419,7 +419,6 @@ $social-colors: (
         }
     }
 }
-
 /* MouseWheel */
 @mixin ef5-mousewheel($selected : '.ef5-mousewheel', $scroll_bar_w : 34px){
     #{$selected} {
