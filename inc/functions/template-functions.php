@@ -406,20 +406,20 @@ if(!function_exists('overcome_post_navigation')){
 
         $previous = get_previous_post_link(
             '<div class="col-auto"><div class="nav-previous">%link</div></div>',
-            '<div class="meta-nav" data-title="%title">'.esc_html__('Prev','overcome').' '.$post_type_name.'</div>'
+            '<span class="meta-nav" data-title="%title">'.esc_html__('Prev','overcome').' '.$post_type_name.'</span>'
         );
         $next = get_next_post_link(
             '<div class="col-auto"><div class="nav-next text-end">%link</div></div>',
-            '<div class="meta-nav" data-title="%title">'.esc_html__('Next','overcome').' '.$post_type_name.'</div>'
+            '<span class="meta-nav" data-title="%title">'.esc_html__('Next','overcome').' '.$post_type_name.'</span>'
         );
 
         $previous_2 = get_previous_post_link(
             '<div class="nav-previous">%link</div>',
-            '<div class="meta-nav">'.esc_html__('Previous Post','overcome').'</div><div class="post-title h4">%title</div>'
+            '<span class="meta-nav">'.esc_html__('Previous Post','overcome').'</span><span class="post-title h4">%title</span>'
         );
         $next_2 = get_next_post_link(
             '<div class="nav-next">%link</div>',
-            '<span class="meta-nav">'.esc_html__('Next Post','overcome').'</div><div class="post-title h4">%title</div>'
+            '<span class="meta-nav">'.esc_html__('Next Post','overcome').'</span><span class="post-title h4">%title</span>'
         );
 
         $nav_links_class = ['nav-links', $args['class']];
