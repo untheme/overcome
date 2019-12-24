@@ -396,19 +396,29 @@ if(!function_exists('overcome_post_related')){
 if(!function_exists('overcome_post_navigation')){
     function overcome_post_navigation($args = []){
         $args = wp_parse_args($args, [
-            'layout' => '1'
+            'layout' => '1',
+            'class'  => 'row justify-content-center'
         ]);
         $navigation = get_the_post_navigation();
         $previous = get_previous_post_link(
             '<div class="nav-previous">%link</div>',
+            '<div class="meta-nav" data-title="%title">'.esc_html__('Previous Post','overcome').'</div></div>'
+        );
+        $next = get_next_post_link(
+            '%link',
+            '<div class="meta-nav" data-title="%title">'.esc_html__('Next Post','overcome').'</div></div>'
+        );
+
+        $previous_2 = get_previous_post_link(
+            '<div class="nav-previous">%link</div>',
             '<div class="meta-nav">'.esc_html__('Previous Post','overcome').'</div><div class="post-title h4">%title</div>'
         );
-        var_dump($previous);
-        $next = get_next_post_link(
+        $next_2 = get_next_post_link(
             '<div class="nav-next">%link</div>',
-            '<div class="meta-nav">'.esc_html__('Next Post','overcome').'</div><div class="post-title h4">%title</div>'
+            '<span class="meta-nav">'.esc_html__('Next Post','overcome').'</div><div class="post-title h4">%title</div>'
         );
-        $nav_links = ['nav-links'];
+
+        $nav_links_class = ['nav-links', $args['class']];
         if(empty($previous)) $nav_links[] = 'justify-content-end';
         if ( is_singular( 'attachment' ) ) {
             // Parent post navigation.
@@ -425,7 +435,7 @@ if(!function_exists('overcome_post_navigation')){
                 default:
             ?>
                 <nav class="navigation post-navigation">
-                    <div class="<?php echo implode(' ', $nav_links);?>">
+                    <div class="<?php echo implode(' ', $nav_links_class);?>">
                         <?php echo overcome_html($previous.$next) ?>
                     </div>
                 </nav>
