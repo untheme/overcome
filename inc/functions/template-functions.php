@@ -400,13 +400,16 @@ if(!function_exists('overcome_post_navigation')){
             'class'  => 'row justify-content-center'
         ]);
         $navigation = get_the_post_navigation();
+
+        $post_type_name = str_replace(['ef5_', 'ef5-', 'ies'], '', get_post_type());
+
         $previous = get_previous_post_link(
             '<div class="nav-previous">%link</div>',
-            '<div class="meta-nav" data-title="%title">'.esc_html__('Prev Post','overcome').'</div>'
+            '<div class="meta-nav" data-title="%title">'.esc_html__('Prev','overcome').' '.$post_type_name.'</div>'
         );
         $next = get_next_post_link(
             '<div class="nav-next">%link</div>',
-            '<div class="meta-nav" data-title="%title">'.esc_html__('Next Post','overcome').'</div>'
+            '<div class="meta-nav" data-title="%title">'.esc_html__('Next','overcome').' '.$post_type_name.'</div>'
         );
 
         $previous_2 = get_previous_post_link(
