@@ -55,12 +55,13 @@ class OverCome_Walker_Comment extends Walker_Comment {
 							<div class="comment-awaiting-moderation text-12 required"><?php _e( 'Your comment is awaiting moderation.', 'overcome' ); ?></div>
 						<?php } ?>
 						<div class="comment-metadata pt-5 text-12">
-							<span class="comment-time meta-color"><?php
+							<div class="grid-gutters-20">
+							<span class="col-auto comment-time meta-color"><?php
 									/* translators: 1: comment date, 2: comment time */
 									$comment_timestamp = sprintf( __( '%1$s at %2$s', 'overcome' ), get_comment_date( '', $comment ), get_comment_time() );
 								echo overcome_html($comment_timestamp); 
 							?></span>
-							<?php
+							<span class="col-auto"><?php
 								comment_reply_link(
 									array_merge(
 										$args,
@@ -69,12 +70,14 @@ class OverCome_Walker_Comment extends Walker_Comment {
 											'depth'     => $depth,
 											'max_depth' => $args['max_depth'],
 											'before'    => '',
-											'after'     => '',
+											'after'     => ''		
 										)
 									)
 								);
+							?></span>
+							<span class="col-auto"><?php 
 								edit_comment_link(esc_html__('Edit','overcome'));
-							?>
+							?></span>
 						</div>
 					</div>
 				</div>
