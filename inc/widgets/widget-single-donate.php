@@ -103,7 +103,7 @@ class OverCome_WG_Single_Donate extends WP_Widget
                         'label_class' => 'font-style-500',
                         'value_class' => 'text-40 ef5-text-accent font-style-600 d-block'
                     ]);
-                    echo '<div class="row grid-gutter-20">';
+                    echo '<div class="row grid-gutter-20 align-items-center">';
                         echo '<div class="col">';
                             ef5payments_donation_donate_button([
                                 'class' => 'ef5-btn accent fill'
