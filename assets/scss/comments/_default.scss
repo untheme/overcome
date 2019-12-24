@@ -28,6 +28,7 @@
 }
 /* Loading */
 .commentlist{
+	list-style: none;
 	position: relative;
 	@include transition();
 }
