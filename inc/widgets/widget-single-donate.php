@@ -103,13 +103,13 @@ class OverCome_WG_Single_Donate extends WP_Widget
                         'label_class' => 'font-style-500',
                         'value_class' => 'text-40 ef5-text-accent font-style-600 d-block'
                     ]);
-                    echo '<div class="row gutter-10">';
+                    echo '<div class="row grid-gutter-20">';
                         echo '<div class="col">';
                             ef5payments_donation_donate_button([
                                 'class' => 'ef5-btn accent fill'
                             ]);
                         echo '</div>';
-                        echo '<div class="col text-end">';
+                        echo '<div class="col-12 col-md-auto text-md-end">';
                             overcome_post_share([
                                 'show_share' => '1',
                                 'show_title' => '0',
