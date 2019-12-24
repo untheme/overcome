@@ -401,7 +401,8 @@ if(!function_exists('overcome_post_navigation')){
         ]);
         $navigation = get_the_post_navigation();
 
-        $post_type_name = str_replace(['ef5_', 'ef5-', 'ies'], '', get_post_type());
+        $post_type_name = str_replace(['ef5_', 'ef5-'], '', get_post_type());
+        $post_type_name (str_replace(['ies'], 'y', $post_type_name);
 
         $previous = get_previous_post_link(
             '<div class="nav-previous">%link</div>',
