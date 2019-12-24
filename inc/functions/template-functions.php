@@ -397,7 +397,7 @@ if(!function_exists('overcome_post_navigation')){
     function overcome_post_navigation($args = []){
         $args = wp_parse_args($args, [
             'layout' => '1',
-            'class'  => 'row justify-content-center'
+            'class'  => 'row justify-content-center gutters-100'
         ]);
         $navigation = get_the_post_navigation();
 
