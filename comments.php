@@ -26,12 +26,12 @@ if ( post_password_required() ) {
 <div id="comments" class="<?php echo comments_open() ? 'comments-area' : 'comments-area comments-closed'; ?> clearfix">
 	<?php if ( have_comments() ) : ?>
 		<div class="commentlist-wrap">
-			<div class="comments-title h3"><?php
+			<div class="comment-count ef5-heading text-18 font-style-600 text-center"><?php
 				$comments_number = get_comments_number();
 				printf(
 					_nx(
-						'%1$s %2$s',
-						'%1$s %3$s',
+						'%2$s (%1$s)',
+						'%3$s (%1$s)',
 						$comments_number,
 						'comments title',
 						'overcome'
@@ -44,7 +44,7 @@ if ( post_password_required() ) {
 			<ol class="commentlist">
 				<?php
 					wp_list_comments(
-						overcome_wp_list_comments_args()
+						overcome_comments_args()
 					);
 				?>
 			</ol>
@@ -58,7 +58,7 @@ if ( post_password_required() ) {
 	if ( comments_open() ) :
 		?>
 		<div class="ef5-comment-form-flex">
-			<?php overcome_comment_form(); ?>
+			<?php overcome_comment_form(['class_submit' => 'ef5-btn accent fill ef5-btn-md']); ?>
 		</div>
 		<?php
 	endif;	

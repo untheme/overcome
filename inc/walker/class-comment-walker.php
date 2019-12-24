@@ -35,32 +35,26 @@ class OverCome_Walker_Comment extends Walker_Comment {
 		?>
 		<<?php echo esc_attr($tag); ?> id="comment-<?php comment_ID(); ?>" <?php comment_class( $this->has_children ? 'parent' : '', $comment ); ?>>
 			<div id="div-comment-<?php comment_ID(); ?>" class="comment-body">
-				<div class="row">
+				<div class="row gutters-15">
 					<?php if ( 0 != $args['avatar_size'] ) { ?>
-					<div class="comment-avatar col-12 col-md-auto">
-						<div class="row align-items-center">
-							<div class="col-auto">
-								<?php 
-									if ( empty( $comment_author_url ) ) {
-										printf('%s', $avatar);
-									} else {
-										printf( '<a href="%1$s" rel="external nofollow" class="url">%2$s</a>', esc_url($comment_author_url), $avatar );
-									} 
-								?>
-							</div>
-							<?php $this->overcome_comment_author_info(['class' => 'col'], $comment , $comment_author ); ?>
-						</div>
+					<div class="col-auto">
+						<?php 
+							if ( empty( $comment_author_url ) ) {
+								printf('%s', $avatar);
+							} else {
+								printf( '<a href="%1$s" rel="external nofollow" class="url">%2$s</a>', esc_url($comment_author_url), $avatar );
+							} 
+						?>
 					</div>
 					<?php } ?>
-					<div class="comment-info col">
-						<?php $this->overcome_comment_author_info([], $comment , $comment_author ); ?>
-						<?php if ( '0' == $comment->comment_approved ) : ?>
+					<div class="col">
+						<?php 
+							$this->overcome_comment_author_info([], $comment , $comment_author );
+							if ( '0' == $comment->comment_approved ) { 
+						?>
 							<div class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'overcome' ); ?></div>
-						<?php endif; ?>
-						<div class="comment-content">
-							<?php comment_text(); ?>
-						</div>
-						<div class="comment-metadata">
+						<?php } ?>
+						<div class="comment-metadata pt-5">
 							<span class="comment-time meta-color"><?php
 									/* translators: 1: comment date, 2: comment time */
 									$comment_timestamp = sprintf( __( '%1$s at %2$s', 'overcome' ), get_comment_date( '', $comment ), get_comment_time() );
@@ -83,6 +77,9 @@ class OverCome_Walker_Comment extends Walker_Comment {
 							?>
 						</div>
 					</div>
+				</div>
+				<div class="comment-content pt-10">
+					<?php comment_text(); ?>
 				</div>
 			</div>
 		<?php
@@ -118,13 +115,13 @@ class OverCome_Walker_Comment extends Walker_Comment {
 				$author_badge = '';
 				if ( overcome_is_comment_by_post_author( $comment ) ) {
 					/* translators: %s: SVG Icon */
-					$author_badge = sprintf( '<span class="post-author-badge">%s</span>', '<span class="far fa-user"></span>' );
+					//$author_badge = sprintf( '<span class="post-author-badge">%s</span>', '<span class="far fa-user"></span>' );
 				}
 
 				printf(
 					/* translators: %s: comment author link */
 					esc_html__( '%s', 'overcome' ),
-					sprintf( '<div class="author-name h5">%1$s %2$s</div>',$author_badge, $comment_author )
+					sprintf( '<div class="author-name h5 text-uppercase">%1$s %2$s</div>',$author_badge, $comment_author )
 				);
 			?>
 		</div>
