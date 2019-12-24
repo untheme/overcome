@@ -31,31 +31,9 @@
 	.screen-reader-text{
 		display: none;
 	}
-	.meta-nav{
-		color: $BodyColor;
-		font-size: $BodyFontSizeXS;
-		letter-spacing: 0.5px;
-		text-transform: uppercase;
-		padding-bottom: 10px;
-		font-weight: 500;
-	}
-	.nav-links{
-		@include d-flex();
-		justify-content: space-between;
-		margin: $grid-gutter-width / -2;
-	}
 	.nav-previous,
 	.nav-next{
 		position: relative;
-		flex: 0 0 50%;
-		width: 50%;
-		max-width: 50%;
-		padding: $grid-gutter-width / 2;
-		@media (max-width: $screen-md-max){
-			flex: 0 0 100%;
-			width: 100%;
-			max-width: 100%;
-		}
 		a{
 			display: block;
 		}
@@ -85,7 +63,6 @@
 		}
 	}
 	.nav-next{
-		text-align: right;
 		padding-right: 45px;
 		&:before{
 			content: '\f061';

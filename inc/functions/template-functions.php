@@ -409,7 +409,7 @@ if(!function_exists('overcome_post_navigation')){
             '<div class="meta-nav" data-title="%title">'.esc_html__('Prev','overcome').' '.$post_type_name.'</div>'
         );
         $next = get_next_post_link(
-            '<div class="nav-next">%link</div>',
+            '<div class="nav-next text-end">%link</div>',
             '<div class="meta-nav" data-title="%title">'.esc_html__('Next','overcome').' '.$post_type_name.'</div>'
         );
 
