@@ -406,11 +406,11 @@ if(!function_exists('overcome_post_navigation')){
 
         $previous = get_previous_post_link(
             '<div class="col-auto"><div class="nav-previous">%link</div></div>',
-            '<span class="meta-nav" data-title="%title">'.esc_html__('Prev','overcome').' '.$post_type_name.'</span>'
+            '<span class="meta-nav" data-title="%title"><span class="nav-icon">'.esc_html__('Prev','overcome').' '.$post_type_name.'</span>'
         );
         $next = get_next_post_link(
             '<div class="col-auto"><div class="nav-next text-end">%link</div></div>',
-            '<span class="meta-nav" data-title="%title">'.esc_html__('Next','overcome').' '.$post_type_name.'</span>'
+            '<span class="meta-nav" data-title="%title">'.esc_html__('Next','overcome').' '.$post_type_name.'<span class="nav-icon"></span>'
         );
 
         $previous_2 = get_previous_post_link(
