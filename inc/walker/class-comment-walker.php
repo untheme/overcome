@@ -52,9 +52,9 @@ class OverCome_Walker_Comment extends Walker_Comment {
 							$this->overcome_comment_author_info([], $comment , $comment_author );
 							if ( '0' == $comment->comment_approved ) { 
 						?>
-							<div class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'overcome' ); ?></div>
+							<div class="comment-awaiting-moderation text-12 required"><?php _e( 'Your comment is awaiting moderation.', 'overcome' ); ?></div>
 						<?php } ?>
-						<div class="comment-metadata pt-5">
+						<div class="comment-metadata pt-5 text-12">
 							<span class="comment-time meta-color"><?php
 									/* translators: 1: comment date, 2: comment time */
 									$comment_timestamp = sprintf( __( '%1$s at %2$s', 'overcome' ), get_comment_date( '', $comment ), get_comment_time() );
