@@ -118,8 +118,8 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
                         case '2':
                             ef5payments_donation_raised([
                                 'label' => esc_html__('Donate so far:','overcome'),
-                                'label_class' => 'text-13 ef5-text-777777 font-style-500',
-                                'value_class' => 'text-22 ef5-text-accent font-style-600'
+                                'label_class' => 'text-13 ef5-text-777777 font-style-500 d-block',
+                                'value_class' => 'text-22 ef5-text-accent font-style-600 d-block'
                             ]);
                             break;
                         
