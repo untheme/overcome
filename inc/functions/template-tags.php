@@ -446,7 +446,7 @@ if(!function_exists('overcome_post_share')){
             $show_tw    = overcome_get_theme_opt( 'post_share_tw', '1' );
             $show_gplus = overcome_get_theme_opt( 'post_share_gplus', '1' );
             $show_pin   = overcome_get_theme_opt( 'post_share_pin', '1' );
-            $show_all   = overcome_get_theme_opt( 'post_share_all', '1' );
+            $show_all   = $args['show_all'] != '' ? $args['show_all'] : overcome_get_theme_opt( 'post_share_all', '1' );
         } else {
             $show_fb    = overcome_get_theme_opt( 'archive_share_fb', '1' );
             $show_tw    = overcome_get_theme_opt( 'archive_share_tw', '1' );
