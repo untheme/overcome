@@ -293,13 +293,13 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $custom_text_color = ef5systems_get_vc_param_value($atts,'small_heading_text_color_opts', true);
 
         $text_size = ef5systems_get_vc_param_value($atts, 'small_heading_size');
-        $custom_text_size = ef5systems_get_vc_param_value($atts, 'small_heading_size', true);
+        $custom_text_size = ef5systems_get_vc_param_value($atts, 'custom_small_heading_size', true);
         $custom_text_size = is_numeric($custom_text_size) ? $custom_text_size.'px' : $custom_text_size;
 
         $font_style = ef5systems_get_vc_param_value($atts, 'small_heading_font_style');
 
         $line_height = ef5systems_get_vc_param_value($atts, 'small_heading_line_height');
-        $custom_line_height = ef5systems_get_vc_param_value($atts,'small_heading_line_height', true);
+        $custom_line_height = ef5systems_get_vc_param_value($atts,'custom_small_heading_line_height', true);
 
 
         extract( $atts );
@@ -332,6 +332,31 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         ?></div>
     <?php
     }
+    protected function ef5_heading_main_heading_size($atts, $args = []){
+        if(empty($atts['heading_text'])) return;
+        $text_size        = ef5systems_get_vc_param_value($atts, 'ef5_size');
+        $custom_text_size = ef5systems_get_vc_param_value($atts, 'custom_ef5_size', true);
+        $text_size  = !empty($custom_text_size) ? $custom_text_size : $text_size;
+
+        switch ($atts['layout_template']) {
+            case '6':
+                $text_size = !empty($text_size) ? $text_size : '36 text-lg-48';
+                break;
+            case '5':
+                $text_size = !empty($text_size) ? $text_size : '45';
+                break;
+            case '4':
+                $text_size = !empty($text_size) ? $text_size : '45';
+                break;
+            case '3':
+                $text_size = !empty($text_size) ? $text_size : '48';
+                break;
+            default:
+                $text_size = !empty($text_size) ? $text_size : '36';
+                break;
+        }
+        return 'text-'.$text_size;
+    }
     protected function ef5_heading_main_heading($atts,$args = []){
         if(empty($atts['heading_text'])) return;
         $args = wp_parse_args($args, [
@@ -343,13 +368,13 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $custom_text_color = ef5systems_get_vc_param_value($atts,'text_color_opts', true);
 
         $text_size = ef5systems_get_vc_param_value($atts, 'ef5_size');
-        $custom_text_size = ef5systems_get_vc_param_value($atts, 'ef5_size', true);
+        $custom_text_size = ef5systems_get_vc_param_value($atts, 'custom_ef5_size', true);
         $custom_text_size = is_numeric($custom_text_size) ? $custom_text_size.'px' : $custom_text_size;
 
         $font_style = ef5systems_get_vc_param_value($atts, 'ef5_font_style');
 
         $line_height = ef5systems_get_vc_param_value($atts, 'ef5_line_height');
-        $custom_line_height = ef5systems_get_vc_param_value($atts,'ef5_line_height', true);
+        $custom_line_height = ef5systems_get_vc_param_value($atts,'custom_ef5_line_height', true);
 
         extract( $atts );
         if(!empty($heading2_text)) $heading2_text = '<span class="part2">'.$heading2_text.'</span>';
@@ -365,7 +390,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $heading_css_class = [
             'main-heading',
             'ef5-text-'.$text_color,
-            $text_size,
+            ef5_heading_main_heading_size(),
             $font_style,
             $line_height,
             $heading_text_class,
