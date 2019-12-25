@@ -333,29 +333,30 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
     <?php
     }
     protected function ef5_heading_main_heading_size($atts, $args = []){
-        if(empty($atts['heading_text'])) return;
-        $text_size        = ef5systems_get_vc_param_value($atts, 'ef5_size');
-        $custom_text_size = ef5systems_get_vc_param_value($atts, 'ef5_size', true);
-        $text_size  = !empty($custom_text_size) ? $custom_text_size : $text_size;
 
         switch ($atts['layout_template']) {
             case '6':
-                $text_size = !empty($text_size) ? $text_size : '36 text-lg-48';
+                //$text_size = !empty($text_size) ? $text_size : '36 text-lg-48';
+                $text_size = ef5systems_vc_text_style_css(['default' => '36 text-lg-48']);
                 break;
             case '5':
-                $text_size = !empty($text_size) ? $text_size : '45';
+                //$text_size = !empty($text_size) ? $text_size : '45';
+                $text_size = ef5systems_vc_text_style_css(['default' => '45']);
                 break;
             case '4':
-                $text_size = !empty($text_size) ? $text_size : '45';
+                //$text_size = !empty($text_size) ? $text_size : '45';
+                $text_size = ef5systems_vc_text_style_css(['default' => '45']);
                 break;
             case '3':
-                $text_size = !empty($text_size) ? $text_size : '48';
+                //$text_size = !empty($text_size) ? $text_size : '48';
+                $text_size = ef5systems_vc_text_style_css(['default' => '48']);
                 break;
             default:
-                $text_size = !empty($text_size) ? $text_size : '36';
+                //$text_size = !empty($text_size) ? $text_size : '36';
+                $text_size = ef5systems_vc_text_style_css(['default' => '36']);
                 break;
         }
-        return 'text-'.$text_size;
+        return $text_size;
     }
     protected function ef5_heading_main_heading($atts,$args = []){
         if(empty($atts['heading_text'])) return;
