@@ -332,6 +332,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         ?></div>
     <?php
     }
+
     protected function ef5_heading_main_heading_size($atts, $args = []){
         switch ($atts['layout_template']) {
             case '6':
