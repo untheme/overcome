@@ -390,7 +390,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $heading_css_class = [
             'main-heading',
             'ef5-text-'.$text_color,
-            $this->ef5_heading_main_heading_size(),
+            $this->ef5_heading_main_heading_size($atts),
             $font_style,
             $line_height,
             $heading_text_class,
