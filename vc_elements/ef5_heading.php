@@ -336,25 +336,19 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
     protected function ef5_heading_main_heading_size($atts, $args = []){
         switch ($atts['layout_template']) {
             case '6':
-                //$text_size = !empty($text_size) ? $text_size : '36 text-lg-48';
                 $text_size = ef5systems_vc_text_style_css($atts, ['default' => '36 text-lg-48']);
                 break;
             case '5':
-                //$text_size = !empty($text_size) ? $text_size : '45';
                 $text_size = ef5systems_vc_text_style_css($atts, ['default' => '45']);
                 break;
             case '4':
-                //$text_size = !empty($text_size) ? $text_size : '45';
                 $text_size = ef5systems_vc_text_style_css($atts, ['default' => '45']);
                 break;
             case '3':
-                //$text_size = !empty($text_size) ? $text_size : '48';
                 $text_size = ef5systems_vc_text_style_css($atts, ['default' => '48']);
                 break;
             default:
-                //$text_size = !empty($text_size) ? $text_size : '36';
                 $text_size = ef5systems_vc_text_style_css($atts, ['default' => '36']);
-                //$text_size = '36';
                 break;
         }
         var_dump($text_size);
