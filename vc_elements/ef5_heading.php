@@ -333,7 +333,6 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
     <?php
     }
     protected function ef5_heading_main_heading_size($atts, $args = []){
-
         switch ($atts['layout_template']) {
             case '6':
                 //$text_size = !empty($text_size) ? $text_size : '36 text-lg-48';
