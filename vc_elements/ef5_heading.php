@@ -339,16 +339,16 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
                 $text_size = ef5systems_vc_text_style_css($atts, ['param_name' => ['color' => 'text_color_opts'],'default' => ['size' => '36 text-lg-48']]);
                 break;
             case '5':
-                $text_size = ef5systems_vc_text_style_css($atts, ['param_name' => ['color' => 'text_color_opts'],'default' => ['size' => '45']);
+                $text_size = ef5systems_vc_text_style_css($atts, ['param_name' => ['color' => 'text_color_opts'],'default' => ['size' => '45']]);
                 break;
             case '4':
-                $text_size = ef5systems_vc_text_style_css($atts, ['param_name' => ['color' => 'text_color_opts'],'default' => ['size' => '45']);
+                $text_size = ef5systems_vc_text_style_css($atts, ['param_name' => ['color' => 'text_color_opts'],'default' => ['size' => '45']]);
                 break;
             case '3':
-                $text_size = ef5systems_vc_text_style_css($atts, ['param_name' => ['color' => 'text_color_opts'],'default' => ['size' => '48']);
+                $text_size = ef5systems_vc_text_style_css($atts, ['param_name' => ['color' => 'text_color_opts'],'default' => ['size' => '48']]);
                 break;
             default:
-                $text_size = ef5systems_vc_text_style_css($atts, ['param_name' => ['color' => 'text_color_opts'],'default' => ['size' => '36']);
+                $text_size = ef5systems_vc_text_style_css($atts, ['param_name' => ['color' => 'text_color_opts'],'default' => ['size' => '36']]);
                 break;
         }
         return $text_size;
