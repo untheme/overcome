@@ -336,19 +336,19 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
     protected function ef5_heading_main_heading_style($atts, $args = []){
         switch ($atts['layout_template']) {
             case '6':
-                $text_size = ef5systems_vc_text_style_css($atts, ['default' => ['size' => '36 text-lg-48']]);
+                $text_size = ef5systems_vc_text_style_css($atts);
                 break;
             case '5':
-                $text_size = ef5systems_vc_text_style_css($atts, ['default' => ['size' => '45']]);
+                $text_size = ef5systems_vc_text_style_css($atts);
                 break;
             case '4':
-                $text_size = ef5systems_vc_text_style_css($atts, ['default' => ['size' => '45']]);
+                $text_size = ef5systems_vc_text_style_css($atts);
                 break;
             case '3':
-                $text_size = ef5systems_vc_text_style_css($atts, ['default' => ['size' => '48']]);
+                $text_size = ef5systems_vc_text_style_css($atts);
                 break;
             default:
-                $text_size = ef5systems_vc_text_style_css($atts, ['default' => ['size' => '36']]);
+                $text_size = ef5systems_vc_text_style_css($atts);
                 break;
         }
         return $text_size;
