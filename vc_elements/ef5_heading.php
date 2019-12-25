@@ -333,7 +333,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
     <?php
     }
 
-    protected function ef5_heading_main_heading_size($atts, $args = []){
+    protected function ef5_heading_main_heading_style($atts, $args = []){
         switch ($atts['layout_template']) {
             case '6':
                 $text_size = ef5systems_vc_text_style_css($atts, ['default' => ['size' => '36 text-lg-48']]);
@@ -385,11 +385,10 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $line_height = isset($line_height) && !empty($line_height) ? 'lh-'.$line_height : '';
         $heading_css_class = [
             'main-heading',
-            'ef5-text-'.$text_color,
-            $this->ef5_heading_main_heading_size($atts),
-            $font_style,
-            $line_height,
-            $heading_text_class,
+            //'ef5-text-'.$text_color,
+            $this->ef5_heading_main_heading_style($atts),
+            //$font_style,
+            //$line_height,
             $args['class'],
             $this->getCSSAnimation( $atts['heading_css_animation'] )
         ];
