@@ -351,7 +351,6 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
                 $text_size = ef5systems_vc_text_style_css($atts, ['default' => '36']);
                 break;
         }
-        var_dump($text_size);
         return $text_size;
     }
     protected function ef5_heading_main_heading($atts,$args = []){
