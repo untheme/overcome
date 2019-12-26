@@ -35,26 +35,22 @@
 	.ttmn-text{
 		max-width: 1024px;
 		position: relative;
-		padding-right: 50px;
+		padding: 0 10px;
 		&:after{
 			font-family: $FontAwesome;
 			content: "\f10e";
-			font-size: 40x;
+			font-size: 40px;
 			font-weight: 900;
 			line-height: 1;
 			color: $accent_color;
 			position: absolute;
 			top: 7px;
-			right: 0;
+			right: -40px;
 			[dir="rtl"] &{
 				right: auto;
-				left: 0;
+				left: -40px;
 				content: "\f10d";
 			}
-		}
-		[dir="rtl"] &{
-			padding-right: 0;
-			padding-left: 50px;
 		}
 	}
 }
