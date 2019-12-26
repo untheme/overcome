@@ -109,7 +109,7 @@ if(empty($atts['content_align']) && !in_array($atts['layout_template'],['2','5']
                                         </div>
                                     <?php
                                         // text 
-                                        $this->overcome_tm_text($testimonial, $atts,['class' => 'ef5-text-777 font-style-300 pl-30 pb-18']);
+                                        $this->overcome_tm_text($testimonial, $atts,['class' => 'ef5-text-777 font-style-300 pt-25 pl-30 pb-18']);
                                     break;
                                     case '4':
                                         //avatar
