@@ -91,16 +91,24 @@ if(empty($atts['content_align']) && $atts['layout_template'] !== '2') $ttmn_wrap
                                         $this->overcome_tm_rate($testimonial, $atts);
                                     break;
                                     case '5':
+                                    ?>
+                                        <div class="row">
+                                            <div class="col">
+                                            <?php //avatar
+                                                $this->overcome_tm_avatar($testimonial,$atts,['size' => '65', 'img_class' => 'circle']); ?>
+                                            </div>
+                                            <div class="col-auto">
+                                                <?php // name
+                                                $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500 d-block']);
+                                                // position
+                                                $this->overcome_tm_position($testimonial,['class' => 'text-13 d-block']);
+                                                // star rating
+                                                $this->overcome_tm_rate($testimonial, $atts); ?>
+                                            </div>
+                                        </div>
+                                    <?php
                                         // text 
                                         $this->overcome_tm_text($testimonial, $atts,['class' => 'text-22 font-style-300 pb-40']);
-                                        //avatar
-                                        $this->overcome_tm_avatar($testimonial,$atts,['size' => '73', 'img_class' => 'mb-20 circle ml-auto mr-auto']);
-                                        // name
-                                        $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500 d-block']);
-                                        // position
-                                        $this->overcome_tm_position($testimonial,['class' => 'text-13 ef5-text-accent d-block']);
-                                        // star rating
-                                        $this->overcome_tm_rate($testimonial, $atts);
                                     break;
                                     case '4':
                                         //avatar
