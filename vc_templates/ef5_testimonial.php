@@ -82,7 +82,7 @@ if(empty($atts['content_align']) && !in_array($atts['layout_template'],['2','5',
                                     case '6':
                                         // text 
                                         $this->overcome_tm_text($testimonial, $atts,['class' => 'text-13 ef5-text-777777 font-style-400 pb-18']);
-=                                       // name
+                                        // name
                                         $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500 ef5-text-accent d-block']);
                                         // position
                                         $this->overcome_tm_position($testimonial,['class' => 'text-13 ef5-text-777777 d-block']);
