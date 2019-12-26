@@ -30,3 +30,31 @@
 		}
 	}
 }
+
+.ef5-testimonial-layout-4{
+	.ttmn-text{
+		max-width: 1024px;
+		position: relative;
+		padding-right: 50px;
+		&:after{
+			font-family: $FontAwesome;
+			content: "\f10e";
+			font-size: 40x;
+			font-weight: 900;
+			line-height: 1;
+			color: $accent_color;
+			position: absolute;
+			top: 0;
+			right: 0;
+			[dir="rtl"] &{
+				right: auto;
+				left: 0;
+				content: "\f10d";
+			}
+		}
+		[dir="rtl"] &{
+			padding-right: 0;
+			padding-left: 50px;
+		}
+	}
+}
