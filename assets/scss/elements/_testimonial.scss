@@ -51,7 +51,7 @@
 				right: 0;
 			}
 			[dir="rtl"] &{
-				right: auto;
+				right: auto!important;
 				left: -40px;
 				content: "\f10d";
 				@media (max-width: $screen-lg-min){
