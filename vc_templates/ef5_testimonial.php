@@ -49,7 +49,7 @@ $inner_css_classes = ['ttmn-inner','transition'];
 
 $ttmn_wrap_classes = ['ef5-testimonials', ef5systems_owl_css_class($atts)];
 
-if(empty($atts['content_align']) && !in_array($atts['layout_template'],['2','5'])) $ttmn_wrap_classes[] = 'text-center';
+if(empty($atts['content_align']) && !in_array($atts['layout_template'],['2','5','6'])) $ttmn_wrap_classes[] = 'text-center';
 ?>
 <div class="<?php echo overcome_optimize_css_class(implode(' ', $ttmn_wrap_classes));?>">
     <?php 
@@ -81,13 +81,13 @@ if(empty($atts['content_align']) && !in_array($atts['layout_template'],['2','5']
                             	switch ($layout_template) {
                                     case '6':
                                         // text 
-                                        $this->overcome_tm_text($testimonial, $atts,['class' => 'text-22 font-style-300 pb-40']);
+                                        $this->overcome_tm_text($testimonial, $atts,['class' => 'text-13 ef5-text-777777 font-style-400 pb-40']);
                                         //avatar
-                                        $this->overcome_tm_avatar($testimonial,$atts,['size' => '73', 'img_class' => 'mb-20 circle ml-auto mr-auto']);
+                                        $this->overcome_tm_avatar($testimonial,$atts,['size' => '65', 'img_class' => 'circle']);
                                         // name
-                                        $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500 d-block']);
+                                        $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500 ef5-text-accent d-block']);
                                         // position
-                                        $this->overcome_tm_position($testimonial,['class' => 'text-13 ef5-text-accent d-block']);
+                                        $this->overcome_tm_position($testimonial,['class' => 'text-13 ef5-text-777777 d-block']);
                                         // star rating
                                         $this->overcome_tm_rate($testimonial, $atts);
                                     break;
