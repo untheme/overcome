@@ -93,11 +93,11 @@ if(empty($atts['content_align']) && $atts['layout_template'] !== '2') $ttmn_wrap
                                     case '5':
                                     ?>
                                         <div class="row">
-                                            <div class="col">
+                                            <div class="col-auto">
                                             <?php //avatar
                                                 $this->overcome_tm_avatar($testimonial,$atts,['size' => '65', 'img_class' => 'circle']); ?>
                                             </div>
-                                            <div class="col-auto">
+                                            <div class="col">
                                                 <?php // name
                                                 $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500 d-block']);
                                                 // position
