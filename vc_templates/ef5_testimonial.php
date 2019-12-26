@@ -81,15 +81,15 @@ if(empty($atts['content_align']) && !in_array($atts['layout_template'],['2','5',
                             	switch ($layout_template) {
                                     case '6':
                                         // text 
-                                        $this->overcome_tm_text($testimonial, $atts,['class' => 'text-13 ef5-text-777777 font-style-400 pb-40']);
-                                        //avatar
-                                        $this->overcome_tm_avatar($testimonial,$atts,['size' => '65', 'img_class' => 'circle']);
-                                        // name
+                                        $this->overcome_tm_text($testimonial, $atts,['class' => 'text-13 ef5-text-777777 font-style-400 pb-18']);
+=                                       // name
                                         $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500 ef5-text-accent d-block']);
                                         // position
                                         $this->overcome_tm_position($testimonial,['class' => 'text-13 ef5-text-777777 d-block']);
                                         // star rating
                                         $this->overcome_tm_rate($testimonial, $atts);
+                                        //avatar
+                                        $this->overcome_tm_avatar($testimonial,$atts,['size' => '65', 'img_class' => 'circle']);
                                     break;
                                     case '5':
                                     ?>
