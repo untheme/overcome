@@ -92,7 +92,7 @@ if(empty($atts['content_align']) && $atts['layout_template'] !== '2') $ttmn_wrap
                                     break;
                                     case '5':
                                     ?>
-                                        <div class="row">
+                                        <div class="row getters-20">
                                             <div class="col-auto">
                                             <?php //avatar
                                                 $this->overcome_tm_avatar($testimonial,$atts,['size' => '65', 'img_class' => 'circle']); ?>
