@@ -89,6 +89,8 @@ if(empty($atts['content_align']) && $atts['layout_template'] !== '2') $ttmn_wrap
                                         $this->overcome_tm_position($testimonial,['class' => 'text-12 text-uppercase d-block text-'. $atts['text_color_opts']]);
                                         // star rating
                                         $this->overcome_tm_rate($testimonial, $atts);
+                                        // text 
+                                        $this->overcome_tm_text($testimonial, $atts);
                                     break;
                                     case '2' :
                                         echo '<div class="ef5-bg-white ef5-rounded-10 p-25">';
