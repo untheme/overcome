@@ -102,14 +102,14 @@ if(empty($atts['content_align']) && !in_array($atts['layout_template'],['2','5']
                                                 <?php // name
                                                 $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500 d-block']);
                                                 // position
-                                                $this->overcome_tm_position($testimonial,['class' => 'text-13 d-block']);
+                                                $this->overcome_tm_position($testimonial,['class' => 'text-13 d-block ef5-text-777']);
                                                 // star rating
                                                 $this->overcome_tm_rate($testimonial, $atts); ?>
                                             </div>
                                         </div>
                                     <?php
                                         // text 
-                                        $this->overcome_tm_text($testimonial, $atts,['class' => 'text-22 font-style-300 pb-40']);
+                                        $this->overcome_tm_text($testimonial, $atts,['class' => 'ef5-text-777 font-style-300 pl-30 pb-18']);
                                     break;
                                     case '4':
                                         //avatar
