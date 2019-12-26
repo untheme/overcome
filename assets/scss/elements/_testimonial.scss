@@ -60,6 +60,24 @@
 		background: $white;
 		padding: 25px;
 		@include border-radius(10px);
+		position: relative;;
+		&:after{
+			font-family: $FontAwesome;
+			content: "\f10e";
+			font-size: 52px;
+			font-weight: 900;
+			line-height: 1;
+			color: $accent_color;
+			@include opacity(0.2);
+			position: absolute;
+			top: -15px;
+			right: 20px;
+			[dir="rtl"] &{
+				right: auto;
+				left: 20px;
+				content: "\f10d";
+			}
+		}
 	}
 	.ttmn-text{
 		
