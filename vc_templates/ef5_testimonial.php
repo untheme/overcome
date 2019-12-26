@@ -93,7 +93,7 @@ if(empty($atts['content_align']) && !in_array($atts['layout_template'],['2','5']
                                     break;
                                     case '5':
                                     ?>
-                                        <div class="row getters-20">
+                                        <div class="row getters-20 align-items-center">
                                             <div class="col-auto">
                                             <?php //avatar
                                                 $this->overcome_tm_avatar($testimonial,$atts,['size' => '65', 'img_class' => 'circle']); ?>
