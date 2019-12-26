@@ -1,4 +1,4 @@
-<?php
+s<?php
 vc_map(array(
     'name'        => 'OverCome Testimonial',
     'base'        => 'ef5_testimonial',
@@ -24,9 +24,12 @@ vc_map(array(
                 'heading'    => esc_html__('Layout Template','overcome'),
                 'param_name' => 'layout_template',
                 'value'      =>  array(
-                    '1'       => get_template_directory_uri().'/vc_elements/layouts/testimonial-1.png',
-                    '2'       => get_template_directory_uri().'/vc_elements/layouts/testimonial-2.png',
-                    '3'       => get_template_directory_uri().'/vc_elements/layouts/testimonial-3.png',
+                    '1' => get_template_directory_uri().'/vc_elements/layouts/testimonial-1.png',
+                    '2' => get_template_directory_uri().'/vc_elements/layouts/testimonial-2.png',
+                    '3' => get_template_directory_uri().'/vc_elements/layouts/testimonial-3.png',
+                    '4' => get_template_directory_uri().'/vc_elements/layouts/testimonial-4.png',
+                    '5' => get_template_directory_uri().'/vc_elements/layouts/testimonial-5.png',
+                    '6' => get_template_directory_uri().'/vc_elements/layouts/testimonial-6.png',
                 ),
                 'std'         => '1',
                 'admin_label' => true
