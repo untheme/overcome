@@ -36,6 +36,13 @@
                     }
                 },
                 {
+                    text: 'Unordered',
+                    value: 'ef5-list unordered',
+                    onclick: function() {
+                        editor.insertContent('<ul class="'+this.value()+'""><li>'+tinyMCE.activeEditor.selection.getContent()+'</li></ul>');
+                    }
+                },
+                {
                     text: 'Hamburger',
                     value: 'ef5-list hamburger',
                     onclick: function() {
