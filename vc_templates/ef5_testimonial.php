@@ -112,7 +112,7 @@ if(empty($atts['content_align']) && $atts['layout_template'] !== '2') $ttmn_wrap
                                         // star rating
                                         $this->overcome_tm_rate($testimonial, $atts);
                                         // text 
-                                        $this->overcome_tm_text($testimonial, $atts,['class' => 'text-22 font-style-300']);
+                                        $this->overcome_tm_text($testimonial, $atts,['class' => 'text-22 font-style-300 pt-35']);
                                     break;
                                     case '3':
                                         // text 
