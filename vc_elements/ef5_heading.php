@@ -336,16 +336,51 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
     protected function ef5_heading_main_heading_style($atts, $args = []){
         switch ($atts['layout_template']) {
             case '6':
-                $text_size = ef5systems_vc_text_style_css($atts, ['param_name' => ['color' => 'text_color_opts'],'default' => ['size' => '36 text-lg-48']]);
+                $text_size = ef5systems_vc_text_style_css($atts, [
+                    'param_name' => [
+                        'color' => 'text_color_opts']
+                        ,
+                        'default' => [
+                            'size'  => '36 text-lg-48',
+                            'style' => '700'
+                        ]
+                    ]);
                 break;
             case '5':
-                $text_size = ef5systems_vc_text_style_css($atts, ['param_name' => ['color' => 'text_color_opts'],'default' => ['size' => '45']]);
+                $text_size = ef5systems_vc_text_style_css($atts, [
+                    'param_name' => [
+                        'color' => 'text_color_opts'
+                    ],
+                    'default' => [
+                        'color' => 'white',
+                        'size'  => '45',
+                        'style' => '600',
+                        'lh'    => '1/15555556'
+                    ]
+                ]);
                 break;
             case '4':
-                $text_size = ef5systems_vc_text_style_css($atts, ['param_name' => ['color' => 'text_color_opts'],'default' => ['size' => '45']]);
+                $text_size = ef5systems_vc_text_style_css($atts, [
+                    'param_name' => [
+                        'color' => 'text_color_opts'
+                    ],
+                    'default' => [
+                        'size' => '45',
+                        'style'=> '400'
+                    ]
+                ]);
                 break;
             case '3':
-                $text_size = ef5systems_vc_text_style_css($atts, ['param_name' => ['color' => 'text_color_opts'],'default' => ['size' => '48']]);
+                $text_size = ef5systems_vc_text_style_css($atts, [
+                    'param_name' => [
+                        'color' => 'text_color_opts'
+                    ], 
+                    'default' => [
+                        'color'=> 'white',
+                        'size' => '48',
+                        'style'=> '700'
+                    ]
+                ]);
                 break;
             default:
                 $text_size = ef5systems_vc_text_style_css($atts, ['param_name' => ['color' => 'text_color_opts'],'default' => ['size' => '36']]);
