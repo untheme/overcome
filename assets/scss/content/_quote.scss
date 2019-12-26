@@ -1,0 +1,12 @@
+.ef5-quote {
+	&.blockquote{
+		border-left: 3px solid $accent_color;
+		padding-left: 15px;
+		cite{
+			color: $accent_color;
+			font-weight: 600;
+			font-size: 120%;
+			display: block;
+		}
+	}
+}
