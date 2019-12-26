@@ -1,4 +1,4 @@
-s<?php
+<?php
 vc_map(array(
     'name'        => 'OverCome Testimonial',
     'base'        => 'ef5_testimonial',
