@@ -87,4 +87,13 @@
 		@include border-radius(10px);
 		position: relative;
 	}
+	.tm-avatar{
+		position: absolute;
+		right: 35px;
+		bottom: -32px;
+		[dir="rtl"] &{
+			right: auto;
+			left: 35px;
+		}
+	}
 }
