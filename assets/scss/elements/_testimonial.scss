@@ -47,10 +47,16 @@
 			position: absolute;
 			top: 7px;
 			right: -40px;
+			@media (max-width: $screen-lg-min){
+				right: 0;
+			}
 			[dir="rtl"] &{
 				right: auto;
 				left: -40px;
 				content: "\f10d";
+				@media (max-width: $screen-lg-min){
+					left: 0;
+				}
 			}
 		}
 	}
