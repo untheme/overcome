@@ -21,4 +21,14 @@ function overcome_vc_tta_accordion_params() {
     $param['value'][esc_html__('OverCome','overcome')] = 'overcome';
     $param['std'] = 'overcome';
     vc_update_shortcode_param('vc_tta_accordion', $param);
+    // Alignments  
+    $param = WPBMap::getParam('vc_tta_accordion', 'c_align');
+    $param['value'][esc_html__('OverCome','overcome')] = 'overcome';
+    $param['std'] = 'overcome';
+    vc_update_shortcode_param('vc_tta_accordion', $param);
+    // Icon  
+    $param = WPBMap::getParam('vc_tta_accordion', 'c_icon');
+    $param['value'][esc_html__('OverCome','overcome')] = 'overcome';
+    $param['std'] = 'overcome';
+    vc_update_shortcode_param('vc_tta_accordion', $param);
 }
