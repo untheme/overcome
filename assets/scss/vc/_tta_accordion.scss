@@ -69,6 +69,11 @@
 			@include border-radius(50%);
 			background: $accent_color;
 			color: $white;
+			left: 15px;
+			[dir="rtl"] &{
+				left: auto;
+				right: 15px;
+			}
 			&:before,
 			&:after{
 				content: '';
