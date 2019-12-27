@@ -10,6 +10,20 @@
 			.vc_tta-panel-title{
 				font-size: 15px;
 				font-weight: 500; 
+				&.vc_tta-controls-icon-position-left > a{
+					padding-left: 50px;
+					[dir="rtl"] &{
+						padding-left: 20px;
+						padding-right: 50px;
+					}
+				}
+				&.vc_tta-controls-icon-position-left > a{
+					padding-right: 50px;
+					[dir="rtl"] &{
+						padding-left: 50px;
+						padding-right: 20px;
+					}
+				}
 			}
 		}
 		&.vc_tta-color-overcome{
@@ -47,6 +61,26 @@
 		}
 		&.vc_tta-controls-align-overcome{
 			text-align: start;
+		}
+
+		.vc_tta-controls-icon.vc_tta-controls-icon-overcome{
+			width: 22px;
+			height: 22px;
+			@include border-radius(50%);
+			background: $accent_color;
+			color: $white;
+			&:before,
+			&:after{
+				content: '';
+				width: 8px;
+				height: 2px;
+				background: $white;
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				@include transform(translate(-50%,-50%));
+			}
 		}
 	}
 }
