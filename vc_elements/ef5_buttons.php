@@ -56,6 +56,7 @@ vc_map(array(
                 'value'         => array(
                     esc_html__('Fill', 'overcome')    => 'fill',
                     esc_html__('Outline', 'overcome') => 'outline',
+                    esc_html__('Outline2', 'overcome') => 'outline2',
                 ),
                 'std'           => 'fill',
                 'admin_label'   => true,
