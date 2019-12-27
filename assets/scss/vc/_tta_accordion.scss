@@ -5,6 +5,7 @@
 				border-width: 1px;
 				border-style: solid;
 				border-radius: 23px;
+				@include transition();
 			}
 			.vc_tta-panel-title{
 				font-size: 15px;
