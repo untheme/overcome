@@ -61,11 +61,17 @@ $customs_gutters: (
 	120 : 120px,
 	150 : 150px,
 );
+.vc_row{
+	> [class^="col-"]{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
 @each $breakpoint in map-keys($grid-breakpoints) {
 	$infix: breakpoint-infix($breakpoint, $grid-breakpoints);
 	@include media-breakpoint-up($breakpoint, $grid-breakpoints) {
 		@each $gutters , $gutters-value in $customs_gutters{
-			.gutter#{$infix}-#{$gutters}{
+			.gutters#{$infix}-#{$gutters}{
 				margin-left: ($gutters-value / -2);
 				margin-right: ($gutters-value / -2);
 				> [class*='col'],
@@ -75,7 +81,7 @@ $customs_gutters: (
 				}
 			}
 			.ef5-element-horizontal {
-				&.gutter#{$infix}-#{$gutters}{
+				&.gutters#{$infix}-#{$gutters}{
 					> .vc_column-inner > .wpb_wrapper {
 						margin-left: ($gutters-value / -2);
 						margin-right: ($gutters-value / -2);
