@@ -79,11 +79,16 @@
 				position: absolute;
 				top: 50%;
 				left: 50%;
+			}
+			&:before{
 				@include transform(translate(-50%,-50%));
+			}
+			&:after{
+				@include transform(translate(-50%,-50%) rotate(90deg));
 			}
 		}
 		.vc_active .vc_tta-controls-icon.vc_tta-controls-icon-overcome:after{
-			@include transform(translate(-50%,-50%) rotate(90deg));
+			@include transform(translate(-50%,-50%));
 		}
 	}
 }
