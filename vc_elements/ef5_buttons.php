@@ -55,7 +55,7 @@ vc_map(array(
                 'heading'       => esc_html__( 'Button Style', 'overcome' ),
                 'value'         => array(
                     esc_html__('Fill', 'overcome')    => 'fill',
-                    esc_html__('Outline', 'overcome') => 'ouline',
+                    esc_html__('Outline', 'overcome') => 'outline',
                 ),
                 'std'           => 'fill',
                 'admin_label'   => true,
