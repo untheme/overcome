@@ -1,0 +1,45 @@
+.wpb-js-composer .vc_tta-container{
+	.vc_general.vc_tta.vc_tta-accordion {
+		&.vc_tta-style-overcome{
+			.vc_tta-panel{
+				border-width: 1px;
+				border-style: solid;
+				border-radius: 23px;
+			}
+			.vc_tta-panel-title{
+				font-size: 15px;
+				font-weight: 500; 
+			}
+		}
+		&.vc_tta-color-overcome{
+			.vc_tta-panel{
+				border-color: #f1f1f1;
+				background: #f1f1f1;
+			}
+		} 
+		&.vc_tta-shape-overcome {
+			.vc_tta-panel-body, 
+			.vc_tta-panel-heading{
+				border-radius: 23px;
+			}
+		}
+		&.vc_tta-spacing-overcome{
+			.vc_tta-panel-title{
+				> a{
+					padding-top: 11.5px;
+					padding-bottom: 11.5px;
+				}
+			}
+		}
+		&.vc_tta-gap-overcome{
+			.vc_tta-panel{
+				margin-bottom: 30px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+		&.vc_tta-controls-align-overcome{
+			text-align: start;
+		}
+}
