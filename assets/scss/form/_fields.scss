@@ -85,6 +85,9 @@ textarea {
 	max-width: 100%;
 	height: 110px;
 	resize: vertical;
+	&.large{
+		min-height: 114px;
+	}
 }
 
 form {
