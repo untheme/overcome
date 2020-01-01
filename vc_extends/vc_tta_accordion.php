@@ -18,7 +18,10 @@ function overcome_vc_tta_accordion_params() {
     vc_update_shortcode_param('vc_tta_accordion', $param);
     // Space 
     $param = WPBMap::getParam('vc_tta_accordion', 'spacing');
-    $param['value'][esc_html__('OverCome','overcome')] = 'overcome';
+    $param['value'] = [
+    	esc_html__('None','overcome') =>  '',
+    	esc_html__('OverCome','overcome') =>  'overcome',
+    ];
     $param['std'] = 'overcome';
     vc_update_shortcode_param('vc_tta_accordion', $param);
     // Gap 
