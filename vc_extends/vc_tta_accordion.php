@@ -24,7 +24,7 @@ function overcome_vc_tta_accordion_params() {
     // Gap 
     $param = WPBMap::getParam('vc_tta_accordion', 'gap');
     $param['value'] = [
-    	esc_html__('OverCome (15)','overcome') => 'overcome2',
+    	esc_html__('OverCome (15)','overcome') => 'overcome-15',
     	esc_html__('OverCome (30)','overcome') => 'overcome',
     ];
     $param['std'] = 'overcome';
