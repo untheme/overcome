@@ -76,6 +76,14 @@
 				}
 			}
 		}
+		&.vc_tta-gap-overcome-15{
+			.vc_tta-panel{
+				margin-bottom: 15px;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
 		&.vc_tta-controls-align-overcome{
 			text-align: start;
 		}
