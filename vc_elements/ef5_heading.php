@@ -215,7 +215,7 @@ vc_map(array(
                 'group'      => esc_html__('Sub Heading','overcome'),
                 'dependency' => array(
                     'element' => 'layout_template',
-                    'not_equal_to' => ['8']
+                    'value_not_equal_to' => ['8']
                 )
             ),
             ef5systems_vc_map_add_css_animation([
@@ -236,7 +236,7 @@ vc_map(array(
                 'group'      => esc_html__('Description','overcome'),
                 'dependency' => array(
                     'element' => 'layout_template',
-                    'not_equal_to' => ['8']
+                    'value_not_equal_to' => ['8']
                 )
             ),
             ef5systems_vc_map_add_css_animation([
@@ -256,7 +256,7 @@ vc_map(array(
                 'group'      => esc_html__('Link','overcome'),
                 'dependency' => array(
                     'element' => 'layout_template',
-                    'not_equal_to' => ['8']
+                    'value_not_equal_to' => ['8']
                 )
             ),
             ef5systems_vc_map_add_css_animation([
@@ -264,7 +264,7 @@ vc_map(array(
                 'group'      => esc_html__('Link','overcome'),
                 'dependency' => array(
                     'element' => 'layout_template',
-                    'not_equal_to' => ['8']
+                    'value_not_equal_to' => ['8']
                 )
             ]),
             // Link 2
@@ -276,7 +276,7 @@ vc_map(array(
                 'group'      => esc_html__('Link','overcome'),
                 'dependency' => array(
                     'element' => 'layout_template',
-                    'not_equal_to' => ['8']
+                    'value_not_equal_to' => ['8']
                 )
             ),
             array(
@@ -288,7 +288,7 @@ vc_map(array(
                 'group'      => esc_html__('Link','overcome'),
                 'dependency' => array(
                     'element' => 'layout_template',
-                    'not_equal_to' => ['8']
+                    'value_not_equal_to' => ['8']
                 )
             ),
             ef5systems_vc_map_add_css_animation([
@@ -296,7 +296,7 @@ vc_map(array(
                 'group'      => esc_html__('Link','overcome'),
                 'dependency' => array(
                     'element' => 'layout_template',
-                    'not_equal_to' => ['8']
+                    'value_not_equal_to' => ['8']
                 )
             ]),
         )
