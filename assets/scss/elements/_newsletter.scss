@@ -46,6 +46,14 @@
 				padding-top: 11px;
 				padding-bottom: 11px;
 			}
+			.tnp-submit{
+				padding-top: 11px;
+				padding-bottom: 11px;
+			}
+			.tnp-submit,
+			.tnp-email{
+				@include border-radius(23px);
+			}
 		}
 		.tnp-email{
 			padding: 8px 120px 8px 20px;
