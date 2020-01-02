@@ -38,6 +38,7 @@
 		width: 148px;
 		height: 148px;
 		border: 7px solid #ebebeb;
+		background: $white;
 		padding-top: 15px;
 		@include border-radius(50%);
 	}
