@@ -51,6 +51,7 @@ vc_map(array(
             ),
             'std' => ''
         ),
+        vc_map_add_css_animation(),
         array(
             'type'        => 'ef5_datetime', 
             'param_name'  => 'time',
