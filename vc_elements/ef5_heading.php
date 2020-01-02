@@ -19,6 +19,7 @@ vc_map(array(
                     '5'  => get_template_directory_uri().'/vc_elements/layouts/heading-5.png',
                     '6'  => get_template_directory_uri().'/vc_elements/layouts/heading-6.png',
                     '7'  => get_template_directory_uri().'/vc_elements/layouts/heading-7.png',
+                    '8'  => get_template_directory_uri().'/vc_elements/layouts/heading-8.png',
                 ),
                 'std'              => '1',
                 'admin_label'      => true,
@@ -211,7 +212,11 @@ vc_map(array(
                 'value'      => 'Sub Heading',
                 'std'        => 'Sub Heading',
                 'holder'     => 'h3',
-                'group'      => esc_html__('Sub Heading','overcome')
+                'group'      => esc_html__('Sub Heading','overcome'),
+                'dependency' => array(
+                    'element' => 'layout_template',
+                    'not_equal_to' => ['8']
+                )
             ),
             ef5systems_vc_map_add_css_animation([
                 'param_name' => 'subheading_text_css_animation',
@@ -229,6 +234,10 @@ vc_map(array(
                 'value'      => 'This is OverCome custom description. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo.',
                 'holder'     => 'div',
                 'group'      => esc_html__('Description','overcome'),
+                'dependency' => array(
+                    'element' => 'layout_template',
+                    'not_equal_to' => ['8']
+                )
             ),
             ef5systems_vc_map_add_css_animation([
                 'param_name' => 'desc_text_css_animation',
@@ -244,11 +253,19 @@ vc_map(array(
                 'heading'    => esc_html__('Link 1','overcome'),
                 'description'=> esc_html__('Add your custom link','overcome'),
                 'param_name' => 'button_link',
-                'group'      => esc_html__('Link','overcome')
+                'group'      => esc_html__('Link','overcome'),
+                'dependency' => array(
+                    'element' => 'layout_template',
+                    'not_equal_to' => ['8']
+                )
             ),
             ef5systems_vc_map_add_css_animation([
                 'param_name' => 'button_link_css_animation',
                 'group'      => esc_html__('Link','overcome'),
+                'dependency' => array(
+                    'element' => 'layout_template',
+                    'not_equal_to' => ['8']
+                )
             ]),
             // Link 2
             array(
@@ -256,7 +273,11 @@ vc_map(array(
                 'heading'    => esc_html__('Link 2','overcome'),
                 'description'=> esc_html__('Add your custom link','overcome'),
                 'param_name' => 'button_link2',
-                'group'      => esc_html__('Link','overcome')
+                'group'      => esc_html__('Link','overcome'),
+                'dependency' => array(
+                    'element' => 'layout_template',
+                    'not_equal_to' => ['8']
+                )
             ),
             array(
                 'type'       => 'textfield',
@@ -265,10 +286,18 @@ vc_map(array(
                 'value'      => 'OR',
                 'std'      => 'OR',
                 'group'      => esc_html__('Link','overcome'),
+                'dependency' => array(
+                    'element' => 'layout_template',
+                    'not_equal_to' => ['8']
+                )
             ),
             ef5systems_vc_map_add_css_animation([
                 'param_name' => 'button_link2_css_animation',
                 'group'      => esc_html__('Link','overcome'),
+                'dependency' => array(
+                    'element' => 'layout_template',
+                    'not_equal_to' => ['8']
+                )
             ]),
         )
     )
