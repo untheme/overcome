@@ -5,12 +5,12 @@
 if(!function_exists('overcome_footer')){
 	function overcome_footer(){
 		$footer_layout = overcome_get_opts('footer_layout','');
+		var_dump($footer_layout);
 		if(overcome_have_post('ef5_footer') && $footer_layout !== ''){
 		$footer_title = sanitize_title(get_the_title(overcome_get_id_by_slug($footer_layout, 'ef5_footer')));
 	?>
-		<footer id="ef5-footer" class="ef5-footer-area ef5-footer-builder <?php echo esc_attr($footer_title);?>">
-			<?php overcome_content_by_slug($footer_layout, 'ef5_footer'); ?>
-		</footer>
+		<footer id="ef5-footer" class="ef5-footer-area ef5-footer-builder <?php echo esc_attr($footer_title);?>"><?php overcome_content_by_slug($footer_layout, 'ef5_footer'); 
+		?></footer>
 	<?php
 		} else {
 			overcome_footer_default();
