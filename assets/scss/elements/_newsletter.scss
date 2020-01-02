@@ -40,6 +40,13 @@
 		max-width: 411px;
 		margin-left: auto;
 		margin-right: auto;
+		&.large{
+			max-width: 530px;
+			.tnp-email{
+				padding-top: 11px;
+				padding-bottom: 11px;
+			}
+		}
 		.tnp-email{
 			padding: 8px 120px 8px 20px;
 			[dir="rtl"] &{
