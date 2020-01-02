@@ -315,6 +315,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         echo overcome_optimize_css_class(trim(implode(' ', $wrap_css_class)));
     }
     protected function ef5_heading_small_heading_style($atts, $args = []){
+        $text_size = '';
         switch ($atts['layout_template']) {
             case '8':
                 $text_size = ef5systems_vc_text_style_css($atts, [
