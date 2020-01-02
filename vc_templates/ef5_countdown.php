@@ -12,32 +12,46 @@
  	<div class="<?php echo trim(implode(' ', $wrap_css_class));?>">
 		<div class="ef5-cxountdown-bar ef5-countdown-time is-countdown" data-count="2030,11,10,00,00,00" data-format="1" data-label="Years, Month, Week, Days, Hours, Mins, Secs" data-timezone="0">
 			<span class="item year"><span class="item-inner">
-				<span class="amount">11</span>
-				<span class="title">Years</span>
+				<span class="item-content">
+					<span class="amount">11</span>
+					<span class="title">Years</span>
+				</span>
 			</span></span>
 			<span class="item month"><span class="item-inner">
-				<span class="amount">09</span>
-				<span class="title"> Month</span>
+				<span class="item-content">
+					<span class="amount">09</span>
+					<span class="title"> Month</span>
+				</span>
 			</span></span>
 			<span class="item week"><span class="item-inner">
-				<span class="amount">03</span>
-				<span class="title"> Week</span>
+				<span class="item-content">
+					<span class="amount">03</span>
+					<span class="title"> Week</span>
+				</span>
 			</span></span>
 			<span class="item day"><span class="item-inner">
-				<span class="amount">02</span>
-				<span class="title"> Days</span>
+				<span class="item-content">
+					<span class="amount">02</span>
+					<span class="title"> Days</span>
+				</span>
 			</span></span>
 			<span class="item hour"><span class="item-inner">
-				<span class="amount">15</span>
-				<span class="title"> Hours</span>
+				<span class="item-content">
+					<span class="amount">15</span>
+					<span class="title"> Hours</span>
+				</span>
 			</span></span>
 			<span class="item minute"><span class="item-inner">
-				<span class="amount">59</span>
-				<span class="title"> Mins</span>
+				<span class="item-content">
+					<span class="amount">59</span>
+					<span class="title"> Mins</span>
+				</span>
 			</span></span>
 			<span class="item second"><span class="item-inner">
-				<span class="amount">55</span>
-				<span class="title"> Secs</span>
+				<span class="item-content">
+					<span class="amount">55</span>
+					<span class="title"> Secs</span>
+				</span>
 			</span></span>
 		</div>
 	</div>
