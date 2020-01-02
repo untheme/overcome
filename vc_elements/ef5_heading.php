@@ -373,7 +373,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
                         'default' => [
                             'size'  => '36 text-md-54 text-lg-86',
                             'style' => '600',
-                            'color' => 'accent'
+                            'color' => 'white'
                         ]
                     ]);
                 break;
