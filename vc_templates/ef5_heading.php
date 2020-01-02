@@ -14,6 +14,11 @@ extract( $atts );
 <div class="<?php $this->overcome_heading_wrap_css_class($atts); ?>">
 	<?php 
 		switch ($layout_template) {
+			case '8':
+				$this->ef5_heading_small_heading($atts, ['class' => 'text-uppercase']);
+				$this->ef5_heading_main_heading_icon($atts);
+				$this->ef5_heading_main_heading($atts,['class' => 'ef5-heading']);
+				break;
 			case '6':
 				$this->ef5_heading_small_heading($atts, ['class' => 'text-22 ef5-text-accent text-uppercase']);
 				$this->ef5_heading_main_heading_icon($atts);

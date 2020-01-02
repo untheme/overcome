@@ -365,6 +365,18 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
 
     protected function ef5_heading_main_heading_style($atts, $args = []){
         switch ($atts['layout_template']) {
+            case '8':
+                $text_size = ef5systems_vc_text_style_css($atts, [
+                    'param_name' => [
+                        'color' => 'text_color_opts']
+                        ,
+                        'default' => [
+                            'size'  => '36 text-lg-54',
+                            'style' => '600',
+                            'color' => 'accent'
+                        ]
+                    ]);
+                break;
             case '6':
                 $text_size = ef5systems_vc_text_style_css($atts, [
                     'param_name' => [
