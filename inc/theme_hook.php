@@ -235,7 +235,15 @@ function overcome_colors(){
 		'777777'  => ['OverCome Color 08', '#777777']
 	];
 }
-
+/**
+ * Add your theme font size
+*/
+add_filter('ef5systems_font_sizes', 'overcome_font_sizes');
+function overcome_font_sizes(){
+	return [
+		'86' => ['86px','86px']
+	];
+}
 /**
  * Custom OWL Nav Style
 */
