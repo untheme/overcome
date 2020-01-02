@@ -16,6 +16,7 @@ vc_map(array(
             'heading'    => esc_html__('Layout Mode','overcome'),
             'param_name' => 'layout_template',
             'value'      =>  array(
+                '1' => get_template_directory_uri().'/vc_extends/layouts/countdown-1.png',
                 '2' => get_template_directory_uri().'/vc_extends/layouts/countdown-2.png',
             ),
             'std'        => '1',
