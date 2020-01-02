@@ -314,6 +314,26 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $wrap_css_class = ['ef5-heading-wrap','ef5-heading-'.$layout_template, $content_align, $class, $el_class];
         echo overcome_optimize_css_class(trim(implode(' ', $wrap_css_class)));
     }
+    protected function ef5_heading_small_heading_style($atts, $args = []){
+        switch ($atts['layout_template']) {
+            case '8':
+                $text_size = ef5systems_vc_text_style_css($atts, [
+                        'param_name' => [
+                            'color'       => 'small_heading_text_color_opts',
+                            'font_size'   => 'small_heading_size',
+                            'font_style'  => 'small_heading_font_style',
+                            'line_height' => 'small_heading_line_height',
+                        ],
+                        'default' => [
+                            'size'  => '22 text-md-36 text-lg-54',
+                            'style' => '600',
+                            'color' => 'accent'
+                        ]
+                    ]);
+                break;
+        }
+        return $text_size;
+    }
     protected function ef5_heading_small_heading($atts,$args = []){
         if(empty($atts['small_heading_text'])) return;
         $args = wp_parse_args($args, [
@@ -341,10 +361,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $line_height = isset($line_height) && !empty($line_height) ? 'lh-'.$line_height : '';
         $small_heading_css_class = [
             'small-heading',
-            $text_color,
-            $text_size,
-            $font_style,
-            $line_height,
+            $this->ef5_heading_small_heading_style($atts),
             $args['class'],
             $this->getCSSAnimation( $atts['small_css_animation'] )
         ];
@@ -456,16 +473,9 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
         $heading_string = trim(implode(' ',[$heading_text, $heading2_text, $heading3_text]));
         // Heading 
         $heading_attrs = $heading_css = [];
-        $text_color = isset($text_color) && !empty($text_color) ? $text_color : 'default';
-        $text_size = isset($text_size) && !empty($text_size) ? 'text-'.$text_size : '';
-        $font_style = isset($font_style) && !empty($font_style) ? 'font-style-'.$font_style : 'font-style-700';
-        $line_height = isset($line_height) && !empty($line_height) ? 'lh-'.$line_height : '';
         $heading_css_class = [
             'main-heading',
-            //'ef5-text-'.$text_color,
             $this->ef5_heading_main_heading_style($atts),
-            //$font_style,
-            //$line_height,
             $args['class'],
             $this->getCSSAnimation( $atts['heading_css_animation'] )
         ];
