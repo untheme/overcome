@@ -89,6 +89,7 @@ vc_map(array(
 			'std'		  => '',
 			'admin_label' => true,
     	),
+    	vc_map_add_css_animation()
     ) 
 ));
 

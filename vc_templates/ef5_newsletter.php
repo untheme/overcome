@@ -2,7 +2,7 @@
 if(!class_exists('NewsletterWidgetMinimal') && !class_exists('NewsletterWidget')) return;
     $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
     extract( $atts );
-    $wrapper_class = array('ef5-newsletter', $layout_mode, 'ef5-newsletter-'.$layout_template, $el_class);
+    $wrapper_class = array('ef5-newsletter', $layout_mode, 'ef5-newsletter-'.$layout_template, $el_class, $this->getCSSAnimation( $css_animation));
 
     $default_form = '[newsletter_form button_label="'.esc_attr($btn_text).'" class="'.esc_attr($el_class).'"]';
     if($show_name) $default_form .= '[newsletter_field name="name" label="" placeholder="'.esc_attr($name_text).'"]';
