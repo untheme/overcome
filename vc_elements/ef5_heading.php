@@ -371,7 +371,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
                         'color' => 'text_color_opts']
                         ,
                         'default' => [
-                            'size'  => '36 text-lg-54',
+                            'size'  => '36 text-md-54 text-lg-86',
                             'style' => '600',
                             'color' => 'accent'
                         ]
