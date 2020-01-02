@@ -9,7 +9,7 @@ if(!class_exists('NewsletterWidgetMinimal') && !class_exists('NewsletterWidget')
     $default_form .= '[newsletter_field name="email" label="" placeholder="'.esc_attr($email_text).'"]';
     $default_form .= '[/newsletter_form]';
 ?>
-<div class="<?php echo trim(implode(' ',$wrapper_class)); ?>">
+<div class="<?php echo overcome_optimize_css_class(implode(' ',$wrapper_class)); ?>">
     <?php $this->title($atts); ?>
     <?php switch ($layout_mode) {
         case 'minimal':
