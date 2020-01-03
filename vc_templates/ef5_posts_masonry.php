@@ -83,6 +83,11 @@
             <div class="<?php $this->ef5_posts_masonry_items_class($atts,['class' => $item_w.' '.$filter_class]); ?>">
             <?php  
                 switch ($item_template) {
+                    case '14':
+                        overcome_vc_post_layout_14($atts,[
+                                'thumbnail_size' => overcome_default_value($masonry_size[$masonry_size_index], '370x215')
+                            ]);
+                    break;
                     default:
                     $item_css_class[] = 'ef5-rounded-10 overlay-wrap ef5-hover-shadow-1';
             ?>	
