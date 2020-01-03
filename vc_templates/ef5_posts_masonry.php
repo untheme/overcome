@@ -58,7 +58,7 @@
 ?>
 <div class="ef5-posts" id="<?php echo esc_attr($el_id);?>">
     <?php $this->ef5_posts_masonry_filters($atts); ?>
-    <div class="<?php $this->ef5_posts_masonry_wrap_class($atts);?>" data-originleft="<?php echo $originLeft;?>">
+    <div class="<?php $this->ef5_posts_masonry_wrap_class($atts);?>" data-originleft="<?php echo overcome_html($originLeft);?>" data-layoutmode="<?php echo overcome_html($layoutmode); ?>">
         <div class="ef5-masonry-sizer"></div>
         <div class="ef5-masonry-gutter"></div>
         <?php 

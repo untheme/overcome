@@ -88,6 +88,17 @@ vc_map(array(
                 'group' => esc_html__('Layouts','overcome'),
             ),
             array(
+                'type'  => 'dropdown',
+                'heading' => esc_html__('Masonry Mode','overcome'),
+                'param_name' => 'layoutmode',
+                'value' => array(
+                    'masonry',
+                    'fitRows'
+                ),
+                'std'   => 'masonry',
+                'group' => esc_html__('Layouts','overcome'),
+            ),
+            array(
                 'type'          => 'checkbox',
                 'param_name'    => 'show_pagination',
                 'value'         => array(
