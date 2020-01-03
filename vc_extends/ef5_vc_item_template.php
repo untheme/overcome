@@ -253,14 +253,21 @@ function overcome_vc_post_layout_14($atts, $args = []){
                 overcome_posted_in(['class'=>'text-14 ef5-text-accent ef5-link-inherit pt-15','icon' => '']);
                 overcome_post_title(['class'=>'text-18 font-style-600 pt-5']);
             ?>
-            <div class="pt-5">
+            <div class="pt-5 d-flex justify-content-center">
                 <?php 
-                    overcome_posted_by([
+                    $meta = [];
+                    $meta[] = overcome_posted_by([
                         'class'=>'text-14 font-style-400i',
                         'icon' => '',
-                        'before_author_name' => esc_html__('by','overcome')
+                        'before_author_name' => esc_html__('by','overcome'),
+                        'echo' => false
                     ]);
-                    overcome_comments_count(['class'=>'text-14 font-style-400i','icon' => '']);
+                    $meta[] = overcome_comments_count([
+                        'class'=>'text-14 font-style-400i',
+                        'icon' => '', 
+                        'echo' => false
+                    ]);
+                    echo implode('&nbsp;-&nbsp;', $meta);
                 ?>
             </div>
         </div>
