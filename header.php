@@ -19,7 +19,7 @@
 </head>
 <body <?php body_class(); ?>> 
     <?php 
-        do_acction('overcome_before_content');
+        do_action('overcome_before_content');
         overcome_page_loading(); 
     ?>
     <div id="ef5-page" class="<?php overcome_page_css_class();?>">
