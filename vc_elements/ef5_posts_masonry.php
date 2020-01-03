@@ -105,7 +105,26 @@ vc_map(array(
                     esc_html__( 'Show Pagination', 'overcome' ) => '1'
                 ),
                 'std'           => '1',
-                'group'         => esc_html__('Layouts','overcome')
+                'group'         => esc_html__('Layouts','overcome'),
+                'edit_field_class' => 'vc_col-sm-6'
+            ),
+            array(
+                'type'          => 'dropdown',
+                'heading'       => esc_html__('Pagination Align','overcome'),
+                'param_name'    => 'pagination_align',
+                'value'         => array(
+                    esc_html__( 'Default', 'overcome' ) => '',
+                    esc_html__( 'Start', 'overcome' )   => 'start',
+                    esc_html__( 'Center', 'overcome' )  => 'center',
+                    esc_html__( 'End', 'overcome' )     => 'end'
+                ),
+                'std'           => 'center',
+                'group'         => esc_html__('Layouts','overcome'),
+                'dependency'    => [
+                    'element' => 'show_pagination',
+                    'value'   => '1'
+                ],
+                'edit_field_class' => 'vc_col-sm-6'
             )
         ),
         // Filter
