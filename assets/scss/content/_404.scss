@@ -19,6 +19,8 @@
 .error-404 {
 	background: rgba(0,0,0,0.72);
 	padding: 30px;
+	@include border-radius(10px);
+	
 	@media(min-width: 992px){
 		padding: 67px 125px 95px 125px;
 	}

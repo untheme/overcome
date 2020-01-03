@@ -13,7 +13,7 @@
 get_header();
 ?>	
 	<div class="container d-flex justify-content-center text-center">
-		<div class="error-404 not-found ef5-rounded-10 ef5-bg-overlay">
+		<div class="error-404 not-found">
 			<div class="err-msg-large">
 				<?php esc_html_e('404','overcome') ?>
 			</div>
