@@ -239,7 +239,7 @@ function overcome_vc_post_layout_14($atts, $args = []){
     ]);
     $rounded = 'ef5-rounded-10';
     $css_class = ['ef5-post-item-inner', $args['class']];
-    $after = '<div class="date"><span class="date">'.date_i18n('d', strtotime(get_the_date())).'</span><span class="month">'.date_i18n('F', strtotime(get_the_date())).'</span></div>';
+    $after = '<div class="date"><span class="date">'.date_i18n('d', strtotime(get_the_date())).'</span><span class="month">'.date_i18n('M', strtotime(get_the_date())).'</span></div>';
     ?>
     <div class="ef5-post-item ef5-post-item-layout-<?php echo esc_attr($atts['layout_template']);?>">
         <div class="<?php echo trim(implode(' ', $css_class));?>">
