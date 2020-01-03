@@ -651,7 +651,7 @@
     ?>
     </div>
 <?php 
-    overcome_loop_pagination(['show_pagination' => $show_pagination, 'style' => '2', 'class' => 'justify-content-'.$pagination_align]); 
+    overcome_loop_pagination(['show_pagination' => $show_pagination, 'style' => '3', 'class' => 'justify-content-'.$pagination_align]); 
     $this->view_all($atts);
 ?>
 </div>
