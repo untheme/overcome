@@ -738,7 +738,8 @@
                     originLeft = jQuery(".ef5-posts-masonry").data('originleft');
                 var $grid = imagesLoaded( blog_dom, function() {
                     jQuery(".ef5-posts-masonry").isotope({
-                        layoutMode: 'masonry',
+                        //layoutMode: 'masonry',
+                        layoutMode: 'fitRows',
                         percentPosition: true,
                         itemSelector: '.ef5-masonry-item',
                         originLeft: originLeft,
