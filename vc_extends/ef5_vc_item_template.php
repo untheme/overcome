@@ -267,7 +267,7 @@ function overcome_vc_post_layout_14($atts, $args = []){
                         'icon' => '', 
                         'echo' => false
                     ]);
-                    echo implode('&nbsp;-&nbsp;', $meta);
+                    echo implode(' - ', $meta);
                 ?>
             </div>
         </div>
