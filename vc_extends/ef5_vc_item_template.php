@@ -284,7 +284,7 @@ function overcome_vc_post_layout_15($atts, $args = []){
     $css_class = ['ef5-post-item-inner', 'row', $args['class']];
     $after = '';
     ?>
-    <div class="ef5-post-item ef5-post-item-layout-<?php echo esc_attr($atts['item_template']);?>">
+    <div class="ef5-post-item ef5-post-item-layout-<?php echo esc_attr($atts['layout_template']);?>">
         <div class="<?php echo trim(implode(' ', $css_class));?>">
             <div class="col-lg-5">
                 <?php 
