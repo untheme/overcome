@@ -301,15 +301,19 @@ function overcome_vc_post_layout_15($atts, $args = []){
                     <?php 
                         $meta = [];
                         $meta[] = overcome_posted_on([
+                            'class' => 'col-auto',
                             'echo' => false
                         ]);
                         $meta[] = overcome_posted_by([
+                            'class' => 'col-auto',
                             'echo' => false
                         ]);
                         $meta[] = overcome_comments_count([
+                            'class' => 'col-auto',
                             'echo' => false
                         ]);
                         $meta[] = overcome_posted_in([
+                            'class' => 'col-auto',
                             'echo' => false
                         ]);
                         echo implode('', $meta);
