@@ -325,6 +325,11 @@
                 while($posts->have_posts()){
                     $d++;
                     $posts->the_post();
+                    // Thumbnail Size
+                    $thumbnail_size_index++;
+                    if($thumbnail_size_index >= count($thumbnail_size)){
+                        $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
+                    }
                 ?>
                 <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
                     <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
