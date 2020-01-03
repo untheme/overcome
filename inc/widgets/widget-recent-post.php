@@ -91,10 +91,10 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
         if ( $show_author || $show_comments || $show_date || $show_cat )
         {
             ob_start();
-            if($show_author) overcome_posted_by();
-            if($show_date) overcome_posted_on();
-            if($show_comments) overcome_comments_popup_link(['show_text'=> true]);
-            if($show_cat) overcome_posted_in();
+                if($show_author) overcome_posted_by();
+                if($show_date) overcome_posted_on();
+                if($show_comments) overcome_comments_popup_link(['show_text'=> true]);
+                if($show_cat) overcome_posted_in();
             $post_meta = ob_get_clean();
         }
 
@@ -131,6 +131,7 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
                 echo '<div class="ef5-brief col" style="max-width: calc(100% - '.$thumbnail_size[0].'px);">';
                 if ( $post_meta && $layout === '3')
                 {
+                    var_dump($post_meta);
                     printf( '<div class="ef5-meta row gutter-20 justify-content-between">%s</div>', $post_meta );
                 }
 
