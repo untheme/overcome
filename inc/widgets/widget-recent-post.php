@@ -129,6 +129,7 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
                 );
 
                 echo '<div class="ef5-brief col" style="max-width: calc(100% - '.$thumbnail_size[0].'px);">';
+                var_dump($layout);
                 if ( $post_meta && $layout === '3')
                 {
                     var_dump($post_meta);
