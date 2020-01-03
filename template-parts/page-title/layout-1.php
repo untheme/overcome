@@ -8,8 +8,6 @@ if(isset($args)){
     $ptitle_layout = $args['ptitle_layout'];
 } else {
    $titles = overcome_get_page_titles();
-   var_dump($titles);
-   var_dump(overcome_get_opts( 'custom_title', '1' ));
    $show_breadcrumb = overcome_get_opts( 'breadcrumb_on', '1' );
    $ptitle_layout = overcome_get_opts('ptitle_layout','1');
 }
