@@ -78,11 +78,13 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
         ) );
 
         switch ($layout) {
-            case '3':
+            case 3:
+                $row_align = 'align-items-center';
                 $img_class = 'ef5-rounded-5';
                 break;
             
             default:
+                $row_align = '';
                 $img_class = '';
                 break;
         }
@@ -118,8 +120,9 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
                 $r->the_post();
 
                 printf(
-                    '<div class="post-list-item transition %s"><div class="row gutters-20">',
-                    ( has_post_thumbnail() ? 'has-post-thumbnail' : '' )
+                    '<div class="post-list-item transition %s"><div class="row gutters-20 %s">',
+                    ( has_post_thumbnail() ? 'has-post-thumbnail' : '' ),
+                    esc_attr($row_align)
                 );
 
                 
