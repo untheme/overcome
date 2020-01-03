@@ -252,8 +252,13 @@ function overcome_vc_post_layout_14($atts, $args = []){
                 ]); 
                 overcome_posted_in(['class'=>'text-14 ef5-text-accent ef5-link-inherit pt-15','icon' => '']);
                 overcome_post_title(['class'=>'text-18 font-style-600 pt-5']);
-                overcome_posted_by(['class'=>'text-14 font-style-400i pt-5','icon' => '']);
             ?>
+            <div class="pt-5">
+                <?php 
+                    overcome_posted_by(['class'=>'text-14 font-style-400i','icon' => '']);
+                    overcome_comments_count(['class'=>'text-14 font-style-400i','icon' => '']);
+                ?>
+            </div>
         </div>
     </div>
     <?php

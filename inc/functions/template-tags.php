@@ -281,6 +281,55 @@ if ( ! function_exists( 'overcome_comments_popup_link' ) ) {
 }
 
 /**
+ * Prints comments count with link to single post comment form.
+ */
+if ( ! function_exists( 'overcome_comments_count' ) ) {
+    function overcome_comments_count($args = [])
+    {
+        $args = wp_parse_args($args, [
+            'class'     => '',
+            'before'    => '',
+            'after'     => '',
+            'icon'      => 'fa fa-comment-alt',
+            'icon_class'=> '',
+            'echo'      => true,
+            'show_text' => true,
+            'show_cmt'  => '1'
+        ]);
+        if($args['show_cmt'] !== '1') return;
+
+        $classes = trim(implode(' ', ['ef5-comments-link', $args['class']] ));
+        $args['icon'] = !empty($args['icon']) ? '<span class="'.trim('meta-icon '.$args['icon_class'].' '.$args['icon']).'">&nbsp;&nbsp;</span>' : '';
+        ob_start();
+        $number    = (int) get_comments_number( get_the_ID() );
+        if ( ! post_password_required() && ( comments_open() || get_comments_number() ) )
+        {
+            echo '<div class="'.esc_attr($classes).'">';
+            printf ('%s' , $args['before']);
+            if(!$args['show_text']){
+                comments_popup_link(
+                    sprintf('<span class="hint--top" data-hint="%s">%s %s</span>',esc_html__('Be the first to comment','overcome'), $args['icon'], $number),
+                    sprintf('<span class="hint--top" data-hint="%s">%s %s</span>',esc_html__('Post a comment','overcome'), $args['icon'], $number),
+                    sprintf('<span class="hint--top" data-hint="%s">%s %s</span>',esc_html__('Post a comment','overcome'), $args['icon'], $number)
+                );
+            } else {
+                comments_popup_link(
+                    sprintf('<span class="hint--top" data-hint="%s">%s %s %s</span>',esc_html__('Be the first to comment','overcome'), $args['icon'], $number, esc_html__('Comments','overcome')),
+                    sprintf('<span class="hint--top" data-hint="%s">%s %s %s</span>',esc_html__('Post a comment','overcome'), $args['icon'], $number, esc_html__('Comment','overcome')),
+                    sprintf('<span class="hint--top" data-hint="%s">%s %s %s</span>',esc_html__('Post a comment','overcome'), $args['icon'], $number, esc_html__('Comments','overcome'))
+                );
+            }
+            printf ('%s' , $args['after']);
+            echo '</div>';
+        }
+        if($args['echo'] === true)
+            echo ob_get_clean();
+        else 
+            return ob_get_clean();
+    }
+}
+
+/**
  * Count views
  * Show count of viewed 
 */
