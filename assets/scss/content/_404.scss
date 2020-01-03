@@ -16,10 +16,28 @@
 	bottom: 0;
 	z-index: -1;
 }
+.error-404 {
+	background: rgba(0,0,0,0.72);
+	padding: 30px;
+	@media(min-width: 992px){
+		padding: 125px;
+	}
+}
 .err-msg-large{
 	font-size: 60px;
-	padding: 20px 0 0;
+	padding-bottom: 20px;
+	color: $white;
+	@media (min-width: 992px){
+		font-size: 200px;
+	}
 }
+.err-msg-medium{
+	font-size: 36px;
+	color: $accent_color;
+}
+
 .err-msg-small{
-	padding-bottom: 58px;
+	font-size: 18px;
+	font-weight: 500;
+	color: $white;
 }
