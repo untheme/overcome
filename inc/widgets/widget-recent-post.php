@@ -93,10 +93,10 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
             ob_start();
             switch ($layout) {
                 case 3:
-                    if($show_author) overcome_posted_by(['icon'=>'']);
-                    if($show_date) overcome_posted_on(['icon'=>'']);
-                    if($show_comments) overcome_comments_popup_link(['show_text'=> false,['icon'=>'']]);
-                    if($show_cat) overcome_posted_in(['icon'=>'']);
+                    if($show_author) overcome_posted_by(['icon'=>'', 'class' => 'ef5-text-accent ef5-link-inherit']);
+                    if($show_date) overcome_posted_on(['icon'=>'', 'class' => 'ef5-text-accent ef5-link-inherit']);
+                    if($show_comments) overcome_comments_popup_link(['show_text'=> false,'icon'=>'', 'class' => 'ef5-text-accent ef5-link-inherit']);
+                    if($show_cat) overcome_posted_in(['icon'=>'', 'class' => 'ef5-text-accent ef5-link-inherit']);
                     break;
                 default:
                     if($show_author) overcome_posted_by();
