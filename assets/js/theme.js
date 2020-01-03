@@ -737,7 +737,7 @@
                 var blog_dom = jQuery(".ef5-posts-masonry").get(0),
                     originLeft = jQuery(".ef5-posts-masonry").data('originleft'),
                     layoutMode = jQuery(".ef5-posts-masonry").data('layoutmode');
-                    console.log(layoutmode);
+                    console.log(layoutMode);
                 var $grid = imagesLoaded( blog_dom, function() {
                     jQuery(".ef5-posts-masonry").isotope({
                         layoutMode: layoutMode,
