@@ -255,7 +255,11 @@ function overcome_vc_post_layout_14($atts, $args = []){
             ?>
             <div class="pt-5">
                 <?php 
-                    overcome_posted_by(['class'=>'text-14 font-style-400i','icon' => '']);
+                    overcome_posted_by([
+                        'class'=>'text-14 font-style-400i',
+                        'icon' => '',
+                        'before_author_name' => esc_html__('by','overcome')
+                    ]);
                     overcome_comments_count(['class'=>'text-14 font-style-400i','icon' => '']);
                 ?>
             </div>
