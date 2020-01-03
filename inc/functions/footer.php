@@ -5,7 +5,7 @@
 if(!function_exists('overcome_footer')){
 	function overcome_footer(){
 		$footer_layout = overcome_get_opts('footer_layout','');
-		if($footer_layout === 'none') return;
+		if($footer_layout === 'none' || is_404()) return;
 		if(overcome_have_post('ef5_footer') && $footer_layout !== ''){
 		$footer_title = sanitize_title(get_the_title(overcome_get_id_by_slug($footer_layout, 'ef5_footer')));
 	?>
