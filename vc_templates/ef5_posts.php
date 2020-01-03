@@ -360,7 +360,7 @@
                                         ]);
 
                                         overcome_post_title([
-                                            'heading_tag' => $heading_class .' text-white font-style-500'
+                                            'heading_tag' => 'text-18 text-white font-style-500'
                                         ]);
                                         overcome_post_read_more([
                                             'before'         => '<div class="ef5-readmore-wrap">',
