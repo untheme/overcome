@@ -1,5 +1,12 @@
-.error404 #ef5-main{
-	padding: 110px 0;
+.error404 {
+	#ef5-main{
+		padding: 110px 0;
+	}
+	&.ef5-body-header-ontop{
+		#ef5-main{
+			padding-top: 300px;
+		}
+	}
 }
 .err-msg-large{
 	font-size: 60px;
