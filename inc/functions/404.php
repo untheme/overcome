@@ -1,5 +1,5 @@
 <?php
-add_action('wp_header','overcome_404_bg');
+add_action('overcome_before_content','overcome_404_bg');
 function overcome_404_bg(){
 	?>
 		<div class="ef5-404-img img-fit">

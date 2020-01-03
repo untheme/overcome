@@ -18,7 +18,10 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>> 
-    <?php overcome_page_loading(); ?>
+    <?php 
+        do_acction('overcome_before_content');
+        overcome_page_loading(); 
+    ?>
     <div id="ef5-page" class="<?php overcome_page_css_class();?>">
     <?php overcome_header_top(); ?>
     <div id="ef5-header-wrap"><?php
