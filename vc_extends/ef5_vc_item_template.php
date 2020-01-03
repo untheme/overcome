@@ -239,7 +239,7 @@ function overcome_vc_post_layout_14($atts, $args = []){
     ]);
     $rounded = 'ef5-rounded-10';
     $css_class = ['ef5-post-item-inner', $args['class']];
-    $after = '<div class="overlay ef5-bg-overlay '.$rounded.'"><div class="overlay-inner center-align"><a class="text-36 text-white" href="'.get_the_permalink().'"><span class="fa fa-link"></span></a></div></div>'
+    $after = '<div class="date"><span class="date">'.date_i18n('d', strtotime(get_the_date())).'</span><span class="month">'.date_i18n('F', strtotime(get_the_date())).'</span></div>';
     ?>
     <div class="ef5-post-item ef5-post-item-layout-<?php echo esc_attr($atts['layout_template']);?>">
         <div class="<?php echo trim(implode(' ', $css_class));?>">
@@ -247,11 +247,12 @@ function overcome_vc_post_layout_14($atts, $args = []){
                 overcome_post_media([
                     'thumbnail_size' => $args['thumbnail_size'], 
                     'default_thumb'  => true,
-                    'img_class'      => $rounded
+                    'img_class'      => $rounded,
+                    'after'          => $after
                 ]);   
             ?>
             <?php 
-                overcome_posted_on(['icon' => '','date_format' => 'd/M']);
+
                 overcome_posted_in(['class'=>'ef5-text-accent','icon' => '']);
                 overcome_post_title(['class'=>'text-18 font-style-600']);
                 overcome_posted_by(['class'=>'text-14 font-style-400i','icon' => '']);
