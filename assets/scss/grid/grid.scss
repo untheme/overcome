@@ -4,4 +4,12 @@
 	.ef5-grid-item-wrap {
 		padding: 15px;
 	}
+	&.ef5-posts-4{
+		margin-top: -25px;
+		margin-bottom: -25px;
+		.ef5-grid-item-wrap{
+			padding-top: 25px;
+			padding-bottom: 25px;
+		}
+	}
 }
