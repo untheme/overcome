@@ -22,6 +22,8 @@
 	color: $primary_color;
 	@include border-radius(5px);
 	padding: 5px;
+	line-height: 1;
+	text-transform: uppercase;
 	> span{
 		display: block;
 	}
