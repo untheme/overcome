@@ -4,7 +4,9 @@
 	}
 	&.ef5-body-header-ontop{
 		#ef5-main{
-			padding-top: 260px;
+			@media (min-width: 1200px){
+				padding-top: 260px;
+			}
 		}
 	}
 }
