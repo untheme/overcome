@@ -274,3 +274,49 @@ function overcome_vc_post_layout_14($atts, $args = []){
     </div>
     <?php
 }
+
+function overcome_vc_post_layout_15($atts, $args = []){
+    $args = wp_parse_args($args, [
+        'class'          => '',
+        'thumbnail_size' => '300x238',
+    ]);
+    $rounded = 'ef5-rounded-10';
+    $css_class = ['ef5-post-item-inner', 'row', $args['class']];
+    $after = '';
+    ?>
+    <div class="ef5-post-item ef5-post-item-layout-<?php echo esc_attr($atts['item_template']);?>">
+        <div class="<?php echo trim(implode(' ', $css_class));?>">
+            <div class="col-lg-5">
+                <?php 
+                    overcome_post_media([
+                        'thumbnail_size' => $args['thumbnail_size'], 
+                        'default_thumb'  => true,
+                        'img_class'      => $rounded,
+                        'after'          => $after
+                    ]);
+                ?>
+            </div>
+            <div class="col-lg-7">
+                <div class="row">
+                    <?php 
+                        $meta = [];
+                        $meta[] = overcome_posted_date([
+                            'echo' => false
+                        ]);
+                        $meta[] = overcome_posted_by([
+                            'echo' => false
+                        ]);
+                        $meta[] = overcome_comments_count([
+                            'echo' => false
+                        ]);
+                        $meta[] = overcome_posted_in([
+                            'echo' => false
+                        ]);
+                        echo implode('', $meta);
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+    <?php
+}
