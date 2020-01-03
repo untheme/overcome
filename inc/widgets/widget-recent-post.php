@@ -151,7 +151,7 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
                 switch ($layout) {
                     case 3:
                          printf(
-                            '<h5 class="ef5-heading font-style-500 pb-10"><a href="%1$s" title="%2$s">%3$s</a></h5>',
+                            '<h5 class="ef5-heading font-style-500"><a href="%1$s" title="%2$s">%3$s</a></h5>',
                             esc_url( get_permalink() ),
                             esc_attr( get_the_title() ),
                             get_the_title()
