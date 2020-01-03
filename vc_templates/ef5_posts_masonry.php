@@ -47,7 +47,11 @@
     // Thumbnail Size 
     $masonry_size_index = -1;
     switch ($layout_template) {
+        case '14' :
+            $masonry_size = ['370x215'];
+            break;
         default:
+            //$masonry_size = ['100x200','200x300','300x150','300x150','100','300x200'];
             $masonry_size = ['370x215'];
             break;
     }
