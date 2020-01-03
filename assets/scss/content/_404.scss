@@ -20,19 +20,23 @@
 	background: rgba(0,0,0,0.72);
 	padding: 30px;
 	@media(min-width: 992px){
-		padding: 125px;
+		padding: 67px 125px 95px 125px;
 	}
 }
 .err-msg-large{
 	font-size: 60px;
-	padding-bottom: 20px;
 	color: $white;
+	line-height: 1;
+	text-transform: uppercase;
+	font-weight: 700;
 	@media (min-width: 992px){
 		font-size: 200px;
 	}
 }
 .err-msg-medium{
 	font-size: 36px;
+	padding-bottom: 5px;
+	font-weight: 700;
 	color: $accent_color;
 }
 
@@ -43,4 +47,5 @@
 	max-width: 300px;
 	margin-left: auto;
 	margin-right: auto;
+	padding-bottom: 65px;
 }

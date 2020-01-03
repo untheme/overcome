@@ -14,10 +14,10 @@ get_header();
 ?>	
 	<div class="container d-flex justify-content-center text-center">
 		<div class="error-404 not-found ef5-rounded-10 ef5-bg-overlay">
-			<div class="font-style-700 text-uppercase err-msg-large">
+			<div class="err-msg-large">
 				<?php esc_html_e('404','overcome') ?>
 			</div>
-			<div class="text-large font-style-700 err-msg-medium">
+			<div class="err-msg-medium">
 				<?php esc_html_e( 'Ooops, Page Not Found', 'overcome' ); ?>
 			</div>
 			<div class="text-large font-style-700 err-msg-small">
