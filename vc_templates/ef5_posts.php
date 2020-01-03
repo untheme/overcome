@@ -30,6 +30,11 @@
 
     // Thumbnail size
     $thumbnail_size_index = -1;
+    switch ($layout_template) {
+        case '4':
+            $thumbnail_size = overcome_default_value($thumbnail_size, '370x416');
+            break;
+    }
     $thumbnail_size = explode(',', $thumbnail_size);
 ?>
 <div class="ef5-posts" id="<?php echo esc_attr($el_id);?>">
@@ -323,27 +328,43 @@
                 ?>
                 <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
                     <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
-                        <div class="row gutter-12">
-                            <div class="col-auto">
-                                <?php overcome_post_media([
-                                    'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '48'), 
-                                    'default_thumb'  => true,
-                                    'img_class'      => 'ef5-rounded-5'   
-                                ]); ?>
-                            </div>
-                            <div class="col ef5-content-info">
+                        <?php 
+                            overcome_post_media([
+                                'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
+                                'default_thumb'  => true,
+                                'img_class'      => 'w-auto ef5-rounded-10',   
+                            ]);
+                        ?>
+                        <div class="overlay ef5-bg-gradient-1 ef5-post-info ef5-rounded-10">
+                            <div class="row h-100">
+                                <div class="col-12 align-self-start">
                                 <?php 
-                                    overcome_posted_on([
-                                        'class' => 'text-13 ef5-text-accent',
-                                        'icon'  => ''
+                                    overcome_posted_in([
+                                        'show_cat' => '1',
+                                        'class'    => '',
+                                        'icon'     => '' 
                                     ]);
-                                    overcome_post_title([
-                                        'heading_tag' => 'text-13 lh-18 text-white font-style-400'
-                                    ]);
-                                    if(class_exists('EF5Payments')) {
-                                        ef5payments_donation_layout_1(['progress_bar' => false, 'show_percent'=>false]);
-                                    }
                                 ?>
+                                </div>
+                                <div class="col-12 align-self-end">
+                                    <?php 
+                                        overcome_posted_on([
+                                            'class' => 'text-white text-13 font-style-400i pb-10',
+                                            'icon'  => '',
+                                            'date_format' => 'd M, Y'
+                                        ]);
+
+                                        overcome_post_title([
+                                            'heading_tag' => $heading_class .' text-white font-style-500'
+                                        ]);
+                                        overcome_post_read_more([
+                                            'before'         => '<div class="ef5-readmore-wrap">',
+                                            'after'          => '</div>',
+                                            'readmore_class' => 'text-14 ef5-text-accent font-style-500',
+                                            'icon_right'     => is_rtl() ? 'text-12 flaticon-go-back-left-arrow' : 'flaticon-right-arrow-forward text-12'
+                                        ]);
+                                    ?>
+                                </div>
                             </div>
                         </div>
                         <?php ?>
