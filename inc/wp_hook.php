@@ -8,13 +8,13 @@ function overcome_body_class($classes){
 	$classes[] = 'header-'.overcome_get_opts('header_layout', '1');
 	// Header Ontop / Sticky 
 	if($header_ontop === '1' || $header_sticky === '1')
-		$classes[] = 'side-header-ontop';
+		$classes[] = 'ef5-body-header-ontop side-header-ontop';
 	// Boxed
 	if (overcome_get_opts('site_layout', '-1') === 'boxed')
-		$classes[] = 'site-boxed site-custom-vc-row';
+		$classes[] = 'ef5-site-boxed site-boxed site-custom-vc-row';
 	// Bordered
 	if (overcome_get_opts('site_layout', '-1') === 'bordered')
-		$classes[] = 'site-bordered';
+		$classes[] = 'ef5-site-bordered site-bordered';
 	return $classes;
 }
 
