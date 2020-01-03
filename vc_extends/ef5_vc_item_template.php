@@ -300,7 +300,7 @@ function overcome_vc_post_layout_15($atts, $args = []){
                 <div class="row">
                     <?php 
                         $meta = [];
-                        $meta[] = overcome_posted_date([
+                        $meta[] = overcome_posted_on([
                             'echo' => false
                         ]);
                         $meta[] = overcome_posted_by([
