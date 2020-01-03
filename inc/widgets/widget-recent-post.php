@@ -131,7 +131,7 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
                 echo '<div class="ef5-brief col" style="max-width: calc(100% - '.$thumbnail_size[0].'px);">';
                 if ( $post_meta && $layout === 3)
                 {
-                    printf( '<div class="ef5-meta row gutter-20 justify-content-between">%s</div>', $post_meta );
+                    printf( '<div class="ef5-meta row gutter-20 justify-content-between pb-5">%s</div>', $post_meta );
                 }
 
                 switch ($layout) {
