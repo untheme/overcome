@@ -251,9 +251,9 @@ function overcome_vc_post_layout_14($atts, $args = []){
                 ]);   
             ?>
             <?php 
-                overcome_posted_in(['class'=>'ef5-text-accent']);
+                overcome_posted_in(['class'=>'ef5-text-accent','icon' => '']);
                 overcome_post_title(['class'=>'text-18']);
-                overcome_posted_by(['class'=>'text-14 font-style-400i']);
+                overcome_posted_by(['class'=>'text-14 font-style-400i','icon' => '']);
             ?>
         </div>
     </div>
