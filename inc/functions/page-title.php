@@ -63,7 +63,7 @@ function overcome_breadcrumb($args = [])
         {
             continue;
         }
-
+        $entry['label'] = !empty(overcome_get_opts( 'custom_title', '' )) ? overcome_get_opts( 'custom_title', '' ) : $entry['label'];
         if ( ! empty( $entry['url'] ) )
         {
             printf(
