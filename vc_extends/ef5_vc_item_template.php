@@ -267,7 +267,7 @@ function overcome_vc_post_layout_14($atts, $args = []){
                         'icon' => '', 
                         'echo' => false
                     ]);
-                    echo implode('<span class="seperare">-</span>', $meta);
+                    echo implode('<span class="seperare pr-8 pl-8">-</span>', $meta);
                 ?>
             </div>
         </div>
