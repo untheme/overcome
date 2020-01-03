@@ -310,6 +310,7 @@ function overcome_vc_post_layout_15($atts, $args = []){
                         ]);
                         $meta[] = overcome_comments_count([
                             'class' => 'col-auto',
+                            'show_text' => false,
                             'echo' => false
                         ]);
                         $meta[] = overcome_posted_in([
