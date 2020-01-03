@@ -129,15 +129,13 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
                 );
 
                 echo '<div class="ef5-brief col" style="max-width: calc(100% - '.$thumbnail_size[0].'px);">';
-                var_dump($layout);
-                if ( $post_meta && $layout === '3')
+                if ( $post_meta && $layout === 3)
                 {
-                    var_dump($post_meta);
                     printf( '<div class="ef5-meta row gutter-20 justify-content-between">%s</div>', $post_meta );
                 }
 
                 switch ($layout) {
-                    case '3':
+                    case 3:
                          printf(
                             '<h5 class="ef5-heading font-style-500 pb-10"><a href="%1$s" title="%2$s">%3$s</a></h5>',
                             esc_url( get_permalink() ),
@@ -157,7 +155,7 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
                 }
                 if(class_exists('EF5Payments')) {
                     switch ($layout) {
-                        case '2':
+                        case 2:
                             ef5payments_donation_raised([
                                 'label' => esc_html__('Donate so far:','overcome'),
                                 'label_class' => 'text-13 ef5-text-777777 font-style-500 d-block',
@@ -175,7 +173,7 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
                     'before' => '<div class="text-15 font-style-500 ef5-text-primary">',
                     'after'  => '</div>'
                 ]);
-                if ( $post_meta && $layout !== '3')
+                if ( $post_meta && $layout !== 3)
                 {
                     printf( '<div class="ef5-meta row gutter-20 justify-content-between">%s</div>', $post_meta );
                 }
