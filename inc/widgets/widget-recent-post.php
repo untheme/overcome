@@ -77,6 +77,27 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
             'post__not_in'        => [get_the_ID()]  
         ) );
 
+        switch ($layout) {
+            case '3':
+                $img_class = 'ef5-rounded-5';
+                break;
+            
+            default:
+                $img_class = '';
+                break;
+        }
+
+        $post_meta = '';
+        if ( $show_author || $show_comments || $show_date || $show_cat )
+        {
+            ob_start();
+            if($show_author) overcome_posted_by();
+            if($show_date) overcome_posted_on();
+            if($show_comments) overcome_comments_popup_link(['show_text'=> true]);
+            if($show_cat) overcome_posted_in();
+            $post_meta = ob_get_clean();
+        }
+
         if ( $r->have_posts() )
         {
             echo '<div class="posts-list layout-'.esc_attr($layout).'">';
@@ -98,22 +119,40 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
                 printf(
                     '<div class="ef5-featured col-auto">' .
                         '<a href="%1$s" title="%2$s" class="ef5-thumbnail">' .
-                            '<img src="%3$s" alt="%2$s" />' .
+                            '<img class="%4$s" src="%3$s" alt="%2$s" />' .
                         '</a>' .
                     '</div>',
                     esc_url( get_permalink() ),
                     esc_attr( get_the_title() ),
-                    esc_url( $thumbnail_url )
+                    esc_url( $thumbnail_url ),
+                    esc_attr($img_class)
                 );
 
                 echo '<div class="ef5-brief col" style="max-width: calc(100% - '.$thumbnail_size[0].'px);">';
+                if ( $post_meta && $layout === '3')
+                {
+                    printf( '<div class="ef5-meta row gutter-20 justify-content-between">%s</div>', $post_meta );
+                }
 
-                printf(
-                    '<h4 class="ef5-heading font-style-500 pb-10"><a href="%1$s" title="%2$s">%3$s</a></h4>',
-                    esc_url( get_permalink() ),
-                    esc_attr( get_the_title() ),
-                    get_the_title()
-                );
+                switch ($layout) {
+                    case '3':
+                         printf(
+                            '<h5 class="ef5-heading font-style-500 pb-10"><a href="%1$s" title="%2$s">%3$s</a></h5>',
+                            esc_url( get_permalink() ),
+                            esc_attr( get_the_title() ),
+                            get_the_title()
+                        );
+                        break;
+                    
+                    default:
+                        printf(
+                            '<h4 class="ef5-heading font-style-500 pb-10"><a href="%1$s" title="%2$s">%3$s</a></h4>',
+                            esc_url( get_permalink() ),
+                            esc_attr( get_the_title() ),
+                            get_the_title()
+                        );
+                        break;
+                }
                 if(class_exists('EF5Payments')) {
                     switch ($layout) {
                         case '2':
@@ -134,20 +173,11 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
                     'before' => '<div class="text-15 font-style-500 ef5-text-primary">',
                     'after'  => '</div>'
                 ]);
-                if ( $show_author || $show_comments || $show_date || $show_cat )
+                if ( $post_meta && $layout !== '3')
                 {
-                    ob_start();
-                    if($show_author) overcome_posted_by();
-                    if($show_date) overcome_posted_on();
-                    if($show_comments) overcome_comments_popup_link(['show_text'=> true]);
-                    if($show_cat) overcome_posted_in();
-                    $post_meta = ob_get_clean();
-
-                    if ( $post_meta )
-                    {
-                        printf( '<div class="ef5-meta row gutter-20 justify-content-between">%s</div>', $post_meta );
-                    }
+                    printf( '<div class="ef5-meta row gutter-20 justify-content-between">%s</div>', $post_meta );
                 }
+                
                 echo '</div>';
 
                 echo '</div></div>';
