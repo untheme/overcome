@@ -82,8 +82,7 @@ vc_map(array(
                 'heading'    => esc_html__('Layout Template','overcome'),
                 'param_name' => 'layout_template',
                 'value' =>  array(
-                    '1' => get_template_directory_uri().'/vc_elements/layouts/posts-masonry-1.png',
-                    '14' => get_template_directory_uri().'/vc_elements/layouts/posts-14.png',
+                    '1' => get_template_directory_uri().'/vc_elements/layouts/posts-masonry-1.png'
                 ),
                 'std'   => '1',
                 'group' => esc_html__('Layouts','overcome'),
@@ -143,6 +142,7 @@ vc_map(array(
                 'param_name' => 'item_template',
                 'value' =>  array(
                     '2-1' => get_template_directory_uri().'/vc_elements/layouts/post-2.png',
+                    '14' => get_template_directory_uri().'/vc_elements/layouts/post-14.png',
                 ),
                 'std'   => '2',
                 'group' => esc_html__('Item Layout','overcome'),
