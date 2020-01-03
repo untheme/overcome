@@ -330,9 +330,10 @@
                     if($thumbnail_size_index >= count($thumbnail_size)){
                         $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
                     }
+                    $item_css_class[] = 'relative';
                 ?>
-                <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
-                    <div class="<?php echo trim(implode(' ', $item_css_class)); ?>">
+                <div class="<?php echo overcome_optimize_css_class(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
+                    <div class="<?php echo overcome_optimize_css_class(implode(' ', $item_css_class)); ?>">
                         <?php 
                             overcome_post_media([
                                 'thumbnail_size' => $thumbnail_size[$thumbnail_size_index], 
