@@ -740,7 +740,6 @@
                     console.log(layoutmode);
                 var $grid = imagesLoaded( blog_dom, function() {
                     jQuery(".ef5-posts-masonry").isotope({
-                        //layoutMode: 'masonry',
                         layoutMode: layoutMode,
                         percentPosition: true,
                         itemSelector: '.ef5-masonry-item',
