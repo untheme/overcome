@@ -297,7 +297,7 @@ function overcome_vc_post_layout_15($atts, $args = []){
                 ?>
             </div>
             <div class="col-lg-7">
-                <div class="row ef5-text-777777 text-15 ef5-link-inherit pb-15">
+                <div class="row ef5-text-777777 text-14 ef5-link-inherit pb-15">
                     <?php 
                         $meta = [];
                         $meta[] = overcome_posted_on([
