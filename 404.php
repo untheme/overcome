@@ -15,14 +15,19 @@ get_header();
 	<div class="container d-flex justify-content-center text-center">
 		<div class="error-404 not-found ef5-rounded-10 ef5-bg-overlay">
 			<div class="font-style-700 text-uppercase err-msg-large">
-				<?php esc_html_e('Oops!','overcome') ?>
+				<?php esc_html_e('404','overcome') ?>
+			</div>
+			<div class="text-large font-style-700 err-msg-medium">
+				<?php esc_html_e( 'Ooops, Page Not Found', 'overcome' ); ?>
 			</div>
 			<div class="text-large font-style-700 err-msg-small">
-				<?php esc_html_e( 'The page you requested could not be found', 'overcome' ); ?>
+				<?php esc_html_e( 'We Can\'t Seem to find the page you\'re looking for.', 'overcome' ); ?>
 			</div>
-
-			<div class="page-content">
-				<a href="<?php echo esc_url(home_url('/'));?>" class="ef5-btn ef5-btn-df ef5-btn-xlg accent fill"><?php esc_html_e('Back to Home','overcome'); ?></a>
+			<div class="back-home">
+				<a href="<?php echo esc_url(home_url('/'));?>" class="ef5-btn accent fill"><?php esc_html_e('Back Home','overcome'); ?></a>
+			</div>
+			<div class="search-404">
+				<?php get_search_form(); ?>
 			</div>
 		</div>
 	</div>
