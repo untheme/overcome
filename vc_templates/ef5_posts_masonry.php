@@ -88,6 +88,7 @@
                 switch ($item_template) {
                     case '14':
                         overcome_vc_post_layout_14($atts,[
+                                'class'          => 'ef5-post-item-layout-14',
                                 'thumbnail_size' => overcome_default_value($masonry_size[$masonry_size_index], '370x215')
                             ]);
                     break;
