@@ -54,7 +54,7 @@
             $masonry_size = ['100x200','200x300','300x150','300x150','100','300x200'];
             break;
     }
-    
+    var_dump($masonry_size);
 ?>
 <div class="ef5-posts" id="<?php echo esc_attr($el_id);?>">
     <?php $this->ef5_posts_masonry_filters($atts); ?>
