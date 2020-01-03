@@ -13,10 +13,7 @@
 get_header();
 ?>	
 	<div class="container d-flex justify-content-center text-center">
-		<div class="error-404 not-found">
-			<div class="ef5-404-img">
-				<img src="<?php echo get_template_directory_uri();?>/assets/images/404.png" alt="404" />
-			</div>
+		<div class="error-404 not-found ef5-rounded-10 ef5-bg-overlay">
 			<div class="font-style-700 text-uppercase err-msg-large">
 				<?php esc_html_e('Oops!','overcome') ?>
 			</div>
