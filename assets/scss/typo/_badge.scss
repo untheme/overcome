@@ -16,3 +16,20 @@
 		display: inline-block;
 	}
 }
+
+.ef5-badge-date-1{
+	background: $white;
+	color: $primary_color;
+	@include border-radius(5px);
+	padding: 5px;
+	> span{
+		display: block;
+	}
+	.date{
+		font-size: 22px;
+		font-weight: 600;
+	}
+	.month{
+		font-size: 14px;
+	}
+}

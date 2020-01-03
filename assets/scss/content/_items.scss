@@ -161,3 +161,16 @@
 		padding: 19px 30px 9px;
 	}
 }
+
+// Layout 14
+.ef5-post-item-layout-14{
+	.ef5-badge-date-1{
+		position: absolute;
+		top: 20px;
+		left: 20px;
+		[dir="rtl"] &{
+			left: auto;
+			right: 20px;
+		}
+	}
+}
