@@ -21,15 +21,18 @@
 	background: $white;
 	color: $primary_color;
 	@include border-radius(5px);
-	padding: 5px;
+	padding: 10.5px 5px;
 	line-height: 1;
 	text-transform: uppercase;
+	min-width: 40px;
+	text-align: center;
 	> span{
 		display: block;
 	}
 	.date{
 		font-size: 22px;
 		font-weight: 600;
+		padding-bottom: 3px;
 	}
 	.month{
 		font-size: 14px;
