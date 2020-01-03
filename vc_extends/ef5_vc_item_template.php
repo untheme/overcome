@@ -321,7 +321,9 @@ function overcome_vc_post_layout_15($atts, $args = []){
                 </div>
                 <?php 
                     overcome_post_title();
-                    overcome_post_excerpt();
+                    overcome_post_excerpt([
+                        'length' => '21'
+                    ]);
                     overcome_post_read_more();
                 ?>
             </div>
