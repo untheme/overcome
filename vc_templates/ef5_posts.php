@@ -625,6 +625,28 @@
                 }
                 wp_reset_postdata();
             break;
+            case '14':
+                $d= 0;
+                while($posts->have_posts()){
+                    $d++;
+                    $posts->the_post();
+                    // Thumbnail Size
+                    $thumbnail_size_index++;
+                    if($thumbnail_size_index >= count($thumbnail_size)){
+                        $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
+                    }
+                    ?>
+                        <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
+                            <?php
+                            overcome_vc_post_layout_14($atts,[
+                                'thumbnail_size' => overcome_default_value($thumbnail_size[$thumbnail_size_index], '370x215')
+                            ]);
+                            ?>
+                        </div>
+                    <?php
+                }
+                wp_reset_postdata();
+            break;
         } 
     ?>
     </div>
