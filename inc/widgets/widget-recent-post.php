@@ -91,10 +91,21 @@ class OverCome_Recent_Posts_Widget extends WP_Widget
         if ( $show_author || $show_comments || $show_date || $show_cat )
         {
             ob_start();
-                if($show_author) overcome_posted_by();
-                if($show_date) overcome_posted_on();
-                if($show_comments) overcome_comments_popup_link(['show_text'=> true]);
-                if($show_cat) overcome_posted_in();
+            switch ($layout) {
+                case 3:
+                    if($show_author) overcome_posted_by(['icon'=>'']);
+                    if($show_date) overcome_posted_on(['icon'=>'']);
+                    if($show_comments) overcome_comments_popup_link(['show_text'=> false,['icon'=>'']]);
+                    if($show_cat) overcome_posted_in(['icon'=>'']);
+                    break;
+                default:
+                    if($show_author) overcome_posted_by();
+                    if($show_date) overcome_posted_on();
+                    if($show_comments) overcome_comments_popup_link(['show_text'=> true]);
+                    if($show_cat) overcome_posted_in();
+                    break;
+            }
+                
             $post_meta = ob_get_clean();
         }
 
