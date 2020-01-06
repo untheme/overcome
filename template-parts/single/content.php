@@ -16,10 +16,10 @@
         overcome_post_media([
             'class' => 'mb-40',
             'img_class' => 'ef5-rounded-10 ef5-overlay-gradient-1',
-            'after' => '<div class="single-post-meta row justify-content-between text-white ef5-link-inherit"><div class="col">'.overcome_post_meta([
+            'after' => '<div class="single-post-meta row justify-content-between grid-gutters-20 text-white ef5-link-inherit"><div class="col">'.overcome_post_meta([
                 'echo'          => false,
                 'show_cmt_text' => false
-            ]).'</div><div class="col-auto">' . overcome_post_share([
+            ]).'</div><div class="col-12 col-md-auto">' . overcome_post_share([
                 'class'      => 'text-12 size-small', 
                 'echo'       => false,
                 'show_title' => false,
