@@ -15,6 +15,8 @@ function overcome_header_donate_button(){
         'url'          => '#',
         'target'       => '_self'	
     ],$post_id);
+
+    var_dump($data);
     ?>
     <span class="header-icon ef5-header-donate">
     	<a class="<?php echo esc_attr($data['class']); ?>"
