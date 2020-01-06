@@ -16,14 +16,14 @@
         overcome_post_media([
             'class' => 'mb-40',
             'img_class' => 'ef5-rounded-10',
-            'after' => overcome_post_meta([
+            'after' => '<div class="row justify-content-between"><div class="col">'.overcome_post_meta([
                 'echo' => false,
-            ]) . overcome_post_share([
+            ]).'</div><div class="col-auto">' . overcome_post_share([
                 'class'      => '', 
                 'echo'       => false,
                 'show_title' => false,
                 'show_all'   => false
-            ])
+            ]).'</div></div>'
         ]); 
         overcome_post_content(['class' => 'ef5-single-content']);
         overcome_link_pages(['class' => 'ef5-single-page-links']);

@@ -108,11 +108,11 @@ if ( ! function_exists( 'overcome_post_meta' ) ) {
 
         ob_start();
             printf( '<div class="%s">%s</div>', $classes ,$output);
-        if ( $args['echo']){
-            echo ob_get_clean();
-        } else{
-            return ob_get_clean();
-        }
+            if ( $args['echo']){
+                echo ob_get_clean();
+            } else{
+                return ob_get_clean();
+            }
     }
 }
 
