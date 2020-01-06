@@ -31,6 +31,9 @@
 	list-style: none;
 	position: relative;
 	@include transition();
+	.children{
+		list-style: none;
+	}
 }
 
 
