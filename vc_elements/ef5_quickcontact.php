@@ -180,6 +180,9 @@ class WPBakeryShortCode_ef5_quickcontact extends WPBakeryShortCode
             case '2':
                 $item_class[] = 'col-12';
             break;
+            default :
+                $item_class[] = 'col-12';
+            break;
         }
         $icon_color = !empty($icon_color) ? $icon_color : '';
         $icon_classes = ['qc-icon', $icon_color];
