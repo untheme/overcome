@@ -141,7 +141,7 @@ vc_map(array(
                 'std'        => '20, First Avenue, San Jose, USA',
                 'dependency' => array(
                     'element' => 'layout_template',
-                    'value'   => array('2','3')
+                    'value'   => array('2','3','4')
                 ),
                 'group'       => esc_html__('Maps','unbreak')
             ),
@@ -153,7 +153,7 @@ vc_map(array(
                 'value'       => 'title:Get Direction||url:google.com/maps/dir//Bobst+Library,+70+Washington+Square+S,+New+York,+NY+10012,+USA/@40.7291313,-73.9972548,18.22z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89c2599051e43f09:0x73708ab233ccf977!2m2!1d-73.9971753!2d40.7294556||target:_blank',
                 'dependency' => array(
                     'element' => 'layout_template',
-                    'value'   => array('2','3')
+                    'value'   => array('2','3','4')
                 ),
                 'group'       => esc_html__('Maps','unbreak')
             )
