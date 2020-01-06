@@ -17,8 +17,8 @@
             'class' => 'mb-40',
             'img_class' => 'ef5-rounded-10',
             'after' => overcome_post_meta([
-                'echo' => false
-            ])
+                'echo' => false,
+            ]) . overcome_post_share(['class' => '', 'echo' => false]); 
         ]); 
         overcome_post_content(['class' => 'ef5-single-content']);
         overcome_link_pages(['class' => 'ef5-single-page-links']);
@@ -26,6 +26,6 @@
     <div class="ef5-single-footer row justify-content-between align-items-center empty-none"><?php 
         do_action('overcome_single_post_footer');
         overcome_tagged_in(['class' => 'col-auto']);
-        overcome_post_share(['class' => 'col-auto']); 
+        
     ?></div>
 </div>
