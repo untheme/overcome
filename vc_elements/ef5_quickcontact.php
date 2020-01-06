@@ -140,7 +140,7 @@ vc_map(array(
                 'std'        => '20, First Avenue, San Jose, USA',
                 'dependency' => array(
                     'element' => 'layout_template',
-                    'value'   => array('2')
+                    'value'   => array('2','3')
                 ),
                 'group'       => esc_html__('Maps','unbreak')
             ),
