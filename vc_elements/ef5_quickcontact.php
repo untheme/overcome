@@ -60,7 +60,7 @@ vc_map(array(
                 'param_name'  => 'el_id',
                 'description' => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'unbreak' ), '//w3schools.com/tags/att_global_id.asp' ),
             ),
-            // Layout 3
+            // Contact Image
             array(
                 'type'       => 'attach_image',
                 'heading'    => esc_html__('Add your Image','unbreak'),
@@ -85,7 +85,7 @@ vc_map(array(
                 ),
                 'group'         => esc_html__('Contact Info','unbreak'),
             ),
-            
+            // Contact Title
             array(
                 'type'       => 'textfield',
                 'heading'    => esc_html__('Title','unbreak'),
@@ -98,7 +98,7 @@ vc_map(array(
                 'group'     => 'Contact Info',
                 'holder'    => 'h3'    
             ),
-            
+            // Contact Info
             array(
                 'type'       => 'param_group',
                 'heading'    => esc_html__( 'Add your info', 'unbreak' ),
