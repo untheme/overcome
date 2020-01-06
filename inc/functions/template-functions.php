@@ -77,6 +77,7 @@ if ( ! function_exists( 'overcome_post_meta' ) ) {
             'show_date'       => $date_on,
             'show_cat'        => $cats_on,
             'show_cmt'        => $comments_on,
+            'show_cmt_text'   => true,  
             'show_view'       => $show_view,
             'show_like'       => $show_like,
             'show_edit'       => false,
@@ -90,7 +91,7 @@ if ( ! function_exists( 'overcome_post_meta' ) ) {
         if($args['show_author']) 
             $metas[] = overcome_posted_by(['show_author' => $args['show_author'], 'echo' => false, 'author_avatar' => false]);
         if($args['show_cmt'] && comments_open()) 
-            $metas[] = overcome_comments_popup_link(['show_cmt' => $args['show_cmt'], 'echo' => false]);
+            $metas[] = overcome_comments_popup_link(['show_cmt' => $args['show_cmt'], 'echo' => false, 'show_cmt_text' => $args['show_cmt_text']]);
         if($args['show_cat']) 
             $metas[] = overcome_posted_in(['show_cat' => $args['show_cat'], 'echo' => false]);
         if($args['show_view']) 
