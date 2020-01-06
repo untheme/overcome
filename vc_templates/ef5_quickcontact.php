@@ -47,9 +47,7 @@ $icon_classes = ['qc-icon', $icon_color];
     <div class="<?php echo trim(implode(' ', $wrap_inner_css_class));?>">
         <?php
             ob_start();
-            if($layout_template === '2'){
-                $this->overcome_qc_direction($atts);
-            }
+            $this->overcome_qc_direction($atts);
             foreach($values as $value){
                 $this->overcome_qc_item_render($atts, $value);
             }
