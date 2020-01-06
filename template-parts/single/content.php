@@ -12,8 +12,10 @@
 
 <div <?php post_class('ef5-single clearfix'); ?>>
     <?php 
-        overcome_post_header(['class' => 'ef5-single-header']);
-        overcome_post_media(); 
+        //overcome_post_header(['class' => 'ef5-single-header']);
+        overcome_post_media([
+            'class' => 'ef5-rounded-10 mb-40'
+        ]); 
         overcome_post_content(['class' => 'ef5-single-content']);
         overcome_link_pages(['class' => 'ef5-single-page-links']);
     ?>
