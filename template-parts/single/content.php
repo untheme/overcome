@@ -16,7 +16,7 @@
         overcome_post_media([
             'class' => 'mb-40',
             'img_class' => 'ef5-rounded-10',
-            'after' => '<div class="row justify-content-between text-white ef5-link-inherit"><div class="col">'.overcome_post_meta([
+            'after' => '<div class="single-post-meta row justify-content-between text-white ef5-link-inherit"><div class="col">'.overcome_post_meta([
                 'echo'          => false,
                 'show_cmt_text' => false
             ]).'</div><div class="col-auto">' . overcome_post_share([
