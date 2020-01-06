@@ -14,7 +14,8 @@
     <?php 
         //overcome_post_header(['class' => 'ef5-single-header']);
         overcome_post_media([
-            'class' => 'ef5-rounded-10 mb-40'
+            'class' => 'mb-40',
+            'img_class' => 'ef5-rounded-10'
         ]); 
         overcome_post_content(['class' => 'ef5-single-content']);
         overcome_link_pages(['class' => 'ef5-single-page-links']);
