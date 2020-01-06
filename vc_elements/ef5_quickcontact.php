@@ -60,19 +60,6 @@ vc_map(array(
                 'param_name'  => 'el_id',
                 'description' => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'unbreak' ), '//w3schools.com/tags/att_global_id.asp' ),
             ),
-
-            array(
-                'type'       => 'textfield',
-                'heading'    => esc_html__('Title','unbreak'),
-                'param_name' => 'el_title',
-                'value'      => '',
-                'dependency' => array(
-                    'element' => 'layout_template',
-                    'value'   => array('2','3')
-                ),
-                'group'     => 'Contact Info',
-                'holder'    => 'h3'    
-            ),
             // Layout 3
             array(
                 'type'       => 'attach_image',
@@ -98,6 +85,20 @@ vc_map(array(
                 ),
                 'group'         => esc_html__('Contact Info','unbreak'),
             ),
+            
+            array(
+                'type'       => 'textfield',
+                'heading'    => esc_html__('Title','unbreak'),
+                'param_name' => 'el_title',
+                'value'      => '',
+                'dependency' => array(
+                    'element' => 'layout_template',
+                    'value'   => array('2','3')
+                ),
+                'group'     => 'Contact Info',
+                'holder'    => 'h3'    
+            ),
+            
             array(
                 'type'       => 'param_group',
                 'heading'    => esc_html__( 'Add your info', 'unbreak' ),
