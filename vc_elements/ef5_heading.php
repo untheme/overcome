@@ -490,6 +490,7 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
             'main-heading',
             $this->ef5_heading_main_heading_style($atts),
             $args['class'],
+            $atts['heading_text_class'],
             $this->getCSSAnimation( $atts['heading_css_animation'] )
         ];
         
