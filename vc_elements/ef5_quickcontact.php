@@ -206,7 +206,7 @@ class WPBakeryShortCode_ef5_quickcontact extends WPBakeryShortCode
     }
     protected function overcome_qc_direction($atts, $args=[]){
         extract($atts);
-        if(!in_array($layout_template, ['2','3'])) return;
+        if(!in_array($layout_template, ['2','3','4'])) return;
         $args = wp_parse_args($args, [
             'class' => '',
             'icon' => 'flaticon-right-arrow-forward'
