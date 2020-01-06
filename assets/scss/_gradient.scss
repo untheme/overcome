@@ -3,3 +3,17 @@
 	background-image: -webkit-linear-gradient( 90deg, rgba(0,0,0,0.70196) 0%, rgba(0,0,0,0.42) 40%, rgba(0,0,0,0) 100%);
 	background-image: -ms-linear-gradient( 90deg, rgba(0,0,0,0.70196) 0%, rgba(0,0,0,0.42) 40%, rgba(0,0,0,0) 100%);
 }
+.ef5-overlay-gradient-1{
+	position: relative;
+	&:after{
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-image: -moz-linear-gradient( 90deg, rgba(0,0,0,0.70196) 0%, rgba(0,0,0,0.42) 40%, rgba(0,0,0,0) 100%);
+		background-image: -webkit-linear-gradient( 90deg, rgba(0,0,0,0.70196) 0%, rgba(0,0,0,0.42) 40%, rgba(0,0,0,0) 100%);
+		background-image: -ms-linear-gradient( 90deg, rgba(0,0,0,0.70196) 0%, rgba(0,0,0,0.42) 40%, rgba(0,0,0,0) 100%);
+	}
+}

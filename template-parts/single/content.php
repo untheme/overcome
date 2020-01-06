@@ -14,8 +14,8 @@
     <?php 
         //overcome_post_header(['class' => 'ef5-single-header']);
         overcome_post_media([
-            'class' => 'ef5-bg-gradient-1 mb-40',
-            'img_class' => 'ef5-rounded-10',
+            'class' => 'mb-40',
+            'img_class' => 'ef5-rounded-10 ef5-overlay-gradient-1',
             'after' => '<div class="single-post-meta row justify-content-between text-white ef5-link-inherit"><div class="col">'.overcome_post_meta([
                 'echo'          => false,
                 'show_cmt_text' => false
