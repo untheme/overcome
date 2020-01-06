@@ -82,6 +82,7 @@ if ( ! function_exists( 'overcome_post_meta' ) ) {
             'show_edit'       => false,
             'stretch_content' => false,
             'sep'             => '',
+            'echo'            => true
         ]);
         $metas = [];
         if($args['show_date']) 
