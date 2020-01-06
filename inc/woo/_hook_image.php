@@ -76,18 +76,18 @@ function overcome_wc_thumbnail_value($value){
 }
 
 /* Loop Thumbnail Size */
-add_filter( 'woocommerce_get_image_size_thumbnail', function( $size ) {
+/*add_filter( 'woocommerce_get_image_size_thumbnail', function( $size ) {
     return overcome_wc_thumbnail_value('image_size_thumbnail');
-} ); 
+} );*/ 
 
 /* Single Thumbnail Size */
-add_filter( 'woocommerce_get_image_size_single', function( $size ) {
+/*add_filter( 'woocommerce_get_image_size_single', function( $size ) {
     return overcome_wc_thumbnail_value('image_size_single');
-} );
+} );*/
 /* Gallery Thumbnail Size */
-add_filter( 'woocommerce_get_image_size_gallery_thumbnail', function( $size ) {
+/*add_filter( 'woocommerce_get_image_size_gallery_thumbnail', function( $size ) {
     return overcome_wc_thumbnail_value('wc_gallery_thumbnail');
-} );
+} );*/
 
 /**
  * Unset image width theme support.
@@ -110,4 +110,4 @@ function overcome_modify_wc_theme_support() {
     update_option( 'woocommerce_thumbnail_cropping_custom_width', overcome_wc_thumbnail_value('custom_width') );
     update_option( 'woocommerce_thumbnail_cropping_custom_height', overcome_wc_thumbnail_value('custom_height') );
 }
-add_action( 'after_setup_theme', 'overcome_modify_wc_theme_support', 10 );
+//add_action( 'after_setup_theme', 'overcome_modify_wc_theme_support', 10 );
