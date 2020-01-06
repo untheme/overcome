@@ -15,6 +15,7 @@ vc_map(array(
                     '1' => get_template_directory_uri().'/vc_elements/layouts/qc-1.png',
                     '2' => get_template_directory_uri().'/vc_elements/layouts/qc-2.png',
                     '3' => get_template_directory_uri().'/vc_elements/layouts/qc-3.png',
+                    '4' => get_template_directory_uri().'/vc_elements/layouts/qc-4.png',
                 ),
                 'std'        => '1',
                 'admin_label' => true,
@@ -93,7 +94,7 @@ vc_map(array(
                 'value'      => '',
                 'dependency' => array(
                     'element' => 'layout_template',
-                    'value'   => array('2','3')
+                    'value'   => array('2','3','4')
                 ),
                 'group'     => 'Contact Info',
                 'holder'    => 'h3'    
