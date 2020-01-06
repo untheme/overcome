@@ -105,10 +105,13 @@ if ( ! function_exists( 'overcome_post_meta' ) ) {
         $css_classes = ['ef5-meta', $args['class'], 'd-flex', 'align-items-center'];
         if($args['stretch_content']) $css_classes[] = 'justify-content-between';
         $classes = overcome_optimize_css_class(implode(' ',$css_classes ));
-        if ( $args['echo']){
+
+        ob_start();
             printf( '<div class="%s">%s</div>', $classes ,$output);
+        if ( $args['echo']){
+            echo ob_get_clean();
         } else{
-            return $output;
+            return ob_get_clean();
         }
     }
 }
