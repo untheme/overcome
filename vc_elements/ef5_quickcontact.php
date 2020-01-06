@@ -175,7 +175,7 @@ class WPBakeryShortCode_ef5_quickcontact extends WPBakeryShortCode
         switch ($layout_template) {
             case '1':
                 $item_class[] = 'col-12';
-                $item_inner_class[] = 'gutter-10 align-items-center';
+                $item_inner_class[] = 'gutters-10 align-items-center';
             break;
             case '2':
                 $item_class[] = 'col-12';
@@ -196,7 +196,7 @@ class WPBakeryShortCode_ef5_quickcontact extends WPBakeryShortCode
         echo '<div class="'.overcome_optimize_css_class(implode(' ', $item_class)).'">';
             echo '<div class="'.overcome_optimize_css_class(implode(' ', $item_inner_class)).'">';
                 if(!empty($iconClass)) echo '<div class="col-auto">'.overcome_html($qc_icon).'</div>';
-                echo '<div class="col"><div class="row gutter-20">';
+                echo '<div class="col"><div class="row gutters-20">';
                     echo '<div class="qc-item-heading col-auto">'.overcome_html($qc_heading).'</div>';
                     if(!empty($qc_text)) echo '<div class="qc-text col">'.overcome_html($qc_text).'</div>';
                 echo '</div></div>';
