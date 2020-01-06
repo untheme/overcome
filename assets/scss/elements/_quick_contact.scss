@@ -1,8 +1,15 @@
+.qc-direction .icon{
+	font-size: 80%;
+	font-weight: 400;
+	padding: 0 10px;
+}
+// Layout 1
 .ef5-qc-1{
 	.qc-icon{
 		font-size: 125%;
 	}
 }
+// Layout 2
 .ef5-qc-2{
 	.qc-direction{
 		padding-bottom: 20px;
@@ -14,6 +21,7 @@
 		font-size: 80%;
 	}
 }
+// Layout 3
 .ef5-qc-3{
 	.qc-image{
 		margin-bottom: 25px;
@@ -30,11 +38,6 @@
 			font-weight: 600;
 		}
 	}
-}
-.qc-direction .icon{
-	font-size: 80%;
-	font-weight: 400;
-	padding: 0 10px;
 }
 // Layout 4
 .ef5-qc-4{
