@@ -9,7 +9,7 @@
 		}
 		.ef5-link-#{$name} a,
 		.ef5-link-#{$name}-color a{
-			color: $color;
+			color: $color!important;
 			&:hover{
 				color: $accent-color;
 			}
