@@ -17,6 +17,7 @@ extract( $atts );
 			case '9':
 				$this->ef5_heading_main_heading($atts,['class' => 'ef5-heading']);
 				$this->ef5_heading_desccription($atts,['class' => 'pt-30']);
+				break;
 			case '8':
 				$this->ef5_heading_small_heading($atts, ['class' => 'text-uppercase']);
 				$this->ef5_heading_main_heading_icon($atts);
