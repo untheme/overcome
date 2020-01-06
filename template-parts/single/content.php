@@ -23,7 +23,7 @@
                 'class'      => 'text-12 size-small', 
                 'echo'       => false,
                 'show_title' => false,
-                'show_all'   => false
+                'show_all'   => 'false',
             ]).'</div></div>'
         ]); 
         overcome_post_content(['class' => 'ef5-single-content']);
