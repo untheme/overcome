@@ -112,6 +112,9 @@ $dimensions : (
     }
   }
 }
+.maxh-90{
+	max-height: 90px;
+}
 
 .no-container{
 	padding-left: $grid-gutter-width / 2;
