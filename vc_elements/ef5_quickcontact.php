@@ -245,7 +245,7 @@ class WPBakeryShortCode_ef5_quickcontact extends WPBakeryShortCode
         if($layout_template !== '3' || empty($img_id)) return;
         $args = wp_parse_args($args, [
             'class' => '',
-            'img_size' => '270x360'
+            'img_size' => overcome_default_value($img_size, '270x360')
         ]);
         overcome_image_by_size([
             'id'     => $img_id, 
