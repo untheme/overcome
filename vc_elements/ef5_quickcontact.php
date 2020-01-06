@@ -14,6 +14,7 @@ vc_map(array(
                 'value'      =>  array(
                     '1' => get_template_directory_uri().'/vc_elements/layouts/qc-1.png',
                     '2' => get_template_directory_uri().'/vc_elements/layouts/qc-2.png',
+                    '3' => get_template_directory_uri().'/vc_elements/layouts/qc-3.png',
                 ),
                 'std'        => '1',
                 'admin_label' => true,
@@ -59,6 +60,7 @@ vc_map(array(
                 'param_name'  => 'el_id',
                 'description' => sprintf( __( 'Enter element ID (Note: make sure it is unique and valid according to <a href="%s" target="_blank">w3c specification</a>).', 'unbreak' ), '//w3schools.com/tags/att_global_id.asp' ),
             ),
+
             array(
                 'type'       => 'textfield',
                 'heading'    => esc_html__('Title','unbreak'),
@@ -71,7 +73,7 @@ vc_map(array(
                 'group'     => 'Contact Info',
                 'holder'    => 'h3'    
             ),
-            // Layout 12
+            // Layout 3
             array(
                 'type'       => 'attach_image',
                 'heading'    => esc_html__('Add your Image','unbreak'),
@@ -79,7 +81,7 @@ vc_map(array(
                 'value'      => '',
                 'dependency' => array(
                     'element' => 'layout_template',
-                    'value'   => array('12')
+                    'value'   => array('3')
                 ),
                 'group'     => 'Contact Info'
             ),
@@ -230,5 +232,21 @@ class WPBakeryShortCode_ef5_quickcontact extends WPBakeryShortCode
                 </a>
             </div>
         <?php
+    }
+
+    protected function overcome_qc_image($atts, $args=[]){
+        extract($atts);
+        if($layout_template !== '3' || empty($img_id)) return;
+        $args = wp_parse_args($args, [
+            'class' => '',
+            'img_size' => '270x360'
+        ]);
+        overcome_image_by_size([
+            'id'     => $img_id, 
+            'size'   => $args['img_size'],
+            'class'  => 'image-fit',
+            'before' =>'<div class="qc-image">',
+            'after'  => '</div>'
+        ]);
     }
 }

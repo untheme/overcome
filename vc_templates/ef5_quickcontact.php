@@ -40,14 +40,8 @@ $icon_color = !empty($icon_color) ? $icon_color : '';
 $icon_classes = ['qc-icon', $icon_color];
 ?>
 <div id="<?php echo esc_attr($el_id);?>" class="<?php echo trim(implode(' ', $wrap_css_class));?>">
-    <?php 
-        if(!empty($img_id)) overcome_image_by_size([
-            'id'     => $img_id, 
-            'size'   => '270x184',
-            'class'  => 'image-fit',
-            'before' =>'<div class="qc-image col-12">',
-            'after'  => '</div>'
-        ]);
+    <?php
+        echo overcome_html($this->overcome_qc_image($atts));
         if(!empty($el_title)) echo '<div class="ef5-el-title ef5-heading qc-heading">'.esc_html($el_title).'</div>'; 
     ?>
     <div class="<?php echo trim(implode(' ', $wrap_inner_css_class));?>">
