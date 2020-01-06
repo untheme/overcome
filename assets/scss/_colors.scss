@@ -11,7 +11,7 @@
 		.ef5-link-#{$name}-color a{
 			color: $color!important;
 			&:hover{
-				color: $accent-color;
+				color: $accent-color!important;
 			}
 		}
 		.ef5-link-hover-#{$name} a:hover{
