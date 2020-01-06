@@ -5,6 +5,7 @@
 }
 .ef5-overlay-gradient-1{
 	position: relative;
+	overflow: hidden;
 	&:after{
 		content: '';
 		display: block;
