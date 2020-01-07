@@ -246,7 +246,6 @@ if ( ! function_exists( 'woocommerce_template_single_meta' ) ) {
 // Product meta share
 if(!function_exists('overcome_woocommerce_product_meta_end')){
 	add_action('woocommerce_product_meta_end','overcome_woocommerce_product_meta_end', 0);
-	//add_action('woosq_product_summary','overcome_woocommerce_product_meta_end', 0);
 	function overcome_woocommerce_product_meta_end(){
 		$show_share = overcome_get_theme_opt( 'product_share_on', '0');
 		if(!$show_share) return;
