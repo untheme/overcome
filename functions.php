@@ -606,7 +606,7 @@ function overcome_modify_wc_theme_support() {
 function name_plugin_activation(){
     do_action( 'name_plugin_default_options' );
 }
-register_activation_hook( 'wp-content/plugins/woocommerce/woocommerce.php', 'woocommerce' );
+register_activation_hook( 'woocommerce', 'name_plugin_activation' );
 
 
 // Set default values here
