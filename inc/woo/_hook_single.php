@@ -181,7 +181,7 @@ if ( ! function_exists( 'woocommerce_template_single_title' ) ) {
  * Single Product rating
  * Move Rating to after price
 */
-remove_action('woocommerce_single_product_summary','woocommerce_template_single_rating', 10);
+//remove_action('woocommerce_single_product_summary','woocommerce_template_single_rating', 10);
 add_action('woocommerce_single_product_summary','woocommerce_template_single_rating', 11);
 
 /**
