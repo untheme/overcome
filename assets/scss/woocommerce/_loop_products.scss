@@ -102,14 +102,15 @@
 		flex: 0 0 auto;
 	    flex-grow: 1;
 	    max-width: 100%;
-	    padding: 0 10px;
+	    padding: 2.5px 10px;
 	    line-height: 36px;
 		text-align: center;
-		color: $primary_color;		
+		color: $white;		
 		text-transform: uppercase;
-		font-size: 12px;
-		font-weight: 700;
+		font-size: 16px;
+		font-weight: 500;
 		background: $accent_color;
+		@include border-radius(22.5px);
 		&:hover{
 			background: $primary_color;
 			color: $white;
