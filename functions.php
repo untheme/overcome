@@ -593,25 +593,25 @@ function overcome_modify_wc_theme_support() {
 
     //add_theme_support( 'woocommerce', $theme_support );
     die('cmnr');
-    add_option( 'woocommerce_single_image_width', overcome_wc_thumbnail_value('image_size_single_width') );
-    add_option( 'woocommerce_thumbnail_image_width', overcome_wc_thumbnail_value('thumbnail_image_width') );
+    //add_option( 'woocommerce_single_image_width', overcome_wc_thumbnail_value('image_size_single_width') );
+    //add_option( 'woocommerce_thumbnail_image_width', overcome_wc_thumbnail_value('thumbnail_image_width') );
 
-    add_option( 'woocommerce_thumbnail_cropping', 'custom' );
-    add_option( 'woocommerce_thumbnail_cropping_custom_width', overcome_wc_thumbnail_value('custom_width') );
-    add_option( 'woocommerce_thumbnail_cropping_custom_height', overcome_wc_thumbnail_value('custom_height') );
+    //add_option( 'woocommerce_thumbnail_cropping', 'custom' );
+    //add_option( 'woocommerce_thumbnail_cropping_custom_width', overcome_wc_thumbnail_value('custom_width') );
+    //add_option( 'woocommerce_thumbnail_cropping_custom_height', overcome_wc_thumbnail_value('custom_height') );
 }
 //add_action( 'after_setup_theme', 'overcome_modify_wc_theme_support', 10 );
 //var_dump(plugin_basename('woocommerce' )); die('11');
 add_action( 'activate_woocommerce', 'overcome_modify_wc_theme_support' );
 // Activation
-function name_plugin_activation(){
-    do_action( 'name_plugin_default_options' );
+function woocommerce_activation(){
+    do_action( 'woocommerce_default_options' );
 }
-register_activation_hook( 'woocommerce', 'name_plugin_activation' );
+register_activation_hook( 'woocommerce', 'woocommerce_activation' );
 
 
 // Set default values here
-function name_plugin_default_values(){
+function woocommerce_default_values(){
 
     // Form settings
     add_option('name_form_to', 'info@example.com');
@@ -619,4 +619,4 @@ function name_plugin_default_values(){
 
 
 }
-add_action( 'name_plugin_default_options', 'overcome_modify_wc_theme_support' );
+add_action( 'woocommerce_default_options', 'overcome_modify_wc_theme_support' );
