@@ -221,7 +221,7 @@ if ( ! function_exists( 'woocommerce_template_single_excerpt' ) ) {
 	 * Output the product short description (excerpt).
 	 */
 	function woocommerce_template_single_excerpt() {
-		global $post;
+		global $post, $product;
 
 		$short_description = apply_filters( 'woocommerce_short_description', $post->post_excerpt );
 
