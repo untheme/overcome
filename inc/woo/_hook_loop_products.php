@@ -69,10 +69,7 @@ if(!function_exists('overcome_woocommerce_loop_product_thumbnail')){
 	<?php
 	}
 }
-/**
- * Loop Product Rating
-*/
-add_action('overcome_woocommerce_shop_loop_products','woocommerce_template_loop_rating',2);
+
 
 /**
  * Change loop Product title
@@ -102,7 +99,10 @@ if(!function_exists('overcome_woocommerce_template_loop_price')){
 	<?php
 	}
 }
-
+/**
+ * Loop Product Rating
+*/
+add_action('overcome_woocommerce_shop_loop_products','woocommerce_template_loop_rating',5);
 /**
  * Loop Product Add to cart
 */
