@@ -72,11 +72,11 @@
 	right: 20px;
 }
 .ef5-loop-product-add-to-cart{
-	margin: 15px -2.5px -2.5px; // for check
+	margin: -5px; // for check
 	@include d-flex();
 	justify-content: center;
 	> * {
-		margin: 2.5px;
+		margin: 5px;
 	}
 	.woosmart-icon{
 		flex: 0 0 auto;
@@ -88,6 +88,7 @@
 			text-align: center;
 			color: $white;
 			background: $accent_color;
+			@include border-radius(50%);
 			&:hover{
 				background: $primary_color;
 				color: $white;
