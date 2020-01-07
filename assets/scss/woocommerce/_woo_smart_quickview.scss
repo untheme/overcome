@@ -14,5 +14,11 @@
 	}
 	.single-product tr.product{
 		display: inherit;
+		border-top: 1px solid #ddd;
+		td{
+			padding-left: 5px;
+			padding-right: 5px;
+			border:none;
+		}
 	} 
 }
