@@ -607,6 +607,7 @@ function overcome_modify_wc_theme_support() {
 // Activation
 function woocommerce_activation(){
     do_action( 'woocommerce_default_options' );
+    die('1231212');
 }
 register_activation_hook( __FILE__, 'woocommerce_activation' );
 
