@@ -91,8 +91,8 @@ if(!function_exists('overcome_configs')){
             'cmt_avatar_size'  => 35,
             'cmt_border'       => '1px solid #DDDDDD',
             // WooCommerce,
-            'overcome_product_single_image_w' => '455',
-            'overcome_product_single_image_h' => '605',
+            'overcome_product_single_image_w' => '435',
+            'overcome_product_single_image_h' => '582',
 
             'overcome_product_loop_image_w' => '205',
             'overcome_product_loop_image_h' => '162',
