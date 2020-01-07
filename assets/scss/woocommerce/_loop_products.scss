@@ -66,6 +66,14 @@
 .ef5-loop-product-title{
 	padding: 17px 0 0;
 }
+
+.ef5-wc-loop-overlay-img{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
 .ef5-loop-product-add-to-cart{
 	margin: 15px -2.5px -2.5px; // for check
 	@include d-flex();
