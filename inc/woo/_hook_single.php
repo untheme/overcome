@@ -228,14 +228,14 @@ if ( ! function_exists( 'woocommerce_template_single_meta' ) ) {
 		<?php if ( wc_product_sku_enabled() && ( $product->get_sku() || $product->is_type( 'variable' ) ) ) : ?>
 
 			<span class="ef5-sku-wrapper meta-item">
-				<span class="ef5-heading font-style-700 text-uppercase"><?php esc_html_e( 'SKU:', 'overcome' ); ?></span> <span class="sku"><?php if($sku = $product->get_sku() ) echo esc_html( $sku); else  echo esc_html__( 'N/A', 'overcome' ); ?></span>
+				<span class="meta-title"><?php esc_html_e( 'SKU:', 'overcome' ); ?></span> <span class="sku"><?php if($sku = $product->get_sku() ) echo esc_html( $sku); else  echo esc_html__( 'N/A', 'overcome' ); ?></span>
 			</span>
 
 		<?php endif; ?>
 
-		<?php echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted-in meta-item"><span class="ef5-heading font-style-700 text-uppercase">' . _n( 'Category:', 'Categories:', count( $product->get_category_ids() ), 'overcome' ) . '</span> ', '</span>' ); ?>
+		<?php echo wc_get_product_category_list( $product->get_id(), ', ', '<span class="posted-in meta-item"><span class="meta-title">' . _n( 'Category:', 'Categories:', count( $product->get_category_ids() ), 'overcome' ) . '</span> ', '</span>' ); ?>
 
-		<?php echo wc_get_product_tag_list( $product->get_id(), ', ', '<span class="tagged-as meta-item"><span class="ef5-heading font-style-700 text-uppercase">' . _n( 'Tag:', 'Tags:', count( $product->get_tag_ids() ), 'overcome' ) . '</span> ', '</span>' ); ?>
+		<?php echo wc_get_product_tag_list( $product->get_id(), ', ', '<span class="tagged-as meta-item"><span class="meta-title">' . _n( 'Tag:', 'Tags:', count( $product->get_tag_ids() ), 'overcome' ) . '</span> ', '</span>' ); ?>
 
 		<?php do_action( 'woocommerce_product_meta_end' ); ?>
 

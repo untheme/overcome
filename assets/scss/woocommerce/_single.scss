@@ -246,8 +246,11 @@ table.variations .label,
 	.meta-item{
 		padding: 3px 0;
 	}
-	.ef5-heading{
+	.meta-title{
 		min-width: 100px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $HeadingColor;
 		display: inline-block;
 	}
 	.meta-share{
