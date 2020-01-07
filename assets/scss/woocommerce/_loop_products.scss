@@ -64,10 +64,10 @@
 	overflow: hidden;
 }
 .ef5-loop-product-title{
-	padding: 4px 0 11px;
+	padding: 7px 0 0;
+    color: $accent_color;
 }
 .ef5-loop-product-add-to-cart{
-	//margin: 61.5px -2.5px -2.5px; // main style
 	margin: 15px -2.5px -2.5px; // for check
 	@include d-flex();
 	justify-content: center;
