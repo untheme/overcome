@@ -602,7 +602,7 @@ function overcome_modify_wc_theme_support() {
 }
 //add_action( 'after_setup_theme', 'overcome_modify_wc_theme_support', 10 );
 //var_dump(plugin_basename('woocommerce' )); die('11');
-add_action( 'activate_woocommerce', 'overcome_modify_wc_theme_support' );
+add_action( 'activate_WooCommerce', 'overcome_modify_wc_theme_support' );
 // Activation
 function woocommerce_activation(){
     do_action( 'woocommerce_default_options' );
