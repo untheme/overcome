@@ -211,6 +211,38 @@ if(!function_exists('overcome_woocommerce_quantity_input_args')){
 		return $args;
 	}
 }
+
+/**
+ * Single Product Short Desc
+*/
+if ( ! function_exists( 'woocommerce_template_single_excerpt' ) ) {
+
+	/**
+	 * Output the product short description (excerpt).
+	 */
+	function woocommerce_template_single_excerpt() {
+		global $post;
+
+		$short_description = apply_filters( 'woocommerce_short_description', $post->post_excerpt );
+
+		if ( ! $short_description ) {
+			return;
+		}
+		
+		$class = '';
+		$rating_count = $product->get_rating_count();
+		if ( ! wc_review_ratings_enabled() || $rating_count < 1 ) {
+			$class = 'no-rating';
+		}
+		?>
+		<div class="<?php echo trim(implode(' ', ['woocommerce-product-details__short-description', $class]));?>">
+			<?php echo overcome_html($short_description); // WPCS: XSS ok. ?>
+		</div>
+	<?php
+	}
+}
+
+
 /**
  * Single Product Meta
 */
