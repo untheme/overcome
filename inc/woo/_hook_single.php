@@ -183,6 +183,11 @@ if ( ! function_exists( 'woocommerce_template_single_title' ) ) {
 */
 remove_action('woocommerce_single_product_summary','woocommerce_template_single_rating', 10);
 add_action('woocommerce_single_product_summary','woocommerce_template_single_rating', 11);
+// for WPC Quick View
+//add_action( 'woosq_product_summary', 'woocommerce_template_single_price', 15 );
+remove_action( 'woosq_product_summary', 'woocommerce_template_single_rating', 10 );
+add_action( 'woosq_product_summary', 'woocommerce_template_single_rating', 16 );
+
 
 /**
  * Single Product Price
