@@ -34,10 +34,7 @@ if(!function_exists('overcome_woocommerce_sale')){
         if(isset($regular_price) && $regular_price > 0 && isset($sales_price)){
             $percentage = round( ( ( $regular_price - $sales_price ) / $regular_price ) * 100 );
         ?>
-
-        <span class="ef5-badge ef5-badge-1">
-            <?php printf( '- %s', $percentage . '%' ) ?>
-        </span>
+        <span class="ef5-badge ef5-badge-1"><?php printf( '- %s', $percentage . '%' ) ?></span>
     <?php 
         }
     }
@@ -56,7 +53,7 @@ if(!function_exists('overcome_woocommerce_show_product_loop_badges')){
             $pos = ['top-left', 'top-right', 'bottom-right','bottom-left'];
         }
         $pos_index = '-1';
-        $badge_class = 'ef5-badge ef5-corner-ribbon bg-accent shadow font-style-700 text-xxsmall';
+        $badge_class = 'ef5-badge ef5-badge-1';
         if(!is_wp_error($terms) && $terms !== false){
             $count = count($terms);
         } else {
