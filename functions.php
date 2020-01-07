@@ -607,7 +607,7 @@ add_action( 'activate_woocommerce', 'overcome_modify_wc_theme_support' );
 function woocommerce_activation(){
     do_action( 'woocommerce_default_options' );
 }
-register_activation_hook( 'woocommerce', 'woocommerce_activation' );
+register_activation_hook( 'WooCommerce', 'woocommerce_activation' );
 
 
 // Set default values here
