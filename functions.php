@@ -601,7 +601,7 @@ function overcome_modify_wc_theme_support() {
     add_option( 'woocommerce_thumbnail_cropping_custom_height', overcome_wc_thumbnail_value('custom_height') );
 }
 //add_action( 'after_setup_theme', 'overcome_modify_wc_theme_support', 10 );
-
+var_dump(plugin_basename('woocommerce' )); die('11');
 // Activation
 function name_plugin_activation(){
     do_action( 'name_plugin_default_options' );
