@@ -13,14 +13,13 @@ $wc_star_rated : "\f005\f005\f005\f005\f005";
 	overflow: hidden;
 	position: relative;
 	height: 18px;
-	width: 72px;
+	width: 110px;
 	line-height: 1;
 	clear: both;
 	font-weight: 400;
-	font-size: 12px;
 	-moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-	letter-spacing: 0.92px;
+	letter-spacing: 6px;
 	white-space: nowrap;
 	&::before {
 		content: $wc_star;
@@ -37,6 +36,7 @@ $wc_star_rated : "\f005\f005\f005\f005\f005";
 		left: 0;
 		position: absolute;
 		padding-top: 20px;
+		height: 20px;
 	}
 
 	span::before {
