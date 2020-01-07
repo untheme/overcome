@@ -59,6 +59,7 @@ $gallery_thumbnail_space : #{$overcome_product_gallery_thumbnail_space}px;
 }
 .woocommerce-product-rating{
 	padding-bottom: 16px;
+	padding-top: 8px;
 	@include d-flex();
     justify-content: flex-start;
     align-items: center;
