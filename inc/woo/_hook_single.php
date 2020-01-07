@@ -246,6 +246,7 @@ if ( ! function_exists( 'woocommerce_template_single_meta' ) ) {
 // Product meta share
 if(!function_exists('overcome_woocommerce_product_meta_end')){
 	add_action('woocommerce_product_meta_end','overcome_woocommerce_product_meta_end', 0);
+	add_action('woosq_product_summary','overcome_woocommerce_product_meta_end', 0);
 	function overcome_woocommerce_product_meta_end(){
 		$show_share = overcome_get_theme_opt( 'product_share_on', '0');
 		if(!$show_share) return;
@@ -256,7 +257,7 @@ if(!function_exists('overcome_woocommerce_product_meta_end')){
         $title = get_the_title();
 		?>
 		<span class="meta-item">
-			<span class="ef5-heading font-style-700 text-uppercase"><?php esc_html_e('Share:','overcome'); ?></span>
+			<span class="meta-title"><?php esc_html_e('Share:','overcome'); ?></span>
 			<span class="meta-share">
                 <a data-hint="<?php esc_attr_e('Share this post to Facebook','overcome'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="facebook" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="hint--top hint--bounce facebook st-custom-button"><span class="fab fa-facebook-f"></span></a>
                 <a data-hint="<?php esc_attr_e('Share this post to Twitter','overcome'); ?>" data-toggle="tooltip" href="javascript:void(0);" data-network="twitter" data-url="<?php echo esc_url($url);?>" data-short-url="<?php echo esc_url($url);?>" data-title="<?php echo esc_attr($title);?>" data-image="<?php echo esc_url($image); ?>" data-description="<?php echo get_the_excerpt(); ?>" data-username="" data-message="<?php echo bloginfo(); ?>" class="hint--top hint--bounce twitter st-custom-button"><span class="fab fa-twitter"></span></a>
