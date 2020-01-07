@@ -578,3 +578,44 @@ if(class_exists('WooCommerce')){
  *
 */
 overcome_require_folder('inc/extensions', get_template_directory());
+
+/**
+ * Unset image width theme support.
+ */
+function overcome_modify_wc_theme_support() {
+    //global $image_size_single_width, $thumbnail_image_width, $custom_width, $custom_height;
+    //$theme_support = get_theme_support( 'woocommerce' );
+    //$theme_support = is_array( $theme_support ) ? $theme_support[0] : array();
+ 
+    //unset( $theme_support['single_image_width'], $theme_support['thumbnail_image_width'] );
+ 
+    //remove_theme_support( 'woocommerce' );
+
+    //add_theme_support( 'woocommerce', $theme_support );
+
+    add_option( 'woocommerce_single_image_width', overcome_wc_thumbnail_value('image_size_single_width') );
+    add_option( 'woocommerce_thumbnail_image_width', overcome_wc_thumbnail_value('thumbnail_image_width') );
+
+    add_option( 'woocommerce_thumbnail_cropping', 'custom' );
+    add_option( 'woocommerce_thumbnail_cropping_custom_width', overcome_wc_thumbnail_value('custom_width') );
+    add_option( 'woocommerce_thumbnail_cropping_custom_height', overcome_wc_thumbnail_value('custom_height') );
+}
+//add_action( 'after_setup_theme', 'overcome_modify_wc_theme_support', 10 );
+
+// Activation
+function name_plugin_activation(){
+    do_action( 'name_plugin_default_options' );
+}
+register_activation_hook( __FILE__, 'name_plugin_activation' );
+
+
+// Set default values here
+function name_plugin_default_values(){
+
+    // Form settings
+    add_option('name_form_to', 'info@example.com');
+    add_option('name_form_subject', 'New');
+
+
+}
+add_action( 'name_plugin_default_options', 'overcome_modify_wc_theme_support' );
