@@ -110,9 +110,14 @@ form.cart,
 	    font-weight: 500;
 	    min-width: 172px;
 	    border-radius: 22.5px;
+	    background: $accent_color;
+	    color: $white;
 		&.disabled{
 			@include opacity(0.5);
 			cursor: not-allowed;
+		}
+		&:hover{
+			background: $primary_color;
 		}
 	}
 	.woosmart-btn > *{
