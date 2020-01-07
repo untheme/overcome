@@ -178,6 +178,13 @@ if ( ! function_exists( 'woocommerce_template_single_title' ) ) {
 	}
 }
 /**
+ * Single Product rating and price
+ * Move price to before rating
+*/
+remove_action('woocommerce_single_product_summary','woocommerce_template_single_rating', 10);
+add_action('woocommerce_single_product_summary','woocommerce_template_single_rating', 15);
+
+/**
  * Single Product Price
 **/
 if ( ! function_exists( 'woocommerce_template_single_price' ) ) {
