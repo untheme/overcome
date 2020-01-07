@@ -55,7 +55,9 @@ $gallery_thumbnail_space : #{$overcome_product_gallery_thumbnail_space}px;
 
 /* Single Product */
 .product-single-title{
-	padding-bottom: 20px;
+	padding-bottom: 10px;
+	font-weight: 400;
+	color: $accent_color;
 }
 .woocommerce-product-rating{
 	padding-bottom: 16px;
