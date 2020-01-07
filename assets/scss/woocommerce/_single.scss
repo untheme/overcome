@@ -230,16 +230,15 @@ table.variations .label,
 .ef5-product-meta{
 	padding-top: 23px;
 	border-top: $MainBorder;
-	font-size: 13px;
 	margin-top: $grid-gutter-width;
 	> * {
 		display: block;
 		padding: 10px 0;
 		.sku,
 		a{
-			color: $HeadingColor;
+			color: $accent_color;
 			&:hover{
-				color: $accent_color;
+				color: $primary_color;
 			}
 		}
 	}
