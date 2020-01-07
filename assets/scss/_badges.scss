@@ -1,0 +1,8 @@
+.ef5-badge-1{
+	background: $accent_color;
+	color: $white;
+	font-size: 13px;
+	padding: 2.5px 10px;
+	min-width: 60px;
+	@include border-radius(5px);
+}

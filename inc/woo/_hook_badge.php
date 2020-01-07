@@ -35,7 +35,7 @@ if(!function_exists('overcome_woocommerce_sale')){
             $percentage = round( ( ( $regular_price - $sales_price ) / $regular_price ) * 100 );
         ?>
 
-        <span class="ef5-badge ef5-badge-1 ef5-rounded-5">
+        <span class="ef5-badge ef5-badge-1">
             <?php printf( '- %s', $percentage . '%' ) ?>
         </span>
     <?php 
