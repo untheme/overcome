@@ -82,7 +82,7 @@ if ( ! function_exists( 'woocommerce_template_loop_product_title' ) ) {
 	 * Show the product title in the product loop. By default this is an H2.
 	 */
 	function woocommerce_template_loop_product_title() {
-		echo '<div class="ef5-heading ef5-loop-product-title text-small"><a href="'.get_the_permalink().'">' . get_the_title() . '</a></div>';
+		echo '<div class="ef5-heading ef5-loop-product-title"><a href="'.get_the_permalink().'">' . get_the_title() . '</a></div>';
 	}
 }
 
@@ -93,7 +93,7 @@ if(!function_exists('overcome_woocommerce_template_loop_price')){
 	add_action('overcome_woocommerce_shop_loop_products','overcome_woocommerce_template_loop_price',4);
 	function overcome_woocommerce_template_loop_price(){
 	?>
-		<div class="ef5-loop-products-price ef5-heading font-style-700 text-accent"><?php
+		<div class="ef5-loop-products-price"><?php
 			global $product;
 			$price_html = $product->get_price_html();
 			printf('%1$s', $product->get_price_html());
