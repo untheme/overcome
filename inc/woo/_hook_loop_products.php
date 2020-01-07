@@ -60,7 +60,7 @@ if(!function_exists('overcome_woocommerce_loop_product_thumbnail')){
 			<div class="ef5-wc-loop-img">
 				<?php 
 					echo '<div class="static-content">'.woocommerce_get_product_thumbnail().'</div>';
-					echo '<div class="hover-content no-padding">'.overcome_html($hover_img).'</div>';
+					//echo '<div class="hover-content no-padding">'.overcome_html($hover_img).'</div>';
 				?>
 			</div>
 			<div class="ef5-wc-loop-after-img"><?php do_action('overcome_after_woocommerce_loop_product_thumbnail'); ?></div>
