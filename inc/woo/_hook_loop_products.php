@@ -64,6 +64,7 @@ if(!function_exists('overcome_woocommerce_loop_product_thumbnail')){
 				?>
 			</div>
 			<div class="ef5-wc-loop-after-img"><?php do_action('overcome_after_woocommerce_loop_product_thumbnail'); ?></div>
+			<div class="ef5-wc-loop-overlay-img"><?php do_action('overcome_overlay_woocommerce_loop_product_thumbnail'); ?></div>
 		</div>
 	<?php
 	}
@@ -106,8 +107,8 @@ if(!function_exists('overcome_woocommerce_template_loop_price')){
  * Loop Product Add to cart
 */
 if(!function_exists('overcome_woocommerce_loop_product_add_to_cart')){
-	add_action('overcome_woocommerce_shop_loop_products','overcome_woocommerce_loop_product_add_to_cart',99);
-	add_action('overcome_woocommerce_loop_product_add_to_cart', 'woocommerce_template_loop_add_to_cart');
+	//add_action('overcome_woocommerce_shop_loop_products','overcome_woocommerce_loop_product_add_to_cart',99);
+	//add_action('overcome_woocommerce_loop_product_add_to_cart', 'woocommerce_template_loop_add_to_cart');
 	function overcome_woocommerce_loop_product_add_to_cart(){
 		?>
 		<div class="ef5-loop-product-add-to-cart">
