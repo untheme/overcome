@@ -17,6 +17,7 @@ if(!function_exists('overcome_woocommerce_loop_attributes')){
 }
 /**
  * Loop Loop product sale
+ * make bagde ribon :  ef5-corner-ribbon top-left bg-accent shadow
 */
 if(!function_exists('overcome_woocommerce_sale')){
     add_action('overcome_woocommerce_before_shop_loop_products_inner','overcome_woocommerce_sale',0);
@@ -33,7 +34,8 @@ if(!function_exists('overcome_woocommerce_sale')){
         if(isset($regular_price) && $regular_price > 0 && isset($sales_price)){
             $percentage = round( ( ( $regular_price - $sales_price ) / $regular_price ) * 100 );
         ?>
-        <span class="ef5-badge ef5-corner-ribbon top-left bg-accent shadow font-style-700 text-xxsmall">
+
+        <span class="ef5-badge ef5-badge-1 ef5-rounded-5">
             <?php printf( '- %s', $percentage . '%' ) ?>
         </span>
     <?php 
