@@ -85,12 +85,12 @@ form.cart,
 	}
 	.quantity{
 		@include d-flex();
-		flex: 0 0 100%;
-		width: 100%;
+		flex: 0 0 auto;
+		width: auto;
 		align-items: center;
 		margin-bottom: $grid-gutter-width;
 		.screen-reader-text{
-			display: inline-block;
+			display: none;
 			width: auto;
 			height: auto;
 			position: relative;
@@ -99,6 +99,7 @@ form.cart,
 		}
 		input{
 			text-align: center;
+			width: 137px;
 		}
 	}
 	.single_add_to_cart_button {
