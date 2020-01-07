@@ -82,7 +82,7 @@ if ( ! function_exists( 'woocommerce_template_loop_product_title' ) ) {
 	 * Show the product title in the product loop. By default this is an H2.
 	 */
 	function woocommerce_template_loop_product_title() {
-		echo '<div class="ef5-heading ef5-loop-product-title text-16 ef5-text-accent"><a href="'.get_the_permalink().'">' . get_the_title() . '</a></div>';
+		echo '<div class="ef5-heading ef5-loop-product-title text-16 ef5-text-accent font-style-500"><a href="'.get_the_permalink().'">' . get_the_title() . '</a></div>';
 	}
 }
 
