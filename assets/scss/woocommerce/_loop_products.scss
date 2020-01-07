@@ -132,3 +132,13 @@
 
 	}
 }
+.ef5-loop-sale{
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	z-index: 1;
+	[dir="rtl"] &{
+		left: auto;
+		right: 10px;
+	}
+}
