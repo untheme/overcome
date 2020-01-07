@@ -107,7 +107,8 @@ if(!function_exists('overcome_woocommerce_template_loop_price')){
  * Loop Product Add to cart
 */
 if(!function_exists('overcome_woocommerce_loop_product_add_to_cart')){
-	add_action('overcome_overlay_woocommerce_loop_product_thumbnail', 'overcome_woocommerce_loop_product_add_to_cart');
+	add_action('overcome_overlay_woocommerce_loop_product_thumbnail','overcome_woocommerce_loop_product_add_to_cart',99);
+	add_action('overcome_woocommerce_loop_product_add_to_cart', 'woocommerce_template_loop_add_to_cart');
 	function overcome_woocommerce_loop_product_add_to_cart(){
 		?>
 		<div class="ef5-loop-product-add-to-cart">
