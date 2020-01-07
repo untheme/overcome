@@ -88,7 +88,6 @@ form.cart,
 		flex: 0 0 auto;
 		width: auto;
 		align-items: center;
-		margin-bottom: $grid-gutter-width;
 		.screen-reader-text{
 			display: none;
 			width: auto;
@@ -99,11 +98,18 @@ form.cart,
 		}
 		input{
 			text-align: center;
-			width: 137px;
+		    width: 137px;
+		    padding-top: 9.5px;
+		    padding-bottom: 9.5px;
+		    border-radius: 22.5px;
 		}
 	}
 	.single_add_to_cart_button {
-		padding: 12.5px 25px;
+		padding: 15px 25px;
+	    font-size: 16px;
+	    font-weight: 500;
+	    min-width: 172px;
+	    border-radius: 22.5px;
 		&.disabled{
 			@include opacity(0.5);
 			cursor: not-allowed;
