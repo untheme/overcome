@@ -661,13 +661,13 @@ add_filter( 'woocommerce_get_image_size_thumbnail', function( $size ) {
 } ); 
 
 /* Single Thumbnail Size */
-/*add_filter( 'woocommerce_get_image_size_single', function( $size ) {
+add_filter( 'woocommerce_get_image_size_single', function( $size ) {
     return overcome_wc_thumbnail_value('image_size_single');
-} );*/
+} );
 /* Gallery Thumbnail Size */
-/*add_filter( 'woocommerce_get_image_size_gallery_thumbnail', function( $size ) {
+add_filter( 'woocommerce_get_image_size_gallery_thumbnail', function( $size ) {
     return overcome_wc_thumbnail_value('wc_gallery_thumbnail');
-} );*/
+} );
 
 /**
  * Unset image width theme support.
