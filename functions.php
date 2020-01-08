@@ -185,10 +185,8 @@ if (!function_exists('overcome_setup')) {
         ));
 
         /* WooCommerce */
-        add_theme_support( 'woocommerce', apply_filters( 'overcome_woocommerce_args', array(
-            'single_image_width'    => 405,
-            'thumbnail_image_width' => 270,
-        ) ) );
+        
+        
         add_theme_support('wc-product-gallery-zoom');
         add_theme_support('wc-product-gallery-lightbox');
         add_theme_support('wc-product-gallery-slider');    
