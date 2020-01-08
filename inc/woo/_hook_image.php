@@ -7,11 +7,12 @@
  * @source https://docs.woocommerce.com/document/image-sizes-theme-developers/
 */
 
-var_dump(overcome_get_opts('product_single_image_size',[]));
 
-var_dump(overcome_get_opts('product_loop_image_size',[]));
 
 function overcome_wc_thumbnail_value($value){
+    var_dump(overcome_get_opts('product_single_image_size',[]));
+
+var_dump(overcome_get_opts('product_loop_image_size',[]));
     $image_size_single_width  = overcome_configs('overcome_product_single_image_w');
     $image_size_single_height = overcome_configs('overcome_product_single_image_h');
 
