@@ -102,7 +102,7 @@ function overcome_modify_wc_theme_support() {
     //remove_theme_support( 'woocommerce' );
 
     //add_theme_support( 'woocommerce', $theme_support );
-    //die('cmnr');
+    die('cmnr');
     add_option( 'woocommerce_single_image_width', overcome_wc_thumbnail_value('image_size_single_width') );
     add_option( 'woocommerce_thumbnail_image_width', overcome_wc_thumbnail_value('thumbnail_image_width') );
 
