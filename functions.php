@@ -609,7 +609,7 @@ function woocommerce_activation(){
     do_action( 'woocommerce_default_options' );
     die('1231212');
 }
-register_activation_hook( __FILE__, 'woocommerce_activation' );
+register_activation_hook( 'woocommerce/woocommerce.php', 'woocommerce_activation' );
 
 
 // Set default values here
