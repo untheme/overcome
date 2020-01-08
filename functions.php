@@ -185,7 +185,6 @@ if (!function_exists('overcome_setup')) {
         ));
 
         /* WooCommerce */
-        add_theme_support('woocommerce');
         add_theme_support( 'woocommerce', apply_filters( 'overcome_woocommerce_args', array(
             'single_image_width'    => overcome_configs('overcome_product_single_image_w'),
             'thumbnail_image_width' => overcome_configs('overcome_product_loop_image_w'),
