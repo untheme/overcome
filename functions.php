@@ -186,8 +186,8 @@ if (!function_exists('overcome_setup')) {
 
         /* WooCommerce */
         add_theme_support( 'woocommerce', apply_filters( 'overcome_woocommerce_args', array(
-            'single_image_width'    => overcome_configs('overcome_product_single_image_w'),
-            'thumbnail_image_width' => overcome_configs('overcome_product_loop_image_w'),
+            //'single_image_width'    => overcome_configs('overcome_product_single_image_w'),
+            //'thumbnail_image_width' => overcome_configs('overcome_product_loop_image_w'),
         ) ) );
         add_theme_support('wc-product-gallery-zoom');
         add_theme_support('wc-product-gallery-lightbox');
@@ -203,8 +203,8 @@ if (!function_exists('overcome_setup')) {
     }
     add_action('after_setup_theme', 'overcome_setup');
 }
-var_dump(overcome_configs('overcome_product_single_image_w'));
-var_dump(overcome_configs('overcome_product_loop_image_w'));
+//var_dump(overcome_configs('overcome_product_single_image_w'));
+//var_dump(overcome_configs('overcome_product_loop_image_w'));
 function overcome_update(){
     /* Change default image thumbnail sizes in wordpress */
     $thumbnail_size = array(
