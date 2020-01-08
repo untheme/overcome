@@ -76,9 +76,11 @@ function overcome_wc_thumbnail_value($value){
             break;
     }
 }
-add_filter( 'woocommerce_gallery_thumbnail_size', function( $size ) {
-return 'thumbnail';
-} );
+add_theme_support( 'woocommerce', array(
+'thumbnail_image_width' => 200,
+'gallery_thumbnail_image_width' => 100,
+'single_image_width' => 500,
+) );
 /* Loop Thumbnail Size */
 add_filter( 'woocommerce_get_image_size_thumbnail', function( $size ) {
     return overcome_wc_thumbnail_value('image_size_thumbnail');
