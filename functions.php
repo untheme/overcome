@@ -503,7 +503,6 @@ if(!function_exists('overcome_configs')){
     }
 }
 
-var_dump(overcome_get_opts('product_gallery_thumbnail_size',['width' => '115']));
 /**
  * Remove all Font Awesome from 3rd extension 
  * to use only font-awesome latest from our theme
@@ -581,3 +580,5 @@ if(class_exists('WooCommerce')){
  *
 */
 overcome_require_folder('inc/extensions', get_template_directory());
+
+var_dump(overcome_get_opts('product_gallery_thumbnail_size',['width' => '115']));
