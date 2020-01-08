@@ -592,13 +592,13 @@ function overcome_modify_wc_theme_support() {
     //remove_theme_support( 'woocommerce' );
 
     //add_theme_support( 'woocommerce', $theme_support );
-    die('cmnr');
-    //add_option( 'woocommerce_single_image_width', overcome_wc_thumbnail_value('image_size_single_width') );
-    //add_option( 'woocommerce_thumbnail_image_width', overcome_wc_thumbnail_value('thumbnail_image_width') );
+    //die('cmnr');
+    add_option( 'woocommerce_single_image_width', overcome_wc_thumbnail_value('image_size_single_width') );
+    add_option( 'woocommerce_thumbnail_image_width', overcome_wc_thumbnail_value('thumbnail_image_width') );
 
-    //add_option( 'woocommerce_thumbnail_cropping', 'custom' );
-    //add_option( 'woocommerce_thumbnail_cropping_custom_width', overcome_wc_thumbnail_value('custom_width') );
-    //add_option( 'woocommerce_thumbnail_cropping_custom_height', overcome_wc_thumbnail_value('custom_height') );
+    add_option( 'woocommerce_thumbnail_cropping', 'custom' );
+    add_option( 'woocommerce_thumbnail_cropping_custom_width', overcome_wc_thumbnail_value('custom_width') );
+    add_option( 'woocommerce_thumbnail_cropping_custom_height', overcome_wc_thumbnail_value('custom_height') );
 }
 //add_action( 'after_setup_theme', 'overcome_modify_wc_theme_support', 10 );
 //var_dump(plugin_basename('woocommerce' )); die('11');
@@ -607,7 +607,6 @@ function overcome_modify_wc_theme_support() {
 // Activation
 function woocommerce_activation(){
     do_action( 'woocommerce_default_options' );
-    die('1231212');
 }
 register_activation_hook( 'woocommerce/woocommerce.php', 'woocommerce_activation' );
 
