@@ -585,3 +585,5 @@ if(class_exists('WooCommerce')){
 overcome_require_folder('inc/extensions', get_template_directory());
 
 var_dump(overcome_get_opts('product_single_image_size'));
+
+var_dump(overcome_get_opts('product_loop_image_size'));
