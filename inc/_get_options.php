@@ -25,7 +25,7 @@ function overcome_get_theme_opt($opt_id, $default = false){
     }
     global ${$opt_name};
 
-    if (!isset(${$opt_name}) || !isset(${$opt_name}[$opt_id]) || ${$opt_name}[$opt_id] === '' ) {
+    if (!isset(${$opt_name}) || !isset(${$opt_name}[$opt_id]) || ${$opt_name}[$opt_id] === '' || ${$opt_name}[$opt_id] === 'px' ) {
         return $default;
     }
 
