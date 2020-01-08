@@ -91,22 +91,23 @@ if(!function_exists('overcome_configs')){
             'cmt_avatar_size'  => 35,
             'cmt_border'       => '1px solid #DDDDDD',
             // WooCommerce,
-            'overcome_product_single_image_w' => '435',
-            'overcome_product_single_image_h' => '582',
-
-            'overcome_product_loop_image_w' => '205',
-            'overcome_product_loop_image_h' => '162',
-
-            'overcome_product_gallery_thumbnail_w' => '115',
-            'overcome_product_gallery_thumbnail_h' => '140',
-
-            'overcome_product_gallery_thumbnail_v_w' => '115',
-            'overcome_product_gallery_thumbnail_v_h' => '140',
-
-            'overcome_product_gallery_thumbnail_h_w' => '115',
-            'overcome_product_gallery_thumbnail_h_h' => '140',
-
-            'overcome_product_gallery_thumbnail_space' => '14',
+            // product single image size
+            'overcome_product_single_image_w' => overcome_get_opts('product_single_image_size',['width' => '435']),
+            'overcome_product_single_image_h' => overcome_get_opts('product_single_image_size',['height' => '582']),
+            // loop product image size
+            'overcome_product_loop_image_w' => overcome_get_opts('product_loop_image_size',['width' => '270']),
+            'overcome_product_loop_image_h' => overcome_get_opts('product_loop_image_size',['height' => '346']),
+            // product default gallery thumbnail size
+            'overcome_product_gallery_thumbnail_w' => overcome_get_opts('product_gallery_thumbnail_size',['width' => '115']),
+            'overcome_product_gallery_thumbnail_h' => overcome_get_opts('product_gallery_thumbnail_size',['height' => '140']),
+            // product vertical gallery thumbnail size
+            'overcome_product_gallery_thumbnail_v_w' => overcome_get_opts('product_gallery_thumbnail_v_size',['width' => '115']),
+            'overcome_product_gallery_thumbnail_v_h' => overcome_get_opts('product_gallery_thumbnail_v_size',['height' => '140']),
+            // product horizontal gallery thumbnail size
+            'overcome_product_gallery_thumbnail_h_w' => overcome_get_opts('product_gallery_thumbnail_h_size',['width' => '115']),
+            'overcome_product_gallery_thumbnail_h_h' => overcome_get_opts('product_gallery_thumbnail_h_size',['height' => '140']),
+            // product gallery thumbnail space
+            'overcome_product_gallery_thumbnail_space' => overcome_get_opts('product_gallery_thumbnail_space',['width' => '14']),
 
             // API 
             'google_api_key' => apply_filters('ef5systems-google-api-key', false)
@@ -578,111 +579,3 @@ if(class_exists('WooCommerce')){
  *
 */
 overcome_require_folder('inc/extensions', get_template_directory());
-
-/**
- * Product Image Thumbnail Size 
- * @since 1.0
- * @since WC 3.x
- * @author Chinh Duong Manh
- * @source https://docs.woocommerce.com/document/image-sizes-theme-developers/
-*/
-
-function overcome_wc_thumbnail_value($value){
-    $image_size_single_width  = overcome_configs('overcome_product_single_image_w');
-    $image_size_single_height = overcome_configs('overcome_product_single_image_h');
-
-    $thumbnail_image_width  = overcome_configs('overcome_product_loop_image_w');
-    $thumbnail_image_height = overcome_configs('overcome_product_loop_image_h');;
-
-    $custom_width  = $thumbnail_image_width;
-    $custom_height = $thumbnail_image_height;
-
-    $wc_gallery_thumbnail_w = overcome_configs('overcome_product_gallery_thumbnail_w');
-    $wc_gallery_thumbnail_h = overcome_configs('overcome_product_gallery_thumbnail_h');
-
-
-    $wc_gallery_thumbnail  = array(
-        'width'  => $wc_gallery_thumbnail_w,
-        'height' => $wc_gallery_thumbnail_h,
-        'crop'   => 1,
-    );
-
-    $image_size_thumbnail = array(
-        'width'  => $custom_width,
-        'height' => $custom_height,
-        'crop'   => 1,
-    );
-
-    $image_size_single = array(
-        'width'  => $image_size_single_width,
-        'height' => $image_size_single_height,
-        'crop'   => 1,
-    );
-    switch ($value) {
-        case 'image_size_single_width':
-            return $image_size_single_width;
-            break;
-        case 'image_size_single_height':
-            return $image_size_single_height;
-            break;
-        case 'thumbnail_image_width':
-            return $thumbnail_image_width;
-            break;
-        case 'thumbnail_image_height':
-            return $thumbnail_image_height;
-            break;
-        case 'custom_width':
-            return $custom_width;
-            break;
-        case 'custom_height':
-            return $custom_height;
-            break;
-        case 'wc_gallery_thumbnail_w':
-            return $wc_gallery_thumbnail_w;
-            break;
-        case 'wc_gallery_thumbnail_h':
-            return $wc_gallery_thumbnail_h;
-            break;
-        case 'wc_gallery_thumbnail':
-            return $wc_gallery_thumbnail;
-            break;
-        case 'image_size_thumbnail':
-            return $image_size_thumbnail;
-            break;
-        case 'image_size_single':
-            return $image_size_single;
-            break;
-    }
-}
-
-/* Loop Thumbnail Size */
-add_filter( 'woocommerce_get_image_size_thumbnail', function( $size ) {
-    return overcome_wc_thumbnail_value('image_size_thumbnail');
-} ); 
-
-/* Single Thumbnail Size */
-add_filter( 'woocommerce_get_image_size_single', function( $size ) {
-    return overcome_wc_thumbnail_value('image_size_single');
-} );
-/* Gallery Thumbnail Size */
-add_filter( 'woocommerce_get_image_size_gallery_thumbnail', function( $size ) {
-    return overcome_wc_thumbnail_value('wc_gallery_thumbnail');
-} );
-
-/**
- * Unset image width theme support.
- */
-function overcome_woocommerce_default_options() {
-    update_option( 'woocommerce_single_image_width', overcome_wc_thumbnail_value('image_size_single_width') );
-    update_option( 'woocommerce_thumbnail_image_width', overcome_wc_thumbnail_value('thumbnail_image_width') );
-
-    update_option( 'woocommerce_thumbnail_cropping', 'custom' );
-    update_option( 'woocommerce_thumbnail_cropping_custom_width', overcome_wc_thumbnail_value('custom_width') );
-    update_option( 'woocommerce_thumbnail_cropping_custom_height', overcome_wc_thumbnail_value('custom_height') );
-}
-// Activation
-function woocommerce_activation(){
-    do_action( 'woocommerce_default_options' );
-}
-register_activation_hook( 'woocommerce/woocommerce.php', 'woocommerce_activation' );
-add_action( 'woocommerce_default_options', 'overcome_woocommerce_default_options' );

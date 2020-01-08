@@ -1328,6 +1328,29 @@ if(!function_exists('overcome_woocommerce_theme_opts')){
             'subsection' => false,
             'fields'     => array(
                 array(
+                    'id'       => 'loop_product_image',
+                    'type'     => 'info',
+                    'style'    => 'success',
+                    'title'    => esc_html__('Products Images', 'overcome'),
+                    'subtitle' => esc_html__('Custom products image size, ...', 'overcome'),
+                ),
+                array(
+                    'title'    => esc_html__('Main Images', 'overcome'),
+                    'subtitle' => esc_html__('Enter the Main image size', 'overcome'),
+                    'id'       => 'product_single_image_size',
+                    'type'     => 'dimensions',
+                    'units'    => array('px'),
+                    'default'  => array(),
+                ),
+                array(
+                    'title'    => esc_html__('Loop Images', 'overcome'),
+                    'subtitle' => esc_html__('Enter the Loop image size', 'overcome'),
+                    'id'       => 'product_loop_image_size',
+                    'type'     => 'dimensions',
+                    'units'    => array('px'),
+                    'default'  => array(),
+                ),
+                array(
                     'id'       => 'loop_product_design',
                     'type'     => 'info',
                     'style'    => 'success',
@@ -1389,6 +1412,48 @@ if(!function_exists('overcome_woocommerce_theme_opts')){
                     'required' => array(
                         array('product_gallery_layout', '=', 'thumbnail_v')
                     )
+                ),
+                array(
+                    'title'    => esc_html__('Gallery Images Size', 'overcome'),
+                    'subtitle' => esc_html__('Enter the gallery image size', 'overcome'),
+                    'id'       => 'product_gallery_thumbnail_size',
+                    'type'     => 'dimensions',
+                    'units'    => array('px'),
+                    'default'  => array(),
+                    'required' => array(
+                        array('product_gallery_layout', '=', 'simple')
+                    )
+                ),
+                array(
+                    'title'    => esc_html__('Gallery Images Size', 'overcome'),
+                    'subtitle' => esc_html__('Enter the gallery image size', 'overcome'),
+                    'id'       => 'product_gallery_thumbnail_v_size',
+                    'type'     => 'dimensions',
+                    'units'    => array('px'),
+                    'default'  => array(),
+                    'required' => array(
+                        array('product_gallery_layout', '=', 'thumbnail_v')
+                    )
+                ),
+                array(
+                    'title'    => esc_html__('Gallery Images Size', 'overcome'),
+                    'subtitle' => esc_html__('Enter the gallery image size', 'overcome'),
+                    'id'       => 'product_gallery_thumbnail_h_size',
+                    'type'     => 'dimensions',
+                    'units'    => array('px'),
+                    'default'  => array(),
+                    'required' => array(
+                        array('product_gallery_layout', '=', 'thumbnail_h')
+                    )
+                ),
+                array(
+                    'title'    => esc_html__('Gallery Images Space', 'overcome'),
+                    'subtitle' => esc_html__('Enter space between each image', 'overcome'),
+                    'id'       => 'product_gallery_thumbnail_space',
+                    'type'     => 'dimensions',
+                    'height'   => false,
+                    'units'    => array('px'),
+                    'default'  => array()
                 ),
                 array(
                     'id'       => 'product_share_on',
