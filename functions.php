@@ -672,17 +672,7 @@ add_filter( 'woocommerce_get_image_size_gallery_thumbnail', function( $size ) {
 /**
  * Unset image width theme support.
  */
-function overcome_modify_wc_theme_support() {
-    //global $image_size_single_width, $thumbnail_image_width, $custom_width, $custom_height;
-    //$theme_support = get_theme_support( 'woocommerce' );
-    //$theme_support = is_array( $theme_support ) ? $theme_support[0] : array();
- 
-    //unset( $theme_support['single_image_width'], $theme_support['thumbnail_image_width'] );
- 
-    //remove_theme_support( 'woocommerce' );
-
-    //add_theme_support( 'woocommerce', $theme_support );
-    //die('cmnr');
+function overcome_woocommerce_default_options() {
     update_option( 'woocommerce_single_image_width', overcome_wc_thumbnail_value('image_size_single_width') );
     update_option( 'woocommerce_thumbnail_image_width', overcome_wc_thumbnail_value('thumbnail_image_width') );
 
@@ -695,15 +685,4 @@ function woocommerce_activation(){
     do_action( 'woocommerce_default_options' );
 }
 register_activation_hook( 'woocommerce/woocommerce.php', 'woocommerce_activation' );
-
-
-// Set default values here
-function woocommerce_default_values(){
-
-    // Form settings
-    add_option('name_form_to', 'info@example.com');
-    add_option('name_form_subject', 'New');
-
-
-}
-add_action( 'woocommerce_default_options', 'overcome_modify_wc_theme_support' );
+add_action( 'woocommerce_default_options', 'overcome_woocommerce_default_options' );
