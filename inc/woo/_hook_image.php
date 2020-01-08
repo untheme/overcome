@@ -6,9 +6,6 @@
  * @author Chinh Duong Manh
  * @source https://docs.woocommerce.com/document/image-sizes-theme-developers/
 */
-
-
-
 function overcome_wc_thumbnail_value($value){
     $image_size_single_width  = overcome_configs('overcome_product_single_image_w');
     $image_size_single_height = overcome_configs('overcome_product_single_image_h');
