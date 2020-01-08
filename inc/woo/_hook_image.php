@@ -76,7 +76,6 @@ function overcome_wc_thumbnail_value($value){
             break;
     }
 }
-var_dump(overcome_wc_thumbnail_value('image_size_thumbnail'));
 /* Loop Thumbnail Size */
 add_filter( 'woocommerce_get_image_size_thumbnail', function( $size ) {
     return overcome_wc_thumbnail_value('image_size_thumbnail');
