@@ -116,6 +116,7 @@ if(!function_exists('overcome_configs')){
         return $configs[$value];
     }
 }
+var_dump(overcome_get_opts('product_gallery_thumbnail_size',['width' => '115'])['width']); die('x123');
 function overcome_relative_path(){
     if(is_ssl())
         return 'https://';
