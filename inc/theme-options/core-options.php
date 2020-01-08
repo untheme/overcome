@@ -1354,8 +1354,8 @@ if(!function_exists('overcome_woocommerce_theme_opts')){
                     'id'       => 'loop_product_design',
                     'type'     => 'info',
                     'style'    => 'success',
-                    'title'    => esc_html__('Loop Products Design', 'overcome'),
-                    'subtitle' => esc_html__('Custom products design, ...', 'overcome'),
+                    'title'    => esc_html__('Shop Page', 'overcome'),
+                    'subtitle' => esc_html__('Custom shop page design, ...', 'overcome'),
                 ),
                 array(
                     'id'       => 'products_per_page',
@@ -1395,10 +1395,18 @@ if(!function_exists('overcome_woocommerce_theme_opts')){
                     'subtitle' => esc_html__('Custom single product design, ...', 'overcome'),
                 ),
                 array(
-                    'id'       => 'product_gallery_layout',
+                    'id'       => 'product_sidebar_pos',
                     'type'     => 'button_set',
                     'title'    => esc_html__('Layouts', 'overcome'),
-                    'subtitle' => esc_html__('select a layout for single...', 'overcome'),
+                    'subtitle' => esc_html__('select a layout for single product page', 'overcome'),
+                    'options'  => overcome_sidebar_position_opts(),
+                    'default'  => overcome_product_sidebar_position()
+                ),
+                array(
+                    'id'       => 'product_gallery_layout',
+                    'type'     => 'button_set',
+                    'title'    => esc_html__('Gallery Layouts', 'overcome'),
+                    'subtitle' => esc_html__('select a layout for single product image...', 'overcome'),
                     'options'  => $gallery_layout,
                     'default'  => $default_gallery_layout
                 ),
@@ -1462,14 +1470,7 @@ if(!function_exists('overcome_woocommerce_theme_opts')){
                     'type'     => 'switch',
                     'default'  => '0',
                 ),
-                array(
-                    'id'       => 'product_sidebar_pos',
-                    'type'     => 'button_set',
-                    'title'    => esc_html__('Layouts', 'overcome'),
-                    'subtitle' => esc_html__('select a layout for single product page', 'overcome'),
-                    'options'  => overcome_sidebar_position_opts(),
-                    'default'  => overcome_product_sidebar_position()
-                ),
+                
             )
         );
     }
