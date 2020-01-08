@@ -8,115 +8,6 @@
  * @author EF5 Team
  *
 */
-if(!function_exists('overcome_configs')){
-    function overcome_configs($value){
-        $configs = [
-            'primary_color'         => '#303030',
-            'accent_color'          => '#f5b91b',
-            'secondary_color'       => '#e6a423',
-            'thirdary_color'        => '#5580ff',
-            'fourth_color'          => '#3b2e4d',
-            'darkent_accent_color'  => '#e6a423',
-            'lightent_accent_color' => '#ffdd65',
-            'invalid_color'         => 'red',
-            'color_red'             => 'red',
-            'color_green'           => 'green',
-            'white'                 => 'white',
-            // Typo
-            'google_fonts'          => 'Poppins:300,400,500,600,700',
-            'body_bg'               => '#fff',
-            'body_font'             => '\'Poppins\', sans-serif',
-            'body_font_size'        => '15px',
-            'body_font_size_large'  => '18px',
-            'body_font_size_medium' => '16px',
-            'body_font_size_small'  => '14px',
-            'body_font_size_xsmall' => '13px',
-            'body_font_size_xxsmall'=> '12px',
-            'body_font_color'       => '#303030',
-            'body_line_height'      => '1.6',
-            'content_width'         => 1170,
-            'h1_size'               => '36px',
-            'h2_size'               => '30px',
-            'h3_size'               => '22px',
-            'h4_size'               => '18px',
-            'h5_size'               => '16px',
-            'h6_size'               => '14px',
-            'heading_font'          => '\'Poppins\', sans-serif',
-            'heading_color'         => 'var(--primary-color)',
-            'heading_color_hover'   => 'var(--accent-color)',
-            'heading_font_weight'   => 600,
-            'meta_font'             => '\'Poppins\', sans-serif',    
-            'meta_color'            => '#777777',    
-            'meta_color_hover'      => 'var(--accent-color)',
-            'text-grey'            => '#b0b0b0',
-            // Boder
-            'main_border'           => '1px solid #DDDDDD', 
-            'main_border2'          => '2px solid #DDDDDD', 
-            'main_border_color'     => '#DDDDDD', 
-            // Thumbnail Size
-            'large_size_w'                   => 770,
-            'large_size_h'                   => 353,
-            'medium_size_w'                  => 370,
-            'medium_size_h'                  => 250,
-            'thumbnail_size_w'               => 86,
-            'thumbnail_size_h'               => 80,
-            'post_thumbnail_size_w'          => 1170,
-            'post_thumbnail_size_h'          => 500,
-            'overcome_default_post_thumbnail' => true,
-            'overcome_thumbnail_is_bg'        => true,
-            // Header 
-            'logo_width'       => '192',
-            'logo_height'      => '38',
-            'logo_units'       => 'px',
-            'main_menu_height' => '100px',
-            'header_sidewidth' => '320px',
-            // Menu Color
-            'menu_link_color_regular' => 'var(--primary-color)',
-            'menu_link_color_hover' => 'var(--accent-color)',
-            'menu_link_color_active' => 'var(--accent-color)',
-            // Menu Ontop Color
-            'ontop_link_color_regular' => 'var(--primary-color)',
-            'ontop_link_color_hover' => 'var(--accent-color)',
-            'ontop_link_color_active' => 'var(--accent-color)',
-            // Menu Sticky Color
-            'sticky_link_color_regular' => 'var(--primary-color)',
-            'sticky_link_color_hover' => 'var(--accent-color)',
-            'sticky_link_color_active' => 'var(--accent-color)',
-            // Dropdown
-            'dropdown_bg'      => 'rgba(0,0,0, 1)',
-            'dropdown_regular' => '#c0c0c0',
-            'dropdown_hover'   => 'var(--accent-color)',
-            'dropdown_active'  => 'var(--accent-color)',
-            // Comments 
-            'cmt_avatar_size'  => 35,
-            'cmt_border'       => '1px solid #DDDDDD',
-            // WooCommerce,
-            // product single image size
-            'overcome_product_single_image_w' => overcome_get_opts('product_single_image_size',['width' => '435']),
-            'overcome_product_single_image_h' => overcome_get_opts('product_single_image_size',['height' => '582']),
-            // loop product image size
-            'overcome_product_loop_image_w' => overcome_get_opts('product_loop_image_size',['width' => '270']),
-            'overcome_product_loop_image_h' => overcome_get_opts('product_loop_image_size',['height' => '346']),
-            // product default gallery thumbnail size
-            'overcome_product_gallery_thumbnail_w' => overcome_get_opts('product_gallery_thumbnail_size',['width' => '115'])['width'],
-            'overcome_product_gallery_thumbnail_h' => overcome_get_opts('product_gallery_thumbnail_size',['height' => '140'])['height'],
-            // product vertical gallery thumbnail size
-            'overcome_product_gallery_thumbnail_v_w' => overcome_get_opts('product_gallery_thumbnail_v_size',['width' => '115'])['width'],
-            'overcome_product_gallery_thumbnail_v_h' => overcome_get_opts('product_gallery_thumbnail_v_size',['height' => '140'])['height'],
-            // product horizontal gallery thumbnail size
-            'overcome_product_gallery_thumbnail_h_w' => overcome_get_opts('product_gallery_thumbnail_h_size',['width' => '115'])['width'],
-            'overcome_product_gallery_thumbnail_h_h' => overcome_get_opts('product_gallery_thumbnail_h_size',['height' => '140'])['height'],
-            // product gallery thumbnail space
-            'overcome_product_gallery_thumbnail_space' => overcome_get_opts('product_gallery_thumbnail_space',['width' => '14'])['width'],
-
-            // API 
-            'google_api_key' => apply_filters('ef5systems-google-api-key', false)
-
-        ];
-        return $configs[$value];
-    }
-}
-var_dump(overcome_get_opts('product_gallery_thumbnail_size',['width' => '115'])['width']); die('x123');
 function overcome_relative_path(){
     if(is_ssl())
         return 'https://';
@@ -503,6 +394,114 @@ function overcome_inline_styles() {
     return ob_get_clean();
 }
 
+if(!function_exists('overcome_configs')){
+    function overcome_configs($value){
+        $configs = [
+            'primary_color'         => '#303030',
+            'accent_color'          => '#f5b91b',
+            'secondary_color'       => '#e6a423',
+            'thirdary_color'        => '#5580ff',
+            'fourth_color'          => '#3b2e4d',
+            'darkent_accent_color'  => '#e6a423',
+            'lightent_accent_color' => '#ffdd65',
+            'invalid_color'         => 'red',
+            'color_red'             => 'red',
+            'color_green'           => 'green',
+            'white'                 => 'white',
+            // Typo
+            'google_fonts'          => 'Poppins:300,400,500,600,700',
+            'body_bg'               => '#fff',
+            'body_font'             => '\'Poppins\', sans-serif',
+            'body_font_size'        => '15px',
+            'body_font_size_large'  => '18px',
+            'body_font_size_medium' => '16px',
+            'body_font_size_small'  => '14px',
+            'body_font_size_xsmall' => '13px',
+            'body_font_size_xxsmall'=> '12px',
+            'body_font_color'       => '#303030',
+            'body_line_height'      => '1.6',
+            'content_width'         => 1170,
+            'h1_size'               => '36px',
+            'h2_size'               => '30px',
+            'h3_size'               => '22px',
+            'h4_size'               => '18px',
+            'h5_size'               => '16px',
+            'h6_size'               => '14px',
+            'heading_font'          => '\'Poppins\', sans-serif',
+            'heading_color'         => 'var(--primary-color)',
+            'heading_color_hover'   => 'var(--accent-color)',
+            'heading_font_weight'   => 600,
+            'meta_font'             => '\'Poppins\', sans-serif',    
+            'meta_color'            => '#777777',    
+            'meta_color_hover'      => 'var(--accent-color)',
+            'text-grey'            => '#b0b0b0',
+            // Boder
+            'main_border'           => '1px solid #DDDDDD', 
+            'main_border2'          => '2px solid #DDDDDD', 
+            'main_border_color'     => '#DDDDDD', 
+            // Thumbnail Size
+            'large_size_w'                   => 770,
+            'large_size_h'                   => 353,
+            'medium_size_w'                  => 370,
+            'medium_size_h'                  => 250,
+            'thumbnail_size_w'               => 86,
+            'thumbnail_size_h'               => 80,
+            'post_thumbnail_size_w'          => 1170,
+            'post_thumbnail_size_h'          => 500,
+            'overcome_default_post_thumbnail' => true,
+            'overcome_thumbnail_is_bg'        => true,
+            // Header 
+            'logo_width'       => '192',
+            'logo_height'      => '38',
+            'logo_units'       => 'px',
+            'main_menu_height' => '100px',
+            'header_sidewidth' => '320px',
+            // Menu Color
+            'menu_link_color_regular' => 'var(--primary-color)',
+            'menu_link_color_hover' => 'var(--accent-color)',
+            'menu_link_color_active' => 'var(--accent-color)',
+            // Menu Ontop Color
+            'ontop_link_color_regular' => 'var(--primary-color)',
+            'ontop_link_color_hover' => 'var(--accent-color)',
+            'ontop_link_color_active' => 'var(--accent-color)',
+            // Menu Sticky Color
+            'sticky_link_color_regular' => 'var(--primary-color)',
+            'sticky_link_color_hover' => 'var(--accent-color)',
+            'sticky_link_color_active' => 'var(--accent-color)',
+            // Dropdown
+            'dropdown_bg'      => 'rgba(0,0,0, 1)',
+            'dropdown_regular' => '#c0c0c0',
+            'dropdown_hover'   => 'var(--accent-color)',
+            'dropdown_active'  => 'var(--accent-color)',
+            // Comments 
+            'cmt_avatar_size'  => 35,
+            'cmt_border'       => '1px solid #DDDDDD',
+            // WooCommerce,
+            // product single image size
+            'overcome_product_single_image_w' => overcome_get_opts('product_single_image_size',['width' => '435']),
+            'overcome_product_single_image_h' => overcome_get_opts('product_single_image_size',['height' => '582']),
+            // loop product image size
+            'overcome_product_loop_image_w' => overcome_get_opts('product_loop_image_size',['width' => '270']),
+            'overcome_product_loop_image_h' => overcome_get_opts('product_loop_image_size',['height' => '346']),
+            // product default gallery thumbnail size
+            'overcome_product_gallery_thumbnail_w' => overcome_get_opts('product_gallery_thumbnail_size',['width' => '115'])['width'],
+            'overcome_product_gallery_thumbnail_h' => overcome_get_opts('product_gallery_thumbnail_size',['height' => '140'])['height'],
+            // product vertical gallery thumbnail size
+            'overcome_product_gallery_thumbnail_v_w' => overcome_get_opts('product_gallery_thumbnail_v_size',['width' => '115'])['width'],
+            'overcome_product_gallery_thumbnail_v_h' => overcome_get_opts('product_gallery_thumbnail_v_size',['height' => '140'])['height'],
+            // product horizontal gallery thumbnail size
+            'overcome_product_gallery_thumbnail_h_w' => overcome_get_opts('product_gallery_thumbnail_h_size',['width' => '115'])['width'],
+            'overcome_product_gallery_thumbnail_h_h' => overcome_get_opts('product_gallery_thumbnail_h_size',['height' => '140'])['height'],
+            // product gallery thumbnail space
+            'overcome_product_gallery_thumbnail_space' => overcome_get_opts('product_gallery_thumbnail_space',['width' => '14'])['width'],
+
+            // API 
+            'google_api_key' => apply_filters('ef5systems-google-api-key', false)
+
+        ];
+        return $configs[$value];
+    }
+}
 /**
  * Remove all Font Awesome from 3rd extension 
  * to use only font-awesome latest from our theme
