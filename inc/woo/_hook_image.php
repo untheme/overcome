@@ -7,6 +7,18 @@
  * @source https://docs.woocommerce.com/document/image-sizes-theme-developers/
 */
 
+add_theme_support( 'woocommerce', apply_filters( 'overcome_woocommerce_args', array(
+ 'single_image_width'    => 416,
+ 'thumbnail_image_width' => 324,
+ 'product_grid'          => array(
+ 'default_columns' => 3,
+ 'default_rows'    => 4,
+ 'min_columns'     => 1,
+ 'max_columns'     => 6,
+ 'min_rows'        => 1
+ )
+) ) );
+
 function overcome_wc_thumbnail_value($value){
     $image_size_single_width  = overcome_configs('overcome_product_single_image_w');
     $image_size_single_height = overcome_configs('overcome_product_single_image_h');
