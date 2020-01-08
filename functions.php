@@ -204,6 +204,7 @@ if (!function_exists('overcome_setup')) {
     add_action('after_setup_theme', 'overcome_setup');
 }
 var_dump(overcome_configs('overcome_product_single_image_w'));
+var_dump(overcome_configs('overcome_product_loop_image_w'));
 function overcome_update(){
     /* Change default image thumbnail sizes in wordpress */
     $thumbnail_size = array(
