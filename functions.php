@@ -92,11 +92,11 @@ if(!function_exists('overcome_configs')){
             'cmt_border'       => '1px solid #DDDDDD',
             // WooCommerce,
             // product single image size
-            'overcome_product_single_image_w' => overcome_get_opts('product_single_image_size',['width' => '435']),
-            'overcome_product_single_image_h' => overcome_get_opts('product_single_image_size',['height' => '582']),
+            'overcome_product_single_image_w' => overcome_get_opts('product_single_image_size',['width' => '435'])['width'],
+            'overcome_product_single_image_h' => overcome_get_opts('product_single_image_size',['height' => '582'])['height'],
             // loop product image size
-            'overcome_product_loop_image_w' => overcome_get_opts('product_loop_image_size',['width' => '270']),
-            'overcome_product_loop_image_h' => overcome_get_opts('product_loop_image_size',['height' => '346']),
+            'overcome_product_loop_image_w' => overcome_get_opts('product_loop_image_size',['width' => '270'])['width'],
+            'overcome_product_loop_image_h' => overcome_get_opts('product_loop_image_size',['height' => '346'])['height'],
             // product default gallery thumbnail size
             'overcome_product_gallery_thumbnail_w' => overcome_get_opts('product_gallery_thumbnail_size',['width' => '115'])['width'],
             'overcome_product_gallery_thumbnail_h' => overcome_get_opts('product_gallery_thumbnail_size',['height' => '140'])['height'],
