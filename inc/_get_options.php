@@ -25,13 +25,13 @@ function overcome_get_theme_opt($opt_id, $default = false){
     }
     global ${$opt_name};
 
-    if (!isset(${$opt_name}) || !isset(${$opt_name}[$opt_id]) || ${$opt_name}[$opt_id] === '' || ${$opt_name}[$opt_id] === 'px' ) {
+    if (!isset(${$opt_name}) || !isset(${$opt_name}[$opt_id]) || ${$opt_name}[$opt_id] === '' ) {
         return $default;
     }
 
     if(is_array($default)){
         foreach ($default as $key => $value) {
-            ${$opt_name}[$opt_id][$key] = isset(${$opt_name}[$opt_id]) && !empty(${$opt_name}[$opt_id][$key]) ? ${$opt_name}[$opt_id][$key] : $value;
+            ${$opt_name}[$opt_id][$key] = isset(${$opt_name}[$opt_id]) && !empty(${$opt_name}[$opt_id][$key]) && ${$opt_name}[$opt_id][$key] === 'px' ? ${$opt_name}[$opt_id][$key] : $value;
         }
     } else {
         ${$opt_name}[$opt_id] = isset(${$opt_name}[$opt_id]) ? ${$opt_name}[$opt_id] : $default;
