@@ -1460,7 +1460,7 @@ if(!function_exists('overcome_woocommerce_theme_opts')){
                     'id'       => 'product_gallery_thumbnail_space',
                     'type'     => 'dimensions',
                     'height'   => false,
-                    'units'    => array('px'),
+                    'units'    => array(),
                     'default'  => array()
                 ),
                 array(
