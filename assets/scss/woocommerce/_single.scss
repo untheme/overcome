@@ -51,10 +51,6 @@ $gallery_thumbnail_space : #{$overcome_product_gallery_thumbnail_space}px;
 	.ef5-product-gallery-inner{
 		position: relative;
 	}
-	+ .woocommerce-tabs {
-		margin-top: 75px;
-	}
-
 	.wc-badges{
 		position: absolute;
 		z-index: 1;
@@ -70,6 +66,10 @@ $gallery_thumbnail_space : #{$overcome_product_gallery_thumbnail_space}px;
 	+ .ef5-separator{
 		border-top: $MainBorder;
 		margin-top: 50px;
+	}
+	// tabs
+	+ .ef5-separator + .woocommerce-tabs {
+		margin-top: 65px;
 	}
 }
 
@@ -312,50 +312,24 @@ table.variations .label,
 	position: relative;
 	@include d-flex();
 	justify-content: center;
-	&:after{
-		content: '';
-		display: block;
-		height: 1px;
-		width: calc(100% - 30px);
-		background: $MainBorderColor;
-		position: absolute;
-		bottom: 0;
-		left: 15px;
-	}
 	li{
 		text-transform: none;
 		font-size: 18px;
 		color: $HeadingColor;
-		font-weight: 700;
-		padding: 0 20px;
+		font-weight: 600;
+		padding: 0 15px;
 		position: relative;
 		a{
 			color: $HeadingColor;
 			position: relative;
 			z-index: 1;
 			padding: 19px 0;
-			&:after{
-				content: '';
-				display: block;
-				width: 0px;
-				height: 4px;
-				background: $accent_color;
-				position: absolute;
-				bottom: 0;
-				left: 50%;
-				@include transition();
-			}
 		}
-
 		&:hover,
 		&.active{
-			color: $HeadingColor;
+			color: $accent_color;
 			a{
-				color: $HeadingColor;
-				&:after{
-					left: 0;
-					width: 100%;
-				}
+				color: $accent_color;
 			}
 		}
 	}
