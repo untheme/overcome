@@ -235,11 +235,8 @@ if ( ! function_exists( 'woocommerce_template_single_excerpt' ) ) {
 			$class = 'no-rating';
 		}
 		?>
-		<div class="<?php echo trim(implode(' ', ['woocommerce-product-details__short-description', $class]));?>">
-			<?php 
-				var_dump(get_option('woocommerce_single_image_width'));
-			echo overcome_html($short_description); // WPCS: XSS ok. ?>
-		</div>
+		<div class="<?php echo trim(implode(' ', ['woocommerce-product-details__short-description', $class]));?>"><?php echo overcome_html($short_description); // WPCS: XSS ok. 
+		?></div>
 	<?php
 	}
 }
