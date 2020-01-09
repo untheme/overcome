@@ -107,7 +107,7 @@ if(!function_exists('overcome_configs')){
             'overcome_product_gallery_thumbnail_h_w' => overcome_get_opts('product_gallery_thumbnail_h_size',['width' => '120'])['width'],
             'overcome_product_gallery_thumbnail_h_h' => overcome_get_opts('product_gallery_thumbnail_h_size',['height' => '153'])['height'],
             // product gallery thumbnail space
-            'overcome_product_gallery_thumbnail_space' => overcome_get_opts('product_gallery_thumbnail_space',['width' => '15'])['width'],
+            'overcome_product_gallery_thumbnail_space' => overcome_get_opts('product_gallery_thumbnail_space',['width' => '15px'])['width'],
 
             // API 
             'google_api_key' => apply_filters('ef5systems-google-api-key', false)
