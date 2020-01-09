@@ -345,23 +345,23 @@ class OverCome_CSS_Generator
         /* Side Header Width */
 
         /* WooCommerce */
-        printf( '$overcome_product_single_image_w: %s;', overcome_configs('overcome_product_single_image_w') );
-        printf( '$overcome_product_single_image_h: %s;', overcome_configs('overcome_product_single_image_h') );
-        printf( '$overcome_product_single_gallery_w: %s;', overcome_configs('overcome_product_single_gallery_w') );
+        printf( '$overcome_product_single_image_w: %s;', str_replace('px','', overcome_configs('overcome_product_single_image_w') ));
+        printf( '$overcome_product_single_image_h: %s;', str_replace('px','', overcome_configs('overcome_product_single_image_h') ));
+        printf( '$overcome_product_single_gallery_w: %s;', str_replace('px','', overcome_configs('overcome_product_single_gallery_w') ));
         
-        printf( '$overcome_product_loop_image_w: %s;', overcome_configs('overcome_product_loop_image_w') );
-        printf( '$overcome_product_loop_image_h: %s;', overcome_configs('overcome_product_loop_image_h') );
+        printf( '$overcome_product_loop_image_w: %s;', str_replace('px','', overcome_configs('overcome_product_loop_image_w') ));
+        printf( '$overcome_product_loop_image_h: %s;', str_replace('px','', overcome_configs('overcome_product_loop_image_h') ));
 
-        printf( '$overcome_product_gallery_thumbnail_w: %s;', overcome_configs('overcome_product_gallery_thumbnail_w') );
-        printf( '$overcome_product_gallery_thumbnail_h: %s;', overcome_configs('overcome_product_gallery_thumbnail_h') );
+        printf( '$overcome_product_gallery_thumbnail_w: %s;', str_replace('px','', overcome_configs('overcome_product_gallery_thumbnail_w') ));
+        printf( '$overcome_product_gallery_thumbnail_h: %s;', str_replace('px','', overcome_configs('overcome_product_gallery_thumbnail_h') ));
 
-        printf( '$overcome_product_gallery_thumbnail_v_w: %s;', overcome_configs('overcome_product_gallery_thumbnail_v_w') );
-        printf( '$overcome_product_gallery_thumbnail_v_h: %s;', overcome_configs('overcome_product_gallery_thumbnail_v_h') );
+        printf( '$overcome_product_gallery_thumbnail_v_w: %s;', str_replace('px','', overcome_configs('overcome_product_gallery_thumbnail_v_w') ));
+        printf( '$overcome_product_gallery_thumbnail_v_h: %s;', str_replace('px','', overcome_configs('overcome_product_gallery_thumbnail_v_h') ));
 
-        printf( '$overcome_product_gallery_thumbnail_h_w: %s;', overcome_configs('overcome_product_gallery_thumbnail_h_w') );
-        printf( '$overcome_product_gallery_thumbnail_h_h: %s;', overcome_configs('overcome_product_gallery_thumbnail_h_h') );
+        printf( '$overcome_product_gallery_thumbnail_h_w: %s;', str_replace('px','', overcome_configs('overcome_product_gallery_thumbnail_h_w') ));
+        printf( '$overcome_product_gallery_thumbnail_h_h: %s;', str_replace('px','', overcome_configs('overcome_product_gallery_thumbnail_h_h') ));
 
-        printf( '$overcome_product_gallery_thumbnail_space: %s;', overcome_configs('overcome_product_gallery_thumbnail_space') );
+        printf( '$overcome_product_gallery_thumbnail_space: %s;', str_replace('px','', overcome_configs('overcome_product_gallery_thumbnail_space') ));
 
 
         return ob_get_clean();
