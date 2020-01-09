@@ -3,7 +3,7 @@ $main_image_w: $overcome_product_single_image_w;
 $thumbnail_w : $overcome_product_gallery_thumbnail_v_w;
 
 $flex_main_image: ($main_image_w/$gallery_w)*100%;
-$flex_thumb_image: ($thumnmail_w/$gallery_w)*100%;
+$flex_thumb_image: ($thumbmail_w/$gallery_w)*100%;
 
 .ef5-wc-img-summary.thumbnail_v{
 	.ef5-product-gallery-inner{
