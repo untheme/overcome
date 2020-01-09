@@ -5,9 +5,9 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $overcome_product_
 .ef5-wc-img-summary.thumbnail_v{
 	.ef5-product-gallery-wrap{
 		@media (min-width: $screen-lg-min){
-			flex : 0 0 $gallery_w;
-			width: $gallery_w;
-			max-width: 100%;
+			//flex : 0 0 $gallery_w;
+			//width: $gallery_w;
+			//max-width: 100%;
 		}
 	}
 	.ef5-product-gallery-inner{
