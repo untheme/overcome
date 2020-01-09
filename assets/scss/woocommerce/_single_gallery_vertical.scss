@@ -1,6 +1,6 @@
 $gallery_w: $overcome_product_single_gallery_w;
-$main_image_w: $overcome_product_single_image_w;
-$thumbnail_w : $overcome_product_gallery_thumbnail_v_w;
+$main_image_w: $overcome_product_single_image_w + $overcome_product_gallery_thumbnail_space;
+$thumbnail_w : $overcome_product_gallery_thumbnail_v_w + $overcome_product_gallery_thumbnail_space;
 
 $flex_main_image: ($main_image_w/$gallery_w)*100%;
 $flex_thumb_image: ($thumbnail_w/$gallery_w)*100%;
