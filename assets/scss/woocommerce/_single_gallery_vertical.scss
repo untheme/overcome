@@ -25,15 +25,15 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $overcome_product_
 		padding-right: #{$overcome_product_gallery_thumbnail_space /2}px;
 	}
 	.ef5-single-product-gallery-wraps{
-		flex: 0 0 77.5%;
-		width: 77.5%;
+		flex: 0 0 78.9473684%;
+		width: 78.9473684%;
 		&.thumb-left{
 			order: 2;
 		}
 	}
 	.wc-gallery-sync{
-		flex: 0 0 22.5%;
-		width: 22.5%;
+		flex: 0 0 21.0526316%;
+		width: 21.0526316%;
 	}
 	.wc-gallery-sync{
 		margin-top: 0;
