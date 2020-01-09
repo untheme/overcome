@@ -65,6 +65,12 @@ $gallery_thumbnail_space : #{$overcome_product_gallery_thumbnail_space}px;
 			right: $grid-gutter-width / 2;
 		}
 	}
+
+	// separator
+	+ .ef5-separator{
+		border-top: $MainBorder;
+		margin-top: 50px;
+	}
 }
 
 /* Single Product */
