@@ -15,6 +15,7 @@ if(!function_exists('overcome_woocommerce_after_single_product_summary')){
 	add_action('woocommerce_after_single_product_summary','overcome_woocommerce_after_single_product_summary', 0);
 	function overcome_woocommerce_after_single_product_summary(){
 		echo '</div>';
+		echo '<div class="ef5-separator"></div>';
 	}
 }
 
