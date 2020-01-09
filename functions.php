@@ -98,16 +98,16 @@ if(!function_exists('overcome_configs')){
             'overcome_product_loop_image_w' => overcome_get_opts('product_loop_image_size',['width' => '270'])['width'],
             'overcome_product_loop_image_h' => overcome_get_opts('product_loop_image_size',['height' => '346'])['height'],
             // product default gallery thumbnail size
-            'overcome_product_gallery_thumbnail_w' => overcome_get_opts('product_gallery_thumbnail_size',['width' => '115'])['width'],
-            'overcome_product_gallery_thumbnail_h' => overcome_get_opts('product_gallery_thumbnail_size',['height' => '140'])['height'],
+            'overcome_product_gallery_thumbnail_w' => overcome_get_opts('product_gallery_thumbnail_size',['width' => '120'])['width'],
+            'overcome_product_gallery_thumbnail_h' => overcome_get_opts('product_gallery_thumbnail_size',['height' => '153'])['height'],
             // product vertical gallery thumbnail size
-            'overcome_product_gallery_thumbnail_v_w' => overcome_get_opts('product_gallery_thumbnail_v_size',['width' => '115'])['width'],
-            'overcome_product_gallery_thumbnail_v_h' => overcome_get_opts('product_gallery_thumbnail_v_size',['height' => '140'])['height'],
+            'overcome_product_gallery_thumbnail_v_w' => overcome_get_opts('product_gallery_thumbnail_v_size',['width' => '120'])['width'],
+            'overcome_product_gallery_thumbnail_v_h' => overcome_get_opts('product_gallery_thumbnail_v_size',['height' => '153'])['height'],
             // product horizontal gallery thumbnail size
-            'overcome_product_gallery_thumbnail_h_w' => overcome_get_opts('product_gallery_thumbnail_h_size',['width' => '115'])['width'],
-            'overcome_product_gallery_thumbnail_h_h' => overcome_get_opts('product_gallery_thumbnail_h_size',['height' => '140'])['height'],
+            'overcome_product_gallery_thumbnail_h_w' => overcome_get_opts('product_gallery_thumbnail_h_size',['width' => '120'])['width'],
+            'overcome_product_gallery_thumbnail_h_h' => overcome_get_opts('product_gallery_thumbnail_h_size',['height' => '153'])['height'],
             // product gallery thumbnail space
-            'overcome_product_gallery_thumbnail_space' => overcome_get_opts('product_gallery_thumbnail_space',['width' => '14'])['width'],
+            'overcome_product_gallery_thumbnail_space' => overcome_get_opts('product_gallery_thumbnail_space',['width' => '15'])['width'],
 
             // API 
             'google_api_key' => apply_filters('ef5systems-google-api-key', false)
