@@ -12,8 +12,8 @@ $gallery_w: calc(100% - #{$thumbnail_large_w + $thumbnail_w + $overcome_product_
 	}
 	.ef5-product-gallery-inner{
 		@include d-flex();
-		margin-left: #{$overcome_product_gallery_thumbnail_space/-2}px;
-		margin-right: #{$overcome_product_gallery_thumbnail_space /-2}px;
+		margin-left: $overcome_product_gallery_thumbnail_space/-2;
+		margin-right: $overcome_product_gallery_thumbnail_space /-2;
 	}
 	.ef5-single-product-gallery-wraps-inner{
 		position: relative;
