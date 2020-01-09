@@ -347,6 +347,7 @@ class OverCome_CSS_Generator
         /* WooCommerce */
         printf( '$overcome_product_single_image_w: %s;', overcome_configs('overcome_product_single_image_w') );
         printf( '$overcome_product_single_image_h: %s;', overcome_configs('overcome_product_single_image_h') );
+        printf( '$overcome_product_single_gallery_w: %s;', overcome_configs('overcome_product_single_gallery_w') );
         
         printf( '$overcome_product_loop_image_w: %s;', overcome_configs('overcome_product_loop_image_w') );
         printf( '$overcome_product_loop_image_h: %s;', overcome_configs('overcome_product_loop_image_h') );
