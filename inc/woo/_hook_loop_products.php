@@ -62,6 +62,7 @@ if(!function_exists('overcome_woocommerce_loop_product_thumbnail')){
 					echo '<div class="static-content">'.woocommerce_get_product_thumbnail().'</div>';
 					//echo '<div class="hover-content no-padding">'.overcome_html($hover_img).'</div>';
 				?>
+				<a class="ef5-overlay-link" href="<?php the_permalink() ?>"></a>
 			</div>
 			<div class="ef5-wc-loop-after-img"><?php do_action('overcome_after_woocommerce_loop_product_thumbnail'); ?></div>
 			<div class="ef5-wc-loop-overlay-img"><?php do_action('overcome_overlay_woocommerce_loop_product_thumbnail'); ?></div>
