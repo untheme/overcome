@@ -1,7 +1,7 @@
 $gallery_gutters: 30;
 $container_w: 1200;
 
-$single_gallery_large_w: #{$overcome_product_single_gallery_w + $gallery_gutters};
+$single_gallery_large_w: $overcome_product_single_gallery_w + $gallery_gutters;
 
 $single_gallery_default_width: $single_gallery_large_w/$container_w;
 
