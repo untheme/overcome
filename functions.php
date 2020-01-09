@@ -94,7 +94,7 @@ if(!function_exists('overcome_configs')){
             // product single image size
             'overcome_product_single_image_w' => overcome_get_opts('product_single_image_size',['width' => '435'])['width'],
             'overcome_product_single_image_h' => overcome_get_opts('product_single_image_size',['height' => '582'])['height'],
-            'overcome_product_single_gallery_w' => overcome_get_opts('overcome_product_single_gallery_w',['width' => '570'])['width'],
+            'overcome_product_single_gallery_w' => overcome_get_opts('overcome_product_single_gallery_w',['width' => '570px'])['width'],
             // loop product image size
             'overcome_product_loop_image_w' => overcome_get_opts('product_loop_image_size',['width' => '270'])['width'],
             'overcome_product_loop_image_h' => overcome_get_opts('product_loop_image_size',['height' => '346'])['height'],
