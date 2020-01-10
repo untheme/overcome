@@ -32,7 +32,7 @@
         // cart page
         overcome_table_cart_content();
         //overcome_table_move_column(table, selected ,from, to, remove, colspan, colspan_value);
-        overcome_table_move_column('.woocommerce-cart-form__contents', '.woocommerce-cart-form__cart-item' ,0, 5, '', '', '');
+        overcome_table_move_column('.woocommerce-cart-form__contents', '.woocommerce-cart-form__cart-item' ,0, 5, '', '.product-subtotal', '2');
     });
 	// On Load 
 	$(window).load(function() {
