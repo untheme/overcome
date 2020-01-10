@@ -115,7 +115,7 @@ function overcome_woocommerce_cart_coupon(){
  *
 */
 if(!function_exists('overcome_woocommerce_after_cart_table')){
-	add_action('woocommerce_after_cart_table','overcome_woocommerce_after_cart_table', 1);
+	//add_action('woocommerce_after_cart_table','overcome_woocommerce_after_cart_table', 1);
 	/**
 	 * Change proceed to checkout button position
 	*/
@@ -128,10 +128,6 @@ if(!function_exists('overcome_woocommerce_after_cart_table')){
 			<?php do_action('overcome_woocommerce_after_cart_table_left'); ?>
 		</div>
 		<div class="col-lg-6 col-right align-items-center d-md-flex justify-content-lg-end justify-content-center">
-			
-			<a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="checkout-button ef5-btn accent outline ef5-btn-lg">
-				<span class="far fa-plus">&nbsp;&nbsp;</span><span><?php esc_html_e( 'Order Now', 'overcome' ); ?></span>
-			</a>
 		</div>
 	</div>
 	<?php
