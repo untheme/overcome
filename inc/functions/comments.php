@@ -272,6 +272,7 @@ if(!function_exists('overcome_woocommerce_product_review_list_args')){
 		return $args;
 	}
 	function overcome_woocommerce_comments($comment, $args, $depth){
+		if(!class_exists('WooCommerce')) return;
 		$verified = wc_review_is_from_verified_owner( $comment->comment_ID );
 	?>
 		<li id="comment-<?php comment_ID() ?>" <?php comment_class('comment'); ?>>
