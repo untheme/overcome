@@ -47,7 +47,7 @@ table.woocommerce-cart-form__contents{
 			}
 			@media (min-width: $screen-lg-min){
 				&.product-thumbnail{
-					width: $overcome_woocommerce_cart_item_thumbnail_size;
+					width: #{$overcome_woocommerce_cart_item_thumbnail_size}px;
 				}
 				&.product-name{}
 				&.product-price{
