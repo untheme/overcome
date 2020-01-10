@@ -744,7 +744,7 @@
             table_head = table.find('thead');
             table_head.find('.product-remove').remove();
             table_head.find('.product-thumbnail').remove();
-            table_head.find('.product-name').attr('colspan',3);
+            table_head.find('.product-name').attr('colspan',2);
     }
     function overcome_remove_cart_actions(){
         "use strict";
