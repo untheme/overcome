@@ -703,12 +703,12 @@
                         991 : {
                             items : 3,
                             nav: false,
-                            dot: true
+                            dots: true
                         },
                         1200 : {
                             items : 4,
                             nav: true,
-                            dot: false
+                            dots: false
                         }
                     }
                 });
