@@ -8,8 +8,8 @@ if(!function_exists('overcome_woocommerce_cart_item_thumbnail')){
 		$product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
 		$thumbnail_id = get_post_thumbnail_id($product_id);
 		// thumbnail size
-		$thumbnail_size_w = str_replace('px', '', overcome_get_opts('overcome_woocommerce_cart_item_thumbnail_size')['width']);
-		$thumbnail_size_h = str_replace('px', '', overcome_get_opts('overcome_woocommerce_cart_item_thumbnail_size')['height']);
+		$thumbnail_size_w = str_replace('px', '', overcome_get_opts('overcome_woocommerce_cart_item_thumbnail_size',overcome_configs('overcome_woocommerce_cart_item_thumbnail_size'))['width']);
+		$thumbnail_size_h = str_replace('px', '', overcome_get_opts('overcome_woocommerce_cart_item_thumbnail_size',overcome_configs('overcome_woocommerce_cart_item_thumbnail_size'))['height']);
 		$thumbnail_size = implode('x',[$thumbnail_size_w, $thumbnail_size_h]);
 		var_dump($thumbnail_size);
 		$thumbnail = overcome_image_by_size([
