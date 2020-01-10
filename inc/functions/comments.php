@@ -371,7 +371,7 @@ if(!function_exists('overcome_woocommerce_product_review_comment_form_args')){
 			'title_reply_after'  => '</h3>',
 			'title_reply'   => have_comments() ? esc_html__( 'Write a Review', 'overcome' ) : esc_html__( 'Be the first to Review', 'overcome' ),
 			'label_submit'  => esc_html__( 'Post Your Review', 'overcome' ),
-			'submit_button' => '<button name="%1$s" type="submit" id="%2$s" class="%3$s" value="%4$s" />%4$s</button>',
+			'submit_button' => '<button name="%1$s" type="submit" id="%2$s" class="%3$s ef5-btn fill accent ef5-btn-md" value="%4$s" />%4$s</button>',
 			'comment_field' => '<div class="comment-form-comment">'.
 									'<textarea id="comment" name="comment" placeholder="'.esc_attr($msg_placeholder).'" required="required"></textarea>'.
 								'</div>',
