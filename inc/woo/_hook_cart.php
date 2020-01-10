@@ -175,7 +175,7 @@ function overcome_woocommerce_cart_update(){
 function overcome_woocommerce_cart_checkout_button(){
 	?>
 	<div class="ef5-cart-checkout-btn">
-		<a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="checkout-button ef5-btn accent outline ef5-btn-lg">
+		<a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="ef5-btn accent fill w-100 ef5-btn-lg">
 				<span class="ef5-cart-checkout-icon"></span><span><?php esc_html_e( 'Checkout', 'overcome' ); ?></span>
 			</a>
 	</div>
