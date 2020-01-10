@@ -740,9 +740,9 @@
         "use strict";
         var table = jQuery('.woocommerce-cart-form__contents'),
             table_head = table.find('thead');
+            table_head.find('.product-remove').remove();
             table_head.find('.product-thumbnail').remove();
-            table_head.find('.product-name').attr('colspan',2);
-        console.log('xxx');
+            table_head.find('.product-name').attr('colspan',3);
     }
     function overcome_remove_cart_actions(){
         "use strict";
