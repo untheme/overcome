@@ -41,7 +41,7 @@
 
 
 // Default 
-.owl-carousel{
+.owl-carousel:not(.ef5-owl){
 	.owl-nav{
 		span{
 			font-size: 0;
