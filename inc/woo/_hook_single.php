@@ -328,8 +328,7 @@ if(!function_exists('overcome_single_product_scripts')){
 	function overcome_single_product_scripts(){
 		if(!is_singular('product')) return;
 		wp_enqueue_script('owl-carousel');
-		wp_enqueue_script('ef5-owl-carousel');
-		wp_enqueue_style('owl-carousel');
-		wp_enqueue_style('ef5-owl-carousel');
+        wp_enqueue_script('ef5-owl-carousel');
+        wp_enqueue_style( 'owl-carousel');
 	}
 }
