@@ -38,7 +38,7 @@
         overcome_wooscp_change_text();
         overcome_masonry_filter();
         overcome_vc_animation_callback();
-
+        // WooCommerce
         overcome_tabs();
 	});
 	// On scroll
@@ -72,6 +72,8 @@
         overcome_remove_cart_actions();
     });
     jQuery( document ).on( 'updated_wc_div', function() {
+        overcome_table_cart_content();
+        overcome_table_move_column('.woocommerce-cart-form__contents', '.woocommerce-cart-form__cart-item' ,0, 5, '', '.product-subtotal', '2');
         overcome_remove_cart_actions();
     } );
 
