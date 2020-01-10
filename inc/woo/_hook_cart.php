@@ -82,22 +82,23 @@ if(!function_exists('overcome_woocommerce_return_shop')){
 	add_action('overcome_woocommerce_cart_actions', 'overcome_woocommerce_return_shop', 1);
 	function overcome_woocommerce_return_shop(){
 		if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
-			<a class="ef5-btn accent fill ef5-btn-lg" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
-				<span class="ef5-return-shop-icon"></span>
-				<span><?php esc_html_e( 'Continue Shopping', 'overcome' ); ?></a>
-			</a>
+			<div class="ef5-return-shop">
+				<a class="ef5-btn accent fill ef5-btn-lg" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
+					<span class="ef5-return-shop-icon"></span>
+					<span><?php esc_html_e( 'Continue Shopping', 'overcome' ); ?></span>
+				</a>
+			</div>
 		<?php endif; 
 	}
 }
-
 // Coupon
 add_action('overcome_woocommerce_cart_actions', 'overcome_woocommerce_cart_coupon', 2);
 function overcome_woocommerce_cart_coupon(){
 	if ( wc_coupons_enabled() ) { 
 	?>
 	<div class="ef5-cart-coupon coupon">
-		<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'overcome' ); ?>" />
-		<button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'overcome' ); ?>"><?php esc_attr_e( 'Apply coupon', 'overcome' ); ?></button>
+		<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Enter your coupon', 'overcome' ); ?>" />
+		<button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Confirm', 'overcome' ); ?>"><?php esc_attr_e( 'Confirm', 'overcome' ); ?></button>
 		<?php do_action( 'woocommerce_cart_coupon' ); ?>
 	</div>
 	<?php 
@@ -148,12 +149,12 @@ if(!function_exists('overcome_woocommerce_clear_cart_url')){
 	}
 }
 if(!function_exists('overcome_woocommerce_clear_cart_button')){
-	add_action('overcome_woocommerce_after_cart_table_left', 'overcome_woocommerce_clear_cart_button');
+	add_action('overcome_woocommerce_cart_actions', 'overcome_woocommerce_clear_cart_button', 3);
 	function overcome_woocommerce_clear_cart_button(){
 		$link = wc_get_cart_url();
         $link = add_query_arg( 'empty-cart', '', $link );
 		?>
-			<a class="ef5-btn red outline ef5-btn-lg" href="<?php echo esc_url($link);?>"><span class="far fa-times">&nbsp;&nbsp;</span><span><?php esc_html_e( 'Clear Shopping Cart', 'overcome' ); ?></span></a>
+			<a class="ef5-btn red outline ef5-btn-lg" href="<?php echo esc_url($link);?>"><span class="ef5-clear-cart-icon"></span><span><?php esc_html_e( 'Clear Cart', 'overcome' ); ?></span></a>
 		<?php
 	}
 }
