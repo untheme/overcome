@@ -682,6 +682,8 @@
         console.log(typeof owlCarousel === 'function');
         if(typeof $.owlCarousel != 'undefined'){
             console.log('clgt');
+        } else {
+            console.log('clgt2222');
         }
         if(typeof owlCarousel === 'function'){
             $('.related.products .products').each(function(){
