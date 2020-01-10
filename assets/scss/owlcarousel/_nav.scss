@@ -47,12 +47,10 @@
 			font-size: 0;
 			text-indent: -10000px;
 			border-color: #c5c5c5;
-			&:before{
-				width: 30px;
-			    height: 30px;
-			    display: block;
-			    transform: rotate(45deg);
-			}
+			width: 30px;
+		    height: 30px;
+		    display: block;
+		    transform: rotate(45deg);
 			&.owl-prev{
 				border-left: 2px solid;
 			    border-bottom: 2px solid;
