@@ -687,7 +687,6 @@
                 $this.addClass('owl-carousel');
                 $this.owlCarousel({
                     rtl: rtl,
-                    items: 4,
                     margin: 30,
                     loop: true,
                     autoplay: true,
