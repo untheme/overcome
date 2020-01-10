@@ -682,7 +682,7 @@
             var $this = $(this),
                 rtl = $('body').hasClass('rtl');
             $this.addClass('owl-carousel');
-            $this.vcOwlCarousel({
+            $this.owlCarousel({
                 rtl: rtl,
                 items: 4,
                 loop: true,
