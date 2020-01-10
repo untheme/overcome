@@ -110,7 +110,7 @@ if(!function_exists('overcome_configs')){
             // product gallery thumbnail space
             'overcome_product_gallery_thumbnail_space' => overcome_get_opts('product_gallery_thumbnail_space',['width' => '15px'])['width'],
             // cart item thumbnail size 
-            'overcome_woocommerce_cart_item_thumbnail_size' => overcome_get_opts('overcome_woocommerce_cart_item_thumbnail_size',['width' => '159px', 'height'=> '119px']),
+            'overcome_woocommerce_cart_item_thumbnail_size' => overcome_get_opts('overcome_woocommerce_cart_item_thumbnail_size',['width' => '100px', 'height'=> '115px']),
 
             // API 
             'google_api_key' => apply_filters('ef5systems-google-api-key', false)
