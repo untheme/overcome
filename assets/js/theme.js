@@ -693,7 +693,7 @@
                     autoplayTimeout: 2000,
                     slideBy: 'page',
                     responsive : {
-                        480 : {
+                        0 : {
                             items : 1,
                         },
                         768 : {
