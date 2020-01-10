@@ -93,6 +93,8 @@ table.woocommerce-cart-form__contents{
 				a.remove{
 					color: $red;
 					font-size: 0;
+					padding-left: 15px;
+					padding-right: 15px;
 					&:before{
 						content: attr(aria-label)'\00a0\00a0';
 						color: $red;
