@@ -162,6 +162,7 @@ if(!function_exists('overcome_woocommerce_clear_cart_button')){
 }
 
 // Update Cart 
+add_action('overcome_woocommerce_cart_actions','overcome_woocommerce_cart_update', 4);
 function overcome_woocommerce_cart_update(){
 	?>
 	<div class="ef5-update-cart">
