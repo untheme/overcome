@@ -280,7 +280,7 @@ if(!function_exists('overcome_woocommerce_product_review_list_args')){
 				<div class="row justify-content-between">
 					<div class="col">
 						<div class="row gutters-15">
-							<div class="col-auto"><?php
+							<div class="col-auto empty-none"><?php
 							/**
 							 * The woocommerce_review_before hook
 							 *
@@ -291,12 +291,16 @@ if(!function_exists('overcome_woocommerce_product_review_list_args')){
 							?></div>
 							<div class="col">
 								<div class="author-info">
-									<div class="author-name h5 text-uppercase">
-										<?php echo get_comment_author( $comment ); ?>
-									</div>
+									<div class="author-name h5 text-uppercase empty-none"><?php 
+											echo get_comment_author( $comment ); 
+											if ( 'yes' === get_option( 'woocommerce_review_rating_verification_label' ) && $verified ) {
+												echo '<em class="woocommerce-review__verified verified">(' . esc_attr__( 'verified owner', 'overcome' ) . ')</em> ';
+											}
+									?></div>
 								</div>
 								<div class="comment-metadata pt-5 text-12">
 									<div class="row grid-gutters-20">
+
 										<span class="col-auto comment-time meta-color"><?php echo esc_html( get_comment_date( wc_date_format() ) ); ?></span>
 										<span class="col-auto">replyx</span>
 										<span class="col-auto">editx</span>
@@ -337,14 +341,6 @@ if(!function_exists('overcome_woocommerce_product_review_list_args')){
 						do_action( 'woocommerce_review_comment_text', $comment );
 
 						do_action( 'woocommerce_review_after_comment_text', $comment ); ?>
-					</div>
-					<div class="comment-metadata">
-						<?php
-						if ( 'yes' === get_option( 'woocommerce_review_rating_verification_label' ) && $verified ) {
-							echo '<em class="woocommerce-review__verified verified">(' . esc_attr__( 'verified owner', 'overcome' ) . ')</em> ';
-						}
-						?>
-						<span class="comment-time meta-color" datetime="<?php echo esc_attr( get_comment_date( 'c' ) ); ?>"><?php echo esc_html( get_comment_date( wc_date_format() ) ); ?></span>
 					</div>
 				</div>
 			</div>
