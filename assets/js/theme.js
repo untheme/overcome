@@ -39,7 +39,7 @@
         overcome_smooth_scroll();
 
         overcome_tabs();
-        console.log(typeof owlCarousel === 'function');
+        console.log(typeof owlCarousel);
         if (typeof owlCarousel === 'function') {
             overcome_woocommerce_related_product();
         }
