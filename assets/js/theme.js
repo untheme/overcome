@@ -1,15 +1,16 @@
-$( document ).ready(function() {
-       if (typeof owlCarousel === 'function') { 
-      console.log('yes');
-      $('.owl-carousel').owlCarousel({
-         items: 1
-      });
-    }
-    else {
-      console.log('no');
-    } 
-});
-
+(function( $ ) {
+    $( document ).ready(function() {
+           if (typeof owlCarousel === 'function') { 
+          console.log('yes');
+          $('.owl-carousel').owlCarousel({
+             items: 1
+          });
+        }
+        else {
+          console.log('no');
+        } 
+    });
+}
 (function( $ ) {
 	'use strict';
 	var resizeTimer;
