@@ -318,8 +318,6 @@ if(!function_exists('overcome_woocommerce_product_review_list_args')){
 											do_action( 'woocommerce_review_before_comment_meta', $comment );
 										?></span>
 										<span class="col-auto comment-time meta-color"><?php echo esc_html( get_comment_date( wc_date_format() ) ); ?></span>
-										<span class="col-auto">replyx</span>
-										<span class="col-auto">editx</span>
 									</div>
 								</div>
 							</div>
