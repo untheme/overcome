@@ -679,7 +679,7 @@
     function overcome_woocommerce_related_product(){
         "use strict";
         console.log($.isFunction('owlCarousel'));
-        console.log(typeof $.fn.owlCarousel === 'function');
+        console.log(typeof $.fn.owlCarousel == 'function');
         if(typeof $.owlCarousel != 'undefined'){
             console.log('clgt');
         } else {
