@@ -685,7 +685,7 @@
         } else {
             console.log('clgt2222');
         }
-        if(typeof owlCarousel === 'function'){
+        //if(typeof owlCarousel === 'function'){
             $('.related.products .products').each(function(){
                 var $this = $(this),
                     rtl = $('body').hasClass('rtl');
@@ -714,7 +714,7 @@
                     }
                 });
             });
-        }
+        //}
     }
     /**
      * Cart Page
