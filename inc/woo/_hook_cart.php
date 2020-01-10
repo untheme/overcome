@@ -11,7 +11,7 @@ if(!function_exists('overcome_woocommerce_cart_item_thumbnail')){
 		$thumbnail_size_w = str_replace('px', '', overcome_get_opts('overcome_woocommerce_cart_item_thumbnail_size')['width']);
 		$thumbnail_size_h = str_replace('px', '', overcome_get_opts('overcome_woocommerce_cart_item_thumbnail_size')['height']);
 		$thumbnail_size = implode('x',[$thumbnail_size_w, $thumbnail_size_h]);
-
+		var_dump($thumbnail_size);
 		$thumbnail = overcome_image_by_size([
 			'id' => $thumbnail_id, 
 			'size' => $thumbnail_size,
