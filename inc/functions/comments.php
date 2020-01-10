@@ -251,15 +251,6 @@ if(!function_exists('overcome_comment_form_defaults')){
 	}
 }
 
-/**
- * WooCommerce 
- * Avatar size
-*/
-function overcome_woocommerce_review_gravatar_size(){
-	return '35';//overcome_configs('cmt_avatar_size');
-}
-//add_filter('woocommerce_review_gravatar_size', 'overcome_woocommerce_review_gravatar_size');
-
 /***
  * WooCommerce Comment Field
  * 
@@ -289,15 +280,17 @@ if(!function_exists('overcome_woocommerce_product_review_list_args')){
 				<div class="row justify-content-between">
 					<div class="col">
 						<div class="row gutters-15">
-							<div class="col-auto empty-none"><?php
-							/**
-							 * The woocommerce_review_before hook
-							 *
-							 * @hooked woocommerce_review_display_gravatar - 10
-							 */
-							do_action( 'woocommerce_review_before', $comment );
-							
-							?></div>
+							<?php if(overcome_get_avatar_size() !== 0) { ?>
+								<div class="col-auto empty-none"><?php
+								/**
+								 * The woocommerce_review_before hook
+								 *
+								 * @hooked woocommerce_review_display_gravatar - 10
+								 */
+								do_action( 'woocommerce_review_before', $comment );
+								
+								?></div>
+							<?php } ?>
 							<div class="col">
 								<div class="author-info">
 									<div class="author-name h5 text-uppercase empty-none"><?php 
