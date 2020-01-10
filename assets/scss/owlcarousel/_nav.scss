@@ -43,7 +43,7 @@
 // Default 
 .owl-carousel:not(.ef5-owl){
 	.owl-nav{
-		span{
+		button{
 			font-size: 0;
 			text-indent: -10000px;
 			border: 2px solid #c5c5c5;
@@ -54,17 +54,13 @@
 		    &:hover{
 				border-color: $accent_color;
 			}
-		}
-		.owl-prev{
-			span{
-				border-left-width: 0;
-			    border-top-width: 0;
+			&.owl-prev{
+					border-right-width: 0;
+				    border-top-width: 0;
 			}
-		}
-		.owl-next{
-			span{
-				border-left-width: 0;
-				border-bottom-width: 0;
+			&.owl-next{
+					border-left-width: 0;
+					border-bottom-width: 0;
 			}
 		}
 	}
