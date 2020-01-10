@@ -740,7 +740,7 @@
         "use strict";
         var table = jQuery('.woocommerce-cart-form__contents'),
             table_head = table.find('thead');
-            table_head.remove('.product-thumbnail');
+            table_head.find('.product-thumbnail').remove();
             table_head.find('.product-name').attr('colspan',2);
         console.log('xxx');
     }
