@@ -326,7 +326,7 @@ if(!function_exists('overcome_woocommerce_output_related_products_args')){
 if(!function_exists('overcome_single_product_scripts')){
 	add_action('wp_enqueue_scripts', 'overcome_single_product_scripts', 0);
 	function overcome_single_product_scripts(){
-		if(!is_singular('product')) return;
+		if(is_singular('product')) die('1111');
 		wp_enqueue_script('owl-carousel');
         wp_enqueue_script('ef5-owl-carousel');
         wp_enqueue_style( 'owl-carousel');
