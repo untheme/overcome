@@ -363,6 +363,7 @@ class OverCome_CSS_Generator
 
         printf( '$overcome_product_gallery_thumbnail_space: %s;', str_replace('px','', overcome_configs('overcome_product_gallery_thumbnail_space') ));
 
+        printf( '$overcome_woocommerce_cart_item_thumbnail_size: %s;', str_replace('px','', overcome_configs('overcome_woocommerce_cart_item_thumbnail_size')['width'] ));
 
         return ob_get_clean();
     }
