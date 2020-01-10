@@ -128,7 +128,7 @@ if(!function_exists('overcome_woocommerce_after_cart_table')){
 			<?php do_action('overcome_woocommerce_after_cart_table_left'); ?>
 		</div>
 		<div class="col-lg-6 col-right align-items-center d-md-flex justify-content-lg-end justify-content-center">
-			<button type="submit" class="btn button" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'overcome' ); ?>"><span class="fa fa-refresh">&nbsp;&nbsp;</span><span><?php esc_html_e( 'Update cart', 'overcome' ); ?></span></button>
+			
 			<a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="checkout-button ef5-btn accent outline ef5-btn-lg">
 				<span class="far fa-plus">&nbsp;&nbsp;</span><span><?php esc_html_e( 'Order Now', 'overcome' ); ?></span>
 			</a>
@@ -154,9 +154,16 @@ if(!function_exists('overcome_woocommerce_clear_cart_button')){
 		$link = wc_get_cart_url();
         $link = add_query_arg( 'empty-cart', '', $link );
 		?>
-			<a class="ef5-btn red outline ef5-btn-lg" href="<?php echo esc_url($link);?>"><span class="ef5-clear-cart-icon"></span><span><?php esc_html_e( 'Clear Cart', 'overcome' ); ?></span></a>
+			<a class="ef5-btn accent outline ef5-btn-lg" href="<?php echo esc_url($link);?>"><span class="ef5-clear-cart-icon"></span><span><?php esc_html_e( 'Clear Cart', 'overcome' ); ?></span></a>
 		<?php
 	}
+}
+
+// Update Cart 
+function overcome_woocommerce_cart_update(){
+	?>
+	<button type="submit" class="ef5-btn ef5-btn-lg accent fill" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'overcome' ); ?>"><span class="ef5-update-cart-icon"></span><span><?php esc_html_e( 'Update cart', 'overcome' ); ?></span></button>
+	<?php
 }
 
 /**
