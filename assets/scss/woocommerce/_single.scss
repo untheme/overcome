@@ -370,15 +370,26 @@ table.variations .label,
 			}
 		}
 		.owl-dots{
-			margin-top: 5px;
+			margin: -5px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
 			.owl-dot{
-				width: 10px;
-				height: 5px;
-				border-radius: 2.5px;
-				background: #ddd;
+				padding: 5px;
+				span{
+					display: block;
+					width: 20px;
+					height: 5px;
+					border-radius: 2.5px;
+					background: #ddd;
+					@include transition();
+				}
+				
 				&:hover,
 				&.active{
-					background: $accent_color;
+					span{
+						background: $accent_color;
+					}
 				}
 			}
 		}
