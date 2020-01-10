@@ -29,6 +29,8 @@
        
         overcome_woocommerce_related_product();
         
+        // cart page
+        overcome_table_cart_content();
     });
 	// On Load 
 	$(window).load(function() {
@@ -733,6 +735,14 @@
         colspan.each(function(){
             jQuery(this).attr('colspan',colspan_value);
         });
+    }
+    function overcome_table_cart_content(){
+        "use strict";
+        var table = jQuery('.woocommerce-cart-form__contents'),
+            table_head = table.find('thead');
+            table_head.remove('.product-thumbnail');
+            table_head.find('.product-name').attr('colspan="2"');
+
     }
     function overcome_remove_cart_actions(){
         "use strict";
