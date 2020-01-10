@@ -678,33 +678,35 @@
     // Related product
     function overcome_woocommerce_related_product(){
         "use strict";
-        $('.related.products .products').each(function(){
-            var $this = $(this),
-                rtl = $('body').hasClass('rtl');
-            $this.addClass('owl-carousel');
-            $this.owlCarousel({
-                rtl: rtl,
-                items: 4,
-                loop: true,
-                autoplay: true,
-                autoplayTimeout: 2000,
-                slideBy: 'page',
-                responsive : {
-                    480 : {
-                        items : 1,
-                    },
-                    768 : {
-                        items : 2,
-                    },
-                    991 : {
-                        items : 3,
-                    },
-                    1200 : {
-                        items : 4,
+        if(typeof owlCarousel != 'undefined'){
+            $('.related.products .products').each(function(){
+                var $this = $(this),
+                    rtl = $('body').hasClass('rtl');
+                $this.addClass('owl-carousel');
+                $this.owlCarousel({
+                    rtl: rtl,
+                    items: 4,
+                    loop: true,
+                    autoplay: true,
+                    autoplayTimeout: 2000,
+                    slideBy: 'page',
+                    responsive : {
+                        480 : {
+                            items : 1,
+                        },
+                        768 : {
+                            items : 2,
+                        },
+                        991 : {
+                            items : 3,
+                        },
+                        1200 : {
+                            items : 4,
+                        }
                     }
-                }
+                });
             });
-        });
+        }
     }
     /**
      * Cart Page
