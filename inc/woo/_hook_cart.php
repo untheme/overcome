@@ -7,7 +7,12 @@ if(!function_exists('overcome_woocommerce_cart_item_thumbnail')){
 	function  overcome_woocommerce_cart_item_thumbnail($thumbnail, $cart_item, $cart_item_key){
 		$product_id = apply_filters( 'woocommerce_cart_item_product_id', $cart_item['product_id'], $cart_item, $cart_item_key );
 		$thumbnail_id = get_post_thumbnail_id($product_id);
-		$thumbnail = overcome_image_by_size(['id' => $thumbnail_id, 'size' => apply_filters('overcome_woocommerce_cart_item_thumbnail_size', '100x100'),'echo'   => false]);
+		// thumbnail size
+		$thumbnail_size_w = str_replace('px', '', overcome_get_opts('overcome_woocommerce_cart_item_thumbnail_size')['width']);
+		$thumbnail_size_h = str_replace('px', '', overcome_get_opts('overcome_woocommerce_cart_item_thumbnail_size')['height']);
+		$thumbnail_size = implode('x',[$thumbnail_size_w, $thumbnail_size_h]);
+
+		$thumbnail = overcome_image_by_size(['id' => $thumbnail_id, 'size' => overcome_configs('overcome_woocommerce_cart_item_thumbnail_size'),'echo'   => false]);
 		return $thumbnail;
 	}
 }
