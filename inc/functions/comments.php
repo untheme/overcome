@@ -276,10 +276,11 @@ if(!function_exists('overcome_woocommerce_product_review_list_args')){
 		$verified = wc_review_is_from_verified_owner( $comment->comment_ID );
 	?>
 		<li id="comment-<?php comment_ID() ?>" <?php comment_class('comment'); ?>>
-			<div id="comment-<?php comment_ID(); ?>" class="comment-body row">
-				<div class="comment-avatar col-12 col-md-auto">
-					<div class="row align-items-center">
-						<div class="col-auto"><?php
+			<div id="comment-<?php comment_ID(); ?>" class="comment-body">
+				<div class="row justify-content-between">
+					<div class="col">
+						<div class="row gutters-15">
+							<div class="col-auto"><?php
 							/**
 							 * The woocommerce_review_before hook
 							 *
@@ -287,25 +288,28 @@ if(!function_exists('overcome_woocommerce_product_review_list_args')){
 							 */
 							do_action( 'woocommerce_review_before', $comment );
 							
-						?></div>
-						<div class="author-info col">
-							<div class="author-name h5">
-								<?php echo get_comment_author( $comment ); ?>
+							?></div>
+							<div class="col">
+								<div class="author-info">
+									<div class="author-name h5 text-uppercase">
+										<?php echo get_comment_author( $comment ); ?>
+									</div>
+								</div>
+								<div class="comment-metadata pt-5 text-12">
+									<div class="row grid-gutters-20">
+										<span class="col-auto comment-time meta-color"><?php echo esc_html( get_comment_date( wc_date_format() ) ); ?></span>
+										<span class="col-auto">replyx</span>
+										<span class="col-auto">editx</span>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
+					<div class="col-auto"><?php woocommerce_review_display_rating(); ?></div>
 				</div>
+				
 				<div class="comment-info col">
-					<div class="d-flex justify-content-between">
-						<div class="author-info">
-							<div class="author-name h5">
-								<?php echo get_comment_author( $comment ); ?>
-							</div>
-						</div>
-						<div class="">
-							<?php woocommerce_review_display_rating(); ?>
-						</div>
-					</div>
+					
 					<?php
 						/**
 						 * The woocommerce_review_meta hook.
