@@ -88,7 +88,7 @@ if(!function_exists('overcome_configs')){
             'dropdown_hover'   => 'var(--accent-color)',
             'dropdown_active'  => 'var(--accent-color)',
             // Comments 
-            'cmt_avatar_size'  => 0,
+            'cmt_avatar_size'  => 35,
             'cmt_border'       => '1px solid #DDDDDD',
             // WooCommerce,
             // product single image size
