@@ -12,7 +12,7 @@ if(!function_exists('overcome_woocommerce_cart_item_thumbnail')){
 		$thumbnail_size_h = str_replace('px', '', overcome_get_opts('overcome_woocommerce_cart_item_thumbnail_size')['height']);
 		$thumbnail_size = implode('x',[$thumbnail_size_w, $thumbnail_size_h]);
 
-		$thumbnail = overcome_image_by_size(['id' => $thumbnail_id, 'size' => overcome_configs('overcome_woocommerce_cart_item_thumbnail_size'),'echo'   => false]);
+		$thumbnail = overcome_image_by_size(['id' => $thumbnail_id, 'size' => $thumbnail_size,'echo'   => false]);
 		return $thumbnail;
 	}
 }
