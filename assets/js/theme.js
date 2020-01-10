@@ -27,6 +27,7 @@
 
         overcome_tabs();
         if (typeof owlCarousel === 'function') {
+            console.log('owl exist');
             overcome_woocommerce_related_product();
         }
     });
