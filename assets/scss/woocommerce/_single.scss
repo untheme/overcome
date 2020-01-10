@@ -360,12 +360,12 @@ table.variations .label,
 			button{
 				position: absolute;
 				top: 50%;
-				@include transform(translateX(-50%));
+				@include transform(translateY(-50%));
 				&.owl-prev{
 					left: -100px;
 				}
 				&.owl-next{
-					right: -200px;
+					right: -100px;
 				}
 			}
 		}
