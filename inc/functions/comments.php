@@ -302,7 +302,7 @@ if(!function_exists('overcome_woocommerce_product_review_list_args')){
 								</div>
 								<div class="comment-metadata pt-5 text-12">
 									<div class="row grid-gutters-20">
-										<span class="col-12"><?php
+										<span class="col-12 empty-none"><?php
 											/**
 											 * The woocommerce_review_meta hook.
 											 *
