@@ -362,10 +362,10 @@ table.variations .label,
 				top: 50%;
 				@include transform(translateY(-50%));
 				&.owl-prev{
-					left: -100px;
+					left: -82px;
 				}
 				&.owl-next{
-					right: -100px;
+					right: -82px;
 				}
 			}
 		}
