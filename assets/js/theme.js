@@ -680,6 +680,7 @@
         "use strict";
         console.log($.isFunction('owlCarousel'));
         console.log(typeof $.fn.owlCarousel == 'function');
+        console.log(typeof owlCarousel == 'function');
         if(typeof $.owlCarousel != 'undefined'){
             console.log('clgt');
         } else {
