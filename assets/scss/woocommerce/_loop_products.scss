@@ -1,5 +1,5 @@
 /* Loop Products */
-.products{
+.products:not(.owl-carousel){
 	padding: 0;
 	margin: $grid-gutter-width / -2;
 	list-style: none;
