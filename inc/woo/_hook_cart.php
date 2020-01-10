@@ -67,8 +67,8 @@ if(!function_exists('overcome_woocommerce_cart_item_name')){
  * Custom Cart Actions Layout
 */
 if(!function_exists('overcome_woocommerce_cart_actions')){
-	add_filter('woocommerce_cart_actions','overcome_woocommerce_cart_actions', 10);
-	remove_action('woocommerce_cart_collaterals','woocommerce_cart_totals',10);
+	//add_filter('woocommerce_cart_actions','overcome_woocommerce_cart_actions', 10);
+	//remove_action('woocommerce_cart_collaterals','woocommerce_cart_totals',10);
 	function overcome_woocommerce_cart_actions(){
 		?>
 		<div class="ef5-cart-actions-wrap row">
