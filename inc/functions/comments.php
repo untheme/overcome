@@ -258,7 +258,7 @@ if(!function_exists('overcome_comment_form_defaults')){
 function overcome_woocommerce_review_gravatar_size(){
 	return overcome_configs('cmt_avatar_size');
 }
-add_filter('woocommerce_review_gravatar_size', 'overcome_woocommerce_review_gravatar_size')
+add_filter('woocommerce_review_gravatar_size', 'overcome_woocommerce_review_gravatar_size');
 
 /***
  * WooCommerce Comment Field
