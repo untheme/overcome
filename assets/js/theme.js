@@ -678,7 +678,7 @@
     // Related product
     function overcome_woocommerce_related_product(){
         "use strict";
-        //if(typeof $.owlCarousel != 'undefined'){
+        if($.isFunction('owlCarousel')){
             $('.related.products .products').each(function(){
                 var $this = $(this),
                     rtl = $('body').hasClass('rtl');
