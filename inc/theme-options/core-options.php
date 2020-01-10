@@ -1479,7 +1479,15 @@ if(!function_exists('overcome_woocommerce_theme_opts')){
                     'type'     => 'switch',
                     'default'  => '0',
                 ),
-                
+                // cart page
+                array(
+                    'title'    => esc_html__('Cart item thumbnail size', 'overcome'),
+                    'subtitle' => esc_html__('Enter the image size', 'overcome'),
+                    'id'       => 'overcome_woocommerce_cart_item_thumbnail_size',
+                    'type'     => 'dimensions',
+                    'units'    => array('px'),
+                    'default'  => array(),
+                ),
             )
         );
     }
