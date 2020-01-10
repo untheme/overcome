@@ -14,22 +14,18 @@
         overcome_vcRow();
         overcome_inlineCss();
         overcome_ajax_pagination();
+        overcome_svg_color();
+        overcome_smooth_scroll();
+        // WooCommerce
         overcome_woo_filters();
         overcome_wc_single_product_gallery();
         overcome_wooscp_change_text();
-        // WooCommerce
+        overcome_tabs();
+        overcome_woocommerce_related_product();
         overcome_quantity_plus_minus();
         overcome_quantity_plus_minus_action();
-        overcome_remove_cart_actions();
-
-        overcome_svg_color();
-        overcome_smooth_scroll();
-
-        overcome_tabs();
-       
-        overcome_woocommerce_related_product();
-        
         // cart page
+        overcome_remove_cart_actions();
         overcome_table_cart_content();
         overcome_table_move_column('.woocommerce-cart-form__contents', '.woocommerce-cart-form__cart-item' ,0, 5, '', '.product-subtotal', '2');
     });
@@ -69,11 +65,11 @@
         overcome_init_price_filter();
         overcome_masonry_filter();
         overcome_vc_animation_callback();
-        overcome_remove_cart_actions();
-
+    
         // cart page
         overcome_table_cart_content();
         overcome_table_move_column('.woocommerce-cart-form__contents', '.woocommerce-cart-form__cart-item' ,0, 5, '', '.product-subtotal', '2');
+        overcome_remove_cart_actions();
     });
     jQuery( document ).on( 'updated_wc_div', function() {
         overcome_remove_cart_actions();
