@@ -302,7 +302,21 @@ if(!function_exists('overcome_woocommerce_product_review_list_args')){
 								</div>
 								<div class="comment-metadata pt-5 text-12">
 									<div class="row grid-gutters-20">
-
+										<span class="col-12"><?php
+											/**
+											 * The woocommerce_review_meta hook.
+											 *
+											 * @hooked woocommerce_review_display_meta - 10
+											 * @hooked WC_Structured_Data::generate_review_data() - 20
+											 */
+											do_action( 'woocommerce_review_meta', $comment );
+											/**
+											 * The woocommerce_review_before_comment_meta hook.
+											 *
+											 * @hooked woocommerce_review_display_rating - 10
+											 */
+											do_action( 'woocommerce_review_before_comment_meta', $comment );
+										?></span>
 										<span class="col-auto comment-time meta-color"><?php echo esc_html( get_comment_date( wc_date_format() ) ); ?></span>
 										<span class="col-auto">replyx</span>
 										<span class="col-auto">editx</span>
@@ -313,24 +327,7 @@ if(!function_exists('overcome_woocommerce_product_review_list_args')){
 					</div>
 					<div class="col-auto"><?php woocommerce_review_display_rating(); ?></div>
 				</div>
-				
-				<div class="comment-info col">
-					
-					<?php
-						/**
-						 * The woocommerce_review_meta hook.
-						 *
-						 * @hooked woocommerce_review_display_meta - 10
-						 * @hooked WC_Structured_Data::generate_review_data() - 20
-						 */
-						do_action( 'woocommerce_review_meta', $comment );
-						/**
-						 * The woocommerce_review_before_comment_meta hook.
-						 *
-						 * @hooked woocommerce_review_display_rating - 10
-						 */
-						do_action( 'woocommerce_review_before_comment_meta', $comment );
-					?>
+				<div class="comment-content pt-10">
 					<div class="comment-content">
 						<?php					
 						do_action( 'woocommerce_review_before_comment_text', $comment );
