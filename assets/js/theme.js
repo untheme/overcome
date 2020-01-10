@@ -10,7 +10,7 @@
           console.log('no');
         } 
     });
-}
+}) ( jQuery );
 (function( $ ) {
 	'use strict';
 	var resizeTimer;
