@@ -172,6 +172,7 @@ function overcome_woocommerce_cart_update(){
 }
 
 // Checkout button
+add_action('overcome_woocommerce_cart_actions','overcome_woocommerce_cart_checkout_button', 5);
 function overcome_woocommerce_cart_checkout_button(){
 	?>
 	<div class="ef5-cart-checkout-btn">
