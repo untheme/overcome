@@ -37,13 +37,9 @@ table.woocommerce-cart-form__contents{
 			.screen-reader-text{
 				display: none !important;
 			}
-			&.product-thumbnail{
-				padding-left: 42px;
-				padding-right: 42px;
-			}
+			
 			&.product-remove{
-				font-size: 40px;
-				
+				font-size: 20px;
 			}
 			@media (min-width: $screen-lg-min){
 				&.product-thumbnail{
