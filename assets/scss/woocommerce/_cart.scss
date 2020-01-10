@@ -45,7 +45,10 @@ table.woocommerce-cart-form__contents{
 				padding-right: 10px;
 			}
 			&.product-remove{
-				font-size: 20px;
+				font-size: 40px;
+				padding-left: 0;
+				padding-right: 0;
+				text-align: end;
 			}
 			@media (min-width: $screen-lg-min){
 				&.product-thumbnail{
@@ -66,7 +69,6 @@ table.woocommerce-cart-form__contents{
 					//width: 100px;
 				}
 				&.product-remove{
-					//width: 60px;
 				}
 			}
 			@media (max-width: $screen-md-max){
