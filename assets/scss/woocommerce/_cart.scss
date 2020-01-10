@@ -41,8 +41,8 @@ table.woocommerce-cart-form__contents{
 				display: none !important;
 			}
 			&.product-thumbnail{
-				padding-left: 0;
-				padding-right: 0;
+				padding-left: 10px;
+				padding-right: 10px;
 			}
 			&.product-remove{
 				font-size: 20px;
@@ -50,6 +50,8 @@ table.woocommerce-cart-form__contents{
 			@media (min-width: $screen-lg-min){
 				&.product-thumbnail{
 					width: #{$overcome_woocommerce_cart_item_thumbnail_size}px;
+					padding-left: 0;
+					padding-right: 0;
 				}
 				&.product-name{
 					width: 480px;
