@@ -678,6 +678,7 @@
     // Related product
     function overcome_woocommerce_related_product(){
         "use strict";
+        console.log(typeof owlCarousel === 'function');
         if(typeof owlCarousel === 'function'){
             $('.related.products .products').each(function(){
                 var $this = $(this),
