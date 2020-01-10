@@ -46,7 +46,7 @@
 		span{
 			font-size: 0;
 			text-indent: -10000px;
-			border-color: #c5c5c5;
+			border: 2px solid #c5c5c5;
 			width: 30px;
 		    height: 30px;
 		    display: block;
@@ -57,14 +57,14 @@
 		}
 		.owl-prev{
 			span{
-				border-left: 2px solid;
-			    border-bottom: 2px solid;
+				border-left-width: 0;
+			    border-top-width: 0;
 			}
 		}
 		.owl-next{
 			span{
-				border-right: 2px solid;
-				border-top: 2px solid;
+				border-left-width: 0;
+				border-bottom-width: 0;
 			}
 		}
 	}
