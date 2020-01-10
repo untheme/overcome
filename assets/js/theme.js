@@ -688,7 +688,7 @@
                 $this.owlCarousel({
                     rtl: rtl,
                     margin: 30,
-                    loop: true,
+                    loop: false,
                     autoplay: true,
                     autoplayTimeout: 2000,
                     slideBy: 'page',
