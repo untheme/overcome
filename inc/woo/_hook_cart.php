@@ -71,15 +71,16 @@ if(!function_exists('overcome_woocommerce_cart_actions')){
 	//remove_action('woocommerce_cart_collaterals','woocommerce_cart_totals',10);
 	function overcome_woocommerce_cart_actions(){
 		?>
-		<div class="ef5-cart-actions-wrap">
-			<?php do_action('overcome_woocommerce_cart_actions'); ?>
+		<div class="ef5-cart-actions-wrap row justify-content-between">
+			<div class="col-auto empty-none"><?php do_action('overcome_woocommerce_cart_actions_left'); ?></div>
+			<div class="col-auto empty-none"><?php do_action('overcome_woocommerce_cart_actions_right'); ?></div>
 		</div>
 		<?php
 	}
 }
 /* Return Shop Button */
 if(!function_exists('overcome_woocommerce_return_shop')){
-	add_action('overcome_woocommerce_cart_actions', 'overcome_woocommerce_return_shop', 1);
+	add_action('overcome_woocommerce_cart_actions_left', 'overcome_woocommerce_return_shop', 1);
 	function overcome_woocommerce_return_shop(){
 		if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
 			<div class="ef5-return-shop">
@@ -92,7 +93,7 @@ if(!function_exists('overcome_woocommerce_return_shop')){
 	}
 }
 // Coupon
-add_action('overcome_woocommerce_cart_actions', 'overcome_woocommerce_cart_coupon', 2);
+add_action('overcome_woocommerce_cart_actions_left', 'overcome_woocommerce_cart_coupon', 2);
 function overcome_woocommerce_cart_coupon(){
 	if ( wc_coupons_enabled() ) { 
 	?>
@@ -145,7 +146,7 @@ if(!function_exists('overcome_woocommerce_clear_cart_url')){
 	}
 }
 if(!function_exists('overcome_woocommerce_clear_cart_button')){
-	add_action('overcome_woocommerce_cart_actions', 'overcome_woocommerce_clear_cart_button', 3);
+	add_action('overcome_woocommerce_cart_actions_right', 'overcome_woocommerce_clear_cart_button', 1);
 	function overcome_woocommerce_clear_cart_button(){
 		$link = wc_get_cart_url();
         $link = add_query_arg( 'empty-cart', '', $link );
@@ -158,25 +159,29 @@ if(!function_exists('overcome_woocommerce_clear_cart_button')){
 }
 
 // Update Cart 
-add_action('overcome_woocommerce_cart_actions','overcome_woocommerce_cart_update', 4);
-function overcome_woocommerce_cart_update(){
-	?>
-	<div class="ef5-update-cart">
-		<button type="submit" class="ef5-btn ef5-btn-lg accent fill" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'overcome' ); ?>"><span class="ef5-update-cart-icon"></span><span><?php esc_html_e( 'Update cart', 'overcome' ); ?></span></button>
-	</div>
-	<?php
+if(!function_exists('overcome_woocommerce_cart_update')){
+	add_action('overcome_woocommerce_cart_actions_right','overcome_woocommerce_cart_update', 2);
+	function overcome_woocommerce_cart_update(){
+		?>
+		<div class="ef5-update-cart">
+			<button type="submit" class="ef5-btn ef5-btn-lg accent fill" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'overcome' ); ?>"><span class="ef5-update-cart-icon"></span><span><?php esc_html_e( 'Update cart', 'overcome' ); ?></span></button>
+		</div>
+		<?php
+	}
 }
 
 // Checkout button
-add_action('overcome_woocommerce_cart_actions','overcome_woocommerce_cart_checkout_button', 5);
-function overcome_woocommerce_cart_checkout_button(){
-	?>
-	<div class="ef5-cart-checkout-btn">
-		<a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="ef5-btn accent fill w-100 ef5-btn-lg">
-				<span class="ef5-cart-checkout-icon"></span><span><?php esc_html_e( 'Checkout', 'overcome' ); ?></span>
-			</a>
-	</div>
-	<?php
+if(!function_exists('overcome_woocommerce_cart_checkout_button')){
+	add_action('overcome_woocommerce_cart_actions','overcome_woocommerce_cart_checkout_button', 5);
+	function overcome_woocommerce_cart_checkout_button(){
+		?>
+		<div class="ef5-cart-checkout-btn">
+			<a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="ef5-btn accent fill w-100 ef5-btn-lg">
+					<span class="ef5-cart-checkout-icon"></span><span><?php esc_html_e( 'Checkout', 'overcome' ); ?></span>
+				</a>
+		</div>
+		<?php
+	}
 }
 
 /**
