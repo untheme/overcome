@@ -253,7 +253,7 @@ function overcome_vc_post_layout_14($atts, $args = []){
                 overcome_posted_in(['class'=>'text-14 ef5-text-accent ef5-link-inherit pt-15','icon' => '']);
                 overcome_post_title(['class'=>'text-18 font-style-600 pt-5']);
             ?>
-            <div class="pt-5 d-flex justify-content-center text-7c7c80 ef5-link-inherit">
+            <div class="pt-5 d-flex justify-content-center ef5-text-7c7c80 ef5-link-inherit">
                 <?php 
                     $meta = [];
                     $meta[] = overcome_posted_by([
