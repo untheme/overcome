@@ -127,7 +127,8 @@ $dimensions : (
     } */
     @each $prop, $abbrev in (min-width: minw, max-width: maxw, max-width: mw, min-height: minh, max-height: maxh) {
       @each $size, $length in $dimensions {
-      	.#{$prop}#{$infix}-#{$size} { #{$prop}: #{$length}px !important; }
+      	.#{$abbrev}#{$infix}-#{$size} { #{$prop}: #{$length}px !important; }
+      	.#{$abbrev}#{$infix}-#{$size} { #{$prop}: #{$length}px !important; }
       }
     }
   }
