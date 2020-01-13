@@ -117,6 +117,7 @@ vc_map(array(
                 'type'        => 'textfield',
                 'heading'     => esc_html__( 'Extra class', 'overcome' ),
                 'param_name'  => 'el_dropdown_class',
+                'group' => esc_html__('Layout','overcome')
             ),
     	)
     )
