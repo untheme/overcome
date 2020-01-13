@@ -8,8 +8,8 @@
 	.tnp-submit,
 	.tnp-button{
 		background-color: $accent_color;
-		padding-top: 10.5px;
-		padding-bottom: 10.5px;
+		padding: 10.5px 33px;
+		font-size: 13px;
 		margin-top: 20px;
 		@include border-radius(20px);
 	}
