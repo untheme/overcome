@@ -72,7 +72,7 @@ if(!function_exists('overcome_woocommerce_cart_actions')){
 	function overcome_woocommerce_cart_actions(){
 		?>
 		<div class="ef5-cart-actions-wrap row justify-content-between">
-			<div class="col-auto empty-none"><div class="ef5-cart-action-col ef5-cart-action-left d-flex"><?php do_action('overcome_woocommerce_cart_actions_left'); ?></div></div>
+			<div class="col-auto empty-none"><div class="ef5-cart-action-col ef5-cart-action-left d-flex gutters-30"><?php do_action('overcome_woocommerce_cart_actions_left'); ?></div></div>
 			<div class="col-auto empty-none"><div class="ef5-cart-action-col ef5-cart-action-left d-flex"><?php do_action('overcome_woocommerce_cart_actions_right'); ?></div></div>
 		</div>
 		<?php
@@ -97,7 +97,7 @@ add_action('overcome_woocommerce_cart_actions_left', 'overcome_woocommerce_cart_
 function overcome_woocommerce_cart_coupon(){
 	if ( wc_coupons_enabled() ) { 
 	?>
-	<div class="ef5-cart-coupon coupon">
+	<div class="ef5-cart-coupon coupon d-flex">
 		<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Enter your coupon', 'overcome' ); ?>" />
 		<button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Confirm', 'overcome' ); ?>"><?php esc_attr_e( 'Confirm', 'overcome' ); ?></button>
 		<?php do_action( 'woocommerce_cart_coupon' ); ?>
