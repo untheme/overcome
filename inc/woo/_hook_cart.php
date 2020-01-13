@@ -173,7 +173,8 @@ if(!function_exists('overcome_woocommerce_cart_update')){
 // Cart Totals
 if(!function_exists('overcome_woocommerce_cart_collaterals')){
 	remove_action('woocommerce_cart_collaterals','woocommerce_cart_totals',10);
-	add_action('overcome_woocommerce_cart_collaterals', 'overcome_woocommerce_cart_collaterals');
+	add_action('woocommerce_cart_collaterals', 'overcome_woocommerce_cart_collaterals');
+	add_action('overcome_woocommerce_cart_collaterals', 'woocommerce_cart_totals');
 	function overcome_woocommerce_cart_collaterals(){
 		?>
 		<div class="row justify-content-end">
