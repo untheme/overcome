@@ -73,7 +73,7 @@ if(!function_exists('overcome_woocommerce_cart_actions')){
 		?>
 		<div class="ef5-cart-actions-wrap row justify-content-between">
 			<div class="col-auto empty-none"><div class="ef5-cart-action-col ef5-cart-action-left d-flex gutters-30"><?php do_action('overcome_woocommerce_cart_actions_left'); ?></div></div>
-			<div class="col-auto empty-none"><div class="ef5-cart-action-col ef5-cart-action-left d-flex"><?php do_action('overcome_woocommerce_cart_actions_right'); ?></div></div>
+			<div class="col-auto empty-none"><div class="ef5-cart-action-col ef5-cart-action-right d-flex gutters-10"><?php do_action('overcome_woocommerce_cart_actions_right'); ?></div></div>
 		</div>
 		<?php
 	}
