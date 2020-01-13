@@ -116,6 +116,14 @@ table.woocommerce-cart-form__contents{
 			display: none;
 		}
 	}
+	.ef5-cart-actions-wrap{
+		margin-top: -10px;
+		margin-bottom: -10px;
+		> div{
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+	}
 	/* Coupon */
 	.ef5-cart-coupon{
 		margin: -2.5px;
