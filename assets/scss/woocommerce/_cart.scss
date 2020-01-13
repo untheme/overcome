@@ -117,7 +117,6 @@ table.woocommerce-cart-form__contents{
 		}
 	}
 	/* Coupon */
-	$btn_coupon_w: 40px;
 	.coupon{
 		position: relative;
 		label[for="coupon_code"]{
@@ -127,9 +126,12 @@ table.woocommerce-cart-form__contents{
 			border: 2px solid $accent_color;
 		    border-radius: 23px;
 		    padding: 9px 20px;
+		    @media(min-width: $screen-lg-min){
+		    	min-width: 356px;
+		    }
 		}
 		button[name="apply_coupon"]{
-			padding: 13.5px 30px;
+			padding: 13.5px 33px;
     		border-radius: 23px;
     		background: $accent_color;
 		}
