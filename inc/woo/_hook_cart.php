@@ -97,7 +97,7 @@ add_action('overcome_woocommerce_cart_actions_left', 'overcome_woocommerce_cart_
 function overcome_woocommerce_cart_coupon(){
 	if ( wc_coupons_enabled() ) { 
 	?>
-	<div class="ef5-cart-coupon coupon d-flex">
+	<div class="ef5-cart-coupon coupon d-flex justify-content-center">
 		<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Enter your coupon', 'overcome' ); ?>" />
 		<button type="submit" class="button" name="apply_coupon" value="<?php esc_attr_e( 'Confirm', 'overcome' ); ?>"><?php esc_attr_e( 'Confirm', 'overcome' ); ?></button>
 		<?php do_action( 'woocommerce_cart_coupon' ); ?>
