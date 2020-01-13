@@ -178,7 +178,7 @@ if(!function_exists('overcome_woocommerce_cart_collaterals')){
 	function overcome_woocommerce_cart_collaterals(){
 		?>
 		<div class="row justify-content-end">
-			<div class="col-auto">
+			<div class="col-12 col-md-auto">
 				<?php do_action('overcome_woocommerce_cart_collaterals'); ?>
 			</div>
 		</div>
