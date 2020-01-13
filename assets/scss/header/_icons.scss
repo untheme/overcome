@@ -3,7 +3,7 @@
     .header-count{
         position: absolute;
         top: -8px;
-        right: 5px;
+        right: 0px;
         min-width: 15px;
         height: 15px;
         line-height: 15px;
@@ -15,7 +15,7 @@
         @include border-radius(50%);
         [dir="rtl"] &{
             right: auto;
-            left: 5px;
+            left: 0px;
         }
     }
 }
@@ -66,10 +66,10 @@
 		}
         &.has-badge{
             .icon{
-                padding-right: 15px;
+                padding-right: 10px;
                 [dir="rtl"] &{
                     padding-right: 0;
-                    padding-left: 15px;
+                    padding-left: 10px;
                 }
             }
         }
