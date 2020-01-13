@@ -172,6 +172,7 @@ $ef5-overflow: (
 		list-style: none;
 		li{
 			@include wg-list-style();
+			border-bottom: none;
 			a{	
 				display: block;
 				padding: 10px 0;
