@@ -90,15 +90,24 @@
 			padding: 15px;
 		}
 	}
-	.ef5-posted-in a{
-		font-size: 13px;
-		color: $white;
-		font-weight: 500;
-		background-color: $accent_color;
-		padding: 8px 15px;
-		@include border-radius(5px);
-		&:hover{
-			background-color: $primary_color;
+	.ef5-posted-in {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -2.5px;
+		a{
+			font-size: 13px;
+			color: $white;
+			font-weight: 500;
+			background-color: $accent_color;
+			padding: 8px 15px;
+			margin: 2.5px;
+			flex: 0 0 auto;
+			width: auto;
+    		max-width: 100%;
+			@include border-radius(5px);
+			&:hover{
+				background-color: $primary_color;
+			}
 		}
 	}
 	.ef5-date a{
