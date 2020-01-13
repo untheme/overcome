@@ -179,12 +179,16 @@ table.woocommerce-cart-form__contents{
 			text-align: start;
 			padding: 0 30px 0 0;
 			font-weight: 400;
+			vertical-align: top;
 			[dir="rtl"] &{
 				padding: 0 0 0 30px;
 			}
 			@media (min-width: $screen-md-min){
 				min-width: 160px;
 			}
+		}
+		td{
+			padding: 0;
 		}
 		.woocommerce-Price-amount{
 			font-weight: 500;
