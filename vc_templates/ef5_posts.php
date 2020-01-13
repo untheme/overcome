@@ -341,7 +341,7 @@
                                 'img_class'      => 'w-auto ef5-rounded-10',   
                             ]);
                         ?>
-                        <div class="overlay ef5-bg-gradient-1 ef5-post-info ef5-rounded-10">
+                        <div class="overlay ef5-bg-gradient-1 ef5-post-info ef5-rounded-10 ef5-hover-shadow-2">
                             <div class="row h-100">
                                 <div class="col-12 align-self-start">
                                 <?php 
