@@ -132,6 +132,9 @@ table.woocommerce-cart-form__contents{
 			border: 2px solid $accent_color;
 		    border-radius: 23px;
 		    padding: 9px 20px;
+		    flex-basis: 0;
+		    flex-grow: 1;
+		    max-width: 100%;
 		    @media(min-width: $screen-lg-min){
 		    	min-width: 356px;
 		    }
@@ -140,6 +143,9 @@ table.woocommerce-cart-form__contents{
 			padding: 13.5px 33px;
     		border-radius: 23px;
     		background: $accent_color;
+    		flex: 0 0 auto;
+		    width: auto;
+		    max-width: 100%;
 		}
 	}
 	/* Cart Total */
