@@ -174,7 +174,7 @@ if(!function_exists('overcome_woocommerce_cart_update')){
 if(!function_exists('overcome_woocommerce_cart_collaterals')){
 	remove_action('woocommerce_cart_collaterals','woocommerce_cart_totals',10);
 	add_action('woocommerce_cart_collaterals', 'overcome_woocommerce_cart_collaterals');
-	add_action('overcome_woocommerce_cart_collaterals', 'woocommerce_cart_totals');
+	add_action('overcome_woocommerce_cart_collaterals', 'woocommerce_cart_totals', 1);
 	function overcome_woocommerce_cart_collaterals(){
 		?>
 		<div class="row justify-content-end">
@@ -188,11 +188,11 @@ if(!function_exists('overcome_woocommerce_cart_collaterals')){
 
 // Checkout button
 if(!function_exists('overcome_woocommerce_cart_checkout_button')){
-	add_action('overcome_woocommerce_cart_actions','overcome_woocommerce_cart_checkout_button', 5);
+	add_action('overcome_woocommerce_cart_collaterals','overcome_woocommerce_cart_checkout_button', 2);
 	function overcome_woocommerce_cart_checkout_button(){
 		?>
 		<div class="ef5-cart-checkout-btn">
-			<a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="ef5-btn accent fill w-100 ef5-btn-lg">
+			<a href="<?php echo esc_url( wc_get_checkout_url() );?>" class="ef5-btn accent fill w-100 ef5-btn-xmd">
 					<span class="ef5-cart-checkout-icon"></span><span><?php esc_html_e( 'Checkout', 'overcome' ); ?></span>
 				</a>
 		</div>
