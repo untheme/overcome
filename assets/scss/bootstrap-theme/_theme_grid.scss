@@ -99,6 +99,7 @@ $customs_gutters: (
 // Dimensions
 $dimensions : (
   120,
+  180,
   380
 );
 @each $breakpoint in map-keys($grid-breakpoints) {
@@ -108,6 +109,9 @@ $dimensions : (
       .mw#{$infix}-#{$dimension}{
         max-width: #{$dimension}px;
         min-width: unset !important;
+      }
+      .minw#{$infix}-#{$dimension}{
+      	min-width: #{$dimension}px;
       }
     }
   }

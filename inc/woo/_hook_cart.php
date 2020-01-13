@@ -152,7 +152,7 @@ if(!function_exists('overcome_woocommerce_clear_cart_button')){
         $link = add_query_arg( 'empty-cart', '', $link );
 		?>
 			<div class="ef5-clear-cart">
-				<a class="ef5-btn accent outline2 ef5-btn-xmd" href="<?php echo esc_url($link);?>"><span class="ef5-clear-cart-icon"></span><span><?php esc_html_e( 'Clear Cart', 'overcome' ); ?></span></a>
+				<a class="ef5-btn accent outline2 ef5-btn-xmd minw-180" href="<?php echo esc_url($link);?>"><span class="ef5-clear-cart-icon"></span><span><?php esc_html_e( 'Clear Cart', 'overcome' ); ?></span></a>
 			</div>
 		<?php
 	}
@@ -164,7 +164,7 @@ if(!function_exists('overcome_woocommerce_cart_update')){
 	function overcome_woocommerce_cart_update(){
 		?>
 		<div class="ef5-update-cart">
-			<button type="submit" class="ef5-btn ef5-btn-xmd accent fill" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'overcome' ); ?>"><span class="ef5-update-cart-icon"></span><span><?php esc_html_e( 'Update cart', 'overcome' ); ?></span></button>
+			<button type="submit" class="ef5-btn ef5-btn-xmd accent fill minw-180" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'overcome' ); ?>"><span class="ef5-update-cart-icon"></span><span><?php esc_html_e( 'Update cart', 'overcome' ); ?></span></button>
 		</div>
 		<?php
 	}
