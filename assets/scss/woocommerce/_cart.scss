@@ -149,7 +149,7 @@ table.woocommerce-cart-form__contents{
 		    	min-width: 356px;
 		    }
 		    @media (max-width: 576px){
-		    	width: 100%;
+		    	flex: 0 0 100%;
 		    }
 		}
 		button[name="apply_coupon"]{
