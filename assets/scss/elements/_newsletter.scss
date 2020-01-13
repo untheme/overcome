@@ -8,6 +8,9 @@
 	input::-webkit-input-placeholder{
 		font-size: 13px;
 	}
+	input::-moz-input-placeholder{
+		font-size: 13px;
+	}
 	.tnp-submit,
 	.tnp-button{
 		background-color: $accent_color;
