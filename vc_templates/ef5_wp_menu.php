@@ -30,7 +30,7 @@ if($add_divider === '1'){
 	$menu_class[] = 'add-divider';
 	$menu_class[] = 'divider-'.$divider_style;
 }
-$menu_class[] = $el_class;
+//$menu_class[] = $el_class;
 
 $nav_menu_args = array(
 	'fallback_cb'     => '',
