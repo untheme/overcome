@@ -68,7 +68,7 @@ if(!function_exists('overcome_woocommerce_cart_item_name')){
 */
 if(!function_exists('overcome_woocommerce_cart_actions')){
 	add_action('woocommerce_cart_actions','overcome_woocommerce_cart_actions', 10);
-	//remove_action('woocommerce_cart_collaterals','woocommerce_cart_totals',10);
+	remove_action('woocommerce_cart_collaterals','woocommerce_cart_totals',10);
 	function overcome_woocommerce_cart_actions(){
 		?>
 		<div class="ef5-cart-actions-wrap row justify-content-between">
@@ -165,6 +165,21 @@ if(!function_exists('overcome_woocommerce_cart_update')){
 		?>
 		<div class="ef5-update-cart">
 			<button type="submit" class="ef5-btn ef5-btn-xmd accent fill" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'overcome' ); ?>"><span class="ef5-update-cart-icon"></span><span><?php esc_html_e( 'Update cart', 'overcome' ); ?></span></button>
+		</div>
+		<?php
+	}
+}
+
+// Cart Totals
+if(!function_exists('overcome_woocommerce_cart_collaterals')){
+	remove_action('woocommerce_cart_collaterals','woocommerce_cart_totals',10);
+	add_action('overcome_woocommerce_cart_collaterals', 'overcome_woocommerce_cart_collaterals');
+	function overcome_woocommerce_cart_collaterals(){
+		?>
+		<div class="row justify-content-end">
+			<div class="col-auto">
+				<?php do_action('overcome_woocommerce_cart_collaterals'); ?>
+			</div>
 		</div>
 		<?php
 	}
