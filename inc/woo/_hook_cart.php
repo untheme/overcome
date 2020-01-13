@@ -84,7 +84,7 @@ if(!function_exists('overcome_woocommerce_return_shop')){
 	function overcome_woocommerce_return_shop(){
 		if ( wc_get_page_id( 'shop' ) > 0 ) : ?>
 			<div class="ef5-return-shop">
-				<a class="ef5-btn accent fill ef5-btn-lg" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
+				<a class="ef5-btn accent fill ef5-btn-xmd" href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>">
 					<span class="ef5-return-shop-icon"></span>
 					<span><?php esc_html_e( 'Continue Shopping', 'overcome' ); ?></span>
 				</a>
