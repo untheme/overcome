@@ -98,9 +98,9 @@ $customs_gutters: (
 
 // Dimensions
 $dimensions : (
-  120,
-  180,
-  380
+  120 : 120px,
+  180 : 180px,
+  380 : 380px
 );
 @each $breakpoint in map-keys($grid-breakpoints) {
   $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
@@ -120,9 +120,14 @@ $dimensions : (
 @each $breakpoint in map-keys($grid-breakpoints) {
   @include media-breakpoint-up($breakpoint) {
     $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
-    @each $prop in (min-width: minw, max-width: maxw, max-width: mw, min-height: minh, max-height: maxh) {
+   /*  @each $prop in (min-width: minw, max-width: maxw, max-width: mw, min-height: minh, max-height: maxh) {
       @each $dimension in $dimensions {
         .#{$prop}#{$infix}-#{$dimension} { #{$prop}: #{$dimension}px !important; }
+      }
+    } */
+    @each $prop, $abbrev in (min-width: minw, max-width: maxw, max-width: mw, min-height: minh, max-height: maxh) {
+      @each $size, $length in $dimensions {
+      	.#{$prop}#{$infix}-#{$size} { #{$prop}: #{$length}px !important; }
       }
     }
   }
