@@ -55,7 +55,7 @@ if(!function_exists('overcome_configs')){
             'main_border_color'     => '#DDDDDD', 
             // Thumbnail Size
             'large_size_w'                   => 770,
-            'large_size_h'                   => 353,
+            'large_size_h'                   => 390,
             'medium_size_w'                  => 370,
             'medium_size_h'                  => 250,
             'thumbnail_size_w'               => 86,
