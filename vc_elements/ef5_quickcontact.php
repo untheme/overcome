@@ -181,7 +181,7 @@ class WPBakeryShortCode_ef5_quickcontact extends WPBakeryShortCode
             break;
             case '2':
                 $item_class[] = 'col-12';
-                $item_row_class = 'gutters-5';
+                $item_row_class[] = 'gutters-5';
             break;
             default :
                 $item_class[] = 'col-12';
