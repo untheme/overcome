@@ -22,7 +22,7 @@
 		}
 		a:before{
 			content: "\f10c";
-		    padding-right: 15px;
+		    padding-right: 11px;
 		}
 		[dir="rtl"] &{
 			a:before{
@@ -30,7 +30,8 @@
 			}
 			a:after{
 				content: "\f10b";
-			    padding-left: 15px;
+				padding-right: 0;
+			    padding-left: 11px;
 			}
 		}
 	}
