@@ -1,5 +1,7 @@
 .woocommerce-page{
 	&.woocommerce-cart {
-		margin-bottom: 5px;
+		.ef5-single-content{
+			margin-bottom: 5px;
+		}
 	}
 }
