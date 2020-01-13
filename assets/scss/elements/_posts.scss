@@ -52,13 +52,15 @@
 }
 // layout 4
 .ef5-posts-4{
-	.ef5-heading{
-		line-height: 1.11111111;
-		padding-bottom: 18px;
-	}
-	.ef5-post-item-layout-4:hover {
+	&.ef5-grid-wrap {
 		.ef5-heading{
-			padding-bottom: 20px;
+			line-height: 1.11111111;
+			padding-bottom: 18px;
+		}
+		.ef5-post-item-layout-4:hover {
+			.ef5-heading{
+				padding-bottom: 20px;
+			}
 		}
 	}
 }
