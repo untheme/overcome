@@ -185,7 +185,7 @@ class WPBakeryShortCode_ef5_quickcontact extends WPBakeryShortCode
             break;
             default :
                 $item_class[] = 'col-12';
-                $item_row_class = 'gutters-20';
+                $item_row_class[] = 'gutters-20';
             break;
         }
         $icon_color = !empty($icon_color) ? $icon_color : '';
