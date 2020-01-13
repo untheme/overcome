@@ -195,6 +195,10 @@ table.woocommerce-cart-form__contents{
 		}
 		.woocommerce-shipping-destination{
 			margin-bottom: 0;
+			text-transform: uppercase;
+			strong{
+				text-transform: capitalize;
+			}
 		}
 		#shipping_method{
 			text-transform: uppercase;
