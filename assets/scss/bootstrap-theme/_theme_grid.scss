@@ -106,13 +106,13 @@ $dimensions : (
   $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
   @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
     @each $dimension in $dimensions{
-      .mw#{$infix}-#{$dimension}{
+      /* .mw#{$infix}-#{$dimension}{
         max-width: #{$dimension}px;
         min-width: unset !important;
       }
       .minw#{$infix}-#{$dimension}{
       	min-width: #{$dimension}px;
-      }
+      } */
     }
   }
 }
