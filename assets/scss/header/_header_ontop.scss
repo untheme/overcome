@@ -4,7 +4,7 @@
 	left: 0;
 	right: 0;
 	z-index: 2;
-	@media (max-width: $screen-sm-max){
-		top: 0;
+	@media (max-width: $screen-lg-max){
+		top: 15px;
 	}
 }
