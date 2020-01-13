@@ -23,6 +23,7 @@ $menu_title = get_term_by('slug',$nav_menu,'nav_menu');
 
 $menu_container_class = ['ef5-menu-container'];
 if($layout_type === 'toggle') $menu_container_class[] = 'ef5-wrap-menu-toggle ef5-toggle-block-content';
+$menu_container_class[] = $el_dropdown_class;
 
 $menu_class = ['menu', $layout_mode];
 if($add_divider === '1'){
@@ -33,9 +34,9 @@ $menu_class[] = $el_class;
 
 $nav_menu_args = array(
 	'fallback_cb'     => '',
-	'container_class' => trim(implode(' ', $menu_container_class)),
+	'container_class' => overcome_optimize_css_class(implode(' ', $menu_container_class)),
 	'menu'            => $nav_menu,
-	'menu_class'      => trim(implode(' ', $menu_class)),
+	'menu_class'      => overcome_optimize_css_class(implode(' ', $menu_class)),
 	'walker'          => new OverCome_Menu_Walker()
 );
 // Title
@@ -47,7 +48,7 @@ if(!empty($el_title)){
     $title = '<span class="ef5-el-title">'.$el_title_icon.$el_title.'</span>';
 }
 ?>
-<div class="<?php echo trim(implode(' ', $wrap_css_class));?>">
+<div class="<?php echo overcome_optimize_css_class(implode(' ', $wrap_css_class));?>">
 	<?php switch ($layout_type) {
 			case 'toggle':
 			?>
