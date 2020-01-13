@@ -207,6 +207,11 @@ table.woocommerce-cart-form__contents{
 		}
 	}
 }
+.ef5-cart-checkout-btn{
+	@media (min-width: 480px){
+		width: 370px;
+	}
+}
 dl.variation{
 	@include d-flex();
 	min-width: 100%;
