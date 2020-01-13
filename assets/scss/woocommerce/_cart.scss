@@ -148,6 +148,9 @@ table.woocommerce-cart-form__contents{
 		    @media(min-width: $screen-lg-min){
 		    	min-width: 356px;
 		    }
+		    @media (max-width: 576px){
+		    	width: 100%;
+		    }
 		}
 		button[name="apply_coupon"]{
 			padding: 13.5px 33px;
