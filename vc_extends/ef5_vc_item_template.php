@@ -303,7 +303,7 @@ function overcome_vc_post_layout_15($atts, $args = []){
                         $meta[] = overcome_posted_on([
                             'class' => 'col-auto',
                             'echo' => false,
-                            'date_format' => 'm d, Y' 
+                            'date_format' => 'M d, Y' 
                         ]);
                         $meta[] = overcome_posted_by([
                             'class' => 'col-auto',
