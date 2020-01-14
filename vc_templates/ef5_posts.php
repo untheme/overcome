@@ -678,7 +678,7 @@
                 ?>
                 <div class="<?php echo trim(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
                     <?php 
-                        overcome_vc_post_layout16($atts,[
+                        overcome_vc_post_layout_16($atts,[
                             'thumbnail_size' => overcome_default_value($thumbnail_size[$thumbnail_size_index], '85')
                         ]);
                     ?>
