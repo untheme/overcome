@@ -187,3 +187,12 @@
 		}
 	}
 }
+// Layout 15 
+.ef5-posts-15{
+	.ef5-grid-item-wrap{
+		padding-bottom: 20px;
+		&:last-child{
+			padding-bottom: 0;
+		}
+	}
+}
