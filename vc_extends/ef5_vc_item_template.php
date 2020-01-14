@@ -353,7 +353,7 @@ function overcome_vc_post_layout_16($atts, $args = []){
             <div class="col ef5-content-info">
                 <?php
                     overcome_post_title([
-                        'heading_tag' => 'text-18 font-style-500 pb-4'
+                        'heading_tag' => 'text-18 font-style-600 pb-4'
                     ]);
                     if(class_exists('EF5Payments')) {
                         ef5payments_donation_raised([
