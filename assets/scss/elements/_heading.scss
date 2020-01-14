@@ -112,12 +112,12 @@
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
-	margin: -10px;
+	margin: -10px -5px;
 	> *{
 		flex: 0 0 auto;
 		width: auto;
 		max-width: 100%;
-		margin: 10px;
+		margin: 10px 5px;
 	}
 	.text-bt{
 		@media (max-width: 767px){
