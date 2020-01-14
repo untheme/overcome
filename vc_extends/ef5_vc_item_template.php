@@ -281,7 +281,7 @@ function overcome_vc_post_layout_15($atts, $args = []){
         'thumbnail_size' => '300x238',
     ]);
     $rounded = 'ef5-rounded-10';
-    $css_class = ['ef5-post-item-inner', 'row gutters-20 align-items-center', $args['class']];
+    $css_class = ['ef5-post-item-inner', 'row align-items-center', $args['class']];
     $after = '';
     ?>
     <div class="ef5-post-item ef5-post-item-layout-<?php echo esc_attr($atts['layout_template']);?>">
@@ -302,7 +302,8 @@ function overcome_vc_post_layout_15($atts, $args = []){
                         $meta = [];
                         $meta[] = overcome_posted_on([
                             'class' => 'col-auto',
-                            'echo' => false
+                            'echo' => false,
+                            'date_format' => 'm d, Y' 
                         ]);
                         $meta[] = overcome_posted_by([
                             'class' => 'col-auto',
