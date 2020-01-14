@@ -297,7 +297,7 @@ function overcome_vc_post_layout_15($atts, $args = []){
                 ?>
             </div>
             <div class="col-lg-7">
-                <div class="row ef5-text-777777 text-14  ef5-link-inherit pb-15">
+                <div class="row ef5-text-777777 text-14  ef5-link-inherit pb-17">
                     <?php 
                         $meta = [];
                         $meta[] = overcome_posted_on([
@@ -325,7 +325,7 @@ function overcome_vc_post_layout_15($atts, $args = []){
                     overcome_post_title();
                     overcome_post_excerpt([
                         'length' => '15',
-                        'class'  => 'pt-10'
+                        'class'  => 'pt-12'
                     ]);
                     overcome_post_read_more();
                 ?>
