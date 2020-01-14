@@ -356,7 +356,11 @@ function overcome_vc_post_layout_16($atts, $args = []){
                         'heading_tag' => 'text-18 font-style-500 pb-4'
                     ]);
                     if(class_exists('EF5Payments')) {
-                        ef5payments_donation_layout_1(['progress_bar' => false, 'show_percent'=>false]);
+                        ef5payments_donation_raised([
+                            'label' => esc_html__('Donate so far:','overcome'),
+                            'label_class' => 'd-block text-13 font-style-500 ef5-text-777777',
+                            'value_class' => 'd-block text-22 font-style-600 ef5-text-accent'
+                        ]);
                     }
                 ?>
             </div>
