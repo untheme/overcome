@@ -36,12 +36,12 @@
 	.nav-previous,
 	.nav-next{
 		position: relative;
+		font-weight: 600;
 		a{
 			display: block;
 		}
 		&:before{
 			font-family: $FontAwesome;
-			color: $HeadingColor;
 			position: absolute;
 		}
 		&:hover .post-title{
