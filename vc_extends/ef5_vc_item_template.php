@@ -334,3 +334,33 @@ function overcome_vc_post_layout_15($atts, $args = []){
     </div>
     <?php
 }
+function overcome_vc_post_layout_16($atts, $args = []){
+    $args = wp_parse_args($args, [
+        'class'          => '',
+        'thumbnail_size' => '85',
+    ]);
+    $css_class = ['ef5-post-item-inner', 'row gutters-12', $args['class']];
+    ?>
+    <div class="ef5-post-item ef5-post-item-layout-<?php echo esc_attr($atts['layout_template']);?>">
+        <div class="<?php echo trim(implode(' ', $css_class));?>">
+            <div class="col-auto">
+                <?php overcome_post_media([
+                    'thumbnail_size' => overcome_default_value($args['thumbnail_size'], '85'), 
+                    'default_thumb'  => true,
+                    'img_class'      => ''   
+                ]); ?>
+            </div>
+            <div class="col ef5-content-info">
+                <?php
+                    overcome_post_title([
+                        'heading_tag' => 'text-18 font-style-500 pb-4'
+                    ]);
+                    if(class_exists('EF5Payments')) {
+                        ef5payments_donation_layout_1(['progress_bar' => false, 'show_percent'=>false]);
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
+    <?php
+}
