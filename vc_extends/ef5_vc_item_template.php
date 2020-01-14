@@ -285,7 +285,7 @@ function overcome_vc_post_layout_15($atts, $args = []){
     $after = '';
     ?>
     <div class="ef5-post-item ef5-post-item-layout-<?php echo esc_attr($atts['layout_template']);?>">
-        <div class="<?php echo trim(implode(' ', $css_class));?>">
+        <div class="<?php echo overcome_optimize_css_class(implode(' ', $css_class));?>">
             <div class="col-lg-5 mb-30 mb-lg-0">
                 <?php 
                     overcome_post_media([
