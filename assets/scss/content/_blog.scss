@@ -1,4 +1,9 @@
 .ef5-blogs{
 	padding-top: 100px;
 	padding-bottom: 95px;
+	&.ef5-sidebar-area{
+		@media (max-width: $screen-md-max){
+			padding-top: 0;
+		}
+	}
 }
