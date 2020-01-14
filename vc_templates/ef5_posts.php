@@ -305,7 +305,7 @@
                                                 <?php 
                                                     ef5payments_donation_raised([
                                                         'label' => '',
-                                                        'class' => 'text-28 ef5-text-accent font-style-600'
+                                                        'class' => 'text-22 text-lg-28 ef5-text-accent font-style-600'
                                                     ]);
                                                 ?>
                                             </div>
