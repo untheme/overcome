@@ -250,6 +250,7 @@
                     wp_reset_postdata();
             break;
             case '3-1':
+                die('1');
                 $d = 0;
                 $item_css_class[] = 'ef5-rounded-10 overlay-wrap ef5-hover-shadow-1';
                 while($posts->have_posts()){
@@ -261,7 +262,7 @@
                         $thumbnail_size_index = $thumbnail_size_index - count($thumbnail_size) ;
                     }
                     $overlay = overcome_post_donate_button(['echo' => false, 'class'=>'ef5-btn ef5-btn-md accent fill']);
-                    die('1');
+
                 ?><div class="<?php echo overcome_optimize_css_class(implode(' ',$grid_item_css_class )); ?>" style="animation-delay: <?php echo esc_html($d*100);?>ms">
                         <div class="<?php echo overcome_optimize_css_class(implode(' ', $item_css_class)); ?>">
                             <?php 
