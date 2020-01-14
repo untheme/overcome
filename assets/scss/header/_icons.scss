@@ -82,6 +82,11 @@
     max-width: 100%;
 }
 .ef5-header-donate {
+    padding-left: 30px;
+    [dir="rtl"] &{
+        padding-left: 10px;
+        padding-right: 30px;
+    }
     @media (max-width: 560px){
         display: none;
     }
