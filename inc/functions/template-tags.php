@@ -244,7 +244,7 @@ if ( ! function_exists( 'overcome_comments_popup_link' ) ) {
             'icon'      => 'fa fa-comment-alt',
             'icon_class'=> '',
             'echo'      => true,
-            'show_text' => false,
+            'show_text' => true,
             'show_cmt'  => '1'
         ]);
         if($args['show_cmt'] !== '1') return;
