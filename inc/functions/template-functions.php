@@ -77,7 +77,7 @@ if ( ! function_exists( 'overcome_post_meta' ) ) {
             'show_date'       => $date_on,
             'show_cat'        => $cats_on,
             'show_cmt'        => $comments_on,
-            'show_cmt_text'   => true,  
+            'show_cmt_text'   => false,  
             'show_view'       => $show_view,
             'show_like'       => $show_like,
             'show_edit'       => false,
