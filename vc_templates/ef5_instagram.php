@@ -10,7 +10,7 @@ switch ($columns) {
         $span = "col-6";
         break;
     case 3:
-        $span = "col-1 col-xs-4";
+        $span = "col-4";
         break;
     case 4:
         $span = "col-6 col-sm-3";
