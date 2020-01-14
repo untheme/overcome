@@ -36,6 +36,7 @@
             break;
     }
     $thumbnail_size = explode(',', $thumbnail_size);
+    die('1');
 ?>
 <div class="ef5-posts" id="<?php echo esc_attr($el_id);?>">
     <?php $this->title($atts); ?>
@@ -250,7 +251,7 @@
                     wp_reset_postdata();
             break;
             case '3-1':
-                die('1');
+
                 $d = 0;
                 $item_css_class[] = 'ef5-rounded-10 overlay-wrap ef5-hover-shadow-1';
                 while($posts->have_posts()){
