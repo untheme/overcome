@@ -14,7 +14,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	die( '-1' );
 } ?>
 
-<nav class="tribe-events-nav-pagination" aria-label="<?php esc_html_e( 'Day Navigation', 'the-events-calendar' ) ?>">
+<nav class="tribe-events-nav-pagination" aria-label="<?php esc_html_e( 'Day Navigation', 'overcome' ) ?>">
 	<ul class="tribe-events-sub-nav">
 
 		<!-- Previous Page Navigation -->

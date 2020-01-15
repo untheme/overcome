@@ -181,13 +181,13 @@ $website = tribe_get_event_website_link();
 							<?php endif;
 							if ( ! empty( $venue_phone ) ): ?>
 							<div class="row">
-								<div class="col-auto ef5-heading"><?php esc_html_e( 'Phone:', 'the-events-calendar' ) ?></div>
+								<div class="col-auto ef5-heading"><?php esc_html_e( 'Phone:', 'overcome' ) ?></div>
 								<div class="col text-end"><?php echo overcome_html($venue_phone); ?></div>
 							</div>
 							<?php endif;
 							if ( ! empty( $venue_website ) ): ?>
 							<div class="row">
-								<div class="col-auto ef5-heading"><?php esc_html_e( 'Website:', 'the-events-calendar' ) ?></div>
+								<div class="col-auto ef5-heading"><?php esc_html_e( 'Website:', 'overcome' ) ?></div>
 								<div class="col text-end"><?php echo overcome_html($venue_website); ?></div>
 							</div>
 							<?php endif; ?>

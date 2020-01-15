@@ -35,7 +35,7 @@ if ( count( $views ) > 1 ) {
 <?php do_action( 'tribe_events_bar_before_template' ) ?>
 <div id="tribe-events-bar">
 
-	<h2 class="tribe-events-visuallyhidden"><?php printf( esc_html__( '%s Search and Views Navigation', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?></h2>
+	<h2 class="tribe-events-visuallyhidden"><?php printf( esc_html__( '%s Search and Views Navigation', 'overcome' ), tribe_get_event_label_plural() ); ?></h2>
 
 	<form id="tribe-bar-form" class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>" name="tribe-bar-form" method="post" action="<?php echo esc_attr( $current_url ); ?>">
 
@@ -46,18 +46,18 @@ if ( count( $views ) > 1 ) {
 					aria-expanded="false"
 					type="button"
 					aria-controls="tribe-bar-filters"
-					data-label-hidden="<?php printf( esc_html__( 'Show %s Search', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?>"
-					data-label-shown="<?php printf( esc_html__( 'Hide %s Search', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?>"
+					data-label-hidden="<?php printf( esc_html__( 'Show %s Search', 'overcome' ), tribe_get_event_label_plural() ); ?>"
+					data-label-shown="<?php printf( esc_html__( 'Hide %s Search', 'overcome' ), tribe_get_event_label_plural() ); ?>"
 				>
 					<span class="tribe-bar-toggle-text">
-						<?php printf( esc_html__( 'Show %s Search', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?>
+						<?php printf( esc_html__( 'Show %s Search', 'overcome' ), tribe_get_event_label_plural() ); ?>
 					</span>
 					<span class="tribe-bar-toggle-arrow"></span>
 				</button>
 
 				<div id="tribe-bar-filters" class="tribe-bar-filters" aria-hidden="true">
 					<div class="tribe-bar-filters-inner tribe-clearfix">
-						<h3 class="tribe-events-visuallyhidden"><?php printf( esc_html__( '%s Search', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?></h3>
+						<h3 class="tribe-events-visuallyhidden"><?php printf( esc_html__( '%s Search', 'overcome' ), tribe_get_event_label_plural() ); ?></h3>
 						<?php foreach ( $filters as $filter ) : ?>
 							<div class="<?php echo esc_attr( $filter['name'] ) ?>-filter ef5-bar-filter">
 								<label class="label-<?php echo esc_attr( $filter['name'] ) ?>" for="<?php echo esc_attr( $filter['name'] ) ?>"><?php echo overcome_html($filter['caption']); ?></label>
@@ -67,14 +67,14 @@ if ( count( $views ) > 1 ) {
 						<?php if ( count( $views ) > 1 ) : ?>
 							<div id="tribe-bar-views" class="tribe-bar-views ef5-bar-filter">
 								<div class="tribe-bar-views-inner tribe-clearfix">
-									<h3 class="tribe-events-visuallyhidden"><?php printf( esc_html__( '%s Views Navigation', 'the-events-calendar' ), tribe_get_event_label_singular() ); ?></h3>
-									<label id="tribe-bar-views-label" aria-label="<?php printf( esc_html__( 'View %s As', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?>">
-										<?php esc_html_e( 'View As', 'the-events-calendar' ); ?>
+									<h3 class="tribe-events-visuallyhidden"><?php printf( esc_html__( '%s Views Navigation', 'overcome' ), tribe_get_event_label_singular() ); ?></h3>
+									<label id="tribe-bar-views-label" aria-label="<?php printf( esc_html__( 'View %s As', 'overcome' ), tribe_get_event_label_plural() ); ?>">
+										<?php esc_html_e( 'View As', 'overcome' ); ?>
 									</label>
 									<select
 										class="tribe-bar-views-select tribe-no-param"
 										name="tribe-bar-view"
-										aria-label="<?php printf( esc_attr__( 'View %s As', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?>"
+										aria-label="<?php printf( esc_attr__( 'View %s As', 'overcome' ), tribe_get_event_label_plural() ); ?>"
 									>
 										<?php
 										foreach ( $views as $view ) {
@@ -96,8 +96,8 @@ if ( count( $views ) > 1 ) {
 								class="tribe-events-button tribe-no-param"
 								type="submit"
 								name="submit-bar"
-								aria-label="<?php printf( esc_attr__( 'Submit %s search', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?>"
-								value="<?php printf( esc_attr__( 'Find %s', 'the-events-calendar' ), tribe_get_event_label_plural() ); ?>"
+								aria-label="<?php printf( esc_attr__( 'Submit %s search', 'overcome' ), tribe_get_event_label_plural() ); ?>"
+								value="<?php printf( esc_attr__( 'Find %s', 'overcome' ), tribe_get_event_label_plural() ); ?>"
 							/>
 						</div>
 					</div>

@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php do_action( 'tribe_events_before_nav' ) ?>
 
-<nav class="tribe-events-nav-pagination" aria-label="<?php esc_html_e( 'Calendar Month Navigation', 'the-events-calendar' ) ?>">
+<nav class="tribe-events-nav-pagination" aria-label="<?php esc_html_e( 'Calendar Month Navigation', 'overcome' ) ?>">
 	<ul class="tribe-events-sub-nav">
 		<li class="tribe-events-nav-previous">
 			<?php tribe_events_the_previous_month_link(); ?>
