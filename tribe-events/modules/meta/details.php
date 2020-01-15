@@ -69,11 +69,11 @@ $website = tribe_get_event_website_link();
 				<div class="ef5-events-all-multiday">
 					<div class="row text-13">
 						<div class="col-auto ef5-heading text-13"><?php esc_html_e( 'Start:', 'overcome' ) ?></div>
-						<div class="col text-end"><?php esc_html_e( $start_date ) ?></div>
+						<div class="col text-end"><?php overcome_html( $start_date ) ?></div>
 					</div>
 					<div class="row text-13">
 						<div class="col-auto ef5-heading"><?php esc_html_e( 'End:', 'overcome' ) ?></div>
-						<div class="col text-end"><?php esc_html_e( $end_date ) ?></div>
+						<div class="col text-end"><?php overcome_html( $end_date ) ?></div>
 					</div>
 				</div>
 			<?php
@@ -83,7 +83,7 @@ $website = tribe_get_event_website_link();
 				<div class="ef5-events-all-day">
 					<div class="row text-13">
 						<div class="col-auto ef5-heading"><?php esc_html_e( 'Date:', 'overcome' ) ?> </div>
-						<div class="col text-end"><?php esc_html_e( $start_date ) ?></div>
+						<div class="col text-end"><?php overcome_html( $start_date ) ?></div>
 					</div>
 				</div>
 
@@ -94,11 +94,11 @@ $website = tribe_get_event_website_link();
 				<div class="ef5-events-multiday">
 					<div class="row text-13">
 						<div class="col-auto ef5-heading"><?php esc_html_e( 'Start:', 'overcome' ) ?></div>
-						<div class="col text-end"><?php esc_html_e( $start_datetime ) ?></div>
+						<div class="col text-end"><?php overcome_html( $start_datetime ) ?></div>
 					</div>
 					<div class="row text-13">
 						<div class="col-auto ef5-heading"><?php esc_html_e( 'End:', 'overcome' ) ?></div>
-						<div class="col text-end"><?php esc_html_e( $start_datetime ) ?></div>
+						<div class="col text-end"><?php overcome_html( $start_datetime ) ?></div>
 					</div>
 				</div>
 			<?php
@@ -108,7 +108,7 @@ $website = tribe_get_event_website_link();
 				<div class="ef5-events-single-day">
 					<div class="row text-13">
 						<div class="col-auto ef5-heading"><?php echo esc_html( $time_title ); ?></div>
-						<div class="col text-end"><?php echo $time_formatted; ?></div>
+						<div class="col text-end"><?php echo overcome_html($time_formatted); ?></div>
 					</div>
 				</div>
 			<?php endif ?>
@@ -118,7 +118,7 @@ $website = tribe_get_event_website_link();
 			if ( ! empty( $cost ) ) : ?>
 				<div class="row text-13">
 					<div class="col-auto ef5-heading"><?php esc_html_e( 'Cost:', 'overcome' ); ?></div>
-					<div class="col text-end"><?php esc_html_e( $cost ); ?></div>
+					<div class="col text-end"><?php overcome_html( $cost ); ?></div>
 				</div>
 			<?php endif;
 			echo tribe_get_event_categories(
@@ -182,13 +182,13 @@ $website = tribe_get_event_website_link();
 							if ( ! empty( $venue_phone ) ): ?>
 							<div class="row">
 								<div class="col-auto ef5-heading"><?php esc_html_e( 'Phone:', 'the-events-calendar' ) ?></div>
-								<div class="col text-end"><?php echo $venue_phone ?></div>
+								<div class="col text-end"><?php echo overcome_html($venue_phone); ?></div>
 							</div>
 							<?php endif;
 							if ( ! empty( $venue_website ) ): ?>
 							<div class="row">
 								<div class="col-auto ef5-heading"><?php esc_html_e( 'Website:', 'the-events-calendar' ) ?></div>
-								<div class="col text-end"><?php echo $venue_website ?></div>
+								<div class="col text-end"><?php echo overcome_html($venue_website); ?></div>
 							</div>
 							<?php endif; ?>
 						</div>
@@ -201,7 +201,7 @@ $website = tribe_get_event_website_link();
 				?>
 				<div class="row">
 					<div class="col-auto ef5-heading"><?php esc_html_e( 'Phone:', 'overcome' ) ?></div>
-					<div class="col text-end"><?php echo esc_html( $organizer_phone ); ?></div>
+					<div class="col text-end"><?php echo overcome_html( $organizer_phone ); ?></div>
 				</div>
 				<?php
 			}//end if
@@ -210,7 +210,7 @@ $website = tribe_get_event_website_link();
 				?>
 				<div class="row">
 					<div class="col-auto ef5-heading"><?php esc_html_e( 'Email:', 'overcome' ) ?></div>
-					<div class="col text-end"><?php echo esc_html( $organizer_email ); ?></div>
+					<div class="col text-end"><?php echo overcome_html( $organizer_email ); ?></div>
 				</div>
 				<?php
 			}//end if
@@ -219,7 +219,7 @@ $website = tribe_get_event_website_link();
 				?>
 				<div class="row">
 					<div class="col-auto ef5-heading"><?php esc_html_e( 'Website:', 'overcome' ) ?></div>
-					<div class="col text-end"><?php echo esc_html( $organizer_website ); ?></div>
+					<div class="col text-end"><?php echo overcome_html( $organizer_website ); ?></div>
 				</div>
 				<?php
 			}//end if
@@ -235,7 +235,7 @@ $website = tribe_get_event_website_link();
 	if ( ! empty( $website ) ) : ?>
 		<div class="row">
 			<div class="col-auto ef5-heading"><?php esc_html_e( 'Website:', 'overcome' ) ?></div>
-			<div class="col text-end"><?php echo $website; ?></div>
+			<div class="col text-end"><?php echo overcome_html($website); ?></div>
 		</div>
 	<?php endif ?>
 

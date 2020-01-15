@@ -21,7 +21,7 @@ if ( empty( $map ) ) {
 	<?php
 	// Display the map.
 	do_action( 'tribe_events_single_meta_map_section_start' );
-	echo $map;
+	echo overcome_html($map);
 	do_action( 'tribe_events_single_meta_map_section_end' );
 	?>
 </div>
