@@ -8,6 +8,11 @@
 				@include transition();
 				.vc_tta-panel-body{
 					padding-top: 8px;
+					padding-left: 50px;
+					[dir="rtl"] &{
+						padding-left: 20px;
+						padding-right: 50px;
+					}
 				}
 			}
 			.vc_tta-panel-title{
