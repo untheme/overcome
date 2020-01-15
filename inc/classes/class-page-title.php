@@ -66,6 +66,9 @@ function overcome_get_page_titles()
     } elseif (function_exists('is_shop') && is_shop()){
         $title = get_the_title(get_option('woocommerce_shop_page_id'));
         $desc  = get_the_archive_description();
+    } elseif(is_post_type_archive('tribe_events')){
+        $title = esc_html__('Our Events','overcome');
+        $desc = '';
     } else {
 		$title = get_the_archive_title();
 		$desc  = get_the_archive_description();
