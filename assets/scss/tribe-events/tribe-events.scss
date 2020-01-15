@@ -306,6 +306,11 @@
 		}
 	}
 }
+#tribe-events-content{
+	&.tribe-events-month{
+		margin-bottom: 78px;
+	}
+}
 @media (min-width: 992px){
 	.tribe-bar-filters-inner{
 		display: flex;
