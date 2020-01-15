@@ -160,8 +160,14 @@
 #tribe-bar-form{
 	@media (min-width: 992px){
 		.ef5-bar-filter {
-			max-width: 260px;
-			min-width: 260px;
+			flex-basis: 0;
+		    flex-grow: 1;
+		    max-width: 100%;
+		    width: unset;
+		    &.tribe-bar-submit{
+		    	flex: 0 0 auto;
+    			width: auto;
+		    }
 		}
 		&.tribe-bar-mini{
 			.ef5-bar-filter {
