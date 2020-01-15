@@ -99,7 +99,7 @@
 		}
 	}
 	span.tribe-icon-list{
-		@include transform('translateY(3px)');
+		transform: translateY(3px);
 	}
 	#tribe-bar-views-toggle{
 		padding: 0 ;
