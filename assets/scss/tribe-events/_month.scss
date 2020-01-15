@@ -13,6 +13,9 @@
 				&:after{
 					display: none!important;
 				}
+				&.tribe-events-othermonth{
+					opacity: 0.5;
+				}
 			}
 		}
 	 	div[id*=tribe-events-daynum-]{
