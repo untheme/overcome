@@ -33,10 +33,10 @@
 .ef5-owl-nav-pos-vertical.outside {
 	@media (max-width: 1280px){
 		.ef5-owl-next{
-			right: -40px;
+			right: -40px!important;
 		}
 		.ef5-owl-prev{
-			left: -40px;
+			left: -40px!important;
 		}
 	}
 }
