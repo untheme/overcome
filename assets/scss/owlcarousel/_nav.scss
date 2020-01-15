@@ -5,38 +5,28 @@
 	outline: none;
 }
 .ef5-owl-nav {
-	&.vertical {
-		.ef5-owl-nav-button{
-			position: absolute;
-			top: 50%;
-			@include transform(translateY(-50%));
-			width: 30px;
-			height: 30px;
-			background-position: center;
-			background-repeat: no-repeat;
-			background-color: transparent;
-			&.ef5-owl-prev{
-				background-image: url(../images/arrow-l.png);
-			}
-			&.ef5-owl-next{
-				background-image: url(../images/arrow-r.png);
-			}
+	span{
+		font-size: 0;
+		text-indent: -10000px;
+		border: 2px solid #c5c5c5;
+		width: 30px;
+	    height: 30px;
+	    display: block;
+	    transform: rotate(45deg);
+	    &:hover{
+			border-color: $accent_color;
 		}
-		&.inside{
-			.ef5-owl-prev{
-				left: 40px;
-			}
-			.ef5-owl-next{
-				right: 40px;
-			}
+	}
+	.owl-prev{
+		span{
+			border-right-width: 0;
+		    border-top-width: 0;
 		}
-		&.outside{
-			.ef5-owl-prev{
-				left: -40px;
-			}
-			.ef5-owl-next{
-				right: -40px;
-			}
+	}
+	.owl-next{
+		span{
+			border-left-width: 0;
+			border-bottom-width: 0;
 		}
 	} 
 }
