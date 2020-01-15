@@ -137,7 +137,7 @@ if(empty($atts['content_align']) && !in_array($atts['layout_template'],['2','5',
                                     break;
                                     case '2' :
                                         echo '<div class="ef5-bg-white ef5-rounded-10 p-25">';
-                                            echo '<div class="ttmn-header row align-items-center pb-25">';
+                                            echo '<div class="ttmn-header row gutters-20 align-items-center pb-25">';
                                                 echo '<div class="col-auto">';
                                                     $this->overcome_tm_avatar($testimonial,$atts,[
                                                         'size'      => '65', 
@@ -148,13 +148,13 @@ if(empty($atts['content_align']) && !in_array($atts['layout_template'],['2','5',
                                                     // name
                                                     $this->overcome_tm_name($testimonial, $atts,['class' => 'font-style-500 d-block']);
                                                     // position
-                                                    $this->overcome_tm_position($testimonial,['class' => 'text-13 ef5-text-accent d-block']);
+                                                    $this->overcome_tm_position($testimonial,['class' => 'text-13 ef5-text-787878 d-block']);
                                                     // star rating
                                                     $this->overcome_tm_rate($testimonial, $atts);
                                                 echo '</div>';
                                             echo '</div>';
                                             // text 
-                                            $this->overcome_tm_text($testimonial, $atts,['class' => 'pb-17 pl-lg-25 pr-lg-25']);
+                                            $this->overcome_tm_text($testimonial, $atts,['class' => 'pb-17 pl-lg-25 pr-lg-25 ef5-text-787878']);
                                         echo '</div>';
                                     break;
                             		default:
