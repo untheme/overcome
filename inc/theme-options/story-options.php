@@ -11,6 +11,6 @@ function overcome_story_options_register($metabox)
             'priority' => 'default'
         ));
     }
-    $metabox->add_section('ef5_stories', overcome_footer_opts(['default' => true]));
+    $metabox->add_section('ef5_stories', overcome_footer_opts(['default' => true, 'margin' => false]));
 }
 add_action('ef5_post_metabox_register', 'overcome_story_options_register');
