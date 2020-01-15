@@ -2,10 +2,20 @@
 	#tribe-events-footer:after, #tribe-events-footer:before, #tribe-events-header:after, #tribe-events-header:before{
 		display: none;
 	}
-	#tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-next, #tribe-events-footer .tribe-events-sub-nav .tribe-events-nav-previous{
-		width: unset;
-		a{
-			background: transparent;
+	#tribe-events-footer .tribe-events-sub-nav {
+		.tribe-events-nav-next, 
+		.tribe-events-nav-previous{
+		    width: unset;
+		    float: none;
+		    flex: 0 0 auto;
+		    padding: 0 20px;
+			a{
+				background: transparent;
+			}
+		}
+		.ef5-tribe-events-nav-export{
+			flex: 0 0 100%;
+			order: 4;
 		}
 	}
 }
