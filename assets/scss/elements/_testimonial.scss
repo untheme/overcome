@@ -7,7 +7,8 @@
 }
 .ef5-testimonial-layout-2{
 	+ .ef5-owl-dots{
-		margin-top: 21px;
+		margin-top: 0;
+    	padding-top: 20px;
 	}
 	.ttmn-header {
 		position: relative;
@@ -20,7 +21,7 @@
 			color: $accent_color;
 			@include opacity(0.2);
 			position: absolute;
-			top: 0;
+			top: -5px;
 			right: 33px;
 			[dir="rtl"] &{
 				right: auto;
