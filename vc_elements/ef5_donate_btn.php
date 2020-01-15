@@ -27,7 +27,7 @@ vc_map(array(
             	'heading'		=> esc_html__('Select an post type','overcome'),
             	'param_name'	=> 'post_type',
             	'value'			=> array(
-            		esc_html__('Donation') => 'donation'
+            		esc_html__('Donation','overcome') => 'donation'
             	)
             ),
             array(

@@ -98,7 +98,7 @@
                     $this->overcome_posts_featured_item_1_3($atts,[
                         'class'          => 'ef5-rounded-10 overlay-wrap overlay-primary-0/7',
                         'thumbnail_size' => overcome_default_value($thumbnail_size[$thumbnail_size_index], '570'),
-                        'readmore_title' => esc_html__('Donate Now')
+                        'readmore_title' => esc_html__('Donate Now','overcome')
                     ]);
                 }
             }
