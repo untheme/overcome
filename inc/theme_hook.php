@@ -225,6 +225,7 @@ function overcome_colors(){
 		'inherit' => ['Inherit', 'inherit'],
 		'white'   => ['White', '#fff'],
 		'overlay' => ['Overlay Background', 'rgba(0,0,0,0.5)'],
+		'overlay-03' => ['Overlay Background 03', 'rgba(0,0,0,0.3)'],
 		'ababab'  => ['OverCome Color 01', '#ababab'],
 		'eee8d9'  => ['OverCome Color 02', '#eee8d9'],
 		'f5f5f5'  => ['OverCome Color 03', '#f5f5f5'],
