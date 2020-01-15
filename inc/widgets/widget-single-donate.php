@@ -90,7 +90,7 @@ class OverCome_WG_Single_Donate extends WP_Widget
                 echo '<div class="ef5-brief col" style="max-width: calc(100% - '.$thumbnail_size[0].'px);">';
                     ef5payments_donation_raised([
                         'label' => esc_html__('Donate so far:','overcome'),
-                        'label_class' => 'font-style-500',
+                        'label_class' => 'font-style-500 d-block',
                         'value_class' => 'text-40 ef5-text-accent font-style-600 d-block pt-8'
                     ]);
                     echo '<div class="row grid-gutters-20 align-items-center pt-30">';
