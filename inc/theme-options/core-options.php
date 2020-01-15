@@ -1501,38 +1501,42 @@ if(!function_exists('overcome_woocommerce_theme_opts')){
 if(!function_exists('overcome_footer_opts')){
     function overcome_footer_opts($args = []){
         $args = wp_parse_args($args, [
-            'default' => false
+            'default' => false,
+            'margin'  => true
         ]);
         $default_value = $args['default'] ? '-1' : '';
         $force_output  = $args['default'] ? true : false;
+        $fields = [
+            array(
+                'id'          => 'footer_layout',
+                'type'        => 'image_select',
+                'title'       => esc_html__('Layout', 'overcome'),
+                'subtitle'    => esc_html__('Select a layout for upper footer area.', 'overcome'),
+                'desc'        => sprintf(esc_html__('To use this Option please %sClick Here%s to add your custom footer layout first.','overcome'),'<a href="' . esc_url( admin_url( 'edit.php?post_type=ef5_footer' ) ) . '">','</a>'),
+                'placeholder' => esc_html__('Default','overcome'),
+                'options'     => overcome_list_post_thumbnail('ef5_footer', $args['default']),
+                'default'     => $default_value
+            )
+        ];
+
+        if($args['margin']) $fields[] = array(
+            'id'             => 'footer_margin',
+            'type'           => 'spacing',
+            'mode'           => 'margin',
+            'units'          => array('px'),
+            'units_extended' => 'false',
+            'title'          => esc_html__('Footer margin', 'overcome'),
+            'subtitle'       => esc_html__('Enter outer space', 'overcome'),
+            'force_output'   => $force_output,
+            'output'         => array(
+                '#ef5-footer'
+            )
+        );
+
         return array(
             'title'  => esc_html__('Footer', 'overcome'),
             'icon'   => 'el el-website',
-            'fields' => array(
-                array(
-                    'id'          => 'footer_layout',
-                    'type'        => 'image_select',
-                    'title'       => esc_html__('Layout', 'overcome'),
-                    'subtitle'    => esc_html__('Select a layout for upper footer area.', 'overcome'),
-                    'desc'        => sprintf(esc_html__('To use this Option please %sClick Here%s to add your custom footer layout first.','overcome'),'<a href="' . esc_url( admin_url( 'edit.php?post_type=ef5_footer' ) ) . '">','</a>'),
-                    'placeholder' => esc_html__('Default','overcome'),
-                    'options'     => overcome_list_post_thumbnail('ef5_footer', $args['default']),
-                    'default'     => $default_value
-                ),
-                array(
-                    'id'             => 'footer_margin',
-                    'type'           => 'spacing',
-                    'mode'           => 'margin',
-                    'units'          => array('px'),
-                    'units_extended' => 'false',
-                    'title'          => esc_html__('Footer margin', 'overcome'),
-                    'subtitle'       => esc_html__('Enter outer space', 'overcome'),
-                    'force_output'   => $force_output,
-                    'output'         => array(
-                        '#ef5-footer'
-                    )
-                ),
-            )
+            'fields' => $fields
         );
     }
 }
