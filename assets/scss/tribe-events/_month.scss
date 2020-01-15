@@ -1,5 +1,5 @@
 #tribe-events-content .tribe-events-calendar{
-	@media (max-width: 767px){
+	@media (max-width: 991px){
 		td{
 			padding: 5px!important;
 			border:none!important;
@@ -14,7 +14,7 @@
 				display: none!important;
 			}
 			&.mobile-active{
-				background: none;
+				background: none!important;
 			}
 		}
 	 	div[id*=tribe-events-daynum-]{
