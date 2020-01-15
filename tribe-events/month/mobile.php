@@ -31,7 +31,7 @@
 			<\/div>
 			[[ } ]]
 			<div class="tribe-events-event-schedule-detailsx mb-20">
-				<span class="tribe-event-date-start">[[=dateDisplay]] <\/span>
+				<span class="tribe-event-date-start text-small">[[=dateDisplay]] <\/span>
 			<\/div>
 			
 			[[ if(excerpt.length) { ]]
