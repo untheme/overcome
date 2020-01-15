@@ -3,6 +3,9 @@
 	.widget,
 	.ef5-widget{
 		margin-bottom: 63px;
+		&:last-child{
+			margin-bottom: 0;
+		}
 	}
 	.ef5-widget-title{
 		font-size: 22px;
