@@ -254,7 +254,7 @@ class WPBakeryShortCode_ef5_posts_masonry extends WPBakeryShortCode
     ?>
         <div class="<?php echo overcome_optimize_css_class(implode(' ', $filters_class));?>">
             <div class="filter-item active" data-filter="*">
-                <span><?php esc_html_e('All','unbreak'); ?></span>
+                <span><?php esc_html_e('All','overcome'); ?></span>
             </div>
             <?php 
                 foreach ($filter_terms as $term) {
