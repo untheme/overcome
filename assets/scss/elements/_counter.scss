@@ -40,19 +40,8 @@
 	.ef5-counter-wrap{
 		font-size: 60px;
 		line-height: 60px;
-		font-weight: 700;
+		font-weight: 600;
 		color: $white;
-	}
-	.counter-icon{
-		width: 96px;
-		height: 71px;
-		position: relative;
-		> span{
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			@include transform(translate(-50%,-50%));
-		}
 	}
 	.counter-title{
 		font-size: 22px;
