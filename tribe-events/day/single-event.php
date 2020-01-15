@@ -42,7 +42,7 @@ $venue_address = tribe_get_address();
 		<?php 
 		/** Event Title */
 		do_action( 'tribe_events_before_the_event_title' ) ?>
-		<div class="ef5-heading text-22 font-style-600 pb-15">
+		<div class="ef5-heading text-22 font-style-600 pb-12">
 			<a class="url" href="<?php echo esc_url( tribe_get_event_link() ); ?>" title="<?php the_title_attribute() ?>" rel="bookmark">
 				<?php the_title() ?>
 			</a>
@@ -57,7 +57,7 @@ $venue_address = tribe_get_address();
 		<div class="ef5-tribe-desc ef5-text-777777 pt-35">
 			<?php echo tribe_events_get_the_excerpt(); ?>
 		</div>
-		<div class="pt-25 clearfix">
+		<div class="ef5-tribe-day-more clearfix">
 			<a href="<?php echo esc_url( tribe_get_event_link() ); ?>" class="ef5-btn accent fill ef5-btn-md" rel="bookmark"><?php esc_html_e( 'Find out more', 'overcome' ) ?></a>
 		</div>
 		<?php do_action( 'tribe_events_after_the_content' ); ?>
