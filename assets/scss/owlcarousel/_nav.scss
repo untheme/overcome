@@ -30,7 +30,16 @@
 		}
 	} 
 }
-
+.ef5-owl-nav-pos-vertical.outside {
+	@media (max-width: 1280px){
+		.ef5-owl-next{
+			right: -40px;
+		}
+		.ef5-owl-prev{
+			left: -40px;
+		}
+	}
+}
 
 // Default 
 .owl-carousel:not(.ef5-owl){
