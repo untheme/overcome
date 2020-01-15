@@ -1,8 +1,9 @@
 .tribe-events-month{
- 	[id*=tribe-events-daynum-]{
+ 	div[id*=tribe-events-daynum-]{
 	    display: block;
 	    margin-top: 0;
 	    padding-top: 5px;
 	    padding-bottom: 5px;
+	    display: none;
 	}
 }
