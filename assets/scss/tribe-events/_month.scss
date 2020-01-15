@@ -1,22 +1,20 @@
 #tribe-events-content .tribe-events-calendar{
 	@media (max-width: 767px){
-		.tribe-events-calendar{
-			td{
-				padding: 5px!important;
-				border:none!important;
-				background: none;
-				&:first-child{
-					padding-left: 0;
-				}
-				&:last-child{
-					padding-right: 0;
-				}
-				&:after{
-					display: none!important;
-				}
-				&.tribe-events-othermonth{
-					opacity: 0.5;
-				}
+		td{
+			padding: 5px!important;
+			border:none!important;
+			background: none;
+			&:first-child{
+				padding-left: 0;
+			}
+			&:last-child{
+				padding-right: 0;
+			}
+			&:after{
+				display: none!important;
+			}
+			&.tribe-events-othermonth{
+				opacity: 0.5;
 			}
 		}
 	 	div[id*=tribe-events-daynum-]{
