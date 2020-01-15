@@ -170,7 +170,12 @@
 			}
 		}
 	}
-
+	@media (max-width: 991px){
+		.tribe-bar-date-filter,
+		.tribe-bar-search-filter{
+			width: 100%;
+		}
+	}
 }
 #tribe-bar-form.tribe-bar-mini *{
 	font-size: inherit;
