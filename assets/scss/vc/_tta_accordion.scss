@@ -6,6 +6,9 @@
 				border-style: solid;
 				border-radius: 23px;
 				@include transition();
+				.vc_tta-panel-body{
+					padding-top: 8px;
+				}
 			}
 			.vc_tta-panel-title{
 				font-size: 15px;
