@@ -13,6 +13,9 @@
 			&:after{
 				display: none!important;
 			}
+			&.mobile-active{
+				background: none;
+			}
 		}
 	 	div[id*=tribe-events-daynum-]{
 		    display: flex;
