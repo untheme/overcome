@@ -1,10 +1,29 @@
 .tribe-events-month{
 	@media (max-width: 767px){
+		.tribe-events-calendar{
+			td{
+				padding: 5px!important;
+				border:none!important;
+				&:first-child{
+					padding-left: 0;
+				}
+				&:last-child{
+					padding-right: 0;
+				}
+				&:after{
+					display: none!important;
+				}
+			}
+		}
 	 	div[id*=tribe-events-daynum-]{
 		    display: block;
 		    margin-top: 0!important;
 		    padding-top: 5px !important;
 		    padding-bottom: 5px !important;
+		    border-radius: 5px;
+		    height: 100%;
+		    background: var(--accent-color);
+		    color: white;
 		}
 	}
 }
