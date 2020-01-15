@@ -98,6 +98,9 @@
 			padding: 0 0 10px;
 		}
 	}
+	span.tribe-icon-list{
+		@include transform(translateY(3px));
+	}
 	#tribe-bar-views-toggle{
 		padding: 0 ;
 		font-weight: 600;
@@ -311,6 +314,7 @@
 		margin-bottom: 78px;
 	}
 }
+
 @media (min-width: 992px){
 	.tribe-bar-filters-inner{
 		display: flex;
