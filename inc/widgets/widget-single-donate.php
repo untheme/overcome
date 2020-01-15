@@ -72,7 +72,7 @@ class OverCome_WG_Single_Donate extends WP_Widget
 
                 if ( $post_meta )
                 {
-                    printf( '<div class="ef5-meta row gutter-20 justify-content-between">%s</div>', $post_meta );
+                    printf( '<div class="ef5-meta row">%s</div>', $post_meta );
                 }
             }
 
