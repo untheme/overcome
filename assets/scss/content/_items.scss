@@ -76,6 +76,9 @@
 	.ef5-donation-goal .ef5-value{
 		color: $accent_color;
 	}
+	.ef5-donate-progress-bar-value{
+		border-radius: 3.5px;
+	}
 }
 // Layout 3-1
 .ef5-posts-3-1 + .ef5-loop-pagination{
