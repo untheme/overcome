@@ -71,7 +71,8 @@ function overcome_tribe_events_info_hori($args=[]){
 	}
 }
 function overcome_tribe_events_time($args=[]){
-	if(!class_exists('Tribe__Events__Main')) return;die('1');
+	if(!class_exists('Tribe__Events__Main')) return;
+	var_dump(get_post_type());
 	if('tribe_event' !== get_post_type()) return; 
 	$args = wp_parse_args($args,[
 		'class'  => '',
