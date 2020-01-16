@@ -83,7 +83,6 @@ function overcome_tribe_events_time($args=[]){
 	global $post;
 	$event = get_post( $post );
 	$event_date_format = $args['date_format'];
-	var_dump(tribe_get_start_date());
 	if($args['echo']){
 		echo overcome_html($args['before']);
 		echo tribe_get_start_date($event, true, $event_date_format).'&nbsp;-&nbsp;'.tribe_get_end_date($event, true, $event_date_format);
