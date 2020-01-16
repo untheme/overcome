@@ -34,6 +34,7 @@
 			position: absolute;
 			top: 50%;
 			@include transform(translateY(-50%));
+			background: transparent;
 		}
 		.ef5-owl-next{
 			right: 25px;
