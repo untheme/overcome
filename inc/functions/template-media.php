@@ -159,9 +159,11 @@ if(!function_exists('overcome_post_gallery')){
                         <?php if($light_box === '0') {
                             overcome_loading_animation();
                             echo '<div class="ef5-owl-nav vertical inside"></div>';
-                            echo '<div class="ef5-owl-dots"></div>';
                         } ?>
                     </div>
+                    <?php if($light_box === '0') {
+                        echo '<div class="ef5-owl-dots"></div>';
+                    } ?>
                 </div>
             <?php 
             } elseif(has_post_thumbnail()) {
