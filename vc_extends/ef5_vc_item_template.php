@@ -71,7 +71,8 @@ function overcome_vc_post_layout2_1($atts, $args=[]){
                     if(class_exists('EF5Payments')) {
                         ef5systems_donation_progress_donors([
                             'donor_icon'     => '<span class="flaticon-like"></span>',
-                            'donor_class'    => 'ef5-text-accent',
+                            'donor_class'    => 'ef5-text-accent font-style-500',
+                            'percent_class'  => 'ef5-text-primary font-style-500'
                             'progress_class' => 'mt-2 mb-10'
                         ]);
                         ef5payments_donation_donate_amount([
