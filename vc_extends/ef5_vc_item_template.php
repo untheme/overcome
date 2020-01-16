@@ -72,7 +72,7 @@ function overcome_vc_post_layout2_1($atts, $args=[]){
                         ef5systems_donation_progress_donors([
                             'donor_icon'     => '<span class="flaticon-like"></span>',
                             'donor_class'    => 'ef5-text-accent',
-                            'progress_class' => 'mt-2'
+                            'progress_class' => 'mt-2 mb-10'
                         ]);
                         ef5payments_donation_donate_amount([
                             'goal_label' => esc_html__('Goal:','overcome'),
