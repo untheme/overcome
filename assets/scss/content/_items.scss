@@ -80,6 +80,11 @@
 	.ef5-donate-progress-bar-value{
 		border-radius: 3.5px;
 	}
+	.ef5-donate-progress-bar-value{
+		background-image: -moz-linear-gradient( 0deg, rgb(230,164,36) 0%, rgb(243,192,69) 40%, rgb(255,220,101) 67%, rgb(255,220,101) 84%, rgb(255,220,101) 90%, rgb(255,220,101) 100%);
+		background-image: -webkit-linear-gradient( 0deg, rgb(230,164,36) 0%, rgb(243,192,69) 40%, rgb(255,220,101) 67%, rgb(255,220,101) 84%, rgb(255,220,101) 90%, rgb(255,220,101) 100%);
+		background-image: -ms-linear-gradient( 0deg, rgb(230,164,36) 0%, rgb(243,192,69) 40%, rgb(255,220,101) 67%, rgb(255,220,101) 84%, rgb(255,220,101) 90%, rgb(255,220,101) 100%);
+	}
 }
 // Layout 3-1
 .ef5-posts-3-1 + .ef5-loop-pagination{
