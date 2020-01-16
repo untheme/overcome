@@ -28,7 +28,20 @@
 			border-left-width: 0;
 			border-bottom-width: 0;
 		}
-	} 
+	}
+	&.vertical{
+		.ef5-owl-nav-button{
+			position: absolute;
+			top: 50%;
+			@include transform(translateY(-50%));
+		}
+		.ef5-owl-next{
+			right: 25px;
+		}
+		.ef5-owl-prev{
+			left: 25px;
+		}
+	}
 }
 .ef5-owl-nav-pos-vertical.outside {
 	@media (max-width: 1280px){
