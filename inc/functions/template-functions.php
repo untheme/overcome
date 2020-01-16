@@ -216,6 +216,7 @@ if(!function_exists('overcome_loop_pagination')){
                 ]);
                 break;
             default:
+                var_dump(the_posts_navigation());
                 the_posts_navigation();
                 break;
         }
