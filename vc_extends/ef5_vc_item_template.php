@@ -63,7 +63,7 @@ function overcome_vc_post_layout2_1($atts, $args=[]){
                     ]);
                     overcome_post_excerpt([
                         'show_excerpt' => '1', 
-                        'length'       => '14', 
+                        'length'       => '10', 
                         'more'         => '',
                         'class'        => 'mb-18 ef5-text-787878' 
                     ]);
