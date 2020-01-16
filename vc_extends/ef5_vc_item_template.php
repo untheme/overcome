@@ -27,7 +27,10 @@ function overcome_vc_post_layout2($atts){
         </div>
 	<?php
 }
-function overcome_vc_post_layout2_1($atts){
+function overcome_vc_post_layout2_1($atts, $args=[]){
+    $args = wp_parse_args($args, [
+        'thumbnail_size' => '370x240'
+    ]);
     $after = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">';
     switch (get_post_type()) {
         case 'ef5_donation':
@@ -43,7 +46,7 @@ function overcome_vc_post_layout2_1($atts){
         <div class="relative">
             <?php 
                 overcome_post_media([
-                    'thumbnail_size' => '', 
+                    'thumbnail_size' => $args['thumbnail_size'], 
                     'default_thumb'  => true,
                     'after'          => $after
                 ]);
