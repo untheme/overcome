@@ -44,39 +44,42 @@ function overcome_vc_post_layout2_1($atts, $args=[]){
     }
     $after .= '</div></div>';
     ?>
-        <div class="relative">
-            <?php 
-                overcome_post_media([
-                    'thumbnail_size' => $args['thumbnail_size'], 
-                    'default_thumb'  => true,
-                    'after'          => $after,
-                    'img_class'      => $args['img_class']   
-                ]);
-            ?>
-        </div>
-        <div class="pl-15 pr-15 pl-lg-30 pr-lg-30 pt-25 pb-25">
-            <?php 
-                overcome_post_title([
-                    'heading_tag' => 'text-20',
-                    'class'       => 'pb-13'  
-                ]);
-                overcome_post_excerpt([
-                    'show_excerpt' => '1', 
-                    'length'       => '15', 
-                    'more'         => '',
-                    'class'        => 'mb-18 ef5-text-787878' 
-                ]);
-                //overcome_loop_donate_info();
-                if(class_exists('EF5Payments')) {
-                    ef5systems_donation_progress_donors([
-                        'donor_icon' => '<span class="flaticon-like"></span>'
+        <div class="ef5-post-item-layout-2-1">
+            <div class="relative">
+                <?php 
+                    overcome_post_media([
+                        'thumbnail_size' => $args['thumbnail_size'], 
+                        'default_thumb'  => true,
+                        'after'          => $after,
+                        'img_class'      => $args['img_class']   
                     ]);
-                    ef5payments_donation_donate_amount([
-                        'goal_label' => esc_html__('Goal:','overcome'),
-                        'raised_label' => esc_html__('Raised:','overcome')
+                ?>
+            </div>
+            <div class="pl-15 pr-15 pl-lg-30 pr-lg-30 pt-25 pb-25">
+                <?php 
+                    overcome_post_title([
+                        'heading_tag' => 'text-20',
+                        'class'       => 'pb-13'  
                     ]);
-                }
-            ?>
+                    overcome_post_excerpt([
+                        'show_excerpt' => '1', 
+                        'length'       => '15', 
+                        'more'         => '',
+                        'class'        => 'mb-18 ef5-text-787878' 
+                    ]);
+                    //overcome_loop_donate_info();
+                    if(class_exists('EF5Payments')) {
+                        ef5systems_donation_progress_donors([
+                            'donor_icon' => '<span class="flaticon-like"></span>',
+                            'class' => 'ef5-text-accent',
+                        ]);
+                        ef5payments_donation_donate_amount([
+                            'goal_label' => esc_html__('Goal:','overcome'),
+                            'raised_label' => esc_html__('Raised:','overcome')
+                        ]);
+                    }
+                ?>
+            </div>
         </div>
     <?php
 
