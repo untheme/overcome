@@ -120,7 +120,7 @@ function overcome_single_tribe_event_upcoming(){
 	            $r->the_post();
 
 	            printf(
-	                '<div class="post-list-item transition %s"><div class="row gutters-20">',
+	                '<div class="post-list-item transition %s"><div class="row gutters-15">',
 	                ( has_post_thumbnail() ? 'has-post-thumbnail' : '' )
 	            );
 
