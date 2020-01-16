@@ -29,7 +29,7 @@ function overcome_single_event_gallery(){
 			'show_author'    => '0',
 			'owl'            => [
 				'dots'		=> true,
-				'dotData'	=> true	
+				'dotsData'	=> true	
 			]
 		]);
 		?>
