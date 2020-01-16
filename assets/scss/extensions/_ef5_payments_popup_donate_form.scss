@@ -1,0 +1,16 @@
+.modal-content .donate-form{
+	.form-close{
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		color: red;
+		[dir="rtl"] &{
+			left: 0;
+			right: auto;
+		}
+	}
+}
