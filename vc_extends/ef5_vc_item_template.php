@@ -67,8 +67,8 @@ function overcome_vc_post_layout2_1($atts, $args=[]){
                         'more'         => '',
                         'class'        => 'mb-18 ef5-text-787878' 
                     ]);
-                    overcome_loop_donate_info2(['layout' => '1']);
-                    /*if(class_exists('EF5Payments')) {
+                    
+                    if(class_exists('EF5Payments')) {
                         ef5systems_donation_progress_donors([
                             'donor_icon'     => '<span class="flaticon-like"></span>',
                             'donor_class'    => 'ef5-text-accent font-style-500',
@@ -79,7 +79,7 @@ function overcome_vc_post_layout2_1($atts, $args=[]){
                             'goal_label' => esc_html__('Goal:','overcome'),
                             'raised_label' => esc_html__('Raised:','overcome')
                         ]);
-                    }*/
+                    }
                 ?>
             </div>
         </div>
