@@ -42,12 +42,12 @@ add_action('tribe_events_single_meta_after', 'overcome_single_tribe_event_bookin
 function overcome_single_tribe_event_booking_form(){
 	$time_format = get_option( 'time_format', Tribe__Date_Utils::TIMEFORMAT );
 	$end_datetime = tribe_get_end_date();
-	$end_date = tribe_get_display_end_date( null, false );
+	$end_date = tribe_get_display_end_date( null, false, 'M d, Y' );
 	$end_time = tribe_get_end_date( null, false, $time_format );
 	?>
 	<div class="ef5-tribe-single-meta-block ef5-bg-f5f5f5 ef5-rounded-10 pt-20 pr-30 pl-30 pb-30 mb-30 clearfix">
 	    <div class="ef5-heading text-22 font-style-500 mb-25"><?php esc_html_e('Booking Online','overcome'); ?>
-	    	<div class="ef5-heading text-15 font-style-400"><?php printf('%s %s - %s', esc_html_e('will be closed until','overcome'), $end_date, $end_time); echo $end_datetime; ?></div>
+	    	<div class="ef5-heading text-15 font-style-400"><?php printf('%s %s - %s', esc_html_e('will be closed until','overcome'), $end_date, $end_time); ?></div>
 	    </div>
 	    <div class="ef5-tribe-single-book-form pt-30">
 	    	<div class="field">
