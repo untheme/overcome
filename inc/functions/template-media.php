@@ -21,7 +21,7 @@ if(!function_exists('overcome_post_thumbnail')){
         // class
         $thumbnail_atts_class = ['post-image','ef5-post',$args['class'], $args['img_class']];
         if($thumbnail_is_bg) $thumbnail_atts_class[] = 'thumbnai-is-bg';
-        $thumbnail_atts[] = 'class="'.implode(' ', $thumbnail_atts_class).'"';
+        $thumbnail_atts[] = 'class="'.overcome_optimize_css_class(implode(' ', $thumbnail_atts_class)).'"';
         // style
         $thumbnail_atts_style = [];
         if($thumbnail_is_bg) $thumbnail_atts_style[] = 'background-image: url('.overcome_get_image_url_by_size(['id'=>$id,'size'=> 'full', 'default_thumb' => $default_thumb]).')';
