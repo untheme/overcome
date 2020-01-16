@@ -18,4 +18,13 @@
 		font-weight: 600;
 		color: $accent_color;
 	}
+	.ef5-donate-form-amount{
+		display: flex;
+		flex-wrap:wrap;
+		justify-content: between;
+		align-items:center;
+		input{
+			width: calc(100% - 20px);
+		}
+	}
 }
