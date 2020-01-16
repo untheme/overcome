@@ -62,8 +62,8 @@ if(!function_exists('overcome_configs')){
             'thumbnail_size_h'               => 80,
             'post_thumbnail_size_w'          => 1170,
             'post_thumbnail_size_h'          => 500,
-            'overcome_default_post_thumbnail' => true,
-            'overcome_thumbnail_is_bg'        => true,
+            'overcome_default_post_thumbnail' => false,
+            'overcome_thumbnail_is_bg'        => false,
             // Header 
             'logo_width'       => '192',
             'logo_height'      => '38',
@@ -87,6 +87,8 @@ if(!function_exists('overcome_configs')){
             'dropdown_regular' => '#c0c0c0',
             'dropdown_hover'   => 'var(--accent-color)',
             'dropdown_active'  => 'var(--accent-color)',
+            // Page title 
+            'ptitle_layout'        => '1',
             // Comments 
             'cmt_avatar_size'  => 0,
             'cmt_border'       => '1px solid #DDDDDD',

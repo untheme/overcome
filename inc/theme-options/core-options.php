@@ -1132,7 +1132,7 @@ if(!function_exists('overcome_page_title_opts')){
             'default' => false
         ]);
         $force_output = $args['default'] ? true : false;
-        $default_value = '1';
+        $default_value = overcome_configs('ptitle_layout');
 
         $custom_title = $custom_desc = '';
 
