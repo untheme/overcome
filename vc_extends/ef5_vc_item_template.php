@@ -29,7 +29,8 @@ function overcome_vc_post_layout2($atts){
 }
 function overcome_vc_post_layout2_1($atts, $args=[]){
     $args = wp_parse_args($args, [
-        'thumbnail_size' => '370x240'
+        'thumbnail_size' => '370x240',
+        'img_class'      => 'ef5-rounded-t-10'   
     ]);
     $after = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">';
     switch (get_post_type()) {
@@ -48,7 +49,8 @@ function overcome_vc_post_layout2_1($atts, $args=[]){
                 overcome_post_media([
                     'thumbnail_size' => $args['thumbnail_size'], 
                     'default_thumb'  => true,
-                    'after'          => $after
+                    'after'          => $after,
+                    'img_class'      => $args['img_class']   
                 ]);
             ?>
         </div>
