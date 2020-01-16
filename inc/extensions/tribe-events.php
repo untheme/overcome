@@ -63,9 +63,9 @@ function overcome_single_tribe_event_booking_form(){
 	    		<textarea class="input" type="textarea" name="message" placeholder="Massage"></textarea>
 	    	</div>
 	    	<div class="field">
-	    		<div class="row align-items-center">
+	    		<div class="row align-items-center justify-content-center justify-content-md-between">
 	    			<div class="col-auto"><?php esc_html_e('Booked: 18/100','overcome'); ?></div>
-	    			<div class="col text-end"><button type="submit" class="ef5-btn accent fill ef5-btn-md mw-120"><?php esc_html_e('Submit','overcome'); ?></button></div>
+	    			<div class="col text-center text-md-end pt-15 pt-md-0"><button type="submit" class="ef5-btn accent fill ef5-btn-md mw-120"><?php esc_html_e('Submit','overcome'); ?></button></div>
 	    		</div>
 	    	</div>
 	    </div>
