@@ -63,9 +63,9 @@ function overcome_single_tribe_event_booking_form(){
 	    		<textarea class="input" type="textarea" name="message" placeholder="Massage"></textarea>
 	    	</div>
 	    	<div class="field">
-	    		<div class="row align-items-center justify-content-center justify-content-md-between">
+	    		<div class="row align-items-center justify-content-center justify-content-sm-between">
 	    			<div class="col-auto"><?php esc_html_e('Booked: 18/100','overcome'); ?></div>
-	    			<div class="col-auto pt-15 pt-md-0"><button type="submit" class="ef5-btn accent fill ef5-btn-md mw-120"><?php esc_html_e('Submit','overcome'); ?></button></div>
+	    			<div class="col-auto pt-15 pt-sm-0"><button type="submit" class="ef5-btn accent fill ef5-btn-md mw-120"><?php esc_html_e('Submit','overcome'); ?></button></div>
 	    		</div>
 	    	</div>
 	    </div>
@@ -168,7 +168,7 @@ function overcome_single_tribe_event_upcoming(){
 add_action('tribe_events_single_meta_after','overcome_single_tribe_event_tags', 10, 4);
 function overcome_single_tribe_event_tags(){
 	?>
-	<div class="ef5-tribe-single-meta-block clearfix">
+	<div class="ef5-tribe-single-meta-block mb-50 mb-lg-0 clearfix">
 		<div class="ef5-heading text-22 font-style-500 mb-40"><?php esc_html_e('Tags','overcome');?></div>
 		<div class="tagcloud"><?php echo get_the_term_list( get_the_ID(), 'post_tag');?></div>
 	</div>
