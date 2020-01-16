@@ -69,11 +69,11 @@ $website = tribe_get_event_website_link();
 				<div class="ef5-events-all-multiday">
 					<div class="row text-13">
 						<div class="col-auto ef5-heading text-13"><?php esc_html_e( 'Start:', 'overcome' ) ?></div>
-						<div class="col text-end"><?php overcome_html( $start_date ) ?></div>
+						<div class="col text-end"><?php echo overcome_html( $start_date ) ?></div>
 					</div>
 					<div class="row text-13">
 						<div class="col-auto ef5-heading"><?php esc_html_e( 'End:', 'overcome' ) ?></div>
-						<div class="col text-end"><?php overcome_html( $end_date ) ?></div>
+						<div class="col text-end"><?php echo overcome_html( $end_date ) ?></div>
 					</div>
 				</div>
 			<?php
@@ -83,7 +83,7 @@ $website = tribe_get_event_website_link();
 				<div class="ef5-events-all-day">
 					<div class="row text-13">
 						<div class="col-auto ef5-heading"><?php esc_html_e( 'Date:', 'overcome' ) ?> </div>
-						<div class="col text-end"><?php overcome_html( $start_date ) ?></div>
+						<div class="col text-end"><?php echo overcome_html( $start_date ) ?></div>
 					</div>
 				</div>
 
@@ -94,11 +94,11 @@ $website = tribe_get_event_website_link();
 				<div class="ef5-events-multiday">
 					<div class="row text-13">
 						<div class="col-auto ef5-heading"><?php esc_html_e( 'Start:', 'overcome' ) ?></div>
-						<div class="col text-end"><?php overcome_html( $start_datetime ) ?></div>
+						<div class="col text-end"><?php echo overcome_html( $start_datetime ) ?></div>
 					</div>
 					<div class="row text-13">
 						<div class="col-auto ef5-heading"><?php esc_html_e( 'End:', 'overcome' ) ?></div>
-						<div class="col text-end"><?php overcome_html( $start_datetime ) ?></div>
+						<div class="col text-end"><?php echo overcome_html( $start_datetime ) ?></div>
 					</div>
 				</div>
 			<?php
@@ -118,7 +118,7 @@ $website = tribe_get_event_website_link();
 			if ( ! empty( $cost ) ) : ?>
 				<div class="row text-13">
 					<div class="col-auto ef5-heading"><?php esc_html_e( 'Cost:', 'overcome' ); ?></div>
-					<div class="col text-end"><?php overcome_html( $cost ); ?></div>
+					<div class="col text-end"><?php echo overcome_html( $cost ); ?></div>
 				</div>
 			<?php endif;
 			echo tribe_get_event_categories(
