@@ -201,6 +201,7 @@ if(!function_exists('overcome_loop_pagination')){
                 );
                 break;
             case '3':
+                var_dump(paginate_links());
                 echo '<div class="'.trim(implode(' ', $paginate_links)).'">';
                     echo paginate_links([
                         'prev_text' => '<span class="prev hint--top" data-hint="'.apply_filters('overcome_loop_pagination_prev_text', esc_html__('Previous', 'overcome')).'"><span class="flaticon-arrow-pointing-to-left"></span></span>',
