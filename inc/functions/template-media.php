@@ -10,6 +10,7 @@ if(!function_exists('overcome_post_thumbnail')){
             'echo'            => true,
             'default_thumb'   => overcome_configs('overcome_default_post_thumbnail'),
             'thumbnail_is_bg' => overcome_configs('overcome_thumbnail_is_bg'),
+            'class'           => '',  
             'img_class'       => '',
             'show_image'      => true    
         ]);
@@ -18,7 +19,7 @@ if(!function_exists('overcome_post_thumbnail')){
 
         $thumbnail_atts = [];
         // class
-        $thumbnail_atts_class = ['post-image','ef5-post',$args['img_class']];
+        $thumbnail_atts_class = ['post-image','ef5-post',$args['class'], $args['img_class']];
         if($thumbnail_is_bg) $thumbnail_atts_class[] = 'thumbnai-is-bg';
         $thumbnail_atts[] = 'class="'.implode(' ', $thumbnail_atts_class).'"';
         // style
