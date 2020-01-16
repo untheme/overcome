@@ -102,7 +102,7 @@ if(!function_exists('overcome_post_gallery')){
                     $icon_next = is_rtl() ? 'left' : 'right';
                     $ef5systems_owl[$gal_id] = array_merge(
                         array(
-                            'rtl'                => $rtl
+                            'rtl' => $rtl
                         ),
                         $args['owl']
                     );
