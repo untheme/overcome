@@ -7,7 +7,8 @@ function overcome_vc_post_layout2($atts){
                 overcome_post_media([
                     'thumbnail_size' => '570x360', 
                     'default_thumb'  => true,
-                    'after'          => $after
+                    'after'          => $after,
+                    'img_class'      => 'ef5-rounded-t-10'   
                 ]);
             ?>
         </div>
