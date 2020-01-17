@@ -5,7 +5,7 @@ function overcome_vc_post_layout2($atts){
 		<div class="relative">
             <?php 
                 overcome_post_media([
-                    'thumbnail_size' => '', 
+                    'thumbnail_size' => '570x360', 
                     'default_thumb'  => true,
                     'after'          => $after
                 ]);
