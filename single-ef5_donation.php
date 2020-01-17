@@ -26,7 +26,7 @@ $content_class = is_active_sidebar('ef5_donation_widget') ? 'col-xl-8' : 'col-xl
                         <div class="clearfix">
                             <div class="thumbnail-wrap relative ef5-bg-f5f5f5 ef5-rounded-10 ef5-overflow-hidden">
                                 <div class="relative">
-                                    <a href="<?php the_permalink();?>" class="d-block">
+                                    <a href="<?php the_permalink();?>" class="ef5-gradient-overlay d-block">
                                         <?php the_post_thumbnail('large'); ?>
                                     </a>
                                     <div class="thumbnail-overlay pl-30 pr-30 pb-12 text-white">
