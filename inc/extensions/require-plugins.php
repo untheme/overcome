@@ -50,16 +50,6 @@ if(class_exists('ReduxFrameworkPlugin')){
                 'slug'               => 'woocommerce',
                 'required'           => false,
             ),
-            /*array(
-                'name'               => esc_html__('WPC Smart Compare for WooCommerce','overcome'),
-                'slug'               => 'woo-smart-compare',
-                'required'           => false,
-            ),
-            array(
-                'name'               => esc_html__('WPC Smart Wishlist for WooCommerce','overcome'),
-                'slug'               => 'woo-smart-quick-view',
-                'required'           => false,
-            ),*/
             array(
                 'name'               => esc_html__('WPC Smart Quick View for WooCommerce','overcome'),
                 'slug'               => 'woo-smart-wishlist',
@@ -73,11 +63,6 @@ if(class_exists('ReduxFrameworkPlugin')){
             array(
                 'name'               => esc_html__('Newsletter','overcome'),
                 'slug'               => 'newsletter',
-                'required'           => false,
-            ),
-            array(
-                'name'               => esc_html__('Goolge Captcha','overcome'),
-                'slug'               => 'google-captcha',
                 'required'           => false,
             ),
             array(
@@ -110,4 +95,28 @@ if(class_exists('VC_Manager')){
         );
         tgmpa( $plugins, $config );
     }
+}
+
+function overcome_others_plugins_support(){
+    $config = array(
+            'default_path' => overcome_relative_path().'untheme.net/plugins/',
+        );
+    $plugins = array(
+        array(
+            'name'               => esc_html__('WPC Smart Compare for WooCommerce','overcome'),
+            'slug'               => 'woo-smart-compare',
+            'required'           => false,
+        ),
+        array(
+            'name'               => esc_html__('WPC Smart Wishlist for WooCommerce','overcome'),
+            'slug'               => 'woo-smart-quick-view',
+            'required'           => false,
+        ),
+        array(
+            'name'               => esc_html__('Goolge Captcha','overcome'),
+            'slug'               => 'google-captcha',
+            'required'           => false,
+        ),
+    );
+    tgmpa( $plugins, $config );
 }
