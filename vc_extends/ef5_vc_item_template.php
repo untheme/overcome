@@ -189,9 +189,9 @@ function overcome_vc_post_layout_11($atts, $args =[]){
                 overcome_post_media([
                     'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '350x240'), 
                     'default_thumb'  => true,
-                    'class'          => 'col-12 col-md-6 mw-lg-380 col-auto xxxx',
-                    'before'         => '',
-                    'after'          => $after,
+                    'wrap_class'     => 'col-12 col-md-6 mw-lg-380 col-auto xxxx',
+                    'before'         => '<div class="relative">',
+                    'after'          => $after.'</div>',
                     'img_class'      => 'ef5-rounded-10'
                 ]); 
             ?>
