@@ -486,7 +486,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                         'thumbnail_size' => $args['thumbnail_size'], 
                         'default_thumb'  => true,
                         'after'          => $overlay_content,
-                        'img_class'      => 'ef5-rounded-10 minh-380 w-100',
+                        'img_class'      => 'ef5-rounded-10 minh-sm-380 minh-auto w-100',
                         //'show_image'     => false
                     ]);   
                 ?>
