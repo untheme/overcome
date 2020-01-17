@@ -170,6 +170,19 @@ function overcome_vc_post_layout_11($atts, $args =[]){
         'class' => ''
     ]);
     extract($atts);
+
+    $after = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">';
+    switch (get_post_type()) {
+        case 'ef5_donation':
+                $after .= ef5payments_donation_donate_button(['echo' => false, 'class' => 'ef5-btn accent fill ef5-btn-md']);
+            break;
+        
+        default:
+                $after .= '<a class="text-36 text-white" href="'.get_the_permalink().'"><span class="fa fa-link"></span></a>';
+            break;
+    }
+    $after .= '</div></div>';
+
     ?>
         <div class="row align-items-center">
             <?php
@@ -177,8 +190,8 @@ function overcome_vc_post_layout_11($atts, $args =[]){
                     'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '350x240'), 
                     'default_thumb'  => true,
                     'class'          => 'col-12 col-md-6 mw-lg-380 col-auto',
-                    'before'         => '<a href="'.get_the_permalink().'">',
-                    'after'          => '</a>',
+                    'before'         => '',
+                    'after'          => $after,
                     'img_class'      => 'ef5-rounded-10'
                 ]); 
             ?>
