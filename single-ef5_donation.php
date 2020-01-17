@@ -30,13 +30,22 @@ $content_class = is_active_sidebar('ef5_donation_widget') ? 'col-xl-8' : 'col-xl
                                         <?php the_post_thumbnail('large'); ?>
                                     </a>
                                     <div class="thumbnail-overlay pl-30 pr-30 pb-12 text-white">
-                                        <div class="row">
-                                            <div class="col-auto post-author">
-                                                <?php the_author(); ?>
-                                            </div>
-                                            <div class="col-auto post-time">
-                                                <?php the_date(); overcome_post_share(); ?>
-                                            </div>
+                                        <div class="row justify-content-between">
+                                        	<div class="col-auto">
+                                        		<div class="row">
+		                                            <div class="col-auto post-author">
+		                                                <?php the_author(); ?>
+		                                            </div>
+		                                            <div class="col-auto post-time">
+		                                                <?php the_date(); ?>
+		                                            </div>
+		                                        </div>
+		                                    </div>
+		                                    <div class="col-auto"><?php overcome_post_share([
+		                                    	'show_share' => '1',
+		                                    	'show_title' => false,
+		                                    	'class'	     => 'ef5-link-inherit'		
+		                                    ]);?></div>
                                         </div>
                                     </div>
                                 </div>
