@@ -171,7 +171,7 @@ function overcome_vc_post_layout_11($atts, $args =[]){
     ]);
     extract($atts);
 
-    $after = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align">';
+    $after = '<div class="overlay ef5-bg-overlay ef5-rounded-10"><div class="overlay-inner center-align">';
     switch (get_post_type()) {
         case 'ef5_donation':
                 $after .= ef5payments_donation_donate_button(['echo' => false, 'class' => 'ef5-btn accent fill ef5-btn-md']);
@@ -184,7 +184,7 @@ function overcome_vc_post_layout_11($atts, $args =[]){
     $after .= '</div></div>';
 
     ?>
-        <div class="row align-items-center ">
+        <div class="row align-items-center overlay-wrap">
             <?php
                 overcome_post_media([
                     'thumbnail_size' => overcome_default_value($atts['thumbnail_size'], '350x240'), 
