@@ -95,7 +95,7 @@ if(class_exists('ReduxFrameworkPlugin')){
     }
 }
 if(class_exists('VC_Manager')){
-    add_action( 'tgmpa_register', 'overcome_required_vc_plugins' );
+    //add_action( 'tgmpa_register', 'overcome_required_vc_plugins' );
     function overcome_required_vc_plugins(){
         $config = array(
             'default_path' => overcome_relative_path().'untheme.net/plugins/',
