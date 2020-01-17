@@ -16,6 +16,7 @@
             overcome_post_media([
                 'class'     => 'mb-40',
                 'img_class' => 'ef5-rounded-10 ef5-overlay-gradient-1',
+                'before'    => '<div class="d-inline-block relative">',
                 'after'     => '<div class="single-post-meta row justify-content-between grid-gutters-20 text-white ef5-link-inherit"><div class="col">'.overcome_post_meta([
                     'class'         => 'text-white ef5-link-inherit',
                     'echo'          => false,
@@ -25,7 +26,7 @@
                     'echo'       => false,
                     'show_title' => false,
                     'show_all'   => 'false',
-                ]).'</div></div>'
+                ]).'</div></div></div>' // need one close div for before param
             ]);
         }
         overcome_post_content(['class' => 'ef5-single-content']);
