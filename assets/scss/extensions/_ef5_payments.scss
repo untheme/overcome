@@ -56,6 +56,15 @@
 			}
 		}
 	}
+	&.layout-1{
+		.ef5-donation-raised{
+			.ef5-value {
+				font-size: 40px;
+				font-weight: 600;
+				color: $accent_color;
+			}
+		}
+	}
 	&.layout-2{
 		border-top: 1px solid #d7d7d7;
 		padding-top: 24px;
