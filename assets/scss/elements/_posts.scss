@@ -19,6 +19,11 @@
 }
 .ef5-posts-1{
 	.ef5-post-item{
+		.col{
+			@media (min-width: $screen-sm-min){
+				max-width: calc(100% - 170px);
+			}
+		}
 		.ef5-heading{
 			max-height: 37px;
 		    overflow: hidden;
