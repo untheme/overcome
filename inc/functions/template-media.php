@@ -19,7 +19,7 @@ if(!function_exists('overcome_post_thumbnail')){
 
         $thumbnail_atts = [];
         // class
-        $thumbnail_atts_class = ['post-image','ef5-post',$args['class'], $args['img_class']];
+        $thumbnail_atts_class = ['post-image','ef5-post'];
         if($thumbnail_is_bg) $thumbnail_atts_class[] = 'thumbnai-is-bg';
         $thumbnail_atts[] = 'class="'.overcome_optimize_css_class(implode(' ', $thumbnail_atts_class)).'"';
         // style
