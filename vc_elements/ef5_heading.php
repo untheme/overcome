@@ -510,7 +510,14 @@ class WPBakeryShortCode_ef5_heading extends WPBakeryShortCode
 
         extract( $atts );
         if(!empty($heading2_text)) $heading2_text = '<span class="part2">'.$heading2_text.'</span>';
-        if(!empty($heading3_text)) $heading3_text = '<span class="part3">'.$heading3_text.'</span>';
+
+        if(!empty($heading3_text)) {
+            if(isset($heading3_text_block) && $heading3_text_block === '1'){
+                $heading3_text = '<span class="part3 d-block">'.$heading3_text.'</span>';
+            } else {
+                $heading3_text = '<span class="part3 d-inline-block">'.$heading3_text.'</span>';
+            }
+        }
 
         $heading_string = trim(implode(' ',[$heading_text, $heading2_text, $heading3_text]));
         // Heading 
