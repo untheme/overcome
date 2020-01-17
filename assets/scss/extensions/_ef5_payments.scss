@@ -58,10 +58,17 @@
 	}
 	&.layout-1{
 		.ef5-donation-raised{
+			.ef5-label{
+				font-weight: 18px;
+				font-weight: 500;
+				color: $primary_color;
+			}
 			.ef5-value {
 				font-size: 40px;
 				font-weight: 600;
 				color: $accent_color;
+				display: block;
+				padding-top: 6px;
 			}
 		}
 	}
