@@ -52,7 +52,7 @@ if(class_exists('ReduxFrameworkPlugin')){
             ),
             array(
                 'name'               => esc_html__('WPC Smart Quick View for WooCommerce','overcome'),
-                'slug'               => 'woo-smart-wishlist',
+                'slug'               => 'woo-smart-quick-view',
                 'required'           => false,
             ),
             array(
@@ -109,7 +109,7 @@ function overcome_others_plugins_support(){
         ),
         array(
             'name'               => esc_html__('WPC Smart Wishlist for WooCommerce','overcome'),
-            'slug'               => 'woo-smart-quick-view',
+            'slug'               => 'woo-smart-wishlist',
             'required'           => false,
         ),
         array(
