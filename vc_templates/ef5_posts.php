@@ -141,7 +141,7 @@
                 if($post_count === 1){
                     $this->overcome_posts_featured_item2($atts,[
                         'class'          => 'ef5-rounded-10 ef5-grid-item-wrap overlay-wrap',
-                        'thumbnail_size' => overcome_default_value($thumbnail_size[$thumbnail_size_index], '570')
+                        'thumbnail_size' => overcome_default_value($thumbnail_size[$thumbnail_size_index], '570x358')
                     ]);
                 }
             }
