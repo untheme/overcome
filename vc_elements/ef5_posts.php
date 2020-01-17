@@ -311,7 +311,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                         'thumbnail_size' => $args['thumbnail_size'], 
                         'default_thumb'  => true,
                         'after'          => $overlay_content,
-                        'img_class'      => 'ef5-rounded-10'
+                        'img_class'      => 'ef5-rounded-10 w-100'
                     ]);   
                 ?>
             </div>
