@@ -19,7 +19,7 @@ if(!function_exists('overcome_post_thumbnail')){
 
         $thumbnail_atts = [];
         // class
-        $thumbnail_atts_class = ['post-image','ef5-post'];
+        $thumbnail_atts_class = ['post-image','ef5-post',$args['class'], $args['img_class']];
         if($thumbnail_is_bg) $thumbnail_atts_class[] = 'thumbnai-is-bg';
         $thumbnail_atts[] = 'class="'.overcome_optimize_css_class(implode(' ', $thumbnail_atts_class)).'"';
         // style
@@ -453,6 +453,7 @@ if(!function_exists('overcome_post_media')){
             'thumbnail_size' => is_single() ? 'large' : 'medium',
             'echo'           => true,
             'default_thumb'  => apply_filters('overcome_default_post_thumbnail', false),
+            'wrap_class'     => '',
             'class'          => '',
             'before'         => '',
             'after'          => '',
@@ -466,7 +467,11 @@ if(!function_exists('overcome_post_media')){
             'ef5-'.$post_format,
         ];
         $classes[] = overcome_is_loop() ? 'loop' : 'single';
-        if(!empty($args['class'])) $classes[] = $args['class'];
+        if(isset($args['wrap_class']) && !empty($args['wrap_class'])) {
+            $classes[] = $args['wrap_class'];
+        } elseif (!empty($args['class'])){
+            $classes[] = $args['class'];
+        }
     ?>
     <div class="<?php echo trim(implode(' ', $classes));?>"><?php
         printf('%s', $args['before']);
