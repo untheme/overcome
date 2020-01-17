@@ -422,7 +422,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
                         'class'          => 'col-xs-auto p-0',
                         'before'         => '<div class="relative h-100">',
                         'after'          => $after.'</div>',
-                        'img_class'      => 'h-100'
+                        'img_class'      => 'h-100 '.$args['img_class']
                     ]);   
                 ?>
                 <div class="col pt-17 p-15 pb-xs-0">
