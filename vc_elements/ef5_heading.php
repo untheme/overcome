@@ -185,6 +185,20 @@ vc_map(array(
                 'holder'     => 'h4',
                 'group'      => esc_html__('Heading','overcome')   
             ),
+            array(
+                'type'       => 'checkboxk',
+                'param_name' => 'heading3_text_block',
+                'value'      => array(
+                    esc_html__('Text on one line?','overcome') => '1'
+                ),
+                'std'        => '1',
+                'dependency' => array(
+                    'element' => 'show_heading3',
+                    'value'   => array('1')
+                ),
+                'holder'     => 'h4',
+                'group'      => esc_html__('Heading','overcome')   
+            ),
             ef5systems_vc_map_add_css_animation([
                 'param_name' => 'heading_css_animation',
                 'group'      => esc_html__('Heading','overcome'),
