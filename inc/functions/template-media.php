@@ -467,11 +467,7 @@ if(!function_exists('overcome_post_media')){
             'ef5-'.$post_format,
         ];
         $classes[] = overcome_is_loop() ? 'loop' : 'single';
-        if(isset($args['wrap_class']) && !empty($args['wrap_class'])) {
-            $classes[] = $args['wrap_class'];
-        } elseif (!empty($args['class'])){
-            $classes[] = $args['class'];
-        }
+        if(!empty($args['wrap_class'])) $classes[] = $args['wrap_class'];
     ?>
     <div class="<?php echo trim(implode(' ', $classes));?>"><?php
         printf('%s', $args['before']);
