@@ -16,10 +16,8 @@
 			}
 		}
 		.ef5-featured{
-			margin: -1px 0 -1px -1px;
-			[dir="rtl"] &{
-				margin: -1px -1px -1px 0;
-			}
+			margin: -1px;
+			width: calc(100% + 2px);
 		}
 		.ef5-loop-donate-info{
 			padding-top: 4px;
