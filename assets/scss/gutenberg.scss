@@ -56,6 +56,9 @@
 	.alignfull.wp-block-embed .wp-block-embed__wrapper iframe{
 		width: 100% !important;
 	}
+	.wp-block-archives.wp-block-archives-dropdown select{
+		max-width: 480px;
+	}
 }
 
 
