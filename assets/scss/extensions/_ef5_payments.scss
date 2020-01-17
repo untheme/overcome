@@ -104,16 +104,22 @@
 		}
 	}
 	&.layout-3{
-		.ef5-label{
-			font-size: 16px;
-		}
-		.ef5-value{
-			font-size: 30px;
-			margin-top: 7px;
-		}
 		.ef5-shares{
 			margin-top: 0;
 			margin-bottom: 5px;
+		}
+		.ef5-donation-raised{
+			.ef5-label{
+				font-size: 16px;
+				font-weight: 500;
+			}
+			.ef5-value{
+				font-size: 30px;
+			    margin-top: -4px;
+			    font-weight: 600;
+			    display: block;
+			    color: $accent_color;
+			}
 		}
 	}
 	&.layout-4{
