@@ -5,7 +5,7 @@
 if(!function_exists('overcome_enable_export_mode')){
 	add_filter('ef5_ie_export_mode', 'overcome_enable_export_mode');
 	function overcome_enable_export_mode() {
-	    return false;
+	    return true;
 	}
 }
 /**
