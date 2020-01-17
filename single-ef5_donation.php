@@ -32,7 +32,7 @@ $content_class = is_active_sidebar('ef5_donation_widget') ? 'col-xl-8' : 'col-xl
                                     <div class="thumbnail-overlay pl-30 pr-30 pb-12 text-white">
                                         <div class="row justify-content-between">
                                         	<div class="col-auto">
-                                        		<div class="row">
+                                        		<div class="row text-14">
 		                                            <div class="col-auto post-author">
 		                                                <?php the_author(); ?>
 		                                            </div>
