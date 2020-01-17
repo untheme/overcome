@@ -186,7 +186,7 @@ vc_map(array(
                 'group'      => esc_html__('Heading','overcome')   
             ),
             array(
-                'type'       => 'checkboxk',
+                'type'       => 'checkbox',
                 'param_name' => 'heading3_text_block',
                 'value'      => array(
                     esc_html__('Text on one line?','overcome') => '1'
