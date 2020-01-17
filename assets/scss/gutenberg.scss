@@ -53,6 +53,9 @@
 	ul + ul.wp-block-gallery{
 		margin-top: 30px;
 	}
+	.alignfull.wp-block-embed .wp-block-embed__wrapper iframe{
+		width: 100% !important;
+	}
 }
 
 
