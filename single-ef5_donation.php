@@ -44,7 +44,8 @@ $content_class = is_active_sidebar('ef5_donation_widget') ? 'col-xl-8' : 'col-xl
 		                                    <div class="col-auto"><?php overcome_post_share([
 		                                    	'show_share' => '1',
 		                                    	'show_title' => false,
-		                                    	'class'	     => 'ef5-link-inherit'		
+		                                    	'show_all'	 => false,
+		                                    	'class'	     => 'ef5-link-inherit text-12'		
 		                                    ]);?></div>
                                         </div>
                                     </div>
