@@ -12,7 +12,7 @@
 
 <div <?php post_class('ef5-single clearfix'); ?>>
     <?php 
-        if(has_post_thumbnail() || overcome_config('overcome_default_post_thumbnail')){
+        if(has_post_thumbnail() || overcome_configs('overcome_default_post_thumbnail')){
             overcome_post_media([
                 'class'     => 'mb-40',
                 'img_class' => 'ef5-rounded-10 ef5-overlay-gradient-1',
