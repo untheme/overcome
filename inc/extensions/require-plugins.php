@@ -50,7 +50,7 @@ if(class_exists('ReduxFrameworkPlugin')){
                 'slug'               => 'woocommerce',
                 'required'           => false,
             ),
-            array(
+            /*array(
                 'name'               => esc_html__('WPC Smart Compare for WooCommerce','overcome'),
                 'slug'               => 'woo-smart-compare',
                 'required'           => false,
@@ -59,7 +59,7 @@ if(class_exists('ReduxFrameworkPlugin')){
                 'name'               => esc_html__('WPC Smart Wishlist for WooCommerce','overcome'),
                 'slug'               => 'woo-smart-quick-view',
                 'required'           => false,
-            ),
+            ),*/
             array(
                 'name'               => esc_html__('WPC Smart Quick View for WooCommerce','overcome'),
                 'slug'               => 'woo-smart-wishlist',
