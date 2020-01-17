@@ -59,6 +59,12 @@
 	.wp-block-archives.wp-block-archives-dropdown select{
 		max-width: 480px;
 	}
+	.wp-block-separator.is-style-wide{
+		margin-left: calc( -100vw / 2 + 100% / 2 );
+	    margin-right: calc( -100vw / 2 + 100% / 2 );
+	    max-width: 100vw;
+	    width: 100vw;
+	}
 }
 
 
