@@ -29,7 +29,7 @@ $content_class = is_active_sidebar('ef5_donation_widget') ? 'col-xl-8' : 'col-xl
                                     <a href="<?php the_permalink();?>" class="ef5-gradient-overlay d-block">
                                         <?php the_post_thumbnail('large'); ?>
                                     </a>
-                                    <div class="thumbnail-overlay pl-30 pr-30 pb-12 text-white">
+                                    <div class="thumbnail-overlay pl-30 pr-30 pb-15 text-white">
                                         <div class="row justify-content-between">
                                         	<div class="col-auto">
                                         		<div class="row text-14">
