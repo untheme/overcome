@@ -411,7 +411,7 @@ class WPBakeryShortCode_ef5_posts extends WPBakeryShortCode
             'thumbnail_size' => '170',
         ]);
         $css_class = ['ef5-post-item-inner', 'row', $args['class'], 'ml-0 mr-0'];
-        $after = '<div class="overlay ef5-bg-overlay '.$args['img_class'].'"><div class="overlay-inner center-align"><a class="text-36 text-white" href="'.get_the_permalink().'"><span class="fa fa-link"></span></a></div></div>'
+        $after = '<div class="overlay ef5-bg-overlay"><div class="overlay-inner center-align"><a class="text-36 text-white" href="'.get_the_permalink().'"><span class="fa fa-link"></span></a></div></div>'
         ?>
         <div class="ef5-post-item ef5-rounded-10 ef5-hover-shadow-1 transition">
             <div class="<?php echo trim(implode(' ', $css_class));?>">
