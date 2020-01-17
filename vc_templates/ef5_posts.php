@@ -54,14 +54,14 @@
                 }
                 if($post_count === 1){
                     $this->overcome_posts_featured_item($atts,[
-                        'class'          => 'ef5-rounded-10 overlay-wrap',
+                        'class'          => 'ef5-rounded-10 overlay-wrap ef5-grid-item-wrap',
                         'thumbnail_size' => overcome_default_value($thumbnail_size[$thumbnail_size_index], '570')
                     ]);
                 }
             }
             wp_reset_postdata();
         ?>
-            <div class="col-lg-6">
+            <div class="col-lg-6 ef5-grid-item-wrap">
                 <?php
                     while($posts->have_posts()){
                         $post_count2++;
