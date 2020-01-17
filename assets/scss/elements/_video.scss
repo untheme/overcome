@@ -13,6 +13,10 @@
 	    vertical-align: top;
 	    left: 50%;
 	    @include transform(translate(-50%, 0));
+	    width: 100%;
+	    .video-poster{
+	    	width: 100%;
+	    }
 	}
 	.ef5-video:not(.overlay-wrap) {
 		&:before{
