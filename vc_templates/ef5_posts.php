@@ -75,7 +75,7 @@
                         if($post_count2 != 1){
                             $this->overcome_posts_item($atts,[
                                 'class'          => 'overlay-wrap',
-                                'img_class'      => 'ef5-rounded-xs-l-10 ef5-rounded-t-10 w-md-auto w-100',
+                                'img_class'      => 'ef5-rounded-xs-l-10 ef5-rounded-t-10',
                                 'thumbnail_size' => overcome_default_value($thumbnail_size[$thumbnail_size_index], '170')
                             ]);
                         }
