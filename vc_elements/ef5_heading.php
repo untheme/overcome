@@ -196,7 +196,6 @@ vc_map(array(
                     'element' => 'show_heading3',
                     'value'   => array('1')
                 ),
-                'holder'     => 'h4',
                 'group'      => esc_html__('Heading','overcome')   
             ),
             ef5systems_vc_map_add_css_animation([
